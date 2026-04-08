@@ -1,0 +1,21 @@
+<nav class="navbar" data-testid="navbar">
+  <ul class="nav-list">
+    <li class="nav-item dropdown" data-testid="nav-trading" [class.open]="openMenu === 'trading'">
+      <span class="nav-link" data-testid="trading-menu-trigger" (click)="toggleMenu('trading', $event)">Trading</span>
+      <ul class="dropdown-menu" data-testid="nav-trading-menu">
+        <li><a data-testid="nav-dashboard" (click)="navigate('/dashboard')">Dashboard</a></li>
+        <li><a data-testid="nav-new-trade" (click)="navigate('/trade')">New Trade</a></li>
+        <li><a data-testid="nav-trade-list" (click)="navigate('/trades')">Trade List</a></li>
+        <li><a data-testid="nav-queue" (click)="navigate('/queue')">Approval Queue</a></li>
+      </ul>
+    </li>
+    <li class="nav-item dropdown" data-testid="nav-admin" [class.open]="openMenu === 'admin'">
+      <span class="nav-link" data-testid="nav-admin-trigger" (click)="toggleMenu('admin', $event)">Admin</span>
+      <ul class="dropdown-menu" data-testid="nav-admin-menu">
+        <li><a data-testid="nav-user-list" (click)="navigate('/admin/users')">User List</a></li>
+      </ul>
+    </li>
+  </ul>
+  <span class="navbar-user" data-testid="navbar-user">{{ userDisplay }}</span>
+  <button type="button" class="btn-logout" data-testid="navbar-logout" (click)="logout()">Logout</button>
+</nav>

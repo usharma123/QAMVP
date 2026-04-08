@@ -1,0 +1,34 @@
+<div class="dashboard" data-testid="dashboard-page">
+  <h1 data-testid="dashboard-title">Dashboard</h1>
+
+  @if (loading) {
+    <div class="loading" data-testid="dashboard-loading">Loading trades...</div>
+  } @else {
+    <div class="summary" data-testid="dashboard-summary">
+      <span data-testid="dashboard-total-trades-label">Total Trades: {{ trades.length }}</span>
+    </div>
+    <table class="trades-table" data-testid="dashboard-trades-table">
+      <thead>
+        <tr>
+          <th data-testid="dashboard-th-txid">TX-ID</th>
+          <th data-testid="dashboard-th-ticker">Ticker</th>
+          <th data-testid="dashboard-th-quantity">Quantity</th>
+          <th data-testid="dashboard-th-total">Total Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (trade of trades; track trade.txId) {
+          <tr data-testid="dashboard-trade-row">
+            <td data-testid="dashboard-cell-txid">{{ trade.txId }}</td>
+            <td data-testid="dashboard-cell-ticker">{{ trade.ticker }}</td>
+            <td data-testid="dashboard-cell-quantity">{{ trade.quantity }}</td>
+            <td data-testid="dashboard-cell-total">{{ trade.totalValue | number:'1.2-2' }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+    @if (trades.length === 0) {
+      <p class="empty" data-testid="dashboard-empty">No trades yet.</p>
+    }
+  }
+</div>

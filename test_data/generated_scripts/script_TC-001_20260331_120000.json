@@ -1,0 +1,69 @@
+{
+  "testCaseId": "TC-001",
+  "requirementId": "REQ-001",
+  "steps": [
+    {
+      "tcStep": 1,
+      "action": "LoginAsMaker",
+      "locator": "",
+      "test_input": "",
+      "output": ""
+    },
+    {
+      "tcStep": 2,
+      "action": "CreateBuyTrade",
+      "locator": "",
+      "test_input": "sector=Technology,ticker=AAPL,quantity=100,accountType=Cash,timeInForce=Day Order",
+      "output": ""
+    },
+    {
+      "tcStep": 3,
+      "action": "WAIT_HIDDEN",
+      "locator": "$queue-loading",
+      "test_input": "10",
+      "output": ""
+    },
+    {
+      "tcStep": 3,
+      "action": "READ_TEXT",
+      "locator": "$queue-pending-count",
+      "test_input": "",
+      "output": "pendingCount"
+    },
+    {
+      "tcStep": 3,
+      "action": "ASSERT_CONTAINS",
+      "locator": "",
+      "test_input": "pendingCount=1",
+      "output": ""
+    },
+    {
+      "tcStep": 4,
+      "action": "Logout",
+      "locator": "",
+      "test_input": "",
+      "output": ""
+    },
+    {
+      "tcStep": 5,
+      "action": "LoginAsChecker",
+      "locator": "",
+      "test_input": "",
+      "output": ""
+    },
+    {
+      "tcStep": 6,
+      "action": "ApproveTrade",
+      "locator": "",
+      "test_input": "",
+      "output": ""
+    },
+    {
+      "tcStep": 7,
+      "action": "VerifyDashboardCount",
+      "locator": "",
+      "test_input": "expectedCount=1",
+      "output": ""
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "testCaseId": "TC-001",
+  "requirementId": "REQ-001",
+  "steps": [
+    {
+      "tcStep": 1,
+      "action": "LoginAsMaker",
+      "locator": "",
+      "test_input": "",
+      "output": ""
+    },
+    {
+      "tcStep": 2,
+      "action": "CreateBuyTrade",
+      "locator": "",
+      "test_input": "sector=Technology,ticker=AAPL,accountType=Cash,quantity=100,timeInForce=Day Order",
+      "output": ""
+    },
+    {
+      "tcStep": 3,
+      "action": "WAIT_HIDDEN",
+      "locator": "$queue-loading",
+      "test_input": "10",
+      "output": ""
+    },
+    {
+      "tcStep": 3,
+      "action": "ASSERT_TEXT",
+      "locator": "$queue-pending-count",
+      "test_input": "Pending: 1",
+      "output": ""
+    },
+    {
+      "tcStep": 4,
+      "action": "Logout",
+      "locator": "",
+      "test_input": "",
+      "output": ""
+    },
+    {
+      "tcStep": 5,
+      "action": "Login",
+      "locator": "",
+      "test_input": "username=checker,password=checker",
+      "output": ""
+    },
+    {
+      "tcStep": 6,
+      "action": "ApproveTrade",
+      "locator": "",
+      "test_input": "",
+      "output": ""
+    },
+    {
+      "tcStep": 7,
+      "action": "CLICK",
+      "locator": "$trading-menu-trigger",
+      "test_input": "",
+      "output": ""
+    },
+    {
+      "tcStep": 7,
+      "action": "WAIT_VISIBLE",
+      "locator": "$nav-dashboard",
+      "test_input": "5",
+      "output": ""
+    },
+    {
+      "tcStep": 7,
+      "action": "CLICK",
+      "locator": "$nav-dashboard",
+      "test_input": "",
+      "output": ""
+    },
+    {
+      "tcStep": 7,
+      "action": "WAIT_VISIBLE",
+      "locator": "$dashboard-page",
+      "test_input": "10",
+      "output": ""
+    },
+    {
+      "tcStep": 8,
+      "action": "VerifyDashboardCount",
+      "locator": "",
+      "test_input": "expectedCount=1",
+      "output": ""
+    }
+  ]
+}

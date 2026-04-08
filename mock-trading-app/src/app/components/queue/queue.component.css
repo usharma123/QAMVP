@@ -1,0 +1,91 @@
+.queue-page {
+  padding: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.queue-page h1 {
+  margin-top: 0;
+}
+
+.loading {
+  padding: 2rem;
+  text-align: center;
+}
+
+.summary {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.trades-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #1a1a2e;
+  color: #eee;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.trades-table th,
+.trades-table td {
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #333;
+}
+
+.trades-table th {
+  background: #16213e;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.trades-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.side-buy { color: #6fdc8c; font-weight: 600; }
+.side-sell { color: #ff7eb6; font-weight: 600; }
+
+.btn-approve {
+  padding: 0.3rem 0.8rem;
+  border: 1px solid #6fdc8c;
+  border-radius: 4px;
+  background: transparent;
+  color: #6fdc8c;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: background 0.2s;
+}
+
+.btn-approve:hover:not(:disabled) {
+  background: #1a472a;
+}
+
+.btn-approve:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.empty {
+  color: #888;
+  margin-top: 1rem;
+}
+
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1a472a;
+  color: #6fdc8c;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+  font-weight: 600;
+}

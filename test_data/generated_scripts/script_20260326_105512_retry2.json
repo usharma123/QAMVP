@@ -1,0 +1,321 @@
+{
+  "testCaseId": "TC-002",
+  "requirementId": "REQ-002",
+  "steps": [
+    {
+      "tcStep": 1,
+      "action": "LoginAsMaker",
+      "locator": "",
+      "test_input": "",
+      "output": ""
+    },
+    {
+      "tcStep": 2,
+      "action": "CLICK",
+      "locator": "$trading-menu-trigger",
+      "test_input": "",
+      "output": ""
+    },
+    {
+      "tcStep": 2,
+      "action": "WAIT_VISIBLE",
+      "locator": "$nav-new-trade",
+      "test_input": "5",
+      "output": ""
+    },
+    {
+      "tcStep": 2,
+      "action": "CLICK",
+      "locator": "$nav-new-trade",
+      "test_input": "",
+      "output": ""
+    },
+    {
+      "tcStep": 2,
+      "action": "WAIT_VISIBLE",
+      "locator": "$trade-form",
+      "test_input": "10",
+      "output": ""
+    },
+    {
+      "tcStep": 2,
+      "action": "SELECT",
+      "locator": "$trade-side-new",
+      "test_input": "BUY",
+      "output": ""
+    },
+    {
+      "tcStep": 2,
+      "action": "SELECT",
+      "locator": "$trade-sector",
+      "test_input": "Technology",
+      "output": ""
+    },
+    {
+      "tcStep": 2,
+      "action": "WAIT_VISIBLE",
+      "locator": "$trade-ticker",
+      "test_input": "5",
+      "output": ""
+    },
+    {
+      "tcStep": 2,
+      "action": "SELECT",
+      "locator": "$trade-ticker",
+      "test_input": "AAPL",
+      "output": ""
+    },
+    {
+      "tcStep": 2,
+      "action": "WAIT_HIDDEN",
+      "locator": "$trade-fetching-price",
+      "test_input": "10",
+      "output": ""
+    },
+    {
+      "tcStep": 2,
+      "action": "SELECT",
+      "locator": "$trade-account-type",
+      "test_input": "Cash",
+      "output": ""
+    },
+    {
+      "tcStep": 2,
+      "action": "TYPE",
+      "locator": "$trade-quantity",
+      "test_input": "100",
+      "output": ""
+    },
+    {
+      "tcStep": 2,
+      "action": "SELECT",
+      "locator": "$trade-time-in-force",
+      "test_input": "Day Order",
+      "output": ""
+    },
+    {
+      "tcStep": 2,
+      "action": "CLICK",
+      "locator": "$trade-submit",
+      "test_input": "",
+      "output": ""
+    },
+    {
+      "tcStep": 2,
+      "action": "WAIT_VISIBLE",
+      "locator": "$trade-toast",
+      "test_input": "10",
+      "output": ""
+    },
+    {
+      "tcStep": 2,
+      "action": "READ_TEXT",
+      "locator": "$trade-toast",
+      "test_input": "",
+      "output": "toastMessage"
+    },
+    {
+      "tcStep": 2,
+      "action": "WAIT_VISIBLE",
+      "locator": "$queue-page",
+      "test_input": "10",
+      "output": ""
+    },
+    {
+      "tcStep": 3,
+      "action": "CLICK",
+      "locator": "$trading-menu-trigger",
+      "test_input": "",
+      "output": ""
+    },
+    {
+      "tcStep": 3,
+      "action": "WAIT_VISIBLE",
+      "locator": "$nav-new-trade",
+      "test_input": "5",
+      "output": ""
+    },
+    {
+      "tcStep": 3,
+      "action": "CLICK",
+      "locator": "$nav-new-trade",
+      "test_input": "",
+      "output": ""
+    },
+    {
+      "tcStep": 3,
+      "action": "WAIT_VISIBLE",
+      "locator": "$trade-form",
+      "test_input": "10",
+      "output": ""
+    },
+    {
+      "tcStep": 3,
+      "action": "SELECT",
+      "locator": "$trade-side-new",
+      "test_input": "SELL",
+      "output": ""
+    },
+    {
+      "tcStep": 3,
+      "action": "SELECT",
+      "locator": "$trade-sector",
+      "test_input": "Technology",
+      "output": ""
+    },
+    {
+      "tcStep": 3,
+      "action": "WAIT_VISIBLE",
+      "locator": "$trade-ticker",
+      "test_input": "5",
+      "output": ""
+    },
+    {
+      "tcStep": 3,
+      "action": "SELECT",
+      "locator": "$trade-ticker",
+      "test_input": "AAPL",
+      "output": ""
+    },
+    {
+      "tcStep": 3,
+      "action": "WAIT_HIDDEN",
+      "locator": "$trade-fetching-price",
+      "test_input": "10",
+      "output": ""
+    },
+    {
+      "tcStep": 3,
+      "action": "SELECT",
+      "locator": "$trade-account-type",
+      "test_input": "Cash",
+      "output": ""
+    },
+    {
+      "tcStep": 3,
+      "action": "TYPE",
+      "locator": "$trade-quantity",
+      "test_input": "100",
+      "output": ""
+    },
+    {
+      "tcStep": 3,
+      "action": "SELECT",
+      "locator": "$trade-time-in-force",
+      "test_input": "Day Order",
+      "output": ""
+    },
+    {
+      "tcStep": 3,
+      "action": "CLICK",
+      "locator": "$trade-submit",
+      "test_input": "",
+      "output": ""
+    },
+    {
+      "tcStep": 3,
+      "action": "WAIT_VISIBLE",
+      "locator": "$trade-toast",
+      "test_input": "10",
+      "output": ""
+    },
+    {
+      "tcStep": 3,
+      "action": "READ_TEXT",
+      "locator": "$trade-toast",
+      "test_input": "",
+      "output": "toastMessage"
+    },
+    {
+      "tcStep": 3,
+      "action": "WAIT_VISIBLE",
+      "locator": "$queue-page",
+      "test_input": "10",
+      "output": ""
+    },
+    {
+      "tcStep": 4,
+      "action": "WAIT_HIDDEN",
+      "locator": "$queue-loading",
+      "test_input": "10",
+      "output": ""
+    },
+    {
+      "tcStep": 4,
+      "action": "ASSERT_TEXT",
+      "locator": "$queue-pending-count",
+      "test_input": "Pending: 2",
+      "output": ""
+    },
+    {
+      "tcStep": 5,
+      "action": "Logout",
+      "locator": "",
+      "test_input": "",
+      "output": ""
+    },
+    {
+      "tcStep": 6,
+      "action": "LoginAsChecker",
+      "locator": "",
+      "test_input": "",
+      "output": ""
+    },
+    {
+      "tcStep": 7,
+      "action": "ApproveTrade",
+      "locator": "",
+      "test_input": "",
+      "output": ""
+    },
+    {
+      "tcStep": 7,
+      "action": "ApproveTrade",
+      "locator": "",
+      "test_input": "",
+      "output": ""
+    },
+    {
+      "tcStep": 8,
+      "action": "CLICK",
+      "locator": "$trading-menu-trigger",
+      "test_input": "",
+      "output": ""
+    },
+    {
+      "tcStep": 8,
+      "action": "WAIT_VISIBLE",
+      "locator": "$nav-trade-list",
+      "test_input": "10",
+      "output": ""
+    },
+    {
+      "tcStep": 8,
+      "action": "CLICK",
+      "locator": "$nav-trade-list",
+      "test_input": "",
+      "output": ""
+    },
+    {
+      "tcStep": 8,
+      "action": "WAIT_VISIBLE",
+      "locator": "$trade-list-page",
+      "test_input": "10",
+      "output": ""
+    },
+    {
+      "tcStep": 9,
+      "action": "WAIT_HIDDEN",
+      "locator": "$trade-list-loading",
+      "test_input": "10",
+      "output": ""
+    },
+    {
+      "tcStep": 9,
+      "action": "ASSERT_TEXT",
+      "locator": "$trade-list-matched-count",
+      "test_input": "Matched: 2",
+      "output": ""
+    }
+  ]
+}

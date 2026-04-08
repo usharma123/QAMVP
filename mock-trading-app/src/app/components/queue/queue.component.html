@@ -1,0 +1,55 @@
+<div class="queue-page" data-testid="queue-page">
+  <h1 data-testid="queue-title">Approval Queue</h1>
+
+  @if (loading) {
+    <div class="loading" data-testid="queue-loading">Loading queue...</div>
+  } @else {
+    <div class="summary">
+      <span data-testid="queue-pending-count">Pending: {{ trades.length }}</span>
+    </div>
+
+    <table class="trades-table" data-testid="queue-table">
+      <thead>
+        <tr>
+          <th data-testid="queue-th-txid">TX-ID</th>
+          <th data-testid="queue-th-side">Side</th>
+          <th data-testid="queue-th-ticker">Ticker</th>
+          <th data-testid="queue-th-quantity">Qty</th>
+          <th data-testid="queue-th-price">Price</th>
+          <th data-testid="queue-th-total">Total</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (trade of trades; track trade.txId) {
+          <tr data-testid="queue-row">
+            <td data-testid="queue-cell-txid">{{ trade.txId }}</td>
+            <td data-testid="queue-cell-side" [class]="trade.side === 'BUY' ? 'side-buy' : 'side-sell'">{{ trade.side }}</td>
+            <td data-testid="queue-cell-ticker">{{ trade.ticker }}</td>
+            <td data-testid="queue-cell-quantity">{{ trade.quantity }}</td>
+            <td data-testid="queue-cell-price">{{ trade.currentPrice | number:'1.2-2' }}</td>
+            <td data-testid="queue-cell-total">{{ trade.totalValue | number:'1.2-2' }}</td>
+            <td>
+              <button
+                type="button"
+                class="btn-approve"
+                data-testid="queue-action-approve"
+                [disabled]="approving === trade.txId"
+                (click)="approve(trade.txId)">
+                {{ approving === trade.txId ? 'Approving...' : 'Approve' }}
+              </button>
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+
+    @if (trades.length === 0) {
+      <p class="empty" data-testid="queue-empty">No pending trades.</p>
+    }
+  }
+
+  @if (showToast) {
+    <div class="toast" data-testid="queue-approve-toast">{{ toastMessage }}</div>
+  }
+</div>

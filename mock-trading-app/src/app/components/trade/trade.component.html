@@ -1,0 +1,89 @@
+<div class="trade-page" data-testid="trade-page">
+  <h1 data-testid="trade-title">New Trade</h1>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" data-testid="trade-form">
+    <div class="field">
+      <label for="side">Side</label>
+      <select id="trade-side-new" formControlName="side" data-testid="trade-side">
+        @for (opt of sideOptions; track opt) {
+          <option [value]="opt">{{ opt }}</option>
+        }
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="marketSector">Market Sector</label>
+      <select id="marketSector" formControlName="marketSector" data-testid="trade-sector">
+        <option value="">-- Select Sector --</option>
+        @for (opt of sectorOptions; track opt) {
+          <option [value]="opt">{{ opt }}</option>
+        }
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="ticker">Ticker</label>
+      <select id="ticker" formControlName="ticker" data-testid="trade-ticker">
+        <option value="">-- Select Ticker --</option>
+        @for (opt of tickerOptions; track opt) {
+          <option [value]="opt">{{ opt }}</option>
+        }
+      </select>
+      @if (loadingPrice) {
+        <span class="spinner" data-testid="trade-fetching-price">Fetching price...</span>
+      }
+    </div>
+
+    <div class="field">
+      <label for="accountType">Account Type</label>
+      <select id="accountType" formControlName="accountType" data-testid="trade-account-type">
+        @for (opt of accountTypeOptions; track opt) {
+          <option [value]="opt">{{ opt }}</option>
+        }
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="quantity">Quantity</label>
+      <input id="quantity" type="number" formControlName="quantity" min="1" data-testid="trade-quantity" />
+    </div>
+
+    <div class="field">
+      <label for="timeInForce">Time in Force</label>
+      <select id="timeInForce" formControlName="timeInForce" data-testid="trade-time-in-force">
+        @for (opt of timeInForceOptions; track opt) {
+          <option [value]="opt">{{ opt }}</option>
+        }
+      </select>
+    </div>
+
+    @if (showExpirationDate) {
+      <div class="field">
+        <label for="expirationDate">Expiration Date</label>
+        <input id="expirationDate" type="date" formControlName="expirationDate" data-testid="trade-expiration-date" />
+      </div>
+    }
+
+    <div class="field">
+      <label for="currentPrice">Current Price</label>
+      <input id="currentPrice" type="text" [value]="form.get('currentPrice')?.value ?? ''" readonly data-testid="trade-current-price" />
+    </div>
+
+    <div class="field">
+      <label for="totalValue">Total Value</label>
+      <input id="totalValue" type="text" [value]="totalValueDisplay" readonly data-testid="trade-total-value" />
+    </div>
+
+    @if (submitting) {
+      <div class="submitting" data-testid="trade-submitting">Submitting...</div>
+    } @else {
+      <button type="submit" [disabled]="form.invalid" data-testid="trade-submit">Submit Order</button>
+    }
+  </form>
+
+  @if (showToast) {
+    <div class="toast" data-testid="trade-toast" role="status">
+      {{ toastMessage }}
+    </div>
+  }
+</div>

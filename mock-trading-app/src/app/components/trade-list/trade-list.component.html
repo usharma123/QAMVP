@@ -1,0 +1,48 @@
+<div class="trade-list-page" data-testid="trade-list-page">
+  <h1 data-testid="trade-list-title">Trade List</h1>
+
+  @if (loading) {
+    <div class="loading" data-testid="trade-list-loading">Loading trades...</div>
+  } @else {
+    <div class="summary" data-testid="trade-list-summary">
+      <span data-testid="trade-list-total">Total: {{ trades.length }}</span>
+      <span data-testid="trade-list-matched-count" class="badge matched">Matched: {{ matchedCount }}</span>
+      <span data-testid="trade-list-pending-count" class="badge pending">Pending: {{ pendingCount }}</span>
+    </div>
+
+    <table class="trades-table" data-testid="trade-list-table">
+      <thead>
+        <tr>
+          <th data-testid="trade-list-th-txid">TX-ID</th>
+          <th data-testid="trade-list-th-side">Side</th>
+          <th data-testid="trade-list-th-ticker">Ticker</th>
+          <th data-testid="trade-list-th-quantity">Qty</th>
+          <th data-testid="trade-list-th-price">Price</th>
+          <th data-testid="trade-list-th-total">Total</th>
+          <th data-testid="trade-list-th-status">Status</th>
+          <th data-testid="trade-list-th-matched-with">Matched With</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (trade of trades; track trade.txId) {
+          <tr data-testid="trade-list-row" [attr.data-status]="trade.status">
+            <td data-testid="trade-list-cell-txid">{{ trade.txId }}</td>
+            <td data-testid="trade-list-cell-side" [class]="trade.side === 'BUY' ? 'side-buy' : 'side-sell'">{{ trade.side }}</td>
+            <td data-testid="trade-list-cell-ticker">{{ trade.ticker }}</td>
+            <td data-testid="trade-list-cell-quantity">{{ trade.quantity }}</td>
+            <td data-testid="trade-list-cell-price">{{ trade.currentPrice | number:'1.2-2' }}</td>
+            <td data-testid="trade-list-cell-total">{{ trade.totalValue | number:'1.2-2' }}</td>
+            <td data-testid="trade-list-cell-status">
+              <span class="status-badge" [class]="'status-' + trade.status.toLowerCase()">{{ trade.status }}</span>
+            </td>
+            <td data-testid="trade-list-cell-matched-with">{{ trade.matchedWith ?? '—' }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+
+    @if (trades.length === 0) {
+      <p class="empty" data-testid="trade-list-empty">No trades yet.</p>
+    }
+  }
+</div>

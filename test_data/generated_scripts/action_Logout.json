@@ -1,0 +1,18 @@
+{
+  "name": "Logout",
+  "description": "Clicks the navbar logout button. End state: login page.",
+  "steps": [
+    {
+      "action": "CLICK",
+      "locator": "$navbar-logout",
+      "test_input": "",
+      "output": ""
+    },
+    {
+      "action": "WAIT_VISIBLE",
+      "locator": "$login-page",
+      "test_input": "10",
+      "output": ""
+    }
+  ]
+}

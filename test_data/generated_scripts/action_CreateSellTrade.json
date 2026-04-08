@@ -1,0 +1,102 @@
+{
+  "name": "CreateSellTrade",
+  "description": "Same as CreateTrade but side is hardcoded to SELL. End state: Approval Queue page with trade pending.",
+  "steps": [
+    {
+      "action": "CLICK",
+      "locator": "$trading-menu-trigger",
+      "test_input": "",
+      "output": ""
+    },
+    {
+      "action": "WAIT_VISIBLE",
+      "locator": "$nav-new-trade",
+      "test_input": "5",
+      "output": ""
+    },
+    {
+      "action": "CLICK",
+      "locator": "$nav-new-trade",
+      "test_input": "",
+      "output": ""
+    },
+    {
+      "action": "WAIT_VISIBLE",
+      "locator": "$trade-form",
+      "test_input": "10",
+      "output": ""
+    },
+    {
+      "action": "SELECT",
+      "locator": "$trade-side",
+      "test_input": "SELL",
+      "output": ""
+    },
+    {
+      "action": "SELECT",
+      "locator": "$trade-sector",
+      "test_input": "{{sector}}",
+      "output": ""
+    },
+    {
+      "action": "WAIT_VISIBLE",
+      "locator": "$trade-ticker",
+      "test_input": "5",
+      "output": ""
+    },
+    {
+      "action": "SELECT",
+      "locator": "$trade-ticker",
+      "test_input": "{{ticker}}",
+      "output": ""
+    },
+    {
+      "action": "WAIT_HIDDEN",
+      "locator": "$trade-fetching-price",
+      "test_input": "10",
+      "output": ""
+    },
+    {
+      "action": "SELECT",
+      "locator": "$trade-account-type",
+      "test_input": "{{accountType}}",
+      "output": ""
+    },
+    {
+      "action": "TYPE",
+      "locator": "$trade-quantity",
+      "test_input": "{{quantity}}",
+      "output": ""
+    },
+    {
+      "action": "SELECT",
+      "locator": "$trade-time-in-force",
+      "test_input": "{{timeInForce}}",
+      "output": ""
+    },
+    {
+      "action": "CLICK",
+      "locator": "$trade-submit",
+      "test_input": "",
+      "output": ""
+    },
+    {
+      "action": "WAIT_VISIBLE",
+      "locator": "$trade-toast",
+      "test_input": "10",
+      "output": ""
+    },
+    {
+      "action": "READ_TEXT",
+      "locator": "$trade-toast",
+      "test_input": "",
+      "output": "toastMessage"
+    },
+    {
+      "action": "WAIT_VISIBLE",
+      "locator": "$queue-page",
+      "test_input": "10",
+      "output": ""
+    }
+  ]
+}

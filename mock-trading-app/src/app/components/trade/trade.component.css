@@ -1,0 +1,79 @@
+.trade-page {
+  padding: 1.5rem;
+  max-width: 480px;
+  margin: 0 auto;
+  color: #eee;
+}
+
+.trade-page h1 {
+  margin-top: 0;
+}
+
+.trade-page .field {
+  margin-bottom: 1rem;
+}
+
+.trade-page label {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.trade-page select,
+.trade-page input[type="number"],
+.trade-page input[type="date"],
+.trade-page input[type="text"] {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background: #16213e;
+  color: #eee;
+}
+
+.trade-page input[readonly] {
+  background: #0f0f23;
+  cursor: default;
+}
+
+.trade-page button {
+  padding: 0.6rem 1.2rem;
+  margin-top: 0.5rem;
+  background: #e94560;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.trade-page button:hover:not(:disabled) {
+  background: #c73e54;
+}
+
+.trade-page button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.spinner {
+  margin-left: 0.5rem;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.submitting {
+  padding: 0.5rem 0;
+}
+
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 90%;
+  padding: 1rem 1.5rem;
+  background: #1a472a;
+  color: #eee;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+}

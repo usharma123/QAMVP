@@ -1,0 +1,15 @@
+.DS_Store
+**/.env
+**/.venv/
+**/node_modules/
+**/target/
+__pycache__/
+*.pyc
+*.class
+
+# Frontend build / cache (regenerate with npm/ng)
+**/.angular/
+mock-trading-app/dist/
+
+# Generated PDF (build from presentation.md with Marp)
+docs/*.pdf

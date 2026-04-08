@@ -1,0 +1,94 @@
+.trade-list-page {
+  padding: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.trade-list-page h1 {
+  margin-top: 0;
+}
+
+.loading {
+  padding: 2rem;
+  text-align: center;
+}
+
+.summary {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.badge {
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+.badge.matched {
+  background: #1a472a;
+  color: #6fdc8c;
+}
+
+.badge.pending {
+  background: #3a3000;
+  color: #f1c21b;
+}
+
+.trades-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #1a1a2e;
+  color: #eee;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.trades-table th,
+.trades-table td {
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #333;
+}
+
+.trades-table th {
+  background: #16213e;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.trades-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.side-buy { color: #6fdc8c; font-weight: 600; }
+.side-sell { color: #ff7eb6; font-weight: 600; }
+
+.status-badge {
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.status-matched {
+  background: #1a472a;
+  color: #6fdc8c;
+}
+
+.status-pending {
+  background: #3a3000;
+  color: #f1c21b;
+}
+
+.status-unmatched {
+  background: #4a1520;
+  color: #ff7eb6;
+}
+
+.empty {
+  color: #888;
+  margin-top: 1rem;
+}

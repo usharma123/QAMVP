@@ -1,0 +1,49 @@
+.dashboard {
+  padding: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.dashboard h1 {
+  margin-top: 0;
+}
+
+.loading {
+  padding: 2rem;
+  text-align: center;
+}
+
+.summary {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.trades-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #1a1a2e;
+  color: #eee;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.trades-table th,
+.trades-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #333;
+}
+
+.trades-table th {
+  background: #16213e;
+}
+
+.trades-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.empty {
+  color: #888;
+  margin-top: 1rem;
+}

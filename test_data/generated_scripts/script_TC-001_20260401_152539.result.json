@@ -1,0 +1,962 @@
+{
+  "success": true,
+  "returncode": 0,
+  "messages": [
+    {
+      "type": "STEP_RESULT",
+      "step": 0,
+      "action": "OPEN_URL",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 1,
+      "parentAction": "LoginAsMaker",
+      "subStepLabel": "LoginAsMaker/1"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 1,
+      "action": "WAIT_VISIBLE",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 1,
+      "parentAction": "LoginAsMaker",
+      "subStepLabel": "LoginAsMaker/2"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 2,
+      "action": "TYPE",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 1,
+      "parentAction": "LoginAsMaker",
+      "subStepLabel": "LoginAsMaker/3"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 3,
+      "action": "TYPE",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 1,
+      "parentAction": "LoginAsMaker",
+      "subStepLabel": "LoginAsMaker/4"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 4,
+      "action": "CLICK",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 1,
+      "parentAction": "LoginAsMaker",
+      "subStepLabel": "LoginAsMaker/5"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 5,
+      "action": "WAIT_VISIBLE",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 1,
+      "parentAction": "LoginAsMaker",
+      "subStepLabel": "LoginAsMaker/6"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 6,
+      "action": "CLICK",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 2,
+      "parentAction": "CreateBuyTrade",
+      "subStepLabel": "CreateBuyTrade/1"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 7,
+      "action": "WAIT_VISIBLE",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 2,
+      "parentAction": "CreateBuyTrade",
+      "subStepLabel": "CreateBuyTrade/2"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 8,
+      "action": "CLICK",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 2,
+      "parentAction": "CreateBuyTrade",
+      "subStepLabel": "CreateBuyTrade/3"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 9,
+      "action": "WAIT_VISIBLE",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 2,
+      "parentAction": "CreateBuyTrade",
+      "subStepLabel": "CreateBuyTrade/4"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 10,
+      "action": "SELECT",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 2,
+      "parentAction": "CreateBuyTrade",
+      "subStepLabel": "CreateBuyTrade/5"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 11,
+      "action": "SELECT",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 2,
+      "parentAction": "CreateBuyTrade",
+      "subStepLabel": "CreateBuyTrade/6"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 12,
+      "action": "WAIT_VISIBLE",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 2,
+      "parentAction": "CreateBuyTrade",
+      "subStepLabel": "CreateBuyTrade/7"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 13,
+      "action": "SELECT",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 2,
+      "parentAction": "CreateBuyTrade",
+      "subStepLabel": "CreateBuyTrade/8"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 14,
+      "action": "WAIT_HIDDEN",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 2,
+      "parentAction": "CreateBuyTrade",
+      "subStepLabel": "CreateBuyTrade/9"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 15,
+      "action": "SELECT",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 2,
+      "parentAction": "CreateBuyTrade",
+      "subStepLabel": "CreateBuyTrade/10"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 16,
+      "action": "TYPE",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 2,
+      "parentAction": "CreateBuyTrade",
+      "subStepLabel": "CreateBuyTrade/11"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 17,
+      "action": "SELECT",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 2,
+      "parentAction": "CreateBuyTrade",
+      "subStepLabel": "CreateBuyTrade/12"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 18,
+      "action": "CLICK",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 2,
+      "parentAction": "CreateBuyTrade",
+      "subStepLabel": "CreateBuyTrade/13"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 19,
+      "action": "WAIT_VISIBLE",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 2,
+      "parentAction": "CreateBuyTrade",
+      "subStepLabel": "CreateBuyTrade/14"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 20,
+      "action": "READ_TEXT",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 2,
+      "parentAction": "CreateBuyTrade",
+      "subStepLabel": "CreateBuyTrade/15"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 21,
+      "action": "WAIT_VISIBLE",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 2,
+      "parentAction": "CreateBuyTrade",
+      "subStepLabel": "CreateBuyTrade/16"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 22,
+      "action": "READ_TEXT",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 3
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 23,
+      "action": "ASSERT_CONTAINS",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 3
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 24,
+      "action": "CLICK",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 4,
+      "parentAction": "Logout",
+      "subStepLabel": "Logout/1"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 25,
+      "action": "WAIT_VISIBLE",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 4,
+      "parentAction": "Logout",
+      "subStepLabel": "Logout/2"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 26,
+      "action": "OPEN_URL",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 5,
+      "parentAction": "LoginAsChecker",
+      "subStepLabel": "LoginAsChecker/1"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 27,
+      "action": "WAIT_VISIBLE",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 5,
+      "parentAction": "LoginAsChecker",
+      "subStepLabel": "LoginAsChecker/2"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 28,
+      "action": "TYPE",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 5,
+      "parentAction": "LoginAsChecker",
+      "subStepLabel": "LoginAsChecker/3"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 29,
+      "action": "TYPE",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 5,
+      "parentAction": "LoginAsChecker",
+      "subStepLabel": "LoginAsChecker/4"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 30,
+      "action": "CLICK",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 5,
+      "parentAction": "LoginAsChecker",
+      "subStepLabel": "LoginAsChecker/5"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 31,
+      "action": "WAIT_VISIBLE",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 5,
+      "parentAction": "LoginAsChecker",
+      "subStepLabel": "LoginAsChecker/6"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 32,
+      "action": "CLICK",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 6,
+      "parentAction": "ApproveTrade",
+      "subStepLabel": "ApproveTrade/1"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 33,
+      "action": "WAIT_VISIBLE",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 6,
+      "parentAction": "ApproveTrade",
+      "subStepLabel": "ApproveTrade/2"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 34,
+      "action": "WAIT_VISIBLE",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 6,
+      "parentAction": "ApproveTrade",
+      "subStepLabel": "ApproveTrade/3"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 35,
+      "action": "CLICK",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 6,
+      "parentAction": "ApproveTrade",
+      "subStepLabel": "ApproveTrade/4"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 36,
+      "action": "WAIT_VISIBLE",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 6,
+      "parentAction": "ApproveTrade",
+      "subStepLabel": "ApproveTrade/5"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 37,
+      "action": "WAIT_HIDDEN",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 6,
+      "parentAction": "ApproveTrade",
+      "subStepLabel": "ApproveTrade/6"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 38,
+      "action": "CLICK",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 6,
+      "parentAction": "ApproveTrade",
+      "subStepLabel": "ApproveTrade/7"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 39,
+      "action": "WAIT_VISIBLE",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 6,
+      "parentAction": "ApproveTrade",
+      "subStepLabel": "ApproveTrade/8"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 40,
+      "action": "READ_TEXT",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 6,
+      "parentAction": "ApproveTrade",
+      "subStepLabel": "ApproveTrade/9"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 41,
+      "action": "WAIT_HIDDEN",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 6,
+      "parentAction": "ApproveTrade",
+      "subStepLabel": "ApproveTrade/10"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 42,
+      "action": "CLICK",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 7
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 43,
+      "action": "WAIT_VISIBLE",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 7
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 44,
+      "action": "CLICK",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 7
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 45,
+      "action": "WAIT_VISIBLE",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 7
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 46,
+      "action": "WAIT_HIDDEN",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 8
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 47,
+      "action": "READ_TEXT",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 8
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 48,
+      "action": "ASSERT_TEXT",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 8
+    },
+    {
+      "type": "RUN_COMPLETE",
+      "totalSteps": 49,
+      "passed": 49,
+      "failed": 0
+    }
+  ],
+  "execution_trace": [
+    {
+      "type": "STEP_RESULT",
+      "step": 0,
+      "action": "OPEN_URL",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 1,
+      "parentAction": "LoginAsMaker",
+      "subStepLabel": "LoginAsMaker/1"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 1,
+      "action": "WAIT_VISIBLE",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 1,
+      "parentAction": "LoginAsMaker",
+      "subStepLabel": "LoginAsMaker/2"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 2,
+      "action": "TYPE",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 1,
+      "parentAction": "LoginAsMaker",
+      "subStepLabel": "LoginAsMaker/3"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 3,
+      "action": "TYPE",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 1,
+      "parentAction": "LoginAsMaker",
+      "subStepLabel": "LoginAsMaker/4"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 4,
+      "action": "CLICK",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 1,
+      "parentAction": "LoginAsMaker",
+      "subStepLabel": "LoginAsMaker/5"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 5,
+      "action": "WAIT_VISIBLE",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 1,
+      "parentAction": "LoginAsMaker",
+      "subStepLabel": "LoginAsMaker/6"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 6,
+      "action": "CLICK",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 2,
+      "parentAction": "CreateBuyTrade",
+      "subStepLabel": "CreateBuyTrade/1"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 7,
+      "action": "WAIT_VISIBLE",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 2,
+      "parentAction": "CreateBuyTrade",
+      "subStepLabel": "CreateBuyTrade/2"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 8,
+      "action": "CLICK",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 2,
+      "parentAction": "CreateBuyTrade",
+      "subStepLabel": "CreateBuyTrade/3"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 9,
+      "action": "WAIT_VISIBLE",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 2,
+      "parentAction": "CreateBuyTrade",
+      "subStepLabel": "CreateBuyTrade/4"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 10,
+      "action": "SELECT",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 2,
+      "parentAction": "CreateBuyTrade",
+      "subStepLabel": "CreateBuyTrade/5"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 11,
+      "action": "SELECT",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 2,
+      "parentAction": "CreateBuyTrade",
+      "subStepLabel": "CreateBuyTrade/6"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 12,
+      "action": "WAIT_VISIBLE",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 2,
+      "parentAction": "CreateBuyTrade",
+      "subStepLabel": "CreateBuyTrade/7"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 13,
+      "action": "SELECT",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 2,
+      "parentAction": "CreateBuyTrade",
+      "subStepLabel": "CreateBuyTrade/8"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 14,
+      "action": "WAIT_HIDDEN",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 2,
+      "parentAction": "CreateBuyTrade",
+      "subStepLabel": "CreateBuyTrade/9"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 15,
+      "action": "SELECT",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 2,
+      "parentAction": "CreateBuyTrade",
+      "subStepLabel": "CreateBuyTrade/10"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 16,
+      "action": "TYPE",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 2,
+      "parentAction": "CreateBuyTrade",
+      "subStepLabel": "CreateBuyTrade/11"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 17,
+      "action": "SELECT",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 2,
+      "parentAction": "CreateBuyTrade",
+      "subStepLabel": "CreateBuyTrade/12"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 18,
+      "action": "CLICK",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 2,
+      "parentAction": "CreateBuyTrade",
+      "subStepLabel": "CreateBuyTrade/13"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 19,
+      "action": "WAIT_VISIBLE",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 2,
+      "parentAction": "CreateBuyTrade",
+      "subStepLabel": "CreateBuyTrade/14"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 20,
+      "action": "READ_TEXT",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 2,
+      "parentAction": "CreateBuyTrade",
+      "subStepLabel": "CreateBuyTrade/15"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 21,
+      "action": "WAIT_VISIBLE",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 2,
+      "parentAction": "CreateBuyTrade",
+      "subStepLabel": "CreateBuyTrade/16"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 22,
+      "action": "READ_TEXT",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 3
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 23,
+      "action": "ASSERT_CONTAINS",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 3
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 24,
+      "action": "CLICK",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 4,
+      "parentAction": "Logout",
+      "subStepLabel": "Logout/1"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 25,
+      "action": "WAIT_VISIBLE",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 4,
+      "parentAction": "Logout",
+      "subStepLabel": "Logout/2"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 26,
+      "action": "OPEN_URL",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 5,
+      "parentAction": "LoginAsChecker",
+      "subStepLabel": "LoginAsChecker/1"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 27,
+      "action": "WAIT_VISIBLE",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 5,
+      "parentAction": "LoginAsChecker",
+      "subStepLabel": "LoginAsChecker/2"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 28,
+      "action": "TYPE",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 5,
+      "parentAction": "LoginAsChecker",
+      "subStepLabel": "LoginAsChecker/3"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 29,
+      "action": "TYPE",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 5,
+      "parentAction": "LoginAsChecker",
+      "subStepLabel": "LoginAsChecker/4"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 30,
+      "action": "CLICK",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 5,
+      "parentAction": "LoginAsChecker",
+      "subStepLabel": "LoginAsChecker/5"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 31,
+      "action": "WAIT_VISIBLE",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 5,
+      "parentAction": "LoginAsChecker",
+      "subStepLabel": "LoginAsChecker/6"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 32,
+      "action": "CLICK",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 6,
+      "parentAction": "ApproveTrade",
+      "subStepLabel": "ApproveTrade/1"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 33,
+      "action": "WAIT_VISIBLE",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 6,
+      "parentAction": "ApproveTrade",
+      "subStepLabel": "ApproveTrade/2"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 34,
+      "action": "WAIT_VISIBLE",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 6,
+      "parentAction": "ApproveTrade",
+      "subStepLabel": "ApproveTrade/3"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 35,
+      "action": "CLICK",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 6,
+      "parentAction": "ApproveTrade",
+      "subStepLabel": "ApproveTrade/4"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 36,
+      "action": "WAIT_VISIBLE",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 6,
+      "parentAction": "ApproveTrade",
+      "subStepLabel": "ApproveTrade/5"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 37,
+      "action": "WAIT_HIDDEN",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 6,
+      "parentAction": "ApproveTrade",
+      "subStepLabel": "ApproveTrade/6"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 38,
+      "action": "CLICK",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 6,
+      "parentAction": "ApproveTrade",
+      "subStepLabel": "ApproveTrade/7"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 39,
+      "action": "WAIT_VISIBLE",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 6,
+      "parentAction": "ApproveTrade",
+      "subStepLabel": "ApproveTrade/8"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 40,
+      "action": "READ_TEXT",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 6,
+      "parentAction": "ApproveTrade",
+      "subStepLabel": "ApproveTrade/9"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 41,
+      "action": "WAIT_HIDDEN",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 6,
+      "parentAction": "ApproveTrade",
+      "subStepLabel": "ApproveTrade/10"
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 42,
+      "action": "CLICK",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 7
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 43,
+      "action": "WAIT_VISIBLE",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 7
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 44,
+      "action": "CLICK",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 7
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 45,
+      "action": "WAIT_VISIBLE",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 7
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 46,
+      "action": "WAIT_HIDDEN",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 8
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 47,
+      "action": "READ_TEXT",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 8
+    },
+    {
+      "type": "STEP_RESULT",
+      "step": 48,
+      "action": "ASSERT_TEXT",
+      "status": "PASS",
+      "detail": "",
+      "tcStep": 8
+    }
+  ],
+  "help_exchanges": [],
+  "summary": "Run complete: 49/49 passed, 0 failed.\nStderr:\nWARNING: A terminally deprecated method in sun.misc.Unsafe has been called\nWARNING: sun.misc.Unsafe::staticFieldBase has been called by com.google.inject.internal.aop.HiddenClassDefiner (file:/opt/homebrew/Cellar/maven/3.9.11/libexec/lib/guice-5.1.0-classes.jar)\nWARNING: Please consider reporting this to the maintainers of class com.google.inject.internal.aop.HiddenClassDefiner\nWARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release\nSLF4J(W): No SLF4J providers were found.\nSLF4J(W): Defaulting to no-operation (NOP) logger implementation\nSLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.\nApr 01, 2026 3:27:06 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch\nWARNING: Unable to find an exact match for CDP version 146, returning the closest version; found: 145; Please update to a Selenium version that supports CDP version 146\n[ENGINE] Parsed 14 steps from script_TC-001_20260401_152539.json\n[ENGINE] Resolved advanced action 'LoginAsMaker' -> 6 steps\n[ENGINE] Expanding advanced action 'LoginAsMaker' into 6 sub-steps\n[ENGINE] Resolved advanced action 'CreateBuyTrade' -> 16 steps\n[ENGINE] Expanding advanced action 'CreateBuyTrade' into 16 sub-steps\n[ENGINE] Resolved advanced action 'Logout' -> 2 steps\n[ENGINE] Expanding advanced action 'Logout' into 2 sub-steps\n[ENGINE] Resolved advanced action 'LoginAsChecker' -> 6 steps\n[ENGINE] Expanding advanced action 'LoginAsChecker' into 6 sub-steps\n[ENGINE] Resolved advanced action 'ApproveTrade' -> 10 steps\n[ENGINE] Expanding advanced action 'ApproveTrade' into 10 sub-steps",
+  "testCaseId": "TC-001",
+  "requirementId": "REQ-001"
+}

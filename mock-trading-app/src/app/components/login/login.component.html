@@ -1,0 +1,22 @@
+<div class="login-page" data-testid="login-page">
+  <form class="login-form" data-testid="login-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <h1 data-testid="login-title">Login</h1>
+
+    @if (loading) {
+      <div class="loading" data-testid="login-loading">Loading...</div>
+    } @else {
+      <div class="field">
+        <label for="username">Username</label>
+        <input id="username" type="text" formControlName="username" data-testid="auth-username-field" />
+      </div>
+      <div class="field">
+        <label for="password">Password</label>
+        <input id="password" type="password" formControlName="password" data-testid="login-password" />
+      </div>
+      @if (error) {
+        <p class="error" data-testid="login-error">{{ error }}</p>
+      }
+      <button type="submit" data-testid="auth-sign-in-btn">Sign in</button>
+    }
+  </form>
+</div>

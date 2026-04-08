@@ -1,0 +1,42 @@
+{
+  "name": "LoginAsChecker",
+  "description": "Navigates to /login and logs in as checker (checker/chscker@123). End state: dashboard page.",
+  "steps": [
+    {
+      "action": "OPEN_URL",
+      "locator": "",
+      "test_input": "http://localhost:4200/login",
+      "output": ""
+    },
+    {
+      "action": "WAIT_VISIBLE",
+      "locator": "$login-username",
+      "test_input": "10",
+      "output": ""
+    },
+    {
+      "action": "TYPE",
+      "locator": "$login-username",
+      "test_input": "checker",
+      "output": ""
+    },
+    {
+      "action": "TYPE",
+      "locator": "$login-password",
+      "test_input": "chscker@123",
+      "output": ""
+    },
+    {
+      "action": "CLICK",
+      "locator": "$login-submit",
+      "test_input": "",
+      "output": ""
+    },
+    {
+      "action": "WAIT_VISIBLE",
+      "locator": "$dashboard-page",
+      "test_input": "10",
+      "output": ""
+    }
+  ]
+}

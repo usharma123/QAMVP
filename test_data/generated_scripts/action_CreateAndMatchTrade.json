@@ -1,0 +1,30 @@
+{
+  "name": "CreateAndMatchTrade",
+  "description": "Creates a BUY trade, approves it, creates a matching SELL trade, approves it. Use when test needs two matched/approved trades. End state: Approval Queue page.",
+  "steps": [
+    {
+      "action": "CALL",
+      "locator": "action_CreateBuyTrade",
+      "test_input": "{\"sector\": \"{{sector}}\", \"ticker\": \"{{ticker}}\", \"accountType\": \"{{accountType}}\", \"quantity\": \"{{quantity}}\", \"timeInForce\": \"{{timeInForce}}\"}",
+      "output": ""
+    },
+    {
+      "action": "CALL",
+      "locator": "action_ApproveTrade",
+      "test_input": "",
+      "output": ""
+    },
+    {
+      "action": "CALL",
+      "locator": "action_CreateSellTrade",
+      "test_input": "{\"sector\": \"{{sector}}\", \"ticker\": \"{{ticker}}\", \"accountType\": \"{{accountType}}\", \"quantity\": \"{{quantity}}\", \"timeInForce\": \"{{timeInForce}}\"}",
+      "output": ""
+    },
+    {
+      "action": "CALL",
+      "locator": "action_ApproveTrade",
+      "test_input": "",
+      "output": ""
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+---
+description: Flag non-coding tasks to save tokens
+alwaysApply: true
+---
+
+# Flag non-coding tasks before executing
+
+Before starting work on any request (user-initiated or self-discovered during reasoning), determine whether the task requires **code changes** or is a **non-coding task** (e.g., manual data fix in a spreadsheet, running a one-off command, changing a config value, restarting a process, or a conceptual question).
+
+If the task is non-coding:
+- Tell the user explicitly: "This doesn't require code changes — you can do X manually" (with clear instructions).
+- Do NOT proceed with tool calls or code generation unless the user explicitly asks you to.
+
+Examples of non-coding tasks:
+- Fixing a value directly in an .xlsx file (e.g., correcting a locator entry)
+- Restarting a running process to pick up code changes
+- Running a single CLI command the user could run themselves
+- Answering a conceptual/architectural question
+
+This saves tokens and keeps the focus on work that actually benefits from AI assistance.

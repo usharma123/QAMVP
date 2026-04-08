@@ -1,0 +1,66 @@
+{
+  "name": "ApproveTrade",
+  "description": "Navigates to Approval Queue, clicks Approve on the first pending trade. End state: Approval Queue page with toast confirmed.",
+  "steps": [
+    {
+      "action": "CLICK",
+      "locator": "$trading-menu-trigger",
+      "test_input": "",
+      "output": ""
+    },
+    {
+      "action": "WAIT_VISIBLE",
+      "locator": "$trading-menu-trigger",
+      "test_input": "10",
+      "output": ""
+    },
+    {
+      "action": "WAIT_VISIBLE",
+      "locator": "$nav-queue",
+      "test_input": "10",
+      "output": ""
+    },
+    {
+      "action": "CLICK",
+      "locator": "$nav-queue",
+      "test_input": "",
+      "output": ""
+    },
+    {
+      "action": "WAIT_VISIBLE",
+      "locator": "$queue-page",
+      "test_input": "10",
+      "output": ""
+    },
+    {
+      "action": "WAIT_HIDDEN",
+      "locator": "$queue-loading",
+      "test_input": "10",
+      "output": ""
+    },
+    {
+      "action": "CLICK",
+      "locator": "$queue-approve-btn",
+      "test_input": "",
+      "output": ""
+    },
+    {
+      "action": "WAIT_VISIBLE",
+      "locator": "$queue-approve-toast",
+      "test_input": "10",
+      "output": ""
+    },
+    {
+      "action": "READ_TEXT",
+      "locator": "$queue-approve-toast",
+      "test_input": "",
+      "output": "approveMessage"
+    },
+    {
+      "action": "WAIT_HIDDEN",
+      "locator": "$queue-approve-toast",
+      "test_input": "10",
+      "output": ""
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "testCases": [
+    {
+      "testCaseId": "TC-001",
+      "requirementId": "REQ-FR-033",
+      "steps": [
+        {
+          "stepNumber": 1,
+          "stepDescription": "Open the mock trading app at http://localhost:4200 and login as Maker",
+          "expectedOutput": "Dashboard page loads and navbar shows admin (maker)",
+          "testData": "username=admin,password=admin"
+        },
+        {
+          "stepNumber": 2,
+          "stepDescription": "Open the Trading dropdown and navigate to New Trade",
+          "expectedOutput": "New Trade form is visible",
+          "testData": ""
+        },
+        {
+          "stepNumber": 3,
+          "stepDescription": "Fill the New Trade form for a BUY trade and submit",
+          "expectedOutput": "A success toast confirms submission",
+          "testData": "side=BUY,sector=Technology,ticker=AAPL,accountType=Cash,quantity=100,timeInForce=Day Order"
+        },
+        {
+          "stepNumber": 4,
+          "stepDescription": "Open the Trading dropdown and navigate to Approval Queue",
+          "expectedOutput": "The submitted BUY AAPL 100 trade appears as pending_approval in the queue",
+          "testData": "ticker=AAPL,side=BUY,quantity=100"
+        },
+        {
+          "stepNumber": 5,
+          "stepDescription": "Logout the Maker",
+          "expectedOutput": "Login page is visible again",
+          "testData": ""
+        }
+      ]
+    },
+    {
+      "testCaseId": "TC-002",
+      "requirementId": "REQ-FR-033",
+      "steps": [
+        {
+          "stepNumber": 1,
+          "stepDescription": "Open the mock trading app at http://localhost:4200 and login as Maker",
+          "expectedOutput": "Dashboard page loads and navbar shows admin (maker)",
+          "testData": "username=admin,password=admin"
+        },
+        {
+          "stepNumber": 2,
+          "stepDescription": "Open the Trading dropdown and navigate to New Trade",
+          "expectedOutput": "New Trade form is visible",
+          "testData": ""
+        },
+        {
+          "stepNumber": 3,
+          "stepDescription": "Fill the New Trade form for a SELL trade and submit",
+          "expectedOutput": "A success toast confirms submission",
+          "testData": "side=SELL,sector=Technology,ticker=MSFT,accountType=Cash,quantity=50,timeInForce=Day Order"
+        },
+        {
+          "stepNumber": 4,
+          "stepDescription": "Open the Trading dropdown and navigate to Approval Queue",
+          "expectedOutput": "The submitted SELL MSFT 50 trade appears as pending_approval in the queue",
+          "testData": "ticker=MSFT,side=SELL,quantity=50"
+        },
+        {
+          "stepNumber": 5,
+          "stepDescription": "Logout the Maker",
+          "expectedOutput": "Login page is visible again",
+          "testData": ""
+        }
+      ]
+    },
+    {
+      "testCaseId": "TC-003",
+      "requirementId": "REQ-FR-043",
+      "steps": [
+        {
+          "stepNumber": 1,
+          "stepDescription": "Open the mock trading app at http://localhost:4200 and login as Checker",
+          "expectedOutput": "Navbar shows checker and Approval Queue is accessible",
+          "testData": "username=checker,password=chscker@123"
+        },
+        {
+          "stepNumber": 2,
+          "stepDescription": "Open the Trading dropdown and navigate to Approval Queue",
+          "expectedOutput": "Queue lists pending_approval trades including the AAPL BUY row",
+          "testData": "ticker=AAPL,side=BUY"
+        },
+        {
+          "stepNumber": 3,
+          "stepDescription": "Click Approve on the first pending AAPL BUY row",
+          "expectedOutput": "Approval toast confirms and the row no longer appears as pending_approval",
+          "testData": "ticker=AAPL,side=BUY"
+        },
+        {
+          "stepNumber": 4,
+          "stepDescription": "Open the Trading dropdown and navigate to Dashboard",
+          "expectedOutput": "Dashboard lists the approved AAPL trade and Total Trades count reflects it",
+          "testData": "ticker=AAPL"
+        },
+        {
+          "stepNumber": 5,
+          "stepDescription": "Open the Trading dropdown and navigate to Trade List",
+          "expectedOutput": "Trade List displays the approved AAPL BUY 100 row with Status column populated",
+          "testData": "ticker=AAPL,side=BUY,quantity=100"
+        },
+        {
+          "stepNumber": 6,
+          "stepDescription": "Logout the Checker",
+          "expectedOutput": "Login page is visible again",
+          "testData": ""
+        }
+      ]
+    }
+  ]
+}

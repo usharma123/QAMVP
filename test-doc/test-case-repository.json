@@ -1,0 +1,922 @@
+{
+  "document_id": "KB-TC-REPO-001",
+  "version": "2026.04.22.103041",
+  "status": "Exported from ingestion DB structured test-case inventory.",
+  "title": "Knowledge Base Test Case Repository",
+  "source_workbook": "test_data/TestCases.xlsx",
+  "cases": [
+    {
+      "test_case_id": "TC-001",
+      "title": "Maker submits BUY, checker approves, dashboard reflects one approved trade",
+      "objective": "Validate the core maker-checker happy path from login through approval and approved-only dashboard count.",
+      "priority": "P1",
+      "suite": "S-1 Smoke",
+      "tags": [
+        "@smoke",
+        "@maker",
+        "@checker",
+        "@approval",
+        "@dashboard"
+      ],
+      "steps": [
+        {
+          "requirement_id": "REQ-FR-002",
+          "step_number": 1,
+          "step_description": "Login as maker using documented credentials.",
+          "expected_output": "Dashboard page loads and navbar shows admin (maker).",
+          "test_data": "username=admin,password=admin"
+        },
+        {
+          "requirement_id": "REQ-FR-012",
+          "step_number": 2,
+          "step_description": "Open Trading menu and navigate to New Trade.",
+          "expected_output": "New Trade form is visible.",
+          "test_data": "target=nav-new-trade"
+        },
+        {
+          "requirement_id": "REQ-FR-030",
+          "step_number": 3,
+          "step_description": "Select BUY, Technology, AAPL, Cash, quantity 100, Day Order.",
+          "expected_output": "All required trade form fields are populated.",
+          "test_data": "side=BUY,sector=Technology,ticker=AAPL,accountType=Cash,quantity=100,timeInForce=Day Order"
+        },
+        {
+          "requirement_id": "REQ-FR-031",
+          "step_number": 4,
+          "step_description": "Wait for ticker price and total value to calculate.",
+          "expected_output": "Current Price is 178.50 and Total Value is 17850.00.",
+          "test_data": "ticker=AAPL,expectedPrice=178.50,expectedTotal=17850.00"
+        },
+        {
+          "requirement_id": "REQ-FR-033",
+          "step_number": 5,
+          "step_description": "Submit the order.",
+          "expected_output": "Success toast confirms Order TX-1001 and workflow moves toward approval queue.",
+          "test_data": "expectedTxId=TX-1001"
+        },
+        {
+          "requirement_id": "REQ-FR-040",
+          "step_number": 6,
+          "step_description": "Open Approval Queue as maker before approval.",
+          "expected_output": "Queue shows Pending: 1 and includes BUY AAPL quantity 100.",
+          "test_data": "expectedPending=1,ticker=AAPL,side=BUY,quantity=100"
+        },
+        {
+          "requirement_id": "REQ-FR-014",
+          "step_number": 7,
+          "step_description": "Logout maker.",
+          "expected_output": "Login page is visible and maker session is cleared.",
+          "test_data": ""
+        },
+        {
+          "requirement_id": "REQ-FR-003",
+          "step_number": 8,
+          "step_description": "Login as checker.",
+          "expected_output": "Dashboard page loads and navbar shows checker (checker).",
+          "test_data": "username=checker,password=chscker@123"
+        },
+        {
+          "requirement_id": "REQ-FR-043",
+          "step_number": 9,
+          "step_description": "Open Approval Queue and approve the AAPL BUY row.",
+          "expected_output": "Approve action completes for TX-1001.",
+          "test_data": "ticker=AAPL,side=BUY"
+        },
+        {
+          "requirement_id": "REQ-FR-044",
+          "step_number": 10,
+          "step_description": "Observe approval feedback.",
+          "expected_output": "Toast displays Trade TX-1001 approved.",
+          "test_data": "expectedToast=Trade TX-1001 approved"
+        },
+        {
+          "requirement_id": "REQ-FR-045",
+          "step_number": 11,
+          "step_description": "Refresh or revisit Approval Queue.",
+          "expected_output": "Queue shows Pending: 0 and the approved row is removed.",
+          "test_data": "expectedPending=0"
+        },
+        {
+          "requirement_id": "REQ-FR-020",
+          "step_number": 12,
+          "step_description": "Navigate to Dashboard.",
+          "expected_output": "Dashboard includes the approved AAPL trade and excludes pending-only rows.",
+          "test_data": "ticker=AAPL"
+        },
+        {
+          "requirement_id": "REQ-FR-022",
+          "step_number": 13,
+          "step_description": "Verify Dashboard total count.",
+          "expected_output": "Total Trades: 1 is displayed.",
+          "test_data": "expectedCount=1"
+        }
+      ]
+    },
+    {
+      "test_case_id": "TC-002",
+      "title": "Two pending trades are counted in queue and absent from dashboard until approval",
+      "objective": "Prove pending trades are isolated to the approval queue and do not inflate approved dashboard totals.",
+      "priority": "P1",
+      "suite": "S-4 Detailed Regression",
+      "tags": [
+        "@regression",
+        "@maker",
+        "@queue",
+        "@dashboard"
+      ],
+      "steps": [
+        {
+          "requirement_id": "REQ-FR-002",
+          "step_number": 1,
+          "step_description": "Login as maker.",
+          "expected_output": "Navbar shows admin (maker).",
+          "test_data": "username=admin,password=admin"
+        },
+        {
+          "requirement_id": "REQ-FR-033",
+          "step_number": 2,
+          "step_description": "Create BUY AAPL 100 Cash Day Order.",
+          "expected_output": "First trade is submitted and routed to pending approval.",
+          "test_data": "side=BUY,sector=Technology,ticker=AAPL,accountType=Cash,quantity=100,timeInForce=Day Order"
+        },
+        {
+          "requirement_id": "REQ-FR-033",
+          "step_number": 3,
+          "step_description": "Create SELL AAPL 100 Cash Day Order.",
+          "expected_output": "Second trade is submitted and routed to pending approval.",
+          "test_data": "side=SELL,sector=Technology,ticker=AAPL,accountType=Cash,quantity=100,timeInForce=Day Order"
+        },
+        {
+          "requirement_id": "REQ-FR-042",
+          "step_number": 4,
+          "step_description": "Navigate to Approval Queue.",
+          "expected_output": "Pending: 2 is displayed.",
+          "test_data": "expectedPending=2"
+        },
+        {
+          "requirement_id": "REQ-FR-041",
+          "step_number": 5,
+          "step_description": "Inspect queue columns and row values.",
+          "expected_output": "TX-ID, Side, Ticker, Qty, Price, Total, Action columns are visible with both AAPL rows.",
+          "test_data": "expectedColumns=TX-ID|Side|Ticker|Qty|Price|Total|Action"
+        },
+        {
+          "requirement_id": "REQ-FR-020",
+          "step_number": 6,
+          "step_description": "Navigate to Dashboard without approving either trade.",
+          "expected_output": "Dashboard does not show the pending AAPL trades.",
+          "test_data": "ticker=AAPL"
+        },
+        {
+          "requirement_id": "REQ-FR-022",
+          "step_number": 7,
+          "step_description": "Verify dashboard approved count remains zero.",
+          "expected_output": "Total Trades: 0 is displayed.",
+          "test_data": "expectedCount=0"
+        }
+      ]
+    },
+    {
+      "test_case_id": "TC-003",
+      "title": "Approved BUY and matching SELL become Matched in Trade List",
+      "objective": "Validate the matched-pair lifecycle after checker approval of opposite-side trades with the same ticker and quantity.",
+      "priority": "P1",
+      "suite": "S-1 Smoke",
+      "tags": [
+        "@smoke",
+        "@maker",
+        "@checker",
+        "@matching",
+        "@trade-list"
+      ],
+      "steps": [
+        {
+          "requirement_id": "REQ-FR-002",
+          "step_number": 1,
+          "step_description": "Login as maker.",
+          "expected_output": "Maker session is established.",
+          "test_data": "username=admin,password=admin"
+        },
+        {
+          "requirement_id": "REQ-FR-033",
+          "step_number": 2,
+          "step_description": "Create BUY JPM 50 Margin Day Order.",
+          "expected_output": "BUY JPM is submitted as pending approval.",
+          "test_data": "side=BUY,sector=Financials,ticker=JPM,accountType=Margin,quantity=50,timeInForce=Day Order"
+        },
+        {
+          "requirement_id": "REQ-FR-014",
+          "step_number": 3,
+          "step_description": "Logout maker.",
+          "expected_output": "Login page is visible.",
+          "test_data": ""
+        },
+        {
+          "requirement_id": "REQ-FR-003",
+          "step_number": 4,
+          "step_description": "Login as checker.",
+          "expected_output": "Checker session is established.",
+          "test_data": "username=checker,password=chscker@123"
+        },
+        {
+          "requirement_id": "REQ-FR-043",
+          "step_number": 5,
+          "step_description": "Approve the pending BUY JPM row.",
+          "expected_output": "BUY JPM row is approved and leaves queue.",
+          "test_data": "ticker=JPM,side=BUY"
+        },
+        {
+          "requirement_id": "REQ-FR-014",
+          "step_number": 6,
+          "step_description": "Logout checker.",
+          "expected_output": "Login page is visible.",
+          "test_data": ""
+        },
+        {
+          "requirement_id": "REQ-FR-002",
+          "step_number": 7,
+          "step_description": "Login as maker again.",
+          "expected_output": "Maker session is established.",
+          "test_data": "username=admin,password=admin"
+        },
+        {
+          "requirement_id": "REQ-FR-033",
+          "step_number": 8,
+          "step_description": "Create SELL JPM 50 Margin Day Order.",
+          "expected_output": "SELL JPM is submitted as pending approval.",
+          "test_data": "side=SELL,sector=Financials,ticker=JPM,accountType=Margin,quantity=50,timeInForce=Day Order"
+        },
+        {
+          "requirement_id": "REQ-FR-014",
+          "step_number": 9,
+          "step_description": "Logout maker.",
+          "expected_output": "Login page is visible.",
+          "test_data": ""
+        },
+        {
+          "requirement_id": "REQ-FR-003",
+          "step_number": 10,
+          "step_description": "Login as checker again.",
+          "expected_output": "Checker session is established.",
+          "test_data": "username=checker,password=chscker@123"
+        },
+        {
+          "requirement_id": "REQ-FR-043",
+          "step_number": 11,
+          "step_description": "Approve the pending SELL JPM row.",
+          "expected_output": "SELL JPM is approved and matching logic runs.",
+          "test_data": "ticker=JPM,side=SELL"
+        },
+        {
+          "requirement_id": "REQ-FR-050",
+          "step_number": 12,
+          "step_description": "Navigate to Trade List.",
+          "expected_output": "Trade List displays both approved JPM rows with Status column populated.",
+          "test_data": "ticker=JPM"
+        },
+        {
+          "requirement_id": "REQ-FR-051",
+          "step_number": 13,
+          "step_description": "Verify summary counts.",
+          "expected_output": "Total: 2, Matched: 2, Pending: 0 are displayed.",
+          "test_data": "expectedTotal=2,expectedMatched=2,expectedPending=0"
+        },
+        {
+          "requirement_id": "REQ-FR-050",
+          "step_number": 14,
+          "step_description": "Verify Matched With values.",
+          "expected_output": "Each JPM row references the opposite TX-ID in Matched With.",
+          "test_data": "expectedStatus=Matched"
+        }
+      ]
+    },
+    {
+      "test_case_id": "TC-004",
+      "title": "GTC trade requires expiration date and calculates notional total",
+      "objective": "Cover conditional GTC field behavior and price-total calculation for a Technology ticker.",
+      "priority": "P1",
+      "suite": "S-4 Detailed Regression",
+      "tags": [
+        "@regression",
+        "@maker",
+        "@trade-form",
+        "@gtc"
+      ],
+      "steps": [
+        {
+          "requirement_id": "REQ-FR-002",
+          "step_number": 1,
+          "step_description": "Login as maker.",
+          "expected_output": "Maker dashboard loads.",
+          "test_data": "username=admin,password=admin"
+        },
+        {
+          "requirement_id": "REQ-FR-012",
+          "step_number": 2,
+          "step_description": "Navigate to New Trade.",
+          "expected_output": "New Trade form is visible.",
+          "test_data": "target=nav-new-trade"
+        },
+        {
+          "requirement_id": "REQ-FR-032",
+          "step_number": 3,
+          "step_description": "Change Time in Force to GTC.",
+          "expected_output": "Expiration Date field appears and is required.",
+          "test_data": "timeInForce=GTC"
+        },
+        {
+          "requirement_id": "REQ-FR-030",
+          "step_number": 4,
+          "step_description": "Populate SELL MSFT 20 Margin GTC with expiration date.",
+          "expected_output": "All required fields including expiration date are populated.",
+          "test_data": "side=SELL,sector=Technology,ticker=MSFT,accountType=Margin,quantity=20,timeInForce=GTC,expirationDate=2026-12-31"
+        },
+        {
+          "requirement_id": "REQ-FR-031",
+          "step_number": 5,
+          "step_description": "Wait for MSFT price and total value.",
+          "expected_output": "Current Price is 415.20 and Total Value is 8304.00.",
+          "test_data": "ticker=MSFT,expectedPrice=415.20,expectedTotal=8304.00"
+        },
+        {
+          "requirement_id": "REQ-FR-033",
+          "step_number": 6,
+          "step_description": "Submit the GTC order.",
+          "expected_output": "Order confirmation toast appears and trade is pending approval.",
+          "test_data": "expectedStatus=pending_approval"
+        },
+        {
+          "requirement_id": "REQ-FR-040",
+          "step_number": 7,
+          "step_description": "Open Approval Queue.",
+          "expected_output": "Pending row shows SELL MSFT quantity 20.",
+          "test_data": "ticker=MSFT,side=SELL,quantity=20"
+        }
+      ]
+    },
+    {
+      "test_case_id": "TC-005",
+      "title": "Trade list shows unmatched approved trade until compatible opposite trade is approved",
+      "objective": "Validate that an approved standalone trade remains Pending in Trade List until a compatible opposite-side match exists.",
+      "priority": "P1",
+      "suite": "S-4 Detailed Regression",
+      "tags": [
+        "@regression",
+        "@checker",
+        "@trade-list",
+        "@matching"
+      ],
+      "steps": [
+        {
+          "requirement_id": "REQ-FR-002",
+          "step_number": 1,
+          "step_description": "Login as maker.",
+          "expected_output": "Maker session is established.",
+          "test_data": "username=admin,password=admin"
+        },
+        {
+          "requirement_id": "REQ-FR-033",
+          "step_number": 2,
+          "step_description": "Create BUY NVDA 10 Cash Day Order.",
+          "expected_output": "BUY NVDA is pending approval.",
+          "test_data": "side=BUY,sector=Technology,ticker=NVDA,accountType=Cash,quantity=10,timeInForce=Day Order"
+        },
+        {
+          "requirement_id": "REQ-FR-014",
+          "step_number": 3,
+          "step_description": "Logout maker.",
+          "expected_output": "Login page is visible.",
+          "test_data": ""
+        },
+        {
+          "requirement_id": "REQ-FR-003",
+          "step_number": 4,
+          "step_description": "Login as checker.",
+          "expected_output": "Checker session is established.",
+          "test_data": "username=checker,password=chscker@123"
+        },
+        {
+          "requirement_id": "REQ-FR-043",
+          "step_number": 5,
+          "step_description": "Approve BUY NVDA.",
+          "expected_output": "BUY NVDA is approved.",
+          "test_data": "ticker=NVDA,side=BUY"
+        },
+        {
+          "requirement_id": "REQ-FR-050",
+          "step_number": 6,
+          "step_description": "Navigate to Trade List.",
+          "expected_output": "Trade List displays the NVDA row with Status Pending and blank Matched With.",
+          "test_data": "ticker=NVDA,expectedStatus=Pending"
+        },
+        {
+          "requirement_id": "REQ-FR-051",
+          "step_number": 7,
+          "step_description": "Verify summary after unmatched approval.",
+          "expected_output": "Total: 1, Matched: 0, Pending: 1 are displayed.",
+          "test_data": "expectedTotal=1,expectedMatched=0,expectedPending=1"
+        }
+      ]
+    },
+    {
+      "test_case_id": "TC-006",
+      "title": "Invalid credentials do not authenticate and show safe error",
+      "objective": "Validate negative authentication behavior for bad credentials.",
+      "priority": "P1",
+      "suite": "S-3 Negative",
+      "tags": [
+        "@negative",
+        "@auth"
+      ],
+      "steps": [
+        {
+          "requirement_id": "REQ-FR-001",
+          "step_number": 1,
+          "step_description": "Open login page.",
+          "expected_output": "Username, password, and Sign in controls are visible.",
+          "test_data": ""
+        },
+        {
+          "requirement_id": "REQ-FR-004",
+          "step_number": 2,
+          "step_description": "Enter invalid credentials and submit.",
+          "expected_output": "User remains on login page.",
+          "test_data": "username=admin,password=wrong-password"
+        },
+        {
+          "requirement_id": "REQ-FR-004",
+          "step_number": 3,
+          "step_description": "Inspect login error message.",
+          "expected_output": "Invalid username or password is visible.",
+          "test_data": "expectedError=Invalid username or password"
+        },
+        {
+          "requirement_id": "REQ-FR-005",
+          "step_number": 4,
+          "step_description": "Verify Trading menu is unavailable after failed login.",
+          "expected_output": "Authenticated navbar and trading links are not visible.",
+          "test_data": ""
+        }
+      ]
+    },
+    {
+      "test_case_id": "TC-007",
+      "title": "Unauthenticated deep link is gated and logout clears protected access",
+      "objective": "Validate route guard behavior before and after logout.",
+      "priority": "P1",
+      "suite": "S-3 Negative",
+      "tags": [
+        "@negative",
+        "@auth",
+        "@logout"
+      ],
+      "steps": [
+        {
+          "requirement_id": "REQ-FR-005",
+          "step_number": 1,
+          "step_description": "Open /trade directly while logged out.",
+          "expected_output": "Application redirects to login or blocks access to New Trade.",
+          "test_data": "targetRoute=/trade"
+        },
+        {
+          "requirement_id": "REQ-FR-002",
+          "step_number": 2,
+          "step_description": "Login as maker.",
+          "expected_output": "Dashboard page loads.",
+          "test_data": "username=admin,password=admin"
+        },
+        {
+          "requirement_id": "REQ-FR-014",
+          "step_number": 3,
+          "step_description": "Click Logout.",
+          "expected_output": "Login page is visible and session is cleared.",
+          "test_data": ""
+        },
+        {
+          "requirement_id": "REQ-SEC-002",
+          "step_number": 4,
+          "step_description": "Open /dashboard directly after logout.",
+          "expected_output": "Application requires login again or blocks protected content.",
+          "test_data": "targetRoute=/dashboard"
+        }
+      ]
+    },
+    {
+      "test_case_id": "TC-008",
+      "title": "Navigation menus expose all trading and admin destinations",
+      "objective": "Validate stable click-based navigation and route reachability for automation.",
+      "priority": "P1",
+      "suite": "S-2 Navigation",
+      "tags": [
+        "@regression",
+        "@nav"
+      ],
+      "steps": [
+        {
+          "requirement_id": "REQ-FR-002",
+          "step_number": 1,
+          "step_description": "Login as maker.",
+          "expected_output": "Authenticated navbar is visible.",
+          "test_data": "username=admin,password=admin"
+        },
+        {
+          "requirement_id": "REQ-FR-010",
+          "step_number": 2,
+          "step_description": "Verify navbar persists on Dashboard.",
+          "expected_output": "Navbar remains visible on Dashboard.",
+          "test_data": ""
+        },
+        {
+          "requirement_id": "REQ-FR-012",
+          "step_number": 3,
+          "step_description": "Open Trading dropdown.",
+          "expected_output": "Dashboard, New Trade, Trade List, and Approval Queue links are visible.",
+          "test_data": "trigger=trading-menu-trigger"
+        },
+        {
+          "requirement_id": "REQ-FR-012",
+          "step_number": 4,
+          "step_description": "Click New Trade.",
+          "expected_output": "New Trade page loads.",
+          "test_data": "target=nav-new-trade"
+        },
+        {
+          "requirement_id": "REQ-FR-012",
+          "step_number": 5,
+          "step_description": "Open Trading dropdown and click Approval Queue.",
+          "expected_output": "Approval Queue page loads.",
+          "test_data": "target=nav-queue"
+        },
+        {
+          "requirement_id": "REQ-FR-012",
+          "step_number": 6,
+          "step_description": "Open Trading dropdown and click Trade List.",
+          "expected_output": "Trade List page loads.",
+          "test_data": "target=nav-trade-list"
+        },
+        {
+          "requirement_id": "REQ-FR-013",
+          "step_number": 7,
+          "step_description": "Open Admin dropdown and click Users.",
+          "expected_output": "Users placeholder page loads without breaking the shell.",
+          "test_data": "target=nav-user-list"
+        },
+        {
+          "requirement_id": "REQ-FR-014",
+          "step_number": 8,
+          "step_description": "Logout.",
+          "expected_output": "Login page is visible.",
+          "test_data": ""
+        }
+      ]
+    },
+    {
+      "test_case_id": "TC-009",
+      "title": "Trade form prevents submission when required fields are missing",
+      "objective": "Validate front-end required-field guardrails before creating workflow state.",
+      "priority": "P2",
+      "suite": "S-4 Detailed Regression",
+      "tags": [
+        "@regression",
+        "@negative",
+        "@trade-form"
+      ],
+      "steps": [
+        {
+          "requirement_id": "REQ-FR-002",
+          "step_number": 1,
+          "step_description": "Login as maker.",
+          "expected_output": "Maker dashboard loads.",
+          "test_data": "username=admin,password=admin"
+        },
+        {
+          "requirement_id": "REQ-FR-012",
+          "step_number": 2,
+          "step_description": "Navigate to New Trade.",
+          "expected_output": "New Trade form is visible.",
+          "test_data": ""
+        },
+        {
+          "requirement_id": "REQ-FR-035",
+          "step_number": 3,
+          "step_description": "Leave Market Sector and Quantity blank.",
+          "expected_output": "Submit Order remains disabled or submission is blocked.",
+          "test_data": "missingFields=marketSector,quantity"
+        },
+        {
+          "requirement_id": "REQ-FR-035",
+          "step_number": 4,
+          "step_description": "Select Technology and leave Ticker blank.",
+          "expected_output": "Submit Order remains disabled or submission is blocked.",
+          "test_data": "sector=Technology,missingFields=ticker,quantity"
+        },
+        {
+          "requirement_id": "REQ-FR-035",
+          "step_number": 5,
+          "step_description": "Enter quantity 0.",
+          "expected_output": "Quantity validation prevents valid submission.",
+          "test_data": "quantity=0"
+        },
+        {
+          "requirement_id": "REQ-FR-033",
+          "step_number": 6,
+          "step_description": "Verify no queue row was created.",
+          "expected_output": "Approval Queue still shows Pending: 0.",
+          "test_data": "expectedPending=0"
+        }
+      ]
+    },
+    {
+      "test_case_id": "TC-010",
+      "title": "Dashboard columns and loading state render for approved trades",
+      "objective": "Validate dashboard UX details, columns, loading state, and approved row presentation.",
+      "priority": "P1",
+      "suite": "S-4 Detailed Regression",
+      "tags": [
+        "@regression",
+        "@dashboard"
+      ],
+      "steps": [
+        {
+          "requirement_id": "REQ-FR-002",
+          "step_number": 1,
+          "step_description": "Login as maker.",
+          "expected_output": "Dashboard route starts loading.",
+          "test_data": "username=admin,password=admin"
+        },
+        {
+          "requirement_id": "REQ-FR-023",
+          "step_number": 2,
+          "step_description": "Observe Dashboard immediately after navigation.",
+          "expected_output": "Loading trades indicator is visible before data resolves.",
+          "test_data": ""
+        },
+        {
+          "requirement_id": "REQ-FR-021",
+          "step_number": 3,
+          "step_description": "Inspect Dashboard table headers after loading.",
+          "expected_output": "TX-ID, Ticker, Quantity, and Total Value headers are visible.",
+          "test_data": "expectedColumns=TX-ID|Ticker|Quantity|Total Value"
+        },
+        {
+          "requirement_id": "REQ-FR-022",
+          "step_number": 4,
+          "step_description": "Inspect Dashboard summary.",
+          "expected_output": "Total Trades: N is displayed and matches approved row count.",
+          "test_data": "expectedLabel=Total Trades:"
+        },
+        {
+          "requirement_id": "REQ-FR-020",
+          "step_number": 5,
+          "step_description": "Compare Dashboard rows to Approval Queue pending rows.",
+          "expected_output": "No pending_approval row appears on Dashboard.",
+          "test_data": ""
+        }
+      ]
+    },
+    {
+      "test_case_id": "TC-011",
+      "title": "Trade List columns and summary bar reflect approved inventory",
+      "objective": "Validate operational reporting on the approved trade list.",
+      "priority": "P2",
+      "suite": "S-4 Detailed Regression",
+      "tags": [
+        "@regression",
+        "@trade-list"
+      ],
+      "steps": [
+        {
+          "requirement_id": "REQ-FR-002",
+          "step_number": 1,
+          "step_description": "Login as maker.",
+          "expected_output": "Authenticated shell is visible.",
+          "test_data": "username=admin,password=admin"
+        },
+        {
+          "requirement_id": "REQ-FR-050",
+          "step_number": 2,
+          "step_description": "Navigate to Trade List.",
+          "expected_output": "Trade List page loads.",
+          "test_data": "target=nav-trade-list"
+        },
+        {
+          "requirement_id": "REQ-FR-050",
+          "step_number": 3,
+          "step_description": "Inspect Trade List headers.",
+          "expected_output": "TX-ID, Side, Ticker, Qty, Price, Total, Status, Matched With headers are visible.",
+          "test_data": "expectedColumns=TX-ID|Side|Ticker|Qty|Price|Total|Status|Matched With"
+        },
+        {
+          "requirement_id": "REQ-FR-051",
+          "step_number": 4,
+          "step_description": "Inspect summary bar.",
+          "expected_output": "Total, Matched, and Pending badges are visible.",
+          "test_data": "expectedLabels=Total|Matched|Pending"
+        },
+        {
+          "requirement_id": "REQ-FR-050",
+          "step_number": 5,
+          "step_description": "Verify every populated row includes side, ticker, quantity, total, and status.",
+          "expected_output": "Rows have complete operational values and status badge text.",
+          "test_data": ""
+        }
+      ]
+    },
+    {
+      "test_case_id": "TC-012",
+      "title": "Checker approval queue displays empty state and pending count zero",
+      "objective": "Validate the queue empty state and count when no trades are waiting.",
+      "priority": "P2",
+      "suite": "S-4 Detailed Regression",
+      "tags": [
+        "@regression",
+        "@checker",
+        "@queue"
+      ],
+      "steps": [
+        {
+          "requirement_id": "REQ-FR-003",
+          "step_number": 1,
+          "step_description": "Login as checker with a clean data store.",
+          "expected_output": "Checker dashboard loads.",
+          "test_data": "username=checker,password=chscker@123,precondition=clearLocalStorage"
+        },
+        {
+          "requirement_id": "REQ-FR-040",
+          "step_number": 2,
+          "step_description": "Navigate to Approval Queue.",
+          "expected_output": "Approval Queue page loads.",
+          "test_data": "target=nav-queue"
+        },
+        {
+          "requirement_id": "REQ-FR-042",
+          "step_number": 3,
+          "step_description": "Inspect pending count.",
+          "expected_output": "Pending: 0 is displayed.",
+          "test_data": "expectedPending=0"
+        },
+        {
+          "requirement_id": "REQ-NFR-004",
+          "step_number": 4,
+          "step_description": "Inspect empty queue message.",
+          "expected_output": "No pending trades. message is visible and page does not crash.",
+          "test_data": "expectedMessage=No pending trades."
+        },
+        {
+          "requirement_id": "REQ-FR-041",
+          "step_number": 5,
+          "step_description": "Inspect queue table headers.",
+          "expected_output": "Queue column headers remain visible for context.",
+          "test_data": "expectedColumns=TX-ID|Side|Ticker|Qty|Price|Total|Action"
+        }
+      ]
+    },
+    {
+      "test_case_id": "TC-013",
+      "title": "Role label distinguishes maker and checker sessions",
+      "objective": "Validate role visibility as a four-eyes control aid.",
+      "priority": "P1",
+      "suite": "S-4 Detailed Regression",
+      "tags": [
+        "@regression",
+        "@auth",
+        "@security"
+      ],
+      "steps": [
+        {
+          "requirement_id": "REQ-FR-002",
+          "step_number": 1,
+          "step_description": "Login as maker.",
+          "expected_output": "Navbar identifies admin (maker).",
+          "test_data": "username=admin,password=admin"
+        },
+        {
+          "requirement_id": "REQ-FR-011",
+          "step_number": 2,
+          "step_description": "Read navbar user display.",
+          "expected_output": "Displayed identity includes maker role.",
+          "test_data": "expectedUser=admin (maker)"
+        },
+        {
+          "requirement_id": "REQ-FR-014",
+          "step_number": 3,
+          "step_description": "Logout maker.",
+          "expected_output": "Login page is visible.",
+          "test_data": ""
+        },
+        {
+          "requirement_id": "REQ-FR-003",
+          "step_number": 4,
+          "step_description": "Login as checker.",
+          "expected_output": "Navbar identifies checker (checker).",
+          "test_data": "username=checker,password=chscker@123"
+        },
+        {
+          "requirement_id": "REQ-SEC-001",
+          "step_number": 5,
+          "step_description": "Read navbar user display.",
+          "expected_output": "Displayed identity includes checker role.",
+          "test_data": "expectedUser=checker (checker)"
+        }
+      ]
+    },
+    {
+      "test_case_id": "TC-014",
+      "title": "Ticker selection drives price and total recalculation",
+      "objective": "Validate async price lookup and recalculation when quantity changes.",
+      "priority": "P1",
+      "suite": "S-4 Detailed Regression",
+      "tags": [
+        "@regression",
+        "@maker",
+        "@pricing"
+      ],
+      "steps": [
+        {
+          "requirement_id": "REQ-FR-002",
+          "step_number": 1,
+          "step_description": "Login as maker.",
+          "expected_output": "Maker dashboard loads.",
+          "test_data": "username=admin,password=admin"
+        },
+        {
+          "requirement_id": "REQ-FR-012",
+          "step_number": 2,
+          "step_description": "Navigate to New Trade.",
+          "expected_output": "New Trade form is visible.",
+          "test_data": ""
+        },
+        {
+          "requirement_id": "REQ-FR-030",
+          "step_number": 3,
+          "step_description": "Select Financials sector.",
+          "expected_output": "Ticker dropdown enables JPM, BAC, and V choices.",
+          "test_data": "sector=Financials,expectedTickers=JPM|BAC|V"
+        },
+        {
+          "requirement_id": "REQ-FR-031",
+          "step_number": 4,
+          "step_description": "Select V and enter quantity 3.",
+          "expected_output": "Current Price is 278.90 and Total Value is 836.70.",
+          "test_data": "ticker=V,quantity=3,expectedPrice=278.90,expectedTotal=836.70"
+        },
+        {
+          "requirement_id": "REQ-FR-031",
+          "step_number": 5,
+          "step_description": "Change quantity to 4.",
+          "expected_output": "Total Value recalculates to 1115.60 without changing price.",
+          "test_data": "quantity=4,expectedTotal=1115.60"
+        },
+        {
+          "requirement_id": "REQ-FR-031",
+          "step_number": 6,
+          "step_description": "Change ticker to BAC.",
+          "expected_output": "Current Price updates to 35.60 and Total Value recalculates to 142.40.",
+          "test_data": "ticker=BAC,quantity=4,expectedPrice=35.60,expectedTotal=142.40"
+        }
+      ]
+    },
+    {
+      "test_case_id": "TC-015",
+      "title": "Admin Users placeholder is reachable from authenticated shell",
+      "objective": "Validate admin placeholder route remains stable for PoC navigation.",
+      "priority": "P3",
+      "suite": "S-2 Navigation",
+      "tags": [
+        "@regression",
+        "@nav",
+        "@admin"
+      ],
+      "steps": [
+        {
+          "requirement_id": "REQ-FR-002",
+          "step_number": 1,
+          "step_description": "Login as maker.",
+          "expected_output": "Authenticated shell is visible.",
+          "test_data": "username=admin,password=admin"
+        },
+        {
+          "requirement_id": "REQ-FR-013",
+          "step_number": 2,
+          "step_description": "Open Admin dropdown.",
+          "expected_output": "Users link is visible.",
+          "test_data": "trigger=nav-admin-trigger"
+        },
+        {
+          "requirement_id": "REQ-FR-060",
+          "step_number": 3,
+          "step_description": "Click Users.",
+          "expected_output": "Users placeholder route loads and navbar remains available.",
+          "test_data": "target=nav-user-list"
+        },
+        {
+          "requirement_id": "REQ-FR-010",
+          "step_number": 4,
+          "step_description": "Navigate back to Dashboard through Trading menu.",
+          "expected_output": "Dashboard loads and navbar persists.",
+          "test_data": "target=nav-dashboard"
+        }
+      ]
+    }
+  ]
+}

@@ -13,3 +13,12 @@ mock-trading-app/dist/
 
 # Generated PDF (build from presentation.md with Marp)
 docs/*.pdf
+
+# Notebook exports (ingestion EDA); match nested notebook output dirs
+ingestion/notebooks/**/output/
+
+# IPython history and local profile data
+**/.ipython/
+
+# Root-level agent session capture files
+2026-*-command*.txt

@@ -1,0 +1,17 @@
+{
+  "name": "qamvp-playwright-runner",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Black-box Playwright runner for QAMVP KB-derived test cases.",
+  "scripts": {
+    "test": "playwright test",
+    "test:one": "playwright test --workers=1",
+    "test:parallel": "playwright test --workers=2",
+    "install:browsers": "playwright install chromium"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^25.6.0",
+    "typescript": "^5.4.5"
+  }
+}

@@ -12,7 +12,7 @@ hard source documents
   → test-doc/test-case-repository.json
   → test-doc/09-test-case-repository.md
   → test_data/TestCases.xlsx
-  → /browse-test-case with agent-browser
+  → /query-playwright-test-case or /browse-test-case
   → saved run artifacts
   → /audit-test-run independent corporate audit
 ```
@@ -35,6 +35,24 @@ Older JSON/Selenium and Python-orchestrator paths still exist in the repo, but t
 Use this as the normal end-to-end path:
 
 ```text
+/query-playwright-test-case all
+```
+
+Use `/query-browse-test-case all` only when intentionally comparing against the older agent-browser path.
+
+The Playwright command should:
+1. Ensure the ingestion DB is available.
+2. Verify structured KB tables `test_cases` and `test_case_steps`.
+3. Export KB test cases to `test-doc/test-case-repository.json`.
+4. Render `test-doc/09-test-case-repository.md`.
+5. Build `test_data/TestCases.xlsx`.
+6. Execute browser tests with bounded Playwright parallelism.
+7. Save per-TC Playwright artifacts.
+8. Run `/audit-test-run` against the executed evidence.
+
+Legacy agent-browser path:
+
+```text
 /query-browse-test-case all
 ```
 
@@ -51,6 +69,7 @@ This command should:
 ### Run One KB Test Case
 
 ```text
+/query-playwright-test-case TC-001
 /query-browse-test-case TC-001
 ```
 
@@ -61,11 +80,12 @@ Replace `TC-001` with the target test case ID.
 Use this only when `test_data/TestCases.xlsx` is already aligned with the KB/DB and hard docs:
 
 ```text
+/query-playwright-test-case TC-001
 /browse-test-case TC-001
 /browse-test-case all
 ```
 
-`/browse-test-case` must remain black-box. It may use visible UI behavior, screenshots, browser text, and saved artifacts, but it must not use webapp source code or framework internals as the oracle.
+Both Playwright and `/browse-test-case` must remain black-box. They may use visible UI behavior, screenshots, browser text, traces, and saved artifacts, but they must not use webapp source code or framework internals as the oracle.
 
 ### Run Audit Only
 
@@ -92,6 +112,7 @@ QAMVP/
 ├── CLAUDE.md                          ← you are here
 ├── .claude/commands/                  ← Claude Code slash commands
 │   ├── query-browse-test-case.md      ← primary end-to-end KB → browser → audit flow
+│   ├── query-playwright-test-case.md  ← KB → Playwright parallel runner → audit flow
 │   ├── browse-test-case.md            ← black-box agent-browser execution from TestCases.xlsx
 │   └── audit-test-run.md              ← independent corporate QA audit
 ├── claude-orchestrator/               ← Claude Code helper scripts
@@ -110,6 +131,7 @@ QAMVP/
 │       ├── composition_rules.md       ← macro-first generation rules
 │       └── system_prompt.md           ← full generation rules + examples
 ├── java-framework/                    ← Maven Selenium execution engine (DO NOT MODIFY)
+├── playwright-runner/                 ← deterministic black-box Playwright runner
 ├── ingestion/                         ← source-document ingestion and structured KB/DB export
 ├── mock-trading-app/                  ← Angular SUT running at http://localhost:4200 (do not inspect source for test oracle)
 ├── test-doc/                          ← hard docs and exported test case repository artifacts
@@ -158,6 +180,17 @@ When using `/browse-test-case` or `/query-browse-test-case`:
 - Use DOM-level `eval` only for black-box observations or user-equivalent events such as `document.body.innerText`, current URL, visible element state, or dispatching normal input/change/click events.
 - Do not use `window.ng`, component instances, services, stores, private variables, source files, route code, or implementation details.
 - If observed UI behavior conflicts with hard docs or test steps, record the conflict and let `/audit-test-run` decide approval.
+
+## Playwright Runner Rules
+
+Use `/query-playwright-test-case` for faster deterministic execution.
+
+- Default to `PLAYWRIGHT_WORKERS=2`; use `PLAYWRIGHT_WORKERS=1` for debugging.
+- Each test case gets a fresh Playwright browser context.
+- Each run writes artifacts under `test_data/test-results/<TC-ID>/playwright_<timestamp>/`.
+- Required artifacts are `manifest.json`, `result.json`, `step-log.md`, `final-page-text.txt`, `trace.zip`, and per-step screenshots.
+- Unknown natural-language steps must fail closed as `BLOCKED_UNMAPPED_STEP`; do not guess.
+- If Playwright reports `PASS`, still run `/audit-test-run`; audit is the approval gate.
 
 ## Independent Audit Rules
 
@@ -369,7 +402,8 @@ cd python-orchestrator && python main.py
 **When to use which:**
 | Task | Use |
 |------|-----|
-| Corporate end-to-end KB → browser → audit flow | Claude Code (`/query-browse-test-case`) |
+| Corporate end-to-end KB → Playwright → audit flow | Claude Code (`/query-playwright-test-case`) |
+| Agent-browser comparison path | Claude Code (`/query-browse-test-case`) |
 | Browser execution from existing workbook | Claude Code (`/browse-test-case`) |
 | Independent corporate audit | Claude Code (`/audit-test-run`) |
 | Ad-hoc legacy script generation, exploration | Claude Code (`/generate-test-script`) |

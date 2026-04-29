@@ -187,9 +187,12 @@ For every test execution or workflow step, verify durable evidence exists.
 Expected artifacts normally include:
 - Generated or executed test script
 - Machine-readable `.result.json`
+- Playwright `manifest.json` and `result.json` when Playwright execution was used
 - Human-readable analysis or summary
+- Playwright `step-log.md` when Playwright execution was used
 - Detailed step trace
 - Screenshots or browse-run notes for UI validation
+- Playwright `trace.zip` and per-step screenshots when Playwright execution was used
 - Detail and summary Excel reports when report generation is part of the workflow
 - Error logs or failure details for failed runs
 

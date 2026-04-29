@@ -27,6 +27,7 @@ Older JSON/Selenium and Python-orchestrator paths still exist in the repo, but t
 - Treat generated tests, generated scripts, prior agent analyses, repair notes, and self-healing explanations as audit subjects, not authority.
 - The audit must independently reconcile hard docs, KB/DB records, exported JSON/Markdown, workbook rows, generated scripts, and run artifacts.
 - A browser `PASS` is not enough. The final corporate outcome comes from `/audit-test-run`.
+- When running `/query-playwright-test-case`, `/query-browse-test-case`, `/audit-test-run`, or `/heal-audit-findings`, create the command's visible checklist before executing the first step and update it throughout the run.
 
 ## Primary Command Flow
 
@@ -114,7 +115,8 @@ QAMVP/
 │   ├── query-browse-test-case.md      ← primary end-to-end KB → browser → audit flow
 │   ├── query-playwright-test-case.md  ← KB → Playwright parallel runner → audit flow
 │   ├── browse-test-case.md            ← black-box agent-browser execution from TestCases.xlsx
-│   └── audit-test-run.md              ← independent corporate QA audit
+│   ├── audit-test-run.md              ← independent corporate QA audit
+│   └── heal-audit-findings.md         ← remediate audit findings, regenerate, rerun audit
 ├── claude-orchestrator/               ← Claude Code helper scripts
 │   └── scripts/
 │       ├── run-test.py                ← execute JSON script → saves .result.json (with TC metadata)
@@ -406,6 +408,7 @@ cd python-orchestrator && python main.py
 | Agent-browser comparison path | Claude Code (`/query-browse-test-case`) |
 | Browser execution from existing workbook | Claude Code (`/browse-test-case`) |
 | Independent corporate audit | Claude Code (`/audit-test-run`) |
+| Remediate audit findings and rerun audit | Claude Code (`/heal-audit-findings`) |
 | Ad-hoc legacy script generation, exploration | Claude Code (`/generate-test-script`) |
 | Create/repair actions and locators | Claude Code (`/create-advanced-action`, `/repair-locators`) |
 | Legacy JSON/Selenium CI pipeline | Python orchestrator (`python main.py --tc`) |

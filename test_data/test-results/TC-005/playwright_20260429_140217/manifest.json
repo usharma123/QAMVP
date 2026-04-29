@@ -1,0 +1,26 @@
+{
+  "runId": "20260429_140217",
+  "testCaseId": "TC-005",
+  "title": "Trade list shows unmatched approved trade until compatible opposite trade is approved",
+  "verdict": "PASS",
+  "baseURL": "http://localhost:4200",
+  "workerIndex": 0,
+  "project": "chromium",
+  "startedAt": "2026-04-29T18:02:41.523Z",
+  "finishedAt": "2026-04-29T18:02:50.351Z",
+  "durationMs": 8828,
+  "artifactDir": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-005/playwright_20260429_140217",
+  "sourceRepository": "test-doc/test-case-repository.json",
+  "sourceWorkbook": "test_data/TestCases.xlsx",
+  "blackBoxPolicy": {
+    "webappSourceInspected": false,
+    "angularInternalsUsed": false,
+    "oracle": "hard docs + KB/DB artifacts + workbook + observable browser behavior"
+  },
+  "artifacts": {
+    "resultJson": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-005/playwright_20260429_140217/result.json",
+    "stepLog": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-005/playwright_20260429_140217/step-log.md",
+    "finalPageText": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-005/playwright_20260429_140217/final-page-text.txt",
+    "trace": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-005/playwright_20260429_140217/trace.zip"
+  }
+}

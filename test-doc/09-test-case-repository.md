@@ -1,7 +1,7 @@
 # Knowledge Base Test Case Repository
 
 **Document ID:** KB-TC-REPO-001
-**Version:** 2026.04.29.112210
+**Version:** 2026.04.29.140137
 **Status:** Exported from ingestion DB structured test-case inventory.
 
 This document is generated from `test-doc/test-case-repository.json`. It gives the RAG corpus the same row-level test-case detail as the Excel inventory, while the ingestion pipeline also loads the workbook into structured SQL tables.
@@ -16,7 +16,7 @@ This document is generated from `test-doc/test-case-repository.json`. It gives t
 
 | TestCaseID | Title | Priority | Suite | Requirements |
 |------------|-------|----------|-------|--------------|
-| TC-001 | Maker submits BUY, checker approves, dashboard reflects one approved trade | P1 | S-1 Smoke | REQ-FR-002, REQ-FR-003, REQ-FR-012, REQ-FR-014, REQ-FR-020, REQ-FR-022, REQ-FR-030, REQ-FR-031, REQ-FR-033, REQ-FR-040, REQ-FR-043, REQ-FR-044, REQ-FR-045 |
+| TC-001 | Maker submits BUY, checker approves, dashboard reflects one approved trade | P1 | S-1 Smoke | REQ-FR-002, REQ-FR-003, REQ-FR-012, REQ-FR-014, REQ-FR-020, REQ-FR-022, REQ-FR-030, REQ-FR-031, REQ-FR-034, REQ-FR-040, REQ-FR-043, REQ-FR-044, REQ-FR-045 |
 | TC-002 | Two pending trades are counted in queue and absent from dashboard until approval | P1 | S-4 Detailed Regression | REQ-FR-002, REQ-FR-020, REQ-FR-022, REQ-FR-033, REQ-FR-041, REQ-FR-042 |
 | TC-003 | Approved BUY and matching SELL become Matched in Trade List | P1 | S-1 Smoke | REQ-FR-002, REQ-FR-003, REQ-FR-014, REQ-FR-033, REQ-FR-043, REQ-FR-050, REQ-FR-051 |
 | TC-004 | GTC trade requires expiration date and calculates notional total | P1 | S-4 Detailed Regression | REQ-FR-002, REQ-FR-012, REQ-FR-030, REQ-FR-031, REQ-FR-032, REQ-FR-033, REQ-FR-040 |
@@ -45,7 +45,7 @@ This document is generated from `test-doc/test-case-repository.json`. It gives t
 | 2 | REQ-FR-012 | Open Trading menu and navigate to New Trade. | New Trade form is visible. | target=nav-new-trade |
 | 3 | REQ-FR-030 | Select BUY, Technology, AAPL, Cash, quantity 100, Day Order. | All required trade form fields are populated. | side=BUY,sector=Technology,ticker=AAPL,accountType=Cash,quantity=100,timeInForce=Day Order |
 | 4 | REQ-FR-031 | Wait for ticker price and total value to calculate. | Current Price is 178.50 and Total Value is 17850.00. | ticker=AAPL,expectedPrice=178.50,expectedTotal=17850.00 |
-| 5 | REQ-FR-033 | Submit the order. | Success toast confirms Order TX-1001 and workflow moves toward approval queue. | expectedTxId=TX-1001 |
+| 5 | REQ-FR-034 | Submit the order. | Success toast confirms Order TX-1001 and workflow moves toward approval queue. | expectedTxId=TX-1001 |
 | 6 | REQ-FR-040 | Open Approval Queue as maker before approval. | Queue shows Pending: 1 and includes BUY AAPL quantity 100. | expectedPending=1,ticker=AAPL,side=BUY,quantity=100 |
 | 7 | REQ-FR-014 | Logout maker. | Login page is visible and maker session is cleared. |  |
 | 8 | REQ-FR-003 | Login as checker. | Dashboard page loads and navbar shows checker (checker). | username=checker,password=chscker@123 |

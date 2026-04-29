@@ -1,6 +1,6 @@
 {
   "document_id": "KB-TC-REPO-001",
-  "version": "2026.04.29.112210",
+  "version": "2026.04.29.140137",
   "status": "Exported from ingestion DB structured test-case inventory.",
   "title": "Knowledge Base Test Case Repository",
   "source_workbook": "test_data/TestCases.xlsx",
@@ -48,7 +48,7 @@
           "test_data": "ticker=AAPL,expectedPrice=178.50,expectedTotal=17850.00"
         },
         {
-          "requirement_id": "REQ-FR-033",
+          "requirement_id": "REQ-FR-034",
           "step_number": 5,
           "step_description": "Submit the order.",
           "expected_output": "Success toast confirms Order TX-1001 and workflow moves toward approval queue.",

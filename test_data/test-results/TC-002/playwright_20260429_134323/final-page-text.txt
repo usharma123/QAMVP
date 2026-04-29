@@ -1,0 +1,9 @@
+Trading
+Admin
+admin (maker)
+Logout
+Approval Queue
+Pending: 2
+TX-ID	SIDE	TICKER	QTY	PRICE	TOTAL	ACTION
+TX-1001	BUY	AAPL	100			Approving...
+TX-1002	SELL	AAPL	100	178.50	17,850.00	Approve

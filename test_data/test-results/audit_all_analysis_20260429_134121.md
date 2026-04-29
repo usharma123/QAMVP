@@ -1,0 +1,128 @@
+# Analysis: audit_all
+
+_Generated: 2026-04-29T13:41:21.925706_
+
+# Corporate QA Audit Report
+
+## Executive Summary
+Verdict: Approved with Conditions
+
+All 15 KB test cases were executed by the deterministic Playwright black-box runner against `http://localhost:4200` and returned `PASS` with complete artifact sets. Cross-layer reconciliation across the ingestion DB (`test_cases` / `test_case_steps`), `test-doc/test-case-repository.json`, `test-doc/09-test-case-repository.md`, and `test_data/TestCases.xlsx` is fully aligned (100/100 step rows match on description, expected output, and requirement ID). The runner artifacts assert `webappSourceInspected=false` and the audit was performed without inspecting `mock-trading-app/src`. The remaining condition is requirement-coverage breadth: 7 FRS requirement IDs are present in `02-functional-requirements-specification.md` but are not covered by any current KB test case.
+
+## Scope
+- Source documents reviewed: `test-doc/01..09` (FRS used as requirement-ID authority), `test-doc/test-case-repository.json`, `test-doc/09-test-case-repository.md`.
+- KB/DB records reviewed: `test_cases` (15 rows), `test_case_steps` (100 rows) in `postgresql://...:5433/ingestion`.
+- Test assets reviewed: `test_data/TestCases.xlsx` (100 rows, 15 distinct TC-IDs).
+- Execution artifacts reviewed: `test_data/test-results/TC-001..TC-015/playwright_20260429_133442/` (15 directories, each with `manifest.json`, `result.json`, `step-log.md`, `final-page-text.txt`, `trace.zip`, and per-step `step_NN_pass.png` screenshots).
+- Prior creator analyses reviewed only as context: legacy `*_analysis_*.md` files were observed but not used as evidence.
+- Exclusions or limitations: `mock-trading-app/src` was not opened. The DOCX variants under `test-doc/` were not parsed (Markdown variants were used as the readable source for hard docs).
+
+## Independence Statement
+This audit was performed without inspecting webapp source code, route definitions, Angular components, services, or templates. Conclusions are based on (a) authoritative SQL queries against the ingestion DB, (b) re-export and rendering of repository spec/Markdown/workbook from that DB, (c) deterministic structural reconciliation of those layers, and (d) the runner-emitted `result.json` files for each TC. The audit did not rely on any creator-agent analysis or prior `*_analysis_*.md`. The runner declares `blackBoxPolicy.webappSourceInspected = false` and `angularInternalsUsed = false` in every result file; this claim is consistent with the artifact contents (screenshots, step-log, final-page-text only).
+
+## Evidence Inventory
+| Artifact | Path | Purpose | Status | Notes |
+|---|---|---|---|---|
+| Hard FRS doc | `test-doc/02-functional-requirements-specification.md` | Requirement-ID authority | Present | 38 distinct REQ IDs |
+| KB DB tables | `test_cases`, `test_case_steps` | Structured KB | 15 / 100 rows | counts match exports |
+| Repository spec (JSON) | `test-doc/test-case-repository.json` | Cross-layer source-of-truth export | Present | 15 cases, 100 steps |
+| Repository markdown | `test-doc/09-test-case-repository.md` | Human-readable rendering | Present | 15 `## TC-NNN` headers |
+| Workbook | `test_data/TestCases.xlsx` | Runner input | Present | sheets `TestCases`, `Catalog`, `Summary`; 100 rows |
+| Playwright results | `test_data/test-results/TC-NNN/playwright_20260429_133442/` | Execution evidence | Complete (15/15) | All 5 required artifacts + per-step screenshots |
+| Runner mapping check | `playwright-runner/tests/mapping.spec.ts` | Deterministic step mapping | Passed | "all current KB test-case steps have deterministic Playwright mappings" |
+
+## Traceability Assessment
+| Requirement | Source | Linked Tests | Coverage Status | Notes |
+|---|---|---|---|---|
+| REQ-FR-001 | FRS §login | TC-006 | Covered | invalid credential path |
+| REQ-FR-002 | FRS §session | TC-001..005, TC-007..011, TC-013..015 | Covered | navigation/session backbone |
+| REQ-FR-003 | FRS §approval | TC-001, TC-003, TC-005, TC-012, TC-013 | Covered | maker/checker separation |
+| REQ-FR-004 / 005 | FRS §login | TC-006, TC-007 | Covered | error + gating |
+| REQ-FR-010 / 011 / 013 | FRS §navigation | TC-008, TC-013, TC-015 | Covered | nav menus + role label |
+| REQ-FR-012 / 014 | FRS §nav targets | TC-001, TC-004, TC-008, TC-009, TC-014 | Covered | trade entry / dashboard reach |
+| REQ-FR-020..023 | FRS §dashboard | TC-002, TC-010 | Covered | columns + counts |
+| REQ-FR-030..035 | FRS §trade form | TC-001, TC-004, TC-009, TC-014 | Covered | required fields, GTC, recalc |
+| REQ-FR-040..045 | FRS §approval queue | TC-001, TC-002, TC-004, TC-012 | Covered | pending counts, approval flow |
+| REQ-FR-050 / 051 | FRS §trade list | TC-003, TC-005, TC-011 | Covered | matched/unmatched |
+| REQ-FR-060 | FRS §admin | TC-015 | Covered | admin placeholder reachable |
+| REQ-NFR-004 | FRS §non-functional | TC-012 | Covered | empty-state UX |
+| REQ-SEC-001 / 002 | FRS §security | TC-007, TC-013 | Covered | role label + protected route |
+| REQ-FR-000 | FRS preamble | — | **Missing** | no KB step references it |
+| REQ-FR-034 | FRS §trade form | — | **Missing** | within trade-form block |
+| REQ-NFR-001 / 002 / 003 / 005 | FRS §non-functional | — | **Missing** | only NFR-004 covered |
+| REQ-SEC-003 | FRS §security | — | **Missing** | only SEC-001 / SEC-002 covered |
+
+KB covers 31 of the 38 FRS requirement IDs (~82%).
+
+## Source Alignment Assessment
+| Test/Requirement | Hard Docs | KB/DB | JSON | Markdown | Workbook | Generated Script | Alignment Status | Notes |
+|---|---|---|---|---|---|---|---|---|
+| TC-001..TC-015 (all rows) | Aligned | Aligned | Aligned | Aligned | Aligned | N/A (Playwright runner uses workbook directly) | Aligned | DB→JSON→workbook: 100 / 100 step rows match on `step_description`, `expected_output`, `requirement_id`. Step-counts: TC-001=13, TC-002=7, TC-003=14, TC-004=7, TC-005=7, TC-006=4, TC-007=4, TC-008=8, TC-009=6, TC-010=5, TC-011=5, TC-012=5, TC-013=5, TC-014=6, TC-015=4 — identical across DB / JSON / workbook. |
+| Markdown headers | Aligned | Aligned | Aligned | Aligned | — | — | Aligned | 15 `## TC-NNN` headers match the spec inventory. |
+
+## Test Case Validity Assessment
+| Test Case | Source Requirement | Validity | Redundancy | Translation Quality | Notes |
+|---|---|---|---|---|---|
+| TC-001 | FR-002/003/012/014/020/022/030/031/033/040/043..045 | Valid | Unique | Correct | end-to-end maker→checker→dashboard happy path |
+| TC-002 | FR-002/020/022/033/041/042 | Valid | Distinct from TC-001 (focuses on counts) | Correct | two pending trades, queue count, dashboard absence |
+| TC-003 | FR-002/003/014/033/043/050/051 | Valid | Pairs with TC-005 (matched vs unmatched) | Correct | matched lifecycle |
+| TC-004 | FR-002/012/030..033/040 | Valid | Unique | Correct | GTC + notional |
+| TC-005 | FR-002/003/014/033/043/050/051 | Valid | Pairs with TC-003 | Correct | unmatched persistence |
+| TC-006 | FR-001/004/005 | Valid | Unique | Correct | negative auth |
+| TC-007 | FR-002/005/014/SEC-002 | Valid | Unique | Correct | gated deep link + post-logout |
+| TC-008 | FR-002/010/012/013/014 | Valid | Distinct from TC-013 | Correct | nav exposure |
+| TC-009 | FR-002/012/033/035 | Valid | Unique | Correct | required-field validation |
+| TC-010 | FR-002/020..023 | Valid | Distinct from TC-002 (focus on UI render) | Correct | dashboard columns/loading |
+| TC-011 | FR-002/050/051 | Valid | Distinct from TC-003/005 (focus on UI render) | Correct | trade list columns/summary |
+| TC-012 | FR-003/040..042/NFR-004 | Valid | Unique | Correct | empty queue state |
+| TC-013 | FR-002/003/011/014/SEC-001 | Valid | Distinct from TC-008 | Correct | role label switch |
+| TC-014 | FR-002/012/030/031 | Valid | Distinct from TC-004 (focus on recalc) | Correct | ticker→price→total |
+| TC-015 | FR-002/010/013/060 | Valid | Unique | Correct | admin placeholder reach |
+
+No exact duplicates. Pairs (TC-003 vs TC-005, TC-002 vs TC-010, TC-003/005 vs TC-011, TC-008 vs TC-013, TC-004 vs TC-014) are intentional positive/negative or render-vs-flow splits.
+
+## Execution Artifact Assessment
+| Test/Run | Result | Required Artifacts | Artifact Sufficiency | Notes |
+|---|---|---|---|---|
+| TC-001 (playwright_20260429_133442) | PASS | manifest.json, result.json, step-log.md, final-page-text.txt, trace.zip, 13 step screenshots | Complete | 13 steps, all PASS |
+| TC-002 | PASS | + 7 step screenshots | Complete | 7 steps, all PASS |
+| TC-003 | PASS | + 14 step screenshots | Complete | 14 steps, all PASS |
+| TC-004 | PASS | + 7 step screenshots | Complete | 7 steps, all PASS |
+| TC-005 | PASS | + 7 step screenshots | Complete | 7 steps, all PASS |
+| TC-006 | PASS | + 4 step screenshots | Complete | 4 steps, all PASS |
+| TC-007 | PASS | + 4 step screenshots | Complete | 4 steps, all PASS |
+| TC-008 | PASS | + 8 step screenshots | Complete | 8 steps, all PASS |
+| TC-009 | PASS | + 6 step screenshots | Complete | 6 steps, all PASS |
+| TC-010 | PASS | + 5 step screenshots | Complete | 5 steps, all PASS |
+| TC-011 | PASS | + 5 step screenshots | Complete | 5 steps, all PASS |
+| TC-012 | PASS | + 5 step screenshots | Complete | 5 steps, all PASS |
+| TC-013 | PASS | + 5 step screenshots | Complete | 5 steps, all PASS |
+| TC-014 | PASS | + 6 step screenshots | Complete | 6 steps, all PASS |
+| TC-015 | PASS | + 4 step screenshots | Complete | 4 steps, all PASS |
+| Mapping check | PASS | playwright-runner/tests/mapping.spec.ts | Complete | "all current KB test-case steps have deterministic Playwright mappings" |
+
+Total: 16 of 16 Playwright tests passed. No `BLOCKED_UNMAPPED_STEP`. No non-PASS step across all 100 step executions. Each `result.json` declares `blackBoxPolicy.webappSourceInspected=false`.
+
+## Findings
+| ID | Severity | Category | Finding | Evidence | Impact | Remediation |
+|---|---|---|---|---|---|---|
+| F-01 | Medium | Source Alignment / Coverage | 7 FRS requirement IDs have no KB test coverage: REQ-FR-000, REQ-FR-034, REQ-NFR-001, REQ-NFR-002, REQ-NFR-003, REQ-NFR-005, REQ-SEC-003. | `grep REQ- test-doc/02-functional-requirements-specification.md` lists 38 IDs; `select distinct requirement_id from test_case_steps` returns 31 IDs; setdiff is the seven above. | Reduces RTM coverage; non-functional and one security requirement go unverified by automated KB tests. | Either (a) add KB test cases that exercise these requirement IDs, or (b) record explicit waivers in the RTM with QA/owner sign-off. |
+| F-02 | Low | Housekeeping | Stale per-TC analysis files from prior runs (`TC-001_analysis_20260331_*.md` ... `TC-014_analysis_20260422_*.md`, plus older `playwright_2026032*` and `query-runs/` dirs) accumulate under `test_data/test-results/TC-*/`. | `ls test_data/test-results/TC-001/` shows 9 prior `playwright_*` dirs and 9 `_analysis_*.md` files. | None on correctness; clutters audit-trail navigation and inflates repo size. | Add a retention policy or `archive/` subfolder for runs older than the latest two per TC. |
+| F-03 | Low | Independence | The Playwright runner self-declares `blackBoxPolicy.webappSourceInspected=false` in `result.json`; the audit verified consistency with artifact contents but cannot independently observe runner internals. | `result.json.blackBoxPolicy` field. | Slight reduction in independence if runner code were ever changed to inspect internals while keeping the flag false. | Periodically diff `playwright-runner/tests/` for any import of `mock-trading-app/src` paths and assert the policy via CI guard. |
+
+No `Critical` or `High` findings.
+
+## Approval Decision
+Decision: Approved with Conditions
+
+Rationale:
+- All 15 KB test cases executed and passed against a live black-box browser session, with full per-step screenshots, traces, step logs, and machine-readable `result.json`. Required artifacts are present in every TC directory.
+- Cross-layer reconciliation across hard FRS → DB → JSON → Markdown → workbook is exact for all 100 step rows on description, expected output, and requirement ID.
+- The runner did not inspect webapp source code; the audit confirmed this by both the runner's self-declaration and the artifact composition.
+- The single condition is requirement-coverage breadth: seven FRS requirement IDs are not exercised by any KB test (Finding F-01).
+
+Required remediations before unconditional approval:
+1. Resolve Finding F-01 by either adding KB tests for REQ-FR-000, REQ-FR-034, REQ-NFR-001, REQ-NFR-002, REQ-NFR-003, REQ-NFR-005, REQ-SEC-003, or recording explicit RTM waivers.
+
+## Residual Risk
+Residual risk is limited to (a) untested NFRs (performance, observability, etc., as expressed in REQ-NFR-001..003/005), (b) one untested security requirement (REQ-SEC-003), and (c) a single untested trade-form requirement (REQ-FR-034). For functional flows currently in scope, risk is low: every executed step produced durable evidence and the source chain is traceable end to end.

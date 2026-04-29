@@ -17,6 +17,7 @@ export type StepArtifact = {
 
 export class RunArtifacts {
   readonly steps: StepArtifact[] = [];
+  private readonly startedAt = new Date();
 
   constructor(
     readonly testCase: TestCase,
@@ -57,6 +58,7 @@ export class RunArtifacts {
     const finalTextPath = path.join(this.artifactDir, 'final-page-text.txt');
     const finalText = await page.locator('body').innerText().catch((error) => `Unable to read body text: ${error}`);
     fs.writeFileSync(finalTextPath, finalText, 'utf-8');
+    const finishedAt = new Date();
 
     const manifest = {
       runId: this.runId,
@@ -66,8 +68,9 @@ export class RunArtifacts {
       baseURL: this.baseURL,
       workerIndex: this.testInfo.workerIndex,
       project: this.testInfo.project.name,
-      startedAt: new Date().toISOString(),
-      finishedAt: new Date().toISOString(),
+      startedAt: this.startedAt.toISOString(),
+      finishedAt: finishedAt.toISOString(),
+      durationMs: finishedAt.getTime() - this.startedAt.getTime(),
       artifactDir: this.artifactDir,
       sourceRepository: 'test-doc/test-case-repository.json',
       sourceWorkbook: 'test_data/TestCases.xlsx',

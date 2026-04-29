@@ -1,0 +1,77 @@
+{
+  "runId": "20260429_133442",
+  "testCaseId": "TC-012",
+  "title": "Checker approval queue displays empty state and pending count zero",
+  "verdict": "PASS",
+  "baseURL": "http://localhost:4200",
+  "workerIndex": 1,
+  "project": "chromium",
+  "startedAt": "2026-04-29T17:35:24.029Z",
+  "finishedAt": "2026-04-29T17:35:24.029Z",
+  "artifactDir": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-012/playwright_20260429_133442",
+  "sourceRepository": "test-doc/test-case-repository.json",
+  "sourceWorkbook": "test_data/TestCases.xlsx",
+  "blackBoxPolicy": {
+    "webappSourceInspected": false,
+    "angularInternalsUsed": false,
+    "oracle": "hard docs + KB/DB artifacts + workbook + observable browser behavior"
+  },
+  "artifacts": {
+    "resultJson": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-012/playwright_20260429_133442/result.json",
+    "stepLog": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-012/playwright_20260429_133442/step-log.md",
+    "finalPageText": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-012/playwright_20260429_133442/final-page-text.txt",
+    "trace": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-012/playwright_20260429_133442/trace.zip"
+  },
+  "steps": [
+    {
+      "stepNumber": 1,
+      "requirementId": "REQ-FR-003",
+      "description": "Login as checker with a clean data store.",
+      "expectedOutput": "Checker dashboard loads.",
+      "testData": "username=checker,password=chscker@123,precondition=clearLocalStorage",
+      "status": "PASS",
+      "actual": "Logged in as checker.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-012/playwright_20260429_133442/step_01_pass.png"
+    },
+    {
+      "stepNumber": 2,
+      "requirementId": "REQ-FR-040",
+      "description": "Navigate to Approval Queue.",
+      "expectedOutput": "Approval Queue page loads.",
+      "testData": "target=nav-queue",
+      "status": "PASS",
+      "actual": "Navigated with nav-queue.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-012/playwright_20260429_133442/step_02_pass.png"
+    },
+    {
+      "stepNumber": 3,
+      "requirementId": "REQ-FR-042",
+      "description": "Inspect pending count.",
+      "expectedOutput": "Pending: 0 is displayed.",
+      "testData": "expectedPending=0",
+      "status": "PASS",
+      "actual": "Approval Queue state verified.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-012/playwright_20260429_133442/step_03_pass.png"
+    },
+    {
+      "stepNumber": 4,
+      "requirementId": "REQ-NFR-004",
+      "description": "Inspect empty queue message.",
+      "expectedOutput": "No pending trades. message is visible and page does not crash.",
+      "testData": "expectedMessage=No pending trades.",
+      "status": "PASS",
+      "actual": "Approval Queue state verified.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-012/playwright_20260429_133442/step_04_pass.png"
+    },
+    {
+      "stepNumber": 5,
+      "requirementId": "REQ-FR-041",
+      "description": "Inspect queue table headers.",
+      "expectedOutput": "Queue column headers remain visible for context.",
+      "testData": "expectedColumns=TX-ID|Side|Ticker|Qty|Price|Total|Action",
+      "status": "PASS",
+      "actual": "Approval Queue state verified.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-012/playwright_20260429_133442/step_05_pass.png"
+    }
+  ]
+}

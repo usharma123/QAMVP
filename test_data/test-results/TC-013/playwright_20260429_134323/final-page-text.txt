@@ -1,0 +1,6 @@
+Trading
+Admin
+checker (checker)
+Logout
+Dashboard
+Loading trades...

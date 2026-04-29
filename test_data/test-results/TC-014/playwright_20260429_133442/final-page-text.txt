@@ -1,0 +1,27 @@
+Trading
+Admin
+admin (maker)
+Logout
+New Trade
+Side
+BUY
+SELL
+Market Sector
+-- Select Sector --
+Technology
+Financials
+Ticker
+-- Select Ticker --
+JPM
+BAC
+V
+Account Type
+Cash
+Margin
+Quantity
+Time in Force
+Day Order
+GTC
+Current Price
+Total Value
+Submit Order

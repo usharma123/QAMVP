@@ -1,0 +1,67 @@
+{
+  "runId": "20260429_133442",
+  "testCaseId": "TC-007",
+  "title": "Unauthenticated deep link is gated and logout clears protected access",
+  "verdict": "PASS",
+  "baseURL": "http://localhost:4200",
+  "workerIndex": 1,
+  "project": "chromium",
+  "startedAt": "2026-04-29T17:35:12.072Z",
+  "finishedAt": "2026-04-29T17:35:12.072Z",
+  "artifactDir": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-007/playwright_20260429_133442",
+  "sourceRepository": "test-doc/test-case-repository.json",
+  "sourceWorkbook": "test_data/TestCases.xlsx",
+  "blackBoxPolicy": {
+    "webappSourceInspected": false,
+    "angularInternalsUsed": false,
+    "oracle": "hard docs + KB/DB artifacts + workbook + observable browser behavior"
+  },
+  "artifacts": {
+    "resultJson": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-007/playwright_20260429_133442/result.json",
+    "stepLog": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-007/playwright_20260429_133442/step-log.md",
+    "finalPageText": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-007/playwright_20260429_133442/final-page-text.txt",
+    "trace": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-007/playwright_20260429_133442/trace.zip"
+  },
+  "steps": [
+    {
+      "stepNumber": 1,
+      "requirementId": "REQ-FR-005",
+      "description": "Open /trade directly while logged out.",
+      "expectedOutput": "Application redirects to login or blocks access to New Trade.",
+      "testData": "targetRoute=/trade",
+      "status": "PASS",
+      "actual": "Opened /trade while logged out and verified protected content is unavailable.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-007/playwright_20260429_133442/step_01_pass.png"
+    },
+    {
+      "stepNumber": 2,
+      "requirementId": "REQ-FR-002",
+      "description": "Login as maker.",
+      "expectedOutput": "Dashboard page loads.",
+      "testData": "username=admin,password=admin",
+      "status": "PASS",
+      "actual": "Logged in as admin.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-007/playwright_20260429_133442/step_02_pass.png"
+    },
+    {
+      "stepNumber": 3,
+      "requirementId": "REQ-FR-014",
+      "description": "Click Logout.",
+      "expectedOutput": "Login page is visible and session is cleared.",
+      "testData": "",
+      "status": "PASS",
+      "actual": "Logged out and login page is visible.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-007/playwright_20260429_133442/step_03_pass.png"
+    },
+    {
+      "stepNumber": 4,
+      "requirementId": "REQ-SEC-002",
+      "description": "Open /dashboard directly after logout.",
+      "expectedOutput": "Application requires login again or blocks protected content.",
+      "testData": "targetRoute=/dashboard",
+      "status": "PASS",
+      "actual": "Opened /dashboard while logged out and verified protected content is unavailable.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-007/playwright_20260429_133442/step_04_pass.png"
+    }
+  ]
+}

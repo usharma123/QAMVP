@@ -15,6 +15,10 @@ Supported optional input:
 
 ## Rules
 
+- Before running any command step, create a visible checklist titled `Query Browse Checklist`.
+- The checklist must include every numbered section in this command plus the source-chain guard.
+- Update the checklist as work progresses: mark one item `in_progress`, mark completed items immediately, and leave blocked items explicit with the blocking reason.
+- Do not wait until the final response to show checklist status.
 - Use absolute paths for all commands.
 - Repo root is `/Users/utsavsharma/Documents/GitHub/QAMVP`.
 - The ingestion DB structured tables are the source of truth: `test_cases` and `test_case_steps`.
@@ -29,6 +33,22 @@ Supported optional input:
 - Reseed or ingest only when the DB is missing or has zero structured test cases.
 - After materializing artifacts, run via `/browse-test-case all` unless a specific TC-ID was provided.
 - After browser execution, run `/audit-test-run` against the executed TC-ID, run folder, or latest browser report.
+- Before browser execution, prove DB, JSON, Markdown, and workbook step rows are aligned. If they drift, stop and fix the source chain first.
+
+## Command Checklist
+
+Create and maintain this checklist before executing:
+
+```text
+Query Browse Checklist
+- [ ] Preflight dependencies
+- [ ] Ensure DB is ready
+- [ ] Export KB test cases to JSON, Markdown, and workbook
+- [ ] Verify query, loader, and DB → JSON → Markdown → workbook alignment
+- [ ] Run browser execution
+- [ ] Run independent corporate audit
+- [ ] Print final summary
+```
 
 ## 0. Preflight
 
@@ -132,6 +152,70 @@ for tc in tcs:
 ```
 
 If artifact export, reseed, query verification, or loader verification fails, fix that first and do not execute browser tests.
+
+Confirm DB, JSON, Markdown, and workbook carry the same step inventory:
+
+```bash
+source /Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/.venv/bin/activate && DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion /Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/.venv/bin/python - <<'PY'
+import json, os, re
+from pathlib import Path
+from openpyxl import load_workbook
+import psycopg
+
+root = Path('/Users/utsavsharma/Documents/GitHub/QAMVP')
+spec = json.loads((root / 'test-doc/test-case-repository.json').read_text())
+json_rows = {
+    (c['test_case_id'], int(s['step_number'])): (s['requirement_id'], s['step_description'], s.get('expected_output') or '', s.get('test_data') or '')
+    for c in spec['cases'] for s in c['steps']
+}
+wb = load_workbook(root / 'test_data/TestCases.xlsx', data_only=True)
+ws = wb['TestCases']
+headers = [c.value for c in ws[1]]
+idx = {h: i for i, h in enumerate(headers)}
+xlsx_rows = {
+    (r[idx['TestCaseID']], int(r[idx['StepNumber']])): (r[idx['RequirementID']], r[idx['StepDescription']] or '', r[idx['ExpectedOutput']] or '', r[idx['TestData']] or '')
+    for r in ws.iter_rows(min_row=2, values_only=True) if any(r)
+}
+md = (root / 'test-doc/09-test-case-repository.md').read_text()
+md_rows = {}
+current_tc = None
+def split_md_row(line):
+    cells, buf, escaped = [], [], False
+    for ch in line.strip()[1:-1]:
+        if escaped:
+            buf.append(ch)
+            escaped = False
+        elif ch == '\\':
+            escaped = True
+        elif ch == '|':
+            cells.append(''.join(buf).strip())
+            buf = []
+        else:
+            buf.append(ch)
+    cells.append(''.join(buf).strip())
+    return cells
+for line in md.splitlines():
+    m = re.match(r'^## (TC-\d+) - ', line)
+    if m:
+        current_tc = m.group(1)
+        continue
+    if current_tc and line.startswith('| ') and re.match(r'^\| \d+ \| REQ-', line):
+        parts = split_md_row(line)
+        md_rows[(current_tc, int(parts[0]))] = tuple(parts[1:5])
+with psycopg.connect(os.environ['DATABASE_URL'], connect_timeout=3) as conn, conn.cursor() as cur:
+    cur.execute('select test_case_id, step_number, requirement_id, step_description, coalesce(expected_output, \'\'), coalesce(test_data, \'\') from test_case_steps order by test_case_id, step_number')
+    db_rows = {(tc, int(step)): (req, desc, exp, data) for tc, step, req, desc, exp, data in cur.fetchall()}
+if db_rows != json_rows or json_rows != xlsx_rows or json_rows != md_rows:
+    print('DB/JSON/Markdown/workbook drift detected')
+    print('db_json_equal=', db_rows == json_rows)
+    print('json_xlsx_equal=', json_rows == xlsx_rows)
+    print('json_md_equal=', json_rows == md_rows)
+    raise SystemExit(1)
+print('source_chain_aligned=', len(json_rows), 'steps')
+PY
+```
+
+If source-chain alignment fails, fix that first and do not execute browser tests.
 
 ## 3. Run Browser Execution
 

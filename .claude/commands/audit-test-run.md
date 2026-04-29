@@ -15,6 +15,31 @@ Provide one of:
 
 If no precise target is provided, audit the most recent available test results and related source documents.
 
+## Command Checklist
+
+Before running any audit step, create a visible checklist titled `Audit Checklist`.
+
+The checklist must include every major section in this command and must be updated during execution. Mark one item `in_progress`, mark completed items immediately, and leave blocked items explicit with the blocking reason. Do not wait until the final response to show checklist status.
+
+Use this starting checklist:
+
+```text
+Audit Checklist
+- [ ] Enforce auditor independence
+- [ ] Establish audit scope
+- [ ] Load source and test context
+- [ ] Reconcile hard docs, KB/DB, exported artifacts, and workbook
+- [ ] Build traceability assessment
+- [ ] Verify document-to-test translation
+- [ ] Validate test case quality and redundancy
+- [ ] Audit run artifacts, timestamps, and black-box policy
+- [ ] Verify step-level evidence
+- [ ] Generate missing reports if appropriate
+- [ ] Rate findings
+- [ ] Save audit trail
+- [ ] Produce final verdict
+```
+
 ## Steps
 
 ### 1. Enforce Auditor Independence
@@ -125,6 +150,8 @@ Classify alignment for each layer:
 
 Use `Source Alignment` as the finding category for drift, missing records, unsupported extras, or unverifiable KB/DB mappings.
 
+For executable KB test cases, run or reproduce a strict inventory comparison across DB, JSON, Markdown, and workbook. A row is aligned only when `(TestCaseID, StepNumber, RequirementID, StepDescription, ExpectedOutput, TestData)` matches in every available layer. If the DB is available and differs from the exported artifacts, report drift even when the browser execution passed.
+
 ### 5. Build Traceability Assessment
 
 For each relevant requirement or business rule, capture:
@@ -205,6 +232,17 @@ For each run, determine:
 - Do generated reports match the underlying result data?
 - Are timestamps and test IDs internally consistent?
 - Is there enough evidence for an external reviewer to reproduce or verify the conclusion?
+
+For Playwright `manifest.json` and `result.json`, also verify:
+- `startedAt` exists.
+- `finishedAt` exists.
+- `startedAt` is not equal to `finishedAt`.
+- `durationMs` exists and is greater than zero.
+- `blackBoxPolicy.webappSourceInspected` is `false`.
+- `blackBoxPolicy.angularInternalsUsed` is `false`.
+- `artifacts.resultJson`, `artifacts.stepLog`, `artifacts.finalPageText`, and `artifacts.trace` point to present files.
+
+If all Playwright tests passed but every `result.json` has `startedAt == finishedAt` or no positive `durationMs`, raise at least a `Medium` finding for machine-readable evidence quality. If black-box policy flags are missing or not false, raise at least a `High` finding unless another artifact proves source independence.
 
 Classify artifact sufficiency:
 - `Complete`
@@ -350,6 +388,7 @@ Do not approve when:
 - Failures are present but not analyzed.
 - The audit conclusion materially depends on the same agent's unsupported test-generation rationale or analysis.
 - Hard documents, KB/DB records, exported artifacts, workbook rows, or generated scripts materially disagree and the drift is not explained.
+- Playwright artifacts lack trustworthy timing fields after a runner change was requested, or the audit cannot distinguish stale artifacts from fresh execution evidence.
 
 ## Final Response
 

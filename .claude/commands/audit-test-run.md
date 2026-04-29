@@ -36,6 +36,7 @@ Include an independence statement in the final report explaining whether the aud
 
 Identify and report the scope before conclusions:
 - Source documents reviewed
+- KB/DB records reviewed
 - Test case assets reviewed
 - Generated scripts reviewed
 - Execution artifacts reviewed
@@ -71,15 +72,60 @@ Review relevant source documents and test assets:
 - `test_data/TestCases.xlsx`
 - generated JSON scripts
 
+Also review the ingestion KB/DB when available:
+- structured `test_cases` records
+- structured `test_case_steps` records
+- relevant document chunks or source references used to populate those records
+- exported repository spec at `test-doc/test-case-repository.json`
+- rendered repository Markdown at `test-doc/09-test-case-repository.md`
+
 When available, use:
 ```bash
 python claude-orchestrator/scripts/show-context.py --tcs
 python claude-orchestrator/scripts/show-context.py --locators --actions
 ```
 
-Do not assume the RTM or generated tests are correct. Validate them against the source documents.
+When the ingestion database is available, verify KB/DB inventory and records:
 
-### 4. Build Traceability Assessment
+```bash
+export DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion
+PGPASSWORD=ingestion /opt/homebrew/bin/psql -h localhost -p 5433 -U ingestion -d ingestion -tAc "select count(*) from test_cases;"
+PGPASSWORD=ingestion /opt/homebrew/bin/psql -h localhost -p 5433 -U ingestion -d ingestion -tAc "select count(*) from test_case_steps;"
+```
+
+Do not assume the RTM, KB/DB, exported artifacts, workbook, or generated tests are correct. Validate each layer against the hard source documents and against each other.
+
+### 4. Reconcile Hard Docs, KB/DB, And Exported Artifacts
+
+Perform a layer-by-layer alignment check before judging execution results.
+
+Compare:
+- Hard source documents in `test-doc/`
+- Ingestion KB/DB structured records: `test_cases` and `test_case_steps`
+- Exported repository spec: `test-doc/test-case-repository.json`
+- Rendered repository Markdown: `test-doc/09-test-case-repository.md`
+- Workbook consumed by runners: `test_data/TestCases.xlsx`
+- Generated scripts, if present
+
+For each test case and step, verify:
+- Requirement ID and requirement text align with the hard documents.
+- KB/DB test case fields match the exported JSON and rendered Markdown.
+- Exported JSON matches `TestCases.xlsx`.
+- Step order, action text, test data, and expected results are preserved across DB, JSON, Markdown, and workbook.
+- No test case or step exists only in one layer unless explicitly documented.
+- No source-document requirement was dropped during ingestion/export.
+- No KB/DB or workbook test introduces behavior unsupported by hard documents.
+
+Classify alignment for each layer:
+- `Aligned`: materially consistent with the upstream authority.
+- `Drift`: meaningful wording, expected result, data, order, or scope changed between layers.
+- `Missing`: required record or artifact is absent.
+- `Extra`: record exists without a source-document basis.
+- `Unverifiable`: the layer cannot be checked from available evidence.
+
+Use `Source Alignment` as the finding category for drift, missing records, unsupported extras, or unverifiable KB/DB mappings.
+
+### 5. Build Traceability Assessment
 
 For each relevant requirement or business rule, capture:
 - Requirement ID or stable source reference
@@ -91,7 +137,7 @@ For each relevant requirement or business rule, capture:
 
 Flag any test case that has no reliable source requirement.
 
-### 5. Verify Document-To-Test Translation
+### 6. Verify Document-To-Test Translation
 
 For each test case, check whether it faithfully translates the source requirement.
 
@@ -111,7 +157,7 @@ Classify translation quality:
 - `Untraceable`
 - `Ambiguous`
 
-### 6. Validate Test Case Quality And Redundancy
+### 7. Validate Test Case Quality And Redundancy
 
 Assess each test case for corporate QA readiness:
 - Unique test objective
@@ -134,7 +180,7 @@ Classify validity:
 
 For duplicates or redundancy, explain whether the overlap is exact, functional, data-only, or expected-result-only.
 
-### 7. Audit Run Artifacts
+### 8. Audit Run Artifacts
 
 For every test execution or workflow step, verify durable evidence exists.
 
@@ -163,7 +209,7 @@ Classify artifact sufficiency:
 - `Insufficient`
 - `Inconsistent`
 
-### 8. Verify Step-Level Evidence
+### 9. Verify Step-Level Evidence
 
 Every completed workflow step must produce a verifiable artifact:
 - Generation step → saved generated script or file
@@ -174,7 +220,7 @@ Every completed workflow step must produce a verifiable artifact:
 
 If a step has no durable artifact, flag it as a governance gap even if console output appeared successful.
 
-### 9. Generate Missing Reports When Appropriate
+### 10. Generate Missing Reports When Appropriate
 
 If a `.result.json` exists but detail or summary Excel reports are missing, generate them:
 
@@ -184,7 +230,7 @@ python claude-orchestrator/scripts/generate-reports.py <result.json-path>
 
 Report generated paths. If report generation fails, record that as an audit finding and continue.
 
-### 10. Rate Findings
+### 11. Rate Findings
 
 Use these severity levels:
 - `Critical`: invalidates the audit conclusion, blocks approval, or creates material compliance risk.
@@ -203,7 +249,9 @@ Each finding must include:
 
 Use `Independence` as the category for findings where the audit depends on the same creator agent's assertions, unsourced generated analysis, or unverifiable conclusions.
 
-### 11. Save Audit Trail
+Use `Source Alignment` as the category for findings where hard documents, KB/DB records, exported JSON, rendered Markdown, workbook rows, or generated scripts do not match.
+
+### 12. Save Audit Trail
 
 Save the audit report for QA review:
 
@@ -236,6 +284,7 @@ Verdict: Approved / Approved with Conditions / Not Approved / Inconclusive
 
 ## Scope
 - Source documents reviewed:
+- KB/DB records reviewed:
 - Test assets reviewed:
 - Execution artifacts reviewed:
 - Prior creator analyses reviewed only as context:
@@ -251,6 +300,10 @@ Verdict: Approved / Approved with Conditions / Not Approved / Inconclusive
 ## Traceability Assessment
 | Requirement | Source | Linked Tests | Coverage Status | Notes |
 |---|---|---|---|---|
+
+## Source Alignment Assessment
+| Test/Requirement | Hard Docs | KB/DB | JSON/Markdown | Workbook | Generated Script | Alignment Status | Notes |
+|---|---|---|---|---|---|---|---|
 
 ## Test Case Validity Assessment
 | Test Case | Source Requirement | Validity | Redundancy | Translation Quality | Notes |
@@ -293,6 +346,7 @@ Do not approve when:
 - Required reports are missing or cannot be tied to run data.
 - Failures are present but not analyzed.
 - The audit conclusion materially depends on the same agent's unsupported test-generation rationale or analysis.
+- Hard documents, KB/DB records, exported artifacts, workbook rows, or generated scripts materially disagree and the drift is not explained.
 
 ## Final Response
 
@@ -302,3 +356,4 @@ Keep the final user-facing response concise:
 - Most important blockers
 - Saved report path
 - Missing or inconsistent artifacts
+- Any hard-doc, KB/DB, exported artifact, workbook, or script alignment gaps

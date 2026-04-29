@@ -62,8 +62,8 @@ This RTM links **business requirements (BR-)** → **functional requirements (RE
 | BR-005,BR-014 | §6 | REQ-FR-050 | §8 | TD-REQ-FR-050 | TKT-QAMVP-150 | TC-LIST-001 | Pass |
 | BR-005 | §6 | REQ-FR-051 | §8 | TD-REQ-FR-051 | TKT-QAMVP-150 | TC-LIST-002 | Pass |
 | BR-013 | §6 | REQ-FR-060 | §9 | TD-REQ-FR-060 | TKT-QAMVP-160 | TC-ADM-001 | Pass |
-| BR-010 | §4 | REQ-NFR-001 | §10 | TD-REQ-NFR-001 | TKT-QAMVP-201 | TC-NFR-001 | Planned |
-| BR-009 | §6 | REQ-NFR-002 | §10 | TD-REQ-NFR-002 | TKT-QAMVP-201 | TC-NFR-002 | Planned |
+| BR-010 | §4 | REQ-NFR-001 | §10 | TD-REQ-NFR-001 | TKT-QAMVP-201 | TC-NFR-001 | Pass |
+| BR-009 | §6 | REQ-NFR-002 | §10 | TD-REQ-NFR-002 | TKT-QAMVP-201 | TC-NFR-002 | Pass |
 | BR-010 | §4 | REQ-NFR-003 | §10 | TD-REQ-NFR-003 | TKT-QAMVP-202 | TC-NFR-003 | Planned |
 | BR-008 | §9 | REQ-NFR-004 | §10 | TD-REQ-NFR-004 | TKT-QAMVP-202 | TC-NFR-004 | Pass |
 | BR-008 | §9 | REQ-NFR-005 | §10 | TD-REQ-NFR-005 | TKT-QAMVP-203 | TC-NFR-005 | Planned |

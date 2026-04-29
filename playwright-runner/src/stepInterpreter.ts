@@ -24,6 +24,7 @@ import {
   verifyProtectedLinksUnavailable,
   verifyQueue,
   verifyRequiredFieldBlock,
+  verifyTestIds,
   verifyTradeList
 } from './blackBoxActions';
 
@@ -97,6 +98,8 @@ export async function executeStep(page: Page, step: TestStep): Promise<string> {
       return verifyLoginError(page, data);
     case 'verifyRequiredFieldBlock':
       return verifyRequiredFieldBlock(page, data);
+    case 'verifyTestIds':
+      return verifyTestIds(page, data);
     default:
       throw new BlockedUnmappedStep(step);
   }

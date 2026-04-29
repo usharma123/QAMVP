@@ -1,15 +1,15 @@
 # Knowledge Base Test Case Repository
 
 **Document ID:** KB-TC-REPO-001
-**Version:** 2026.04.29.140137
+**Version:** 2026.04.29.143634
 **Status:** Exported from ingestion DB structured test-case inventory.
 
 This document is generated from `test-doc/test-case-repository.json`. It gives the RAG corpus the same row-level test-case detail as the Excel inventory, while the ingestion pipeline also loads the workbook into structured SQL tables.
 
 ## Inventory Summary
 
-- Test cases: 15
-- Test steps: 100
+- Test cases: 16
+- Test steps: 102
 - Source workbook: `test_data/TestCases.xlsx`
 
 ## Catalog
@@ -31,6 +31,7 @@ This document is generated from `test-doc/test-case-repository.json`. It gives t
 | TC-013 | Role label distinguishes maker and checker sessions | P1 | S-4 Detailed Regression | REQ-FR-002, REQ-FR-003, REQ-FR-011, REQ-FR-014, REQ-SEC-001 |
 | TC-014 | Ticker selection drives price and total recalculation | P1 | S-4 Detailed Regression | REQ-FR-002, REQ-FR-012, REQ-FR-030, REQ-FR-031 |
 | TC-015 | Admin Users placeholder is reachable from authenticated shell | P3 | S-2 Navigation | REQ-FR-002, REQ-FR-010, REQ-FR-013, REQ-FR-060 |
+| TC-016 | Local operability and automation hooks are verifiable from the browser | P1 | S-5 NFR Evidence | REQ-NFR-001, REQ-NFR-002 |
 
 ## TC-001 - Maker submits BUY, checker approves, dashboard reflects one approved trade
 
@@ -224,7 +225,7 @@ This document is generated from `test-doc/test-case-repository.json`. It gives t
 
 ## TC-012 - Checker approval queue displays empty state and pending count zero
 
-**Objective:** Validate the queue empty state and count when no trades are waiting.
+**Objective:** Validate the queue empty state and count when no trades are waiting after the Playwright runner resets local browser storage for test isolation.
 **Priority:** P2
 **Suite:** S-4 Detailed Regression
 **Tags:** @regression, @checker, @queue
@@ -281,3 +282,15 @@ This document is generated from `test-doc/test-case-repository.json`. It gives t
 | 2 | REQ-FR-013 | Open Admin dropdown. | Users link is visible. | trigger=nav-admin-trigger |
 | 3 | REQ-FR-060 | Click Users. | Users placeholder route loads and navbar remains available. | target=nav-user-list |
 | 4 | REQ-FR-010 | Navigate back to Dashboard through Trading menu. | Dashboard loads and navbar persists. | target=nav-dashboard |
+
+## TC-016 - Local operability and automation hooks are verifiable from the browser
+
+**Objective:** Validate that the SUT is reachable on the local Playwright base URL and key login controls expose stable data-testid hooks for automation.
+**Priority:** P1
+**Suite:** S-5 NFR Evidence
+**Tags:** @regression, @nfr, @automation-hooks
+
+| Step | RequirementID | StepDescription | ExpectedOutput | TestData |
+|------|---------------|-----------------|----------------|----------|
+| 1 | REQ-NFR-001 | Open login page at the local Playwright base URL. | Login page and controls render from the local SUT without mandatory cloud services. | targetRoute=/login |
+| 2 | REQ-NFR-002 | Verify login page automation hooks expose stable data-testid attributes. | Login page, username, password, and sign-in controls are reachable by data-testid. | expectedTestIds=login-page\|auth-username-field\|login-password\|auth-sign-in-btn |

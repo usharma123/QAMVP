@@ -234,6 +234,8 @@ For each run, determine:
 - Is there enough evidence for an external reviewer to reproduce or verify the conclusion?
 
 For Playwright `manifest.json` and `result.json`, also verify:
+- `result.json.status` exists and is one of `PASS`, `FAIL`, or `BLOCKED`.
+- `result.json.status` matches `result.json.verdict`.
 - `startedAt` exists.
 - `finishedAt` exists.
 - `startedAt` is not equal to `finishedAt`.
@@ -242,7 +244,7 @@ For Playwright `manifest.json` and `result.json`, also verify:
 - `blackBoxPolicy.angularInternalsUsed` is `false`.
 - `artifacts.resultJson`, `artifacts.stepLog`, `artifacts.finalPageText`, and `artifacts.trace` point to present files.
 
-If all Playwright tests passed but every `result.json` has `startedAt == finishedAt` or no positive `durationMs`, raise at least a `Medium` finding for machine-readable evidence quality. If black-box policy flags are missing or not false, raise at least a `High` finding unless another artifact proves source independence.
+If all Playwright tests passed but every `result.json` has a missing/null status, `startedAt == finishedAt`, or no positive `durationMs`, raise at least a `Medium` finding for machine-readable evidence quality. If black-box policy flags are missing or not false, raise at least a `High` finding unless another artifact proves source independence.
 
 Classify artifact sufficiency:
 - `Complete`
@@ -389,6 +391,7 @@ Do not approve when:
 - The audit conclusion materially depends on the same agent's unsupported test-generation rationale or analysis.
 - Hard documents, KB/DB records, exported artifacts, workbook rows, or generated scripts materially disagree and the drift is not explained.
 - Playwright artifacts lack trustworthy timing fields after a runner change was requested, or the audit cannot distinguish stale artifacts from fresh execution evidence.
+- Playwright `result.json` omits the machine-readable `status` field after a runner change was requested.
 
 ## Final Response
 

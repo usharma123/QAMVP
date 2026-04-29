@@ -1,0 +1,8 @@
+Trading
+Admin
+checker (checker)
+Logout
+Dashboard
+Total Trades: 1
+TX-ID	Ticker	Quantity	Total Value
+TX-1001	AAPL	100	17,850.00

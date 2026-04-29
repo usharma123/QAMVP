@@ -162,6 +162,8 @@ TC_ID=TC-XXX PLAYWRIGHT_WORKERS=1 /usr/local/bin/npx playwright test --config /U
 ### Fresh Playwright Artifact Guard
 
 After Playwright rerun, run the fresh artifact guard from `/query-playwright-test-case`. It must confirm:
+- `result.json.status` is populated with `PASS`, `FAIL`, or `BLOCKED`
+- `result.json.status` matches `result.json.verdict`
 - `startedAt != finishedAt`
 - `durationMs > 0`
 - `webappSourceInspected: false`

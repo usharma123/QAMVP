@@ -253,6 +253,8 @@ for (const tc of tcDirs) {
       continue;
     }
     const data = JSON.parse(fs.readFileSync(p, 'utf8'));
+    if (file === 'result.json' && !['PASS', 'FAIL', 'BLOCKED'].includes(data.status)) failures.push(`${tc}/${file}: status is not PASS, FAIL, or BLOCKED`);
+    if (file === 'result.json' && data.status !== data.verdict) failures.push(`${tc}/${file}: status does not match verdict`);
     if (!data.startedAt || !data.finishedAt) failures.push(`${tc}/${file}: missing startedAt or finishedAt`);
     if (data.startedAt === data.finishedAt) failures.push(`${tc}/${file}: startedAt equals finishedAt`);
     if (typeof data.durationMs !== 'number' || data.durationMs <= 0) failures.push(`${tc}/${file}: missing positive durationMs`);
@@ -311,7 +313,7 @@ Playwright results:
 Artifacts:
   test_data/test-results/<TC-ID>/playwright_<timestamp>/
 Artifact timing:
-  startedAt != finishedAt, durationMs > 0 confirmed / failed
+  result.status populated, startedAt != finishedAt, durationMs > 0 confirmed / failed
 Audit:
   Approved / Approved with Conditions / Not Approved / Inconclusive
 ```

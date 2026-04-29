@@ -24,6 +24,7 @@ export type StepKind =
   | 'verifyProtectedLinksUnavailable'
   | 'verifyLoginError'
   | 'verifyRequiredFieldBlock'
+  | 'verifyTestIds'
   | 'unmapped';
 
 export function classifyStep(step: TestStep): StepKind {
@@ -74,6 +75,7 @@ export function classifyStep(step: TestStep): StepKind {
   if (text.includes('navbar') || text.includes('role label') || data.expectedUser) return 'verifyNavbar';
   if (text.includes('login error')) return 'verifyLoginError';
   if (text.includes('trading menu is unavailable')) return 'verifyProtectedLinksUnavailable';
+  if (text.includes('data-testid') || text.includes('automation hook')) return 'verifyTestIds';
   if (text.includes('required fields') || text.includes('leave ') || text.includes('quantity 0')) {
     return 'verifyRequiredFieldBlock';
   }

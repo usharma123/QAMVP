@@ -1,12 +1,27 @@
 {
   "document_id": "KB-TC-REPO-001",
-  "version": "2026.04.29.140137",
+  "version": "2026.04.29.143634",
   "status": "Exported from ingestion DB structured test-case inventory.",
   "title": "Knowledge Base Test Case Repository",
   "source_workbook": "test_data/TestCases.xlsx",
   "cases": [
     {
       "test_case_id": "TC-001",
+      "requirement_ids": [
+        "REQ-FR-002",
+        "REQ-FR-003",
+        "REQ-FR-012",
+        "REQ-FR-014",
+        "REQ-FR-020",
+        "REQ-FR-022",
+        "REQ-FR-030",
+        "REQ-FR-031",
+        "REQ-FR-034",
+        "REQ-FR-040",
+        "REQ-FR-043",
+        "REQ-FR-044",
+        "REQ-FR-045"
+      ],
       "title": "Maker submits BUY, checker approves, dashboard reflects one approved trade",
       "objective": "Validate the core maker-checker happy path from login through approval and approved-only dashboard count.",
       "priority": "P1",
@@ -114,6 +129,14 @@
     },
     {
       "test_case_id": "TC-002",
+      "requirement_ids": [
+        "REQ-FR-002",
+        "REQ-FR-020",
+        "REQ-FR-022",
+        "REQ-FR-033",
+        "REQ-FR-041",
+        "REQ-FR-042"
+      ],
       "title": "Two pending trades are counted in queue and absent from dashboard until approval",
       "objective": "Prove pending trades are isolated to the approval queue and do not inflate approved dashboard totals.",
       "priority": "P1",
@@ -178,6 +201,15 @@
     },
     {
       "test_case_id": "TC-003",
+      "requirement_ids": [
+        "REQ-FR-002",
+        "REQ-FR-003",
+        "REQ-FR-014",
+        "REQ-FR-033",
+        "REQ-FR-043",
+        "REQ-FR-050",
+        "REQ-FR-051"
+      ],
       "title": "Approved BUY and matching SELL become Matched in Trade List",
       "objective": "Validate the matched-pair lifecycle after checker approval of opposite-side trades with the same ticker and quantity.",
       "priority": "P1",
@@ -292,6 +324,15 @@
     },
     {
       "test_case_id": "TC-004",
+      "requirement_ids": [
+        "REQ-FR-002",
+        "REQ-FR-012",
+        "REQ-FR-030",
+        "REQ-FR-031",
+        "REQ-FR-032",
+        "REQ-FR-033",
+        "REQ-FR-040"
+      ],
       "title": "GTC trade requires expiration date and calculates notional total",
       "objective": "Cover conditional GTC field behavior and price-total calculation for a Technology ticker.",
       "priority": "P1",
@@ -356,6 +397,15 @@
     },
     {
       "test_case_id": "TC-005",
+      "requirement_ids": [
+        "REQ-FR-002",
+        "REQ-FR-003",
+        "REQ-FR-014",
+        "REQ-FR-033",
+        "REQ-FR-043",
+        "REQ-FR-050",
+        "REQ-FR-051"
+      ],
       "title": "Trade list shows unmatched approved trade until compatible opposite trade is approved",
       "objective": "Validate that an approved standalone trade remains Pending in Trade List until a compatible opposite-side match exists.",
       "priority": "P1",
@@ -420,6 +470,11 @@
     },
     {
       "test_case_id": "TC-006",
+      "requirement_ids": [
+        "REQ-FR-001",
+        "REQ-FR-004",
+        "REQ-FR-005"
+      ],
       "title": "Invalid credentials do not authenticate and show safe error",
       "objective": "Validate negative authentication behavior for bad credentials.",
       "priority": "P1",
@@ -461,6 +516,12 @@
     },
     {
       "test_case_id": "TC-007",
+      "requirement_ids": [
+        "REQ-FR-002",
+        "REQ-FR-005",
+        "REQ-FR-014",
+        "REQ-SEC-002"
+      ],
       "title": "Unauthenticated deep link is gated and logout clears protected access",
       "objective": "Validate route guard behavior before and after logout.",
       "priority": "P1",
@@ -503,6 +564,13 @@
     },
     {
       "test_case_id": "TC-008",
+      "requirement_ids": [
+        "REQ-FR-002",
+        "REQ-FR-010",
+        "REQ-FR-012",
+        "REQ-FR-013",
+        "REQ-FR-014"
+      ],
       "title": "Navigation menus expose all trading and admin destinations",
       "objective": "Validate stable click-based navigation and route reachability for automation.",
       "priority": "P1",
@@ -572,6 +640,12 @@
     },
     {
       "test_case_id": "TC-009",
+      "requirement_ids": [
+        "REQ-FR-002",
+        "REQ-FR-012",
+        "REQ-FR-033",
+        "REQ-FR-035"
+      ],
       "title": "Trade form prevents submission when required fields are missing",
       "objective": "Validate front-end required-field guardrails before creating workflow state.",
       "priority": "P2",
@@ -628,6 +702,13 @@
     },
     {
       "test_case_id": "TC-010",
+      "requirement_ids": [
+        "REQ-FR-002",
+        "REQ-FR-020",
+        "REQ-FR-021",
+        "REQ-FR-022",
+        "REQ-FR-023"
+      ],
       "title": "Dashboard columns and loading state render for approved trades",
       "objective": "Validate dashboard UX details, columns, loading state, and approved row presentation.",
       "priority": "P1",
@@ -676,6 +757,11 @@
     },
     {
       "test_case_id": "TC-011",
+      "requirement_ids": [
+        "REQ-FR-002",
+        "REQ-FR-050",
+        "REQ-FR-051"
+      ],
       "title": "Trade List columns and summary bar reflect approved inventory",
       "objective": "Validate operational reporting on the approved trade list.",
       "priority": "P2",
@@ -724,8 +810,15 @@
     },
     {
       "test_case_id": "TC-012",
+      "requirement_ids": [
+        "REQ-FR-003",
+        "REQ-FR-040",
+        "REQ-FR-041",
+        "REQ-FR-042",
+        "REQ-NFR-004"
+      ],
       "title": "Checker approval queue displays empty state and pending count zero",
-      "objective": "Validate the queue empty state and count when no trades are waiting.",
+      "objective": "Validate the queue empty state and count when no trades are waiting after the Playwright runner resets local browser storage for test isolation.",
       "priority": "P2",
       "suite": "S-4 Detailed Regression",
       "tags": [
@@ -773,6 +866,13 @@
     },
     {
       "test_case_id": "TC-013",
+      "requirement_ids": [
+        "REQ-FR-002",
+        "REQ-FR-003",
+        "REQ-FR-011",
+        "REQ-FR-014",
+        "REQ-SEC-001"
+      ],
       "title": "Role label distinguishes maker and checker sessions",
       "objective": "Validate role visibility as a four-eyes control aid.",
       "priority": "P1",
@@ -822,6 +922,12 @@
     },
     {
       "test_case_id": "TC-014",
+      "requirement_ids": [
+        "REQ-FR-002",
+        "REQ-FR-012",
+        "REQ-FR-030",
+        "REQ-FR-031"
+      ],
       "title": "Ticker selection drives price and total recalculation",
       "objective": "Validate async price lookup and recalculation when quantity changes.",
       "priority": "P1",
@@ -878,6 +984,12 @@
     },
     {
       "test_case_id": "TC-015",
+      "requirement_ids": [
+        "REQ-FR-002",
+        "REQ-FR-010",
+        "REQ-FR-013",
+        "REQ-FR-060"
+      ],
       "title": "Admin Users placeholder is reachable from authenticated shell",
       "objective": "Validate admin placeholder route remains stable for PoC navigation.",
       "priority": "P3",
@@ -915,6 +1027,38 @@
           "step_description": "Navigate back to Dashboard through Trading menu.",
           "expected_output": "Dashboard loads and navbar persists.",
           "test_data": "target=nav-dashboard"
+        }
+      ]
+    },
+    {
+      "test_case_id": "TC-016",
+      "requirement_ids": [
+        "REQ-NFR-001",
+        "REQ-NFR-002"
+      ],
+      "title": "Local operability and automation hooks are verifiable from the browser",
+      "objective": "Validate that the SUT is reachable on the local Playwright base URL and key login controls expose stable data-testid hooks for automation.",
+      "priority": "P1",
+      "suite": "S-5 NFR Evidence",
+      "tags": [
+        "@regression",
+        "@nfr",
+        "@automation-hooks"
+      ],
+      "steps": [
+        {
+          "requirement_id": "REQ-NFR-001",
+          "step_number": 1,
+          "step_description": "Open login page at the local Playwright base URL.",
+          "expected_output": "Login page and controls render from the local SUT without mandatory cloud services.",
+          "test_data": "targetRoute=/login"
+        },
+        {
+          "requirement_id": "REQ-NFR-002",
+          "step_number": 2,
+          "step_description": "Verify login page automation hooks expose stable data-testid attributes.",
+          "expected_output": "Login page, username, password, and sign-in controls are reachable by data-testid.",
+          "test_data": "expectedTestIds=login-page|auth-username-field|login-password|auth-sign-in-btn"
         }
       ]
     }

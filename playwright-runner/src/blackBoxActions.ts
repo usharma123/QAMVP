@@ -235,6 +235,20 @@ export async function verifyRequiredFieldBlock(page: Page, data: TestData): Prom
   return disabled ? 'Submit is disabled.' : 'Submission did not create a trade.';
 }
 
+export async function verifyTestIds(page: Page, data: TestData): Promise<string> {
+  if (!data.expectedTestIds) {
+    throw new Error('expectedTestIds is required for data-testid verification.');
+  }
+  if (!page.url().includes('/login')) {
+    await page.goto('/login');
+  }
+  const ids = data.expectedTestIds.split('|').map((part) => part.trim()).filter(Boolean);
+  for (const id of ids) {
+    await expect(page.getByTestId(id)).toBeVisible();
+  }
+  return `Verified data-testid hooks: ${ids.join(', ')}.`;
+}
+
 async function ensureTradePage(page: Page): Promise<void> {
   if (!page.url().includes('/trade')) {
     await navigateByTarget(page, 'nav-new-trade');

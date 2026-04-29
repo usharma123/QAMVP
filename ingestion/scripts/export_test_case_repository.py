@@ -53,9 +53,11 @@ def export_repository(database_url: str, output: Path) -> tuple[int, int]:
                 if not steps:
                     raise RuntimeError(f"{test_case_id} has no steps in test_case_steps.")
                 step_count += len(steps)
+                requirement_ids = sorted({step["requirement_id"] for step in steps})
                 cases.append(
                     {
                         "test_case_id": test_case_id,
+                        "requirement_ids": requirement_ids,
                         "title": title or test_case_id,
                         "objective": objective or f"Validate {test_case_id}.",
                         "priority": priority or "P1",

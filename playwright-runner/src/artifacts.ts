@@ -64,6 +64,7 @@ export class RunArtifacts {
       runId: this.runId,
       testCaseId: this.testCase.test_case_id,
       title: this.testCase.title,
+      status: verdict,
       verdict,
       baseURL: this.baseURL,
       workerIndex: this.testInfo.workerIndex,

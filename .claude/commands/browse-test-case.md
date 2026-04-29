@@ -12,11 +12,16 @@ Expected: a TC-ID such as `TC-001`, or `all` to run every test case in `test_dat
 
 - Use absolute paths for all commands.
 - Repo root is `/Users/utsavsharma/Documents/GitHub/QAMVP`.
+- Run as an independent black-box browser test. Do not inspect, read, search, summarize, or rely on the mock webapp source code.
+- Forbidden source-code evidence includes files under `/Users/utsavsharma/Documents/GitHub/QAMVP/mock-trading-app/src`, Angular component/service files, route definitions, templates, styles, compiled bundles, source maps, and any implementation code used to infer expected behavior.
+- The test oracle must come from source documents, the ingestion KB/DB, `test_data/TestCases.xlsx`, rendered browser behavior, screenshots, logs, and saved run artifacts.
+- Do not use implementation knowledge to decide that behavior is correct. If the UI behavior conflicts with source documents or test steps, record the conflict as a finding for audit.
 - Do not use chained `cd ... && ...` commands.
 - Use `source /Users/utsavsharma/Documents/GitHub/QAMVP/.venv/bin/activate` when running Python helpers.
 - Element refs from `agent-browser snapshot -i` expire after DOM changes. Re-snapshot after navigation, clicks, form submissions, dropdown opens, and reloads.
 - This Angular app has simulated page latency. Wait 2 seconds after normal navigation and 3 seconds for queue/trade-list data if needed.
-- For Angular reactive form `<select>` controls, use `agent-browser eval` with `window.ng.getComponent(...).form.patchValue(...)`. Do not rely on `agent-browser select`.
+- Prefer user-level browser actions from `agent-browser snapshot -i`: click, fill, keyboard input, visible dropdown options, navigation, screenshots, and page text.
+- Use `agent-browser eval` only for black-box browser observations or DOM-level interactions that a user action would cause, such as `document.body.innerText`, current URL, visible element state, or dispatching normal input/change/click events. Do not use `window.ng`, component instances, services, stores, private variables, or framework internals.
 
 ## 0. Preflight
 
@@ -87,7 +92,7 @@ Execute those IDs sequentially in sorted order.
 
 ## 2. Load App Context
 
-Read `/Users/utsavsharma/Documents/GitHub/QAMVP/python-orchestrator/prompts/app_layout.md`.
+Read `/Users/utsavsharma/Documents/GitHub/QAMVP/python-orchestrator/prompts/app_layout.md` only as navigation and credential context. Treat it as helper KB, not as proof of expected business behavior.
 
 Important credentials:
 
@@ -135,6 +140,8 @@ Step 1: <StepDescription>
 
 The plan must map 1:1 to the spreadsheet test steps.
 
+The plan must not reference webapp source files, component names, service methods, route implementation, or code-derived behavior. If a step cannot be mapped from the spreadsheet and source-document context alone, mark the step as ambiguous before execution.
+
 ## 5. Execute With agent-browser
 
 Use this loop for browser actions:
@@ -150,47 +157,51 @@ Use this loop for browser actions:
 
 After screenshots, read the saved screenshot path with the Read tool before claiming visual verification.
 
-Use `eval` for the Angular trade form:
+Use browser-observable interactions for forms. Prefer filling controls through visible fields and clicking visible buttons. If `agent-browser select` is unreliable, use DOM-level input/change events against visible form controls without reading or invoking framework internals:
 
 ```bash
 /usr/local/bin/npx agent-browser eval "
 (() => {
-  const appEl = document.querySelector('app-trade');
-  const comp = window.ng.getComponent(appEl);
-  comp.form.patchValue({
-    side: 'BUY',
-    marketSector: 'Technology',
-    ticker: 'AAPL',
-    quantity: 100,
-    accountType: 'Cash',
-    timeInForce: 'Day Order'
-  });
-  return 'form valid: ' + comp.form.valid;
+  const setValue = (selector, value) => {
+    const el = document.querySelector(selector);
+    if (!el) return selector + ' not found';
+    el.value = value;
+    el.dispatchEvent(new Event('input', { bubbles: true }));
+    el.dispatchEvent(new Event('change', { bubbles: true }));
+    return selector + '=' + el.value;
+  };
+  return [
+    setValue('select[name=\"side\"]', 'BUY'),
+    setValue('select[name=\"marketSector\"]', 'Technology'),
+    setValue('input[name=\"ticker\"]', 'AAPL'),
+    setValue('input[name=\"quantity\"]', '100'),
+    setValue('select[name=\"accountType\"]', 'Cash'),
+    setValue('select[name=\"timeInForce\"]', 'Day Order')
+  ].join('\\n');
 })()
 "
 ```
 
-Wait for price/total effects:
+Wait for visible UI effects and read only browser-visible values:
 
 ```bash
 /bin/sleep 2 && /usr/local/bin/npx agent-browser eval "
 (() => {
-  const appEl = document.querySelector('app-trade');
-  const comp = window.ng.getComponent(appEl);
-  return 'price=' + comp.form.get('currentPrice').value + ', total=' + comp.form.get('totalValue').value + ', valid=' + comp.form.valid;
+  return document.body.innerText;
 })()
 "
 ```
 
-Submit via component method:
+Submit with a visible button click or a DOM-level click event on the visible submit control. Do not call component methods:
 
 ```bash
 /usr/local/bin/npx agent-browser eval "
 (() => {
-  const appEl = document.querySelector('app-trade');
-  const comp = window.ng.getComponent(appEl);
-  comp.onSubmit();
-  return 'submitted, submitting=' + comp.submitting;
+  const buttons = [...document.querySelectorAll('button')];
+  const submit = buttons.find(btn => /submit|place|create|save|approve/i.test(btn.innerText || btn.textContent || ''));
+  if (!submit) return 'submit button not found';
+  submit.click();
+  return 'clicked: ' + (submit.innerText || submit.textContent || 'submit');
 })()
 "
 ```
@@ -225,7 +236,7 @@ On failure:
 
 1. Screenshot and read it.
 2. Re-snapshot after a 2 second wait.
-3. Diagnose the current page, refs, loading state, dropdown state, Angular form validity, or localStorage state.
+3. Diagnose the current page, refs, loading state, dropdown state, visible form state, or controlled test-environment state.
 4. Retry with a targeted fix.
 5. Log:
 
@@ -315,7 +326,21 @@ Save audit analysis:
 source /Users/utsavsharma/Documents/GitHub/QAMVP/.venv/bin/activate && /Users/utsavsharma/Documents/GitHub/QAMVP/.venv/bin/python /Users/utsavsharma/Documents/GitHub/QAMVP/claude-orchestrator/scripts/save-analysis.py <TC-ID> "<verdict + summary text>"
 ```
 
-## 10. Cleanup And Final Summary
+## 10. Run Independent Corporate Audit
+
+After saving the browser run report, run the independent audit command against the generated evidence:
+
+```text
+/audit-test-run <TC-ID-or-browse-run-report-path>
+```
+
+The audit must verify:
+- The test case came from source documents, KB/DB, or `TestCases.xlsx`, not webapp source code.
+- Browser execution evidence supports the verdict.
+- Each completed step produced a durable artifact.
+- No conclusion depends on the test-creating agent's unsupported rationale.
+
+## 11. Cleanup And Final Summary
 
 Close the browser:
 
@@ -337,6 +362,7 @@ Step Results:
 
 Report saved to: test_data/test-results/<TC-ID>/browse_run_<timestamp>.md
 Analysis saved to: test_data/test-results/<TC-ID>_analysis_<timestamp>.md
+Audit saved to: test_data/test-results/<audit-report>.md
 ```
 
 If steps failed, offer to retry failed steps or investigate app behavior for failed assertions.

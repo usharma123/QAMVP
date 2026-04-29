@@ -18,6 +18,9 @@ Supported optional input:
 - Use absolute paths for all commands.
 - Repo root is `/Users/utsavsharma/Documents/GitHub/QAMVP`.
 - The ingestion DB structured tables are the source of truth: `test_cases` and `test_case_steps`.
+- Run independently of the mock webapp implementation. Do not inspect, read, search, summarize, or rely on webapp source code when constructing, validating, or executing test cases.
+- Forbidden source-code evidence includes files under `/Users/utsavsharma/Documents/GitHub/QAMVP/mock-trading-app/src`, Angular component/service files, route definitions, templates, styles, compiled bundles, source maps, and any implementation code used to infer expected behavior.
+- The allowed test oracle is: source documents, ingestion KB/DB, exported repository artifacts, `test_data/TestCases.xlsx`, observable browser behavior, screenshots, logs, and saved run artifacts.
 - Do not synthesize new test cases from a user query in this command.
 - Before browser execution, materialize KB test cases into:
   - `test-doc/test-case-repository.json`
@@ -25,6 +28,7 @@ Supported optional input:
   - `test-doc/09-test-case-repository.md`
 - Reseed or ingest only when the DB is missing or has zero structured test cases.
 - After materializing artifacts, run via `/browse-test-case all` unless a specific TC-ID was provided.
+- After browser execution, run `/audit-test-run` against the executed TC-ID, run folder, or latest browser report.
 
 ## 0. Preflight
 
@@ -83,6 +87,8 @@ DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion /Users/ut
 If the count is still `0`, stop and report that the KB has no structured test cases.
 
 ## 2. Export KB Test Cases To Artifacts
+
+The export path must be source-document and KB/DB driven. Do not use webapp source code to create, alter, enrich, or validate the test cases.
 
 Export all DB test cases into the repeatable repository spec:
 
@@ -143,13 +149,31 @@ Otherwise run every KB test case:
 
 Follow the full `browse-test-case` workflow, including per-test localStorage reset, plan printing, screenshots, self-healing, report writing, and audit save.
 
-## 4. Final Summary
+## 4. Run Independent Corporate Audit
+
+After browser execution, run:
+
+```text
+/audit-test-run <TC-ID-or-latest-test-results-folder>
+```
+
+The audit must confirm:
+- Test cases were sourced from the ingestion DB structured `test_cases` and `test_case_steps` tables.
+- Exported artifacts match the DB source.
+- Browser execution did not depend on webapp source-code inspection.
+- Each run produced durable evidence.
+- The final verdict is supported by independent artifacts, not by the creating agent's rationale.
+
+If the audit is `Not Approved` or `Inconclusive`, report that result even if browser execution showed `PASS`.
+
+## 5. Final Summary
 
 Print:
 
 ```text
 === QUERY BROWSE TEST RESULT ===
 Source: ingestion DB structured test_cases/test_case_steps
+Source-code independence: webapp source not inspected or used as oracle
 Repository spec: test-doc/test-case-repository.json
 Repository markdown: test-doc/09-test-case-repository.md
 Generated workbook: test_data/TestCases.xlsx
@@ -159,4 +183,6 @@ Browser verdicts:
   TC-001: PASS / FAIL / PARTIAL
 Reports:
   test_data/test-results/<TC-ID>/browse_run_<timestamp>.md
+Audit:
+  Approved / Approved with Conditions / Not Approved / Inconclusive
 ```

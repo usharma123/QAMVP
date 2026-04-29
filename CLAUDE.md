@@ -1,12 +1,89 @@
-# QAMVP — AI-Driven UI Automation (Claude Code Entry Point)
+# QAMVP — Corporate QA Automation Flow (Claude Code Entry Point)
 
 ## What This Project Is
 
-A polyglot UI automation PoC with two orchestration approaches:
-- **Claude Code** (this file + `.claude/commands/`) — Claude IS the LLM; no separate API needed
-- **Python orchestrator** (`python-orchestrator/`) — standalone Python+Gemini pipeline with IPC self-healing
+A corporate QA automation PoC where test cases must be derived from approved source documents and the ingestion knowledge base, executed as black-box browser tests, and closed with an independent audit.
 
-Both produce the same JSON test scripts in `test_data/generated_scripts/`. The Java Selenium engine executes them.
+The current required flow is:
+
+```text
+hard source documents
+  → ingestion KB/DB
+  → test-doc/test-case-repository.json
+  → test-doc/09-test-case-repository.md
+  → test_data/TestCases.xlsx
+  → /browse-test-case with agent-browser
+  → saved run artifacts
+  → /audit-test-run independent corporate audit
+```
+
+Older JSON/Selenium and Python-orchestrator paths still exist in the repo, but they are not the default audit-critical flow unless the user explicitly asks for them.
+
+## Non-Negotiable Audit Principles
+
+- Do not inspect, read, search, summarize, or rely on the mock webapp source code to construct, validate, execute, or audit test cases.
+- Forbidden source-code evidence includes `mock-trading-app/src`, Angular component/service files, route definitions, templates, styles, compiled bundles, source maps, and implementation code used to infer expected behavior.
+- The test oracle is: hard source documents, ingestion KB/DB records, exported repository artifacts, `test_data/TestCases.xlsx`, observable browser behavior, screenshots, logs, and saved run artifacts.
+- Treat generated tests, generated scripts, prior agent analyses, repair notes, and self-healing explanations as audit subjects, not authority.
+- The audit must independently reconcile hard docs, KB/DB records, exported JSON/Markdown, workbook rows, generated scripts, and run artifacts.
+- A browser `PASS` is not enough. The final corporate outcome comes from `/audit-test-run`.
+
+## Primary Command Flow
+
+### Run All KB Test Cases
+
+Use this as the normal end-to-end path:
+
+```text
+/query-browse-test-case all
+```
+
+This command should:
+1. Ensure the ingestion DB is available.
+2. Verify structured KB tables `test_cases` and `test_case_steps`.
+3. Export KB test cases to `test-doc/test-case-repository.json`.
+4. Render `test-doc/09-test-case-repository.md`.
+5. Build `test_data/TestCases.xlsx`.
+6. Execute browser tests through `/browse-test-case all`.
+7. Save browser run artifacts.
+8. Run `/audit-test-run` against the executed evidence.
+
+### Run One KB Test Case
+
+```text
+/query-browse-test-case TC-001
+```
+
+Replace `TC-001` with the target test case ID.
+
+### Run Browser Execution Only
+
+Use this only when `test_data/TestCases.xlsx` is already aligned with the KB/DB and hard docs:
+
+```text
+/browse-test-case TC-001
+/browse-test-case all
+```
+
+`/browse-test-case` must remain black-box. It may use visible UI behavior, screenshots, browser text, and saved artifacts, but it must not use webapp source code or framework internals as the oracle.
+
+### Run Audit Only
+
+Use this after a run, or to inspect an existing evidence set:
+
+```text
+/audit-test-run TC-001
+/audit-test-run test_data/test-results
+/audit-test-run test_data/test-results/TC-001/browse_run_<timestamp>.md
+```
+
+The audit must verify:
+- hard-doc to KB/DB alignment
+- KB/DB to JSON/Markdown/workbook alignment
+- workbook to executed test-step alignment
+- browser result artifact completeness
+- independence from the test-creating agent
+- no reliance on webapp source-code inspection
 
 ## Repo Layout
 
@@ -14,6 +91,9 @@ Both produce the same JSON test scripts in `test_data/generated_scripts/`. The J
 QAMVP/
 ├── CLAUDE.md                          ← you are here
 ├── .claude/commands/                  ← Claude Code slash commands
+│   ├── query-browse-test-case.md      ← primary end-to-end KB → browser → audit flow
+│   ├── browse-test-case.md            ← black-box agent-browser execution from TestCases.xlsx
+│   └── audit-test-run.md              ← independent corporate QA audit
 ├── claude-orchestrator/               ← Claude Code helper scripts
 │   └── scripts/
 │       ├── run-test.py                ← execute JSON script → saves .result.json (with TC metadata)
@@ -30,7 +110,9 @@ QAMVP/
 │       ├── composition_rules.md       ← macro-first generation rules
 │       └── system_prompt.md           ← full generation rules + examples
 ├── java-framework/                    ← Maven Selenium execution engine (DO NOT MODIFY)
-├── mock-trading-app/                  ← Angular SUT running at http://localhost:4200
+├── ingestion/                         ← source-document ingestion and structured KB/DB export
+├── mock-trading-app/                  ← Angular SUT running at http://localhost:4200 (do not inspect source for test oracle)
+├── test-doc/                          ← hard docs and exported test case repository artifacts
 └── test_data/
     ├── TestCases.xlsx                 ← test case definitions (ID, steps, expected)
     ├── locators.xlsx                  ← element registry (name → XPath), per-page sheets
@@ -43,7 +125,55 @@ QAMVP/
             └── TC-001_summary_<ts>.xlsx  ← TC step summary (mirrors TestCases.xlsx + results)
 ```
 
+## Source Alignment Requirements
+
+The accepted source chain is:
+
+```text
+test-doc hard documents
+  → ingestion DB structured records
+  → test-doc/test-case-repository.json
+  → test-doc/09-test-case-repository.md
+  → test_data/TestCases.xlsx
+```
+
+Before trusting a test run, verify that:
+- `test_cases` and `test_case_steps` exist in the ingestion DB.
+- DB records match `test-doc/test-case-repository.json`.
+- JSON records match `test-doc/09-test-case-repository.md`.
+- JSON/Markdown records match `test_data/TestCases.xlsx`.
+- Requirement IDs, step order, test data, and expected results are preserved across layers.
+- No test exists only in the workbook unless explicitly documented.
+- No KB/DB or workbook test introduces behavior unsupported by the hard docs.
+
+Drift between these layers is an audit finding, even if browser execution passes.
+
+## Black-Box Browser Execution Rules
+
+When using `/browse-test-case` or `/query-browse-test-case`:
+
+- Use `agent-browser` against `http://localhost:4200`.
+- Use visible browser state, screenshots, URL, page text, and durable artifacts for evidence.
+- Prefer user-level actions: click, fill, keyboard input, visible dropdown choices, navigation, screenshots, and page text.
+- Use DOM-level `eval` only for black-box observations or user-equivalent events such as `document.body.innerText`, current URL, visible element state, or dispatching normal input/change/click events.
+- Do not use `window.ng`, component instances, services, stores, private variables, source files, route code, or implementation details.
+- If observed UI behavior conflicts with hard docs or test steps, record the conflict and let `/audit-test-run` decide approval.
+
+## Independent Audit Rules
+
+`/audit-test-run` is the approval gate.
+
+It must:
+- act independently from the agent or command that created/executed the tests
+- treat prior generated analyses as context only
+- reconcile hard docs, KB/DB, JSON, Markdown, workbook, scripts, and run artifacts
+- rate findings by severity
+- produce an approval decision: `Approved`, `Approved with Conditions`, `Not Approved`, or `Inconclusive`
+- block approval when artifacts are missing, layers drift, source traceability is weak, or conclusions depend on unsupported creator-agent rationale
+
 ## Java Execution Engine — Commands
+
+The Java/Selenium JSON path is retained for legacy or explicit use. Do not treat it as the default corporate audit path.
 
 Run ALL Java commands from the `java-framework/` directory:
 
@@ -220,7 +350,7 @@ This writes to `test_data/test-results/<name>_analysis_<timestamp>.md`.
 
 ## Handoff to Python Orchestrator (CI / Full Pipeline)
 
-For CI runs or when real-time IPC self-healing is needed, use the Python orchestrator instead. It provides:
+For legacy CI runs or when real-time IPC self-healing is explicitly requested, use the Python orchestrator. It provides:
 - Deterministic retry loops (up to 3 generation attempts, 2 execution retries)
 - Real-time IPC self-healing (HELP_REQUEST → LLM → SOLUTION during execution)
 - Structured audit trail (`test_data/test-results/`)
@@ -239,10 +369,13 @@ cd python-orchestrator && python main.py
 **When to use which:**
 | Task | Use |
 |------|-----|
-| Ad-hoc script generation, exploration | Claude Code (`/generate-test-script`) |
+| Corporate end-to-end KB → browser → audit flow | Claude Code (`/query-browse-test-case`) |
+| Browser execution from existing workbook | Claude Code (`/browse-test-case`) |
+| Independent corporate audit | Claude Code (`/audit-test-run`) |
+| Ad-hoc legacy script generation, exploration | Claude Code (`/generate-test-script`) |
 | Create/repair actions and locators | Claude Code (`/create-advanced-action`, `/repair-locators`) |
-| CI pipeline, batch runs, audit-critical | Python orchestrator (`python main.py --tc`) |
-| Runs needing real-time self-healing | Python orchestrator (owns the IPC channel) |
+| Legacy JSON/Selenium CI pipeline | Python orchestrator (`python main.py --tc`) |
+| Runs explicitly needing real-time IPC self-healing | Python orchestrator (owns the IPC channel) |
 
 ## Reference Files
 

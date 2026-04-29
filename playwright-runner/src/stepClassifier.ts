@@ -31,14 +31,14 @@ export function classifyStep(step: TestStep): StepKind {
   const expected = (step.expected_output || '').toLowerCase();
   const data = parseTestData(step.test_data);
 
+  if ((text.includes('open /') || text.includes('directly')) && data.targetRoute) {
+    return 'openProtectedRouteLoggedOut';
+  }
+
   if (text.includes('open login page')) return 'openLogin';
   if (text.includes('invalid credentials')) return 'invalidLogin';
   if (text.includes('login as')) return 'login';
   if (text.includes('logout')) return 'logout';
-
-  if ((text.includes('open /') || text.includes('directly')) && data.targetRoute) {
-    return 'openProtectedRouteLoggedOut';
-  }
 
   if (data.target) return 'navigate';
   if (text.includes('navigate to new trade')) return 'navigate';

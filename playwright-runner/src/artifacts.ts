@@ -28,11 +28,15 @@ export class RunArtifacts {
     fs.mkdirSync(artifactDir, { recursive: true });
   }
 
-  async screenshot(page: Page, step: TestStep, label: string): Promise<string> {
+  async screenshot(page: Page, step: TestStep, label: string): Promise<string | undefined> {
     const safeLabel = label.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
     const filePath = path.join(this.artifactDir, `step_${String(step.step_number).padStart(2, '0')}_${safeLabel}.png`);
-    await page.screenshot({ path: filePath, fullPage: true });
-    return filePath;
+    try {
+      await page.screenshot({ path: filePath, fullPage: true, timeout: 10_000 });
+      return filePath;
+    } catch {
+      return undefined;
+    }
   }
 
   record(step: TestStep, status: StepArtifact['status'], actual: string, screenshot?: string, error?: unknown): void {

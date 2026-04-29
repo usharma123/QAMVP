@@ -215,15 +215,10 @@ export async function verifyLoginError(page: Page, data: TestData): Promise<stri
 }
 
 export async function openProtectedRouteLoggedOut(page: Page, targetRoute: string): Promise<string> {
-  await page.goto(targetRoute);
-  await page.waitForLoadState('domcontentloaded');
-  const body = await page.locator('body').innerText();
-  if (targetRoute.includes('trade') && body.includes('New Trade')) {
-    throw new Error('Protected New Trade page was visible while logged out.');
-  }
-  if (targetRoute.includes('dashboard') && body.includes('Total Trades:')) {
-    throw new Error('Protected Dashboard page was visible while logged out.');
-  }
+  await page.goto(targetRoute, { waitUntil: 'domcontentloaded', timeout: 10_000 });
+  await expect(page.getByTestId('login-page')).toBeVisible();
+  await expect(page.getByTestId('navbar')).toHaveCount(0);
+  await expect(page.locator('body')).not.toContainText(/New Trade|Total Trades:/);
   return `Opened ${targetRoute} while logged out and verified protected content is unavailable.`;
 }
 

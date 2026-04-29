@@ -1,0 +1,27 @@
+{
+  "runId": "20260429_144333",
+  "testCaseId": "TC-012",
+  "title": "Checker approval queue displays empty state and pending count zero",
+  "status": "PASS",
+  "verdict": "PASS",
+  "baseURL": "http://localhost:4200",
+  "workerIndex": 1,
+  "project": "chromium",
+  "startedAt": "2026-04-29T18:44:10.069Z",
+  "finishedAt": "2026-04-29T18:44:14.717Z",
+  "durationMs": 4648,
+  "artifactDir": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-012/playwright_20260429_144333",
+  "sourceRepository": "test-doc/test-case-repository.json",
+  "sourceWorkbook": "test_data/TestCases.xlsx",
+  "blackBoxPolicy": {
+    "webappSourceInspected": false,
+    "angularInternalsUsed": false,
+    "oracle": "hard docs + KB/DB artifacts + workbook + observable browser behavior"
+  },
+  "artifacts": {
+    "resultJson": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-012/playwright_20260429_144333/result.json",
+    "stepLog": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-012/playwright_20260429_144333/step-log.md",
+    "finalPageText": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-012/playwright_20260429_144333/final-page-text.txt",
+    "trace": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-012/playwright_20260429_144333/trace.zip"
+  }
+}

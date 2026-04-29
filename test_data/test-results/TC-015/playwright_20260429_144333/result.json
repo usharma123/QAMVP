@@ -1,0 +1,69 @@
+{
+  "runId": "20260429_144333",
+  "testCaseId": "TC-015",
+  "title": "Admin Users placeholder is reachable from authenticated shell",
+  "status": "PASS",
+  "verdict": "PASS",
+  "baseURL": "http://localhost:4200",
+  "workerIndex": 0,
+  "project": "chromium",
+  "startedAt": "2026-04-29T18:44:18.775Z",
+  "finishedAt": "2026-04-29T18:44:21.294Z",
+  "durationMs": 2519,
+  "artifactDir": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-015/playwright_20260429_144333",
+  "sourceRepository": "test-doc/test-case-repository.json",
+  "sourceWorkbook": "test_data/TestCases.xlsx",
+  "blackBoxPolicy": {
+    "webappSourceInspected": false,
+    "angularInternalsUsed": false,
+    "oracle": "hard docs + KB/DB artifacts + workbook + observable browser behavior"
+  },
+  "artifacts": {
+    "resultJson": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-015/playwright_20260429_144333/result.json",
+    "stepLog": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-015/playwright_20260429_144333/step-log.md",
+    "finalPageText": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-015/playwright_20260429_144333/final-page-text.txt",
+    "trace": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-015/playwright_20260429_144333/trace.zip"
+  },
+  "steps": [
+    {
+      "stepNumber": 1,
+      "requirementId": "REQ-FR-002",
+      "description": "Login as maker.",
+      "expectedOutput": "Authenticated shell is visible.",
+      "testData": "username=admin,password=admin",
+      "status": "PASS",
+      "actual": "Logged in as admin.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-015/playwright_20260429_144333/step_01_pass.png"
+    },
+    {
+      "stepNumber": 2,
+      "requirementId": "REQ-FR-013",
+      "description": "Open Admin dropdown.",
+      "expectedOutput": "Users link is visible.",
+      "testData": "trigger=nav-admin-trigger",
+      "status": "PASS",
+      "actual": "Admin menu users link is visible.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-015/playwright_20260429_144333/step_02_pass.png"
+    },
+    {
+      "stepNumber": 3,
+      "requirementId": "REQ-FR-060",
+      "description": "Click Users.",
+      "expectedOutput": "Users placeholder route loads and navbar remains available.",
+      "testData": "target=nav-user-list",
+      "status": "PASS",
+      "actual": "Navigated with nav-user-list.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-015/playwright_20260429_144333/step_03_pass.png"
+    },
+    {
+      "stepNumber": 4,
+      "requirementId": "REQ-FR-010",
+      "description": "Navigate back to Dashboard through Trading menu.",
+      "expectedOutput": "Dashboard loads and navbar persists.",
+      "testData": "target=nav-dashboard",
+      "status": "PASS",
+      "actual": "Navigated with nav-dashboard.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-015/playwright_20260429_144333/step_04_pass.png"
+    }
+  ]
+}

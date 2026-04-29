@@ -1,0 +1,99 @@
+{
+  "runId": "20260429_144333",
+  "testCaseId": "TC-002",
+  "title": "Two pending trades are counted in queue and absent from dashboard until approval",
+  "status": "PASS",
+  "verdict": "PASS",
+  "baseURL": "http://localhost:4200",
+  "workerIndex": 1,
+  "project": "chromium",
+  "startedAt": "2026-04-29T18:43:33.668Z",
+  "finishedAt": "2026-04-29T18:43:42.664Z",
+  "durationMs": 8996,
+  "artifactDir": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-002/playwright_20260429_144333",
+  "sourceRepository": "test-doc/test-case-repository.json",
+  "sourceWorkbook": "test_data/TestCases.xlsx",
+  "blackBoxPolicy": {
+    "webappSourceInspected": false,
+    "angularInternalsUsed": false,
+    "oracle": "hard docs + KB/DB artifacts + workbook + observable browser behavior"
+  },
+  "artifacts": {
+    "resultJson": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-002/playwright_20260429_144333/result.json",
+    "stepLog": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-002/playwright_20260429_144333/step-log.md",
+    "finalPageText": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-002/playwright_20260429_144333/final-page-text.txt",
+    "trace": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-002/playwright_20260429_144333/trace.zip"
+  },
+  "steps": [
+    {
+      "stepNumber": 1,
+      "requirementId": "REQ-FR-002",
+      "description": "Login as maker.",
+      "expectedOutput": "Navbar shows admin (maker).",
+      "testData": "username=admin,password=admin",
+      "status": "PASS",
+      "actual": "Logged in as admin.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-002/playwright_20260429_144333/step_01_pass.png"
+    },
+    {
+      "stepNumber": 2,
+      "requirementId": "REQ-FR-033",
+      "description": "Create BUY AAPL 100 Cash Day Order.",
+      "expectedOutput": "First trade is submitted and routed to pending approval.",
+      "testData": "side=BUY,sector=Technology,ticker=AAPL,accountType=Cash,quantity=100,timeInForce=Day Order",
+      "status": "PASS",
+      "actual": "Submitted BUY AAPL trade.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-002/playwright_20260429_144333/step_02_pass.png"
+    },
+    {
+      "stepNumber": 3,
+      "requirementId": "REQ-FR-033",
+      "description": "Create SELL AAPL 100 Cash Day Order.",
+      "expectedOutput": "Second trade is submitted and routed to pending approval.",
+      "testData": "side=SELL,sector=Technology,ticker=AAPL,accountType=Cash,quantity=100,timeInForce=Day Order",
+      "status": "PASS",
+      "actual": "Submitted SELL AAPL trade.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-002/playwright_20260429_144333/step_03_pass.png"
+    },
+    {
+      "stepNumber": 4,
+      "requirementId": "REQ-FR-042",
+      "description": "Navigate to Approval Queue.",
+      "expectedOutput": "Pending: 2 is displayed.",
+      "testData": "expectedPending=2",
+      "status": "PASS",
+      "actual": "Approval Queue state verified.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-002/playwright_20260429_144333/step_04_pass.png"
+    },
+    {
+      "stepNumber": 5,
+      "requirementId": "REQ-FR-041",
+      "description": "Inspect queue columns and row values.",
+      "expectedOutput": "TX-ID, Side, Ticker, Qty, Price, Total, Action columns are visible with both AAPL rows.",
+      "testData": "expectedColumns=TX-ID|Side|Ticker|Qty|Price|Total|Action",
+      "status": "PASS",
+      "actual": "Approval Queue state verified.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-002/playwright_20260429_144333/step_05_pass.png"
+    },
+    {
+      "stepNumber": 6,
+      "requirementId": "REQ-FR-020",
+      "description": "Navigate to Dashboard without approving either trade.",
+      "expectedOutput": "Dashboard does not show the pending AAPL trades.",
+      "testData": "ticker=AAPL",
+      "status": "PASS",
+      "actual": "Dashboard state verified.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-002/playwright_20260429_144333/step_06_pass.png"
+    },
+    {
+      "stepNumber": 7,
+      "requirementId": "REQ-FR-022",
+      "description": "Verify dashboard approved count remains zero.",
+      "expectedOutput": "Total Trades: 0 is displayed.",
+      "testData": "expectedCount=0",
+      "status": "PASS",
+      "actual": "Approved   row.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-002/playwright_20260429_144333/step_07_pass.png"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "runId": "20260429_114843",
+  "testCaseId": "TC-007",
+  "title": "Unauthenticated deep link is gated and logout clears protected access",
+  "verdict": "FAIL",
+  "baseURL": "http://localhost:4200",
+  "workerIndex": 1,
+  "project": "chromium",
+  "startedAt": "2026-04-29T15:48:46.444Z",
+  "finishedAt": "2026-04-29T15:48:46.444Z",
+  "artifactDir": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-007/playwright_20260429_114843",
+  "sourceRepository": "test-doc/test-case-repository.json",
+  "sourceWorkbook": "test_data/TestCases.xlsx",
+  "blackBoxPolicy": {
+    "webappSourceInspected": false,
+    "angularInternalsUsed": false,
+    "oracle": "hard docs + KB/DB artifacts + workbook + observable browser behavior"
+  },
+  "artifacts": {
+    "resultJson": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-007/playwright_20260429_114843/result.json",
+    "stepLog": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-007/playwright_20260429_114843/step-log.md",
+    "finalPageText": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-007/playwright_20260429_114843/final-page-text.txt",
+    "trace": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-007/playwright_20260429_114843/trace.zip"
+  },
+  "steps": [
+    {
+      "stepNumber": 1,
+      "requirementId": "REQ-FR-005",
+      "description": "Open /trade directly while logged out.",
+      "expectedOutput": "Application redirects to login or blocks access to New Trade.",
+      "testData": "targetRoute=/trade",
+      "status": "FAIL",
+      "actual": "Step execution failed.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-007/playwright_20260429_114843/step_01_fail.png",
+      "error": "Protected New Trade page was visible while logged out."
+    }
+  ]
+}

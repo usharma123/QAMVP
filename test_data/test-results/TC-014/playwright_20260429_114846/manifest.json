@@ -1,0 +1,25 @@
+{
+  "runId": "20260429_114846",
+  "testCaseId": "TC-014",
+  "title": "Ticker selection drives price and total recalculation",
+  "verdict": "PASS",
+  "baseURL": "http://localhost:4200",
+  "workerIndex": 2,
+  "project": "chromium",
+  "startedAt": "2026-04-29T15:49:20.159Z",
+  "finishedAt": "2026-04-29T15:49:20.159Z",
+  "artifactDir": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-014/playwright_20260429_114846",
+  "sourceRepository": "test-doc/test-case-repository.json",
+  "sourceWorkbook": "test_data/TestCases.xlsx",
+  "blackBoxPolicy": {
+    "webappSourceInspected": false,
+    "angularInternalsUsed": false,
+    "oracle": "hard docs + KB/DB artifacts + workbook + observable browser behavior"
+  },
+  "artifacts": {
+    "resultJson": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-014/playwright_20260429_114846/result.json",
+    "stepLog": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-014/playwright_20260429_114846/step-log.md",
+    "finalPageText": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-014/playwright_20260429_114846/final-page-text.txt",
+    "trace": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-014/playwright_20260429_114846/trace.zip"
+  }
+}

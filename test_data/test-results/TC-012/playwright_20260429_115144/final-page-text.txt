@@ -1,0 +1,9 @@
+Trading
+Admin
+checker (checker)
+Logout
+Approval Queue
+Pending: 0
+TX-ID	SIDE	TICKER	QTY	PRICE	TOTAL	ACTION
+
+No pending trades.

@@ -1,0 +1,67 @@
+{
+  "runId": "20260429_115116",
+  "testCaseId": "TC-006",
+  "title": "Invalid credentials do not authenticate and show safe error",
+  "verdict": "PASS",
+  "baseURL": "http://localhost:4200",
+  "workerIndex": 1,
+  "project": "chromium",
+  "startedAt": "2026-04-29T15:51:43.770Z",
+  "finishedAt": "2026-04-29T15:51:43.770Z",
+  "artifactDir": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-006/playwright_20260429_115116",
+  "sourceRepository": "test-doc/test-case-repository.json",
+  "sourceWorkbook": "test_data/TestCases.xlsx",
+  "blackBoxPolicy": {
+    "webappSourceInspected": false,
+    "angularInternalsUsed": false,
+    "oracle": "hard docs + KB/DB artifacts + workbook + observable browser behavior"
+  },
+  "artifacts": {
+    "resultJson": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-006/playwright_20260429_115116/result.json",
+    "stepLog": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-006/playwright_20260429_115116/step-log.md",
+    "finalPageText": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-006/playwright_20260429_115116/final-page-text.txt",
+    "trace": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-006/playwright_20260429_115116/trace.zip"
+  },
+  "steps": [
+    {
+      "stepNumber": 1,
+      "requirementId": "REQ-FR-001",
+      "description": "Open login page.",
+      "expectedOutput": "Username, password, and Sign in controls are visible.",
+      "testData": "",
+      "status": "PASS",
+      "actual": "Login controls are visible.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-006/playwright_20260429_115116/step_01_pass.png"
+    },
+    {
+      "stepNumber": 2,
+      "requirementId": "REQ-FR-004",
+      "description": "Enter invalid credentials and submit.",
+      "expectedOutput": "User remains on login page.",
+      "testData": "username=admin,password=wrong-password",
+      "status": "PASS",
+      "actual": "Invalid login remained on login page.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-006/playwright_20260429_115116/step_02_pass.png"
+    },
+    {
+      "stepNumber": 3,
+      "requirementId": "REQ-FR-004",
+      "description": "Inspect login error message.",
+      "expectedOutput": "Invalid username or password is visible.",
+      "testData": "expectedError=Invalid username or password",
+      "status": "PASS",
+      "actual": "Login error message verified.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-006/playwright_20260429_115116/step_03_pass.png"
+    },
+    {
+      "stepNumber": 4,
+      "requirementId": "REQ-FR-005",
+      "description": "Verify Trading menu is unavailable after failed login.",
+      "expectedOutput": "Authenticated navbar and trading links are not visible.",
+      "testData": "",
+      "status": "PASS",
+      "actual": "Authenticated navbar is unavailable.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-006/playwright_20260429_115116/step_04_pass.png"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "runId": "20260429_115741",
+  "testCaseId": "TC-006",
+  "title": "Invalid credentials do not authenticate and show safe error",
+  "verdict": "PASS",
+  "baseURL": "http://localhost:4200",
+  "workerIndex": 1,
+  "project": "chromium",
+  "startedAt": "2026-04-29T15:57:53.066Z",
+  "finishedAt": "2026-04-29T15:57:53.066Z",
+  "artifactDir": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-006/playwright_20260429_115741",
+  "sourceRepository": "test-doc/test-case-repository.json",
+  "sourceWorkbook": "test_data/TestCases.xlsx",
+  "blackBoxPolicy": {
+    "webappSourceInspected": false,
+    "angularInternalsUsed": false,
+    "oracle": "hard docs + KB/DB artifacts + workbook + observable browser behavior"
+  },
+  "artifacts": {
+    "resultJson": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-006/playwright_20260429_115741/result.json",
+    "stepLog": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-006/playwright_20260429_115741/step-log.md",
+    "finalPageText": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-006/playwright_20260429_115741/final-page-text.txt",
+    "trace": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-006/playwright_20260429_115741/trace.zip"
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "runId": "20260429_115741",
+  "testCaseId": "TC-003",
+  "title": "Approved BUY and matching SELL become Matched in Trade List",
+  "verdict": "PASS",
+  "baseURL": "http://localhost:4200",
+  "workerIndex": 2,
+  "project": "chromium",
+  "startedAt": "2026-04-29T15:57:57.284Z",
+  "finishedAt": "2026-04-29T15:57:57.284Z",
+  "artifactDir": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260429_115741",
+  "sourceRepository": "test-doc/test-case-repository.json",
+  "sourceWorkbook": "test_data/TestCases.xlsx",
+  "blackBoxPolicy": {
+    "webappSourceInspected": false,
+    "angularInternalsUsed": false,
+    "oracle": "hard docs + KB/DB artifacts + workbook + observable browser behavior"
+  },
+  "artifacts": {
+    "resultJson": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260429_115741/result.json",
+    "stepLog": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260429_115741/step-log.md",
+    "finalPageText": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260429_115741/final-page-text.txt",
+    "trace": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260429_115741/trace.zip"
+  },
+  "steps": [
+    {
+      "stepNumber": 1,
+      "requirementId": "REQ-FR-002",
+      "description": "Login as maker.",
+      "expectedOutput": "Maker session is established.",
+      "testData": "username=admin,password=admin",
+      "status": "PASS",
+      "actual": "Logged in as admin.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260429_115741/step_01_pass.png"
+    },
+    {
+      "stepNumber": 2,
+      "requirementId": "REQ-FR-033",
+      "description": "Create BUY JPM 50 Margin Day Order.",
+      "expectedOutput": "BUY JPM is submitted as pending approval.",
+      "testData": "side=BUY,sector=Financials,ticker=JPM,accountType=Margin,quantity=50,timeInForce=Day Order",
+      "status": "PASS",
+      "actual": "Submitted BUY JPM trade.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260429_115741/step_02_pass.png"
+    },
+    {
+      "stepNumber": 3,
+      "requirementId": "REQ-FR-014",
+      "description": "Logout maker.",
+      "expectedOutput": "Login page is visible.",
+      "testData": "",
+      "status": "PASS",
+      "actual": "Logged out and login page is visible.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260429_115741/step_03_pass.png"
+    },
+    {
+      "stepNumber": 4,
+      "requirementId": "REQ-FR-003",
+      "description": "Login as checker.",
+      "expectedOutput": "Checker session is established.",
+      "testData": "username=checker,password=chscker@123",
+      "status": "PASS",
+      "actual": "Logged in as checker.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260429_115741/step_04_pass.png"
+    },
+    {
+      "stepNumber": 5,
+      "requirementId": "REQ-FR-043",
+      "description": "Approve the pending BUY JPM row.",
+      "expectedOutput": "BUY JPM row is approved and leaves queue.",
+      "testData": "ticker=JPM,side=BUY",
+      "status": "PASS",
+      "actual": "Approved BUY JPM row.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260429_115741/step_05_pass.png"
+    },
+    {
+      "stepNumber": 6,
+      "requirementId": "REQ-FR-014",
+      "description": "Logout checker.",
+      "expectedOutput": "Login page is visible.",
+      "testData": "",
+      "status": "PASS",
+      "actual": "Logged out and login page is visible.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260429_115741/step_06_pass.png"
+    },
+    {
+      "stepNumber": 7,
+      "requirementId": "REQ-FR-002",
+      "description": "Login as maker again.",
+      "expectedOutput": "Maker session is established.",
+      "testData": "username=admin,password=admin",
+      "status": "PASS",
+      "actual": "Logged in as admin.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260429_115741/step_07_pass.png"
+    },
+    {
+      "stepNumber": 8,
+      "requirementId": "REQ-FR-033",
+      "description": "Create SELL JPM 50 Margin Day Order.",
+      "expectedOutput": "SELL JPM is submitted as pending approval.",
+      "testData": "side=SELL,sector=Financials,ticker=JPM,accountType=Margin,quantity=50,timeInForce=Day Order",
+      "status": "PASS",
+      "actual": "Submitted SELL JPM trade.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260429_115741/step_08_pass.png"
+    },
+    {
+      "stepNumber": 9,
+      "requirementId": "REQ-FR-014",
+      "description": "Logout maker.",
+      "expectedOutput": "Login page is visible.",
+      "testData": "",
+      "status": "PASS",
+      "actual": "Logged out and login page is visible.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260429_115741/step_09_pass.png"
+    },
+    {
+      "stepNumber": 10,
+      "requirementId": "REQ-FR-003",
+      "description": "Login as checker again.",
+      "expectedOutput": "Checker session is established.",
+      "testData": "username=checker,password=chscker@123",
+      "status": "PASS",
+      "actual": "Logged in as checker.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260429_115741/step_10_pass.png"
+    },
+    {
+      "stepNumber": 11,
+      "requirementId": "REQ-FR-043",
+      "description": "Approve the pending SELL JPM row.",
+      "expectedOutput": "SELL JPM is approved and matching logic runs.",
+      "testData": "ticker=JPM,side=SELL",
+      "status": "PASS",
+      "actual": "Approved SELL JPM row.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260429_115741/step_11_pass.png"
+    },
+    {
+      "stepNumber": 12,
+      "requirementId": "REQ-FR-050",
+      "description": "Navigate to Trade List.",
+      "expectedOutput": "Trade List displays both approved JPM rows with Status column populated.",
+      "testData": "ticker=JPM",
+      "status": "PASS",
+      "actual": "Trade List state verified.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260429_115741/step_12_pass.png"
+    },
+    {
+      "stepNumber": 13,
+      "requirementId": "REQ-FR-051",
+      "description": "Verify summary counts.",
+      "expectedOutput": "Total: 2, Matched: 2, Pending: 0 are displayed.",
+      "testData": "expectedTotal=2,expectedMatched=2,expectedPending=0",
+      "status": "PASS",
+      "actual": "Trade List state verified.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260429_115741/step_13_pass.png"
+    },
+    {
+      "stepNumber": 14,
+      "requirementId": "REQ-FR-050",
+      "description": "Verify Matched With values.",
+      "expectedOutput": "Each JPM row references the opposite TX-ID in Matched With.",
+      "testData": "expectedStatus=Matched",
+      "status": "PASS",
+      "actual": "Trade List state verified.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260429_115741/step_14_pass.png"
+    }
+  ]
+}

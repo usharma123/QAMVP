@@ -1,0 +1,25 @@
+{
+  "runId": "20260429_115116",
+  "testCaseId": "TC-002",
+  "title": "Two pending trades are counted in queue and absent from dashboard until approval",
+  "verdict": "PASS",
+  "baseURL": "http://localhost:4200",
+  "workerIndex": 1,
+  "project": "chromium",
+  "startedAt": "2026-04-29T15:51:25.950Z",
+  "finishedAt": "2026-04-29T15:51:25.950Z",
+  "artifactDir": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-002/playwright_20260429_115116",
+  "sourceRepository": "test-doc/test-case-repository.json",
+  "sourceWorkbook": "test_data/TestCases.xlsx",
+  "blackBoxPolicy": {
+    "webappSourceInspected": false,
+    "angularInternalsUsed": false,
+    "oracle": "hard docs + KB/DB artifacts + workbook + observable browser behavior"
+  },
+  "artifacts": {
+    "resultJson": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-002/playwright_20260429_115116/result.json",
+    "stepLog": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-002/playwright_20260429_115116/step-log.md",
+    "finalPageText": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-002/playwright_20260429_115116/final-page-text.txt",
+    "trace": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-002/playwright_20260429_115116/trace.zip"
+  }
+}

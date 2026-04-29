@@ -1,0 +1,68 @@
+{
+  "runId": "20260429_114616",
+  "testCaseId": "TC-001",
+  "title": "Maker submits BUY, checker approves, dashboard reflects one approved trade",
+  "verdict": "FAIL",
+  "baseURL": "http://localhost:4200",
+  "workerIndex": 0,
+  "project": "chromium",
+  "startedAt": "2026-04-29T15:46:29.375Z",
+  "finishedAt": "2026-04-29T15:46:29.375Z",
+  "artifactDir": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260429_114616",
+  "sourceRepository": "test-doc/test-case-repository.json",
+  "sourceWorkbook": "test_data/TestCases.xlsx",
+  "blackBoxPolicy": {
+    "webappSourceInspected": false,
+    "angularInternalsUsed": false,
+    "oracle": "hard docs + KB/DB artifacts + workbook + observable browser behavior"
+  },
+  "artifacts": {
+    "resultJson": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260429_114616/result.json",
+    "stepLog": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260429_114616/step-log.md",
+    "finalPageText": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260429_114616/final-page-text.txt",
+    "trace": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260429_114616/trace.zip"
+  },
+  "steps": [
+    {
+      "stepNumber": 1,
+      "requirementId": "REQ-FR-002",
+      "description": "Login as maker using documented credentials.",
+      "expectedOutput": "Dashboard page loads and navbar shows admin (maker).",
+      "testData": "username=admin,password=admin",
+      "status": "PASS",
+      "actual": "Logged in as admin.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260429_114616/step_01_pass.png"
+    },
+    {
+      "stepNumber": 2,
+      "requirementId": "REQ-FR-012",
+      "description": "Open Trading menu and navigate to New Trade.",
+      "expectedOutput": "New Trade form is visible.",
+      "testData": "target=nav-new-trade",
+      "status": "PASS",
+      "actual": "Navigated with nav-new-trade.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260429_114616/step_02_pass.png"
+    },
+    {
+      "stepNumber": 3,
+      "requirementId": "REQ-FR-030",
+      "description": "Select BUY, Technology, AAPL, Cash, quantity 100, Day Order.",
+      "expectedOutput": "All required trade form fields are populated.",
+      "testData": "side=BUY,sector=Technology,ticker=AAPL,accountType=Cash,quantity=100,timeInForce=Day Order",
+      "status": "PASS",
+      "actual": "Trade form fields populated from test data.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260429_114616/step_03_pass.png"
+    },
+    {
+      "stepNumber": 4,
+      "requirementId": "REQ-FR-031",
+      "description": "Wait for ticker price and total value to calculate.",
+      "expectedOutput": "Current Price is 178.50 and Total Value is 17850.00.",
+      "testData": "ticker=AAPL,expectedPrice=178.50,expectedTotal=17850.00",
+      "status": "FAIL",
+      "actual": "Step execution failed.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260429_114616/step_04_fail.png",
+      "error": "\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveValue\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#currentPrice')\nExpected: \u001b[32m\"178.5\u001b[7m0\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"178.5\"\u001b[39m\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveValue\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('#currentPrice')\u001b[22m\n\u001b[2m    5 × locator resolved to <input readonly type=\"text\" id=\"currentPrice\" _ngcontent-ng-c2913743637=\"\" data-testid=\"trade-current-price\"/>\u001b[22m\n\u001b[2m      - unexpected value \"\"\u001b[22m\n\u001b[2m    9 × locator resolved to <input readonly type=\"text\" id=\"currentPrice\" _ngcontent-ng-c2913743637=\"\" data-testid=\"trade-current-price\"/>\u001b[22m\n\u001b[2m      - unexpected value \"178.5\"\u001b[22m\n"
+    }
+  ]
+}

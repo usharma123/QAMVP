@@ -1,0 +1,11 @@
+Trading
+Admin
+checker (checker)
+Logout
+Trade List
+Total: 2
+Matched: 2
+Pending: 0
+TX-ID	SIDE	TICKER	QTY	PRICE	TOTAL	STATUS	MATCHED WITH
+TX-1001	BUY	JPM	50			Matched	TX-1002
+TX-1002	SELL	JPM	50			Matched	TX-1001

@@ -1,7 +1,7 @@
 # Knowledge Base Test Case Repository
 
 **Document ID:** KB-TC-REPO-001
-**Version:** 2026.04.22.103041
+**Version:** 2026.04.29.112210
 **Status:** Exported from ingestion DB structured test-case inventory.
 
 This document is generated from `test-doc/test-case-repository.json`. It gives the RAG corpus the same row-level test-case detail as the Excel inventory, while the ingestion pipeline also loads the workbook into structured SQL tables.

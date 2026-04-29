@@ -1,0 +1,10 @@
+Trading
+Admin
+checker (checker)
+Logout
+Trade List
+Total: 1
+Matched: 0
+Pending: 1
+TX-ID	SIDE	TICKER	QTY	PRICE	TOTAL	STATUS	MATCHED WITH
+TX-1001	BUY	NVDA	10			Pending	—

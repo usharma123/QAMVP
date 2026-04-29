@@ -1,0 +1,47 @@
+{
+  "runId": "20260429_114134",
+  "testCaseId": "TC-001",
+  "title": "Maker submits BUY, checker approves, dashboard reflects one approved trade",
+  "verdict": "PASS",
+  "baseURL": "http://localhost:4200",
+  "workerIndex": 0,
+  "project": "chromium",
+  "startedAt": "2026-04-29T15:43:36.757Z",
+  "finishedAt": "2026-04-29T15:43:36.757Z",
+  "artifactDir": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260429_114134",
+  "sourceRepository": "test-doc/test-case-repository.json",
+  "sourceWorkbook": "test_data/TestCases.xlsx",
+  "blackBoxPolicy": {
+    "webappSourceInspected": false,
+    "angularInternalsUsed": false,
+    "oracle": "hard docs + KB/DB artifacts + workbook + observable browser behavior"
+  },
+  "artifacts": {
+    "resultJson": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260429_114134/result.json",
+    "stepLog": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260429_114134/step-log.md",
+    "finalPageText": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260429_114134/final-page-text.txt",
+    "trace": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260429_114134/trace.zip"
+  },
+  "steps": [
+    {
+      "stepNumber": 1,
+      "requirementId": "REQ-FR-002",
+      "description": "Login as maker using documented credentials.",
+      "expectedOutput": "Dashboard page loads and navbar shows admin (maker).",
+      "testData": "username=admin,password=admin",
+      "status": "PASS",
+      "actual": "Logged in as admin.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260429_114134/step_01_pass.png"
+    },
+    {
+      "stepNumber": 2,
+      "requirementId": "REQ-FR-012",
+      "description": "Open Trading menu and navigate to New Trade.",
+      "expectedOutput": "New Trade form is visible.",
+      "testData": "target=nav-new-trade",
+      "status": "PASS",
+      "actual": "Trading menu links are visible.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260429_114134/step_02_pass.png"
+    }
+  ]
+}

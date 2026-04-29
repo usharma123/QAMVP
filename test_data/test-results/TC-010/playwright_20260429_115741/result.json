@@ -1,0 +1,77 @@
+{
+  "runId": "20260429_115741",
+  "testCaseId": "TC-010",
+  "title": "Dashboard columns and loading state render for approved trades",
+  "verdict": "PASS",
+  "baseURL": "http://localhost:4200",
+  "workerIndex": 0,
+  "project": "chromium",
+  "startedAt": "2026-04-29T15:58:02.471Z",
+  "finishedAt": "2026-04-29T15:58:02.471Z",
+  "artifactDir": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-010/playwright_20260429_115741",
+  "sourceRepository": "test-doc/test-case-repository.json",
+  "sourceWorkbook": "test_data/TestCases.xlsx",
+  "blackBoxPolicy": {
+    "webappSourceInspected": false,
+    "angularInternalsUsed": false,
+    "oracle": "hard docs + KB/DB artifacts + workbook + observable browser behavior"
+  },
+  "artifacts": {
+    "resultJson": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-010/playwright_20260429_115741/result.json",
+    "stepLog": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-010/playwright_20260429_115741/step-log.md",
+    "finalPageText": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-010/playwright_20260429_115741/final-page-text.txt",
+    "trace": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-010/playwright_20260429_115741/trace.zip"
+  },
+  "steps": [
+    {
+      "stepNumber": 1,
+      "requirementId": "REQ-FR-002",
+      "description": "Login as maker.",
+      "expectedOutput": "Dashboard route starts loading.",
+      "testData": "username=admin,password=admin",
+      "status": "PASS",
+      "actual": "Logged in as admin.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-010/playwright_20260429_115741/step_01_pass.png"
+    },
+    {
+      "stepNumber": 2,
+      "requirementId": "REQ-FR-023",
+      "description": "Observe Dashboard immediately after navigation.",
+      "expectedOutput": "Loading trades indicator is visible before data resolves.",
+      "testData": "",
+      "status": "PASS",
+      "actual": "Dashboard state verified.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-010/playwright_20260429_115741/step_02_pass.png"
+    },
+    {
+      "stepNumber": 3,
+      "requirementId": "REQ-FR-021",
+      "description": "Inspect Dashboard table headers after loading.",
+      "expectedOutput": "TX-ID, Ticker, Quantity, and Total Value headers are visible.",
+      "testData": "expectedColumns=TX-ID|Ticker|Quantity|Total Value",
+      "status": "PASS",
+      "actual": "Dashboard state verified.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-010/playwright_20260429_115741/step_03_pass.png"
+    },
+    {
+      "stepNumber": 4,
+      "requirementId": "REQ-FR-022",
+      "description": "Inspect Dashboard summary.",
+      "expectedOutput": "Total Trades: N is displayed and matches approved row count.",
+      "testData": "expectedLabel=Total Trades:",
+      "status": "PASS",
+      "actual": "Dashboard state verified.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-010/playwright_20260429_115741/step_04_pass.png"
+    },
+    {
+      "stepNumber": 5,
+      "requirementId": "REQ-FR-020",
+      "description": "Compare Dashboard rows to Approval Queue pending rows.",
+      "expectedOutput": "No pending_approval row appears on Dashboard.",
+      "testData": "",
+      "status": "PASS",
+      "actual": "Approval Queue state verified.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-010/playwright_20260429_115741/step_05_pass.png"
+    }
+  ]
+}

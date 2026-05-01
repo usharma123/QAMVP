@@ -1,4 +1,4 @@
-# Query Playwright Test Case
+# Playwright Test Flow
 
 Execute structured KB test cases with the deterministic Playwright black-box runner, with a mandatory ingestion audit and healing loop before execution, then run the independent corporate audit.
 
@@ -12,7 +12,7 @@ Supported input:
 
 ## Rules
 
-- Before running any command step, create a visible checklist titled `Query Playwright Checklist`.
+- Before running any command step, create a visible checklist titled `Playwright Test Flow Checklist`.
 - The checklist must include every numbered section in this command plus the nested source-chain and artifact guards.
 - Update the checklist as work progresses: mark one item `in_progress`, mark completed items immediately, and leave blocked items explicit with the blocking reason.
 - Do not wait until the final response to show checklist status.
@@ -42,7 +42,7 @@ Supported input:
 Create and maintain this checklist before executing:
 
 ```text
-Query Playwright Checklist
+Playwright Test Flow Checklist
 - [ ] Preflight dependencies
 - [ ] Ensure DB is ready
 - [ ] Run ingestion audit gate
@@ -462,7 +462,7 @@ Accept these conditions for this run, remediate them now, or stop?
 Print:
 
 ```text
-=== QUERY PLAYWRIGHT TEST RESULT ===
+=== PLAYWRIGHT TEST FLOW RESULT ===
 Source: ingestion DB structured test_cases/test_case_steps
 Source-code independence: webapp source not inspected or used as oracle
 Repository spec: test-doc/test-case-repository.json

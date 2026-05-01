@@ -9,7 +9,7 @@ The current required flow is:
 ```text
 hard source documents
   → ingestion KB/DB
-  → /query-playwright-test-case invokes /audit-test-case-ingestion
+  → /playwright-test-flow invokes /audit-test-case-ingestion
   → heal DB/KB/source alignment findings and rerun gate until pass
   → test-doc/test-case-repository.json
   → test-doc/09-test-case-repository.md
@@ -29,12 +29,12 @@ Older JSON/Selenium and Python-orchestrator paths still exist in the repo, but t
 - The test oracle is: hard source documents, ingestion KB/DB records, exported repository artifacts, `test_data/TestCases.xlsx`, observable browser behavior, screenshots, logs, and saved run artifacts.
 - Treat generated tests, generated scripts, prior agent analyses, repair notes, and self-healing explanations as audit subjects, not authority.
 - The audit must independently reconcile hard docs, KB/DB records, exported JSON/Markdown, workbook rows, generated scripts, and run artifacts.
-- Test-case ingestion must pass `/audit-test-case-ingestion` before browser execution in the governed flow. `/query-playwright-test-case` must invoke that gate and must not start Playwright until it passes.
+- Test-case ingestion must pass `/audit-test-case-ingestion` before browser execution in the governed flow. `/playwright-test-flow` must invoke that gate and must not start Playwright until it passes.
 - If the ingestion gate fails, perform source-layer remediation, write a healing artifact, rerun the gate, and repeat until pass or human direction stops the run.
 - Ask for human feedback before material hard-doc changes, ambiguous DB/KB fixes, repeated failed remediation, or execution with unresolved material findings.
 - If the final audit is `Not Approved` or `Inconclusive`, invoke `/heal-audit-findings`, preserve remediation artifacts, rerun required execution/audit, and ask for human direction when approval conditions or repeated blockers remain.
 - A browser `PASS` is not enough. The final corporate outcome comes from `/audit-test-run`.
-- When running `/audit-test-case-ingestion`, `/query-playwright-test-case`, `/query-browse-test-case`, `/audit-test-run`, or `/heal-audit-findings`, create the command's visible checklist before executing the first step and update it throughout the run.
+- When running `/audit-test-case-ingestion`, `/playwright-test-flow`, `/query-browse-test-case`, `/audit-test-run`, or `/heal-audit-findings`, create the command's visible checklist before executing the first step and update it throughout the run.
 
 ## Primary Command Flow
 
@@ -43,10 +43,10 @@ Older JSON/Selenium and Python-orchestrator paths still exist in the repo, but t
 Use this as the normal governed end-to-end path:
 
 ```text
-/query-playwright-test-case all
+/playwright-test-flow all
 ```
 
-The Playwright query command invokes `/audit-test-case-ingestion` as a required pre-execution gate. The gate remains an independent audit function, but the query command orchestrates it end to end: gate, heal, gate again until pass, human checkpoint, execution, artifact verification, final `/audit-test-run`, and final audit healing when needed.
+The Playwright test flow invokes `/audit-test-case-ingestion` as a required pre-execution gate. The gate remains an independent audit function, but the flow command orchestrates it end to end: gate, heal, gate again until pass, human checkpoint, execution, artifact verification, final `/audit-test-run`, and final audit healing when needed.
 
 Use `/query-browse-test-case all` only when intentionally comparing against the older agent-browser path.
 
@@ -88,7 +88,7 @@ This command should:
 ### Run One KB Test Case
 
 ```text
-/query-playwright-test-case TC-001
+/playwright-test-flow TC-001
 /query-browse-test-case TC-001
 ```
 
@@ -99,7 +99,7 @@ Replace `TC-001` with the target test case ID.
 Use execution-only commands only when `test_data/TestCases.xlsx` is already aligned with the KB/DB and hard docs and `/audit-test-case-ingestion` has passed for the current ingestion state:
 
 ```text
-/query-playwright-test-case TC-001
+/playwright-test-flow TC-001
 /browse-test-case TC-001
 /browse-test-case all
 ```
@@ -115,7 +115,7 @@ Use this directly when you only want to audit ingestion without executing browse
 /audit-test-case-ingestion strict
 ```
 
-This command is independent, but `/query-playwright-test-case` invokes it in the governed end-to-end flow. It verifies the structured DB/KB inventory against hard documents and blocks execution when critical or high findings exist. Use `strict` when medium findings should also block execution.
+This command is independent, but `/playwright-test-flow` invokes it in the governed end-to-end flow. It verifies the structured DB/KB inventory against hard documents and blocks execution when critical or high findings exist. Use `strict` when medium findings should also block execution.
 
 ### Run Audit Only
 
@@ -142,7 +142,7 @@ QAMVP/
 ├── CLAUDE.md                          ← you are here
 ├── .claude/commands/                  ← Claude Code slash commands
 │   ├── query-browse-test-case.md      ← primary end-to-end KB → browser → audit flow
-│   ├── query-playwright-test-case.md  ← KB → Playwright parallel runner → audit flow
+│   ├── playwright-test-flow.md  ← KB → Playwright parallel runner → audit flow
 │   ├── audit-test-case-ingestion.md   ← independent pre-execution DB/KB vs hard-doc gate
 │   ├── browse-test-case.md            ← black-box agent-browser execution from TestCases.xlsx
 │   ├── audit-test-run.md              ← independent corporate QA audit
@@ -186,7 +186,7 @@ The accepted source chain is:
 ```text
 test-doc hard documents
   → ingestion DB structured records
-  → /audit-test-case-ingestion, invoked by /query-playwright-test-case in governed runs
+  → /audit-test-case-ingestion, invoked by /playwright-test-flow in governed runs
   → gate/heal/gate loop with artifacts until pass
   → test-doc/test-case-repository.json
   → test-doc/09-test-case-repository.md
@@ -220,7 +220,7 @@ When using `/browse-test-case` or `/query-browse-test-case`:
 
 ## Playwright Runner Rules
 
-Use `/query-playwright-test-case` for faster deterministic execution.
+Use `/playwright-test-flow` for faster deterministic execution.
 
 - Default to `PLAYWRIGHT_WORKERS=2`; use `PLAYWRIGHT_WORKERS=1` for debugging.
 - Each test case gets a fresh Playwright browser context.
@@ -439,7 +439,7 @@ cd python-orchestrator && python main.py
 **When to use which:**
 | Task | Use |
 |------|-----|
-| Corporate end-to-end KB → Playwright → audit flow | Claude Code (`/query-playwright-test-case`) |
+| Corporate end-to-end KB → Playwright → audit flow | Claude Code (`/playwright-test-flow`) |
 | Agent-browser comparison path | Claude Code (`/query-browse-test-case`) |
 | Browser execution from existing workbook | Claude Code (`/browse-test-case`) |
 | Independent corporate audit | Claude Code (`/audit-test-run`) |

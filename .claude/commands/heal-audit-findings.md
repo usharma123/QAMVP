@@ -121,7 +121,7 @@ Regenerate changed Word docs:
 
 ### Source Chain Alignment
 
-Run the same DB → JSON → Markdown → workbook guard used by `/query-playwright-test-case`. It must print `source_chain_aligned=<N> steps`.
+Run the same DB → JSON → Markdown → workbook guard used by `/playwright-test-flow`. It must print `source_chain_aligned=<N> steps`.
 
 If the guard fails, do not rerun execution or audit. Fix the source-chain drift first.
 
@@ -161,7 +161,7 @@ TC_ID=TC-XXX PLAYWRIGHT_WORKERS=1 /usr/local/bin/npx playwright test --config /U
 
 ### Fresh Playwright Artifact Guard
 
-After Playwright rerun, run the fresh artifact guard from `/query-playwright-test-case`. It must confirm:
+After Playwright rerun, run the fresh artifact guard from `/playwright-test-flow`. It must confirm:
 - `result.json.status` is populated with `PASS`, `FAIL`, or `BLOCKED`
 - `result.json.status` matches `result.json.verdict`
 - `startedAt != finishedAt`

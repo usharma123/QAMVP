@@ -12,10 +12,10 @@ Supported input:
 
 ## Rules
 
-- This command is independent and separate from `/query-playwright-test-case`.
-- `/query-playwright-test-case` may invoke this command as a required stage, but this command's audit judgment must remain independent from the execution command and from any agent that generated or healed tests.
+- This command is independent and separate from `/playwright-test-flow`.
+- `/playwright-test-flow` may invoke this command as a required stage, but this command's audit judgment must remain independent from the execution command and from any agent that generated or healed tests.
 - Do not run Playwright.
-- Do not run `/query-playwright-test-case`.
+- Do not run `/playwright-test-flow`.
 - Do not run `/browse-test-case`.
 - Do not inspect, read, search, summarize, or rely on webapp source code.
 - Forbidden source-code evidence includes `mock-trading-app/src`, Angular internals, route definitions, templates, styles, compiled bundles, source maps, `window.ng`, services, stores, and implementation-derived oracles.
@@ -123,15 +123,15 @@ source /Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/.venv/bin/activate &&
 If the audit exits nonzero:
 - Mark the gate `BLOCKED`.
 - Report the finding counts and artifact paths.
-- Do not proceed to `/query-playwright-test-case`.
-- When invoked by `/query-playwright-test-case`, return control to that command's gate → heal → gate loop.
+- Do not proceed to `/playwright-test-flow`.
+- When invoked by `/playwright-test-flow`, return control to that command's gate → heal → gate loop.
 - When run standalone, ask the user whether to remediate the DB/KB, hard source documents, exported repository artifacts, or runner step mapping.
 - Re-run `/audit-test-case-ingestion` after approved remediation.
 
 If the audit exits zero:
 - Mark the gate `PASS`.
 - Report the finding counts and artifact paths.
-- The next governed command is `/query-playwright-test-case all` or `/query-playwright-test-case <TC-ID>`.
+- The next governed command is `/playwright-test-flow all` or `/playwright-test-flow <TC-ID>`.
 
 ## 5. Final Summary
 
@@ -147,5 +147,5 @@ Steps: <N>
 Findings: {critical: N, high: N, medium: N, low: N}
 Report: test_data/test-results/ingestion_audit_<timestamp>.md
 JSON: test_data/test-results/ingestion_audit_<timestamp>.json
-Next: /query-playwright-test-case all / remediate and rerun this gate
+Next: /playwright-test-flow all / remediate and rerun this gate
 ```

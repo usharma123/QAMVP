@@ -13,6 +13,11 @@ generated_scripts/
 *.css
 *.ts
 *.html
+!ui-qa/**/*.css
+!ui-qa/**/*.ts
+!ui-qa/**/*.tsx
+!ui-qa/**/*.html
+!ingestion/sql/**/*.sql
 docs/
 .gitkeep
 test-scripts/

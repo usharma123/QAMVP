@@ -10,6 +10,7 @@ __pycache__/
 # Frontend build / cache (regenerate with npm/ng)
 **/.angular/
 mock-trading-app/dist/
+ui-qa/dist/
 
 # Generated PDF (build from presentation.md with Marp)
 docs/*.pdf
@@ -22,3 +23,4 @@ ingestion/notebooks/**/output/
 
 # Root-level agent session capture files
 2026-*-command*.txt
+.gstack/

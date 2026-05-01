@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import os
+import re
 import sys
 from pathlib import Path
 
@@ -32,27 +33,51 @@ def repo_root() -> Path:
 
 def infer_kind(path: str) -> str:
     name = Path(path).name.lower()
-    if "readme" in name:
-        return "index"
-    if name.startswith("01-"):
+    if "brd" in name or "business" in name or name.startswith("01-"):
         return "brd"
-    if name.startswith("02-"):
+    if "frs" in name or "functional" in name or name.startswith("02-"):
         return "frs"
-    if name.startswith("03-"):
-        return "tds"
-    if "traceability" in name or name.startswith("06-"):
-        return "rtm"
-    if name.startswith("04-"):
-        return "strategy"
-    if name.startswith("05-"):
-        return "plan"
-    if name.startswith("07-"):
-        return "test_data"
-    if name.startswith("08-"):
-        return "governance"
+    if "hld" in name or "high-level" in name or "high_level" in name or name.startswith("03-"):
+        return "hld"
+    if "lld" in name or "low-level" in name or "low_level" in name or name.startswith("04-"):
+        return "lld"
     if name.startswith("09-") or name == "testcases.xlsx":
         return "test_case_repository"
     return "other"
+
+
+def is_source_kind(kind: str) -> bool:
+    return kind in {"brd", "frs", "hld", "lld"}
+
+
+def purge_non_source_documents(conn: psycopg.Connection) -> None:
+    with conn.cursor() as cur:
+        cur.execute(
+            """
+            DELETE FROM documents
+            WHERE kind IS NULL
+               OR kind NOT IN ('brd', 'frs', 'hld', 'lld')
+            """
+        )
+
+
+def purge_stale_source_documents(conn: psycopg.Connection, active_paths: set[str]) -> None:
+    with conn.cursor() as cur:
+        cur.execute(
+            """
+            UPDATE source_document_versions
+            SET is_active = false,
+                updated_at = now(),
+                metadata = metadata || '{"inactive_reason":"not_in_active_source_pack"}'::jsonb
+            WHERE document_kind IN ('brd', 'frs', 'hld', 'lld')
+              AND document_id IN (
+                SELECT id
+                FROM documents
+                WHERE coalesce(metadata->>'original_path', path) <> ALL(%s)
+              )
+            """,
+            (list(active_paths),),
+        )
 
 
 def logical_key_from_path(path: Path) -> str:
@@ -65,6 +90,74 @@ def file_sha256(p: Path) -> str:
         for block in iter(lambda: f.read(65536), b""):
             h.update(block)
     return h.hexdigest()
+
+
+def infer_version_label(path: Path, raw_chunks: list[RawChunk], digest: str) -> str:
+    text = "\n".join(chunk.content for chunk in raw_chunks[:3])
+    for pattern in (
+        r"\*\*Version:\*\*\s*([A-Za-z0-9._-]+)",
+        r"\bVersion:\s*([A-Za-z0-9._-]+)",
+        r"\bVer:\s*([A-Za-z0-9._-]+)",
+        r"\bv([0-9]+(?:\.[0-9]+)*)\b",
+    ):
+        match = re.search(pattern, text, re.I)
+        if match:
+            return match.group(1).strip()
+    stem_match = re.search(r"(?:^|[-_])v([0-9]+(?:[._-][0-9]+)*)(?:[-_]|$)", path.stem, re.I)
+    if stem_match:
+        return stem_match.group(1).replace("_", ".").replace("-", ".")
+    return f"sha-{digest[:12]}"
+
+
+def insert_document_version(
+    cur: psycopg.Cursor,
+    document_id: int,
+    logical_key: str,
+    kind: str,
+    version_label: str,
+    digest: str,
+    source_format: str,
+    supersedes_document_id: int | None,
+    metadata: dict,
+) -> None:
+    cur.execute(
+        """
+        UPDATE source_document_versions
+        SET is_active = false,
+            updated_at = now()
+        WHERE logical_doc_key = %s
+          AND document_kind = %s
+          AND source_format = %s
+        """,
+        (logical_key, kind, source_format),
+    )
+    cur.execute(
+        """
+        INSERT INTO source_document_versions (
+          document_id, logical_doc_key, document_kind, version_label, content_sha256,
+          source_format, is_active, supersedes_document_id, metadata, updated_at
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, true, %s, %s, now())
+        ON CONFLICT (logical_doc_key, document_kind, source_format, content_sha256)
+        DO UPDATE SET
+          document_id = excluded.document_id,
+          version_label = excluded.version_label,
+          is_active = true,
+          supersedes_document_id = excluded.supersedes_document_id,
+          metadata = excluded.metadata,
+          updated_at = now()
+        """,
+        (
+            document_id,
+            logical_key,
+            kind,
+            version_label,
+            digest,
+            source_format,
+            supersedes_document_id,
+            Json(metadata),
+        ),
+    )
 
 
 def normalize_href(href: str, test_doc_dir: Path) -> tuple[str | None, str | None, str]:
@@ -209,7 +302,7 @@ def ingest_test_case_workbook(
                 )
 
             cid = chunk_ids[record.test_case_id]
-            for hit in extract_entities(chunk_content_by_case[record.test_case_id]):
+            for hit in extract_entities(chunk_content_by_case[record.test_case_id], include_test_cases=True):
                 cur.execute(
                     """
                     INSERT INTO entities (entity_type, canonical_id, document_id, chunk_id, first_seen)
@@ -242,11 +335,16 @@ def ingest_one(
     rel_path = f"{test_doc_dir.name}/{path.name}"
     logical_key = logical_key_from_path(path)
     kind = infer_kind(rel_path)
+    if not is_source_kind(kind):
+        print(f"  skip non-source document for first-phase ingestion: {rel_path} ({kind})")
+        return
     digest = file_sha256(path)
+    storage_path = f"{rel_path}@{digest[:12]}"
     raw_chunks = parse_file(path, source_format, max_chars, overlap)
     if not raw_chunks:
         print(f"  skip empty: {rel_path}")
         return
+    version_label = infer_version_label(path, raw_chunks, digest)
 
     if skip_embed:
         embeddings: list[list[float] | None] = [None] * len(raw_chunks)
@@ -260,9 +358,46 @@ def ingest_one(
 
     with conn.cursor() as cur:
         cur.execute(
-            "DELETE FROM documents WHERE path = %s AND source_format = %s",
-            (rel_path, source_format),
+            """
+            SELECT document_id
+            FROM source_document_versions
+            WHERE logical_doc_key = %s
+              AND document_kind = %s
+              AND source_format = %s
+              AND is_active = true
+              AND content_sha256 <> %s
+            ORDER BY updated_at DESC
+            LIMIT 1
+            """,
+            (logical_key, kind, source_format, digest),
         )
+        row = cur.fetchone()
+        supersedes_document_id = row[0] if row else None
+        cur.execute(
+            """
+            SELECT document_id
+            FROM source_document_versions
+            WHERE logical_doc_key = %s
+              AND document_kind = %s
+              AND source_format = %s
+              AND content_sha256 = %s
+            """,
+            (logical_key, kind, source_format, digest),
+        )
+        row = cur.fetchone()
+        if row:
+            cur.execute("DELETE FROM documents WHERE id = %s", (row[0],))
+        else:
+            cur.execute(
+                """
+                DELETE FROM documents
+                WHERE (path = %s OR path = %s)
+                  AND source_format = %s
+                  AND content_sha256 = %s
+                  AND id NOT IN (SELECT document_id FROM source_document_versions)
+                """,
+                (storage_path, rel_path, source_format, digest),
+            )
         cur.execute(
             """
             INSERT INTO documents (path, source_format, title, kind, logical_doc_key, content_sha256, metadata)
@@ -270,16 +405,40 @@ def ingest_one(
             RETURNING id
             """,
             (
-                rel_path,
+                storage_path,
                 source_format,
                 path.stem,
                 kind,
                 logical_key,
                 digest,
-                Json({"chunk_count": len(raw_chunks)}),
+                Json({
+                    "chunk_count": len(raw_chunks),
+                    "original_path": rel_path,
+                    "storage_path": storage_path,
+                    "document_version": version_label,
+                    "is_active_version": True,
+                    "version_method": "explicit_metadata_or_content_hash",
+                }),
             ),
         )
         doc_id = cur.fetchone()[0]
+        insert_document_version(
+            cur,
+            doc_id,
+            logical_key,
+            kind,
+            version_label,
+            digest,
+            source_format,
+            supersedes_document_id,
+            {
+                "path": rel_path,
+                "storage_path": storage_path,
+                "chunk_count": len(raw_chunks),
+                "is_active_version": True,
+                "version_method": "explicit_metadata_or_content_hash",
+            },
+        )
 
         chunk_ids: list = []
         for ord_, rc in enumerate(raw_chunks):
@@ -308,7 +467,7 @@ def ingest_one(
 
         for ord_, rc in enumerate(raw_chunks):
             cid = chunk_ids[ord_]
-            for hit in extract_entities(rc.content):
+            for hit in extract_entities(rc.content, include_test_cases=False):
                 cur.execute(
                     """
                     INSERT INTO entities (entity_type, canonical_id, document_id, chunk_id, first_seen)
@@ -403,6 +562,10 @@ def main() -> None:
 
     with psycopg.connect(args.database_url) as conn:
         register_vector(conn)
+        if args.skip_test_cases:
+            purge_non_source_documents(conn)
+            active_paths = {f"{test_doc_dir.name}/{path.name}" for path, _fmt in jobs if is_source_kind(infer_kind(f"{test_doc_dir.name}/{path.name}"))}
+            purge_stale_source_documents(conn, active_paths)
         for path, fmt in jobs:
             ingest_one(
                 conn,

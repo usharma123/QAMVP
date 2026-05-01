@@ -78,7 +78,7 @@
       "specs": [
         {
           "title": "TC-001: Maker submits BUY, checker approves, dashboard reflects one approved trade",
-          "ok": true,
+          "ok": false,
           "tags": [],
           "tests": [
             {
@@ -91,18 +91,32 @@
                 {
                   "workerIndex": 0,
                   "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 16025,
-                  "errors": [],
+                  "status": "failed",
+                  "duration": 0,
+                  "error": {
+                    "message": "Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝",
+                    "stack": "Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝"
+                  },
+                  "errors": [
+                    {
+                      "message": "Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝"
+                    }
+                  ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-05-01T15:40:57.944Z",
+                  "startTime": "2026-05-01T19:15:21.173Z",
                   "annotations": [],
-                  "attachments": []
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/playwright-output/kb-test-cases-TC-001-Maker-247b7-reflects-one-approved-trade-chromium/error-context.md"
+                    }
+                  ]
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
           "id": "7f5d1a9265a1ffc97e31-0bc1591f0b6fa67eafd1",
@@ -112,7 +126,7 @@
         },
         {
           "title": "TC-002: Two pending trades are counted in queue and absent from dashboard until approval",
-          "ok": true,
+          "ok": false,
           "tags": [],
           "tests": [
             {
@@ -125,18 +139,32 @@
                 {
                   "workerIndex": 1,
                   "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 9151,
-                  "errors": [],
+                  "status": "failed",
+                  "duration": 1,
+                  "error": {
+                    "message": "Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝",
+                    "stack": "Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝"
+                  },
+                  "errors": [
+                    {
+                      "message": "Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝"
+                    }
+                  ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-05-01T15:40:57.944Z",
+                  "startTime": "2026-05-01T19:15:21.173Z",
                   "annotations": [],
-                  "attachments": []
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/playwright-output/kb-test-cases-TC-002-Two-p-b139b-om-dashboard-until-approval-chromium/error-context.md"
+                    }
+                  ]
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
           "id": "7f5d1a9265a1ffc97e31-1108ef5dd862112b5751",
@@ -146,7 +174,7 @@
         },
         {
           "title": "TC-003: Approved BUY and matching SELL become Matched in Trade List",
-          "ok": true,
+          "ok": false,
           "tags": [],
           "tests": [
             {
@@ -157,20 +185,34 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 1,
+                  "workerIndex": 2,
                   "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 15516,
-                  "errors": [],
+                  "status": "failed",
+                  "duration": 1,
+                  "error": {
+                    "message": "Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝",
+                    "stack": "Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝"
+                  },
+                  "errors": [
+                    {
+                      "message": "Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝"
+                    }
+                  ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-05-01T15:41:07.326Z",
+                  "startTime": "2026-05-01T19:15:21.470Z",
                   "annotations": [],
-                  "attachments": []
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/playwright-output/kb-test-cases-TC-003-Appro-08b91-ecome-Matched-in-Trade-List-chromium/error-context.md"
+                    }
+                  ]
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
           "id": "7f5d1a9265a1ffc97e31-f7abf4a98f50c7150a2f",
@@ -180,7 +222,7 @@
         },
         {
           "title": "TC-004: GTC trade requires expiration date and calculates notional total",
-          "ok": true,
+          "ok": false,
           "tags": [],
           "tests": [
             {
@@ -191,20 +233,34 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 0,
+                  "workerIndex": 3,
                   "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 6557,
-                  "errors": [],
+                  "status": "failed",
+                  "duration": 1,
+                  "error": {
+                    "message": "Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝",
+                    "stack": "Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝"
+                  },
+                  "errors": [
+                    {
+                      "message": "Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝"
+                    }
+                  ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-05-01T15:41:14.199Z",
+                  "startTime": "2026-05-01T19:15:21.470Z",
                   "annotations": [],
-                  "attachments": []
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/playwright-output/kb-test-cases-TC-004-GTC-t-80790-d-calculates-notional-total-chromium/error-context.md"
+                    }
+                  ]
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
           "id": "7f5d1a9265a1ffc97e31-66d143ade6d6d58ab168",
@@ -214,6 +270,590 @@
         },
         {
           "title": "TC-005: Trade list shows unmatched approved trade until compatible opposite trade is approved",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 1,
+                  "error": {
+                    "message": "Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝",
+                    "stack": "Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝"
+                  },
+                  "errors": [
+                    {
+                      "message": "Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-01T19:15:21.788Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/playwright-output/kb-test-cases-TC-005-Trade-d3058--opposite-trade-is-approved-chromium/error-context.md"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "7f5d1a9265a1ffc97e31-805d877d9745728fddd5",
+          "file": "kb-test-cases.spec.ts",
+          "line": 18,
+          "column": 7
+        },
+        {
+          "title": "TC-006: Invalid credentials do not authenticate and show safe error",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1,
+                  "error": {
+                    "message": "Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝",
+                    "stack": "Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝"
+                  },
+                  "errors": [
+                    {
+                      "message": "Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-01T19:15:21.788Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/playwright-output/kb-test-cases-TC-006-Inval-e1083-nticate-and-show-safe-error-chromium/error-context.md"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "7f5d1a9265a1ffc97e31-b8196ba21027c4a7e313",
+          "file": "kb-test-cases.spec.ts",
+          "line": 18,
+          "column": 7
+        },
+        {
+          "title": "TC-007: Unauthenticated deep link is gated and logout clears protected access",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 2,
+                  "error": {
+                    "message": "Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝",
+                    "stack": "Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝"
+                  },
+                  "errors": [
+                    {
+                      "message": "Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-01T19:15:22.132Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/playwright-output/kb-test-cases-TC-007-Unaut-a810f-out-clears-protected-access-chromium/error-context.md"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "7f5d1a9265a1ffc97e31-d513874b39645119fb7c",
+          "file": "kb-test-cases.spec.ts",
+          "line": 18,
+          "column": 7
+        },
+        {
+          "title": "TC-008: Navigation menus expose all trading and admin destinations",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1,
+                  "error": {
+                    "message": "Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝",
+                    "stack": "Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝"
+                  },
+                  "errors": [
+                    {
+                      "message": "Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-01T19:15:22.134Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/playwright-output/kb-test-cases-TC-008-Navig-5ba1b-ding-and-admin-destinations-chromium/error-context.md"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "7f5d1a9265a1ffc97e31-9205ce4cb930bf2cd227",
+          "file": "kb-test-cases.spec.ts",
+          "line": 18,
+          "column": 7
+        },
+        {
+          "title": "TC-009: Trade form prevents submission when required fields are missing",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 0,
+                  "error": {
+                    "message": "Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝",
+                    "stack": "Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝"
+                  },
+                  "errors": [
+                    {
+                      "message": "Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-01T19:15:22.467Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/playwright-output/kb-test-cases-TC-009-Trade-2f197-required-fields-are-missing-chromium/error-context.md"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "7f5d1a9265a1ffc97e31-2a48a4f4f7ea51ad207a",
+          "file": "kb-test-cases.spec.ts",
+          "line": 18,
+          "column": 7
+        },
+        {
+          "title": "TC-010: Dashboard columns and loading state render for approved trades",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 9,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 1,
+                  "error": {
+                    "message": "Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝",
+                    "stack": "Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝"
+                  },
+                  "errors": [
+                    {
+                      "message": "Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-01T19:15:22.467Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/playwright-output/kb-test-cases-TC-010-Dashb-d14e7--render-for-approved-trades-chromium/error-context.md"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "7f5d1a9265a1ffc97e31-22554c6ed1bdd49a0fa3",
+          "file": "kb-test-cases.spec.ts",
+          "line": 18,
+          "column": 7
+        },
+        {
+          "title": "TC-011: Trade List columns and summary bar reflect approved inventory",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 11,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1,
+                  "error": {
+                    "message": "Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝",
+                    "stack": "Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝"
+                  },
+                  "errors": [
+                    {
+                      "message": "Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-01T19:15:22.797Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/playwright-output/kb-test-cases-TC-011-Trade-d3097--reflect-approved-inventory-chromium/error-context.md"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "7f5d1a9265a1ffc97e31-1bd6470b13cd31491a11",
+          "file": "kb-test-cases.spec.ts",
+          "line": 18,
+          "column": 7
+        },
+        {
+          "title": "TC-012: Checker approval queue displays empty state and pending count zero",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 10,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 1,
+                  "error": {
+                    "message": "Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝",
+                    "stack": "Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝"
+                  },
+                  "errors": [
+                    {
+                      "message": "Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-01T19:15:22.797Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/playwright-output/kb-test-cases-TC-012-Check-a7797-tate-and-pending-count-zero-chromium/error-context.md"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "7f5d1a9265a1ffc97e31-2b8a88d5feb4da633d81",
+          "file": "kb-test-cases.spec.ts",
+          "line": 18,
+          "column": 7
+        },
+        {
+          "title": "TC-013: Role label distinguishes maker and checker sessions",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1,
+                  "error": {
+                    "message": "Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝",
+                    "stack": "Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝"
+                  },
+                  "errors": [
+                    {
+                      "message": "Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-01T19:15:23.112Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/playwright-output/kb-test-cases-TC-013-Role--2af67--maker-and-checker-sessions-chromium/error-context.md"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "7f5d1a9265a1ffc97e31-c57208cd07e8c74a6978",
+          "file": "kb-test-cases.spec.ts",
+          "line": 18,
+          "column": 7
+        },
+        {
+          "title": "TC-014: Ticker selection drives price and total recalculation",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 1,
+                  "error": {
+                    "message": "Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝",
+                    "stack": "Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝"
+                  },
+                  "errors": [
+                    {
+                      "message": "Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-01T19:15:23.112Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/playwright-output/kb-test-cases-TC-014-Ticke-42ce3-ice-and-total-recalculation-chromium/error-context.md"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "7f5d1a9265a1ffc97e31-a481bfe526c5e4ff71de",
+          "file": "kb-test-cases.spec.ts",
+          "line": 18,
+          "column": 7
+        },
+        {
+          "title": "TC-015: Admin Users placeholder is reachable from authenticated shell",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 15,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1,
+                  "error": {
+                    "message": "Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝",
+                    "stack": "Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝"
+                  },
+                  "errors": [
+                    {
+                      "message": "Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-01T19:15:23.419Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/playwright-output/kb-test-cases-TC-015-Admin-961b2-le-from-authenticated-shell-chromium/error-context.md"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "7f5d1a9265a1ffc97e31-f8cf89530349f7d27ee1",
+          "file": "kb-test-cases.spec.ts",
+          "line": 18,
+          "column": 7
+        },
+        {
+          "title": "TC-016: Local operability and automation hooks are verifiable from the browser",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 14,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 1,
+                  "error": {
+                    "message": "Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝",
+                    "stack": "Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝"
+                  },
+                  "errors": [
+                    {
+                      "message": "Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-01T19:15:23.418Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/playwright-output/kb-test-cases-TC-016-Local-19ed2-verifiable-from-the-browser-chromium/error-context.md"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "7f5d1a9265a1ffc97e31-abcfbc52fd4a94864da6",
+          "file": "kb-test-cases.spec.ts",
+          "line": 18,
+          "column": 7
+        }
+      ]
+    },
+    {
+      "title": "mapping.spec.ts",
+      "file": "mapping.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "all current KB test-case steps have deterministic Playwright mappings",
           "ok": true,
           "tags": [],
           "tests": [
@@ -225,15 +865,15 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
+                  "workerIndex": 16,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 8939,
+                  "duration": 3,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-05-01T15:41:20.761Z",
+                  "startTime": "2026-05-01T19:15:23.719Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -241,21 +881,21 @@
               "status": "expected"
             }
           ],
-          "id": "7f5d1a9265a1ffc97e31-805d877d9745728fddd5",
-          "file": "kb-test-cases.spec.ts",
-          "line": 18,
-          "column": 7
+          "id": "480ef9945d188a559222-b6a19d96e7a9f098fccb",
+          "file": "mapping.spec.ts",
+          "line": 5,
+          "column": 5
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-05-01T15:40:47.653Z",
-    "duration": 42095.231,
-    "expected": 5,
+    "startTime": "2026-05-01T19:15:13.927Z",
+    "duration": 9820.637,
+    "expected": 1,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 16,
     "flaky": 0
   }
 }

@@ -1,0 +1,39 @@
+{
+  "name": "ui-qa",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k \"bun run dev:api\" \"bun run dev:web\"",
+    "dev:api": "bun --watch src/server/index.ts",
+    "dev:web": "vite --host 127.0.0.1 --port 5175",
+    "build": "bun run typecheck && vite build",
+    "start": "bun src/server/index.ts",
+    "db:up": "docker compose -f ../ingestion/docker-compose.yml up -d postgres",
+    "db:ready": "docker compose -f ../ingestion/docker-compose.yml exec -T postgres pg_isready -U ingestion -d ingestion",
+    "db:logs": "docker compose -f ../ingestion/docker-compose.yml logs --tail=120 postgres",
+    "db:migrate": "cd .. && for migration in ingestion/sql/*.sql; do echo \"Applying $migration\"; docker compose -f ingestion/docker-compose.yml exec -T postgres psql -v ON_ERROR_STOP=1 -U ingestion -d ingestion < \"$migration\"; done",
+    "test": "bun test",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@cursor/sdk": "^1.0.11",
+    "@vitejs/plugin-react": "^6.0.1",
+    "concurrently": "^9.2.1",
+    "highlight.js": "^11.11.1",
+    "lucide-react": "^1.14.0",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "react-markdown": "^10.1.0",
+    "rehype-highlight": "^7.0.2",
+    "remark-gfm": "^4.0.1",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.10",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.3.13",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3"
+  }
+}

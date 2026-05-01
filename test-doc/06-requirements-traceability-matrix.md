@@ -107,7 +107,51 @@ This RTM links **business requirements (BR-)** → **functional requirements (RE
 
 Repo examples under `test_data/generated-scripts/` and `test_data/test_scripts/` may be cited in tracker **Automation_Path** column; this RTM does not require one-to-one filenames for every TC.
 
-The detailed executable repository lives in `test_data/TestCases.xlsx` and [09-test-case-repository.md](09-test-case-repository.md). It currently contains TC-001 through TC-015 with step-level RequirementID, StepDescription, ExpectedOutput, and TestData fields. The ingestion DB loads those rows into `test_cases` and `test_case_steps` for exact inventory counts.
+The detailed executable repository lives in `test_data/TestCases.xlsx` and [09-test-case-repository.md](09-test-case-repository.md). It currently contains **TC-001 through TC-016** with step-level RequirementID, StepDescription, ExpectedOutput, and TestData fields. The ingestion DB loads those rows into `test_cases` and `test_case_steps` for exact inventory counts.
+
+### Legacy TC-ID to current KB-ID cross-reference
+
+The master traceability table above (§3) uses legacy domain-scoped TC-ID labels (e.g. `TC-AUTH-001`, `TC-NFR-001`). The ingestion KB and Playwright runner use a sequential numeric scheme (`TC-001` through `TC-016`). The mapping between the two conventions is:
+
+| Legacy TC-ID (§3 RTM) | Current KB ID | REQ covered | Suite |
+|---|---|---|---|
+| TC-AUTH-001 | TC-006 | REQ-FR-001, REQ-FR-004, REQ-FR-005 | S-3 Negative |
+| TC-AUTH-002 | TC-007 | REQ-FR-002, REQ-FR-005, REQ-FR-014, REQ-SEC-002 | S-3 Negative |
+| TC-AUTH-003 | TC-013 | REQ-FR-002, REQ-FR-003, REQ-FR-011, REQ-FR-014, REQ-SEC-001 | S-4 Detailed Regression |
+| TC-AUTH-004 | TC-006 | REQ-FR-004 | S-3 Negative |
+| TC-AUTH-005 | TC-007 | REQ-FR-005 | S-3 Negative |
+| TC-NAV-001 | TC-008 | REQ-FR-010, REQ-FR-012, REQ-FR-013, REQ-FR-014 | S-2 Navigation |
+| TC-NAV-002 | TC-013 | REQ-FR-011, REQ-SEC-001 | S-4 Detailed Regression |
+| TC-NAV-003 | TC-008 | REQ-FR-012 | S-2 Navigation |
+| TC-NAV-004 | TC-015 | REQ-FR-013, REQ-FR-060 | S-2 Navigation |
+| TC-NAV-005 | TC-007 | REQ-FR-014 | S-3 Negative |
+| TC-DASH-001 | TC-002 | REQ-FR-020, REQ-FR-022 | S-4 Detailed Regression |
+| TC-DASH-002 | TC-010 | REQ-FR-021 | S-4 Detailed Regression |
+| TC-DASH-003 | TC-001, TC-010 | REQ-FR-022 | S-1 Smoke, S-4 Regression |
+| TC-DASH-004 | TC-010 | REQ-FR-023 | S-4 Detailed Regression |
+| TC-TRADE-001 | TC-001, TC-004, TC-014 | REQ-FR-030 | S-1 Smoke, S-4 Regression |
+| TC-TRADE-002 | TC-001, TC-014 | REQ-FR-031 | S-1 Smoke, S-4 Regression |
+| TC-TRADE-003 | TC-004 | REQ-FR-032 | S-4 Detailed Regression |
+| TC-TRADE-004 | TC-001–TC-005 | REQ-FR-033 | S-1 Smoke, S-4 Regression |
+| TC-TRADE-005 | TC-001 | REQ-FR-034 | S-1 Smoke |
+| TC-TRADE-006 | TC-009 | REQ-FR-035 | S-4 Detailed Regression |
+| TC-QUEUE-001 | TC-001, TC-002, TC-004 | REQ-FR-040 | S-1 Smoke, S-4 Regression |
+| TC-QUEUE-002 | TC-002, TC-012 | REQ-FR-041 | S-4 Detailed Regression |
+| TC-QUEUE-003 | TC-002, TC-012 | REQ-FR-042 | S-4 Detailed Regression |
+| TC-QUEUE-004 | TC-001, TC-003, TC-005 | REQ-FR-043 | S-1 Smoke, S-4 Regression |
+| TC-QUEUE-005 | TC-001 | REQ-FR-044 | S-1 Smoke |
+| TC-QUEUE-006 | TC-001 | REQ-FR-045 | S-1 Smoke |
+| TC-LIST-001 | TC-003, TC-005, TC-011 | REQ-FR-050 | S-4 Detailed Regression |
+| TC-LIST-002 | TC-003, TC-005, TC-011 | REQ-FR-051 | S-4 Detailed Regression |
+| TC-ADM-001 | TC-015 | REQ-FR-060 | S-2 Navigation |
+| TC-NFR-001 | TC-016 | REQ-NFR-001 | S-5 NFR Evidence |
+| TC-NFR-002 | TC-016 | REQ-NFR-002 | S-5 NFR Evidence |
+| TC-NFR-003 | — (Planned) | REQ-NFR-003 | — |
+| TC-NFR-004 | TC-012 | REQ-NFR-004 | S-4 Detailed Regression |
+| TC-NFR-005 | — (Planned) | REQ-NFR-005 | — |
+| TC-SEC-001 | TC-013 | REQ-SEC-001 | S-4 Detailed Regression |
+| TC-SEC-002 | TC-007 | REQ-SEC-002 | S-3 Negative |
+| TC-SEC-003 | — (Planned) | REQ-SEC-003 | — |
 
 ---
 

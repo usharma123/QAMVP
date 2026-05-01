@@ -1,0 +1,89 @@
+{
+  "runId": "20260501_101627",
+  "testCaseId": "TC-009",
+  "title": "Trade form prevents submission when required fields are missing",
+  "status": "PASS",
+  "verdict": "PASS",
+  "baseURL": "http://localhost:4200",
+  "workerIndex": 0,
+  "project": "chromium",
+  "startedAt": "2026-05-01T14:16:59.681Z",
+  "finishedAt": "2026-05-01T14:17:04.294Z",
+  "durationMs": 4613,
+  "artifactDir": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-009/playwright_20260501_101627",
+  "sourceRepository": "test-doc/test-case-repository.json",
+  "sourceWorkbook": "test_data/TestCases.xlsx",
+  "blackBoxPolicy": {
+    "webappSourceInspected": false,
+    "angularInternalsUsed": false,
+    "oracle": "hard docs + KB/DB artifacts + workbook + observable browser behavior"
+  },
+  "artifacts": {
+    "resultJson": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-009/playwright_20260501_101627/result.json",
+    "stepLog": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-009/playwright_20260501_101627/step-log.md",
+    "finalPageText": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-009/playwright_20260501_101627/final-page-text.txt",
+    "trace": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-009/playwright_20260501_101627/trace.zip"
+  },
+  "steps": [
+    {
+      "stepNumber": 1,
+      "requirementId": "REQ-FR-002",
+      "description": "Login as maker.",
+      "expectedOutput": "Maker dashboard loads.",
+      "testData": "username=admin,password=admin",
+      "status": "PASS",
+      "actual": "Logged in as admin.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-009/playwright_20260501_101627/step_01_pass.png"
+    },
+    {
+      "stepNumber": 2,
+      "requirementId": "REQ-FR-012",
+      "description": "Navigate to New Trade.",
+      "expectedOutput": "New Trade form is visible.",
+      "testData": "",
+      "status": "PASS",
+      "actual": "Navigated with nav-new-trade.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-009/playwright_20260501_101627/step_02_pass.png"
+    },
+    {
+      "stepNumber": 3,
+      "requirementId": "REQ-FR-035",
+      "description": "Leave Market Sector and Quantity blank.",
+      "expectedOutput": "Submit Order remains disabled or submission is blocked.",
+      "testData": "missingFields=marketSector,quantity",
+      "status": "PASS",
+      "actual": "Submit is disabled.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-009/playwright_20260501_101627/step_03_pass.png"
+    },
+    {
+      "stepNumber": 4,
+      "requirementId": "REQ-FR-035",
+      "description": "Select Technology and leave Ticker blank.",
+      "expectedOutput": "Submit Order remains disabled or submission is blocked.",
+      "testData": "sector=Technology,missingFields=ticker,quantity",
+      "status": "PASS",
+      "actual": "Trade form fields populated from test data.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-009/playwright_20260501_101627/step_04_pass.png"
+    },
+    {
+      "stepNumber": 5,
+      "requirementId": "REQ-FR-035",
+      "description": "Enter quantity 0.",
+      "expectedOutput": "Quantity validation prevents valid submission.",
+      "testData": "quantity=0",
+      "status": "PASS",
+      "actual": "Submit is disabled.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-009/playwright_20260501_101627/step_05_pass.png"
+    },
+    {
+      "stepNumber": 6,
+      "requirementId": "REQ-FR-033",
+      "description": "Verify no queue row was created.",
+      "expectedOutput": "Approval Queue still shows Pending: 0.",
+      "testData": "expectedPending=0",
+      "status": "PASS",
+      "actual": "Approval Queue state verified.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-009/playwright_20260501_101627/step_06_pass.png"
+    }
+  ]
+}

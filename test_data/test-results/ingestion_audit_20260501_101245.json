@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "case_count": 16,
+    "step_count": 102,
+    "hard_doc_requirement_count": 38,
+    "covered_requirement_count": 34,
+    "uncovered_requirements": [
+      "REQ-FR-000",
+      "REQ-NFR-003",
+      "REQ-NFR-005",
+      "REQ-SEC-003"
+    ],
+    "finding_counts": {
+      "critical": 0,
+      "high": 1,
+      "medium": 0,
+      "low": 0
+    }
+  },
+  "findings": [
+    {
+      "severity": "high",
+      "category": "KB Integrity",
+      "subject": "TC-016",
+      "evidence": "No test-case repository chunk exists for this TC in KB chunks.",
+      "remediation": "Re-run ingestion so each structured TC is represented in the KB."
+    }
+  ]
+}

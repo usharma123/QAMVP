@@ -1,0 +1,8 @@
+Trading
+Admin
+admin (maker)
+Logout
+Approval Queue
+Pending: 1
+TX-ID	SIDE	TICKER	QTY	PRICE	TOTAL	ACTION
+TX-1001	SELL	MSFT	20	415.20	8,304.00	Approve

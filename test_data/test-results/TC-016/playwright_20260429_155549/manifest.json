@@ -1,0 +1,27 @@
+{
+  "runId": "20260429_155549",
+  "testCaseId": "TC-016",
+  "title": "Local operability and automation hooks are verifiable from the browser",
+  "status": "PASS",
+  "verdict": "PASS",
+  "baseURL": "http://localhost:4200",
+  "workerIndex": 1,
+  "project": "chromium",
+  "startedAt": "2026-04-29T19:56:37.779Z",
+  "finishedAt": "2026-04-29T19:56:38.002Z",
+  "durationMs": 223,
+  "artifactDir": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-016/playwright_20260429_155549",
+  "sourceRepository": "test-doc/test-case-repository.json",
+  "sourceWorkbook": "test_data/TestCases.xlsx",
+  "blackBoxPolicy": {
+    "webappSourceInspected": false,
+    "angularInternalsUsed": false,
+    "oracle": "hard docs + KB/DB artifacts + workbook + observable browser behavior"
+  },
+  "artifacts": {
+    "resultJson": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-016/playwright_20260429_155549/result.json",
+    "stepLog": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-016/playwright_20260429_155549/step-log.md",
+    "finalPageText": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-016/playwright_20260429_155549/final-page-text.txt",
+    "trace": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-016/playwright_20260429_155549/trace.zip"
+  }
+}

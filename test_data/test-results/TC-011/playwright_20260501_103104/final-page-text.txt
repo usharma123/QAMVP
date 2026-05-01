@@ -1,0 +1,11 @@
+Trading
+Admin
+admin (maker)
+Logout
+Trade List
+Total: 0
+Matched: 0
+Pending: 0
+TX-ID	SIDE	TICKER	QTY	PRICE	TOTAL	STATUS	MATCHED WITH
+
+No trades yet.

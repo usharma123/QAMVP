@@ -1,0 +1,79 @@
+{
+  "runId": "20260501_103104",
+  "testCaseId": "TC-011",
+  "title": "Trade List columns and summary bar reflect approved inventory",
+  "status": "PASS",
+  "verdict": "PASS",
+  "baseURL": "http://localhost:4200",
+  "workerIndex": 0,
+  "project": "chromium",
+  "startedAt": "2026-05-01T14:31:05.149Z",
+  "finishedAt": "2026-05-01T14:31:09.969Z",
+  "durationMs": 4820,
+  "artifactDir": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-011/playwright_20260501_103104",
+  "sourceRepository": "test-doc/test-case-repository.json",
+  "sourceWorkbook": "test_data/TestCases.xlsx",
+  "blackBoxPolicy": {
+    "webappSourceInspected": false,
+    "angularInternalsUsed": false,
+    "oracle": "hard docs + KB/DB artifacts + workbook + observable browser behavior"
+  },
+  "artifacts": {
+    "resultJson": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-011/playwright_20260501_103104/result.json",
+    "stepLog": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-011/playwright_20260501_103104/step-log.md",
+    "finalPageText": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-011/playwright_20260501_103104/final-page-text.txt",
+    "trace": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-011/playwright_20260501_103104/trace.zip"
+  },
+  "steps": [
+    {
+      "stepNumber": 1,
+      "requirementId": "REQ-FR-002",
+      "description": "Login as maker.",
+      "expectedOutput": "Authenticated shell is visible.",
+      "testData": "username=admin,password=admin",
+      "status": "PASS",
+      "actual": "Logged in as admin.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-011/playwright_20260501_103104/step_01_pass.png"
+    },
+    {
+      "stepNumber": 2,
+      "requirementId": "REQ-FR-050",
+      "description": "Navigate to Trade List.",
+      "expectedOutput": "Trade List page loads.",
+      "testData": "target=nav-trade-list",
+      "status": "PASS",
+      "actual": "Navigated with nav-trade-list.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-011/playwright_20260501_103104/step_02_pass.png"
+    },
+    {
+      "stepNumber": 3,
+      "requirementId": "REQ-FR-050",
+      "description": "Inspect Trade List headers.",
+      "expectedOutput": "TX-ID, Side, Ticker, Qty, Price, Total, Status, Matched With headers are visible.",
+      "testData": "expectedColumns=TX-ID|Side|Ticker|Qty|Price|Total|Status|Matched With",
+      "status": "PASS",
+      "actual": "Trade List state verified.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-011/playwright_20260501_103104/step_03_pass.png"
+    },
+    {
+      "stepNumber": 4,
+      "requirementId": "REQ-FR-051",
+      "description": "Inspect summary bar.",
+      "expectedOutput": "Total, Matched, and Pending badges are visible.",
+      "testData": "expectedLabels=Total|Matched|Pending",
+      "status": "PASS",
+      "actual": "Trade List state verified.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-011/playwright_20260501_103104/step_04_pass.png"
+    },
+    {
+      "stepNumber": 5,
+      "requirementId": "REQ-FR-050",
+      "description": "Verify Trade List table structure — column headers for Side, Ticker, Qty, Price, Total, Status, and Matched With are present in the table definition (empty-state is acceptable for this isolation run; per-row content is verified by TC-003 steps 12-14).",
+      "expectedOutput": "Trade List column headers are visible in the table structure; zero data rows is acceptable for this structural check.",
+      "testData": "note=row-content-delegated-to-TC-003",
+      "status": "PASS",
+      "actual": "Trade List state verified.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-011/playwright_20260501_103104/step_05_pass.png"
+    }
+  ]
+}

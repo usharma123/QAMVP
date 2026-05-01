@@ -1,0 +1,1141 @@
+{
+  "id": "uiqa_monbf4wb_5wuxz4",
+  "scope": "all",
+  "dryRun": true,
+  "autoApprove": true,
+  "status": "approved",
+  "currentPhase": "complete",
+  "createdAt": "2026-05-01T19:38:10.187Z",
+  "updatedAt": "2026-05-01T19:38:12.616Z",
+  "uploads": [
+    {
+      "id": "src_monbf54o_tjewce",
+      "runId": "uiqa_monbf4wb_5wuxz4",
+      "originalName": "01-business-requirements-document.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_monbf4wb_5wuxz4/75ba74032f55_01-business-requirements-document.docx",
+      "documentType": "BRD",
+      "sha256": "75ba74032f5583526c3ce4035eb7f21f024045dda836b8ecafd3bad94c8ee7e9",
+      "size": 35621,
+      "status": "accepted",
+      "createdAt": "2026-05-01T19:38:10.488Z"
+    },
+    {
+      "id": "src_monbf54p_lj5hsm",
+      "runId": "uiqa_monbf4wb_5wuxz4",
+      "originalName": "02-functional-requirements-specification.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_monbf4wb_5wuxz4/1bf29955d09f_02-functional-requirements-specification.docx",
+      "documentType": "FRS",
+      "sha256": "1bf29955d09ffb4597c4f2391daef5cdd474d9a2b7153ef5efa1715b8336733d",
+      "size": 36715,
+      "status": "accepted",
+      "createdAt": "2026-05-01T19:38:10.489Z"
+    },
+    {
+      "id": "src_monbf54p_gz1uc3",
+      "runId": "uiqa_monbf4wb_5wuxz4",
+      "originalName": "03-test-design-specification.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_monbf4wb_5wuxz4/bc4a297e88b9_03-test-design-specification.docx",
+      "documentType": "SOURCE_DOC",
+      "sha256": "bc4a297e88b98dc0645d0a1bc1bc8fdd63760485d97f63446e34bc078f79de42",
+      "size": 16590,
+      "status": "accepted",
+      "createdAt": "2026-05-01T19:38:10.490Z"
+    },
+    {
+      "id": "src_monbf54q_47n4mr",
+      "runId": "uiqa_monbf4wb_5wuxz4",
+      "originalName": "04-test-strategy.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_monbf4wb_5wuxz4/bc452080a746_04-test-strategy.docx",
+      "documentType": "TEST_STRATEGY",
+      "sha256": "bc452080a74613289d89e8a9866cb9ec99671f2e9f270c301793c0de976e8d2d",
+      "size": 14190,
+      "status": "accepted",
+      "createdAt": "2026-05-01T19:38:10.490Z"
+    },
+    {
+      "id": "src_monbf54q_4xqkjm",
+      "runId": "uiqa_monbf4wb_5wuxz4",
+      "originalName": "05-test-plan.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_monbf4wb_5wuxz4/64cc7c5d20b4_05-test-plan.docx",
+      "documentType": "TEST_PLAN",
+      "sha256": "64cc7c5d20b4556484544b1bc46bd60c2cb6e94879c28b05db0677af83ade68a",
+      "size": 13567,
+      "status": "accepted",
+      "createdAt": "2026-05-01T19:38:10.490Z"
+    },
+    {
+      "id": "src_monbf54r_s6qt72",
+      "runId": "uiqa_monbf4wb_5wuxz4",
+      "originalName": "06-requirements-traceability-matrix.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_monbf4wb_5wuxz4/bae75844e4bc_06-requirements-traceability-matrix.docx",
+      "documentType": "RTM",
+      "sha256": "bae75844e4bce6f5f4e083a5907b7978915ea77336a42177ea982b304a1b994c",
+      "size": 16106,
+      "status": "accepted",
+      "createdAt": "2026-05-01T19:38:10.491Z"
+    },
+    {
+      "id": "src_monbf54r_1u3ojp",
+      "runId": "uiqa_monbf4wb_5wuxz4",
+      "originalName": "07-test-data-environment-specification.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_monbf4wb_5wuxz4/dee1179870fd_07-test-data-environment-specification.docx",
+      "documentType": "TEST_DATA",
+      "sha256": "dee1179870fd6bf2b315e1e240bf6f90ef4442aa6483f397380f2e3cb814a989",
+      "size": 13536,
+      "status": "accepted",
+      "createdAt": "2026-05-01T19:38:10.491Z"
+    },
+    {
+      "id": "src_monbf54s_si759k",
+      "runId": "uiqa_monbf4wb_5wuxz4",
+      "originalName": "08-quality-risk-defect-governance.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_monbf4wb_5wuxz4/c4d411862cc6_08-quality-risk-defect-governance.docx",
+      "documentType": "SOURCE_DOC",
+      "sha256": "c4d411862cc6615ebda78530cacdebd2378ccf25df873fd04545a7c49b15adc4",
+      "size": 13091,
+      "status": "accepted",
+      "createdAt": "2026-05-01T19:38:10.492Z"
+    },
+    {
+      "id": "src_monbf54s_gow8cw",
+      "runId": "uiqa_monbf4wb_5wuxz4",
+      "originalName": "09-test-case-repository.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_monbf4wb_5wuxz4/2b17d95d7da3_09-test-case-repository.docx",
+      "documentType": "TEST_REPOSITORY",
+      "sha256": "2b17d95d7da3e424e205e904671f8b3b5485d4a1fae97a1bbb5f9114bf0d6431",
+      "size": 19269,
+      "status": "accepted",
+      "createdAt": "2026-05-01T19:38:10.492Z"
+    }
+  ],
+  "events": [
+    {
+      "id": "event_monbf54p_955jul",
+      "runId": "uiqa_monbf4wb_5wuxz4",
+      "phase": "upload_sources",
+      "title": "Uploaded 01-business-requirements-document.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:38:10.489Z",
+      "finishedAt": "2026-05-01T19:38:10.489Z",
+      "summary": "Classified as BRD.",
+      "technical": {
+        "rawLabel": "upload:01-business-requirements-document.docx",
+        "payload": {
+          "id": "src_monbf54o_tjewce",
+          "runId": "uiqa_monbf4wb_5wuxz4",
+          "originalName": "01-business-requirements-document.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_monbf4wb_5wuxz4/75ba74032f55_01-business-requirements-document.docx",
+          "documentType": "BRD",
+          "sha256": "75ba74032f5583526c3ce4035eb7f21f024045dda836b8ecafd3bad94c8ee7e9",
+          "size": 35621,
+          "status": "accepted",
+          "createdAt": "2026-05-01T19:38:10.488Z"
+        }
+      }
+    },
+    {
+      "id": "event_monbf54p_socx3l",
+      "runId": "uiqa_monbf4wb_5wuxz4",
+      "phase": "upload_sources",
+      "title": "Uploaded 02-functional-requirements-specification.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:38:10.489Z",
+      "finishedAt": "2026-05-01T19:38:10.489Z",
+      "summary": "Classified as FRS.",
+      "technical": {
+        "rawLabel": "upload:02-functional-requirements-specification.docx",
+        "payload": {
+          "id": "src_monbf54p_lj5hsm",
+          "runId": "uiqa_monbf4wb_5wuxz4",
+          "originalName": "02-functional-requirements-specification.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_monbf4wb_5wuxz4/1bf29955d09f_02-functional-requirements-specification.docx",
+          "documentType": "FRS",
+          "sha256": "1bf29955d09ffb4597c4f2391daef5cdd474d9a2b7153ef5efa1715b8336733d",
+          "size": 36715,
+          "status": "accepted",
+          "createdAt": "2026-05-01T19:38:10.489Z"
+        }
+      }
+    },
+    {
+      "id": "event_monbf54q_osuwqq",
+      "runId": "uiqa_monbf4wb_5wuxz4",
+      "phase": "upload_sources",
+      "title": "Uploaded 03-test-design-specification.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:38:10.490Z",
+      "finishedAt": "2026-05-01T19:38:10.490Z",
+      "summary": "Classified as SOURCE_DOC.",
+      "technical": {
+        "rawLabel": "upload:03-test-design-specification.docx",
+        "payload": {
+          "id": "src_monbf54p_gz1uc3",
+          "runId": "uiqa_monbf4wb_5wuxz4",
+          "originalName": "03-test-design-specification.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_monbf4wb_5wuxz4/bc4a297e88b9_03-test-design-specification.docx",
+          "documentType": "SOURCE_DOC",
+          "sha256": "bc4a297e88b98dc0645d0a1bc1bc8fdd63760485d97f63446e34bc078f79de42",
+          "size": 16590,
+          "status": "accepted",
+          "createdAt": "2026-05-01T19:38:10.490Z"
+        }
+      }
+    },
+    {
+      "id": "event_monbf54q_smwrx1",
+      "runId": "uiqa_monbf4wb_5wuxz4",
+      "phase": "upload_sources",
+      "title": "Uploaded 04-test-strategy.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:38:10.490Z",
+      "finishedAt": "2026-05-01T19:38:10.490Z",
+      "summary": "Classified as TEST_STRATEGY.",
+      "technical": {
+        "rawLabel": "upload:04-test-strategy.docx",
+        "payload": {
+          "id": "src_monbf54q_47n4mr",
+          "runId": "uiqa_monbf4wb_5wuxz4",
+          "originalName": "04-test-strategy.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_monbf4wb_5wuxz4/bc452080a746_04-test-strategy.docx",
+          "documentType": "TEST_STRATEGY",
+          "sha256": "bc452080a74613289d89e8a9866cb9ec99671f2e9f270c301793c0de976e8d2d",
+          "size": 14190,
+          "status": "accepted",
+          "createdAt": "2026-05-01T19:38:10.490Z"
+        }
+      }
+    },
+    {
+      "id": "event_monbf54r_uf3gfe",
+      "runId": "uiqa_monbf4wb_5wuxz4",
+      "phase": "upload_sources",
+      "title": "Uploaded 05-test-plan.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:38:10.491Z",
+      "finishedAt": "2026-05-01T19:38:10.491Z",
+      "summary": "Classified as TEST_PLAN.",
+      "technical": {
+        "rawLabel": "upload:05-test-plan.docx",
+        "payload": {
+          "id": "src_monbf54q_4xqkjm",
+          "runId": "uiqa_monbf4wb_5wuxz4",
+          "originalName": "05-test-plan.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_monbf4wb_5wuxz4/64cc7c5d20b4_05-test-plan.docx",
+          "documentType": "TEST_PLAN",
+          "sha256": "64cc7c5d20b4556484544b1bc46bd60c2cb6e94879c28b05db0677af83ade68a",
+          "size": 13567,
+          "status": "accepted",
+          "createdAt": "2026-05-01T19:38:10.490Z"
+        }
+      }
+    },
+    {
+      "id": "event_monbf54r_z9evrd",
+      "runId": "uiqa_monbf4wb_5wuxz4",
+      "phase": "upload_sources",
+      "title": "Uploaded 06-requirements-traceability-matrix.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:38:10.491Z",
+      "finishedAt": "2026-05-01T19:38:10.491Z",
+      "summary": "Classified as RTM.",
+      "technical": {
+        "rawLabel": "upload:06-requirements-traceability-matrix.docx",
+        "payload": {
+          "id": "src_monbf54r_s6qt72",
+          "runId": "uiqa_monbf4wb_5wuxz4",
+          "originalName": "06-requirements-traceability-matrix.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_monbf4wb_5wuxz4/bae75844e4bc_06-requirements-traceability-matrix.docx",
+          "documentType": "RTM",
+          "sha256": "bae75844e4bce6f5f4e083a5907b7978915ea77336a42177ea982b304a1b994c",
+          "size": 16106,
+          "status": "accepted",
+          "createdAt": "2026-05-01T19:38:10.491Z"
+        }
+      }
+    },
+    {
+      "id": "event_monbf54s_ioss6z",
+      "runId": "uiqa_monbf4wb_5wuxz4",
+      "phase": "upload_sources",
+      "title": "Uploaded 07-test-data-environment-specification.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:38:10.492Z",
+      "finishedAt": "2026-05-01T19:38:10.492Z",
+      "summary": "Classified as TEST_DATA.",
+      "technical": {
+        "rawLabel": "upload:07-test-data-environment-specification.docx",
+        "payload": {
+          "id": "src_monbf54r_1u3ojp",
+          "runId": "uiqa_monbf4wb_5wuxz4",
+          "originalName": "07-test-data-environment-specification.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_monbf4wb_5wuxz4/dee1179870fd_07-test-data-environment-specification.docx",
+          "documentType": "TEST_DATA",
+          "sha256": "dee1179870fd6bf2b315e1e240bf6f90ef4442aa6483f397380f2e3cb814a989",
+          "size": 13536,
+          "status": "accepted",
+          "createdAt": "2026-05-01T19:38:10.491Z"
+        }
+      }
+    },
+    {
+      "id": "event_monbf54s_1bza4q",
+      "runId": "uiqa_monbf4wb_5wuxz4",
+      "phase": "upload_sources",
+      "title": "Uploaded 08-quality-risk-defect-governance.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:38:10.492Z",
+      "finishedAt": "2026-05-01T19:38:10.492Z",
+      "summary": "Classified as SOURCE_DOC.",
+      "technical": {
+        "rawLabel": "upload:08-quality-risk-defect-governance.docx",
+        "payload": {
+          "id": "src_monbf54s_si759k",
+          "runId": "uiqa_monbf4wb_5wuxz4",
+          "originalName": "08-quality-risk-defect-governance.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_monbf4wb_5wuxz4/c4d411862cc6_08-quality-risk-defect-governance.docx",
+          "documentType": "SOURCE_DOC",
+          "sha256": "c4d411862cc6615ebda78530cacdebd2378ccf25df873fd04545a7c49b15adc4",
+          "size": 13091,
+          "status": "accepted",
+          "createdAt": "2026-05-01T19:38:10.492Z"
+        }
+      }
+    },
+    {
+      "id": "event_monbf54t_ro74oj",
+      "runId": "uiqa_monbf4wb_5wuxz4",
+      "phase": "upload_sources",
+      "title": "Uploaded 09-test-case-repository.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:38:10.493Z",
+      "finishedAt": "2026-05-01T19:38:10.493Z",
+      "summary": "Classified as TEST_REPOSITORY.",
+      "technical": {
+        "rawLabel": "upload:09-test-case-repository.docx",
+        "payload": {
+          "id": "src_monbf54s_gow8cw",
+          "runId": "uiqa_monbf4wb_5wuxz4",
+          "originalName": "09-test-case-repository.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_monbf4wb_5wuxz4/2b17d95d7da3_09-test-case-repository.docx",
+          "documentType": "TEST_REPOSITORY",
+          "sha256": "2b17d95d7da3e424e205e904671f8b3b5485d4a1fae97a1bbb5f9114bf0d6431",
+          "size": 19269,
+          "status": "accepted",
+          "createdAt": "2026-05-01T19:38:10.492Z"
+        }
+      }
+    },
+    {
+      "id": "event_monbf552_9t8wfy",
+      "runId": "uiqa_monbf4wb_5wuxz4",
+      "phase": "upload_sources",
+      "title": "Active source pack ready",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:38:10.502Z",
+      "finishedAt": "2026-05-01T19:38:10.506Z",
+      "summary": "9 ingestible source document(s) ready."
+    },
+    {
+      "id": "event_monbf557_68yc8t",
+      "runId": "uiqa_monbf4wb_5wuxz4",
+      "phase": "ingest_sources",
+      "title": "Ensure ingestion virtualenv",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:38:10.507Z",
+      "finishedAt": "2026-05-01T19:38:10.507Z",
+      "summary": "Dry run skipped command execution.",
+      "technical": {
+        "rawLabel": "Ensure ingestion virtualenv",
+        "command": "/bin/test -d ingestion/.venv || /usr/bin/python3 -m venv ingestion/.venv",
+        "stdout": "[dry-run] command skipped\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_monbf559_g3ubj3",
+      "runId": "uiqa_monbf4wb_5wuxz4",
+      "phase": "ingest_sources",
+      "title": "Install ingestion dependencies",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:38:10.509Z",
+      "finishedAt": "2026-05-01T19:38:10.509Z",
+      "summary": "Dry run skipped command execution.",
+      "technical": {
+        "rawLabel": "Install ingestion dependencies",
+        "command": "source ingestion/.venv/bin/activate && ingestion/.venv/bin/pip install -r ingestion/requirements.txt -q",
+        "stdout": "[dry-run] command skipped\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_monbf559_5311v7",
+      "runId": "uiqa_monbf4wb_5wuxz4",
+      "phase": "ingest_sources",
+      "title": "Inspect Docker pgvector service",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:38:10.509Z",
+      "finishedAt": "2026-05-01T19:38:10.510Z",
+      "summary": "Dry run skipped command execution.",
+      "technical": {
+        "rawLabel": "Inspect Docker pgvector service",
+        "command": "set -euo pipefail\nDOCKER_BIN=\"$(command -v docker || true)\"\nif [ -z \"$DOCKER_BIN\" ]; then\n  for candidate in /opt/homebrew/bin/docker /usr/local/bin/docker /Applications/Docker.app/Contents/Resources/bin/docker; do\n    if [ -x \"$candidate\" ]; then\n      DOCKER_BIN=\"$candidate\"\n      break\n    fi\n  done\nfi\nif [ -z \"$DOCKER_BIN\" ]; then\n  echo \"Docker CLI not found. Install Docker Desktop or add docker to PATH.\" >&2\n  exit 127\nfi\nif ! \"$DOCKER_BIN\" info >/dev/null 2>&1; then\n  echo \"Docker CLI was found at $DOCKER_BIN, but the Docker daemon is not reachable.\" >&2\n  echo \"Open Docker Desktop and wait for the engine to finish starting.\" >&2\n  exit 1\nfi\nCOMPOSE=(\"$DOCKER_BIN\" compose -f ingestion/docker-compose.yml)\n\"$DOCKER_BIN\" version\n\"${COMPOSE[@]}\" ps",
+        "stdout": "[dry-run] command skipped\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_monbf55a_grm4k8",
+      "runId": "uiqa_monbf4wb_5wuxz4",
+      "phase": "ingest_sources",
+      "title": "Start local pgvector DB",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:38:10.510Z",
+      "finishedAt": "2026-05-01T19:38:10.510Z",
+      "summary": "Dry run skipped command execution.",
+      "technical": {
+        "rawLabel": "Start local pgvector DB",
+        "command": "set -euo pipefail\nDOCKER_BIN=\"$(command -v docker || true)\"\nif [ -z \"$DOCKER_BIN\" ]; then\n  for candidate in /opt/homebrew/bin/docker /usr/local/bin/docker /Applications/Docker.app/Contents/Resources/bin/docker; do\n    if [ -x \"$candidate\" ]; then\n      DOCKER_BIN=\"$candidate\"\n      break\n    fi\n  done\nfi\nif [ -z \"$DOCKER_BIN\" ]; then\n  echo \"Docker CLI not found. Install Docker Desktop or add docker to PATH.\" >&2\n  exit 127\nfi\nif ! \"$DOCKER_BIN\" info >/dev/null 2>&1; then\n  echo \"Docker CLI was found at $DOCKER_BIN, but the Docker daemon is not reachable.\" >&2\n  echo \"Open Docker Desktop and wait for the engine to finish starting.\" >&2\n  exit 1\nfi\nCOMPOSE=(\"$DOCKER_BIN\" compose -f ingestion/docker-compose.yml)\n\"${COMPOSE[@]}\" up -d postgres",
+        "stdout": "[dry-run] command skipped\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_monbf55b_p2bm16",
+      "runId": "uiqa_monbf4wb_5wuxz4",
+      "phase": "ingest_sources",
+      "title": "Wait for pgvector DB readiness",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:38:10.511Z",
+      "finishedAt": "2026-05-01T19:38:10.511Z",
+      "summary": "Dry run skipped command execution.",
+      "technical": {
+        "rawLabel": "Wait for pgvector DB readiness",
+        "command": "set -euo pipefail\nDOCKER_BIN=\"$(command -v docker || true)\"\nif [ -z \"$DOCKER_BIN\" ]; then\n  for candidate in /opt/homebrew/bin/docker /usr/local/bin/docker /Applications/Docker.app/Contents/Resources/bin/docker; do\n    if [ -x \"$candidate\" ]; then\n      DOCKER_BIN=\"$candidate\"\n      break\n    fi\n  done\nfi\nif [ -z \"$DOCKER_BIN\" ]; then\n  echo \"Docker CLI not found. Install Docker Desktop or add docker to PATH.\" >&2\n  exit 127\nfi\nif ! \"$DOCKER_BIN\" info >/dev/null 2>&1; then\n  echo \"Docker CLI was found at $DOCKER_BIN, but the Docker daemon is not reachable.\" >&2\n  echo \"Open Docker Desktop and wait for the engine to finish starting.\" >&2\n  exit 1\nfi\nCOMPOSE=(\"$DOCKER_BIN\" compose -f ingestion/docker-compose.yml)\nfor attempt in {1..45}; do\n  if \"${COMPOSE[@]}\" exec -T postgres pg_isready -U ingestion -d ingestion >/dev/null 2>&1; then\n    echo \"Postgres is ready after $attempt attempt(s).\"\n    exit 0\n  fi\n  echo \"Waiting for Postgres/pgvector readiness ($attempt/45)...\"\n  sleep 2\ndone\necho \"Postgres did not become ready within 90 seconds.\" >&2\n\"${COMPOSE[@]}\" ps >&2 || true\n\"${COMPOSE[@]}\" logs --tail=120 postgres >&2 || true\nexit 1",
+        "stdout": "[dry-run] command skipped\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_monbf55b_m7gb43",
+      "runId": "uiqa_monbf4wb_5wuxz4",
+      "phase": "ingest_sources",
+      "title": "Apply ingestion migrations",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:38:10.511Z",
+      "finishedAt": "2026-05-01T19:38:10.511Z",
+      "summary": "Dry run skipped command execution.",
+      "technical": {
+        "rawLabel": "Apply ingestion migrations",
+        "command": "set -euo pipefail\nDOCKER_BIN=\"$(command -v docker || true)\"\nif [ -z \"$DOCKER_BIN\" ]; then\n  for candidate in /opt/homebrew/bin/docker /usr/local/bin/docker /Applications/Docker.app/Contents/Resources/bin/docker; do\n    if [ -x \"$candidate\" ]; then\n      DOCKER_BIN=\"$candidate\"\n      break\n    fi\n  done\nfi\nif [ -z \"$DOCKER_BIN\" ]; then\n  echo \"Docker CLI not found. Install Docker Desktop or add docker to PATH.\" >&2\n  exit 127\nfi\nif ! \"$DOCKER_BIN\" info >/dev/null 2>&1; then\n  echo \"Docker CLI was found at $DOCKER_BIN, but the Docker daemon is not reachable.\" >&2\n  echo \"Open Docker Desktop and wait for the engine to finish starting.\" >&2\n  exit 1\nfi\nCOMPOSE=(\"$DOCKER_BIN\" compose -f ingestion/docker-compose.yml)\nfor migration in ingestion/sql/*.sql; do\n  echo \"Applying $migration\"\n  \"${COMPOSE[@]}\" exec -T postgres psql -v ON_ERROR_STOP=1 -U ingestion -d ingestion < \"$migration\"\ndone\necho \"Migrations applied.\"",
+        "stdout": "[dry-run] command skipped\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_monbf55b_8o1j36",
+      "runId": "uiqa_monbf4wb_5wuxz4",
+      "phase": "ingest_sources",
+      "title": "Verify pgvector DB schema",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:38:10.511Z",
+      "finishedAt": "2026-05-01T19:38:10.511Z",
+      "summary": "Dry run skipped command execution.",
+      "technical": {
+        "rawLabel": "Verify pgvector DB schema",
+        "command": "set -euo pipefail\nDOCKER_BIN=\"$(command -v docker || true)\"\nif [ -z \"$DOCKER_BIN\" ]; then\n  for candidate in /opt/homebrew/bin/docker /usr/local/bin/docker /Applications/Docker.app/Contents/Resources/bin/docker; do\n    if [ -x \"$candidate\" ]; then\n      DOCKER_BIN=\"$candidate\"\n      break\n    fi\n  done\nfi\nif [ -z \"$DOCKER_BIN\" ]; then\n  echo \"Docker CLI not found. Install Docker Desktop or add docker to PATH.\" >&2\n  exit 127\nfi\nif ! \"$DOCKER_BIN\" info >/dev/null 2>&1; then\n  echo \"Docker CLI was found at $DOCKER_BIN, but the Docker daemon is not reachable.\" >&2\n  echo \"Open Docker Desktop and wait for the engine to finish starting.\" >&2\n  exit 1\nfi\nCOMPOSE=(\"$DOCKER_BIN\" compose -f ingestion/docker-compose.yml)\n\"${COMPOSE[@]}\" exec -T postgres psql -U ingestion -d ingestion -c \"select extname from pg_extension where extname = 'vector';\"\n\"${COMPOSE[@]}\" exec -T postgres psql -U ingestion -d ingestion -c \"select table_name from information_schema.tables where table_schema = 'public' order by table_name;\"",
+        "stdout": "[dry-run] command skipped\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_monbf55c_gyqbo6",
+      "runId": "uiqa_monbf4wb_5wuxz4",
+      "phase": "ingest_sources",
+      "title": "Embed source documents into pgvector",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:38:10.512Z",
+      "finishedAt": "2026-05-01T19:38:10.512Z",
+      "summary": "Dry run skipped command execution.",
+      "technical": {
+        "rawLabel": "Embed source documents into pgvector",
+        "command": "source ingestion/.venv/bin/activate && DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python ingestion/scripts/ingest.py --format both --test-doc '/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/ui-qa/generated/uiqa_monbf4wb_5wuxz4/source-pack'",
+        "stdout": "[dry-run] command skipped\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_monbf55c_itdkia",
+      "runId": "uiqa_monbf4wb_5wuxz4",
+      "phase": "ingest_sources",
+      "title": "Map ingested documents",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:38:10.512Z",
+      "finishedAt": "2026-05-01T19:38:10.694Z",
+      "summary": "Indexed 9 documents.",
+      "technical": {
+        "rawLabel": "ingest:documents",
+        "payload": {
+          "kind": "ingestion-section",
+          "section": "documents",
+          "documents": [
+            {
+              "id": 1,
+              "label": "01-business-requirements-document.docx",
+              "kind": "BRD",
+              "chunks": 10,
+              "entities": 5,
+              "rels": 3
+            },
+            {
+              "id": 2,
+              "label": "02-functional-requirements-specification.docx",
+              "kind": "FRS",
+              "chunks": 17,
+              "entities": 10,
+              "rels": 6
+            },
+            {
+              "id": 3,
+              "label": "03-test-design-specification.docx",
+              "kind": "SOURCE_DOC",
+              "chunks": 6,
+              "entities": 4,
+              "rels": 2
+            },
+            {
+              "id": 4,
+              "label": "04-test-strategy.docx",
+              "kind": "TEST_STRATEGY",
+              "chunks": 13,
+              "entities": 9,
+              "rels": 5
+            },
+            {
+              "id": 5,
+              "label": "05-test-plan.docx",
+              "kind": "TEST_PLAN",
+              "chunks": 20,
+              "entities": 3,
+              "rels": 8
+            },
+            {
+              "id": 6,
+              "label": "06-requirements-traceability-matrix.docx",
+              "kind": "RTM",
+              "chunks": 9,
+              "entities": 8,
+              "rels": 4
+            },
+            {
+              "id": 7,
+              "label": "07-test-data-environment-specification.docx",
+              "kind": "TEST_DATA",
+              "chunks": 16,
+              "entities": 13,
+              "rels": 7
+            },
+            {
+              "id": 8,
+              "label": "08-quality-risk-defect-governance.docx",
+              "kind": "SOURCE_DOC",
+              "chunks": 23,
+              "entities": 7,
+              "rels": 3
+            },
+            {
+              "id": 9,
+              "label": "09-test-case-repository.docx",
+              "kind": "TEST_REPOSITORY",
+              "chunks": 12,
+              "entities": 12,
+              "rels": 6
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "event_monbf5af_etydni",
+      "runId": "uiqa_monbf4wb_5wuxz4",
+      "phase": "ingest_sources",
+      "title": "Build entity map",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:38:10.695Z",
+      "finishedAt": "2026-05-01T19:38:10.876Z",
+      "summary": "71 entities across 6 types.",
+      "technical": {
+        "rawLabel": "ingest:entities",
+        "payload": {
+          "kind": "ingestion-section",
+          "section": "entities",
+          "entities": [
+            {
+              "type": "Requirement",
+              "count": 30
+            },
+            {
+              "type": "TestCase",
+              "count": 16
+            },
+            {
+              "type": "UseCase",
+              "count": 11
+            },
+            {
+              "type": "BusinessRule",
+              "count": 9
+            },
+            {
+              "type": "Persona",
+              "count": 3
+            },
+            {
+              "type": "System",
+              "count": 2
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "event_monbf5fh_2lttt9",
+      "runId": "uiqa_monbf4wb_5wuxz4",
+      "phase": "ingest_sources",
+      "title": "Trace relationships",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:38:10.877Z",
+      "finishedAt": "2026-05-01T19:38:11.058Z",
+      "summary": "88 relationships across 5 types.",
+      "technical": {
+        "rawLabel": "ingest:relationships",
+        "payload": {
+          "kind": "ingestion-section",
+          "section": "relationships",
+          "relationships": [
+            {
+              "type": "implements",
+              "count": 44
+            },
+            {
+              "type": "verifies",
+              "count": 19
+            },
+            {
+              "type": "depends_on",
+              "count": 12
+            },
+            {
+              "type": "satisfies",
+              "count": 8
+            },
+            {
+              "type": "derived_from",
+              "count": 5
+            }
+          ],
+          "samples": [
+            {
+              "type": "implements",
+              "from": "01-business-requirements-document.docx",
+              "to": "REQ-001"
+            },
+            {
+              "type": "verifies",
+              "from": "TestCases",
+              "to": "REQ-001"
+            },
+            {
+              "type": "depends_on",
+              "from": "02-functional-requirements-specification.docx",
+              "to": "01-business-requirements-document.docx#§3.2"
+            },
+            {
+              "type": "satisfies",
+              "from": "03-test-design-specification.docx",
+              "to": "02-functional-requirements-specification.docx#§4.1"
+            },
+            {
+              "type": "derived_from",
+              "from": "04-test-strategy.docx",
+              "to": "03-test-design-specification.docx"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "event_monbf5nv_if59gz",
+      "runId": "uiqa_monbf4wb_5wuxz4",
+      "phase": "ingest_sources",
+      "title": "Ingestion knowledge map",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:38:11.179Z",
+      "finishedAt": "2026-05-01T19:38:11.179Z",
+      "summary": "9 documents · 71 entities · 88 relationships (synthesized for dry-run).",
+      "technical": {
+        "rawLabel": "ingest:map",
+        "payload": {
+          "kind": "ingestion-map",
+          "documents": [
+            {
+              "id": 1,
+              "label": "01-business-requirements-document.docx",
+              "kind": "BRD",
+              "chunks": 10,
+              "entities": 5,
+              "rels": 3
+            },
+            {
+              "id": 2,
+              "label": "02-functional-requirements-specification.docx",
+              "kind": "FRS",
+              "chunks": 17,
+              "entities": 10,
+              "rels": 6
+            },
+            {
+              "id": 3,
+              "label": "03-test-design-specification.docx",
+              "kind": "SOURCE_DOC",
+              "chunks": 6,
+              "entities": 4,
+              "rels": 2
+            },
+            {
+              "id": 4,
+              "label": "04-test-strategy.docx",
+              "kind": "TEST_STRATEGY",
+              "chunks": 13,
+              "entities": 9,
+              "rels": 5
+            },
+            {
+              "id": 5,
+              "label": "05-test-plan.docx",
+              "kind": "TEST_PLAN",
+              "chunks": 20,
+              "entities": 3,
+              "rels": 8
+            },
+            {
+              "id": 6,
+              "label": "06-requirements-traceability-matrix.docx",
+              "kind": "RTM",
+              "chunks": 9,
+              "entities": 8,
+              "rels": 4
+            },
+            {
+              "id": 7,
+              "label": "07-test-data-environment-specification.docx",
+              "kind": "TEST_DATA",
+              "chunks": 16,
+              "entities": 13,
+              "rels": 7
+            },
+            {
+              "id": 8,
+              "label": "08-quality-risk-defect-governance.docx",
+              "kind": "SOURCE_DOC",
+              "chunks": 23,
+              "entities": 7,
+              "rels": 3
+            },
+            {
+              "id": 9,
+              "label": "09-test-case-repository.docx",
+              "kind": "TEST_REPOSITORY",
+              "chunks": 12,
+              "entities": 12,
+              "rels": 6
+            }
+          ],
+          "entities": [
+            {
+              "type": "Requirement",
+              "count": 30
+            },
+            {
+              "type": "TestCase",
+              "count": 16
+            },
+            {
+              "type": "UseCase",
+              "count": 11
+            },
+            {
+              "type": "BusinessRule",
+              "count": 9
+            },
+            {
+              "type": "Persona",
+              "count": 3
+            },
+            {
+              "type": "System",
+              "count": 2
+            }
+          ],
+          "relationships": [
+            {
+              "type": "implements",
+              "count": 44
+            },
+            {
+              "type": "verifies",
+              "count": 19
+            },
+            {
+              "type": "depends_on",
+              "count": 12
+            },
+            {
+              "type": "satisfies",
+              "count": 8
+            },
+            {
+              "type": "derived_from",
+              "count": 5
+            }
+          ],
+          "rel_samples": [
+            {
+              "type": "implements",
+              "from": "01-business-requirements-document.docx",
+              "to": "REQ-001"
+            },
+            {
+              "type": "verifies",
+              "from": "TestCases",
+              "to": "REQ-001"
+            },
+            {
+              "type": "depends_on",
+              "from": "02-functional-requirements-specification.docx",
+              "to": "01-business-requirements-document.docx#§3.2"
+            },
+            {
+              "type": "satisfies",
+              "from": "03-test-design-specification.docx",
+              "to": "02-functional-requirements-specification.docx#§4.1"
+            },
+            {
+              "type": "derived_from",
+              "from": "04-test-strategy.docx",
+              "to": "03-test-design-specification.docx"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "event_monbf5o2_4if4c8",
+      "runId": "uiqa_monbf4wb_5wuxz4",
+      "phase": "ingest_sources",
+      "title": "Summarize entity map",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:38:11.186Z",
+      "finishedAt": "2026-05-01T19:38:11.187Z",
+      "summary": "Dry run skipped command execution.",
+      "technical": {
+        "rawLabel": "Summarize entity map",
+        "command": "source ingestion/.venv/bin/activate && DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport os, psycopg\nwith psycopg.connect(os.environ['DATABASE_URL']) as conn, conn.cursor() as cur:\n    cur.execute(\"select entity_type, count(*) from entities group by entity_type order by entity_type\")\n    rows = cur.fetchall()\nprint('# Entity Map Summary')\nprint()\nprint('| Entity Type | Count |')\nprint('|---|---:|')\nfor t, c in rows:\n    print(f'| {t} | {c} |')\nPY",
+        "stdout": "[dry-run] command skipped\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_monbf5o5_gyx6ip",
+      "runId": "uiqa_monbf4wb_5wuxz4",
+      "phase": "rag_ready",
+      "title": "Document QA knowledge base ready",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:38:11.189Z",
+      "finishedAt": "2026-05-01T19:38:11.189Z",
+      "summary": "Documents are ingested and ready for grounded Q&A. Ask questions about the source pack or request TestCases.xlsx generation."
+    },
+    {
+      "id": "event_monbf6r8_5xzrwl",
+      "runId": "uiqa_monbf4wb_5wuxz4",
+      "phase": "rag_ready",
+      "title": "Retrieve KB context",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:38:12.596Z",
+      "finishedAt": "2026-05-01T19:38:12.597Z",
+      "summary": "Dry run skipped command execution.",
+      "technical": {
+        "rawLabel": "Retrieve KB context",
+        "command": "source ingestion/.venv/bin/activate && UI_QA_QUESTION='What are the main business requirements in the uploaded documents?' DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport json, os, psycopg\nquestion = os.environ.get(\"UI_QA_QUESTION\", \"\").strip()\nout = []\nwith psycopg.connect(os.environ[\"DATABASE_URL\"]) as conn, conn.cursor() as cur:\n    cur.execute(\"\"\"\n      with query as (\n        select websearch_to_tsquery('english', %s) as q\n      )\n      select c.id,\n             coalesce(d.title, d.path, '') as document,\n             d.path,\n             c.heading_path,\n             c.ordinal,\n             left(regexp_replace(c.content, '\\s+', ' ', 'g'), 1200) as content,\n             ts_rank_cd(to_tsvector('english', coalesce(c.content, '')), query.q) as rank\n      from chunks c\n      join documents d on d.id = c.document_id\n      cross join query\n      where query.q @@ to_tsvector('english', coalesce(c.content, ''))\n      order by rank desc, d.created_at desc nulls last, c.ordinal asc\n      limit 8\n    \"\"\", (question,))\n    rows = cur.fetchall()\n    if not rows:\n        cur.execute(\"\"\"\n          select c.id,\n                 coalesce(d.title, d.path, '') as document,\n                 d.path,\n                 c.heading_path,\n                 c.ordinal,\n                 left(regexp_replace(c.content, '\\s+', ' ', 'g'), 1200) as content,\n                 0.0 as rank\n          from chunks c\n          join documents d on d.id = c.document_id\n          order by d.created_at desc nulls last, c.ordinal asc\n          limit 8\n        \"\"\")\n        rows = cur.fetchall()\n    for row in rows:\n        out.append({\n          \"id\": f\"chunk-{row[0]}\",\n          \"document\": row[1] or \"\",\n          \"path\": row[2] or \"\",\n          \"heading\": row[3] or \"\",\n          \"ordinal\": int(row[4] or 0),\n          \"content\": row[5] or \"\",\n        })\nprint(json.dumps(out))\nPY",
+        "stdout": "[dry-run] command skipped\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_monbf6rn_q9sd82",
+      "runId": "uiqa_monbf4wb_5wuxz4",
+      "phase": "generate_tests",
+      "title": "Retrieve KB context",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:38:12.611Z",
+      "finishedAt": "2026-05-01T19:38:12.611Z",
+      "summary": "Dry run skipped command execution.",
+      "technical": {
+        "rawLabel": "Retrieve KB context",
+        "command": "source ingestion/.venv/bin/activate && UI_QA_QUESTION='requirements business rules acceptance criteria user flows validation controls' DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport json, os, psycopg\nquestion = os.environ.get(\"UI_QA_QUESTION\", \"\").strip()\nout = []\nwith psycopg.connect(os.environ[\"DATABASE_URL\"]) as conn, conn.cursor() as cur:\n    cur.execute(\"\"\"\n      with query as (\n        select websearch_to_tsquery('english', %s) as q\n      )\n      select c.id,\n             coalesce(d.title, d.path, '') as document,\n             d.path,\n             c.heading_path,\n             c.ordinal,\n             left(regexp_replace(c.content, '\\s+', ' ', 'g'), 1200) as content,\n             ts_rank_cd(to_tsvector('english', coalesce(c.content, '')), query.q) as rank\n      from chunks c\n      join documents d on d.id = c.document_id\n      cross join query\n      where query.q @@ to_tsvector('english', coalesce(c.content, ''))\n      order by rank desc, d.created_at desc nulls last, c.ordinal asc\n      limit 8\n    \"\"\", (question,))\n    rows = cur.fetchall()\n    if not rows:\n        cur.execute(\"\"\"\n          select c.id,\n                 coalesce(d.title, d.path, '') as document,\n                 d.path,\n                 c.heading_path,\n                 c.ordinal,\n                 left(regexp_replace(c.content, '\\s+', ' ', 'g'), 1200) as content,\n                 0.0 as rank\n          from chunks c\n          join documents d on d.id = c.document_id\n          order by d.created_at desc nulls last, c.ordinal asc\n          limit 8\n        \"\"\")\n        rows = cur.fetchall()\n    for row in rows:\n        out.append({\n          \"id\": f\"chunk-{row[0]}\",\n          \"document\": row[1] or \"\",\n          \"path\": row[2] or \"\",\n          \"heading\": row[3] or \"\",\n          \"ordinal\": int(row[4] or 0),\n          \"content\": row[5] or \"\",\n        })\nprint(json.dumps(out))\nPY",
+        "stdout": "[dry-run] command skipped\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_monbf6rn_4yer8a",
+      "runId": "uiqa_monbf4wb_5wuxz4",
+      "phase": "generate_tests",
+      "title": "Cursor SDK agent",
+      "status": "warning",
+      "createdAt": "2026-05-01T19:38:12.611Z",
+      "finishedAt": "2026-05-01T19:38:12.612Z",
+      "summary": "Dry run: Cursor SDK call skipped.",
+      "technical": {
+        "rawLabel": "cursor:generate_tests",
+        "sdkPrompt": "Generate source-aligned bank QA test cases from the active pgvector corpus. Use the retrieved KB excerpts below as grounding and preserve citations/source refs. Return repository JSON if confident.\n\n",
+        "stdout": "Dry run: Cursor SDK call skipped."
+      }
+    },
+    {
+      "id": "event_monbf6rp_67yhcv",
+      "runId": "uiqa_monbf4wb_5wuxz4",
+      "phase": "generate_tests",
+      "title": "Generated test cases",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:38:12.613Z",
+      "finishedAt": "2026-05-01T19:38:12.613Z",
+      "summary": "1 test case(s), 1 step(s).",
+      "technical": {
+        "rawLabel": "generate_tests:repository",
+        "payload": {
+          "cases": 1
+        }
+      }
+    },
+    {
+      "id": "event_monbf6rp_gd68iz",
+      "runId": "uiqa_monbf4wb_5wuxz4",
+      "phase": "generate_tests",
+      "title": "Build TestCases workbook from generated repository",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:38:12.613Z",
+      "finishedAt": "2026-05-01T19:38:12.613Z",
+      "summary": "Dry run skipped command execution.",
+      "technical": {
+        "rawLabel": "Build TestCases workbook from generated repository",
+        "command": "source ingestion/.venv/bin/activate && ingestion/.venv/bin/python test-doc/scripts/build_test_case_repository.py --spec '/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/ui-qa/generated/uiqa_monbf4wb_5wuxz4/test-case-repository.generated.json' --workbook-out '/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/ui-qa/generated/uiqa_monbf4wb_5wuxz4/TestCases.generated.xlsx' --markdown-out '/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/ui-qa/generated/uiqa_monbf4wb_5wuxz4/test-case-repository.generated.md'",
+        "stdout": "[dry-run] command skipped\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_monbf6rq_l7r7ne",
+      "runId": "uiqa_monbf4wb_5wuxz4",
+      "phase": "audit_generated_tests",
+      "title": "Load KB entity IDs for traceability audit",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:38:12.614Z",
+      "finishedAt": "2026-05-01T19:38:12.615Z",
+      "summary": "Dry run skipped command execution.",
+      "technical": {
+        "rawLabel": "Load KB entity IDs for traceability audit",
+        "command": "source ingestion/.venv/bin/activate && DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport os, json, psycopg\nwith psycopg.connect(os.environ['DATABASE_URL']) as conn, conn.cursor() as cur:\n    cur.execute(\"select distinct upper(canonical_id) from entities where canonical_id is not null and canonical_id <> ''\")\n    print(json.dumps([r[0] for r in cur.fetchall()]))\nPY",
+        "stdout": "[dry-run] command skipped\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_monbf6rs_vaq8db",
+      "runId": "uiqa_monbf4wb_5wuxz4",
+      "phase": "audit_generated_tests",
+      "title": "Generated test confidence audit passed",
+      "status": "warning",
+      "createdAt": "2026-05-01T19:38:12.616Z",
+      "finishedAt": "2026-05-01T19:38:12.616Z",
+      "summary": "Finding counts: {\"critical\":0,\"high\":0,\"medium\":1,\"low\":0}."
+    },
+    {
+      "id": "event_monbf6rs_1nwoo5",
+      "runId": "uiqa_monbf4wb_5wuxz4",
+      "phase": "complete",
+      "title": "TestCases.xlsx generation complete",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:38:12.616Z",
+      "finishedAt": "2026-05-01T19:38:12.616Z",
+      "summary": "Generated 1 test case(s). Confidence audit passed."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev_monbf54o_t5lgho",
+      "createdAt": "2026-05-01T19:38:10.488Z",
+      "kind": "source",
+      "label": "01-business-requirements-document.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_monbf4wb_5wuxz4/75ba74032f55_01-business-requirements-document.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_monbf54p_27emfe",
+      "createdAt": "2026-05-01T19:38:10.489Z",
+      "kind": "source",
+      "label": "02-functional-requirements-specification.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_monbf4wb_5wuxz4/1bf29955d09f_02-functional-requirements-specification.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_monbf54q_dhm0aq",
+      "createdAt": "2026-05-01T19:38:10.490Z",
+      "kind": "source",
+      "label": "03-test-design-specification.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_monbf4wb_5wuxz4/bc4a297e88b9_03-test-design-specification.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_monbf54q_juzswm",
+      "createdAt": "2026-05-01T19:38:10.490Z",
+      "kind": "source",
+      "label": "04-test-strategy.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_monbf4wb_5wuxz4/bc452080a746_04-test-strategy.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_monbf54q_bh2lck",
+      "createdAt": "2026-05-01T19:38:10.490Z",
+      "kind": "source",
+      "label": "05-test-plan.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_monbf4wb_5wuxz4/64cc7c5d20b4_05-test-plan.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_monbf54r_evompx",
+      "createdAt": "2026-05-01T19:38:10.491Z",
+      "kind": "source",
+      "label": "06-requirements-traceability-matrix.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_monbf4wb_5wuxz4/bae75844e4bc_06-requirements-traceability-matrix.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_monbf54r_y2rwz9",
+      "createdAt": "2026-05-01T19:38:10.491Z",
+      "kind": "source",
+      "label": "07-test-data-environment-specification.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_monbf4wb_5wuxz4/dee1179870fd_07-test-data-environment-specification.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_monbf54s_3j3rou",
+      "createdAt": "2026-05-01T19:38:10.492Z",
+      "kind": "source",
+      "label": "08-quality-risk-defect-governance.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_monbf4wb_5wuxz4/c4d411862cc6_08-quality-risk-defect-governance.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_monbf54s_emoh8t",
+      "createdAt": "2026-05-01T19:38:10.492Z",
+      "kind": "source",
+      "label": "09-test-case-repository.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_monbf4wb_5wuxz4/2b17d95d7da3_09-test-case-repository.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_monbf555_1vp46n",
+      "createdAt": "2026-05-01T19:38:10.506Z",
+      "kind": "folder",
+      "label": "Active source pack",
+      "path": "test_data/ui-qa/generated/uiqa_monbf4wb_5wuxz4/source-pack",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_monbf5o4_pbsam4",
+      "createdAt": "2026-05-01T19:38:11.188Z",
+      "kind": "report",
+      "label": "Entity map summary",
+      "path": "test_data/test-results/uiqa_entity_summary_20260501193811.md",
+      "phase": "ingest_sources"
+    },
+    {
+      "id": "ev_monbf6ro_3c9eww",
+      "createdAt": "2026-05-01T19:38:12.612Z",
+      "kind": "json",
+      "label": "Generated test case repository",
+      "path": "test_data/ui-qa/generated/uiqa_monbf4wb_5wuxz4/test-case-repository.generated.json",
+      "phase": "generate_tests"
+    },
+    {
+      "id": "ev_monbf6rq_6qrheo",
+      "createdAt": "2026-05-01T19:38:12.614Z",
+      "kind": "workbook",
+      "label": "Generated TestCases workbook (dry-run)",
+      "path": "test_data/ui-qa/generated/uiqa_monbf4wb_5wuxz4/TestCases.generated.xlsx",
+      "phase": "generate_tests"
+    },
+    {
+      "id": "ev_monbf6rq_infeqe",
+      "createdAt": "2026-05-01T19:38:12.614Z",
+      "kind": "report",
+      "label": "Generated test case repository Markdown",
+      "path": "test_data/ui-qa/generated/uiqa_monbf4wb_5wuxz4/test-case-repository.generated.md",
+      "phase": "generate_tests"
+    },
+    {
+      "id": "ev_monbf6rr_vy819c",
+      "createdAt": "2026-05-01T19:38:12.615Z",
+      "kind": "report",
+      "label": "Generated test confidence audit",
+      "path": "test_data/test-results/generated_test_case_audit_20260501193812.md",
+      "phase": "audit_generated_tests"
+    },
+    {
+      "id": "ev_monbf6rr_jd817r",
+      "createdAt": "2026-05-01T19:38:12.615Z",
+      "kind": "json",
+      "label": "Generated test confidence audit JSON",
+      "path": "test_data/test-results/generated_test_case_audit_20260501193812.json",
+      "phase": "audit_generated_tests"
+    }
+  ],
+  "checkpoints": [],
+  "messages": [
+    {
+      "id": "msg_monbf6r8_jvrukv",
+      "runId": "uiqa_monbf4wb_5wuxz4",
+      "role": "user",
+      "content": "What are the main business requirements in the uploaded documents?",
+      "createdAt": "2026-05-01T19:38:12.596Z"
+    },
+    {
+      "id": "msg_monbf6r9_f5df7r",
+      "runId": "uiqa_monbf4wb_5wuxz4",
+      "role": "assistant",
+      "content": "I do not have enough ingested context to answer that. Upload and ingest the source documents first, then ask again.",
+      "createdAt": "2026-05-01T19:38:12.597Z"
+    }
+  ],
+  "blockerCount": 0,
+  "findingCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+  },
+  "generatedSpecPath": "test_data/ui-qa/generated/uiqa_monbf4wb_5wuxz4/test-case-repository.generated.json"
+}

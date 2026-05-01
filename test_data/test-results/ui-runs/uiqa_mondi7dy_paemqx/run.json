@@ -1,0 +1,2096 @@
+{
+  "id": "uiqa_mondi7dy_paemqx",
+  "scope": "ingestion-hardening-smoke-2",
+  "dryRun": false,
+  "autoApprove": true,
+  "status": "approved",
+  "currentPhase": "rag_ready",
+  "createdAt": "2026-05-01T20:36:32.614Z",
+  "updatedAt": "2026-05-01T20:38:55.335Z",
+  "uploads": [],
+  "events": [
+    {
+      "id": "event_mondi7dy_xu52k5",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "phase": "upload_sources",
+      "title": "Active source pack ready",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:36:32.614Z",
+      "finishedAt": "2026-05-01T20:36:32.616Z",
+      "summary": "19 ingestible source document(s) ready."
+    },
+    {
+      "id": "event_mondi7dz_7lac5a",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "phase": "upload_sources",
+      "title": "Validate BRD/FRS/HLD/LLD source contract",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:36:32.615Z",
+      "finishedAt": "2026-05-01T20:36:32.615Z",
+      "summary": "Source pack includes BRD, FRS, HLD, and LLD.",
+      "technical": {
+        "rawLabel": "source-contract",
+        "payload": {
+          "required": [
+            "BRD",
+            "FRS",
+            "HLD",
+            "LLD"
+          ],
+          "present": [
+            "FRS",
+            "HLD",
+            "LLD",
+            "BRD"
+          ],
+          "missing": []
+        }
+      }
+    },
+    {
+      "id": "event_mondi7e0_9yweeq",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "phase": "ingest_sources",
+      "title": "Ensure ingestion virtualenv",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:36:32.616Z",
+      "finishedAt": "2026-05-01T20:36:32.655Z",
+      "technical": {
+        "rawLabel": "Ensure ingestion virtualenv",
+        "command": "/bin/test -d ingestion/.venv || /usr/bin/python3 -m venv ingestion/.venv",
+        "stdout": "",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mondi7f3_92z5xm",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "phase": "ingest_sources",
+      "title": "Install ingestion dependencies",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:36:32.655Z",
+      "finishedAt": "2026-05-01T20:36:33.525Z",
+      "technical": {
+        "rawLabel": "Install ingestion dependencies",
+        "command": "source ingestion/.venv/bin/activate && ingestion/.venv/bin/pip install -r ingestion/requirements.txt -q",
+        "stdout": "",
+        "stderr": "\n[notice] A new release of pip is available: 26.0.1 -> 26.1\n[notice] To update, run: pip install --upgrade pip\n",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mondi839_0b1m3t",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "phase": "ingest_sources",
+      "title": "Inspect Docker pgvector service",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:36:33.525Z",
+      "finishedAt": "2026-05-01T20:36:34.202Z",
+      "technical": {
+        "rawLabel": "Inspect Docker pgvector service",
+        "command": "set -euo pipefail\nDOCKER_BIN=\"$(command -v docker || true)\"\nif [ -z \"$DOCKER_BIN\" ]; then\n  for candidate in /opt/homebrew/bin/docker /usr/local/bin/docker /Applications/Docker.app/Contents/Resources/bin/docker; do\n    if [ -x \"$candidate\" ]; then\n      DOCKER_BIN=\"$candidate\"\n      break\n    fi\n  done\nfi\nif [ -z \"$DOCKER_BIN\" ]; then\n  echo \"Docker CLI not found. Install Docker Desktop or add docker to PATH.\" >&2\n  exit 127\nfi\nif ! \"$DOCKER_BIN\" info >/dev/null 2>&1; then\n  echo \"Docker CLI was found at $DOCKER_BIN, but the Docker daemon is not reachable.\" >&2\n  echo \"Open Docker Desktop and wait for the engine to finish starting.\" >&2\n  exit 1\nfi\nCOMPOSE=(\"$DOCKER_BIN\" compose -f ingestion/docker-compose.yml)\n\"$DOCKER_BIN\" version\n\"${COMPOSE[@]}\" ps",
+        "stdout": "Client: Docker Engine - Community\n Version:           28.1.1\n API version:       1.49\n Go version:        go1.24.2\n Git commit:        4eba377327\n Built:             Fri Apr 18 09:44:47 2025\n OS/Arch:           darwin/arm64\n Context:           desktop-linux\n\nServer: Docker Desktop 4.55.0 (213807)\n Engine:\n  Version:          29.1.3\n  API version:      1.52 (minimum version 1.44)\n  Go version:       go1.25.5\n  Git commit:       fbf3ed2\n  Built:            Fri Dec 12 14:50:40 2025\n  OS/Arch:          linux/arm64\n  Experimental:     false\n containerd:\n  Version:          v2.2.0\n  GitCommit:        1c4457e00facac03ce1d75f7b6777a7a851e5c41\n runc:\n  Version:          1.3.4\n  GitCommit:        v1.3.4-0-gd6d73eb8\n docker-init:\n  Version:          0.19.0\n  GitCommit:        de40ad0\nNAME                 IMAGE                    COMMAND                  SERVICE    CREATED      STATUS                 PORTS\nqamvp-ingestion-pg   pgvector/pgvector:pg16   \"docker-entrypoint.s…\"   postgres   9 days ago   Up 6 hours (healthy)   0.0.0.0:5433->5432/tcp, [::]:5433->5432/tcp\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mondi8m2_uh2buu",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "phase": "ingest_sources",
+      "title": "Start local pgvector DB",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:36:34.202Z",
+      "finishedAt": "2026-05-01T20:36:34.413Z",
+      "technical": {
+        "rawLabel": "Start local pgvector DB",
+        "command": "set -euo pipefail\nDOCKER_BIN=\"$(command -v docker || true)\"\nif [ -z \"$DOCKER_BIN\" ]; then\n  for candidate in /opt/homebrew/bin/docker /usr/local/bin/docker /Applications/Docker.app/Contents/Resources/bin/docker; do\n    if [ -x \"$candidate\" ]; then\n      DOCKER_BIN=\"$candidate\"\n      break\n    fi\n  done\nfi\nif [ -z \"$DOCKER_BIN\" ]; then\n  echo \"Docker CLI not found. Install Docker Desktop or add docker to PATH.\" >&2\n  exit 127\nfi\nif ! \"$DOCKER_BIN\" info >/dev/null 2>&1; then\n  echo \"Docker CLI was found at $DOCKER_BIN, but the Docker daemon is not reachable.\" >&2\n  echo \"Open Docker Desktop and wait for the engine to finish starting.\" >&2\n  exit 1\nfi\nCOMPOSE=(\"$DOCKER_BIN\" compose -f ingestion/docker-compose.yml)\n\"${COMPOSE[@]}\" up -d postgres",
+        "stdout": "",
+        "stderr": " Container qamvp-ingestion-pg  Running\n",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mondi8rx_m5q0iq",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "phase": "ingest_sources",
+      "title": "Wait for pgvector DB readiness",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:36:34.413Z",
+      "finishedAt": "2026-05-01T20:36:34.637Z",
+      "technical": {
+        "rawLabel": "Wait for pgvector DB readiness",
+        "command": "set -euo pipefail\nDOCKER_BIN=\"$(command -v docker || true)\"\nif [ -z \"$DOCKER_BIN\" ]; then\n  for candidate in /opt/homebrew/bin/docker /usr/local/bin/docker /Applications/Docker.app/Contents/Resources/bin/docker; do\n    if [ -x \"$candidate\" ]; then\n      DOCKER_BIN=\"$candidate\"\n      break\n    fi\n  done\nfi\nif [ -z \"$DOCKER_BIN\" ]; then\n  echo \"Docker CLI not found. Install Docker Desktop or add docker to PATH.\" >&2\n  exit 127\nfi\nif ! \"$DOCKER_BIN\" info >/dev/null 2>&1; then\n  echo \"Docker CLI was found at $DOCKER_BIN, but the Docker daemon is not reachable.\" >&2\n  echo \"Open Docker Desktop and wait for the engine to finish starting.\" >&2\n  exit 1\nfi\nCOMPOSE=(\"$DOCKER_BIN\" compose -f ingestion/docker-compose.yml)\nfor attempt in {1..45}; do\n  if \"${COMPOSE[@]}\" exec -T postgres pg_isready -U ingestion -d ingestion >/dev/null 2>&1; then\n    echo \"Postgres is ready after $attempt attempt(s).\"\n    exit 0\n  fi\n  echo \"Waiting for Postgres/pgvector readiness ($attempt/45)...\"\n  sleep 2\ndone\necho \"Postgres did not become ready within 90 seconds.\" >&2\n\"${COMPOSE[@]}\" ps >&2 || true\n\"${COMPOSE[@]}\" logs --tail=120 postgres >&2 || true\nexit 1",
+        "stdout": "Postgres is ready after 1 attempt(s).\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mondi8y5_swznhd",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "phase": "ingest_sources",
+      "title": "Apply ingestion migrations",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:36:34.637Z",
+      "finishedAt": "2026-05-01T20:36:35.228Z",
+      "technical": {
+        "rawLabel": "Apply ingestion migrations",
+        "command": "set -euo pipefail\nDOCKER_BIN=\"$(command -v docker || true)\"\nif [ -z \"$DOCKER_BIN\" ]; then\n  for candidate in /opt/homebrew/bin/docker /usr/local/bin/docker /Applications/Docker.app/Contents/Resources/bin/docker; do\n    if [ -x \"$candidate\" ]; then\n      DOCKER_BIN=\"$candidate\"\n      break\n    fi\n  done\nfi\nif [ -z \"$DOCKER_BIN\" ]; then\n  echo \"Docker CLI not found. Install Docker Desktop or add docker to PATH.\" >&2\n  exit 127\nfi\nif ! \"$DOCKER_BIN\" info >/dev/null 2>&1; then\n  echo \"Docker CLI was found at $DOCKER_BIN, but the Docker daemon is not reachable.\" >&2\n  echo \"Open Docker Desktop and wait for the engine to finish starting.\" >&2\n  exit 1\nfi\nCOMPOSE=(\"$DOCKER_BIN\" compose -f ingestion/docker-compose.yml)\nfor migration in ingestion/sql/*.sql; do\n  echo \"Applying $migration\"\n  \"${COMPOSE[@]}\" exec -T postgres psql -v ON_ERROR_STOP=1 -U ingestion -d ingestion < \"$migration\"\ndone\necho \"Migrations applied.\"",
+        "stdout": "Applying ingestion/sql/001_extensions.sql\nCREATE EXTENSION\nApplying ingestion/sql/002_schema.sql\nCREATE TABLE\nCREATE TABLE\nCREATE INDEX\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nCREATE INDEX\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nCREATE INDEX\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nCREATE INDEX\nCREATE INDEX\nApplying ingestion/sql/003_test_case_inventory.sql\nDO\nALTER TABLE\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nApplying ingestion/sql/004_rtm_requirements.sql\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nCREATE INDEX\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nMigrations applied.\n",
+        "stderr": "NOTICE:  extension \"vector\" already exists, skipping\nNOTICE:  relation \"documents\" already exists, skipping\nNOTICE:  relation \"chunks\" already exists, skipping\nNOTICE:  relation \"idx_chunks_document\" already exists, skipping\nNOTICE:  relation \"entities\" already exists, skipping\nNOTICE:  relation \"idx_entities_document\" already exists, skipping\nNOTICE:  relation \"idx_entities_type\" already exists, skipping\nNOTICE:  relation \"idx_entities_canonical\" already exists, skipping\nNOTICE:  relation \"relationships\" already exists, skipping\nNOTICE:  relation \"idx_rel_source_chunk\" already exists, skipping\nNOTICE:  relation \"idx_rel_source_doc\" already exists, skipping\nNOTICE:  relation \"idx_rel_type\" already exists, skipping\nNOTICE:  relation \"test_cases\" already exists, skipping\nNOTICE:  relation \"idx_test_cases_requirement_ids\" already exists, skipping\nNOTICE:  relation \"idx_test_cases_suite\" already exists, skipping\nNOTICE:  relation \"test_case_steps\" already exists, skipping\nNOTICE:  relation \"idx_test_case_steps_requirement\" already exists, skipping\nNOTICE:  relation \"idx_test_case_steps_case\" already exists, skipping\nNOTICE:  relation \"chunks_embedding_hnsw\" already exists, skipping\nNOTICE:  relation \"chunks_content_fts\" already exists, skipping\nNOTICE:  relation \"test_cases\" already exists, skipping\nNOTICE:  relation \"idx_test_cases_requirement_ids\" already exists, skipping\nNOTICE:  relation \"idx_test_cases_suite\" already exists, skipping\nNOTICE:  relation \"test_case_steps\" already exists, skipping\nNOTICE:  relation \"idx_test_case_steps_requirement\" already exists, skipping\nNOTICE:  relation \"idx_test_case_steps_case\" already exists, skipping\nNOTICE:  relation \"requirements\" already exists, skipping\nNOTICE:  relation \"idx_requirements_document_kind\" already exists, skipping\nNOTICE:  relation \"idx_requirements_source_chunk\" already exists, skipping\nNOTICE:  relation \"requirement_links\" already exists, skipping\nNOTICE:  relation \"idx_requirement_links_source\" already exists, skipping\nNOTICE:  relation \"idx_requirement_links_target\" already exists, skipping\nNOTICE:  relation \"idx_requirement_links_type\" already exists, skipping\nNOTICE:  relation \"rtm_rows\" already exists, skipping\nNOTICE:  relation \"idx_rtm_rows_status\" already exists, skipping\nNOTICE:  relation \"idx_rtm_rows_confidence\" already exists, skipping\n",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mondi9el_g3ip8m",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "phase": "ingest_sources",
+      "title": "Verify pgvector DB schema",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:36:35.229Z",
+      "finishedAt": "2026-05-01T20:36:35.563Z",
+      "technical": {
+        "rawLabel": "Verify pgvector DB schema",
+        "command": "set -euo pipefail\nDOCKER_BIN=\"$(command -v docker || true)\"\nif [ -z \"$DOCKER_BIN\" ]; then\n  for candidate in /opt/homebrew/bin/docker /usr/local/bin/docker /Applications/Docker.app/Contents/Resources/bin/docker; do\n    if [ -x \"$candidate\" ]; then\n      DOCKER_BIN=\"$candidate\"\n      break\n    fi\n  done\nfi\nif [ -z \"$DOCKER_BIN\" ]; then\n  echo \"Docker CLI not found. Install Docker Desktop or add docker to PATH.\" >&2\n  exit 127\nfi\nif ! \"$DOCKER_BIN\" info >/dev/null 2>&1; then\n  echo \"Docker CLI was found at $DOCKER_BIN, but the Docker daemon is not reachable.\" >&2\n  echo \"Open Docker Desktop and wait for the engine to finish starting.\" >&2\n  exit 1\nfi\nCOMPOSE=(\"$DOCKER_BIN\" compose -f ingestion/docker-compose.yml)\n\"${COMPOSE[@]}\" exec -T postgres psql -U ingestion -d ingestion -c \"select extname from pg_extension where extname = 'vector';\"\n\"${COMPOSE[@]}\" exec -T postgres psql -U ingestion -d ingestion -c \"select table_name from information_schema.tables where table_schema = 'public' order by table_name;\"",
+        "stdout": " extname \n---------\n vector\n(1 row)\n\n    table_name     \n-------------------\n chunks\n documents\n entities\n relationships\n requirement_links\n requirements\n rtm_rows\n test_case_steps\n test_cases\n(9 rows)\n\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mondi9nv_gfrrbv",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "phase": "ingest_sources",
+      "title": "Embed source documents into pgvector",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:36:35.563Z",
+      "finishedAt": "2026-05-01T20:36:44.172Z",
+      "technical": {
+        "rawLabel": "Embed source documents into pgvector",
+        "command": "source ingestion/.venv/bin/activate && DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python ingestion/scripts/ingest.py --format both --skip-test-cases --test-doc '/Users/utsavsharma/Documents/GitHub/QAMVP/test-doc'",
+        "stdout": "  ingested test-doc/01-business-requirements-document.docx (docx): 61 chunks\n  ingested test-doc/02-functional-requirements-specification.docx (docx): 114 chunks\n  ingested test-doc/03-test-design-specification.docx (docx): 26 chunks\n  ingested test-doc/04-test-strategy.docx (docx): 12 chunks\n  skip non-source document for first-phase ingestion: test-doc/05-test-plan.docx (other)\n  skip non-source document for first-phase ingestion: test-doc/06-requirements-traceability-matrix.docx (other)\n  skip non-source document for first-phase ingestion: test-doc/07-test-data-environment-specification.docx (other)\n  skip non-source document for first-phase ingestion: test-doc/08-quality-risk-defect-governance.docx (other)\n  skip non-source document for first-phase ingestion: test-doc/09-test-case-repository.docx (test_case_repository)\n  ingested test-doc/01-business-requirements-document.md (md): 86 chunks\n  ingested test-doc/02-functional-requirements-specification.md (md): 142 chunks\n  ingested test-doc/03-test-design-specification.md (md): 38 chunks\n  ingested test-doc/04-test-strategy.md (md): 20 chunks\n  skip non-source document for first-phase ingestion: test-doc/05-test-plan.md (other)\n  skip non-source document for first-phase ingestion: test-doc/06-requirements-traceability-matrix.md (other)\n  skip non-source document for first-phase ingestion: test-doc/07-test-data-environment-specification.md (other)\n  skip non-source document for first-phase ingestion: test-doc/08-quality-risk-defect-governance.md (other)\n  skip non-source document for first-phase ingestion: test-doc/09-test-case-repository.md (test_case_repository)\n  skip non-source document for first-phase ingestion: test-doc/README.md (other)\nDone.\n",
+        "stderr": "Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n\rLoading weights:   0%|          | 0/103 [00:00<?, ?it/s]\rLoading weights: 100%|██████████| 103/103 [00:00<00:00, 7692.82it/s]\n\u001b[1mBertModel LOAD REPORT\u001b[0m from: sentence-transformers/all-MiniLM-L6-v2\nKey                     | Status     |  | \n------------------------+------------+--+-\nembeddings.position_ids | UNEXPECTED |  | \n\nNotes:\n- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n\rBatches:   0%|          | 0/2 [00:00<?, ?it/s]\rBatches:  50%|█████     | 1/2 [00:00<00:00,  3.38it/s]\rBatches: 100%|██████████| 2/2 [00:00<00:00,  5.92it/s]\n\rBatches:   0%|          | 0/4 [00:00<?, ?it/s]\rBatches:  50%|█████     | 2/4 [00:00<00:00, 16.86it/s]\rBatches: 100%|██████████| 4/4 [00:00<00:00, 23.03it/s]\n\rBatches:   0%|          | 0/1 [00:00<?, ?it/s]\rBatches: 100%|██████████| 1/1 [00:00<00:00, 21.93it/s]\n\rBatches:   0%|          | 0/3 [00:00<?, ?it/s]\rBatches:  67%|██████▋   | 2/3 [00:00<00:00, 12.00it/s]\rBatches: 100%|██████████| 3/3 [00:00<00:00, 14.59it/s]\n\rBatches:   0%|          | 0/5 [00:00<?, ?it/s]\rBatches:  40%|████      | 2/5 [00:00<00:00, 14.77it/s]\rBatches: 100%|██████████| 5/5 [00:00<00:00, 22.22it/s]\rBatches: 100%|██████████| 5/5 [00:00<00:00, 20.94it/s]\n\rBatches:   0%|          | 0/2 [00:00<?, ?it/s]\rBatches: 100%|██████████| 2/2 [00:00<00:00, 20.75it/s]\n\rBatches:   0%|          | 0/1 [00:00<?, ?it/s]\rBatches: 100%|██████████| 1/1 [00:00<00:00, 23.51it/s]\n",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mondigb1_b3wepz",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "phase": "ingest_sources",
+      "title": "Derive requirement RTM",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:36:44.174Z",
+      "finishedAt": "2026-05-01T20:36:44.525Z",
+      "technical": {
+        "rawLabel": "Derive requirement RTM",
+        "command": "source ingestion/.venv/bin/activate && DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport hashlib, json, os, re\nfrom collections import defaultdict\n\nimport psycopg\nfrom psycopg.types.json import Json\n\nSOURCE_KINDS = (\"brd\", \"frs\", \"hld\", \"lld\")\nENTITY_TYPES = (\"REQ\", \"BR\", \"DESIGN\", \"SECTION\", \"API\", \"COMP\", \"DATA\", \"CTRL\")\nKIND_ORDER = {\"brd\": 0, \"frs\": 1, \"hld\": 2, \"lld\": 3}\n\ndef req_type(entity_type, req_id):\n    if entity_type == \"BR\" or req_id.startswith(\"BR-\"):\n        return \"business\"\n    if req_id.startswith(\"REQ-FR\") or req_id.startswith(\"FRS-\") or \"FRS\" in req_id:\n        return \"functional\"\n    if req_id.startswith(\"HLD-\") or \"HLD\" in req_id:\n        return \"hld_design\"\n    if req_id.startswith(\"LLD-\") or \"LLD\" in req_id:\n        return \"lld_design\"\n    if entity_type == \"SECTION\":\n        return \"section\"\n    if entity_type == \"DESIGN\":\n        return \"design\"\n    return \"requirement\"\n\ndef stable_hash(*parts):\n    return hashlib.sha256(\"|\".join(str(p or \"\") for p in parts).encode()).hexdigest()\n\nwith psycopg.connect(os.environ[\"DATABASE_URL\"]) as conn:\n    with conn.cursor() as cur:\n        cur.execute(\"delete from rtm_rows\")\n        cur.execute(\"delete from requirement_links\")\n        cur.execute(\"delete from requirements\")\n        cur.execute(\n            \"\"\"\n            select e.entity_type, e.canonical_id, d.id, c.id, d.kind, coalesce(c.heading_path, ''), c.content\n            from entities e\n            join documents d on d.id = e.document_id\n            join chunks c on c.id = e.chunk_id\n            where d.kind = any(%s)\n              and e.entity_type = any(%s)\n            order by d.kind, d.id, c.ordinal, e.canonical_id\n            \"\"\",\n            (list(SOURCE_KINDS), list(ENTITY_TYPES)),\n        )\n        rows = cur.fetchall()\n        by_chunk = defaultdict(list)\n        requirements = {}\n        for entity_type, canonical_id, doc_id, chunk_id, kind, heading, content in rows:\n            req_id = canonical_id.upper()\n            title = heading or req_id\n            text = re.sub(r\"\\s+\", \" \", content or \"\").strip()[:1200]\n            requirements[req_id] = {\n                \"requirement_id\": req_id,\n                \"requirement_type\": req_type(entity_type, req_id),\n                \"source_document_id\": doc_id,\n                \"source_chunk_id\": chunk_id,\n                \"document_kind\": kind,\n                \"title\": title[:240],\n                \"requirement_text\": text,\n                \"canonical_hash\": stable_hash(req_id, text),\n                \"metadata\": {\"entity_type\": entity_type},\n            }\n            by_chunk[chunk_id].append(req_id)\n\n        for item in requirements.values():\n            cur.execute(\n                \"\"\"\n                insert into requirements (\n                  requirement_id, requirement_type, source_document_id, source_chunk_id,\n                  document_kind, title, requirement_text, canonical_hash, metadata, updated_at\n                )\n                values (%s, %s, %s, %s, %s, %s, %s, %s, %s, now())\n                on conflict (requirement_id) do update set\n                  requirement_type = excluded.requirement_type,\n                  source_document_id = excluded.source_document_id,\n                  source_chunk_id = excluded.source_chunk_id,\n                  document_kind = excluded.document_kind,\n                  title = excluded.title,\n                  requirement_text = excluded.requirement_text,\n                  canonical_hash = excluded.canonical_hash,\n                  metadata = excluded.metadata,\n                  updated_at = now()\n                \"\"\",\n                (\n                    item[\"requirement_id\"],\n                    item[\"requirement_type\"],\n                    item[\"source_document_id\"],\n                    item[\"source_chunk_id\"],\n                    item[\"document_kind\"],\n                    item[\"title\"],\n                    item[\"requirement_text\"],\n                    item[\"canonical_hash\"],\n                    Json(item[\"metadata\"]),\n                ),\n            )\n\n        link_count = 0\n        for chunk_id, ids in by_chunk.items():\n            unique_ids = sorted(set(ids), key=lambda rid: (KIND_ORDER.get(requirements[rid][\"document_kind\"], 99), rid))\n            for source in unique_ids:\n                for target in unique_ids:\n                    if source == target:\n                        continue\n                    sk = requirements[source][\"document_kind\"]\n                    tk = requirements[target][\"document_kind\"]\n                    if KIND_ORDER.get(tk, 99) != KIND_ORDER.get(sk, 99) + 1:\n                        continue\n                    link_id = stable_hash(source, target, chunk_id)[:32]\n                    link_type = f\"{sk}_to_{tk}\"\n                    cur.execute(\n                        \"\"\"\n                        insert into requirement_links (\n                          id, source_requirement_id, target_requirement_id, link_type,\n                          confidence, evidence_chunk_id, evidence, metadata, updated_at\n                        )\n                        values (%s, %s, %s, %s, %s, %s, %s, %s, now())\n                        on conflict (id) do update set\n                          confidence = excluded.confidence,\n                          evidence_chunk_id = excluded.evidence_chunk_id,\n                          evidence = excluded.evidence,\n                          metadata = excluded.metadata,\n                          updated_at = now()\n                        \"\"\",\n                        (\n                            link_id,\n                            source,\n                            target,\n                            link_type,\n                            0.78,\n                            chunk_id,\n                            requirements[target][\"requirement_text\"][:500],\n                            Json({\"derivation\": \"same_chunk_adjacent_doc_kind\"}),\n                        ),\n                    )\n                    link_count += 1\n\n        by_kind = defaultdict(list)\n        for req_id, item in requirements.items():\n            by_kind[item[\"document_kind\"]].append(req_id)\n\n        rtm_count = 0\n        unmapped = 0\n        centers = by_kind[\"frs\"] or by_kind[\"brd\"] or sorted(requirements)\n        for idx, center in enumerate(sorted(centers)):\n            def nearest(kind):\n                candidates = sorted(by_kind[kind])\n                if not candidates:\n                    return None\n                return candidates[min(idx, len(candidates) - 1)]\n\n            br = nearest(\"brd\")\n            fr = center if requirements[center][\"document_kind\"] == \"frs\" else nearest(\"frs\")\n            hld = nearest(\"hld\")\n            lld = nearest(\"lld\")\n            linked = [x for x in (br, fr, hld, lld) if x]\n            missing = 4 - len(linked)\n            unmapped += missing\n            confidence = max(0.35, 1 - missing * 0.16)\n            status = \"complete\" if missing == 0 else \"partial\"\n            evidence = [requirements[x][\"source_chunk_id\"] for x in linked if requirements[x].get(\"source_chunk_id\")]\n            rtm_id = stable_hash(br, fr, hld, lld)[:32]\n            cur.execute(\n                \"\"\"\n                insert into rtm_rows (\n                  rtm_id, business_requirement_id, functional_requirement_id, hld_requirement_id,\n                  lld_requirement_id, coverage_status, confidence, evidence_chunk_ids, notes, metadata, updated_at\n                )\n                values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, now())\n                on conflict (rtm_id) do update set\n                  business_requirement_id = excluded.business_requirement_id,\n                  functional_requirement_id = excluded.functional_requirement_id,\n                  hld_requirement_id = excluded.hld_requirement_id,\n                  lld_requirement_id = excluded.lld_requirement_id,\n                  coverage_status = excluded.coverage_status,\n                  confidence = excluded.confidence,\n                  evidence_chunk_ids = excluded.evidence_chunk_ids,\n                  notes = excluded.notes,\n                  metadata = excluded.metadata,\n                  updated_at = now()\n                \"\"\",\n                (\n                    rtm_id,\n                    br,\n                    fr,\n                    hld,\n                    lld,\n                    status,\n                    confidence,\n                    evidence,\n                    f\"{missing} missing requirement column(s).\" if missing else \"All requirement columns mapped.\",\n                    Json({\"derived_from\": \"requirement_inventory\", \"center\": center}),\n                ),\n            )\n            rtm_count += 1\n\n        cur.execute(\"select count(*) from requirements\")\n        req_count = int(cur.fetchone()[0] or 0)\n        cur.execute(\"select count(*) from rtm_rows\")\n        row_count = int(cur.fetchone()[0] or 0)\n        cur.execute(\"select coalesce(avg(confidence), 0) from rtm_rows\")\n        avg_conf = float(cur.fetchone()[0] or 0)\n        conn.commit()\n\nprint(json.dumps({\n  \"requirements\": req_count,\n  \"rows\": row_count,\n  \"links\": link_count,\n  \"unmapped\": unmapped,\n  \"averageConfidence\": round(avg_conf, 3),\n}))\nPY",
+        "stdout": "{\"requirements\": 58, \"rows\": 22, \"links\": 634, \"unmapped\": 0, \"averageConfidence\": 1.0}\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mondigkv_a58bkk",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "phase": "ingest_sources",
+      "title": "Derived requirement RTM",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:36:44.527Z",
+      "finishedAt": "2026-05-01T20:36:44.527Z",
+      "summary": "22 RTM row(s), 58 requirement(s), 0 unmapped column(s).",
+      "technical": {
+        "rawLabel": "ingest:rtm",
+        "payload": {
+          "kind": "rtm-summary",
+          "requirements": 58,
+          "rows": 22,
+          "links": 634,
+          "unmapped": 0,
+          "averageConfidence": 1
+        }
+      }
+    },
+    {
+      "id": "event_mondigkv_bl83i9",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "phase": "ingest_sources",
+      "title": "Query ingestion knowledge graph",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:36:44.527Z",
+      "finishedAt": "2026-05-01T20:36:44.686Z",
+      "technical": {
+        "rawLabel": "Query ingestion knowledge graph",
+        "command": "source ingestion/.venv/bin/activate && DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport os, json, psycopg\nout = {\"documents\": [], \"entities\": [], \"relationships\": [], \"rel_samples\": [], \"rtm\": None}\nwith psycopg.connect(os.environ['DATABASE_URL']) as conn, conn.cursor() as cur:\n    cur.execute(\"\"\"\n      select d.id,\n             coalesce(d.title, d.path) as label,\n             coalesce(d.kind, d.source_format, 'doc') as kind,\n             (select count(*) from chunks c where c.document_id = d.id) as chunks,\n             (select count(*) from entities e where e.document_id = d.id) as entities,\n             (select count(*) from relationships r where r.source_document_id = d.id) as rels\n      from documents d\n      order by d.created_at desc nulls last, d.id desc\n      limit 30\n    \"\"\")\n    for row in cur.fetchall():\n        out[\"documents\"].append({\n            \"id\": int(row[0]),\n            \"label\": row[1] or \"\",\n            \"kind\": (row[2] or \"doc\").upper(),\n            \"chunks\": int(row[3] or 0),\n            \"entities\": int(row[4] or 0),\n            \"rels\": int(row[5] or 0),\n        })\n    cur.execute(\"select entity_type, count(*) from entities group by entity_type order by count(*) desc, entity_type\")\n    out[\"entities\"] = [{\"type\": t, \"count\": int(c)} for t, c in cur.fetchall()]\n    cur.execute(\"select rel_type, count(*) from relationships group by rel_type order by count(*) desc, rel_type limit 12\")\n    out[\"relationships\"] = [{\"type\": t, \"count\": int(c)} for t, c in cur.fetchall()]\n    cur.execute(\"\"\"\n      select r.rel_type,\n             coalesce(sd.title, sd.path, '') as source_label,\n             coalesce(nullif(r.target_path, ''), nullif(r.target_anchor, ''), '') as target_label\n      from relationships r\n      left join documents sd on sd.id = r.source_document_id\n      order by r.id desc\n      limit 8\n    \"\"\")\n    out[\"rel_samples\"] = [{\"type\": t, \"from\": s or \"\", \"to\": tg or \"\"} for t, s, tg in cur.fetchall()]\n    cur.execute(\"\"\"\n      select\n        coalesce((select count(*) from requirements), 0)::int,\n        coalesce((select count(*) from rtm_rows), 0)::int,\n        coalesce((select count(*) from requirement_links), 0)::int,\n        coalesce((select sum(4\n          - (case when business_requirement_id is null then 0 else 1 end)\n          - (case when functional_requirement_id is null then 0 else 1 end)\n          - (case when hld_requirement_id is null then 0 else 1 end)\n          - (case when lld_requirement_id is null then 0 else 1 end)\n        ) from rtm_rows), 0)::int,\n        coalesce((select avg(confidence) from rtm_rows), 0)::float\n    \"\"\")\n    reqs, rows, links, unmapped, avg_conf = cur.fetchone()\n    out[\"rtm\"] = {\n      \"requirements\": int(reqs or 0),\n      \"rows\": int(rows or 0),\n      \"links\": int(links or 0),\n      \"unmapped\": int(unmapped or 0),\n      \"averageConfidence\": round(float(avg_conf or 0), 3),\n    }\nprint(json.dumps(out))\nPY",
+        "stdout": "{\"documents\": [{\"id\": 60, \"label\": \"04-test-strategy\", \"kind\": \"LLD\", \"chunks\": 20, \"entities\": 2, \"rels\": 8}, {\"id\": 59, \"label\": \"03-test-design-specification\", \"kind\": \"HLD\", \"chunks\": 38, \"entities\": 42, \"rels\": 10}, {\"id\": 58, \"label\": \"02-functional-requirements-specification\", \"kind\": \"FRS\", \"chunks\": 142, \"entities\": 184, \"rels\": 6}, {\"id\": 57, \"label\": \"01-business-requirements-document\", \"kind\": \"BRD\", \"chunks\": 86, \"entities\": 161, \"rels\": 9}, {\"id\": 56, \"label\": \"04-test-strategy\", \"kind\": \"LLD\", \"chunks\": 12, \"entities\": 1, \"rels\": 8}, {\"id\": 55, \"label\": \"03-test-design-specification\", \"kind\": \"HLD\", \"chunks\": 26, \"entities\": 19, \"rels\": 10}, {\"id\": 54, \"label\": \"02-functional-requirements-specification\", \"kind\": \"FRS\", \"chunks\": 114, \"entities\": 127, \"rels\": 6}, {\"id\": 53, \"label\": \"01-business-requirements-document\", \"kind\": \"BRD\", \"chunks\": 61, \"entities\": 69, \"rels\": 8}, {\"id\": 32, \"label\": \"02-functional-requirements-specification\", \"kind\": \"FRS\", \"chunks\": 114, \"entities\": 127, \"rels\": 6}, {\"id\": 31, \"label\": \"01-business-requirements-document\", \"kind\": \"BRD\", \"chunks\": 61, \"entities\": 69, \"rels\": 8}], \"entities\": [{\"type\": \"BR\", \"count\": 481}, {\"type\": \"REQ\", \"count\": 281}, {\"type\": \"SECTION\", \"count\": 24}, {\"type\": \"TKT\", \"count\": 15}], \"relationships\": [{\"type\": \"docx_hyperlink\", \"count\": 46}, {\"type\": \"markdown_link\", \"count\": 33}], \"rel_samples\": [{\"type\": \"markdown_link\", \"from\": \"04-test-strategy\", \"to\": \"test-doc/05-test-plan.md\"}, {\"type\": \"markdown_link\", \"from\": \"04-test-strategy\", \"to\": \"test-doc/SDLC-Test-Tracker.xlsx\"}, {\"type\": \"markdown_link\", \"from\": \"04-test-strategy\", \"to\": \"test-doc/06-requirements-traceability-matrix.md\"}, {\"type\": \"markdown_link\", \"from\": \"04-test-strategy\", \"to\": \"test-doc/05-test-plan.md\"}, {\"type\": \"markdown_link\", \"from\": \"04-test-strategy\", \"to\": \"test-doc/03-test-design-specification.md\"}, {\"type\": \"markdown_link\", \"from\": \"04-test-strategy\", \"to\": \"test-doc/02-functional-requirements-specification.md\"}, {\"type\": \"markdown_link\", \"from\": \"04-test-strategy\", \"to\": \"test-doc/01-business-requirements-document.md\"}, {\"type\": \"markdown_link\", \"from\": \"04-test-strategy\", \"to\": \"test-doc/README.md\"}], \"rtm\": {\"requirements\": 58, \"rows\": 22, \"links\": 634, \"unmapped\": 0, \"averageConfidence\": 1.0}}\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mondigpa_j3aqep",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "phase": "ingest_sources",
+      "title": "Map ingested documents",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:36:44.686Z",
+      "finishedAt": "2026-05-01T20:36:44.867Z",
+      "summary": "Indexed 10 documents.",
+      "technical": {
+        "rawLabel": "ingest:documents",
+        "payload": {
+          "kind": "ingestion-section",
+          "section": "documents",
+          "documents": [
+            {
+              "id": 60,
+              "label": "04-test-strategy",
+              "kind": "LLD",
+              "chunks": 20,
+              "entities": 2,
+              "rels": 8
+            },
+            {
+              "id": 59,
+              "label": "03-test-design-specification",
+              "kind": "HLD",
+              "chunks": 38,
+              "entities": 42,
+              "rels": 10
+            },
+            {
+              "id": 58,
+              "label": "02-functional-requirements-specification",
+              "kind": "FRS",
+              "chunks": 142,
+              "entities": 184,
+              "rels": 6
+            },
+            {
+              "id": 57,
+              "label": "01-business-requirements-document",
+              "kind": "BRD",
+              "chunks": 86,
+              "entities": 161,
+              "rels": 9
+            },
+            {
+              "id": 56,
+              "label": "04-test-strategy",
+              "kind": "LLD",
+              "chunks": 12,
+              "entities": 1,
+              "rels": 8
+            },
+            {
+              "id": 55,
+              "label": "03-test-design-specification",
+              "kind": "HLD",
+              "chunks": 26,
+              "entities": 19,
+              "rels": 10
+            },
+            {
+              "id": 54,
+              "label": "02-functional-requirements-specification",
+              "kind": "FRS",
+              "chunks": 114,
+              "entities": 127,
+              "rels": 6
+            },
+            {
+              "id": 53,
+              "label": "01-business-requirements-document",
+              "kind": "BRD",
+              "chunks": 61,
+              "entities": 69,
+              "rels": 8
+            },
+            {
+              "id": 32,
+              "label": "02-functional-requirements-specification",
+              "kind": "FRS",
+              "chunks": 114,
+              "entities": 127,
+              "rels": 6
+            },
+            {
+              "id": 31,
+              "label": "01-business-requirements-document",
+              "kind": "BRD",
+              "chunks": 61,
+              "entities": 69,
+              "rels": 8
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "event_mondigub_emvm0f",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "phase": "ingest_sources",
+      "title": "Build entity map",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:36:44.867Z",
+      "finishedAt": "2026-05-01T20:36:45.049Z",
+      "summary": "801 entities across 4 types.",
+      "technical": {
+        "rawLabel": "ingest:entities",
+        "payload": {
+          "kind": "ingestion-section",
+          "section": "entities",
+          "entities": [
+            {
+              "type": "BR",
+              "count": 481
+            },
+            {
+              "type": "REQ",
+              "count": 281
+            },
+            {
+              "type": "SECTION",
+              "count": 24
+            },
+            {
+              "type": "TKT",
+              "count": 15
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "event_mondigzd_xjz1va",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "phase": "ingest_sources",
+      "title": "Trace relationships",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:36:45.049Z",
+      "finishedAt": "2026-05-01T20:36:45.231Z",
+      "summary": "79 relationships across 2 types.",
+      "technical": {
+        "rawLabel": "ingest:relationships",
+        "payload": {
+          "kind": "ingestion-section",
+          "section": "relationships",
+          "relationships": [
+            {
+              "type": "docx_hyperlink",
+              "count": 46
+            },
+            {
+              "type": "markdown_link",
+              "count": 33
+            }
+          ],
+          "samples": [
+            {
+              "type": "markdown_link",
+              "from": "04-test-strategy",
+              "to": "test-doc/05-test-plan.md"
+            },
+            {
+              "type": "markdown_link",
+              "from": "04-test-strategy",
+              "to": "test-doc/SDLC-Test-Tracker.xlsx"
+            },
+            {
+              "type": "markdown_link",
+              "from": "04-test-strategy",
+              "to": "test-doc/06-requirements-traceability-matrix.md"
+            },
+            {
+              "type": "markdown_link",
+              "from": "04-test-strategy",
+              "to": "test-doc/05-test-plan.md"
+            },
+            {
+              "type": "markdown_link",
+              "from": "04-test-strategy",
+              "to": "test-doc/03-test-design-specification.md"
+            },
+            {
+              "type": "markdown_link",
+              "from": "04-test-strategy",
+              "to": "test-doc/02-functional-requirements-specification.md"
+            },
+            {
+              "type": "markdown_link",
+              "from": "04-test-strategy",
+              "to": "test-doc/01-business-requirements-document.md"
+            },
+            {
+              "type": "markdown_link",
+              "from": "04-test-strategy",
+              "to": "test-doc/README.md"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "event_mondih7u_9apwts",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "phase": "ingest_sources",
+      "title": "Ingestion knowledge map",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:36:45.354Z",
+      "finishedAt": "2026-05-01T20:36:45.354Z",
+      "summary": "10 documents · 801 entities · 79 relationships · 22 RTM rows · 0 unmapped.",
+      "technical": {
+        "rawLabel": "ingest:map",
+        "payload": {
+          "kind": "ingestion-map",
+          "documents": [
+            {
+              "id": 60,
+              "label": "04-test-strategy",
+              "kind": "LLD",
+              "chunks": 20,
+              "entities": 2,
+              "rels": 8
+            },
+            {
+              "id": 59,
+              "label": "03-test-design-specification",
+              "kind": "HLD",
+              "chunks": 38,
+              "entities": 42,
+              "rels": 10
+            },
+            {
+              "id": 58,
+              "label": "02-functional-requirements-specification",
+              "kind": "FRS",
+              "chunks": 142,
+              "entities": 184,
+              "rels": 6
+            },
+            {
+              "id": 57,
+              "label": "01-business-requirements-document",
+              "kind": "BRD",
+              "chunks": 86,
+              "entities": 161,
+              "rels": 9
+            },
+            {
+              "id": 56,
+              "label": "04-test-strategy",
+              "kind": "LLD",
+              "chunks": 12,
+              "entities": 1,
+              "rels": 8
+            },
+            {
+              "id": 55,
+              "label": "03-test-design-specification",
+              "kind": "HLD",
+              "chunks": 26,
+              "entities": 19,
+              "rels": 10
+            },
+            {
+              "id": 54,
+              "label": "02-functional-requirements-specification",
+              "kind": "FRS",
+              "chunks": 114,
+              "entities": 127,
+              "rels": 6
+            },
+            {
+              "id": 53,
+              "label": "01-business-requirements-document",
+              "kind": "BRD",
+              "chunks": 61,
+              "entities": 69,
+              "rels": 8
+            },
+            {
+              "id": 32,
+              "label": "02-functional-requirements-specification",
+              "kind": "FRS",
+              "chunks": 114,
+              "entities": 127,
+              "rels": 6
+            },
+            {
+              "id": 31,
+              "label": "01-business-requirements-document",
+              "kind": "BRD",
+              "chunks": 61,
+              "entities": 69,
+              "rels": 8
+            }
+          ],
+          "entities": [
+            {
+              "type": "BR",
+              "count": 481
+            },
+            {
+              "type": "REQ",
+              "count": 281
+            },
+            {
+              "type": "SECTION",
+              "count": 24
+            },
+            {
+              "type": "TKT",
+              "count": 15
+            }
+          ],
+          "relationships": [
+            {
+              "type": "docx_hyperlink",
+              "count": 46
+            },
+            {
+              "type": "markdown_link",
+              "count": 33
+            }
+          ],
+          "rel_samples": [
+            {
+              "type": "markdown_link",
+              "from": "04-test-strategy",
+              "to": "test-doc/05-test-plan.md"
+            },
+            {
+              "type": "markdown_link",
+              "from": "04-test-strategy",
+              "to": "test-doc/SDLC-Test-Tracker.xlsx"
+            },
+            {
+              "type": "markdown_link",
+              "from": "04-test-strategy",
+              "to": "test-doc/06-requirements-traceability-matrix.md"
+            },
+            {
+              "type": "markdown_link",
+              "from": "04-test-strategy",
+              "to": "test-doc/05-test-plan.md"
+            },
+            {
+              "type": "markdown_link",
+              "from": "04-test-strategy",
+              "to": "test-doc/03-test-design-specification.md"
+            },
+            {
+              "type": "markdown_link",
+              "from": "04-test-strategy",
+              "to": "test-doc/02-functional-requirements-specification.md"
+            },
+            {
+              "type": "markdown_link",
+              "from": "04-test-strategy",
+              "to": "test-doc/01-business-requirements-document.md"
+            },
+            {
+              "type": "markdown_link",
+              "from": "04-test-strategy",
+              "to": "test-doc/README.md"
+            }
+          ],
+          "rtm": {
+            "requirements": 58,
+            "rows": 22,
+            "links": 634,
+            "unmapped": 0,
+            "averageConfidence": 1
+          }
+        }
+      }
+    },
+    {
+      "id": "event_mondih7v_4cgtpz",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "phase": "ingest_sources",
+      "title": "Summarize entity map",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:36:45.355Z",
+      "finishedAt": "2026-05-01T20:36:45.554Z",
+      "technical": {
+        "rawLabel": "Summarize entity map",
+        "command": "source ingestion/.venv/bin/activate && DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport os, psycopg\nwith psycopg.connect(os.environ['DATABASE_URL']) as conn, conn.cursor() as cur:\n    cur.execute(\"select entity_type, count(*) from entities group by entity_type order by entity_type\")\n    rows = cur.fetchall()\nprint('# Entity Map Summary')\nprint()\nprint('| Entity Type | Count |')\nprint('|---|---:|')\nfor t, c in rows:\n    print(f'| {t} | {c} |')\nPY",
+        "stdout": "# Entity Map Summary\n\n| Entity Type | Count |\n|---|---:|\n| BR | 481 |\n| REQ | 281 |\n| SECTION | 24 |\n| TKT | 15 |\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mondihdg_zzuj9z",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "phase": "rag_ready",
+      "title": "Document QA knowledge base ready",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:36:45.556Z",
+      "finishedAt": "2026-05-01T20:36:45.556Z",
+      "summary": "Documents are ingested and ready for grounded Q&A. Ask questions about the source pack or request TestCases.xlsx generation."
+    },
+    {
+      "id": "event_mondiq9k_r4ecsl",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "phase": "rag_ready",
+      "title": "Cursor SDK tool harness",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:36:57.080Z",
+      "finishedAt": "2026-05-01T20:37:18.677Z",
+      "summary": "Cursor SDK tool harness completed.",
+      "technical": {
+        "rawLabel": "cursor-tools:rag_ready",
+        "sdkPrompt": "Which requirements are unmapped in the derived RTM? Use RTM tools and explain the method.",
+        "payload": {
+          "toolResults": [
+            {
+              "ok": true,
+              "tool": "inspect_rtm",
+              "result": {
+                "purpose": "Inspect derived RTM",
+                "sql": "select rtm_id, business_requirement_id, functional_requirement_id, hld_requirement_id, lld_requirement_id, coverage_status, confidence, notes from rtm_rows order by confidence asc, rtm_id limit 150",
+                "rowCount": 0,
+                "rows": [],
+                "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 12, in <module>\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.2_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/__init__.py\", line 235, in dumps\n    return _default_encoder.encode(obj)\n           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.2_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/encoder.py\", line 202, in encode\n    chunks = self.iterencode(o, _one_shot=True)\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.2_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/encoder.py\", line 263, in iterencode\n    return _iterencode(o, 0)\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.2_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/encoder.py\", line 182, in default\n    raise TypeError(f'Object of type {o.__class__.__name__} '\n                    f'is not JSON serializable')\nTypeError: Object of type Decimal is not JSON serializable\nwhen serializing dict item 'confidence'\nwhen serializing list item 0\nwhen serializing dict item 'rows'\n"
+              }
+            },
+            {
+              "ok": true,
+              "tool": "inspect_rtm",
+              "result": {
+                "purpose": "Inspect derived RTM",
+                "sql": "select rtm_id, business_requirement_id, functional_requirement_id, hld_requirement_id, lld_requirement_id, coverage_status, confidence, notes from rtm_rows where coverage_status = 'partial' order by confidence asc, rtm_id limit 150",
+                "columns": [
+                  "rtm_id",
+                  "business_requirement_id",
+                  "functional_requirement_id",
+                  "hld_requirement_id",
+                  "lld_requirement_id",
+                  "coverage_status",
+                  "confidence",
+                  "notes"
+                ],
+                "rows": [],
+                "rowCount": 0
+              }
+            },
+            {
+              "ok": true,
+              "tool": "query_kb_sql",
+              "result": {
+                "purpose": "RTM coverage_status distribution",
+                "sql": "SELECT coverage_status, COUNT(*) AS cnt FROM rtm_rows GROUP BY coverage_status ORDER BY cnt DESC",
+                "columns": [
+                  "coverage_status",
+                  "cnt"
+                ],
+                "rows": [
+                  {
+                    "coverage_status": "complete",
+                    "cnt": 22
+                  }
+                ],
+                "rowCount": 1
+              }
+            },
+            {
+              "ok": true,
+              "tool": "query_kb_sql",
+              "result": {
+                "purpose": "Requirements not fully mapped (not complete) in derived RTM",
+                "sql": "SELECT rtm_id, business_requirement_id, functional_requirement_id, hld_requirement_id, lld_requirement_id, coverage_status, CAST(confidence AS REAL) AS confidence, notes FROM rtm_rows WHERE coverage_status IS DISTINCT FROM 'complete' ORDER BY confidence ASC NULLS LAST, rtm_id",
+                "columns": [
+                  "rtm_id",
+                  "business_requirement_id",
+                  "functional_requirement_id",
+                  "hld_requirement_id",
+                  "lld_requirement_id",
+                  "coverage_status",
+                  "confidence",
+                  "notes"
+                ],
+                "rows": [],
+                "rowCount": 0
+              }
+            },
+            {
+              "ok": true,
+              "tool": "query_kb_sql",
+              "result": {
+                "purpose": "Non-complete RTM rows SQLite-compatible",
+                "sql": "SELECT rtm_id, business_requirement_id, functional_requirement_id, hld_requirement_id, lld_requirement_id, coverage_status, CAST(confidence AS REAL) AS confidence, notes FROM rtm_rows WHERE IFNULL(coverage_status, '') != 'complete' ORDER BY confidence ASC, rtm_id",
+                "rowCount": 0,
+                "rows": [],
+                "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 9, in <module>\n  File \"/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/.venv/lib/python3.14/site-packages/psycopg/cursor.py\", line 117, in execute\n    raise ex.with_traceback(None)\npsycopg.errors.UndefinedFunction: function ifnull(text, unknown) does not exist\nLINE 1: ...AS REAL) AS confidence, notes FROM rtm_rows WHERE IFNULL(cov...\n                                                             ^\nHINT:  No function matches the given name and argument types. You might need to add explicit type casts.\n"
+              }
+            }
+          ]
+        },
+        "stdout": "## Unmapped requirements in the derived RTM\n\n**There are none that are flagged as non-complete in `rtm_rows`.**  \n\nAnalytics on the KB showed a single coverage bucket:\n\n| `coverage_status` | Count |\n|-------------------|-------|\n| `complete`        | 22    |\n\nA follow-up query for rows where `coverage_status` is not `'complete'` (`IS DISTINCT FROM 'complete'`, with `confidence` cast for JSON safety) returned **0 rows**.\n\nSo in this database, **every derived RTM row is stored as fully mapped** (`coverage_status = 'complete'`). There are **no** `partial` (or other non-complete) RTM entries to list.\n\n### Method (what we did)\n\n1. **`inspect_rtm`** (preferred for RTM questions):  \n   - Unfiltered call failed when serializing results (`confidence` as `Decimal` → not JSON-serializable), so we did not get a row list from that path.  \n   - `inspect_rtm` with `status: \"partial\"` returned **0 rows**, which is consistent with there being no partial rows in `rtm_rows`.\n\n2. **`query_kb_sql`** (read-only):  \n   - **`GROUP BY coverage_status`** — distribution of trace states.  \n   - **`WHERE coverage_status IS DISTINCT FROM 'complete'`** — explicit list of anything not fully covered; empty result.\n\n### How to read this\n\n- **“Unmapped” in the sense of the derived RTM table** = rows that are not `complete`. **Answer: none (0 of 22).**  \n- **“Unmapped” in the sense of requirements that never appear in `rtm_rows` at all** would require comparing normalized requirement inventory to RTM keys (e.g. via `inspect_requirements` and/or joins); that is **not** what the `coverage_status` breakdown answers by itself.\n\nIf you want the stricter “requirements missing from RTM entirely” view, say so and we can drive that with **`inspect_requirements`** plus a targeted **`query_kb_sql`** join in the next round."
+      }
+    },
+    {
+      "id": "event_mondivtl_kd7op5",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "phase": "rag_ready",
+      "title": "Tool inspect_rtm",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:37:04.281Z",
+      "finishedAt": "2026-05-01T20:37:04.476Z",
+      "summary": "inspect_rtm returned 0 row(s).",
+      "technical": {
+        "rawLabel": "tool:inspect_rtm",
+        "toolName": "inspect_rtm",
+        "payload": {
+          "ok": true,
+          "tool": "inspect_rtm",
+          "result": {
+            "purpose": "Inspect derived RTM",
+            "sql": "select rtm_id, business_requirement_id, functional_requirement_id, hld_requirement_id, lld_requirement_id, coverage_status, confidence, notes from rtm_rows order by confidence asc, rtm_id limit 150",
+            "rowCount": 0,
+            "rows": [],
+            "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 12, in <module>\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.2_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/__init__.py\", line 235, in dumps\n    return _default_encoder.encode(obj)\n           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.2_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/encoder.py\", line 202, in encode\n    chunks = self.iterencode(o, _one_shot=True)\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.2_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/encoder.py\", line 263, in iterencode\n    return _iterencode(o, 0)\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.2_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/encoder.py\", line 182, in default\n    raise TypeError(f'Object of type {o.__class__.__name__} '\n                    f'is not JSON serializable')\nTypeError: Object of type Decimal is not JSON serializable\nwhen serializing dict item 'confidence'\nwhen serializing list item 0\nwhen serializing dict item 'rows'\n"
+          }
+        },
+        "stdout": "{\n  \"purpose\": \"Inspect derived RTM\",\n  \"sql\": \"select rtm_id, business_requirement_id, functional_requirement_id, hld_requirement_id, lld_requirement_id, coverage_status, confidence, notes from rtm_rows order by confidence asc, rtm_id limit 150\",\n  \"rowCount\": 0,\n  \"rows\": [],\n  \"error\": \"Traceback (most recent call last):\\n  File \\\"<stdin>\\\", line 12, in <module>\\n  File \\\"/opt/homebrew/Cellar/python@3.14/3.14.2_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/__init__.py\\\", line 235, in dumps\\n    return _default_encoder.encode(obj)\\n           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^\\n  File \\\"/opt/homebrew/Cellar/python@3.14/3.14.2_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/encoder.py\\\", line 202, in encode\\n    chunks = self.iterencode(o, _one_shot=True)\\n  File \\\"/opt/homebrew/Cellar/python@3.14/3.14.2_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/encoder.py\\\", line 263, in iterencode\\n    return _iterencode(o, 0)\\n  File \\\"/opt/homebrew/Cellar/python@3.14/3.14.2_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/encoder.py\\\", line 182, in default\\n    raise TypeError(f'Object of type {o.__class__.__name__} '\\n                    f'is not JSON serializable')\\nTypeError: Object of type Decimal is not JSON serializable\\nwhen serializing dict item 'confidence'\\nwhen serializing list item 0\\nwhen serializing dict item 'rows'\\n\"\n}"
+      }
+    },
+    {
+      "id": "event_mondivtn_iyc3lg",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "phase": "rag_ready",
+      "title": "Tool query_kb_sql: Inspect derived RTM",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:37:04.283Z",
+      "finishedAt": "2026-05-01T20:37:04.475Z",
+      "technical": {
+        "rawLabel": "Tool query_kb_sql: Inspect derived RTM",
+        "command": "source ingestion/.venv/bin/activate && UI_QA_SQL='select rtm_id,\n           business_requirement_id,\n           functional_requirement_id,\n           hld_requirement_id,\n           lld_requirement_id,\n           coverage_status,\n           confidence,\n           notes\n    from rtm_rows\n    \n    order by confidence asc, rtm_id\n    limit 150' UI_QA_LIMIT=150 DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport json, os, psycopg\nsql = os.environ[\"UI_QA_SQL\"]\nlimit = int(os.environ.get(\"UI_QA_LIMIT\", \"50\"))\nwrapped = f\"select * from ({sql}) as uiqa_readonly_result limit {limit}\"\nwith psycopg.connect(os.environ[\"DATABASE_URL\"]) as conn:\n    conn.execute(\"set statement_timeout = '5000ms'\")\n    conn.execute(\"set transaction read only\")\n    with conn.cursor() as cur:\n        cur.execute(wrapped)\n        columns = [desc.name for desc in cur.description]\n        rows = [dict(zip(columns, row)) for row in cur.fetchall()]\nprint(json.dumps({\"columns\": columns, \"rows\": rows, \"rowCount\": len(rows)}))\nPY",
+        "stdout": "",
+        "stderr": "Traceback (most recent call last):\n  File \"<stdin>\", line 12, in <module>\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.2_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/__init__.py\", line 235, in dumps\n    return _default_encoder.encode(obj)\n           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.2_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/encoder.py\", line 202, in encode\n    chunks = self.iterencode(o, _one_shot=True)\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.2_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/encoder.py\", line 263, in iterencode\n    return _iterencode(o, 0)\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.2_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/encoder.py\", line 182, in default\n    raise TypeError(f'Object of type {o.__class__.__name__} '\n                    f'is not JSON serializable')\nTypeError: Object of type Decimal is not JSON serializable\nwhen serializing dict item 'confidence'\nwhen serializing list item 0\nwhen serializing dict item 'rows'\n",
+        "exitCode": 1
+      }
+    },
+    {
+      "id": "event_mondivz0_79gc9r",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "phase": "rag_ready",
+      "title": "Tool inspect_rtm",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:37:04.476Z",
+      "finishedAt": "2026-05-01T20:37:04.630Z",
+      "summary": "inspect_rtm returned 0 row(s).",
+      "technical": {
+        "rawLabel": "tool:inspect_rtm",
+        "toolName": "inspect_rtm",
+        "payload": {
+          "ok": true,
+          "tool": "inspect_rtm",
+          "result": {
+            "purpose": "Inspect derived RTM",
+            "sql": "select rtm_id, business_requirement_id, functional_requirement_id, hld_requirement_id, lld_requirement_id, coverage_status, confidence, notes from rtm_rows where coverage_status = 'partial' order by confidence asc, rtm_id limit 150",
+            "columns": [
+              "rtm_id",
+              "business_requirement_id",
+              "functional_requirement_id",
+              "hld_requirement_id",
+              "lld_requirement_id",
+              "coverage_status",
+              "confidence",
+              "notes"
+            ],
+            "rows": [],
+            "rowCount": 0
+          }
+        },
+        "stdout": "{\n  \"purpose\": \"Inspect derived RTM\",\n  \"sql\": \"select rtm_id, business_requirement_id, functional_requirement_id, hld_requirement_id, lld_requirement_id, coverage_status, confidence, notes from rtm_rows where coverage_status = 'partial' order by confidence asc, rtm_id limit 150\",\n  \"columns\": [\n    \"rtm_id\",\n    \"business_requirement_id\",\n    \"functional_requirement_id\",\n    \"hld_requirement_id\",\n    \"lld_requirement_id\",\n    \"coverage_status\",\n    \"confidence\",\n    \"notes\"\n  ],\n  \"rows\": [],\n  \"rowCount\": 0\n}"
+      }
+    },
+    {
+      "id": "event_mondivz0_roz2im",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "phase": "rag_ready",
+      "title": "Tool query_kb_sql: Inspect derived RTM",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:37:04.476Z",
+      "finishedAt": "2026-05-01T20:37:04.629Z",
+      "technical": {
+        "rawLabel": "Tool query_kb_sql: Inspect derived RTM",
+        "command": "source ingestion/.venv/bin/activate && UI_QA_SQL='select rtm_id,\n           business_requirement_id,\n           functional_requirement_id,\n           hld_requirement_id,\n           lld_requirement_id,\n           coverage_status,\n           confidence,\n           notes\n    from rtm_rows\n    where coverage_status = '\\''partial'\\''\n    order by confidence asc, rtm_id\n    limit 150' UI_QA_LIMIT=150 DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport json, os, psycopg\nsql = os.environ[\"UI_QA_SQL\"]\nlimit = int(os.environ.get(\"UI_QA_LIMIT\", \"50\"))\nwrapped = f\"select * from ({sql}) as uiqa_readonly_result limit {limit}\"\nwith psycopg.connect(os.environ[\"DATABASE_URL\"]) as conn:\n    conn.execute(\"set statement_timeout = '5000ms'\")\n    conn.execute(\"set transaction read only\")\n    with conn.cursor() as cur:\n        cur.execute(wrapped)\n        columns = [desc.name for desc in cur.description]\n        rows = [dict(zip(columns, row)) for row in cur.fetchall()]\nprint(json.dumps({\"columns\": columns, \"rows\": rows, \"rowCount\": len(rows)}))\nPY",
+        "stdout": "{\"columns\": [\"rtm_id\", \"business_requirement_id\", \"functional_requirement_id\", \"hld_requirement_id\", \"lld_requirement_id\", \"coverage_status\", \"confidence\", \"notes\"], \"rows\": [], \"rowCount\": 0}\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mondj1xh_3yk703",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "phase": "rag_ready",
+      "title": "Tool query_kb_sql",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:37:12.197Z",
+      "finishedAt": "2026-05-01T20:37:12.376Z",
+      "summary": "query_kb_sql returned 1 row(s).",
+      "technical": {
+        "rawLabel": "tool:query_kb_sql",
+        "toolName": "query_kb_sql",
+        "payload": {
+          "ok": true,
+          "tool": "query_kb_sql",
+          "result": {
+            "purpose": "RTM coverage_status distribution",
+            "sql": "SELECT coverage_status, COUNT(*) AS cnt FROM rtm_rows GROUP BY coverage_status ORDER BY cnt DESC",
+            "columns": [
+              "coverage_status",
+              "cnt"
+            ],
+            "rows": [
+              {
+                "coverage_status": "complete",
+                "cnt": 22
+              }
+            ],
+            "rowCount": 1
+          }
+        },
+        "stdout": "{\n  \"purpose\": \"RTM coverage_status distribution\",\n  \"sql\": \"SELECT coverage_status, COUNT(*) AS cnt FROM rtm_rows GROUP BY coverage_status ORDER BY cnt DESC\",\n  \"columns\": [\n    \"coverage_status\",\n    \"cnt\"\n  ],\n  \"rows\": [\n    {\n      \"coverage_status\": \"complete\",\n      \"cnt\": 22\n    }\n  ],\n  \"rowCount\": 1\n}"
+      }
+    },
+    {
+      "id": "event_mondj1xi_58m303",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "phase": "rag_ready",
+      "title": "Tool query_kb_sql: RTM coverage_status distribution",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:37:12.198Z",
+      "finishedAt": "2026-05-01T20:37:12.376Z",
+      "technical": {
+        "rawLabel": "Tool query_kb_sql: RTM coverage_status distribution",
+        "command": "source ingestion/.venv/bin/activate && UI_QA_SQL='SELECT coverage_status, COUNT(*) AS cnt FROM rtm_rows GROUP BY coverage_status ORDER BY cnt DESC' UI_QA_LIMIT=50 DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport json, os, psycopg\nsql = os.environ[\"UI_QA_SQL\"]\nlimit = int(os.environ.get(\"UI_QA_LIMIT\", \"50\"))\nwrapped = f\"select * from ({sql}) as uiqa_readonly_result limit {limit}\"\nwith psycopg.connect(os.environ[\"DATABASE_URL\"]) as conn:\n    conn.execute(\"set statement_timeout = '5000ms'\")\n    conn.execute(\"set transaction read only\")\n    with conn.cursor() as cur:\n        cur.execute(wrapped)\n        columns = [desc.name for desc in cur.description]\n        rows = [dict(zip(columns, row)) for row in cur.fetchall()]\nprint(json.dumps({\"columns\": columns, \"rows\": rows, \"rowCount\": len(rows)}))\nPY",
+        "stdout": "{\"columns\": [\"coverage_status\", \"cnt\"], \"rows\": [{\"coverage_status\": \"complete\", \"cnt\": 22}], \"rowCount\": 1}\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mondj22h_95eys7",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "phase": "rag_ready",
+      "title": "Tool query_kb_sql",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:37:12.377Z",
+      "finishedAt": "2026-05-01T20:37:12.537Z",
+      "summary": "query_kb_sql returned 0 row(s).",
+      "technical": {
+        "rawLabel": "tool:query_kb_sql",
+        "toolName": "query_kb_sql",
+        "payload": {
+          "ok": true,
+          "tool": "query_kb_sql",
+          "result": {
+            "purpose": "Requirements not fully mapped (not complete) in derived RTM",
+            "sql": "SELECT rtm_id, business_requirement_id, functional_requirement_id, hld_requirement_id, lld_requirement_id, coverage_status, CAST(confidence AS REAL) AS confidence, notes FROM rtm_rows WHERE coverage_status IS DISTINCT FROM 'complete' ORDER BY confidence ASC NULLS LAST, rtm_id",
+            "columns": [
+              "rtm_id",
+              "business_requirement_id",
+              "functional_requirement_id",
+              "hld_requirement_id",
+              "lld_requirement_id",
+              "coverage_status",
+              "confidence",
+              "notes"
+            ],
+            "rows": [],
+            "rowCount": 0
+          }
+        },
+        "stdout": "{\n  \"purpose\": \"Requirements not fully mapped (not complete) in derived RTM\",\n  \"sql\": \"SELECT rtm_id, business_requirement_id, functional_requirement_id, hld_requirement_id, lld_requirement_id, coverage_status, CAST(confidence AS REAL) AS confidence, notes FROM rtm_rows WHERE coverage_status IS DISTINCT FROM 'complete' ORDER BY confidence ASC NULLS LAST, rtm_id\",\n  \"columns\": [\n    \"rtm_id\",\n    \"business_requirement_id\",\n    \"functional_requirement_id\",\n    \"hld_requirement_id\",\n    \"lld_requirement_id\",\n    \"coverage_status\",\n    \"confidence\",\n    \"notes\"\n  ],\n  \"rows\": [],\n  \"rowCount\": 0\n}"
+      }
+    },
+    {
+      "id": "event_mondj22h_m8ruf9",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "phase": "rag_ready",
+      "title": "Tool query_kb_sql: Requirements not fully mapped (not complete) in derived RTM",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:37:12.377Z",
+      "finishedAt": "2026-05-01T20:37:12.537Z",
+      "technical": {
+        "rawLabel": "Tool query_kb_sql: Requirements not fully mapped (not complete) in derived RTM",
+        "command": "source ingestion/.venv/bin/activate && UI_QA_SQL='SELECT rtm_id, business_requirement_id, functional_requirement_id, hld_requirement_id, lld_requirement_id, coverage_status, CAST(confidence AS REAL) AS confidence, notes FROM rtm_rows WHERE coverage_status IS DISTINCT FROM '\\''complete'\\'' ORDER BY confidence ASC NULLS LAST, rtm_id' UI_QA_LIMIT=200 DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport json, os, psycopg\nsql = os.environ[\"UI_QA_SQL\"]\nlimit = int(os.environ.get(\"UI_QA_LIMIT\", \"50\"))\nwrapped = f\"select * from ({sql}) as uiqa_readonly_result limit {limit}\"\nwith psycopg.connect(os.environ[\"DATABASE_URL\"]) as conn:\n    conn.execute(\"set statement_timeout = '5000ms'\")\n    conn.execute(\"set transaction read only\")\n    with conn.cursor() as cur:\n        cur.execute(wrapped)\n        columns = [desc.name for desc in cur.description]\n        rows = [dict(zip(columns, row)) for row in cur.fetchall()]\nprint(json.dumps({\"columns\": columns, \"rows\": rows, \"rowCount\": len(rows)}))\nPY",
+        "stdout": "{\"columns\": [\"rtm_id\", \"business_requirement_id\", \"functional_requirement_id\", \"hld_requirement_id\", \"lld_requirement_id\", \"coverage_status\", \"confidence\", \"notes\"], \"rows\": [], \"rowCount\": 0}\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mondj26y_rd1ubr",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "phase": "rag_ready",
+      "title": "Tool query_kb_sql",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:37:12.538Z",
+      "finishedAt": "2026-05-01T20:37:12.704Z",
+      "summary": "query_kb_sql returned 0 row(s).",
+      "technical": {
+        "rawLabel": "tool:query_kb_sql",
+        "toolName": "query_kb_sql",
+        "payload": {
+          "ok": true,
+          "tool": "query_kb_sql",
+          "result": {
+            "purpose": "Non-complete RTM rows SQLite-compatible",
+            "sql": "SELECT rtm_id, business_requirement_id, functional_requirement_id, hld_requirement_id, lld_requirement_id, coverage_status, CAST(confidence AS REAL) AS confidence, notes FROM rtm_rows WHERE IFNULL(coverage_status, '') != 'complete' ORDER BY confidence ASC, rtm_id",
+            "rowCount": 0,
+            "rows": [],
+            "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 9, in <module>\n  File \"/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/.venv/lib/python3.14/site-packages/psycopg/cursor.py\", line 117, in execute\n    raise ex.with_traceback(None)\npsycopg.errors.UndefinedFunction: function ifnull(text, unknown) does not exist\nLINE 1: ...AS REAL) AS confidence, notes FROM rtm_rows WHERE IFNULL(cov...\n                                                             ^\nHINT:  No function matches the given name and argument types. You might need to add explicit type casts.\n"
+          }
+        },
+        "stdout": "{\n  \"purpose\": \"Non-complete RTM rows SQLite-compatible\",\n  \"sql\": \"SELECT rtm_id, business_requirement_id, functional_requirement_id, hld_requirement_id, lld_requirement_id, coverage_status, CAST(confidence AS REAL) AS confidence, notes FROM rtm_rows WHERE IFNULL(coverage_status, '') != 'complete' ORDER BY confidence ASC, rtm_id\",\n  \"rowCount\": 0,\n  \"rows\": [],\n  \"error\": \"Traceback (most recent call last):\\n  File \\\"<stdin>\\\", line 9, in <module>\\n  File \\\"/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/.venv/lib/python3.14/site-packages/psycopg/cursor.py\\\", line 117, in execute\\n    raise ex.with_traceback(None)\\npsycopg.errors.UndefinedFunction: function ifnull(text, unknown) does not exist\\nLINE 1: ...AS REAL) AS confidence, notes FROM rtm_rows WHERE IFNULL(cov...\\n                                                             ^\\nHINT:  No function matches the given name and argument types. You might need to add explicit type casts.\\n\"\n}"
+      }
+    },
+    {
+      "id": "event_mondj26y_2czwjg",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "phase": "rag_ready",
+      "title": "Tool query_kb_sql: Non-complete RTM rows SQLite-compatible",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:37:12.538Z",
+      "finishedAt": "2026-05-01T20:37:12.704Z",
+      "technical": {
+        "rawLabel": "Tool query_kb_sql: Non-complete RTM rows SQLite-compatible",
+        "command": "source ingestion/.venv/bin/activate && UI_QA_SQL='SELECT rtm_id, business_requirement_id, functional_requirement_id, hld_requirement_id, lld_requirement_id, coverage_status, CAST(confidence AS REAL) AS confidence, notes FROM rtm_rows WHERE IFNULL(coverage_status, '\\'''\\'') != '\\''complete'\\'' ORDER BY confidence ASC, rtm_id' UI_QA_LIMIT=200 DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport json, os, psycopg\nsql = os.environ[\"UI_QA_SQL\"]\nlimit = int(os.environ.get(\"UI_QA_LIMIT\", \"50\"))\nwrapped = f\"select * from ({sql}) as uiqa_readonly_result limit {limit}\"\nwith psycopg.connect(os.environ[\"DATABASE_URL\"]) as conn:\n    conn.execute(\"set statement_timeout = '5000ms'\")\n    conn.execute(\"set transaction read only\")\n    with conn.cursor() as cur:\n        cur.execute(wrapped)\n        columns = [desc.name for desc in cur.description]\n        rows = [dict(zip(columns, row)) for row in cur.fetchall()]\nprint(json.dumps({\"columns\": columns, \"rows\": rows, \"rowCount\": len(rows)}))\nPY",
+        "stdout": "",
+        "stderr": "Traceback (most recent call last):\n  File \"<stdin>\", line 9, in <module>\n  File \"/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/.venv/lib/python3.14/site-packages/psycopg/cursor.py\", line 117, in execute\n    raise ex.with_traceback(None)\npsycopg.errors.UndefinedFunction: function ifnull(text, unknown) does not exist\nLINE 1: ...AS REAL) AS confidence, notes FROM rtm_rows WHERE IFNULL(cov...\n                                                             ^\nHINT:  No function matches the given name and argument types. You might need to add explicit type casts.\n",
+        "exitCode": 1
+      }
+    },
+    {
+      "id": "event_mondj6yo_kli2h9",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "phase": "rag_ready",
+      "title": "Cursor SDK tool harness",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:37:18.720Z",
+      "finishedAt": "2026-05-01T20:38:24.200Z",
+      "summary": "Cursor SDK tool harness completed.",
+      "technical": {
+        "rawLabel": "cursor-tools:rag_ready",
+        "sdkPrompt": "Create TestCases.xlsx from the derived RTM and audit confidence/source alignment.",
+        "payload": {
+          "toolResults": [
+            {
+              "ok": true,
+              "tool": "inspect_rtm",
+              "result": {
+                "purpose": "Inspect derived RTM",
+                "sql": "select rtm_id, business_requirement_id, functional_requirement_id, hld_requirement_id, lld_requirement_id, coverage_status, confidence, notes from rtm_rows order by confidence asc, rtm_id limit 50",
+                "rowCount": 0,
+                "rows": [],
+                "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 12, in <module>\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.2_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/__init__.py\", line 235, in dumps\n    return _default_encoder.encode(obj)\n           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.2_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/encoder.py\", line 202, in encode\n    chunks = self.iterencode(o, _one_shot=True)\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.2_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/encoder.py\", line 263, in iterencode\n    return _iterencode(o, 0)\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.2_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/encoder.py\", line 182, in default\n    raise TypeError(f'Object of type {o.__class__.__name__} '\n                    f'is not JSON serializable')\nTypeError: Object of type Decimal is not JSON serializable\nwhen serializing dict item 'confidence'\nwhen serializing list item 0\nwhen serializing dict item 'rows'\n"
+              }
+            },
+            {
+              "ok": true,
+              "tool": "generate_testcases_from_kb",
+              "result": {
+                "generated": true,
+                "cases": 8,
+                "workbook": "test_data/TestCases.xlsx",
+                "blockerCount": 0,
+                "auditVerdict": "approved"
+              }
+            },
+            {
+              "ok": true,
+              "tool": "audit_testcase_traceability",
+              "result": {
+                "blockerCount": 0,
+                "findingCounts": {
+                  "critical": 0,
+                  "high": 0,
+                  "medium": 0,
+                  "low": 0
+                },
+                "auditEvidence": [
+                  {
+                    "id": "ev_mondkfp6_k0g01a",
+                    "createdAt": "2026-05-01T20:38:16.698Z",
+                    "kind": "report",
+                    "label": "Generated test confidence audit",
+                    "path": "test_data/test-results/generated_test_case_audit_20260501203816.md",
+                    "phase": "audit_generated_tests"
+                  },
+                  {
+                    "id": "ev_mondkfp7_zky0zn",
+                    "createdAt": "2026-05-01T20:38:16.699Z",
+                    "kind": "json",
+                    "label": "Generated test confidence audit JSON",
+                    "path": "test_data/test-results/generated_test_case_audit_20260501203816.json",
+                    "phase": "audit_generated_tests"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "stdout": "Here is a concise wrap-up based on **Round 2 tool results** (no further `tool_calls` needed for this synthesis).\n\n## What completed successfully\n\n**`generate_testcases_from_kb`** ran successfully with scope aligned to derived RTM:\n\n| Outcome | Value |\n|--------|--------|\n| Workbook | `test_data/TestCases.xlsx` |\n| Cases generated | 8 |\n| Blockers | 0 |\n| Audit verdict | `approved` |\n\n**`audit_testcase_traceability`** confirms traceability QA for generated tests:\n\n- **Blockers:** 0  \n- **Findings:** 0 critical, 0 high, 0 medium, 0 low  \n\nAudit artifacts referenced by the harness:\n\n- `test_data/test-results/generated_test_case_audit_20260501203816.md`\n- `test_data/test-results/generated_test_case_audit_20260501203816.json`\n\nSo **TestCases.xlsx was regenerated from the KB workflow**, and the **latest traceability audit reports full approval with no severity findings**.\n\n## RTM inspection (gap)\n\n**`inspect_rtm`** did **not** return usable rows because the harness failed while encoding results: **`confidence`** is stored as a **`Decimal`**, which the tool layer tried to **`json.dumps`**, causing:\n\n`TypeError: Object of type Decimal is not JSON serializable`.\n\nSo you did **not** get a reliable pre-generation RTM preview from that tool in this round, even though generation and audit afterward succeeded.\n\n**Method note:** Preconditions were nominally satisfied by the pipeline (`generated: true`, `auditVerdict: \"approved\"`). For explicit RTM counts/coverage, the **`inspect_rtm`** implementation needs to coerce `confidence` (e.g. to `float` or `str`) before JSON serialization—or an equivalent read path that avoids non-JSON types.\n\n---\n\n**Summary:** **TestCases.xlsx** was built **(8 cases)**, traceability audit is **approved** with **no blockers and no graded findings**. **Confidence/source alignment** is evidenced by the audit files above and the clean audit counters; **derived RTM table inspection failed in-tool** due to **Decimal serialization**, not because the RTM was necessarily empty—fix serialization if you rely on **`inspect_rtm`** for governance sign-off before generation."
+      }
+    },
+    {
+      "id": "event_mondjan2_w8vrvu",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "phase": "rag_ready",
+      "title": "Tool inspect_rtm",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:37:23.486Z",
+      "finishedAt": "2026-05-01T20:37:23.675Z",
+      "summary": "inspect_rtm returned 0 row(s).",
+      "technical": {
+        "rawLabel": "tool:inspect_rtm",
+        "toolName": "inspect_rtm",
+        "payload": {
+          "ok": true,
+          "tool": "inspect_rtm",
+          "result": {
+            "purpose": "Inspect derived RTM",
+            "sql": "select rtm_id, business_requirement_id, functional_requirement_id, hld_requirement_id, lld_requirement_id, coverage_status, confidence, notes from rtm_rows order by confidence asc, rtm_id limit 50",
+            "rowCount": 0,
+            "rows": [],
+            "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 12, in <module>\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.2_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/__init__.py\", line 235, in dumps\n    return _default_encoder.encode(obj)\n           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.2_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/encoder.py\", line 202, in encode\n    chunks = self.iterencode(o, _one_shot=True)\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.2_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/encoder.py\", line 263, in iterencode\n    return _iterencode(o, 0)\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.2_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/encoder.py\", line 182, in default\n    raise TypeError(f'Object of type {o.__class__.__name__} '\n                    f'is not JSON serializable')\nTypeError: Object of type Decimal is not JSON serializable\nwhen serializing dict item 'confidence'\nwhen serializing list item 0\nwhen serializing dict item 'rows'\n"
+          }
+        },
+        "stdout": "{\n  \"purpose\": \"Inspect derived RTM\",\n  \"sql\": \"select rtm_id, business_requirement_id, functional_requirement_id, hld_requirement_id, lld_requirement_id, coverage_status, confidence, notes from rtm_rows order by confidence asc, rtm_id limit 50\",\n  \"rowCount\": 0,\n  \"rows\": [],\n  \"error\": \"Traceback (most recent call last):\\n  File \\\"<stdin>\\\", line 12, in <module>\\n  File \\\"/opt/homebrew/Cellar/python@3.14/3.14.2_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/__init__.py\\\", line 235, in dumps\\n    return _default_encoder.encode(obj)\\n           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^\\n  File \\\"/opt/homebrew/Cellar/python@3.14/3.14.2_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/encoder.py\\\", line 202, in encode\\n    chunks = self.iterencode(o, _one_shot=True)\\n  File \\\"/opt/homebrew/Cellar/python@3.14/3.14.2_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/encoder.py\\\", line 263, in iterencode\\n    return _iterencode(o, 0)\\n  File \\\"/opt/homebrew/Cellar/python@3.14/3.14.2_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/encoder.py\\\", line 182, in default\\n    raise TypeError(f'Object of type {o.__class__.__name__} '\\n                    f'is not JSON serializable')\\nTypeError: Object of type Decimal is not JSON serializable\\nwhen serializing dict item 'confidence'\\nwhen serializing list item 0\\nwhen serializing dict item 'rows'\\n\"\n}"
+      }
+    },
+    {
+      "id": "event_mondjan3_8c3zgu",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "phase": "rag_ready",
+      "title": "Tool query_kb_sql: Inspect derived RTM",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:37:23.487Z",
+      "finishedAt": "2026-05-01T20:37:23.675Z",
+      "technical": {
+        "rawLabel": "Tool query_kb_sql: Inspect derived RTM",
+        "command": "source ingestion/.venv/bin/activate && UI_QA_SQL='select rtm_id,\n           business_requirement_id,\n           functional_requirement_id,\n           hld_requirement_id,\n           lld_requirement_id,\n           coverage_status,\n           confidence,\n           notes\n    from rtm_rows\n    \n    order by confidence asc, rtm_id\n    limit 50' UI_QA_LIMIT=50 DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport json, os, psycopg\nsql = os.environ[\"UI_QA_SQL\"]\nlimit = int(os.environ.get(\"UI_QA_LIMIT\", \"50\"))\nwrapped = f\"select * from ({sql}) as uiqa_readonly_result limit {limit}\"\nwith psycopg.connect(os.environ[\"DATABASE_URL\"]) as conn:\n    conn.execute(\"set statement_timeout = '5000ms'\")\n    conn.execute(\"set transaction read only\")\n    with conn.cursor() as cur:\n        cur.execute(wrapped)\n        columns = [desc.name for desc in cur.description]\n        rows = [dict(zip(columns, row)) for row in cur.fetchall()]\nprint(json.dumps({\"columns\": columns, \"rows\": rows, \"rowCount\": len(rows)}))\nPY",
+        "stdout": "",
+        "stderr": "Traceback (most recent call last):\n  File \"<stdin>\", line 12, in <module>\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.2_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/__init__.py\", line 235, in dumps\n    return _default_encoder.encode(obj)\n           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.2_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/encoder.py\", line 202, in encode\n    chunks = self.iterencode(o, _one_shot=True)\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.2_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/encoder.py\", line 263, in iterencode\n    return _iterencode(o, 0)\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.2_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/encoder.py\", line 182, in default\n    raise TypeError(f'Object of type {o.__class__.__name__} '\n                    f'is not JSON serializable')\nTypeError: Object of type Decimal is not JSON serializable\nwhen serializing dict item 'confidence'\nwhen serializing list item 0\nwhen serializing dict item 'rows'\n",
+        "exitCode": 1
+      }
+    },
+    {
+      "id": "event_mondjasb_erdm1l",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "phase": "rag_ready",
+      "title": "Tool generate_testcases_from_kb",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:37:23.675Z",
+      "finishedAt": "2026-05-01T20:38:16.700Z",
+      "summary": "generate_testcases_from_kb completed.",
+      "technical": {
+        "rawLabel": "tool:generate_testcases_from_kb",
+        "toolName": "generate_testcases_from_kb",
+        "payload": {
+          "ok": true,
+          "tool": "generate_testcases_from_kb",
+          "result": {
+            "generated": true,
+            "cases": 8,
+            "workbook": "test_data/TestCases.xlsx",
+            "blockerCount": 0,
+            "auditVerdict": "approved"
+          }
+        },
+        "stdout": "{\n  \"generated\": true,\n  \"cases\": 8,\n  \"workbook\": \"test_data/TestCases.xlsx\",\n  \"blockerCount\": 0,\n  \"auditVerdict\": \"approved\"\n}"
+      }
+    },
+    {
+      "id": "event_mondjasd_d0aadq",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "phase": "generate_tests",
+      "title": "Load derived RTM for generation",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:37:23.677Z",
+      "finishedAt": "2026-05-01T20:37:23.842Z",
+      "technical": {
+        "rawLabel": "Load derived RTM for generation",
+        "command": "source ingestion/.venv/bin/activate && DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport json, os, psycopg\nrows = []\nwith psycopg.connect(os.environ[\"DATABASE_URL\"]) as conn, conn.cursor() as cur:\n    cur.execute(\"\"\"\n      select r.rtm_id,\n             r.business_requirement_id,\n             r.functional_requirement_id,\n             r.hld_requirement_id,\n             r.lld_requirement_id,\n             r.coverage_status,\n             r.confidence,\n             r.notes,\n             coalesce(c.id, 0) as chunk_id,\n             coalesce(d.path, '') as path,\n             coalesce(c.ordinal, 0) as ordinal,\n             left(regexp_replace(coalesce(c.content, ''), '\\s+', ' ', 'g'), 700) as excerpt\n      from rtm_rows r\n      left join chunks c on c.id = any(r.evidence_chunk_ids)\n      left join documents d on d.id = c.document_id\n      order by r.confidence asc, r.rtm_id, c.ordinal\n      limit 40\n    \"\"\")\n    by_id = {}\n    for row in cur.fetchall():\n        item = by_id.setdefault(row[0], {\n          \"rtm_id\": row[0],\n          \"business_requirement_id\": row[1],\n          \"functional_requirement_id\": row[2],\n          \"hld_requirement_id\": row[3],\n          \"lld_requirement_id\": row[4],\n          \"coverage_status\": row[5],\n          \"confidence\": float(row[6] or 0),\n          \"notes\": row[7] or \"\",\n          \"source_refs\": [],\n          \"excerpt\": row[11] or \"\",\n        })\n        if row[8]:\n            item[\"source_refs\"].append(f\"{row[9]}#chunk-{row[10]}\")\n    rows = list(by_id.values())\nprint(json.dumps(rows[:20]))\nPY",
+        "stdout": "[{\"rtm_id\": \"04eb9e82209befc01ac7c02674789468\", \"business_requirement_id\": \"REQ-SEC-003\", \"functional_requirement_id\": \"REQ-FR-050\", \"hld_requirement_id\": \"REQ-FR-013\", \"lld_requirement_id\": \"REQ-NFR-002\", \"coverage_status\": \"complete\", \"confidence\": 1.0, \"notes\": \"All requirement columns mapped.\", \"source_refs\": [\"test-doc/04-test-strategy.md#chunk-11\", \"test-doc/03-test-design-specification.md#chunk-20\", \"test-doc/01-business-requirements-document.md#chunk-76\", \"test-doc/02-functional-requirements-specification.md#chunk-138\"], \"excerpt\": \"**Self-healing locators** reduce marginal cost per Angular patch. Investment in `data-testid` (REQ-NFR-002) is strategic, not cosmetic.\"}, {\"rtm_id\": \"0b6da161e1e7ff49c8bc91d39f8bac87\", \"business_requirement_id\": \"REQ-SEC-003\", \"functional_requirement_id\": \"REQ-FR-060\", \"hld_requirement_id\": \"REQ-FR-020\", \"lld_requirement_id\": \"REQ-NFR-002\", \"coverage_status\": \"complete\", \"confidence\": 1.0, \"notes\": \"All requirement columns mapped.\", \"source_refs\": [\"test-doc/04-test-strategy.md#chunk-11\", \"test-doc/03-test-design-specification.md#chunk-19\", \"test-doc/01-business-requirements-document.md#chunk-76\", \"test-doc/02-functional-requirements-specification.md#chunk-138\"], \"excerpt\": \"**Self-healing locators** reduce marginal cost per Angular patch. Investment in `data-testid` (REQ-NFR-002) is strategic, not cosmetic.\"}, {\"rtm_id\": \"0bc8fc98f8249cb6ee3e28a342a2a9c9\", \"business_requirement_id\": \"REQ-SEC-003\", \"functional_requirement_id\": \"REQ-FR-FUT-03\", \"hld_requirement_id\": \"REQ-FR-023\", \"lld_requirement_id\": \"REQ-NFR-002\", \"coverage_status\": \"complete\", \"confidence\": 1.0, \"notes\": \"All requirement columns mapped.\", \"source_refs\": [\"test-doc/04-test-strategy.md#chunk-11\", \"test-doc/03-test-design-specification.md#chunk-12\", \"test-doc/02-functional-requirements-specification.md#chunk-61\", \"test-doc/01-business-requirements-document.md#chunk-76\"], \"excerpt\": \"**Self-healing locators** reduce marginal cost per Angular patch. Investment in `data-testid` (REQ-NFR-002) is strategic, not cosmetic.\"}, {\"rtm_id\": \"1a69a85f1b9ce6fae1eb57f163c4c0ab\", \"business_requirement_id\": \"REQ-SEC-003\", \"functional_requirement_id\": \"REQ-SEC-001\", \"hld_requirement_id\": \"REQ-FR-032\", \"lld_requirement_id\": \"REQ-NFR-002\", \"coverage_status\": \"complete\", \"confidence\": 1.0, \"notes\": \"All requirement columns mapped.\", \"source_refs\": [\"test-doc/04-test-strategy.md#chunk-11\", \"test-doc/03-test-design-specification.md#chunk-13\", \"test-doc/02-functional-requirements-specification.md#chunk-47\", \"test-doc/01-business-requirements-document.md#chunk-76\"], \"excerpt\": \"**Self-healing locators** reduce marginal cost per Angular patch. Investment in `data-testid` (REQ-NFR-002) is strategic, not cosmetic.\"}, {\"rtm_id\": \"1b2dc0fd710f6b86383590dda9d08917\", \"business_requirement_id\": \"REQ-SEC-003\", \"functional_requirement_id\": \"REQ-FR-051\", \"hld_requirement_id\": \"REQ-FR-014\", \"lld_requirement_id\": \"REQ-NFR-002\", \"coverage_status\": \"complete\", \"confidence\": 1.0, \"notes\": \"All requirement columns mapped.\", \"source_refs\": [\"test-doc/03-test-design-specification.md#chunk-11\", \"test-doc/04-test-strategy.md#chunk-11\", \"test-doc/01-business-requirements-document.md#chunk-76\", \"test-doc/02-functional-requirements-specification.md#chunk-138\"], \"excerpt\": \"| REQ | Focus | |-----|-------| | REQ-FR-010 | Navbar after login | | REQ-FR-011 | User + role | | REQ-FR-012 | Click Trading dropdown + four links | | REQ-FR-013 | Admin + Users | | REQ-FR-014 | Logout \\u2192 login | **Tags:** @nav @regression\"}, {\"rtm_id\": \"1c351b12fb818d09824d3c0d1c16d741\", \"business_requirement_id\": \"REQ-SEC-003\", \"functional_requirement_id\": \"REQ-FR-FUT-01\", \"hld_requirement_id\": \"REQ-FR-021\", \"lld_requirement_id\": \"REQ-NFR-002\", \"coverage_status\": \"complete\", \"confidence\": 1.0, \"notes\": \"All requirement columns mapped.\", \"source_refs\": [\"test-doc/04-test-strategy.md#chunk-11\", \"test-doc/03-test-design-specification.md#chunk-12\", \"test-doc/02-functional-requirements-specification.md#chunk-61\", \"test-doc/01-business-requirements-document.md#chunk-76\"], \"excerpt\": \"**Self-healing locators** reduce marginal cost per Angular patch. Investment in `data-testid` (REQ-NFR-002) is strategic, not cosmetic.\"}, {\"rtm_id\": \"3719a8286464f8ca38bedb3d7fa4a903\", \"business_requirement_id\": \"REQ-SEC-003\", \"functional_requirement_id\": \"BR-014\", \"hld_requirement_id\": \"REQ-FR-010\", \"lld_requirement_id\": \"REQ-NFR-002\", \"coverage_status\": \"complete\", \"confidence\": 1.0, \"notes\": \"All requirement columns mapped.\", \"source_refs\": [\"test-doc/03-test-design-specification.md#chunk-11\", \"test-doc/04-test-strategy.md#chunk-11\", \"test-doc/01-business-requirements-document.md#chunk-76\", \"test-doc/02-functional-requirements-specification.md#chunk-91\"], \"excerpt\": \"| REQ | Focus | |-----|-------| | REQ-FR-010 | Navbar after login | | REQ-FR-011 | User + role | | REQ-FR-012 | Click Trading dropdown + four links | | REQ-FR-013 | Admin + Users | | REQ-FR-014 | Logout \\u2192 login | **Tags:** @nav @regression\"}, {\"rtm_id\": \"46f03b01dd0cf51ef8da7263a9e57048\", \"business_requirement_id\": \"REQ-SEC-003\", \"functional_requirement_id\": \"REQ-FR-FUT-02\", \"hld_requirement_id\": \"REQ-FR-022\", \"lld_requirement_id\": \"REQ-NFR-002\", \"coverage_status\": \"complete\", \"confidence\": 1.0, \"notes\": \"All requirement columns mapped.\", \"source_refs\": [\"test-doc/04-test-strategy.md#chunk-11\", \"test-doc/03-test-design-specification.md#chunk-12\", \"test-doc/02-functional-requirements-specification.md#chunk-61\", \"test-doc/01-business-requirements-document.md#chunk-76\"], \"excerpt\": \"**Self-healing locators** reduce marginal cost per Angular patch. Investment in `data-testid` (REQ-NFR-002) is strategic, not cosmetic.\"}, {\"rtm_id\": \"47442d6c00b6aa4a553e28c0b1237d83\", \"business_requirement_id\": \"BRD \\u00a76\", \"functional_requirement_id\": \"BR-003\", \"hld_requirement_id\": \"BR-005\", \"lld_requirement_id\": \"REQ-NFR-002\", \"coverage_status\": \"complete\", \"confidence\": 1.0, \"notes\": \"All requirement columns mapped.\", \"source_refs\": [\"test-doc/04-test-strategy.md#chunk-11\", \"test-doc/03-test-design-specification.md#chunk-19\", \"test-doc/01-business-requirements-document.md#chunk-58\", \"test-doc/02-functional-requirements-specification.md#chunk-124\"], \"excerpt\": \"**Self-healing locators** reduce marginal cost per Angular patch. Investment in `data-testid` (REQ-NFR-002) is strategic, not cosmetic.\"}, {\"rtm_id\": \"4af2057a427e30ab4bfe4b26a7815505\", \"business_requirement_id\": \"REQ-SEC-003\", \"functional_requirement_id\": \"REQ-FR-000\", \"hld_requirement_id\": \"REQ-FR-012\", \"lld_requirement_id\": \"REQ-NFR-002\", \"coverage_status\": \"complete\", \"confidence\": 1.0, \"notes\": \"All requirement columns mapped.\", \"source_refs\": [\"test-doc/04-test-strategy.md#chunk-11\", \"test-doc/03-test-design-specification.md#chunk-20\", \"test-doc/02-functional-requirements-specification.md#chunk-47\", \"test-doc/01-business-requirements-document.md#chunk-76\"], \"excerpt\": \"**Self-healing locators** reduce marginal cost per Angular patch. Investment in `data-testid` (REQ-NFR-002) is strategic, not cosmetic.\"}]\n",
+        "stderr": "<stdin>:16: SyntaxWarning: \"\\s\" is an invalid escape sequence. Such sequences will not work in the future. Did you mean \"\\\\s\"? A raw string is also an option.\n",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mondjawy_e77u4c",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "phase": "generate_tests",
+      "title": "Tool search_kb_chunks",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:37:23.842Z",
+      "finishedAt": "2026-05-01T20:37:24.015Z",
+      "technical": {
+        "rawLabel": "Tool search_kb_chunks",
+        "command": "source ingestion/.venv/bin/activate && UI_QA_QUERY='requirements business rules acceptance criteria user flows validation controls' UI_QA_LIMIT=8 DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport json, os, psycopg\nquery = os.environ.get(\"UI_QA_QUERY\", \"\").strip()\nlimit = int(os.environ.get(\"UI_QA_LIMIT\", \"8\"))\nout = []\nwith psycopg.connect(os.environ[\"DATABASE_URL\"]) as conn, conn.cursor() as cur:\n    cur.execute(\"\"\"\n      with query as (\n        select websearch_to_tsquery('english', %s) as q\n      )\n      select c.id,\n             coalesce(d.title, d.path, '') as document,\n             d.path,\n             c.heading_path,\n             c.ordinal,\n             left(regexp_replace(c.content, '\\s+', ' ', 'g'), 1600) as content,\n             ts_rank_cd(to_tsvector('english', coalesce(c.content, '')), query.q) as rank\n      from chunks c\n      join documents d on d.id = c.document_id\n      cross join query\n      where query.q @@ to_tsvector('english', coalesce(c.content, ''))\n      order by rank desc, d.created_at desc nulls last, c.ordinal asc\n      limit %s\n    \"\"\", (query, limit))\n    rows = cur.fetchall()\n    if not rows:\n        cur.execute(\"\"\"\n          select c.id,\n                 coalesce(d.title, d.path, '') as document,\n                 d.path,\n                 c.heading_path,\n                 c.ordinal,\n                 left(regexp_replace(c.content, '\\s+', ' ', 'g'), 1600) as content,\n                 0.0 as rank\n          from chunks c\n          join documents d on d.id = c.document_id\n          order by d.created_at desc nulls last, c.ordinal asc\n          limit %s\n        \"\"\", (limit,))\n        rows = cur.fetchall()\n    for row in rows:\n        out.append({\n          \"id\": f\"chunk-{row[0]}\",\n          \"document\": row[1] or \"\",\n          \"path\": row[2] or \"\",\n          \"heading\": row[3] or \"\",\n          \"ordinal\": int(row[4] or 0),\n          \"content\": row[5] or \"\",\n          \"rank\": float(row[6] or 0),\n        })\nprint(json.dumps(out))\nPY",
+        "stdout": "[{\"id\": \"chunk-2233\", \"document\": \"02-functional-requirements-specification\", \"path\": \"test-doc/02-functional-requirements-specification.md\", \"heading\": \"Functional Requirements Specification (FRS) > Mock Trading & Approval Front-End (QAMVP SUT)\", \"ordinal\": 0, \"content\": \"**Document ID:** QAMVP-FRS-001 **Version:** 0.1 **Status:** Draft **Date:** 2026-04-22 **Related documents:** [BRD](01-business-requirements-document.md) \\u00b7 [TDS](03-test-design-specification.md) \\u00b7 [README](README.md) **Behavioral reference:** `python-orchestrator/prompts/app_layout.md` (REF-2) **Locator / testability reference:** `python-orchestrator/prompts/locator_strategy.md` (REF-3) ---\", \"rank\": 0.0}, {\"id\": \"chunk-2375\", \"document\": \"03-test-design-specification\", \"path\": \"test-doc/03-test-design-specification.md\", \"heading\": \"Test Design Specification (TDS)\", \"ordinal\": 0, \"content\": \"**Document ID:** QAMVP-TDS-001 **Version:** 0.1 **Date:** 2026-04-22 **Related:** [BRD](01-business-requirements-document.md) \\u00b7 [FRS](02-functional-requirements-specification.md) \\u00b7 [RTM](06-requirements-traceability-matrix.md) \\u00b7 [README](README.md) ---\", \"rank\": 0.0}, {\"id\": \"chunk-2147\", \"document\": \"01-business-requirements-document\", \"path\": \"test-doc/01-business-requirements-document.md\", \"heading\": \"Business Requirements Document (BRD) > Mock Trading & Approval Front-End (QAMVP System Under Test)\", \"ordinal\": 0, \"content\": \"**Document ID:** QAMVP-BRD-001 **Version:** 0.1 **Status:** Draft **Date:** 2026-04-22 **Related documents:** [FRS](02-functional-requirements-specification.md) \\u00b7 [TDS](03-test-design-specification.md) \\u00b7 [README](README.md) **Authoritative SUT behavior reference (repository):** `python-orchestrator/prompts/app_layout.md` ---\", \"rank\": 0.0}, {\"id\": \"chunk-1934\", \"document\": \"01-business-requirements-document\", \"path\": \"test-doc/01-business-requirements-document.docx\", \"heading\": \"Business Requirements Document (BRD) > Mock Trading & Approval Front-End (QAMVP System Under Test)\", \"ordinal\": 0, \"content\": \"Document ID: QAMVP-BRD-001 Version: 0.1 Status: Draft Date: 2026-04-22 Related documents: FRS \\u00b7 TDS \\u00b7 README Authoritative SUT behavior reference (repository): python-orchestrator/prompts/app_layout.md\", \"rank\": 0.0}, {\"id\": \"chunk-2109\", \"document\": \"03-test-design-specification\", \"path\": \"test-doc/03-test-design-specification.docx\", \"heading\": \"Test Design Specification (TDS)\", \"ordinal\": 0, \"content\": \"Document ID: QAMVP-TDS-001 Version: 0.1 Date: 2026-04-22 Related: BRD \\u00b7 FRS \\u00b7 RTM \\u00b7 README\", \"rank\": 0.0}, {\"id\": \"chunk-2135\", \"document\": \"04-test-strategy\", \"path\": \"test-doc/04-test-strategy.docx\", \"heading\": \"Test Strategy\", \"ordinal\": 0, \"content\": \"Document ID: QAMVP-TSTRAT-001 Version: 0.1 Date: 2026-04-22 Related documents: README \\u00b7 BRD \\u00b7 FRS \\u00b7 TDS \\u00b7 Test Plan\", \"rank\": 0.0}, {\"id\": \"chunk-1995\", \"document\": \"02-functional-requirements-specification\", \"path\": \"test-doc/02-functional-requirements-specification.docx\", \"heading\": \"Functional Requirements Specification (FRS) > Mock Trading & Approval Front-End (QAMVP SUT)\", \"ordinal\": 0, \"content\": \"Document ID: QAMVP-FRS-001 Version: 0.1 Status: Draft Date: 2026-04-22 Related documents: BRD \\u00b7 TDS \\u00b7 README Behavioral reference: python-orchestrator/prompts/app_layout.md (REF-2) Locator / testability reference: python-orchestrator/prompts/locator_strategy.md (REF-3)\", \"rank\": 0.0}, {\"id\": \"chunk-2413\", \"document\": \"04-test-strategy\", \"path\": \"test-doc/04-test-strategy.md\", \"heading\": \"Test Strategy\", \"ordinal\": 0, \"content\": \"**Document ID:** QAMVP-TSTRAT-001 **Version:** 0.1 **Date:** 2026-04-22 **Related documents:** [README](README.md) \\u00b7 [BRD](01-business-requirements-document.md) \\u00b7 [FRS](02-functional-requirements-specification.md) \\u00b7 [TDS](03-test-design-specification.md) \\u00b7 [Test Plan](05-test-plan.md) ---\", \"rank\": 0.0}]\n",
+        "stderr": "<stdin>:15: SyntaxWarning: \"\\s\" is an invalid escape sequence. Such sequences will not work in the future. Did you mean \"\\\\s\"? A raw string is also an option.\n<stdin>:32: SyntaxWarning: \"\\s\" is an invalid escape sequence. Such sequences will not work in the future. Did you mean \"\\\\s\"? A raw string is also an option.\n",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mondjb1s_ekqt29",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "phase": "generate_tests",
+      "title": "Cursor SDK agent",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:37:24.016Z",
+      "finishedAt": "2026-05-01T20:38:16.032Z",
+      "summary": "Cursor SDK call completed.",
+      "technical": {
+        "rawLabel": "cursor:generate_tests",
+        "sdkPrompt": "Generate source-aligned bank QA test cases from the active pgvector corpus. Use the derived RTM rows as the primary coverage contract and use the retrieved KB excerpts as supporting grounding. Preserve requirement IDs, source refs, and confidence inputs. Return repository JSON if confident.\n\nDerived RTM rows:\n[\n  {\n    \"rtm_id\": \"04eb9e82209befc01ac7c02674789468\",\n    \"business_requirement_id\": \"REQ-SEC-003\",\n    \"functional_requirement_id\": \"REQ-FR-050\",\n    \"hld_requirement_id\": \"REQ-FR-013\",\n    \"lld_requirement_id\": \"REQ-NFR-002\",\n    \"coverage_status\": \"complete\",\n    \"confidence\": 1,\n    \"notes\": \"All requirement columns mapped.\",\n    \"source_refs\": [\n      \"test-doc/04-test-strategy.md#chunk-11\",\n      \"test-doc/03-test-design-specification.md#chunk-20\",\n      \"test-doc/01-business-requirements-document.md#chunk-76\",\n      \"test-doc/02-functional-requirements-specification.md#chunk-138\"\n    ],\n    \"excerpt\": \"**Self-healing locators** reduce marginal cost per Angular patch. Investment in `data-testid` (REQ-NFR-002) is strategic, not cosmetic.\"\n  },\n  {\n    \"rtm_id\": \"0b6da161e1e7ff49c8bc91d39f8bac87\",\n    \"business_requirement_id\": \"REQ-SEC-003\",\n    \"functional_requirement_id\": \"REQ-FR-060\",\n    \"hld_requirement_id\": \"REQ-FR-020\",\n    \"lld_requirement_id\": \"REQ-NFR-002\",\n    \"coverage_status\": \"complete\",\n    \"confidence\": 1,\n    \"notes\": \"All requirement columns mapped.\",\n    \"source_refs\": [\n      \"test-doc/04-test-strategy.md#chunk-11\",\n      \"test-doc/03-test-design-specification.md#chunk-19\",\n      \"test-doc/01-business-requirements-document.md#chunk-76\",\n      \"test-doc/02-functional-requirements-specification.md#chunk-138\"\n    ],\n    \"excerpt\": \"**Self-healing locators** reduce marginal cost per Angular patch. Investment in `data-testid` (REQ-NFR-002) is strategic, not cosmetic.\"\n  },\n  {\n    \"rtm_id\": \"0bc8fc98f8249cb6ee3e28a342a2a9c9\",\n    \"business_requirement_id\": \"REQ-SEC-003\",\n    \"functional_requirement_id\": \"REQ-FR-FUT-03\",\n    \"hld_requirement_id\": \"REQ-FR-023\",\n    \"lld_requirement_id\": \"REQ-NFR-002\",\n    \"coverage_status\": \"complete\",\n    \"confidence\": 1,\n    \"notes\": \"All requirement columns mapped.\",\n    \"source_refs\": [\n      \"test-doc/04-test-strategy.md#chunk-11\",\n      \"test-doc/03-test-design-specification.md#chunk-12\",\n      \"test-doc/02-functional-requirements-specification.md#chunk-61\",\n      \"test-doc/01-business-requirements-document.md#chunk-76\"\n    ],\n    \"excerpt\": \"**Self-healing locators** reduce marginal cost per Angular patch. Investment in `data-testid` (REQ-NFR-002) is strategic, not cosmetic.\"\n  },\n  {\n    \"rtm_id\": \"1a69a85f1b9ce6fae1eb57f163c4c0ab\",\n    \"business_requirement_id\": \"REQ-SEC-003\",\n    \"functional_requirement_id\": \"REQ-SEC-001\",\n    \"hld_requirement_id\": \"REQ-FR-032\",\n    \"lld_requirement_id\": \"REQ-NFR-002\",\n    \"coverage_status\": \"complete\",\n    \"confidence\": 1,\n    \"notes\": \"All requirement columns mapped.\",\n    \"source_refs\": [\n      \"test-doc/04-test-strategy.md#chunk-11\",\n      \"test-doc/03-test-design-specification.md#chunk-13\",\n      \"test-doc/02-functional-requirements-specification.md#chunk-47\",\n      \"test-doc/01-business-requirements-document.md#chunk-76\"\n    ],\n    \"excerpt\": \"**Self-healing locators** reduce marginal cost per Angular patch. Investment in `data-testid` (REQ-NFR-002) is strategic, not cosmetic.\"\n  },\n  {\n    \"rtm_id\": \"1b2dc0fd710f6b86383590dda9d08917\",\n    \"business_requirement_id\": \"REQ-SEC-003\",\n    \"functional_requirement_id\": \"REQ-FR-051\",\n    \"hld_requirement_id\": \"REQ-FR-014\",\n    \"lld_requirement_id\": \"REQ-NFR-002\",\n    \"coverage_status\": \"complete\",\n    \"confidence\": 1,\n    \"notes\": \"All requirement columns mapped.\",\n    \"source_refs\": [\n      \"test-doc/03-test-design-specification.md#chunk-11\",\n      \"test-doc/04-test-strategy.md#chunk-11\",\n      \"test-doc/01-business-requirements-document.md#chunk-76\",\n      \"test-doc/02-functional-requirements-specification.md#chunk-138\"\n    ],\n    \"excerpt\": \"| REQ | Focus | |-----|-------| | REQ-FR-010 | Navbar after login | | REQ-FR-011 | User + role | | REQ-FR-012 | Click Trading dropdown + four links | | REQ-FR-013 | Admin + Users | | REQ-FR-014 | Logout → login | **Tags:** @nav @regression\"\n  },\n  {\n    \"rtm_id\": \"1c351b12fb818d09824d3c0d1c16d741\",\n    \"business_requirement_id\": \"REQ-SEC-003\",\n    \"functional_requirement_id\": \"REQ-FR-FUT-01\",\n    \"hld_requirement_id\": \"REQ-FR-021\",\n    \"lld_requirement_id\": \"REQ-NFR-002\",\n    \"coverage_status\": \"complete\",\n    \"confidence\": 1,\n    \"notes\": \"All requirement columns mapped.\",\n    \"source_refs\": [\n      \"test-doc/04-test-strategy.md#chunk-11\",\n      \"test-doc/03-test-design-specification.md#chunk-12\",\n      \"test-doc/02-functional-requirements-specification.md#chunk-61\",\n      \"test-doc/01-business-requirements-document.md#chunk-76\"\n    ],\n    \"excerpt\": \"**Self-healing locators** reduce marginal cost per Angular patch. Investment in `data-testid` (REQ-NFR-002) is strategic, not cosmetic.\"\n  },\n  {\n    \"rtm_id\": \"3719a8286464f8ca38bedb3d7fa4a903\",\n    \"business_requirement_id\": \"REQ-SEC-003\",\n    \"functional_requirement_id\": \"BR-014\",\n    \"hld_requirement_id\": \"REQ-FR-010\",\n    \"lld_requirement_id\": \"REQ-NFR-002\",\n    \"coverage_status\": \"complete\",\n    \"confidence\": 1,\n    \"notes\": \"All requirement columns mapped.\",\n    \"source_refs\": [\n      \"test-doc/03-test-design-specification.md#chunk-11\",\n      \"test-doc/04-test-strategy.md#chunk-11\",\n      \"test-doc/01-business-requirements-document.md#chunk-76\",\n      \"test-doc/02-functional-requirements-specification.md#chunk-91\"\n    ],\n    \"excerpt\": \"| REQ | Focus | |-----|-------| | REQ-FR-010 | Navbar after login | | REQ-FR-011 | User + role | | REQ-FR-012 | Click Trading dropdown + four links | | REQ-FR-013 | Admin + Users | | REQ-FR-014 | Logout → login | **Tags:** @nav @regression\"\n  },\n  {\n    \"rtm_id\": \"46f03b01dd0cf51ef8da7263a9e57048\",\n    \"business_requirement_id\": \"REQ-SEC-003\",\n    \"functional_requirement_id\": \"REQ-FR-FUT-02\",\n    \"hld_requirement_id\": \"REQ-FR-022\",\n    \"lld_requirement_id\": \"REQ-NFR-002\",\n    \"coverage_status\": \"complete\",\n    \"confidence\": 1,\n    \"notes\": \"All requirement columns mapped.\",\n    \"source_refs\": [\n      \"test-doc/04-test-strategy.md#chunk-11\",\n      \"test-doc/03-test-design-specification.md#chunk-12\",\n      \"test-doc/02-functional-requirements-specification.md#chunk-61\",\n      \"test-doc/01-business-requirements-document.md#chunk-76\"\n    ],\n    \"excerpt\": \"**Self-healing locators** reduce marginal cost per Angular patch. Investment in `data-testid` (REQ-NFR-002) is strategic, not cosmetic.\"\n  },\n  {\n    \"rtm_id\": \"47442d6c00b6aa4a553e28c0b1237d83\",\n    \"business_requirement_id\": \"BRD §6\",\n    \"functional_requirement_id\": \"BR-003\",\n    \"hld_requirement_id\": \"BR-005\",\n    \"lld_requirement_id\": \"REQ-NFR-002\",\n    \"coverage_status\": \"complete\",\n    \"confidence\": 1,\n    \"notes\": \"All requirement columns mapped.\",\n    \"source_refs\": [\n      \"test-doc/04-test-strategy.md#chunk-11\",\n      \"test-doc/03-test-design-specification.md#chunk-19\",\n      \"test-doc/01-business-requirements-document.md#chunk-58\",\n      \"test-doc/02-functional-requirements-specification.md#chunk-124\"\n    ],\n    \"excerpt\": \"**Self-healing locators** reduce marginal cost per Angular patch. Investment in `data-testid` (REQ-NFR-002) is strategic, not cosmetic.\"\n  },\n  {\n    \"rtm_id\": \"4af2057a427e30ab4bfe4b26a7815505\",\n    \"business_requirement_id\": \"REQ-SEC-003\",\n    \"functional_requirement_id\": \"REQ-FR-000\",\n    \"hld_requirement_id\": \"REQ-FR-012\",\n    \"lld_requirement_id\": \"REQ-NFR-002\",\n    \"coverage_status\": \"complete\",\n    \"confidence\": 1,\n    \"notes\": \"All requirement columns mapped.\",\n    \"source_refs\": [\n      \"test-doc/04-test-strategy.md#chunk-11\",\n      \"test-doc/03-test-design-specification.md#chunk-20\",\n      \"test-doc/02-functional-requirements-specification.md#chunk-47\",\n      \"test-doc/01-business-requirements-document.md#chunk-76\"\n    ],\n    \"excerpt\": \"**Self-healing locators** reduce marginal cost per Angular patch. Investment in `data-testid` (REQ-NFR-002) is strategic, not cosmetic.\"\n  }\n]\n\nRetrieved KB excerpts:\n[1] 02-functional-requirements-specification Functional Requirements Specification (FRS) > Mock Trading & Approval Front-End (QAMVP SUT)\n**Document ID:** QAMVP-FRS-001 **Version:** 0.1 **Status:** Draft **Date:** 2026-04-22 **Related documents:** [BRD](01-business-requirements-document.md) · [TDS](03-test-design-specification.md) · [README](README.md) **Behavioral reference:** `python-orchestrator/prompts/app_layout.md` (REF-2) **Locator / testability reference:** `python-orchestrator/prompts/locator_strategy.md` (REF-3) ---\n\n[2] 03-test-design-specification Test Design Specification (TDS)\n**Document ID:** QAMVP-TDS-001 **Version:** 0.1 **Date:** 2026-04-22 **Related:** [BRD](01-business-requirements-document.md) · [FRS](02-functional-requirements-specification.md) · [RTM](06-requirements-traceability-matrix.md) · [README](README.md) ---\n\n[3] 01-business-requirements-document Business Requirements Document (BRD) > Mock Trading & Approval Front-End (QAMVP System Under Test)\n**Document ID:** QAMVP-BRD-001 **Version:** 0.1 **Status:** Draft **Date:** 2026-04-22 **Related documents:** [FRS](02-functional-requirements-specification.md) · [TDS](03-test-design-specification.md) · [README](README.md) **Authoritative SUT behavior reference (repository):** `python-orchestrator/prompts/app_layout.md` ---\n\n[4] 01-business-requirements-document Business Requirements Document (BRD) > Mock Trading & Approval Front-End (QAMVP System Under Test)\nDocument ID: QAMVP-BRD-001 Version: 0.1 Status: Draft Date: 2026-04-22 Related documents: FRS · TDS · README Authoritative SUT behavior reference (repository): python-orchestrator/prompts/app_layout.md\n\n[5] 03-test-design-specification Test Design Specification (TDS)\nDocument ID: QAMVP-TDS-001 Version: 0.1 Date: 2026-04-22 Related: BRD · FRS · RTM · README\n\n[6] 04-test-strategy Test Strategy\nDocument ID: QAMVP-TSTRAT-001 Version: 0.1 Date: 2026-04-22 Related documents: README · BRD · FRS · TDS · Test Plan\n\n[7] 02-functional-requirements-specification Functional Requirements Specification (FRS) > Mock Trading & Approval Front-End (QAMVP SUT)\nDocument ID: QAMVP-FRS-001 Version: 0.1 Status: Draft Date: 2026-04-22 Related documents: BRD · TDS · README Behavioral reference: python-orchestrator/prompts/app_layout.md (REF-2) Locator / testability reference: python-orchestrator/prompts/locator_strategy.md (REF-3)\n\n[8] 04-test-strategy Test Strategy\n**Document ID:** QAMVP-TSTRAT-001 **Version:** 0.1 **Date:** 2026-04-22 **Related documents:** [README](README.md) · [BRD](01-business-requirements-document.md) · [FRS](02-functional-requirements-specification.md) · [TDS](03-test-design-specification.md) · [Test Plan](05-test-plan.md) ---",
+        "stdout": "est_case_id\": \"TC-RTM-1b2dc0fd-005\",\n      \"title\": \"Logout → login recovery: navigation regression with contract locators (REQ-FR-051 / REQ-FR-014)\",\n      \"type\": \"UI / navigation\",\n      \"priority\": \"P1\",\n      \"tags\": [\"@nav\", \"@regression\", \"@session\"],\n      \"rtm_id\": \"1b2dc0fd710f6b86383590dda9d08917\",\n      \"requirement_ids\": {\n        \"business_requirement_id\": \"REQ-SEC-003\",\n        \"functional_requirement_id\": \"REQ-FR-051\",\n        \"hld_requirement_id\": \"REQ-FR-014\",\n        \"lld_requirement_id\": \"REQ-NFR-002\"\n      },\n      \"rtm_coverage_status\": \"complete\",\n      \"confidence\": 1,\n      \"source_refs\": [\n        \"test-doc/03-test-design-specification.md#chunk-11\",\n        \"test-doc/04-test-strategy.md#chunk-11\",\n        \"test-doc/01-business-requirements-document.md#chunk-76\",\n        \"test-doc/02-functional-requirements-specification.md#chunk-138\"\n      ],\n      \"notes\": \"All requirement columns mapped.\",\n      \"preconditions\": [\n        \"User can log in and reach the post-login navbar state (REQ-FR-010 baseline).\"\n      ],\n      \"steps\": [\n        \"From an authenticated session, execute logout per REQ-FR-014 focus in TDS chunk-11 mapping.\",\n        \"Log in again with the same user profile used for baseline navigation tests.\",\n        \"Re-validate Trading dropdown and admin destinations per TDS table: REQ-FR-012 (four links), REQ-FR-013 (Admin + Users), REQ-FR-011 (user + role display).\"\n      ],\n      \"expected_results\": [\n        \"Post-login navbar matches baseline: REQ-FR-010/011/012/013 behaviors restored after REQ-FR-014 cycle.\",\n        \"All exercised controls remain bound to stable `data-testid` selectors suitable for CI (REQ-NFR-002).\"\n      ],\n      \"grounding\": {\n        \"rtm_excerpt\": \"| REQ | Focus | |-----|-------| | REQ-FR-010 | Navbar after login | | REQ-FR-011 | User + role | | REQ-FR-012 | Click Trading dropdown + four links | | REQ-FR-013 | Admin + Users | | REQ-FR-014 | Logout → login | **Tags:** @nav @regression\"\n      }\n    },\n    {\n      \"test_case_id\": \"TC-RTM-1c351b12-006\",\n      \"title\": \"Future scope (REQ-FR-FUT-01 / REQ-FR-021): locator-backed functional smoke\",\n      \"type\": \"UI / forward-compatibility\",\n      \"priority\": \"P2\",\n      \"tags\": [\"@future\", \"@nfr\"],\n      \"rtm_id\": \"1c351b12fb818d09824d3c0d1c16d741\",\n      \"requirement_ids\": {\n        \"business_requirement_id\": \"REQ-SEC-003\",\n        \"functional_requirement_id\": \"REQ-FR-FUT-01\",\n        \"hld_requirement_id\": \"REQ-FR-021\",\n        \"lld_requirement_id\": \"REQ-NFR-002\"\n      },\n      \"rtm_coverage_status\": \"complete\",\n      \"confidence\": 1,\n      \"source_refs\": [\n        \"test-doc/04-test-strategy.md#chunk-11\",\n        \"test-doc/03-test-design-specification.md#chunk-12\",\n        \"test-doc/02-functional-requirements-specification.md#chunk-61\",\n        \"test-doc/01-business-requirements-document.md#chunk-76\"\n      ],\n      \"notes\": \"All requirement columns mapped.\",\n      \"preconditions\": [\n        \"Test environment includes the REQ-FR-021 entry surface as specified in TDS chunk-12 / FRS chunk-61 trace.\"\n      ],\n      \"steps\": [\n        \"Navigate to REQ-FR-021 scope from authenticated shell.\",\n        \"Execute minimum viable user journey for REQ-FR-FUT-01 acceptance.\",\n        \"Confirm repository locators for the journey are `data-testid`-first and resilient to minor DOM drift.\"\n      ],\n      \"expected_results\": [\n        \"Functional acceptance signals for REQ-FR-FUT-01 are visible and assertable.\",\n        \"Test maintenance cost remains bounded per self-healing locator doctrine (REQ-NFR-002).\"\n      ],\n      \"grounding\": {\n        \"rtm_excerpt\": \"**Self-healing locators** reduce marginal cost per Angular patch. Investment in `data-testid` (REQ-NFR-002) is strategic, not cosmetic.\"\n      }\n    },\n    {\n      \"test_case_id\": \"TC-RTM-3719a828-007\",\n      \"title\": \"Navbar after login (BR-014 / REQ-FR-010): trading shell smoke with contract IDs\",\n      \"type\": \"UI / navigation\",\n      \"priority\": \"P1\",\n      \"tags\": [\"@nav\", \"@regression\"],\n      \"rtm_id\": \"3719a8286464f8ca38bedb3d7fa4a903\",\n      \"requirement_ids\": {\n        \"business_requirement_id\": \"BR-014\",\n        \"functional_requirement_id\": \"BR-014\",\n        \"hld_requirement_id\": \"REQ-FR-010\",\n        \"lld_requirement_id\": \"REQ-NFR-002\"\n      },\n      \"rtm_coverage_status\": \"complete\",\n      \"confidence\": 1,\n      \"source_refs\": [\n        \"test-doc/03-test-design-specification.md#chunk-11\",\n        \"test-doc/04-test-strategy.md#chunk-11\",\n        \"test-doc/01-business-requirements-document.md#chunk-76\",\n        \"test-doc/02-functional-requirements-specification.md#chunk-91\"\n      ],\n      \"notes\": \"All requirement columns mapped.\",\n      \"preconditions\": [\n        \"Business rules BR-014 are satisfiable in the configured test data set (per BRD chunk-76 alignment).\"\n      ],\n      \"steps\": [\n        \"Authenticate; assert post-login navbar presence and key destinations per REQ-FR-010 row in TDS table.\",\n        \"Open Trading dropdown; validate four linked destinations (REQ-FR-012) using `data-testid` navigation hooks.\",\n        \"Capture evidence that BR-014 business outcomes are reflected in the visible trading shell state (per FRS chunk-91 binding).\"\n      ],\n      \"expected_results\": [\n        \"Navbar and trading entry points meet BR-014 / REQ-FR-010 expectations without manual locator repair.\",\n        \"REQ-NFR-002 satisfied on all touched widgets.\"\n      ],\n      \"grounding\": {\n        \"rtm_excerpt\": \"| REQ | Focus | |-----|-------| | REQ-FR-010 | Navbar after login | | REQ-FR-011 | User + role | | REQ-FR-012 | Click Trading dropdown + four links | | REQ-FR-013 | Admin + Users | | REQ-FR-014 | Logout → login | **Tags:** @nav @regression\"\n      }\n    },\n    {\n      \"test_case_id\": \"TC-RTM-46f03b01-008\",\n      \"title\": \"Future scope (REQ-FR-FUT-02 / REQ-FR-022): maintainability gate on new UI\",\n      \"type\": \"UI / forward-compatibility\",\n      \"priority\": \"P2\",\n      \"tags\": [\"@future\", \"@nfr\"],\n      \"rtm_id\": \"46f03b01dd0cf51ef8da7263a9e57048\",\n      \"requirement_ids\": {\n        \"business_requirement_id\": \"REQ-SEC-003\",\n        \"functional_requirement_id\": \"REQ-FR-FUT-02\",\n        \"hld_requirement_id\": \"REQ-FR-022\",\n        \"lld_requirement_id\": \"REQ-NFR-002\"\n      },\n      \"rtm_coverage_status\": \"complete\",\n      \"confidence\": 1,\n      \"source_refs\": [\n        \"test-doc/04-test-strategy.md#chunk-11\",\n        \"test-doc/03-test-design-specification.md#chunk-12\",\n        \"test-doc/02-functional-requirements-specification.md#chunk-61\",\n        \"test-doc/01-business-requirements-document.md#chunk-76\"\n      ],\n      \"notes\": \"All requirement columns mapped.\",\n      \"preconditions\": [\n        \"REQ-FR-022 surface available or explicitly stubbed with documented behavior.\"\n      ],\n      \"steps\": [\n        \"Exercise REQ-FR-FUT-02 minimum path on REQ-FR-022 UI.\",\n        \"Run locator inventory check: each interactive element on path has stable `data-testid` or approved exception logged in audit.\",\n        \"Re-run after simulated patch churn affecting layout wrappers only.\"\n      ],\n      \"expected_results\": [\n        \"No increase in brittle XPath-only reliance for the REQ-FR-FUT-02 path.\",\n        \"Self-healing policy holds (REQ-NFR-002).\"\n      ],\n      \"grounding\": {\n        \"rtm_excerpt\": \"**Self-healing locators** reduce marginal cost per Angular patch. Investment in `data-testid` (REQ-NFR-002) is strategic, not cosmetic.\"\n      }\n    },\n    {\n      \"test_case_id\": \"TC-RTM-47442d6c-009\",\n      \"title\": \"BRD §6 business controls (BR-003 / BR-005) observable in UI with traceable selectors\",\n      \"type\": \"Business rule + UI traceability\",\n      \"priority\": \"P1\",\n      \"tags\": [\"@business\", \"@compliance\", \"@nfr\"],\n      \"rtm_id\": \"47442d6c00b6aa4a553e28c0b1237d83\",\n      \"requirement_ids\": {\n        \"business_requirement_id\": \"BRD §6\",\n        \"functional_requirement_id\": \"BR-003\",\n        \"hld_requirement_id\": \"BR-005\",\n        \"lld_requirement_id\": \"REQ-NFR-002\"\n      },\n      \"rtm_coverage_status\": \"complete\",\n      \"confidence\": 1,\n      \"source_refs\": [\n        \"test-doc/04-test-strategy.md#chunk-11\",\n        \"test-doc/03-test-design-specification.md#chunk-19\",\n        \"test-doc/01-business-requirements-document.md#chunk-58\",\n        \"test-doc/02-functional-requirements-specification.md#chunk-124\"\n      ],\n      \"notes\": \"All requirement columns mapped.\",\n      \"preconditions\": [\n        \"Test data satisfies BR-003 / BR-005 preconditions described in BRD chunk-58 and FRS chunk-124 mappings.\"\n      ],\n      \"steps\": [\n        \"Navigate flows that manifest BRD §6 business outcomes through the approved UI surfaces.\",\n        \"Assert business-visible states (limits, approvals, disclosures, or equivalents per BR-003/BR-005 definitions) using stable locators.\",\n        \"Attach evidence bundle: screenshot/HTML + locator map tied to `data-testid`.\"\n      ],\n      \"expected_results\": [\n        \"BR-003 / BR-005 outcomes match expected business states for the scenario matrix.\",\n        \"Automation remains sustainable under Angular maintenance (REQ-NFR-002).\"\n      ],\n      \"grounding\": {\n        \"rtm_excerpt\": \"**Self-healing locators** reduce marginal cost per Angular patch. Investment in `data-testid` (REQ-NFR-002) is strategic, not cosmetic.\"\n      }\n    },\n    {\n      \"test_case_id\": \"TC-RTM-4af2057a-010\",\n      \"title\": \"Trading dropdown navigation (REQ-FR-000 / REQ-FR-012): four links + locator contract\",\n      \"type\": \"UI / navigation\",\n      \"priority\": \"P1\",\n      \"tags\": [\"@nav\", \"@regression\", \"@trading\"],\n      \"rtm_id\": \"4af2057a427e30ab4bfe4b26a7815505\",\n      \"requirement_ids\": {\n        \"business_requirement_id\": \"REQ-SEC-003\",\n        \"functional_requirement_id\": \"REQ-FR-000\",\n        \"hld_requirement_id\": \"REQ-FR-012\",\n        \"lld_requirement_id\": \"REQ-NFR-002\"\n      },\n      \"rtm_coverage_status\": \"complete\",\n      \"confidence\": 1,\n      \"source_refs\": [\n        \"test-doc/04-test-strategy.md#chunk-11\",\n        \"test-doc/03-test-design-specification.md#chunk-20\",\n        \"test-doc/02-functional-requirements-specification.md#chunk-47\",\n        \"test-doc/01-business-requirements-document.md#chunk-76\"\n      ],\n      \"notes\": \"All requirement columns mapped.\",\n      \"preconditions\": [\n        \"User authenticated; baseline REQ-FR-000 satisfied for entry into trading features (per FRS chunk-47 / TDS chunk-20 binding).\"\n      ],\n      \"steps\": [\n        \"From post-login shell, open Trading dropdown (REQ-FR-012).\",\n        \"Activate each of the four linked destinations; confirm route/title/state per test design.\",\n        \"Verify each link target uses `data-testid` hooks in line with locator strategy (REF-3).\"\n      ],\n      \"expected_results\": [\n        \"All four links are reachable and return to a consistent shell state without console errors attributable to locator drift.\",\n        \"REQ-NFR-002 compliance verified on dropdown trigger and destinations.\"\n      ],\n      \"grounding\": {\n        \"rtm_excerpt\": \"**Self-healing locators** reduce marginal cost per Angular patch. Investment in `data-testid` (REQ-NFR-002) is strategic, not cosmetic.\"\n      }\n    }\n  ]\n}\n```\n\n**What this does:** One test case per `rtm_id` so the RTM is the coverage contract; each row keeps **requirement IDs**, **`source_refs`**, **`confidence`**, **`notes`**, and **`rtm_coverage_status`** as given. **`grounding.rtm_excerpt`** carries your row text; KB retrieval is reflected at repository level (`kb_excerpt_indices_used`) and in steps that cite **QAMVP-BRD/FRS/TDS/TSTRAT** alignment from excerpts [1]–[8].\n\n**Caveat:** Retrieved KB snippets were mostly document headers, so step-level *banking* semantics for IDs like **REQ-FR-050** / **REQ-FR-060** are intentionally phrased as “per TDS/FRS chunk binding” rather than inventing product rules. If you want this written to `test-doc/test-case-repository.json` or merged with your existing schema, say the target path and I can align field names to your repo’s canonical structure once file reads work again.",
+        "payload": {
+          "eventCount": 1939
+        }
+      }
+    },
+    {
+      "id": "event_mondkf6r_8h63sg",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "phase": "generate_tests",
+      "title": "Generated test cases",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:38:16.035Z",
+      "finishedAt": "2026-05-01T20:38:16.035Z",
+      "summary": "8 test case(s), 24 step(s).",
+      "technical": {
+        "rawLabel": "generate_tests:repository",
+        "payload": {
+          "cases": 8
+        }
+      }
+    },
+    {
+      "id": "event_mondkf6s_irskk5",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "phase": "generate_tests",
+      "title": "Build TestCases workbook from generated repository",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:38:16.036Z",
+      "finishedAt": "2026-05-01T20:38:16.491Z",
+      "technical": {
+        "rawLabel": "Build TestCases workbook from generated repository",
+        "command": "source ingestion/.venv/bin/activate && ingestion/.venv/bin/python test-doc/scripts/build_test_case_repository.py --spec '/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/ui-qa/generated/uiqa_mondi7dy_paemqx/test-case-repository.generated.json' --workbook-out '/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/TestCases.xlsx' --markdown-out '/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/ui-qa/generated/uiqa_mondi7dy_paemqx/test-case-repository.generated.md'",
+        "stdout": "Wrote /Users/utsavsharma/Documents/GitHub/QAMVP/test_data/TestCases.xlsx\nWrote /Users/utsavsharma/Documents/GitHub/QAMVP/test_data/ui-qa/generated/uiqa_mondi7dy_paemqx/test-case-repository.generated.md\nInventory: 8 test cases, 24 steps\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mondkfjh_f9n72r",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "phase": "audit_generated_tests",
+      "title": "Load KB entity IDs for traceability audit",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:38:16.493Z",
+      "finishedAt": "2026-05-01T20:38:16.697Z",
+      "technical": {
+        "rawLabel": "Load KB entity IDs for traceability audit",
+        "command": "source ingestion/.venv/bin/activate && DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport os, json, psycopg\nwith psycopg.connect(os.environ['DATABASE_URL']) as conn, conn.cursor() as cur:\n    cur.execute(\"\"\"\n      select distinct upper(canonical_id) from entities where canonical_id is not null and canonical_id <> ''\n      union\n      select distinct upper(requirement_id) from requirements where requirement_id is not null and requirement_id <> ''\n    \"\"\")\n    print(json.dumps([r[0] for r in cur.fetchall()]))\nPY",
+        "stdout": "[\"BR-013\", \"REQ-FR-014\", \"REQ-FR-045\", \"REQ-FR-042\", \"BR-005\", \"BR-003\", \"REQ-FR-FUT-01\", \"REQ-FR-013\", \"REQ-FR-034\", \"BR-010\", \"REQ-FR-005\", \"BR-007\", \"FRS \\u00a73\", \"REQ-NFR-002\", \"BR-014\", \"REQ-FR-031\", \"REQ-FR-041\", \"REQ-FR-012\", \"BR-002\", \"REQ-FR-060\", \"TKT-QAMVP-112\", \"REQ-FR-035\", \"REQ-FR-030\", \"TKT-QAMVP-111\", \"BR-008\", \"REQ-FR-021\", \"REQ-FR-050\", \"REQ-NFR-003\", \"REQ-FR-051\", \"REQ-SEC-001\", \"BR-012\", \"REQ-SEC-003\", \"BR-004\", \"REQ-FR-022\", \"FRS \\u00a723\", \"REQ-FR-043\", \"REQ-FR-010\", \"BR-009\", \"BRD \\u00a74\", \"TKT-QAMVP-110\", \"REQ-FR-040\", \"REQ-FR-FUT-02\", \"BRD \\u00a73\", \"REQ-FR-033\", \"REQ-FR-000\", \"BR-011\", \"REQ-FR-032\", \"BR-001\", \"TKT-QAMVP-101\", \"BRD \\u00a78\", \"REQ-FR-044\", \"REQ-FR-023\", \"REQ-FR-004\", \"BR-006\", \"REQ-NFR-001\", \"REQ-FR-002\", \"REQ-FR-020\", \"REQ-FR-003\", \"TKT-QAMVP-102\", \"REQ-FR-001\", \"REQ-FR-FUT-03\", \"BRD \\u00a76\", \"REQ-FR-011\"]\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mondkfp7_vuw6cj",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "phase": "audit_generated_tests",
+      "title": "Generated test confidence audit passed",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:38:16.699Z",
+      "finishedAt": "2026-05-01T20:38:16.699Z",
+      "summary": "Finding counts: {\"critical\":0,\"high\":0,\"medium\":0,\"low\":0}. Confidence scorecards: 32.",
+      "technical": {
+        "rawLabel": "audit_generated_tests:confidence",
+        "payload": {
+          "counts": {
+            "critical": 0,
+            "high": 0,
+            "medium": 0,
+            "low": 0
+          },
+          "scorecards": [
+            {
+              "subject": "TC-001 step 1",
+              "score": 0.99,
+              "threshold": 0.7,
+              "status": "pass",
+              "rationale": [
+                "Step requirement matched the KB inventory."
+              ]
+            },
+            {
+              "subject": "TC-001 step 2",
+              "score": 0.95,
+              "threshold": 0.7,
+              "status": "pass",
+              "rationale": [
+                "Step requirement matched the KB inventory."
+              ]
+            },
+            {
+              "subject": "TC-001 step 3",
+              "score": 0.95,
+              "threshold": 0.7,
+              "status": "pass",
+              "rationale": [
+                "Step requirement matched the KB inventory."
+              ]
+            },
+            {
+              "subject": "TC-001",
+              "score": 0.95,
+              "threshold": 0.72,
+              "status": "pass",
+              "rationale": [
+                "4 requirement ID(s) matched the KB inventory."
+              ]
+            },
+            {
+              "subject": "TC-002 step 1",
+              "score": 0.99,
+              "threshold": 0.7,
+              "status": "pass",
+              "rationale": [
+                "Step requirement matched the KB inventory."
+              ]
+            },
+            {
+              "subject": "TC-002 step 2",
+              "score": 0.95,
+              "threshold": 0.7,
+              "status": "pass",
+              "rationale": [
+                "Step requirement matched the KB inventory."
+              ]
+            },
+            {
+              "subject": "TC-002 step 3",
+              "score": 0.95,
+              "threshold": 0.7,
+              "status": "pass",
+              "rationale": [
+                "Step requirement matched the KB inventory."
+              ]
+            },
+            {
+              "subject": "TC-002",
+              "score": 0.95,
+              "threshold": 0.72,
+              "status": "pass",
+              "rationale": [
+                "4 requirement ID(s) matched the KB inventory."
+              ]
+            },
+            {
+              "subject": "TC-003 step 1",
+              "score": 0.99,
+              "threshold": 0.7,
+              "status": "pass",
+              "rationale": [
+                "Step requirement matched the KB inventory."
+              ]
+            },
+            {
+              "subject": "TC-003 step 2",
+              "score": 0.95,
+              "threshold": 0.7,
+              "status": "pass",
+              "rationale": [
+                "Step requirement matched the KB inventory."
+              ]
+            },
+            {
+              "subject": "TC-003 step 3",
+              "score": 0.95,
+              "threshold": 0.7,
+              "status": "pass",
+              "rationale": [
+                "Step requirement matched the KB inventory."
+              ]
+            },
+            {
+              "subject": "TC-003",
+              "score": 0.95,
+              "threshold": 0.72,
+              "status": "pass",
+              "rationale": [
+                "4 requirement ID(s) matched the KB inventory."
+              ]
+            },
+            {
+              "subject": "TC-004 step 1",
+              "score": 0.99,
+              "threshold": 0.7,
+              "status": "pass",
+              "rationale": [
+                "Step requirement matched the KB inventory."
+              ]
+            },
+            {
+              "subject": "TC-004 step 2",
+              "score": 0.95,
+              "threshold": 0.7,
+              "status": "pass",
+              "rationale": [
+                "Step requirement matched the KB inventory."
+              ]
+            },
+            {
+              "subject": "TC-004 step 3",
+              "score": 0.95,
+              "threshold": 0.7,
+              "status": "pass",
+              "rationale": [
+                "Step requirement matched the KB inventory."
+              ]
+            },
+            {
+              "subject": "TC-004",
+              "score": 0.95,
+              "threshold": 0.72,
+              "status": "pass",
+              "rationale": [
+                "4 requirement ID(s) matched the KB inventory."
+              ]
+            },
+            {
+              "subject": "TC-005 step 1",
+              "score": 0.99,
+              "threshold": 0.7,
+              "status": "pass",
+              "rationale": [
+                "Step requirement matched the KB inventory."
+              ]
+            },
+            {
+              "subject": "TC-005 step 2",
+              "score": 0.95,
+              "threshold": 0.7,
+              "status": "pass",
+              "rationale": [
+                "Step requirement matched the KB inventory."
+              ]
+            },
+            {
+              "subject": "TC-005 step 3",
+              "score": 0.95,
+              "threshold": 0.7,
+              "status": "pass",
+              "rationale": [
+                "Step requirement matched the KB inventory."
+              ]
+            },
+            {
+              "subject": "TC-005",
+              "score": 0.95,
+              "threshold": 0.72,
+              "status": "pass",
+              "rationale": [
+                "4 requirement ID(s) matched the KB inventory."
+              ]
+            },
+            {
+              "subject": "TC-006 step 1",
+              "score": 0.99,
+              "threshold": 0.7,
+              "status": "pass",
+              "rationale": [
+                "Step requirement matched the KB inventory."
+              ]
+            },
+            {
+              "subject": "TC-006 step 2",
+              "score": 0.95,
+              "threshold": 0.7,
+              "status": "pass",
+              "rationale": [
+                "Step requirement matched the KB inventory."
+              ]
+            },
+            {
+              "subject": "TC-006 step 3",
+              "score": 0.95,
+              "threshold": 0.7,
+              "status": "pass",
+              "rationale": [
+                "Step requirement matched the KB inventory."
+              ]
+            },
+            {
+              "subject": "TC-006",
+              "score": 0.95,
+              "threshold": 0.72,
+              "status": "pass",
+              "rationale": [
+                "4 requirement ID(s) matched the KB inventory."
+              ]
+            },
+            {
+              "subject": "TC-007 step 1",
+              "score": 0.99,
+              "threshold": 0.7,
+              "status": "pass",
+              "rationale": [
+                "Step requirement matched the KB inventory."
+              ]
+            },
+            {
+              "subject": "TC-007 step 2",
+              "score": 0.95,
+              "threshold": 0.7,
+              "status": "pass",
+              "rationale": [
+                "Step requirement matched the KB inventory."
+              ]
+            },
+            {
+              "subject": "TC-007 step 3",
+              "score": 0.95,
+              "threshold": 0.7,
+              "status": "pass",
+              "rationale": [
+                "Step requirement matched the KB inventory."
+              ]
+            },
+            {
+              "subject": "TC-007",
+              "score": 0.95,
+              "threshold": 0.72,
+              "status": "pass",
+              "rationale": [
+                "4 requirement ID(s) matched the KB inventory."
+              ]
+            },
+            {
+              "subject": "TC-008 step 1",
+              "score": 0.99,
+              "threshold": 0.7,
+              "status": "pass",
+              "rationale": [
+                "Step requirement matched the KB inventory."
+              ]
+            },
+            {
+              "subject": "TC-008 step 2",
+              "score": 0.95,
+              "threshold": 0.7,
+              "status": "pass",
+              "rationale": [
+                "Step requirement matched the KB inventory."
+              ]
+            },
+            {
+              "subject": "TC-008 step 3",
+              "score": 0.95,
+              "threshold": 0.7,
+              "status": "pass",
+              "rationale": [
+                "Step requirement matched the KB inventory."
+              ]
+            },
+            {
+              "subject": "TC-008",
+              "score": 0.95,
+              "threshold": 0.72,
+              "status": "pass",
+              "rationale": [
+                "4 requirement ID(s) matched the KB inventory."
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "event_mondkfp7_xu4zju",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "phase": "complete",
+      "title": "TestCases.xlsx generation complete",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:38:16.699Z",
+      "finishedAt": "2026-05-01T20:38:16.699Z",
+      "summary": "Generated 8 test case(s). Confidence audit passed."
+    },
+    {
+      "id": "event_mondkfp9_kbrgfb",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "phase": "rag_ready",
+      "title": "Tool audit_testcase_traceability",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:38:16.701Z",
+      "finishedAt": "2026-05-01T20:38:16.701Z",
+      "summary": "audit_testcase_traceability completed.",
+      "technical": {
+        "rawLabel": "tool:audit_testcase_traceability",
+        "toolName": "audit_testcase_traceability",
+        "payload": {
+          "ok": true,
+          "tool": "audit_testcase_traceability",
+          "result": {
+            "blockerCount": 0,
+            "findingCounts": {
+              "critical": 0,
+              "high": 0,
+              "medium": 0,
+              "low": 0
+            },
+            "auditEvidence": [
+              {
+                "id": "ev_mondkfp6_k0g01a",
+                "createdAt": "2026-05-01T20:38:16.698Z",
+                "kind": "report",
+                "label": "Generated test confidence audit",
+                "path": "test_data/test-results/generated_test_case_audit_20260501203816.md",
+                "phase": "audit_generated_tests"
+              },
+              {
+                "id": "ev_mondkfp7_zky0zn",
+                "createdAt": "2026-05-01T20:38:16.699Z",
+                "kind": "json",
+                "label": "Generated test confidence audit JSON",
+                "path": "test_data/test-results/generated_test_case_audit_20260501203816.json",
+                "phase": "audit_generated_tests"
+              }
+            ]
+          }
+        },
+        "stdout": "{\n  \"blockerCount\": 0,\n  \"findingCounts\": {\n    \"critical\": 0,\n    \"high\": 0,\n    \"medium\": 0,\n    \"low\": 0\n  },\n  \"auditEvidence\": [\n    {\n      \"id\": \"ev_mondkfp6_k0g01a\",\n      \"createdAt\": \"2026-05-01T20:38:16.698Z\",\n      \"kind\": \"report\",\n      \"label\": \"Generated test confidence audit\",\n      \"path\": \"test_data/test-results/generated_test_case_audit_20260501203816.md\",\n      \"phase\": \"audit_generated_tests\"\n    },\n    {\n      \"id\": \"ev_mondkfp7_zky0zn\",\n      \"createdAt\": \"2026-05-01T20:38:16.699Z\",\n      \"kind\": \"json\",\n      \"label\": \"Generated test confidence audit JSON\",\n      \"path\": \"test_data/test-results/generated_test_case_audit_20260501203816.json\",\n      \"phase\": \"audit_generated_tests\"\n    }\n  ]\n}"
+      }
+    },
+    {
+      "id": "event_mondl18x_trq8si",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "phase": "rag_ready",
+      "title": "Cursor SDK tool harness",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:38:44.625Z",
+      "finishedAt": "2026-05-01T20:38:55.333Z",
+      "summary": "Cursor SDK tool harness completed.",
+      "technical": {
+        "rawLabel": "cursor-tools:rag_ready",
+        "sdkPrompt": "Inspect the derived RTM rows with inspect_rtm and summarize the first rows.",
+        "payload": {
+          "toolResults": [
+            {
+              "ok": true,
+              "tool": "inspect_rtm",
+              "result": {
+                "purpose": "Inspect derived RTM",
+                "sql": "select rtm_id, business_requirement_id, functional_requirement_id, hld_requirement_id, lld_requirement_id, coverage_status, confidence, notes from rtm_rows order by confidence asc, rtm_id limit 15",
+                "columns": [
+                  "rtm_id",
+                  "business_requirement_id",
+                  "functional_requirement_id",
+                  "hld_requirement_id",
+                  "lld_requirement_id",
+                  "coverage_status",
+                  "confidence",
+                  "notes"
+                ],
+                "rows": [
+                  {
+                    "rtm_id": "04eb9e82209befc01ac7c02674789468",
+                    "business_requirement_id": "REQ-SEC-003",
+                    "functional_requirement_id": "REQ-FR-050",
+                    "hld_requirement_id": "REQ-FR-013",
+                    "lld_requirement_id": "REQ-NFR-002",
+                    "coverage_status": "complete",
+                    "confidence": 1,
+                    "notes": "All requirement columns mapped."
+                  },
+                  {
+                    "rtm_id": "0b6da161e1e7ff49c8bc91d39f8bac87",
+                    "business_requirement_id": "REQ-SEC-003",
+                    "functional_requirement_id": "REQ-FR-060",
+                    "hld_requirement_id": "REQ-FR-020",
+                    "lld_requirement_id": "REQ-NFR-002",
+                    "coverage_status": "complete",
+                    "confidence": 1,
+                    "notes": "All requirement columns mapped."
+                  },
+                  {
+                    "rtm_id": "0bc8fc98f8249cb6ee3e28a342a2a9c9",
+                    "business_requirement_id": "REQ-SEC-003",
+                    "functional_requirement_id": "REQ-FR-FUT-03",
+                    "hld_requirement_id": "REQ-FR-023",
+                    "lld_requirement_id": "REQ-NFR-002",
+                    "coverage_status": "complete",
+                    "confidence": 1,
+                    "notes": "All requirement columns mapped."
+                  },
+                  {
+                    "rtm_id": "1a69a85f1b9ce6fae1eb57f163c4c0ab",
+                    "business_requirement_id": "REQ-SEC-003",
+                    "functional_requirement_id": "REQ-SEC-001",
+                    "hld_requirement_id": "REQ-FR-032",
+                    "lld_requirement_id": "REQ-NFR-002",
+                    "coverage_status": "complete",
+                    "confidence": 1,
+                    "notes": "All requirement columns mapped."
+                  },
+                  {
+                    "rtm_id": "1b2dc0fd710f6b86383590dda9d08917",
+                    "business_requirement_id": "REQ-SEC-003",
+                    "functional_requirement_id": "REQ-FR-051",
+                    "hld_requirement_id": "REQ-FR-014",
+                    "lld_requirement_id": "REQ-NFR-002",
+                    "coverage_status": "complete",
+                    "confidence": 1,
+                    "notes": "All requirement columns mapped."
+                  },
+                  {
+                    "rtm_id": "1c351b12fb818d09824d3c0d1c16d741",
+                    "business_requirement_id": "REQ-SEC-003",
+                    "functional_requirement_id": "REQ-FR-FUT-01",
+                    "hld_requirement_id": "REQ-FR-021",
+                    "lld_requirement_id": "REQ-NFR-002",
+                    "coverage_status": "complete",
+                    "confidence": 1,
+                    "notes": "All requirement columns mapped."
+                  },
+                  {
+                    "rtm_id": "3719a8286464f8ca38bedb3d7fa4a903",
+                    "business_requirement_id": "REQ-SEC-003",
+                    "functional_requirement_id": "BR-014",
+                    "hld_requirement_id": "REQ-FR-010",
+                    "lld_requirement_id": "REQ-NFR-002",
+                    "coverage_status": "complete",
+                    "confidence": 1,
+                    "notes": "All requirement columns mapped."
+                  },
+                  {
+                    "rtm_id": "46f03b01dd0cf51ef8da7263a9e57048",
+                    "business_requirement_id": "REQ-SEC-003",
+                    "functional_requirement_id": "REQ-FR-FUT-02",
+                    "hld_requirement_id": "REQ-FR-022",
+                    "lld_requirement_id": "REQ-NFR-002",
+                    "coverage_status": "complete",
+                    "confidence": 1,
+                    "notes": "All requirement columns mapped."
+                  },
+                  {
+                    "rtm_id": "47442d6c00b6aa4a553e28c0b1237d83",
+                    "business_requirement_id": "BRD §6",
+                    "functional_requirement_id": "BR-003",
+                    "hld_requirement_id": "BR-005",
+                    "lld_requirement_id": "REQ-NFR-002",
+                    "coverage_status": "complete",
+                    "confidence": 1,
+                    "notes": "All requirement columns mapped."
+                  },
+                  {
+                    "rtm_id": "4af2057a427e30ab4bfe4b26a7815505",
+                    "business_requirement_id": "REQ-SEC-003",
+                    "functional_requirement_id": "REQ-FR-000",
+                    "hld_requirement_id": "REQ-FR-012",
+                    "lld_requirement_id": "REQ-NFR-002",
+                    "coverage_status": "complete",
+                    "confidence": 1,
+                    "notes": "All requirement columns mapped."
+                  },
+                  {
+                    "rtm_id": "4ebab4c313e281e10157f6ed968d1657",
+                    "business_requirement_id": "REQ-SEC-003",
+                    "functional_requirement_id": "BR-009",
+                    "hld_requirement_id": "REQ-FR-001",
+                    "lld_requirement_id": "REQ-NFR-002",
+                    "coverage_status": "complete",
+                    "confidence": 1,
+                    "notes": "All requirement columns mapped."
+                  },
+                  {
+                    "rtm_id": "5774c47d3903430fe5643e74d95e37ef",
+                    "business_requirement_id": "BRD §3",
+                    "functional_requirement_id": "BR-002",
+                    "hld_requirement_id": "BR-001",
+                    "lld_requirement_id": "REQ-NFR-002",
+                    "coverage_status": "complete",
+                    "confidence": 1,
+                    "notes": "All requirement columns mapped."
+                  },
+                  {
+                    "rtm_id": "79917995e9f7eac7d1159c10c2774a70",
+                    "business_requirement_id": "BRD §8",
+                    "functional_requirement_id": "BR-004",
+                    "hld_requirement_id": "BR-006",
+                    "lld_requirement_id": "REQ-NFR-002",
+                    "coverage_status": "complete",
+                    "confidence": 1,
+                    "notes": "All requirement columns mapped."
+                  },
+                  {
+                    "rtm_id": "89e24d8ff8bfb6a20c81a29cbc950389",
+                    "business_requirement_id": "REQ-SEC-003",
+                    "functional_requirement_id": "BR-010",
+                    "hld_requirement_id": "REQ-FR-002",
+                    "lld_requirement_id": "REQ-NFR-002",
+                    "coverage_status": "complete",
+                    "confidence": 1,
+                    "notes": "All requirement columns mapped."
+                  },
+                  {
+                    "rtm_id": "97a16c4b94d94cde947c9c5aacc21e89",
+                    "business_requirement_id": "REQ-SEC-003",
+                    "functional_requirement_id": "BR-008",
+                    "hld_requirement_id": "FRS §3",
+                    "lld_requirement_id": "REQ-NFR-002",
+                    "coverage_status": "complete",
+                    "confidence": 1,
+                    "notes": "All requirement columns mapped."
+                  }
+                ],
+                "rowCount": 15
+              }
+            }
+          ]
+        },
+        "stdout": "## Summary of the first derived RTM rows\n\n**How this was obtained:** `inspect_rtm` with `limit: 15`. The KB ran:\n\n`SELECT … FROM rtm_rows ORDER BY confidence ASC, rtm_id LIMIT 15`\n\nSo “first” here means **lowest confidence first, then `rtm_id`** — not necessarily document order.\n\n**What those 15 rows look like**\n\n| Pattern | Detail |\n|--------|--------|\n| **Coverage** | Every row is **`complete`** with **`confidence: 1`** and notes **“All requirement columns mapped.”** |\n| **Business** | Mostly **`REQ-SEC-003`**; a few rows use **`BRD §3`**, **`BRD §6`**, **`BRD §8`**. |\n| **Functional** | Mix of **`REQ-FR-*`** (including **`REQ-FR-FUT-*`**), **`REQ-SEC-001`**, and **`BR-*`** IDs. |\n| **HLD** | Mostly **`REQ-FR-*`**; some **`BR-*`**; one row uses **`FRS §3`**. |\n| **LLD** | **All 15 rows map LLD to `REQ-NFR-002`.** |\n\n**Takeaway:** In this slice, ordering by confidence does not separate “weaker” links — everything shown is **complete / confidence 1**. The interesting structure is **many BR/FR/HLD variants rolling up under shared anchors** (`REQ-SEC-003` on the BR side, **`REQ-NFR-002`** on the LLD side everywhere in this sample)."
+      }
+    },
+    {
+      "id": "event_mondl54r_bdh9mz",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "phase": "rag_ready",
+      "title": "Tool inspect_rtm",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:38:49.659Z",
+      "finishedAt": "2026-05-01T20:38:49.902Z",
+      "summary": "inspect_rtm returned 15 row(s).",
+      "technical": {
+        "rawLabel": "tool:inspect_rtm",
+        "toolName": "inspect_rtm",
+        "payload": {
+          "ok": true,
+          "tool": "inspect_rtm",
+          "result": {
+            "purpose": "Inspect derived RTM",
+            "sql": "select rtm_id, business_requirement_id, functional_requirement_id, hld_requirement_id, lld_requirement_id, coverage_status, confidence, notes from rtm_rows order by confidence asc, rtm_id limit 15",
+            "columns": [
+              "rtm_id",
+              "business_requirement_id",
+              "functional_requirement_id",
+              "hld_requirement_id",
+              "lld_requirement_id",
+              "coverage_status",
+              "confidence",
+              "notes"
+            ],
+            "rows": [
+              {
+                "rtm_id": "04eb9e82209befc01ac7c02674789468",
+                "business_requirement_id": "REQ-SEC-003",
+                "functional_requirement_id": "REQ-FR-050",
+                "hld_requirement_id": "REQ-FR-013",
+                "lld_requirement_id": "REQ-NFR-002",
+                "coverage_status": "complete",
+                "confidence": 1,
+                "notes": "All requirement columns mapped."
+              },
+              {
+                "rtm_id": "0b6da161e1e7ff49c8bc91d39f8bac87",
+                "business_requirement_id": "REQ-SEC-003",
+                "functional_requirement_id": "REQ-FR-060",
+                "hld_requirement_id": "REQ-FR-020",
+                "lld_requirement_id": "REQ-NFR-002",
+                "coverage_status": "complete",
+                "confidence": 1,
+                "notes": "All requirement columns mapped."
+              },
+              {
+                "rtm_id": "0bc8fc98f8249cb6ee3e28a342a2a9c9",
+                "business_requirement_id": "REQ-SEC-003",
+                "functional_requirement_id": "REQ-FR-FUT-03",
+                "hld_requirement_id": "REQ-FR-023",
+                "lld_requirement_id": "REQ-NFR-002",
+                "coverage_status": "complete",
+                "confidence": 1,
+                "notes": "All requirement columns mapped."
+              },
+              {
+                "rtm_id": "1a69a85f1b9ce6fae1eb57f163c4c0ab",
+                "business_requirement_id": "REQ-SEC-003",
+                "functional_requirement_id": "REQ-SEC-001",
+                "hld_requirement_id": "REQ-FR-032",
+                "lld_requirement_id": "REQ-NFR-002",
+                "coverage_status": "complete",
+                "confidence": 1,
+                "notes": "All requirement columns mapped."
+              },
+              {
+                "rtm_id": "1b2dc0fd710f6b86383590dda9d08917",
+                "business_requirement_id": "REQ-SEC-003",
+                "functional_requirement_id": "REQ-FR-051",
+                "hld_requirement_id": "REQ-FR-014",
+                "lld_requirement_id": "REQ-NFR-002",
+                "coverage_status": "complete",
+                "confidence": 1,
+                "notes": "All requirement columns mapped."
+              },
+              {
+                "rtm_id": "1c351b12fb818d09824d3c0d1c16d741",
+                "business_requirement_id": "REQ-SEC-003",
+                "functional_requirement_id": "REQ-FR-FUT-01",
+                "hld_requirement_id": "REQ-FR-021",
+                "lld_requirement_id": "REQ-NFR-002",
+                "coverage_status": "complete",
+                "confidence": 1,
+                "notes": "All requirement columns mapped."
+              },
+              {
+                "rtm_id": "3719a8286464f8ca38bedb3d7fa4a903",
+                "business_requirement_id": "REQ-SEC-003",
+                "functional_requirement_id": "BR-014",
+                "hld_requirement_id": "REQ-FR-010",
+                "lld_requirement_id": "REQ-NFR-002",
+                "coverage_status": "complete",
+                "confidence": 1,
+                "notes": "All requirement columns mapped."
+              },
+              {
+                "rtm_id": "46f03b01dd0cf51ef8da7263a9e57048",
+                "business_requirement_id": "REQ-SEC-003",
+                "functional_requirement_id": "REQ-FR-FUT-02",
+                "hld_requirement_id": "REQ-FR-022",
+                "lld_requirement_id": "REQ-NFR-002",
+                "coverage_status": "complete",
+                "confidence": 1,
+                "notes": "All requirement columns mapped."
+              },
+              {
+                "rtm_id": "47442d6c00b6aa4a553e28c0b1237d83",
+                "business_requirement_id": "BRD §6",
+                "functional_requirement_id": "BR-003",
+                "hld_requirement_id": "BR-005",
+                "lld_requirement_id": "REQ-NFR-002",
+                "coverage_status": "complete",
+                "confidence": 1,
+                "notes": "All requirement columns mapped."
+              },
+              {
+                "rtm_id": "4af2057a427e30ab4bfe4b26a7815505",
+                "business_requirement_id": "REQ-SEC-003",
+                "functional_requirement_id": "REQ-FR-000",
+                "hld_requirement_id": "REQ-FR-012",
+                "lld_requirement_id": "REQ-NFR-002",
+                "coverage_status": "complete",
+                "confidence": 1,
+                "notes": "All requirement columns mapped."
+              },
+              {
+                "rtm_id": "4ebab4c313e281e10157f6ed968d1657",
+                "business_requirement_id": "REQ-SEC-003",
+                "functional_requirement_id": "BR-009",
+                "hld_requirement_id": "REQ-FR-001",
+                "lld_requirement_id": "REQ-NFR-002",
+                "coverage_status": "complete",
+                "confidence": 1,
+                "notes": "All requirement columns mapped."
+              },
+              {
+                "rtm_id": "5774c47d3903430fe5643e74d95e37ef",
+                "business_requirement_id": "BRD §3",
+                "functional_requirement_id": "BR-002",
+                "hld_requirement_id": "BR-001",
+                "lld_requirement_id": "REQ-NFR-002",
+                "coverage_status": "complete",
+                "confidence": 1,
+                "notes": "All requirement columns mapped."
+              },
+              {
+                "rtm_id": "79917995e9f7eac7d1159c10c2774a70",
+                "business_requirement_id": "BRD §8",
+                "functional_requirement_id": "BR-004",
+                "hld_requirement_id": "BR-006",
+                "lld_requirement_id": "REQ-NFR-002",
+                "coverage_status": "complete",
+                "confidence": 1,
+                "notes": "All requirement columns mapped."
+              },
+              {
+                "rtm_id": "89e24d8ff8bfb6a20c81a29cbc950389",
+                "business_requirement_id": "REQ-SEC-003",
+                "functional_requirement_id": "BR-010",
+                "hld_requirement_id": "REQ-FR-002",
+                "lld_requirement_id": "REQ-NFR-002",
+                "coverage_status": "complete",
+                "confidence": 1,
+                "notes": "All requirement columns mapped."
+              },
+              {
+                "rtm_id": "97a16c4b94d94cde947c9c5aacc21e89",
+                "business_requirement_id": "REQ-SEC-003",
+                "functional_requirement_id": "BR-008",
+                "hld_requirement_id": "FRS §3",
+                "lld_requirement_id": "REQ-NFR-002",
+                "coverage_status": "complete",
+                "confidence": 1,
+                "notes": "All requirement columns mapped."
+              }
+            ],
+            "rowCount": 15
+          }
+        },
+        "stdout": "{\n  \"purpose\": \"Inspect derived RTM\",\n  \"sql\": \"select rtm_id, business_requirement_id, functional_requirement_id, hld_requirement_id, lld_requirement_id, coverage_status, confidence, notes from rtm_rows order by confidence asc, rtm_id limit 15\",\n  \"columns\": [\n    \"rtm_id\",\n    \"business_requirement_id\",\n    \"functional_requirement_id\",\n    \"hld_requirement_id\",\n    \"lld_requirement_id\",\n    \"coverage_status\",\n    \"confidence\",\n    \"notes\"\n  ],\n  \"rows\": [\n    {\n      \"rtm_id\": \"04eb9e82209befc01ac7c02674789468\",\n      \"business_requirement_id\": \"REQ-SEC-003\",\n      \"functional_requirement_id\": \"REQ-FR-050\",\n      \"hld_requirement_id\": \"REQ-FR-013\",\n      \"lld_requirement_id\": \"REQ-NFR-002\",\n      \"coverage_status\": \"complete\",\n      \"confidence\": 1,\n      \"notes\": \"All requirement columns mapped.\"\n    },\n    {\n      \"rtm_id\": \"0b6da161e1e7ff49c8bc91d39f8bac87\",\n      \"business_requirement_id\": \"REQ-SEC-003\",\n      \"functional_requirement_id\": \"REQ-FR-060\",\n      \"hld_requirement_id\": \"REQ-FR-020\",\n      \"lld_requirement_id\": \"REQ-NFR-002\",\n      \"coverage_status\": \"complete\",\n      \"confidence\": 1,\n      \"notes\": \"All requirement columns mapped.\"\n    },\n    {\n      \"rtm_id\": \"0bc8fc98f8249cb6ee3e28a342a2a9c9\",\n      \"business_requirement_id\": \"REQ-SEC-003\",\n      \"functional_requirement_id\": \"REQ-FR-FUT-03\",\n      \"hld_requirement_id\": \"REQ-FR-023\",\n      \"lld_requirement_id\": \"REQ-NFR-002\",\n      \"coverage_status\": \"complete\",\n      \"confidence\": 1,\n      \"notes\": \"All requirement columns mapped.\"\n    },\n    {\n      \"rtm_id\": \"1a69a85f1b9ce6fae1eb57f163c4c0ab\",\n      \"business_requirement_id\": \"REQ-SEC-003\",\n      \"functional_requirement_id\": \"REQ-SEC-001\",\n      \"hld_requirement_id\": \"REQ-FR-032\",\n      \"lld_requirement_id\": \"REQ-NFR-002\",\n      \"coverage_status\": \"complete\",\n      \"confidence\": 1,\n      \"notes\": \"All requirement columns mapped.\"\n    },\n    {\n      \"rtm_id\": \"1b2dc0fd710f6b86383590dda9d08917\",\n      \"business_requirement_id\": \"REQ-SEC-003\",\n      \"functional_requirement_id\": \"REQ-FR-051\",\n      \"hld_requirement_id\": \"REQ-FR-014\",\n      \"lld_requirement_id\": \"REQ-NFR-002\",\n      \"coverage_status\": \"complete\",\n      \"confidence\": 1,\n      \"notes\": \"All requirement columns mapped.\"\n    },\n    {\n      \"rtm_id\": \"1c351b12fb818d09824d3c0d1c16d741\",\n      \"business_requirement_id\": \"REQ-SEC-003\",\n      \"functional_requirement_id\": \"REQ-FR-FUT-01\",\n      \"hld_requirement_id\": \"REQ-FR-021\",\n      \"lld_requirement_id\": \"REQ-NFR-002\",\n      \"coverage_status\": \"complete\",\n      \"confidence\": 1,\n      \"notes\": \"All requirement columns mapped.\"\n    },\n    {\n      \"rtm_id\": \"3719a8286464f8ca38bedb3d7fa4a903\",\n      \"business_requirement_id\": \"REQ-SEC-003\",\n      \"functional_requirement_id\": \"BR-014\",\n      \"hld_requirement_id\": \"REQ-FR-010\",\n      \"lld_requirement_id\": \"REQ-NFR-002\",\n      \"coverage_status\": \"complete\",\n      \"confidence\": 1,\n      \"notes\": \"All requirement columns mapped.\"\n    },\n    {\n      \"rtm_id\": \"46f03b01dd0cf51ef8da7263a9e57048\",\n      \"business_requirement_id\": \"REQ-SEC-003\",\n      \"functional_requirement_id\": \"REQ-FR-FUT-02\",\n      \"hld_requirement_id\": \"REQ-FR-022\",\n      \"lld_requirement_id\": \"REQ-NFR-002\",\n      \"coverage_status\": \"complete\",\n      \"confidence\": 1,\n      \"notes\": \"All requirement columns mapped.\"\n    },\n    {\n      \"rtm_id\": \"47442d6c00b6aa4a553e28c0b1237d83\",\n      \"business_requirement_id\": \"BRD §6\",\n      \"functional_requirement_id\": \"BR-003\",\n      \"hld_requirement_id\": \"BR-005\",\n      \"lld_requirement_id\": \"REQ-NFR-002\",\n      \"coverage_status\": \"complete\",\n      \"confidence\": 1,\n      \"notes\": \"All requirement columns mapped.\"\n    },\n    {\n      \"rtm_id\": \"4af2057a427e30ab4bfe4b26a7815505\",\n      \"business_requirement_id\": \"REQ-SEC-003\",\n      \"functional_requirement_id\": \"REQ-FR-000\",\n      \"hld_requirement_id\": \"REQ-FR-012\",\n      \"lld_requirement_id\": \"REQ-NFR-002\",\n      \"coverage_status\": \"complete\",\n      \"confidence\": 1,\n      \"notes\": \"All requirement columns mapped.\"\n    },\n    {\n      \"rtm_id\": \"4ebab4c313e281e10157f6ed968d1657\",\n      \"business_requirement_id\": \"REQ-SEC-003\",\n      \"functional_requirement_id\": \"BR-009\",\n      \"hld_requirement_id\": \"REQ-FR-001\",\n      \"lld_requirement_id\": \"REQ-NFR-002\",\n      \"coverage_status\": \"complete\",\n      \"confidence\": 1,\n      \"notes\": \"All requirement columns mapped.\"\n    },\n    {\n      \"rtm_id\": \"5774c47d3903430fe5643e74d95e37ef\",\n      \"business_requirement_id\": \"BRD §3\",\n      \"functional_requirement_id\": \"BR-002\",\n      \"hld_requirement_id\": \"BR-001\",\n      \"lld_requirement_id\": \"REQ-NFR-002\",\n      \"coverage_status\": \"complete\",\n      \"confidence\": 1,\n      \"notes\": \"All requirement columns mapped.\"\n    },\n    {\n      \"rtm_id\": \"79917995e9f7eac7d1159c10c2774a70\",\n      \"business_requirement_id\": \"BRD §8\",\n      \"functional_requirement_id\": \"BR-004\",\n      \"hld_requirement_id\": \"BR-006\",\n      \"lld_requirement_id\": \"REQ-NFR-002\",\n      \"coverage_status\": \"complete\",\n      \"confidence\": 1,\n      \"notes\": \"All requirement columns mapped.\"\n    },\n    {\n      \"rtm_id\": \"89e24d8ff8bfb6a20c81a29cbc950389\",\n      \"business_requirement_id\": \"REQ-SEC-003\",\n      \"functional_requirement_id\": \"BR-010\",\n      \"hld_requirement_id\": \"REQ-FR-002\",\n      \"lld_requirement_id\": \"REQ-NFR-002\",\n      \"coverage_status\": \"complete\",\n      \"confidence\": 1,\n      \"notes\": \"All requirement columns mapped.\"\n    },\n    {\n      \"rtm_id\": \"97a16c4b94d94cde947c9c5aacc21e89\",\n      \"business_requirement_id\": \"REQ-SEC-003\",\n      \"functional_requirement_id\": \"BR-008\",\n      \"hld_requirement_id\": \"FRS §3\",\n      \"lld_requirement_id\": \"REQ-NFR-002\",\n      \"coverage_status\": \"complete\",\n      \"confidence\": 1,\n      \"notes\": \"All requirement columns mapped.\"\n    }\n  ],\n  \"rowCount\": 15\n}"
+      }
+    },
+    {
+      "id": "event_mondl54t_jruafs",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "phase": "rag_ready",
+      "title": "Tool query_kb_sql: Inspect derived RTM",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:38:49.661Z",
+      "finishedAt": "2026-05-01T20:38:49.901Z",
+      "technical": {
+        "rawLabel": "Tool query_kb_sql: Inspect derived RTM",
+        "command": "source ingestion/.venv/bin/activate && UI_QA_SQL='select rtm_id,\n           business_requirement_id,\n           functional_requirement_id,\n           hld_requirement_id,\n           lld_requirement_id,\n           coverage_status,\n           confidence,\n           notes\n    from rtm_rows\n    \n    order by confidence asc, rtm_id\n    limit 15' UI_QA_LIMIT=15 DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport decimal, json, os, psycopg\nsql = os.environ[\"UI_QA_SQL\"]\nlimit = int(os.environ.get(\"UI_QA_LIMIT\", \"50\"))\nwrapped = f\"select * from ({sql}) as uiqa_readonly_result limit {limit}\"\ndef encode(value):\n    if isinstance(value, decimal.Decimal):\n        return float(value)\n    return value\nwith psycopg.connect(os.environ[\"DATABASE_URL\"]) as conn:\n    conn.execute(\"set statement_timeout = '5000ms'\")\n    conn.execute(\"set transaction read only\")\n    with conn.cursor() as cur:\n        cur.execute(wrapped)\n        columns = [desc.name for desc in cur.description]\n        rows = [{col: encode(value) for col, value in zip(columns, row)} for row in cur.fetchall()]\nprint(json.dumps({\"columns\": columns, \"rows\": rows, \"rowCount\": len(rows)}))\nPY",
+        "stdout": "{\"columns\": [\"rtm_id\", \"business_requirement_id\", \"functional_requirement_id\", \"hld_requirement_id\", \"lld_requirement_id\", \"coverage_status\", \"confidence\", \"notes\"], \"rows\": [{\"rtm_id\": \"04eb9e82209befc01ac7c02674789468\", \"business_requirement_id\": \"REQ-SEC-003\", \"functional_requirement_id\": \"REQ-FR-050\", \"hld_requirement_id\": \"REQ-FR-013\", \"lld_requirement_id\": \"REQ-NFR-002\", \"coverage_status\": \"complete\", \"confidence\": 1.0, \"notes\": \"All requirement columns mapped.\"}, {\"rtm_id\": \"0b6da161e1e7ff49c8bc91d39f8bac87\", \"business_requirement_id\": \"REQ-SEC-003\", \"functional_requirement_id\": \"REQ-FR-060\", \"hld_requirement_id\": \"REQ-FR-020\", \"lld_requirement_id\": \"REQ-NFR-002\", \"coverage_status\": \"complete\", \"confidence\": 1.0, \"notes\": \"All requirement columns mapped.\"}, {\"rtm_id\": \"0bc8fc98f8249cb6ee3e28a342a2a9c9\", \"business_requirement_id\": \"REQ-SEC-003\", \"functional_requirement_id\": \"REQ-FR-FUT-03\", \"hld_requirement_id\": \"REQ-FR-023\", \"lld_requirement_id\": \"REQ-NFR-002\", \"coverage_status\": \"complete\", \"confidence\": 1.0, \"notes\": \"All requirement columns mapped.\"}, {\"rtm_id\": \"1a69a85f1b9ce6fae1eb57f163c4c0ab\", \"business_requirement_id\": \"REQ-SEC-003\", \"functional_requirement_id\": \"REQ-SEC-001\", \"hld_requirement_id\": \"REQ-FR-032\", \"lld_requirement_id\": \"REQ-NFR-002\", \"coverage_status\": \"complete\", \"confidence\": 1.0, \"notes\": \"All requirement columns mapped.\"}, {\"rtm_id\": \"1b2dc0fd710f6b86383590dda9d08917\", \"business_requirement_id\": \"REQ-SEC-003\", \"functional_requirement_id\": \"REQ-FR-051\", \"hld_requirement_id\": \"REQ-FR-014\", \"lld_requirement_id\": \"REQ-NFR-002\", \"coverage_status\": \"complete\", \"confidence\": 1.0, \"notes\": \"All requirement columns mapped.\"}, {\"rtm_id\": \"1c351b12fb818d09824d3c0d1c16d741\", \"business_requirement_id\": \"REQ-SEC-003\", \"functional_requirement_id\": \"REQ-FR-FUT-01\", \"hld_requirement_id\": \"REQ-FR-021\", \"lld_requirement_id\": \"REQ-NFR-002\", \"coverage_status\": \"complete\", \"confidence\": 1.0, \"notes\": \"All requirement columns mapped.\"}, {\"rtm_id\": \"3719a8286464f8ca38bedb3d7fa4a903\", \"business_requirement_id\": \"REQ-SEC-003\", \"functional_requirement_id\": \"BR-014\", \"hld_requirement_id\": \"REQ-FR-010\", \"lld_requirement_id\": \"REQ-NFR-002\", \"coverage_status\": \"complete\", \"confidence\": 1.0, \"notes\": \"All requirement columns mapped.\"}, {\"rtm_id\": \"46f03b01dd0cf51ef8da7263a9e57048\", \"business_requirement_id\": \"REQ-SEC-003\", \"functional_requirement_id\": \"REQ-FR-FUT-02\", \"hld_requirement_id\": \"REQ-FR-022\", \"lld_requirement_id\": \"REQ-NFR-002\", \"coverage_status\": \"complete\", \"confidence\": 1.0, \"notes\": \"All requirement columns mapped.\"}, {\"rtm_id\": \"47442d6c00b6aa4a553e28c0b1237d83\", \"business_requirement_id\": \"BRD \\u00a76\", \"functional_requirement_id\": \"BR-003\", \"hld_requirement_id\": \"BR-005\", \"lld_requirement_id\": \"REQ-NFR-002\", \"coverage_status\": \"complete\", \"confidence\": 1.0, \"notes\": \"All requirement columns mapped.\"}, {\"rtm_id\": \"4af2057a427e30ab4bfe4b26a7815505\", \"business_requirement_id\": \"REQ-SEC-003\", \"functional_requirement_id\": \"REQ-FR-000\", \"hld_requirement_id\": \"REQ-FR-012\", \"lld_requirement_id\": \"REQ-NFR-002\", \"coverage_status\": \"complete\", \"confidence\": 1.0, \"notes\": \"All requirement columns mapped.\"}, {\"rtm_id\": \"4ebab4c313e281e10157f6ed968d1657\", \"business_requirement_id\": \"REQ-SEC-003\", \"functional_requirement_id\": \"BR-009\", \"hld_requirement_id\": \"REQ-FR-001\", \"lld_requirement_id\": \"REQ-NFR-002\", \"coverage_status\": \"complete\", \"confidence\": 1.0, \"notes\": \"All requirement columns mapped.\"}, {\"rtm_id\": \"5774c47d3903430fe5643e74d95e37ef\", \"business_requirement_id\": \"BRD \\u00a73\", \"functional_requirement_id\": \"BR-002\", \"hld_requirement_id\": \"BR-001\", \"lld_requirement_id\": \"REQ-NFR-002\", \"coverage_status\": \"complete\", \"confidence\": 1.0, \"notes\": \"All requirement columns mapped.\"}, {\"rtm_id\": \"79917995e9f7eac7d1159c10c2774a70\", \"business_requirement_id\": \"BRD \\u00a78\", \"functional_requirement_id\": \"BR-004\", \"hld_requirement_id\": \"BR-006\", \"lld_requirement_id\": \"REQ-NFR-002\", \"coverage_status\": \"complete\", \"confidence\": 1.0, \"notes\": \"All requirement columns mapped.\"}, {\"rtm_id\": \"89e24d8ff8bfb6a20c81a29cbc950389\", \"business_requirement_id\": \"REQ-SEC-003\", \"functional_requirement_id\": \"BR-010\", \"hld_requirement_id\": \"REQ-FR-002\", \"lld_requirement_id\": \"REQ-NFR-002\", \"coverage_status\": \"complete\", \"confidence\": 1.0, \"notes\": \"All requirement columns mapped.\"}, {\"rtm_id\": \"97a16c4b94d94cde947c9c5aacc21e89\", \"business_requirement_id\": \"REQ-SEC-003\", \"functional_requirement_id\": \"BR-008\", \"hld_requirement_id\": \"FRS \\u00a73\", \"lld_requirement_id\": \"REQ-NFR-002\", \"coverage_status\": \"complete\", \"confidence\": 1.0, \"notes\": \"All requirement columns mapped.\"}], \"rowCount\": 15}\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev_mondi7dz_m3k8tf",
+      "createdAt": "2026-05-01T20:36:32.615Z",
+      "kind": "folder",
+      "label": "Active source pack",
+      "path": "test_data/ui-qa/generated/uiqa_mondi7dy_paemqx/source-pack",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_mondigkv_d1kmx3",
+      "createdAt": "2026-05-01T20:36:44.527Z",
+      "kind": "json",
+      "label": "Derived RTM JSON",
+      "path": "test_data/test-results/derived_rtm_20260501203644.json",
+      "phase": "ingest_sources"
+    },
+    {
+      "id": "ev_mondigkv_wyt76y",
+      "createdAt": "2026-05-01T20:36:44.527Z",
+      "kind": "report",
+      "label": "Derived RTM report",
+      "path": "test_data/test-results/derived_rtm_20260501203644.md",
+      "phase": "ingest_sources"
+    },
+    {
+      "id": "ev_mondihdf_2mytr1",
+      "createdAt": "2026-05-01T20:36:45.555Z",
+      "kind": "report",
+      "label": "Entity map summary",
+      "path": "test_data/test-results/uiqa_entity_summary_20260501203645.md",
+      "phase": "ingest_sources"
+    },
+    {
+      "id": "ev_mondkf6r_govfrh",
+      "createdAt": "2026-05-01T20:38:16.035Z",
+      "kind": "json",
+      "label": "Generated test case repository",
+      "path": "test_data/ui-qa/generated/uiqa_mondi7dy_paemqx/test-case-repository.generated.json",
+      "phase": "generate_tests"
+    },
+    {
+      "id": "ev_mondkfjg_qmhk8z",
+      "createdAt": "2026-05-01T20:38:16.492Z",
+      "kind": "workbook",
+      "label": "Generated TestCases.xlsx",
+      "path": "test_data/TestCases.xlsx",
+      "phase": "generate_tests"
+    },
+    {
+      "id": "ev_mondkfjg_4w3eup",
+      "createdAt": "2026-05-01T20:38:16.492Z",
+      "kind": "report",
+      "label": "Generated test case repository Markdown",
+      "path": "test_data/ui-qa/generated/uiqa_mondi7dy_paemqx/test-case-repository.generated.md",
+      "phase": "generate_tests"
+    },
+    {
+      "id": "ev_mondkfp6_k0g01a",
+      "createdAt": "2026-05-01T20:38:16.698Z",
+      "kind": "report",
+      "label": "Generated test confidence audit",
+      "path": "test_data/test-results/generated_test_case_audit_20260501203816.md",
+      "phase": "audit_generated_tests"
+    },
+    {
+      "id": "ev_mondkfp7_zky0zn",
+      "createdAt": "2026-05-01T20:38:16.699Z",
+      "kind": "json",
+      "label": "Generated test confidence audit JSON",
+      "path": "test_data/test-results/generated_test_case_audit_20260501203816.json",
+      "phase": "audit_generated_tests"
+    }
+  ],
+  "checkpoints": [],
+  "messages": [
+    {
+      "id": "msg_mondiq9j_947amh",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "role": "user",
+      "content": "Which requirements are unmapped in the derived RTM? Use RTM tools and explain the method.",
+      "createdAt": "2026-05-01T20:36:57.079Z"
+    },
+    {
+      "id": "msg_mondj6xh_2neb7w",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "role": "assistant",
+      "content": "## Unmapped requirements in the derived RTM\n\n**There are none that are flagged as non-complete in `rtm_rows`.**  \n\nAnalytics on the KB showed a single coverage bucket:\n\n| `coverage_status` | Count |\n|-------------------|-------|\n| `complete`        | 22    |\n\nA follow-up query for rows where `coverage_status` is not `'complete'` (`IS DISTINCT FROM 'complete'`, with `confidence` cast for JSON safety) returned **0 rows**.\n\nSo in this database, **every derived RTM row is stored as fully mapped** (`coverage_status = 'complete'`). There are **no** `partial` (or other non-complete) RTM entries to list.\n\n### Method (what we did)\n\n1. **`inspect_rtm`** (preferred for RTM questions):  \n   - Unfiltered call failed when serializing results (`confidence` as `Decimal` → not JSON-serializable), so we did not get a row list from that path.  \n   - `inspect_rtm` with `status: \"partial\"` returned **0 rows**, which is consistent with there being no partial rows in `rtm_rows`.\n\n2. **`query_kb_sql`** (read-only):  \n   - **`GROUP BY coverage_status`** — distribution of trace states.  \n   - **`WHERE coverage_status IS DISTINCT FROM 'complete'`** — explicit list of anything not fully covered; empty result.\n\n### How to read this\n\n- **“Unmapped” in the sense of the derived RTM table** = rows that are not `complete`. **Answer: none (0 of 22).**  \n- **“Unmapped” in the sense of requirements that never appear in `rtm_rows` at all** would require comparing normalized requirement inventory to RTM keys (e.g. via `inspect_requirements` and/or joins); that is **not** what the `coverage_status` breakdown answers by itself.\n\nIf you want the stricter “requirements missing from RTM entirely” view, say so and we can drive that with **`inspect_requirements`** plus a targeted **`query_kb_sql`** join in the next round.",
+      "createdAt": "2026-05-01T20:37:18.677Z"
+    },
+    {
+      "id": "msg_mondj6yn_isifqc",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "role": "user",
+      "content": "Create TestCases.xlsx from the derived RTM and audit confidence/source alignment.",
+      "createdAt": "2026-05-01T20:37:18.719Z"
+    },
+    {
+      "id": "msg_mondklhl_y415h2",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "role": "assistant",
+      "content": "Here is a concise wrap-up based on **Round 2 tool results** (no further `tool_calls` needed for this synthesis).\n\n## What completed successfully\n\n**`generate_testcases_from_kb`** ran successfully with scope aligned to derived RTM:\n\n| Outcome | Value |\n|--------|--------|\n| Workbook | `test_data/TestCases.xlsx` |\n| Cases generated | 8 |\n| Blockers | 0 |\n| Audit verdict | `approved` |\n\n**`audit_testcase_traceability`** confirms traceability QA for generated tests:\n\n- **Blockers:** 0  \n- **Findings:** 0 critical, 0 high, 0 medium, 0 low  \n\nAudit artifacts referenced by the harness:\n\n- `test_data/test-results/generated_test_case_audit_20260501203816.md`\n- `test_data/test-results/generated_test_case_audit_20260501203816.json`\n\nSo **TestCases.xlsx was regenerated from the KB workflow**, and the **latest traceability audit reports full approval with no severity findings**.\n\n## RTM inspection (gap)\n\n**`inspect_rtm`** did **not** return usable rows because the harness failed while encoding results: **`confidence`** is stored as a **`Decimal`**, which the tool layer tried to **`json.dumps`**, causing:\n\n`TypeError: Object of type Decimal is not JSON serializable`.\n\nSo you did **not** get a reliable pre-generation RTM preview from that tool in this round, even though generation and audit afterward succeeded.\n\n**Method note:** Preconditions were nominally satisfied by the pipeline (`generated: true`, `auditVerdict: \"approved\"`). For explicit RTM counts/coverage, the **`inspect_rtm`** implementation needs to coerce `confidence` (e.g. to `float` or `str`) before JSON serialization—or an equivalent read path that avoids non-JSON types.\n\n---\n\n**Summary:** **TestCases.xlsx** was built **(8 cases)**, traceability audit is **approved** with **no blockers and no graded findings**. **Confidence/source alignment** is evidenced by the audit files above and the clean audit counters; **derived RTM table inspection failed in-tool** due to **Decimal serialization**, not because the RTM was necessarily empty—fix serialization if you rely on **`inspect_rtm`** for governance sign-off before generation.",
+      "createdAt": "2026-05-01T20:38:24.201Z"
+    },
+    {
+      "id": "msg_mondl18w_66k706",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "role": "user",
+      "content": "Inspect the derived RTM rows with inspect_rtm and summarize the first rows.",
+      "createdAt": "2026-05-01T20:38:44.624Z"
+    },
+    {
+      "id": "msg_mondl9if_nckc3j",
+      "runId": "uiqa_mondi7dy_paemqx",
+      "role": "assistant",
+      "content": "## Summary of the first derived RTM rows\n\n**How this was obtained:** `inspect_rtm` with `limit: 15`. The KB ran:\n\n`SELECT … FROM rtm_rows ORDER BY confidence ASC, rtm_id LIMIT 15`\n\nSo “first” here means **lowest confidence first, then `rtm_id`** — not necessarily document order.\n\n**What those 15 rows look like**\n\n| Pattern | Detail |\n|--------|--------|\n| **Coverage** | Every row is **`complete`** with **`confidence: 1`** and notes **“All requirement columns mapped.”** |\n| **Business** | Mostly **`REQ-SEC-003`**; a few rows use **`BRD §3`**, **`BRD §6`**, **`BRD §8`**. |\n| **Functional** | Mix of **`REQ-FR-*`** (including **`REQ-FR-FUT-*`**), **`REQ-SEC-001`**, and **`BR-*`** IDs. |\n| **HLD** | Mostly **`REQ-FR-*`**; some **`BR-*`**; one row uses **`FRS §3`**. |\n| **LLD** | **All 15 rows map LLD to `REQ-NFR-002`.** |\n\n**Takeaway:** In this slice, ordering by confidence does not separate “weaker” links — everything shown is **complete / confidence 1**. The interesting structure is **many BR/FR/HLD variants rolling up under shared anchors** (`REQ-SEC-003` on the BR side, **`REQ-NFR-002`** on the LLD side everywhere in this sample).",
+      "createdAt": "2026-05-01T20:38:55.335Z"
+    }
+  ],
+  "blockerCount": 0,
+  "findingCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "generatedSpecPath": "test_data/ui-qa/generated/uiqa_mondi7dy_paemqx/test-case-repository.generated.json"
+}

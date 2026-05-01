@@ -1,0 +1,1602 @@
+{
+  "id": "uiqa_mon9wyvm_pt7qds",
+  "scope": "all",
+  "dryRun": false,
+  "autoApprove": true,
+  "status": "approved",
+  "currentPhase": "complete",
+  "createdAt": "2026-05-01T18:56:02.962Z",
+  "updatedAt": "2026-05-01T18:57:34.183Z",
+  "uploads": [
+    {
+      "id": "src_mon9wyvy_4wm9yy",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "originalName": "01-business-requirements-document.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_mon9wyvm_pt7qds/75ba74032f55_01-business-requirements-document.docx",
+      "documentType": "BRD",
+      "sha256": "75ba74032f5583526c3ce4035eb7f21f024045dda836b8ecafd3bad94c8ee7e9",
+      "size": 35621,
+      "status": "accepted",
+      "createdAt": "2026-05-01T18:56:02.974Z"
+    },
+    {
+      "id": "src_mon9wyvz_cmyuqu",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "originalName": "02-functional-requirements-specification.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_mon9wyvm_pt7qds/1bf29955d09f_02-functional-requirements-specification.docx",
+      "documentType": "FRS",
+      "sha256": "1bf29955d09ffb4597c4f2391daef5cdd474d9a2b7153ef5efa1715b8336733d",
+      "size": 36715,
+      "status": "accepted",
+      "createdAt": "2026-05-01T18:56:02.975Z"
+    },
+    {
+      "id": "src_mon9wyw0_ed0zhg",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "originalName": "03-test-design-specification.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_mon9wyvm_pt7qds/bc4a297e88b9_03-test-design-specification.docx",
+      "documentType": "SOURCE_DOC",
+      "sha256": "bc4a297e88b98dc0645d0a1bc1bc8fdd63760485d97f63446e34bc078f79de42",
+      "size": 16590,
+      "status": "accepted",
+      "createdAt": "2026-05-01T18:56:02.976Z"
+    },
+    {
+      "id": "src_mon9wyw0_betbtx",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "originalName": "04-test-strategy.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_mon9wyvm_pt7qds/bc452080a746_04-test-strategy.docx",
+      "documentType": "TEST_STRATEGY",
+      "sha256": "bc452080a74613289d89e8a9866cb9ec99671f2e9f270c301793c0de976e8d2d",
+      "size": 14190,
+      "status": "accepted",
+      "createdAt": "2026-05-01T18:56:02.976Z"
+    },
+    {
+      "id": "src_mon9wyw1_e83e1n",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "originalName": "05-test-plan.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_mon9wyvm_pt7qds/64cc7c5d20b4_05-test-plan.docx",
+      "documentType": "TEST_PLAN",
+      "sha256": "64cc7c5d20b4556484544b1bc46bd60c2cb6e94879c28b05db0677af83ade68a",
+      "size": 13567,
+      "status": "accepted",
+      "createdAt": "2026-05-01T18:56:02.977Z"
+    },
+    {
+      "id": "src_mon9wyw2_eu8mqq",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "originalName": "06-requirements-traceability-matrix.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_mon9wyvm_pt7qds/bae75844e4bc_06-requirements-traceability-matrix.docx",
+      "documentType": "RTM",
+      "sha256": "bae75844e4bce6f5f4e083a5907b7978915ea77336a42177ea982b304a1b994c",
+      "size": 16106,
+      "status": "accepted",
+      "createdAt": "2026-05-01T18:56:02.978Z"
+    },
+    {
+      "id": "src_mon9wyw5_t4qo0k",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "originalName": "07-test-data-environment-specification.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_mon9wyvm_pt7qds/dee1179870fd_07-test-data-environment-specification.docx",
+      "documentType": "TEST_DATA",
+      "sha256": "dee1179870fd6bf2b315e1e240bf6f90ef4442aa6483f397380f2e3cb814a989",
+      "size": 13536,
+      "status": "accepted",
+      "createdAt": "2026-05-01T18:56:02.981Z"
+    },
+    {
+      "id": "src_mon9wyw6_ycy2be",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "originalName": "08-quality-risk-defect-governance.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_mon9wyvm_pt7qds/c4d411862cc6_08-quality-risk-defect-governance.docx",
+      "documentType": "SOURCE_DOC",
+      "sha256": "c4d411862cc6615ebda78530cacdebd2378ccf25df873fd04545a7c49b15adc4",
+      "size": 13091,
+      "status": "accepted",
+      "createdAt": "2026-05-01T18:56:02.982Z"
+    },
+    {
+      "id": "src_mon9wyw7_woll18",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "originalName": "09-test-case-repository.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_mon9wyvm_pt7qds/2b17d95d7da3_09-test-case-repository.docx",
+      "documentType": "TEST_REPOSITORY",
+      "sha256": "2b17d95d7da3e424e205e904671f8b3b5485d4a1fae97a1bbb5f9114bf0d6431",
+      "size": 19269,
+      "status": "accepted",
+      "createdAt": "2026-05-01T18:56:02.983Z"
+    }
+  ],
+  "events": [
+    {
+      "id": "event_mon9wyvz_f8xi2a",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "phase": "upload_sources",
+      "title": "Uploaded 01-business-requirements-document.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:56:02.975Z",
+      "finishedAt": "2026-05-01T18:56:02.975Z",
+      "summary": "Classified as BRD.",
+      "technical": {
+        "rawLabel": "upload:01-business-requirements-document.docx",
+        "payload": {
+          "id": "src_mon9wyvy_4wm9yy",
+          "runId": "uiqa_mon9wyvm_pt7qds",
+          "originalName": "01-business-requirements-document.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_mon9wyvm_pt7qds/75ba74032f55_01-business-requirements-document.docx",
+          "documentType": "BRD",
+          "sha256": "75ba74032f5583526c3ce4035eb7f21f024045dda836b8ecafd3bad94c8ee7e9",
+          "size": 35621,
+          "status": "accepted",
+          "createdAt": "2026-05-01T18:56:02.974Z"
+        }
+      }
+    },
+    {
+      "id": "event_mon9wyvz_21ucxe",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "phase": "upload_sources",
+      "title": "Uploaded 02-functional-requirements-specification.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:56:02.975Z",
+      "finishedAt": "2026-05-01T18:56:02.975Z",
+      "summary": "Classified as FRS.",
+      "technical": {
+        "rawLabel": "upload:02-functional-requirements-specification.docx",
+        "payload": {
+          "id": "src_mon9wyvz_cmyuqu",
+          "runId": "uiqa_mon9wyvm_pt7qds",
+          "originalName": "02-functional-requirements-specification.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_mon9wyvm_pt7qds/1bf29955d09f_02-functional-requirements-specification.docx",
+          "documentType": "FRS",
+          "sha256": "1bf29955d09ffb4597c4f2391daef5cdd474d9a2b7153ef5efa1715b8336733d",
+          "size": 36715,
+          "status": "accepted",
+          "createdAt": "2026-05-01T18:56:02.975Z"
+        }
+      }
+    },
+    {
+      "id": "event_mon9wyw0_f5eozb",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "phase": "upload_sources",
+      "title": "Uploaded 03-test-design-specification.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:56:02.976Z",
+      "finishedAt": "2026-05-01T18:56:02.976Z",
+      "summary": "Classified as SOURCE_DOC.",
+      "technical": {
+        "rawLabel": "upload:03-test-design-specification.docx",
+        "payload": {
+          "id": "src_mon9wyw0_ed0zhg",
+          "runId": "uiqa_mon9wyvm_pt7qds",
+          "originalName": "03-test-design-specification.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_mon9wyvm_pt7qds/bc4a297e88b9_03-test-design-specification.docx",
+          "documentType": "SOURCE_DOC",
+          "sha256": "bc4a297e88b98dc0645d0a1bc1bc8fdd63760485d97f63446e34bc078f79de42",
+          "size": 16590,
+          "status": "accepted",
+          "createdAt": "2026-05-01T18:56:02.976Z"
+        }
+      }
+    },
+    {
+      "id": "event_mon9wyw0_fnomo5",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "phase": "upload_sources",
+      "title": "Uploaded 04-test-strategy.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:56:02.976Z",
+      "finishedAt": "2026-05-01T18:56:02.976Z",
+      "summary": "Classified as TEST_STRATEGY.",
+      "technical": {
+        "rawLabel": "upload:04-test-strategy.docx",
+        "payload": {
+          "id": "src_mon9wyw0_betbtx",
+          "runId": "uiqa_mon9wyvm_pt7qds",
+          "originalName": "04-test-strategy.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_mon9wyvm_pt7qds/bc452080a746_04-test-strategy.docx",
+          "documentType": "TEST_STRATEGY",
+          "sha256": "bc452080a74613289d89e8a9866cb9ec99671f2e9f270c301793c0de976e8d2d",
+          "size": 14190,
+          "status": "accepted",
+          "createdAt": "2026-05-01T18:56:02.976Z"
+        }
+      }
+    },
+    {
+      "id": "event_mon9wyw1_hmwswk",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "phase": "upload_sources",
+      "title": "Uploaded 05-test-plan.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:56:02.977Z",
+      "finishedAt": "2026-05-01T18:56:02.977Z",
+      "summary": "Classified as TEST_PLAN.",
+      "technical": {
+        "rawLabel": "upload:05-test-plan.docx",
+        "payload": {
+          "id": "src_mon9wyw1_e83e1n",
+          "runId": "uiqa_mon9wyvm_pt7qds",
+          "originalName": "05-test-plan.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_mon9wyvm_pt7qds/64cc7c5d20b4_05-test-plan.docx",
+          "documentType": "TEST_PLAN",
+          "sha256": "64cc7c5d20b4556484544b1bc46bd60c2cb6e94879c28b05db0677af83ade68a",
+          "size": 13567,
+          "status": "accepted",
+          "createdAt": "2026-05-01T18:56:02.977Z"
+        }
+      }
+    },
+    {
+      "id": "event_mon9wyw2_hk4yx9",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "phase": "upload_sources",
+      "title": "Uploaded 06-requirements-traceability-matrix.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:56:02.978Z",
+      "finishedAt": "2026-05-01T18:56:02.978Z",
+      "summary": "Classified as RTM.",
+      "technical": {
+        "rawLabel": "upload:06-requirements-traceability-matrix.docx",
+        "payload": {
+          "id": "src_mon9wyw2_eu8mqq",
+          "runId": "uiqa_mon9wyvm_pt7qds",
+          "originalName": "06-requirements-traceability-matrix.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_mon9wyvm_pt7qds/bae75844e4bc_06-requirements-traceability-matrix.docx",
+          "documentType": "RTM",
+          "sha256": "bae75844e4bce6f5f4e083a5907b7978915ea77336a42177ea982b304a1b994c",
+          "size": 16106,
+          "status": "accepted",
+          "createdAt": "2026-05-01T18:56:02.978Z"
+        }
+      }
+    },
+    {
+      "id": "event_mon9wyw6_c1shob",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "phase": "upload_sources",
+      "title": "Uploaded 07-test-data-environment-specification.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:56:02.982Z",
+      "finishedAt": "2026-05-01T18:56:02.982Z",
+      "summary": "Classified as TEST_DATA.",
+      "technical": {
+        "rawLabel": "upload:07-test-data-environment-specification.docx",
+        "payload": {
+          "id": "src_mon9wyw5_t4qo0k",
+          "runId": "uiqa_mon9wyvm_pt7qds",
+          "originalName": "07-test-data-environment-specification.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_mon9wyvm_pt7qds/dee1179870fd_07-test-data-environment-specification.docx",
+          "documentType": "TEST_DATA",
+          "sha256": "dee1179870fd6bf2b315e1e240bf6f90ef4442aa6483f397380f2e3cb814a989",
+          "size": 13536,
+          "status": "accepted",
+          "createdAt": "2026-05-01T18:56:02.981Z"
+        }
+      }
+    },
+    {
+      "id": "event_mon9wyw7_209ngr",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "phase": "upload_sources",
+      "title": "Uploaded 08-quality-risk-defect-governance.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:56:02.983Z",
+      "finishedAt": "2026-05-01T18:56:02.983Z",
+      "summary": "Classified as SOURCE_DOC.",
+      "technical": {
+        "rawLabel": "upload:08-quality-risk-defect-governance.docx",
+        "payload": {
+          "id": "src_mon9wyw6_ycy2be",
+          "runId": "uiqa_mon9wyvm_pt7qds",
+          "originalName": "08-quality-risk-defect-governance.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_mon9wyvm_pt7qds/c4d411862cc6_08-quality-risk-defect-governance.docx",
+          "documentType": "SOURCE_DOC",
+          "sha256": "c4d411862cc6615ebda78530cacdebd2378ccf25df873fd04545a7c49b15adc4",
+          "size": 13091,
+          "status": "accepted",
+          "createdAt": "2026-05-01T18:56:02.982Z"
+        }
+      }
+    },
+    {
+      "id": "event_mon9wyw8_85pkhs",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "phase": "upload_sources",
+      "title": "Uploaded 09-test-case-repository.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:56:02.984Z",
+      "finishedAt": "2026-05-01T18:56:02.984Z",
+      "summary": "Classified as TEST_REPOSITORY.",
+      "technical": {
+        "rawLabel": "upload:09-test-case-repository.docx",
+        "payload": {
+          "id": "src_mon9wyw7_woll18",
+          "runId": "uiqa_mon9wyvm_pt7qds",
+          "originalName": "09-test-case-repository.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_mon9wyvm_pt7qds/2b17d95d7da3_09-test-case-repository.docx",
+          "documentType": "TEST_REPOSITORY",
+          "sha256": "2b17d95d7da3e424e205e904671f8b3b5485d4a1fae97a1bbb5f9114bf0d6431",
+          "size": 19269,
+          "status": "accepted",
+          "createdAt": "2026-05-01T18:56:02.983Z"
+        }
+      }
+    },
+    {
+      "id": "event_mon9wyx0_st86mv",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "phase": "upload_sources",
+      "title": "Prepare active source pack",
+      "status": "running",
+      "createdAt": "2026-05-01T18:56:03.012Z"
+    },
+    {
+      "id": "event_mon9wyxa_d7seqt",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "phase": "upload_sources",
+      "title": "Active source pack ready",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:56:03.022Z",
+      "finishedAt": "2026-05-01T18:56:03.022Z",
+      "summary": "9 ingestible source document(s) ready."
+    },
+    {
+      "id": "event_mon9wyxb_jm4iop",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "phase": "ingest_sources",
+      "title": "Ensure ingestion virtualenv",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:56:03.023Z",
+      "finishedAt": "2026-05-01T18:56:03.182Z",
+      "technical": {
+        "rawLabel": "Ensure ingestion virtualenv",
+        "command": "/bin/test -d ingestion/.venv || /usr/bin/python3 -m venv ingestion/.venv",
+        "stdout": "",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon9wz1r_rpf0he",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "phase": "ingest_sources",
+      "title": "Install ingestion dependencies",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:56:03.183Z",
+      "finishedAt": "2026-05-01T18:56:04.485Z",
+      "technical": {
+        "rawLabel": "Install ingestion dependencies",
+        "command": "source ingestion/.venv/bin/activate && ingestion/.venv/bin/pip install -r ingestion/requirements.txt -q",
+        "stdout": "",
+        "stderr": "\n[notice] A new release of pip is available: 26.0.1 -> 26.1\n[notice] To update, run: pip install --upgrade pip\n",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon9x020_53qzus",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "phase": "ingest_sources",
+      "title": "Inspect Docker pgvector service",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:56:04.488Z",
+      "finishedAt": "2026-05-01T18:56:05.007Z",
+      "technical": {
+        "rawLabel": "Inspect Docker pgvector service",
+        "command": "set -euo pipefail\nDOCKER_BIN=\"$(command -v docker || true)\"\nif [ -z \"$DOCKER_BIN\" ]; then\n  for candidate in /opt/homebrew/bin/docker /usr/local/bin/docker /Applications/Docker.app/Contents/Resources/bin/docker; do\n    if [ -x \"$candidate\" ]; then\n      DOCKER_BIN=\"$candidate\"\n      break\n    fi\n  done\nfi\nif [ -z \"$DOCKER_BIN\" ]; then\n  echo \"Docker CLI not found. Install Docker Desktop or add docker to PATH.\" >&2\n  exit 127\nfi\nif ! \"$DOCKER_BIN\" info >/dev/null 2>&1; then\n  echo \"Docker CLI was found at $DOCKER_BIN, but the Docker daemon is not reachable.\" >&2\n  echo \"Open Docker Desktop and wait for the engine to finish starting.\" >&2\n  exit 1\nfi\nCOMPOSE=(\"$DOCKER_BIN\" compose -f ingestion/docker-compose.yml)\n\"$DOCKER_BIN\" version\n\"${COMPOSE[@]}\" ps",
+        "stdout": "Client: Docker Engine - Community\n Version:           28.1.1\n API version:       1.49\n Go version:        go1.24.2\n Git commit:        4eba377327\n Built:             Fri Apr 18 09:44:47 2025\n OS/Arch:           darwin/arm64\n Context:           desktop-linux\n\nServer: Docker Desktop 4.55.0 (213807)\n Engine:\n  Version:          29.1.3\n  API version:      1.52 (minimum version 1.44)\n  Go version:       go1.25.5\n  Git commit:       fbf3ed2\n  Built:            Fri Dec 12 14:50:40 2025\n  OS/Arch:          linux/arm64\n  Experimental:     false\n containerd:\n  Version:          v2.2.0\n  GitCommit:        1c4457e00facac03ce1d75f7b6777a7a851e5c41\n runc:\n  Version:          1.3.4\n  GitCommit:        v1.3.4-0-gd6d73eb8\n docker-init:\n  Version:          0.19.0\n  GitCommit:        de40ad0\nNAME                 IMAGE                    COMMAND                  SERVICE    CREATED      STATUS                 PORTS\nqamvp-ingestion-pg   pgvector/pgvector:pg16   \"docker-entrypoint.s…\"   postgres   9 days ago   Up 5 hours (healthy)   0.0.0.0:5433->5432/tcp, [::]:5433->5432/tcp\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon9x0gg_h1m54t",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "phase": "ingest_sources",
+      "title": "Start local pgvector DB",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:56:05.008Z",
+      "finishedAt": "2026-05-01T18:56:05.233Z",
+      "technical": {
+        "rawLabel": "Start local pgvector DB",
+        "command": "set -euo pipefail\nDOCKER_BIN=\"$(command -v docker || true)\"\nif [ -z \"$DOCKER_BIN\" ]; then\n  for candidate in /opt/homebrew/bin/docker /usr/local/bin/docker /Applications/Docker.app/Contents/Resources/bin/docker; do\n    if [ -x \"$candidate\" ]; then\n      DOCKER_BIN=\"$candidate\"\n      break\n    fi\n  done\nfi\nif [ -z \"$DOCKER_BIN\" ]; then\n  echo \"Docker CLI not found. Install Docker Desktop or add docker to PATH.\" >&2\n  exit 127\nfi\nif ! \"$DOCKER_BIN\" info >/dev/null 2>&1; then\n  echo \"Docker CLI was found at $DOCKER_BIN, but the Docker daemon is not reachable.\" >&2\n  echo \"Open Docker Desktop and wait for the engine to finish starting.\" >&2\n  exit 1\nfi\nCOMPOSE=(\"$DOCKER_BIN\" compose -f ingestion/docker-compose.yml)\n\"${COMPOSE[@]}\" up -d postgres",
+        "stdout": "",
+        "stderr": " Container qamvp-ingestion-pg  Running\n",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon9x0mp_539l88",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "phase": "ingest_sources",
+      "title": "Wait for pgvector DB readiness",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:56:05.233Z",
+      "finishedAt": "2026-05-01T18:56:05.462Z",
+      "technical": {
+        "rawLabel": "Wait for pgvector DB readiness",
+        "command": "set -euo pipefail\nDOCKER_BIN=\"$(command -v docker || true)\"\nif [ -z \"$DOCKER_BIN\" ]; then\n  for candidate in /opt/homebrew/bin/docker /usr/local/bin/docker /Applications/Docker.app/Contents/Resources/bin/docker; do\n    if [ -x \"$candidate\" ]; then\n      DOCKER_BIN=\"$candidate\"\n      break\n    fi\n  done\nfi\nif [ -z \"$DOCKER_BIN\" ]; then\n  echo \"Docker CLI not found. Install Docker Desktop or add docker to PATH.\" >&2\n  exit 127\nfi\nif ! \"$DOCKER_BIN\" info >/dev/null 2>&1; then\n  echo \"Docker CLI was found at $DOCKER_BIN, but the Docker daemon is not reachable.\" >&2\n  echo \"Open Docker Desktop and wait for the engine to finish starting.\" >&2\n  exit 1\nfi\nCOMPOSE=(\"$DOCKER_BIN\" compose -f ingestion/docker-compose.yml)\nfor attempt in {1..45}; do\n  if \"${COMPOSE[@]}\" exec -T postgres pg_isready -U ingestion -d ingestion >/dev/null 2>&1; then\n    echo \"Postgres is ready after $attempt attempt(s).\"\n    exit 0\n  fi\n  echo \"Waiting for Postgres/pgvector readiness ($attempt/45)...\"\n  sleep 2\ndone\necho \"Postgres did not become ready within 90 seconds.\" >&2\n\"${COMPOSE[@]}\" ps >&2 || true\n\"${COMPOSE[@]}\" logs --tail=120 postgres >&2 || true\nexit 1",
+        "stdout": "Postgres is ready after 1 attempt(s).\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon9x0t3_iqr0b6",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "phase": "ingest_sources",
+      "title": "Apply ingestion migrations",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:56:05.463Z",
+      "finishedAt": "2026-05-01T18:56:05.953Z",
+      "technical": {
+        "rawLabel": "Apply ingestion migrations",
+        "command": "set -euo pipefail\nDOCKER_BIN=\"$(command -v docker || true)\"\nif [ -z \"$DOCKER_BIN\" ]; then\n  for candidate in /opt/homebrew/bin/docker /usr/local/bin/docker /Applications/Docker.app/Contents/Resources/bin/docker; do\n    if [ -x \"$candidate\" ]; then\n      DOCKER_BIN=\"$candidate\"\n      break\n    fi\n  done\nfi\nif [ -z \"$DOCKER_BIN\" ]; then\n  echo \"Docker CLI not found. Install Docker Desktop or add docker to PATH.\" >&2\n  exit 127\nfi\nif ! \"$DOCKER_BIN\" info >/dev/null 2>&1; then\n  echo \"Docker CLI was found at $DOCKER_BIN, but the Docker daemon is not reachable.\" >&2\n  echo \"Open Docker Desktop and wait for the engine to finish starting.\" >&2\n  exit 1\nfi\nCOMPOSE=(\"$DOCKER_BIN\" compose -f ingestion/docker-compose.yml)\nfor migration in ingestion/sql/*.sql; do\n  echo \"Applying $migration\"\n  \"${COMPOSE[@]}\" exec -T postgres psql -v ON_ERROR_STOP=1 -U ingestion -d ingestion < \"$migration\"\ndone\necho \"Migrations applied.\"",
+        "stdout": "Applying ingestion/sql/001_extensions.sql\nCREATE EXTENSION\nApplying ingestion/sql/002_schema.sql\nCREATE TABLE\nCREATE TABLE\nCREATE INDEX\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nCREATE INDEX\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nCREATE INDEX\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nCREATE INDEX\nCREATE INDEX\nApplying ingestion/sql/003_test_case_inventory.sql\nDO\nALTER TABLE\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nMigrations applied.\n",
+        "stderr": "NOTICE:  extension \"vector\" already exists, skipping\nNOTICE:  relation \"documents\" already exists, skipping\nNOTICE:  relation \"chunks\" already exists, skipping\nNOTICE:  relation \"idx_chunks_document\" already exists, skipping\nNOTICE:  relation \"entities\" already exists, skipping\nNOTICE:  relation \"idx_entities_document\" already exists, skipping\nNOTICE:  relation \"idx_entities_type\" already exists, skipping\nNOTICE:  relation \"idx_entities_canonical\" already exists, skipping\nNOTICE:  relation \"relationships\" already exists, skipping\nNOTICE:  relation \"idx_rel_source_chunk\" already exists, skipping\nNOTICE:  relation \"idx_rel_source_doc\" already exists, skipping\nNOTICE:  relation \"idx_rel_type\" already exists, skipping\nNOTICE:  relation \"test_cases\" already exists, skipping\nNOTICE:  relation \"idx_test_cases_requirement_ids\" already exists, skipping\nNOTICE:  relation \"idx_test_cases_suite\" already exists, skipping\nNOTICE:  relation \"test_case_steps\" already exists, skipping\nNOTICE:  relation \"idx_test_case_steps_requirement\" already exists, skipping\nNOTICE:  relation \"idx_test_case_steps_case\" already exists, skipping\nNOTICE:  relation \"chunks_embedding_hnsw\" already exists, skipping\nNOTICE:  relation \"chunks_content_fts\" already exists, skipping\nNOTICE:  relation \"test_cases\" already exists, skipping\nNOTICE:  relation \"idx_test_cases_requirement_ids\" already exists, skipping\nNOTICE:  relation \"idx_test_cases_suite\" already exists, skipping\nNOTICE:  relation \"test_case_steps\" already exists, skipping\nNOTICE:  relation \"idx_test_case_steps_requirement\" already exists, skipping\nNOTICE:  relation \"idx_test_case_steps_case\" already exists, skipping\n",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon9x16q_q0a8qa",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "phase": "ingest_sources",
+      "title": "Verify pgvector DB schema",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:56:05.954Z",
+      "finishedAt": "2026-05-01T18:56:06.305Z",
+      "technical": {
+        "rawLabel": "Verify pgvector DB schema",
+        "command": "set -euo pipefail\nDOCKER_BIN=\"$(command -v docker || true)\"\nif [ -z \"$DOCKER_BIN\" ]; then\n  for candidate in /opt/homebrew/bin/docker /usr/local/bin/docker /Applications/Docker.app/Contents/Resources/bin/docker; do\n    if [ -x \"$candidate\" ]; then\n      DOCKER_BIN=\"$candidate\"\n      break\n    fi\n  done\nfi\nif [ -z \"$DOCKER_BIN\" ]; then\n  echo \"Docker CLI not found. Install Docker Desktop or add docker to PATH.\" >&2\n  exit 127\nfi\nif ! \"$DOCKER_BIN\" info >/dev/null 2>&1; then\n  echo \"Docker CLI was found at $DOCKER_BIN, but the Docker daemon is not reachable.\" >&2\n  echo \"Open Docker Desktop and wait for the engine to finish starting.\" >&2\n  exit 1\nfi\nCOMPOSE=(\"$DOCKER_BIN\" compose -f ingestion/docker-compose.yml)\n\"${COMPOSE[@]}\" exec -T postgres psql -U ingestion -d ingestion -c \"select extname from pg_extension where extname = 'vector';\"\n\"${COMPOSE[@]}\" exec -T postgres psql -U ingestion -d ingestion -c \"select table_name from information_schema.tables where table_schema = 'public' order by table_name;\"",
+        "stdout": " extname \n---------\n vector\n(1 row)\n\n   table_name    \n-----------------\n chunks\n documents\n entities\n relationships\n test_case_steps\n test_cases\n(6 rows)\n\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon9x1gi_8o9g9g",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "phase": "ingest_sources",
+      "title": "Embed source documents into pgvector",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:56:06.306Z",
+      "finishedAt": "2026-05-01T18:56:39.817Z",
+      "technical": {
+        "rawLabel": "Embed source documents into pgvector",
+        "command": "source ingestion/.venv/bin/activate && DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python ingestion/scripts/ingest.py --format both --test-doc '/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/ui-qa/generated/uiqa_mon9wyvm_pt7qds/source-pack'",
+        "stdout": "  ingested source-pack/01-business-requirements-document.docx (docx): 61 chunks\n  ingested source-pack/02-functional-requirements-specification.docx (docx): 114 chunks\n  ingested source-pack/03-test-design-specification.docx (docx): 26 chunks\n  ingested source-pack/04-test-strategy.docx (docx): 12 chunks\n  ingested source-pack/05-test-plan.docx (docx): 10 chunks\n  ingested source-pack/06-requirements-traceability-matrix.docx (docx): 10 chunks\n  ingested source-pack/07-test-data-environment-specification.docx (docx): 14 chunks\n  ingested source-pack/08-quality-risk-defect-governance.docx (docx): 12 chunks\n  ingested source-pack/09-test-case-repository.docx (docx): 18 chunks\n  ingested test_data/TestCases.xlsx (xlsx): 16 test cases, 102 steps\nDone.\n",
+        "stderr": "Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n\rLoading weights:   0%|          | 0/103 [00:00<?, ?it/s]\rLoading weights: 100%|██████████| 103/103 [00:00<00:00, 7739.54it/s]\n\u001b[1mBertModel LOAD REPORT\u001b[0m from: sentence-transformers/all-MiniLM-L6-v2\nKey                     | Status     |  | \n------------------------+------------+--+-\nembeddings.position_ids | UNEXPECTED |  | \n\nNotes:\n- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n\rBatches:   0%|          | 0/2 [00:00<?, ?it/s]\rBatches:  50%|█████     | 1/2 [00:00<00:00,  4.18it/s]\rBatches: 100%|██████████| 2/2 [00:00<00:00,  7.11it/s]\n\rBatches:   0%|          | 0/4 [00:00<?, ?it/s]\rBatches:  50%|█████     | 2/4 [00:00<00:00, 15.92it/s]\rBatches: 100%|██████████| 4/4 [00:00<00:00, 20.95it/s]\n\rBatches:   0%|          | 0/1 [00:00<?, ?it/s]\rBatches: 100%|██████████| 1/1 [00:00<00:00, 22.11it/s]\n\rBatches:   0%|          | 0/1 [00:00<?, ?it/s]\rBatches: 100%|██████████| 1/1 [00:00<00:00, 21.48it/s]\n",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon9xrbf_blwneh",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "phase": "ingest_sources",
+      "title": "Query ingestion knowledge graph",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:56:39.819Z",
+      "finishedAt": "2026-05-01T18:56:40.058Z",
+      "technical": {
+        "rawLabel": "Query ingestion knowledge graph",
+        "command": "source ingestion/.venv/bin/activate && DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport os, json, psycopg\nout = {\"documents\": [], \"entities\": [], \"relationships\": [], \"rel_samples\": []}\nwith psycopg.connect(os.environ['DATABASE_URL']) as conn, conn.cursor() as cur:\n    cur.execute(\"\"\"\n      select d.id,\n             coalesce(d.title, d.path) as label,\n             coalesce(d.kind, d.source_format, 'doc') as kind,\n             (select count(*) from chunks c where c.document_id = d.id) as chunks,\n             (select count(*) from entities e where e.document_id = d.id) as entities,\n             (select count(*) from relationships r where r.source_document_id = d.id) as rels\n      from documents d\n      order by d.created_at desc nulls last, d.id desc\n      limit 30\n    \"\"\")\n    for row in cur.fetchall():\n        out[\"documents\"].append({\n            \"id\": int(row[0]),\n            \"label\": row[1] or \"\",\n            \"kind\": (row[2] or \"doc\").upper(),\n            \"chunks\": int(row[3] or 0),\n            \"entities\": int(row[4] or 0),\n            \"rels\": int(row[5] or 0),\n        })\n    cur.execute(\"select entity_type, count(*) from entities group by entity_type order by count(*) desc, entity_type\")\n    out[\"entities\"] = [{\"type\": t, \"count\": int(c)} for t, c in cur.fetchall()]\n    cur.execute(\"select rel_type, count(*) from relationships group by rel_type order by count(*) desc, rel_type limit 12\")\n    out[\"relationships\"] = [{\"type\": t, \"count\": int(c)} for t, c in cur.fetchall()]\n    cur.execute(\"\"\"\n      select r.rel_type,\n             coalesce(sd.title, sd.path, '') as source_label,\n             coalesce(nullif(r.target_path, ''), nullif(r.target_anchor, ''), '') as target_label\n      from relationships r\n      left join documents sd on sd.id = r.source_document_id\n      order by r.id desc\n      limit 8\n    \"\"\")\n    out[\"rel_samples\"] = [{\"type\": t, \"from\": s or \"\", \"to\": tg or \"\"} for t, s, tg in cur.fetchall()]\nprint(json.dumps(out))\nPY",
+        "stdout": "{\"documents\": [{\"id\": 257, \"label\": \"TestCases\", \"kind\": \"TEST_CASE_REPOSITORY\", \"chunks\": 16, \"entities\": 101, \"rels\": 0}, {\"id\": 256, \"label\": \"09-test-case-repository\", \"kind\": \"TEST_CASE_REPOSITORY\", \"chunks\": 18, \"entities\": 1, \"rels\": 0}, {\"id\": 255, \"label\": \"08-quality-risk-defect-governance\", \"kind\": \"GOVERNANCE\", \"chunks\": 12, \"entities\": 0, \"rels\": 4}, {\"id\": 254, \"label\": \"07-test-data-environment-specification\", \"kind\": \"TEST_DATA\", \"chunks\": 14, \"entities\": 1, \"rels\": 3}, {\"id\": 253, \"label\": \"06-requirements-traceability-matrix\", \"kind\": \"RTM\", \"chunks\": 10, \"entities\": 18, \"rels\": 5}, {\"id\": 252, \"label\": \"05-test-plan\", \"kind\": \"PLAN\", \"chunks\": 10, \"entities\": 0, \"rels\": 6}, {\"id\": 251, \"label\": \"04-test-strategy\", \"kind\": \"STRATEGY\", \"chunks\": 12, \"entities\": 1, \"rels\": 8}, {\"id\": 250, \"label\": \"03-test-design-specification\", \"kind\": \"TDS\", \"chunks\": 26, \"entities\": 19, \"rels\": 10}, {\"id\": 249, \"label\": \"02-functional-requirements-specification\", \"kind\": \"FRS\", \"chunks\": 114, \"entities\": 127, \"rels\": 6}, {\"id\": 248, \"label\": \"01-business-requirements-document\", \"kind\": \"BRD\", \"chunks\": 61, \"entities\": 69, \"rels\": 8}, {\"id\": 246, \"label\": \"README\", \"kind\": \"INDEX\", \"chunks\": 10, \"entities\": 2, \"rels\": 14}, {\"id\": 245, \"label\": \"09-test-case-repository\", \"kind\": \"TEST_CASE_REPOSITORY\", \"chunks\": 19, \"entities\": 135, \"rels\": 0}, {\"id\": 244, \"label\": \"08-quality-risk-defect-governance\", \"kind\": \"GOVERNANCE\", \"chunks\": 18, \"entities\": 0, \"rels\": 4}, {\"id\": 243, \"label\": \"07-test-data-environment-specification\", \"kind\": \"TEST_DATA\", \"chunks\": 19, \"entities\": 2, \"rels\": 3}, {\"id\": 242, \"label\": \"06-requirements-traceability-matrix\", \"kind\": \"RTM\", \"chunks\": 16, \"entities\": 235, \"rels\": 5}, {\"id\": 241, \"label\": \"05-test-plan\", \"kind\": \"PLAN\", \"chunks\": 19, \"entities\": 3, \"rels\": 6}, {\"id\": 240, \"label\": \"04-test-strategy\", \"kind\": \"STRATEGY\", \"chunks\": 20, \"entities\": 2, \"rels\": 8}, {\"id\": 239, \"label\": \"03-test-design-specification\", \"kind\": \"TDS\", \"chunks\": 38, \"entities\": 42, \"rels\": 10}, {\"id\": 238, \"label\": \"02-functional-requirements-specification\", \"kind\": \"FRS\", \"chunks\": 142, \"entities\": 319, \"rels\": 6}, {\"id\": 237, \"label\": \"01-business-requirements-document\", \"kind\": \"BRD\", \"chunks\": 86, \"entities\": 161, \"rels\": 9}, {\"id\": 236, \"label\": \"09-test-case-repository\", \"kind\": \"TEST_CASE_REPOSITORY\", \"chunks\": 18, \"entities\": 1, \"rels\": 0}, {\"id\": 235, \"label\": \"08-quality-risk-defect-governance\", \"kind\": \"GOVERNANCE\", \"chunks\": 12, \"entities\": 0, \"rels\": 4}, {\"id\": 234, \"label\": \"07-test-data-environment-specification\", \"kind\": \"TEST_DATA\", \"chunks\": 14, \"entities\": 1, \"rels\": 3}, {\"id\": 233, \"label\": \"06-requirements-traceability-matrix\", \"kind\": \"RTM\", \"chunks\": 10, \"entities\": 18, \"rels\": 5}, {\"id\": 232, \"label\": \"05-test-plan\", \"kind\": \"PLAN\", \"chunks\": 10, \"entities\": 0, \"rels\": 6}, {\"id\": 231, \"label\": \"04-test-strategy\", \"kind\": \"STRATEGY\", \"chunks\": 12, \"entities\": 1, \"rels\": 8}, {\"id\": 230, \"label\": \"03-test-design-specification\", \"kind\": \"TDS\", \"chunks\": 26, \"entities\": 19, \"rels\": 10}, {\"id\": 229, \"label\": \"02-functional-requirements-specification\", \"kind\": \"FRS\", \"chunks\": 114, \"entities\": 127, \"rels\": 6}, {\"id\": 228, \"label\": \"01-business-requirements-document\", \"kind\": \"BRD\", \"chunks\": 61, \"entities\": 69, \"rels\": 8}], \"entities\": [{\"type\": \"REQ\", \"count\": 596}, {\"type\": \"BR\", \"count\": 510}, {\"type\": \"TC\", \"count\": 289}, {\"type\": \"TKT\", \"count\": 51}, {\"type\": \"SECTION\", \"count\": 28}], \"relationships\": [{\"type\": \"docx_hyperlink\", \"count\": 100}, {\"type\": \"markdown_link\", \"count\": 64}, {\"type\": \"external_link\", \"count\": 1}], \"rel_samples\": [{\"type\": \"docx_hyperlink\", \"from\": \"08-quality-risk-defect-governance\", \"to\": \"source-pack/SDLC-Test-Tracker.xlsx\"}, {\"type\": \"docx_hyperlink\", \"from\": \"08-quality-risk-defect-governance\", \"to\": \"source-pack/06-requirements-traceability-matrix.md\"}, {\"type\": \"docx_hyperlink\", \"from\": \"08-quality-risk-defect-governance\", \"to\": \"source-pack/05-test-plan.md\"}, {\"type\": \"docx_hyperlink\", \"from\": \"08-quality-risk-defect-governance\", \"to\": \"source-pack/04-test-strategy.md\"}, {\"type\": \"docx_hyperlink\", \"from\": \"07-test-data-environment-specification\", \"to\": \"source-pack/README.md\"}, {\"type\": \"docx_hyperlink\", \"from\": \"07-test-data-environment-specification\", \"to\": \"source-pack/06-requirements-traceability-matrix.md\"}, {\"type\": \"docx_hyperlink\", \"from\": \"07-test-data-environment-specification\", \"to\": \"source-pack/02-functional-requirements-specification.md\"}, {\"type\": \"docx_hyperlink\", \"from\": \"06-requirements-traceability-matrix\", \"to\": \"source-pack/09-test-case-repository.md\"}]}\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon9xri3_1h0y52",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "phase": "ingest_sources",
+      "title": "Map ingested documents",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:56:40.059Z",
+      "finishedAt": "2026-05-01T18:56:40.241Z",
+      "summary": "Indexed 29 documents.",
+      "technical": {
+        "rawLabel": "ingest:documents",
+        "payload": {
+          "kind": "ingestion-section",
+          "section": "documents",
+          "documents": [
+            {
+              "id": 257,
+              "label": "TestCases",
+              "kind": "TEST_CASE_REPOSITORY",
+              "chunks": 16,
+              "entities": 101,
+              "rels": 0
+            },
+            {
+              "id": 256,
+              "label": "09-test-case-repository",
+              "kind": "TEST_CASE_REPOSITORY",
+              "chunks": 18,
+              "entities": 1,
+              "rels": 0
+            },
+            {
+              "id": 255,
+              "label": "08-quality-risk-defect-governance",
+              "kind": "GOVERNANCE",
+              "chunks": 12,
+              "entities": 0,
+              "rels": 4
+            },
+            {
+              "id": 254,
+              "label": "07-test-data-environment-specification",
+              "kind": "TEST_DATA",
+              "chunks": 14,
+              "entities": 1,
+              "rels": 3
+            },
+            {
+              "id": 253,
+              "label": "06-requirements-traceability-matrix",
+              "kind": "RTM",
+              "chunks": 10,
+              "entities": 18,
+              "rels": 5
+            },
+            {
+              "id": 252,
+              "label": "05-test-plan",
+              "kind": "PLAN",
+              "chunks": 10,
+              "entities": 0,
+              "rels": 6
+            },
+            {
+              "id": 251,
+              "label": "04-test-strategy",
+              "kind": "STRATEGY",
+              "chunks": 12,
+              "entities": 1,
+              "rels": 8
+            },
+            {
+              "id": 250,
+              "label": "03-test-design-specification",
+              "kind": "TDS",
+              "chunks": 26,
+              "entities": 19,
+              "rels": 10
+            },
+            {
+              "id": 249,
+              "label": "02-functional-requirements-specification",
+              "kind": "FRS",
+              "chunks": 114,
+              "entities": 127,
+              "rels": 6
+            },
+            {
+              "id": 248,
+              "label": "01-business-requirements-document",
+              "kind": "BRD",
+              "chunks": 61,
+              "entities": 69,
+              "rels": 8
+            },
+            {
+              "id": 246,
+              "label": "README",
+              "kind": "INDEX",
+              "chunks": 10,
+              "entities": 2,
+              "rels": 14
+            },
+            {
+              "id": 245,
+              "label": "09-test-case-repository",
+              "kind": "TEST_CASE_REPOSITORY",
+              "chunks": 19,
+              "entities": 135,
+              "rels": 0
+            },
+            {
+              "id": 244,
+              "label": "08-quality-risk-defect-governance",
+              "kind": "GOVERNANCE",
+              "chunks": 18,
+              "entities": 0,
+              "rels": 4
+            },
+            {
+              "id": 243,
+              "label": "07-test-data-environment-specification",
+              "kind": "TEST_DATA",
+              "chunks": 19,
+              "entities": 2,
+              "rels": 3
+            },
+            {
+              "id": 242,
+              "label": "06-requirements-traceability-matrix",
+              "kind": "RTM",
+              "chunks": 16,
+              "entities": 235,
+              "rels": 5
+            },
+            {
+              "id": 241,
+              "label": "05-test-plan",
+              "kind": "PLAN",
+              "chunks": 19,
+              "entities": 3,
+              "rels": 6
+            },
+            {
+              "id": 240,
+              "label": "04-test-strategy",
+              "kind": "STRATEGY",
+              "chunks": 20,
+              "entities": 2,
+              "rels": 8
+            },
+            {
+              "id": 239,
+              "label": "03-test-design-specification",
+              "kind": "TDS",
+              "chunks": 38,
+              "entities": 42,
+              "rels": 10
+            },
+            {
+              "id": 238,
+              "label": "02-functional-requirements-specification",
+              "kind": "FRS",
+              "chunks": 142,
+              "entities": 319,
+              "rels": 6
+            },
+            {
+              "id": 237,
+              "label": "01-business-requirements-document",
+              "kind": "BRD",
+              "chunks": 86,
+              "entities": 161,
+              "rels": 9
+            },
+            {
+              "id": 236,
+              "label": "09-test-case-repository",
+              "kind": "TEST_CASE_REPOSITORY",
+              "chunks": 18,
+              "entities": 1,
+              "rels": 0
+            },
+            {
+              "id": 235,
+              "label": "08-quality-risk-defect-governance",
+              "kind": "GOVERNANCE",
+              "chunks": 12,
+              "entities": 0,
+              "rels": 4
+            },
+            {
+              "id": 234,
+              "label": "07-test-data-environment-specification",
+              "kind": "TEST_DATA",
+              "chunks": 14,
+              "entities": 1,
+              "rels": 3
+            },
+            {
+              "id": 233,
+              "label": "06-requirements-traceability-matrix",
+              "kind": "RTM",
+              "chunks": 10,
+              "entities": 18,
+              "rels": 5
+            },
+            {
+              "id": 232,
+              "label": "05-test-plan",
+              "kind": "PLAN",
+              "chunks": 10,
+              "entities": 0,
+              "rels": 6
+            },
+            {
+              "id": 231,
+              "label": "04-test-strategy",
+              "kind": "STRATEGY",
+              "chunks": 12,
+              "entities": 1,
+              "rels": 8
+            },
+            {
+              "id": 230,
+              "label": "03-test-design-specification",
+              "kind": "TDS",
+              "chunks": 26,
+              "entities": 19,
+              "rels": 10
+            },
+            {
+              "id": 229,
+              "label": "02-functional-requirements-specification",
+              "kind": "FRS",
+              "chunks": 114,
+              "entities": 127,
+              "rels": 6
+            },
+            {
+              "id": 228,
+              "label": "01-business-requirements-document",
+              "kind": "BRD",
+              "chunks": 61,
+              "entities": 69,
+              "rels": 8
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "event_mon9xrn6_e1ovdk",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "phase": "ingest_sources",
+      "title": "Build entity map",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:56:40.242Z",
+      "finishedAt": "2026-05-01T18:56:40.423Z",
+      "summary": "1474 entities across 5 types.",
+      "technical": {
+        "rawLabel": "ingest:entities",
+        "payload": {
+          "kind": "ingestion-section",
+          "section": "entities",
+          "entities": [
+            {
+              "type": "REQ",
+              "count": 596
+            },
+            {
+              "type": "BR",
+              "count": 510
+            },
+            {
+              "type": "TC",
+              "count": 289
+            },
+            {
+              "type": "TKT",
+              "count": 51
+            },
+            {
+              "type": "SECTION",
+              "count": 28
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "event_mon9xrs9_decvn8",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "phase": "ingest_sources",
+      "title": "Trace relationships",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:56:40.425Z",
+      "finishedAt": "2026-05-01T18:56:40.607Z",
+      "summary": "165 relationships across 3 types.",
+      "technical": {
+        "rawLabel": "ingest:relationships",
+        "payload": {
+          "kind": "ingestion-section",
+          "section": "relationships",
+          "relationships": [
+            {
+              "type": "docx_hyperlink",
+              "count": 100
+            },
+            {
+              "type": "markdown_link",
+              "count": 64
+            },
+            {
+              "type": "external_link",
+              "count": 1
+            }
+          ],
+          "samples": [
+            {
+              "type": "docx_hyperlink",
+              "from": "08-quality-risk-defect-governance",
+              "to": "source-pack/SDLC-Test-Tracker.xlsx"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "08-quality-risk-defect-governance",
+              "to": "source-pack/06-requirements-traceability-matrix.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "08-quality-risk-defect-governance",
+              "to": "source-pack/05-test-plan.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "08-quality-risk-defect-governance",
+              "to": "source-pack/04-test-strategy.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "07-test-data-environment-specification",
+              "to": "source-pack/README.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "07-test-data-environment-specification",
+              "to": "source-pack/06-requirements-traceability-matrix.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "07-test-data-environment-specification",
+              "to": "source-pack/02-functional-requirements-specification.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "06-requirements-traceability-matrix",
+              "to": "source-pack/09-test-case-repository.md"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "event_mon9xs0q_08lc2u",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "phase": "ingest_sources",
+      "title": "Ingestion knowledge map",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:56:40.730Z",
+      "finishedAt": "2026-05-01T18:56:40.730Z",
+      "summary": "29 documents · 1474 entities · 165 relationships.",
+      "technical": {
+        "rawLabel": "ingest:map",
+        "payload": {
+          "kind": "ingestion-map",
+          "documents": [
+            {
+              "id": 257,
+              "label": "TestCases",
+              "kind": "TEST_CASE_REPOSITORY",
+              "chunks": 16,
+              "entities": 101,
+              "rels": 0
+            },
+            {
+              "id": 256,
+              "label": "09-test-case-repository",
+              "kind": "TEST_CASE_REPOSITORY",
+              "chunks": 18,
+              "entities": 1,
+              "rels": 0
+            },
+            {
+              "id": 255,
+              "label": "08-quality-risk-defect-governance",
+              "kind": "GOVERNANCE",
+              "chunks": 12,
+              "entities": 0,
+              "rels": 4
+            },
+            {
+              "id": 254,
+              "label": "07-test-data-environment-specification",
+              "kind": "TEST_DATA",
+              "chunks": 14,
+              "entities": 1,
+              "rels": 3
+            },
+            {
+              "id": 253,
+              "label": "06-requirements-traceability-matrix",
+              "kind": "RTM",
+              "chunks": 10,
+              "entities": 18,
+              "rels": 5
+            },
+            {
+              "id": 252,
+              "label": "05-test-plan",
+              "kind": "PLAN",
+              "chunks": 10,
+              "entities": 0,
+              "rels": 6
+            },
+            {
+              "id": 251,
+              "label": "04-test-strategy",
+              "kind": "STRATEGY",
+              "chunks": 12,
+              "entities": 1,
+              "rels": 8
+            },
+            {
+              "id": 250,
+              "label": "03-test-design-specification",
+              "kind": "TDS",
+              "chunks": 26,
+              "entities": 19,
+              "rels": 10
+            },
+            {
+              "id": 249,
+              "label": "02-functional-requirements-specification",
+              "kind": "FRS",
+              "chunks": 114,
+              "entities": 127,
+              "rels": 6
+            },
+            {
+              "id": 248,
+              "label": "01-business-requirements-document",
+              "kind": "BRD",
+              "chunks": 61,
+              "entities": 69,
+              "rels": 8
+            },
+            {
+              "id": 246,
+              "label": "README",
+              "kind": "INDEX",
+              "chunks": 10,
+              "entities": 2,
+              "rels": 14
+            },
+            {
+              "id": 245,
+              "label": "09-test-case-repository",
+              "kind": "TEST_CASE_REPOSITORY",
+              "chunks": 19,
+              "entities": 135,
+              "rels": 0
+            },
+            {
+              "id": 244,
+              "label": "08-quality-risk-defect-governance",
+              "kind": "GOVERNANCE",
+              "chunks": 18,
+              "entities": 0,
+              "rels": 4
+            },
+            {
+              "id": 243,
+              "label": "07-test-data-environment-specification",
+              "kind": "TEST_DATA",
+              "chunks": 19,
+              "entities": 2,
+              "rels": 3
+            },
+            {
+              "id": 242,
+              "label": "06-requirements-traceability-matrix",
+              "kind": "RTM",
+              "chunks": 16,
+              "entities": 235,
+              "rels": 5
+            },
+            {
+              "id": 241,
+              "label": "05-test-plan",
+              "kind": "PLAN",
+              "chunks": 19,
+              "entities": 3,
+              "rels": 6
+            },
+            {
+              "id": 240,
+              "label": "04-test-strategy",
+              "kind": "STRATEGY",
+              "chunks": 20,
+              "entities": 2,
+              "rels": 8
+            },
+            {
+              "id": 239,
+              "label": "03-test-design-specification",
+              "kind": "TDS",
+              "chunks": 38,
+              "entities": 42,
+              "rels": 10
+            },
+            {
+              "id": 238,
+              "label": "02-functional-requirements-specification",
+              "kind": "FRS",
+              "chunks": 142,
+              "entities": 319,
+              "rels": 6
+            },
+            {
+              "id": 237,
+              "label": "01-business-requirements-document",
+              "kind": "BRD",
+              "chunks": 86,
+              "entities": 161,
+              "rels": 9
+            },
+            {
+              "id": 236,
+              "label": "09-test-case-repository",
+              "kind": "TEST_CASE_REPOSITORY",
+              "chunks": 18,
+              "entities": 1,
+              "rels": 0
+            },
+            {
+              "id": 235,
+              "label": "08-quality-risk-defect-governance",
+              "kind": "GOVERNANCE",
+              "chunks": 12,
+              "entities": 0,
+              "rels": 4
+            },
+            {
+              "id": 234,
+              "label": "07-test-data-environment-specification",
+              "kind": "TEST_DATA",
+              "chunks": 14,
+              "entities": 1,
+              "rels": 3
+            },
+            {
+              "id": 233,
+              "label": "06-requirements-traceability-matrix",
+              "kind": "RTM",
+              "chunks": 10,
+              "entities": 18,
+              "rels": 5
+            },
+            {
+              "id": 232,
+              "label": "05-test-plan",
+              "kind": "PLAN",
+              "chunks": 10,
+              "entities": 0,
+              "rels": 6
+            },
+            {
+              "id": 231,
+              "label": "04-test-strategy",
+              "kind": "STRATEGY",
+              "chunks": 12,
+              "entities": 1,
+              "rels": 8
+            },
+            {
+              "id": 230,
+              "label": "03-test-design-specification",
+              "kind": "TDS",
+              "chunks": 26,
+              "entities": 19,
+              "rels": 10
+            },
+            {
+              "id": 229,
+              "label": "02-functional-requirements-specification",
+              "kind": "FRS",
+              "chunks": 114,
+              "entities": 127,
+              "rels": 6
+            },
+            {
+              "id": 228,
+              "label": "01-business-requirements-document",
+              "kind": "BRD",
+              "chunks": 61,
+              "entities": 69,
+              "rels": 8
+            }
+          ],
+          "entities": [
+            {
+              "type": "REQ",
+              "count": 596
+            },
+            {
+              "type": "BR",
+              "count": 510
+            },
+            {
+              "type": "TC",
+              "count": 289
+            },
+            {
+              "type": "TKT",
+              "count": 51
+            },
+            {
+              "type": "SECTION",
+              "count": 28
+            }
+          ],
+          "relationships": [
+            {
+              "type": "docx_hyperlink",
+              "count": 100
+            },
+            {
+              "type": "markdown_link",
+              "count": 64
+            },
+            {
+              "type": "external_link",
+              "count": 1
+            }
+          ],
+          "rel_samples": [
+            {
+              "type": "docx_hyperlink",
+              "from": "08-quality-risk-defect-governance",
+              "to": "source-pack/SDLC-Test-Tracker.xlsx"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "08-quality-risk-defect-governance",
+              "to": "source-pack/06-requirements-traceability-matrix.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "08-quality-risk-defect-governance",
+              "to": "source-pack/05-test-plan.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "08-quality-risk-defect-governance",
+              "to": "source-pack/04-test-strategy.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "07-test-data-environment-specification",
+              "to": "source-pack/README.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "07-test-data-environment-specification",
+              "to": "source-pack/06-requirements-traceability-matrix.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "07-test-data-environment-specification",
+              "to": "source-pack/02-functional-requirements-specification.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "06-requirements-traceability-matrix",
+              "to": "source-pack/09-test-case-repository.md"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "event_mon9xs0q_sq5sut",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "phase": "ingest_sources",
+      "title": "Summarize entity map",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:56:40.730Z",
+      "finishedAt": "2026-05-01T18:56:40.908Z",
+      "technical": {
+        "rawLabel": "Summarize entity map",
+        "command": "source ingestion/.venv/bin/activate && DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport os, psycopg\nwith psycopg.connect(os.environ['DATABASE_URL']) as conn, conn.cursor() as cur:\n    cur.execute(\"select entity_type, count(*) from entities group by entity_type order by entity_type\")\n    rows = cur.fetchall()\nprint('# Entity Map Summary')\nprint()\nprint('| Entity Type | Count |')\nprint('|---|---:|')\nfor t, c in rows:\n    print(f'| {t} | {c} |')\nPY",
+        "stdout": "# Entity Map Summary\n\n| Entity Type | Count |\n|---|---:|\n| BR | 510 |\n| REQ | 596 |\n| SECTION | 28 |\n| TC | 289 |\n| TKT | 51 |\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon9xs5p_uza7af",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "phase": "generate_tests",
+      "title": "Cursor SDK agent",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:56:40.909Z",
+      "finishedAt": "2026-05-01T18:57:06.197Z",
+      "summary": "Cursor SDK call completed.",
+      "technical": {
+        "rawLabel": "cursor:generate_tests",
+        "sdkPrompt": "Generate source-aligned QA test cases from the active pgvector corpus. Use citations and return repository JSON if confident.",
+        "stdout": "Exploring the codebase to find how the pgvector corpus is used and how QA test cases are generated.\n\nI tried to open your workspace (for example `test-doc/test-case-repository.json`, `package.json`, and broader search for `pgvector`) and **every filesystem/search call failed**, so I **cannot query your active pgvector corpus**, read ingestion metadata, or see your repository JSON schema.\n\nHere is what **“source-aligned QA test cases from the active pgvector corpus”** implies in practice, and what I would produce once tools/backend access work:\n\n---\n\n### Source alignment & citations  \nEach derived test case should carry **explicit traceability** to retrieved evidence—not generic claims:\n\n| Citation dimension | Typical field |\n|-------------------|---------------|\n| Logical source | Stable doc ID / path / title stored with the chunk |\n| Chunk identity | Embedding row id / `chunk_id` / hash |\n| Evidence text | Short quoted excerpt or line range from chunk `metadata` |\n| Retrieval proof (optional but strong) | `score` / `distance` / rank from the retrieval call |\n\nStructured citations might look like: `chunk_id`, `source_uri`, `offset`, `excerpt`.\n\n---\n\n### When to **return repository JSON**  \nI'll only attach a confident **repository JSON** when:\n\n1. **Retrieval succeeds** against the corpus you designate as active (same env as your indexer).  \n2. **Schemas match** whatever your repo already uses (`test-doc/test-case-repository.json` appears in your git status as the likely target—I've not verified the shape due to tool failure).  \n3. **Confidence rule**: every materially asserted step/expected outcome has ≥1 citation; gaps are flagged as `[NEEDS_SOURCE]` rather than fabricated.\n\nUntil I can read that file and hit pgvector (or your RAG/query API), **I am not confident** enough to write a definitive merge-ready repository JSON—it would violate your own alignment goal.\n\n---\n\n### Next step  \n\nIf you retry this request in an environment where the workspace loads, **I will**:\n\n1. Read `test-doc/test-case-repository.json` (and any generator script under `ui-qa/` or similar).  \n2. Run your existing query path against the active pgvector store (or the script/env var you use for “active” corpus).  \n3. Emit **JSON** keyed to your schema plus **markdown citations** (chunk refs + excerpts).\n\nIf pgvector is only reachable locally, paste either the **`test-case-repository.json` skeleton** or a single **sample retrieval JSON** from your corpus (with `chunk_id`, `metadata`, `content`)—I can then align cases and citations off that sample even if live DB stays unreachable here.",
+        "payload": {
+          "eventCount": 321
+        }
+      }
+    },
+    {
+      "id": "event_mon9yboa_djx2af",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "phase": "generate_tests",
+      "title": "Generated test cases",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:57:06.202Z",
+      "finishedAt": "2026-05-01T18:57:06.202Z",
+      "summary": "16 test case(s), 102 step(s).",
+      "technical": {
+        "rawLabel": "generate_tests:repository",
+        "payload": {
+          "cases": 16
+        }
+      }
+    },
+    {
+      "id": "event_mon9ybod_4qjcel",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "phase": "audit_generated_tests",
+      "title": "Generated test confidence audit passed",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:57:06.205Z",
+      "finishedAt": "2026-05-01T18:57:06.205Z",
+      "summary": "Finding counts: {\"critical\":0,\"high\":0,\"medium\":0,\"low\":0}."
+    },
+    {
+      "id": "event_mon9ybof_mnkt1a",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "phase": "reseed_structured_db",
+      "title": "Build repository Markdown and workbook",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:57:06.207Z",
+      "finishedAt": "2026-05-01T18:57:06.448Z",
+      "technical": {
+        "rawLabel": "Build repository Markdown and workbook",
+        "command": "source ingestion/.venv/bin/activate && ingestion/.venv/bin/python test-doc/scripts/build_test_case_repository.py --spec test-doc/test-case-repository.json --workbook-out test_data/TestCases.xlsx --markdown-out test-doc/09-test-case-repository.md",
+        "stdout": "Wrote test_data/TestCases.xlsx\nWrote test-doc/09-test-case-repository.md\nInventory: 16 test cases, 102 steps\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon9ybv4_r898tc",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "phase": "reseed_structured_db",
+      "title": "Reload structured test cases into DB",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:57:06.448Z",
+      "finishedAt": "2026-05-01T18:57:15.103Z",
+      "technical": {
+        "rawLabel": "Reload structured test cases into DB",
+        "command": "source ingestion/.venv/bin/activate && DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python ingestion/scripts/ingest.py --format both",
+        "stdout": "  ingested test-doc/01-business-requirements-document.docx (docx): 61 chunks\n  ingested test-doc/02-functional-requirements-specification.docx (docx): 114 chunks\n  ingested test-doc/03-test-design-specification.docx (docx): 26 chunks\n  ingested test-doc/04-test-strategy.docx (docx): 12 chunks\n  ingested test-doc/05-test-plan.docx (docx): 10 chunks\n  ingested test-doc/06-requirements-traceability-matrix.docx (docx): 10 chunks\n  ingested test-doc/07-test-data-environment-specification.docx (docx): 14 chunks\n  ingested test-doc/08-quality-risk-defect-governance.docx (docx): 12 chunks\n  ingested test-doc/09-test-case-repository.docx (docx): 18 chunks\n  ingested test-doc/01-business-requirements-document.md (md): 86 chunks\n  ingested test-doc/02-functional-requirements-specification.md (md): 142 chunks\n  ingested test-doc/03-test-design-specification.md (md): 38 chunks\n  ingested test-doc/04-test-strategy.md (md): 20 chunks\n  ingested test-doc/05-test-plan.md (md): 19 chunks\n  ingested test-doc/06-requirements-traceability-matrix.md (md): 16 chunks\n  ingested test-doc/07-test-data-environment-specification.md (md): 19 chunks\n  ingested test-doc/08-quality-risk-defect-governance.md (md): 18 chunks\n  ingested test-doc/09-test-case-repository.md (md): 19 chunks\n  ingested test-doc/README.md (md): 10 chunks\n  ingested test_data/TestCases.xlsx (xlsx): 16 test cases, 102 steps\nDone.\n",
+        "stderr": "Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n\rLoading weights:   0%|          | 0/103 [00:00<?, ?it/s]\rLoading weights: 100%|██████████| 103/103 [00:00<00:00, 17197.98it/s]\n\u001b[1mBertModel LOAD REPORT\u001b[0m from: sentence-transformers/all-MiniLM-L6-v2\nKey                     | Status     |  | \n------------------------+------------+--+-\nembeddings.position_ids | UNEXPECTED |  | \n\nNotes:\n- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n\rBatches:   0%|          | 0/2 [00:00<?, ?it/s]\rBatches:  50%|█████     | 1/2 [00:00<00:00,  6.38it/s]\rBatches: 100%|██████████| 2/2 [00:00<00:00, 10.14it/s]\n\rBatches:   0%|          | 0/4 [00:00<?, ?it/s]\rBatches:  50%|█████     | 2/4 [00:00<00:00, 17.46it/s]\rBatches: 100%|██████████| 4/4 [00:00<00:00, 23.82it/s]\n\rBatches:   0%|          | 0/1 [00:00<?, ?it/s]\rBatches: 100%|██████████| 1/1 [00:00<00:00, 23.91it/s]\n\rBatches:   0%|          | 0/1 [00:00<?, ?it/s]\rBatches: 100%|██████████| 1/1 [00:00<00:00, 20.76it/s]\n\rBatches:   0%|          | 0/3 [00:00<?, ?it/s]\rBatches:  67%|██████▋   | 2/3 [00:00<00:00, 11.44it/s]\rBatches: 100%|██████████| 3/3 [00:00<00:00, 14.54it/s]\n\rBatches:   0%|          | 0/5 [00:00<?, ?it/s]\rBatches:  20%|██        | 1/5 [00:00<00:00,  8.33it/s]\rBatches:  60%|██████    | 3/5 [00:00<00:00, 13.96it/s]\rBatches: 100%|██████████| 5/5 [00:00<00:00, 17.69it/s]\n\rBatches:   0%|          | 0/2 [00:00<?, ?it/s]\rBatches: 100%|██████████| 2/2 [00:00<00:00, 20.20it/s]\n\rBatches:   0%|          | 0/1 [00:00<?, ?it/s]\rBatches: 100%|██████████| 1/1 [00:00<00:00, 24.91it/s]\n\rBatches:   0%|          | 0/1 [00:00<?, ?it/s]\rBatches: 100%|██████████| 1/1 [00:00<00:00, 25.36it/s]\n\rBatches:   0%|          | 0/1 [00:00<?, ?it/s]\rBatches: 100%|██████████| 1/1 [00:00<00:00, 28.71it/s]\n\rBatches:   0%|          | 0/1 [00:00<?, ?it/s]\rBatches: 100%|██████████| 1/1 [00:00<00:00, 27.78it/s]\n\rBatches:   0%|          | 0/1 [00:00<?, ?it/s]\rBatches: 100%|██████████| 1/1 [00:00<00:00, 16.58it/s]\n",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon9yijk_b3csnl",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "phase": "audit_ingestion",
+      "title": "Run ingestion audit gate",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:57:15.104Z",
+      "finishedAt": "2026-05-01T18:57:15.293Z",
+      "technical": {
+        "rawLabel": "Run ingestion audit gate",
+        "command": "source ingestion/.venv/bin/activate && DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python ingestion/scripts/audit_test_case_ingestion.py --report '/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/ingestion_audit_20260501185715.md' --json '/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/ingestion_audit_20260501185715.json'",
+        "stdout": "{\n  \"case_count\": 16,\n  \"step_count\": 102,\n  \"hard_doc_requirement_count\": 38,\n  \"covered_requirement_count\": 34,\n  \"uncovered_requirements\": [\n    \"REQ-FR-000\",\n    \"REQ-NFR-003\",\n    \"REQ-NFR-005\",\n    \"REQ-SEC-003\"\n  ],\n  \"finding_counts\": {\n    \"critical\": 0,\n    \"high\": 0,\n    \"medium\": 0,\n    \"low\": 0\n  }\n}\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon9yiou_hpptaj",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "phase": "audit_ingestion",
+      "title": "Ingestion audit gate passed",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:57:15.294Z",
+      "finishedAt": "2026-05-01T18:57:15.294Z",
+      "summary": "Finding counts: {\"critical\":0,\"high\":0,\"medium\":0,\"low\":0}."
+    },
+    {
+      "id": "event_mon9yiov_1uu1m1",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "phase": "checkpoint",
+      "title": "Approve browser execution",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:57:15.295Z",
+      "finishedAt": "2026-05-01T18:57:15.295Z",
+      "summary": "Auto-approved for this run."
+    },
+    {
+      "id": "event_mon9yiov_odjyy3",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "phase": "publish_artifacts",
+      "title": "Export repository JSON from DB",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:57:15.295Z",
+      "finishedAt": "2026-05-01T18:57:15.460Z",
+      "technical": {
+        "rawLabel": "Export repository JSON from DB",
+        "command": "source ingestion/.venv/bin/activate && DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python ingestion/scripts/export_test_case_repository.py --output test-doc/test-case-repository.json",
+        "stdout": "Exported 16 test cases, 102 steps to test-doc/test-case-repository.json\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon9yitg_ek8269",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "phase": "publish_artifacts",
+      "title": "Render repository Markdown and workbook",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:57:15.460Z",
+      "finishedAt": "2026-05-01T18:57:15.651Z",
+      "technical": {
+        "rawLabel": "Render repository Markdown and workbook",
+        "command": "source ingestion/.venv/bin/activate && ingestion/.venv/bin/python test-doc/scripts/build_test_case_repository.py --spec test-doc/test-case-repository.json --workbook-out test_data/TestCases.xlsx --markdown-out test-doc/09-test-case-repository.md",
+        "stdout": "Wrote test_data/TestCases.xlsx\nWrote test-doc/09-test-case-repository.md\nInventory: 16 test cases, 102 steps\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon9yiys_qgzj7l",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "phase": "execute_browser",
+      "title": "Install Playwright dependencies",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:57:15.652Z",
+      "finishedAt": "2026-05-01T18:57:18.448Z",
+      "technical": {
+        "rawLabel": "Install Playwright dependencies",
+        "command": "npm install --prefix playwright-runner",
+        "stdout": "\nup to date, audited 8 packages in 2s\n\nfound 0 vulnerabilities\n",
+        "stderr": "npm warn Unknown env config \"devdir\". This will stop working in the next major version of npm.\n",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon9yl4i_d9vt34",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "phase": "execute_browser",
+      "title": "Run Playwright",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:57:18.450Z",
+      "finishedAt": "2026-05-01T18:57:34.176Z",
+      "technical": {
+        "rawLabel": "Run Playwright",
+        "command": "TC_ID='all' PLAYWRIGHT_WORKERS=2 npx --prefix playwright-runner playwright test --config '/Users/utsavsharma/Documents/GitHub/QAMVP/playwright-runner/playwright.config.ts' --workers=2",
+        "stdout": "\nRunning 17 tests using 2 workers\n\n  ✘   2 [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-002: Two pending trades are counted in queue and absent from dashboard until approval (1ms)\n  ✘   1 [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-001: Maker submits BUY, checker approves, dashboard reflects one approved trade (1ms)\n  ✘   4 [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-004: GTC trade requires expiration date and calculates notional total (1ms)\n  ✘   3 [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-003: Approved BUY and matching SELL become Matched in Trade List (0ms)\n  ✘   6 [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-005: Trade list shows unmatched approved trade until compatible opposite trade is approved (1ms)\n  ✘   5 [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-006: Invalid credentials do not authenticate and show safe error (0ms)\n  ✘   8 [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-007: Unauthenticated deep link is gated and logout clears protected access (0ms)\n  ✘   7 [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-008: Navigation menus expose all trading and admin destinations (0ms)\n  ✘   9 [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-009: Trade form prevents submission when required fields are missing (0ms)\n  ✘  10 [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-010: Dashboard columns and loading state render for approved trades (0ms)\n  ✘  12 [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-011: Trade List columns and summary bar reflect approved inventory (0ms)\n  ✘  11 [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-012: Checker approval queue displays empty state and pending count zero (0ms)\n  ✘  13 [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-013: Role label distinguishes maker and checker sessions (0ms)\n  ✘  14 [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-014: Ticker selection drives price and total recalculation (1ms)\n  ✘  16 [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-015: Admin Users placeholder is reachable from authenticated shell (0ms)\n  ✘  15 [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-016: Local operability and automation hooks are verifiable from the browser (0ms)\n  ✓  17 [chromium] › playwright-runner/tests/mapping.spec.ts:5:5 › all current KB test-case steps have deterministic Playwright mappings (2ms)\n\n\n  1) [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-001: Maker submits BUY, checker approves, dashboard reflects one approved trade \n\n    Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n    ╔════════════════════════════════════════════════════════════╗\n    ║ Looks like Playwright was just installed or updated.       ║\n    ║ Please run the following command to download new browsers: ║\n    ║                                                            ║\n    ║     npx playwright install                                 ║\n    ║                                                            ║\n    ║ <3 Playwright Team                                         ║\n    ╚════════════════════════════════════════════════════════════╝\n\n    Error Context: test_data/test-results/playwright-output/kb-test-cases-TC-001-Maker-247b7-reflects-one-approved-trade-chromium/error-context.md\n\n  2) [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-002: Two pending trades are counted in queue and absent from dashboard until approval \n\n    Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n    ╔════════════════════════════════════════════════════════════╗\n    ║ Looks like Playwright was just installed or updated.       ║\n    ║ Please run the following command to download new browsers: ║\n    ║                                                            ║\n    ║     npx playwright install                                 ║\n    ║                                                            ║\n    ║ <3 Playwright Team                                         ║\n    ╚════════════════════════════════════════════════════════════╝\n\n    Error Context: test_data/test-results/playwright-output/kb-test-cases-TC-002-Two-p-b139b-om-dashboard-until-approval-chromium/error-context.md\n\n  3) [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-003: Approved BUY and matching SELL become Matched in Trade List \n\n    Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n    ╔════════════════════════════════════════════════════════════╗\n    ║ Looks like Playwright was just installed or updated.       ║\n    ║ Please run the following command to download new browsers: ║\n    ║                                                            ║\n    ║     npx playwright install                                 ║\n    ║                                                            ║\n    ║ <3 Playwright Team                                         ║\n    ╚════════════════════════════════════════════════════════════╝\n\n    Error Context: test_data/test-results/playwright-output/kb-test-cases-TC-003-Appro-08b91-ecome-Matched-in-Trade-List-chromium/error-context.md\n\n  4) [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-004: GTC trade requires expiration date and calculates notional total \n\n    Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n    ╔════════════════════════════════════════════════════════════╗\n    ║ Looks like Playwright was just installed or updated.       ║\n    ║ Please run the following command to download new browsers: ║\n    ║                                                            ║\n    ║     npx playwright install                                 ║\n    ║                                                            ║\n    ║ <3 Playwright Team                                         ║\n    ╚════════════════════════════════════════════════════════════╝\n\n    Error Context: test_data/test-results/playwright-output/kb-test-cases-TC-004-GTC-t-80790-d-calculates-notional-total-chromium/error-context.md\n\n  5) [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-005: Trade list shows unmatched approved trade until compatible opposite trade is approved \n\n    Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n    ╔════════════════════════════════════════════════════════════╗\n    ║ Looks like Playwright was just installed or updated.       ║\n    ║ Please run the following command to download new browsers: ║\n    ║                                                            ║\n    ║     npx playwright install                                 ║\n    ║                                                            ║\n    ║ <3 Playwright Team                                         ║\n    ╚════════════════════════════════════════════════════════════╝\n\n    Error Context: test_data/test-results/playwright-output/kb-test-cases-TC-005-Trade-d3058--opposite-trade-is-approved-chromium/error-context.md\n\n  6) [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-006: Invalid credentials do not authenticate and show safe error \n\n    Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n    ╔════════════════════════════════════════════════════════════╗\n    ║ Looks like Playwright was just installed or updated.       ║\n    ║ Please run the following command to download new browsers: ║\n    ║                                                            ║\n    ║     npx playwright install                                 ║\n    ║                                                            ║\n    ║ <3 Playwright Team                                         ║\n    ╚════════════════════════════════════════════════════════════╝\n\n    Error Context: test_data/test-results/playwright-output/kb-test-cases-TC-006-Inval-e1083-nticate-and-show-safe-error-chromium/error-context.md\n\n  7) [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-007: Unauthenticated deep link is gated and logout clears protected access \n\n    Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n    ╔════════════════════════════════════════════════════════════╗\n    ║ Looks like Playwright was just installed or updated.       ║\n    ║ Please run the following command to download new browsers: ║\n    ║                                                            ║\n    ║     npx playwright install                                 ║\n    ║                                                            ║\n    ║ <3 Playwright Team                                         ║\n    ╚════════════════════════════════════════════════════════════╝\n\n    Error Context: test_data/test-results/playwright-output/kb-test-cases-TC-007-Unaut-a810f-out-clears-protected-access-chromium/error-context.md\n\n  8) [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-008: Navigation menus expose all trading and admin destinations \n\n    Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n    ╔════════════════════════════════════════════════════════════╗\n    ║ Looks like Playwright was just installed or updated.       ║\n    ║ Please run the following command to download new browsers: ║\n    ║                                                            ║\n    ║     npx playwright install                                 ║\n    ║                                                            ║\n    ║ <3 Playwright Team                                         ║\n    ╚════════════════════════════════════════════════════════════╝\n\n    Error Context: test_data/test-results/playwright-output/kb-test-cases-TC-008-Navig-5ba1b-ding-and-admin-destinations-chromium/error-context.md\n\n  9) [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-009: Trade form prevents submission when required fields are missing \n\n    Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n    ╔════════════════════════════════════════════════════════════╗\n    ║ Looks like Playwright was just installed or updated.       ║\n    ║ Please run the following command to download new browsers: ║\n    ║                                                            ║\n    ║     npx playwright install                                 ║\n    ║                                                            ║\n    ║ <3 Playwright Team                                         ║\n    ╚════════════════════════════════════════════════════════════╝\n\n    Error Context: test_data/test-results/playwright-output/kb-test-cases-TC-009-Trade-2f197-required-fields-are-missing-chromium/error-context.md\n\n  10) [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-010: Dashboard columns and loading state render for approved trades \n\n    Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n    ╔════════════════════════════════════════════════════════════╗\n    ║ Looks like Playwright was just installed or updated.       ║\n    ║ Please run the following command to download new browsers: ║\n    ║                                                            ║\n    ║     npx playwright install                                 ║\n    ║                                                            ║\n    ║ <3 Playwright Team                                         ║\n    ╚════════════════════════════════════════════════════════════╝\n\n    Error Context: test_data/test-results/playwright-output/kb-test-cases-TC-010-Dashb-d14e7--render-for-approved-trades-chromium/error-context.md\n\n  11) [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-011: Trade List columns and summary bar reflect approved inventory \n\n    Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n    ╔════════════════════════════════════════════════════════════╗\n    ║ Looks like Playwright was just installed or updated.       ║\n    ║ Please run the following command to download new browsers: ║\n    ║                                                            ║\n    ║     npx playwright install                                 ║\n    ║                                                            ║\n    ║ <3 Playwright Team                                         ║\n    ╚════════════════════════════════════════════════════════════╝\n\n    Error Context: test_data/test-results/playwright-output/kb-test-cases-TC-011-Trade-d3097--reflect-approved-inventory-chromium/error-context.md\n\n  12) [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-012: Checker approval queue displays empty state and pending count zero \n\n    Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n    ╔════════════════════════════════════════════════════════════╗\n    ║ Looks like Playwright was just installed or updated.       ║\n    ║ Please run the following command to download new browsers: ║\n    ║                                                            ║\n    ║     npx playwright install                                 ║\n    ║                                                            ║\n    ║ <3 Playwright Team                                         ║\n    ╚════════════════════════════════════════════════════════════╝\n\n    Error Context: test_data/test-results/playwright-output/kb-test-cases-TC-012-Check-a7797-tate-and-pending-count-zero-chromium/error-context.md\n\n  13) [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-013: Role label distinguishes maker and checker sessions \n\n    Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n    ╔════════════════════════════════════════════════════════════╗\n    ║ Looks like Playwright was just installed or updated.       ║\n    ║ Please run the following command to download new browsers: ║\n    ║                                                            ║\n    ║     npx playwright install                                 ║\n    ║                                                            ║\n    ║ <3 Playwright Team                                         ║\n    ╚════════════════════════════════════════════════════════════╝\n\n    Error Context: test_data/test-results/playwright-output/kb-test-cases-TC-013-Role--2af67--maker-and-checker-sessions-chromium/error-context.md\n\n  14) [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-014: Ticker selection drives price and total recalculation \n\n    Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n    ╔════════════════════════════════════════════════════════════╗\n    ║ Looks like Playwright was just installed or updated.       ║\n    ║ Please run the following command to download new browsers: ║\n    ║                                                            ║\n    ║     npx playwright install                                 ║\n    ║                                                            ║\n    ║ <3 Playwright Team                                         ║\n    ╚════════════════════════════════════════════════════════════╝\n\n    Error Context: test_data/test-results/playwright-output/kb-test-cases-TC-014-Ticke-42ce3-ice-and-total-recalculation-chromium/error-context.md\n\n  15) [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-015: Admin Users placeholder is reachable from authenticated shell \n\n    Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n    ╔════════════════════════════════════════════════════════════╗\n    ║ Looks like Playwright was just installed or updated.       ║\n    ║ Please run the following command to download new browsers: ║\n    ║                                                            ║\n    ║     npx playwright install                                 ║\n    ║                                                            ║\n    ║ <3 Playwright Team                                         ║\n    ╚════════════════════════════════════════════════════════════╝\n\n    Error Context: test_data/test-results/playwright-output/kb-test-cases-TC-015-Admin-961b2-le-from-authenticated-shell-chromium/error-context.md\n\n  16) [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-016: Local operability and automation hooks are verifiable from the browser \n\n    Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n    ╔════════════════════════════════════════════════════════════╗\n    ║ Looks like Playwright was just installed or updated.       ║\n    ║ Please run the following command to download new browsers: ║\n    ║                                                            ║\n    ║     npx playwright install                                 ║\n    ║                                                            ║\n    ║ <3 Playwright Team                                         ║\n    ╚════════════════════════════════════════════════════════════╝\n\n    Error Context: test_data/test-results/playwright-output/kb-test-cases-TC-016-Local-19ed2-verifiable-from-the-browser-chromium/error-context.md\n\n  16 failed\n    [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-001: Maker submits BUY, checker approves, dashboard reflects one approved trade \n    [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-002: Two pending trades are counted in queue and absent from dashboard until approval \n    [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-003: Approved BUY and matching SELL become Matched in Trade List \n    [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-004: GTC trade requires expiration date and calculates notional total \n    [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-005: Trade list shows unmatched approved trade until compatible opposite trade is approved \n    [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-006: Invalid credentials do not authenticate and show safe error \n    [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-007: Unauthenticated deep link is gated and logout clears protected access \n    [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-008: Navigation menus expose all trading and admin destinations \n    [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-009: Trade form prevents submission when required fields are missing \n    [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-010: Dashboard columns and loading state render for approved trades \n    [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-011: Trade List columns and summary bar reflect approved inventory \n    [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-012: Checker approval queue displays empty state and pending count zero \n    [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-013: Role label distinguishes maker and checker sessions \n    [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-014: Ticker selection drives price and total recalculation \n    [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-015: Admin Users placeholder is reachable from authenticated shell \n    [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-016: Local operability and automation hooks are verifiable from the browser \n  1 passed (13.6s)\n",
+        "stderr": "npm warn Unknown env config \"devdir\". This will stop working in the next major version of npm.\n[WebServer] npm warn Unknown env config \"devdir\". This will stop working in the next major version of npm.\n[WebServer] - Building...\n[WebServer] \n",
+        "exitCode": 1
+      }
+    },
+    {
+      "id": "event_mon9yx9h_1dbq0a",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "phase": "verify_evidence",
+      "title": "Verify Playwright artifacts",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:57:34.181Z",
+      "finishedAt": "2026-05-01T18:57:34.181Z",
+      "summary": "Verified latest artifacts for 16 test case(s)."
+    },
+    {
+      "id": "event_mon9yx9i_3dg3qm",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "phase": "audit_run",
+      "title": "Run independent final audit",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:57:34.182Z",
+      "finishedAt": "2026-05-01T18:57:34.182Z",
+      "summary": "Verdict: approved."
+    },
+    {
+      "id": "event_mon9yx9i_9f6ii4",
+      "runId": "uiqa_mon9wyvm_pt7qds",
+      "phase": "complete",
+      "title": "QA workflow complete",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:57:34.182Z",
+      "finishedAt": "2026-05-01T18:57:34.182Z",
+      "summary": "Final verdict: approved."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev_mon9wyvy_jxctaw",
+      "createdAt": "2026-05-01T18:56:02.974Z",
+      "kind": "source",
+      "label": "01-business-requirements-document.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_mon9wyvm_pt7qds/75ba74032f55_01-business-requirements-document.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_mon9wyvz_b8d5la",
+      "createdAt": "2026-05-01T18:56:02.975Z",
+      "kind": "source",
+      "label": "02-functional-requirements-specification.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_mon9wyvm_pt7qds/1bf29955d09f_02-functional-requirements-specification.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_mon9wyw0_5thl03",
+      "createdAt": "2026-05-01T18:56:02.976Z",
+      "kind": "source",
+      "label": "03-test-design-specification.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_mon9wyvm_pt7qds/bc4a297e88b9_03-test-design-specification.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_mon9wyw0_lfezpm",
+      "createdAt": "2026-05-01T18:56:02.976Z",
+      "kind": "source",
+      "label": "04-test-strategy.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_mon9wyvm_pt7qds/bc452080a746_04-test-strategy.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_mon9wyw1_jqrngf",
+      "createdAt": "2026-05-01T18:56:02.977Z",
+      "kind": "source",
+      "label": "05-test-plan.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_mon9wyvm_pt7qds/64cc7c5d20b4_05-test-plan.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_mon9wyw2_qoywae",
+      "createdAt": "2026-05-01T18:56:02.978Z",
+      "kind": "source",
+      "label": "06-requirements-traceability-matrix.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_mon9wyvm_pt7qds/bae75844e4bc_06-requirements-traceability-matrix.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_mon9wyw5_wo50pu",
+      "createdAt": "2026-05-01T18:56:02.981Z",
+      "kind": "source",
+      "label": "07-test-data-environment-specification.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_mon9wyvm_pt7qds/dee1179870fd_07-test-data-environment-specification.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_mon9wyw6_2esgb7",
+      "createdAt": "2026-05-01T18:56:02.982Z",
+      "kind": "source",
+      "label": "08-quality-risk-defect-governance.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_mon9wyvm_pt7qds/c4d411862cc6_08-quality-risk-defect-governance.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_mon9wyw7_ysdvqq",
+      "createdAt": "2026-05-01T18:56:02.983Z",
+      "kind": "source",
+      "label": "09-test-case-repository.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_mon9wyvm_pt7qds/2b17d95d7da3_09-test-case-repository.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_mon9wyxa_l095zg",
+      "createdAt": "2026-05-01T18:56:03.022Z",
+      "kind": "folder",
+      "label": "Active source pack",
+      "path": "test_data/ui-qa/generated/uiqa_mon9wyvm_pt7qds/source-pack",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_mon9xs5p_mtc95s",
+      "createdAt": "2026-05-01T18:56:40.909Z",
+      "kind": "report",
+      "label": "Entity map summary",
+      "path": "test_data/test-results/uiqa_entity_summary_20260501185640.md",
+      "phase": "ingest_sources"
+    },
+    {
+      "id": "ev_mon9yboa_72rr9c",
+      "createdAt": "2026-05-01T18:57:06.202Z",
+      "kind": "json",
+      "label": "Generated test case repository",
+      "path": "test_data/ui-qa/generated/uiqa_mon9wyvm_pt7qds/test-case-repository.generated.json",
+      "phase": "generate_tests"
+    },
+    {
+      "id": "ev_mon9yboc_edh4lf",
+      "createdAt": "2026-05-01T18:57:06.204Z",
+      "kind": "report",
+      "label": "Generated test confidence audit",
+      "path": "test_data/test-results/generated_test_case_audit_20260501185706.md",
+      "phase": "audit_generated_tests"
+    },
+    {
+      "id": "ev_mon9ybod_gv4354",
+      "createdAt": "2026-05-01T18:57:06.205Z",
+      "kind": "json",
+      "label": "Generated test confidence audit JSON",
+      "path": "test_data/test-results/generated_test_case_audit_20260501185706.json",
+      "phase": "audit_generated_tests"
+    },
+    {
+      "id": "ev_mon9ybof_47hu3f",
+      "createdAt": "2026-05-01T18:57:06.207Z",
+      "kind": "json",
+      "label": "Active test case repository JSON",
+      "path": "test-doc/test-case-repository.json",
+      "phase": "reseed_structured_db"
+    },
+    {
+      "id": "ev_mon9yijj_870mho",
+      "createdAt": "2026-05-01T18:57:15.103Z",
+      "kind": "workbook",
+      "label": "Executable TestCases workbook",
+      "path": "test_data/TestCases.xlsx",
+      "phase": "reseed_structured_db"
+    },
+    {
+      "id": "ev_mon9yijk_blj4vr",
+      "createdAt": "2026-05-01T18:57:15.104Z",
+      "kind": "report",
+      "label": "Rendered test case repository",
+      "path": "test-doc/09-test-case-repository.md",
+      "phase": "reseed_structured_db"
+    },
+    {
+      "id": "ev_mon9yiou_smaexy",
+      "createdAt": "2026-05-01T18:57:15.294Z",
+      "kind": "report",
+      "label": "Ingestion audit report",
+      "path": "test_data/test-results/ingestion_audit_20260501185715.md",
+      "phase": "audit_ingestion"
+    },
+    {
+      "id": "ev_mon9yiou_2y0dfc",
+      "createdAt": "2026-05-01T18:57:15.294Z",
+      "kind": "json",
+      "label": "Ingestion audit JSON",
+      "path": "test_data/test-results/ingestion_audit_20260501185715.json",
+      "phase": "audit_ingestion"
+    },
+    {
+      "id": "ev_mon9yiyr_qj80jy",
+      "createdAt": "2026-05-01T18:57:15.651Z",
+      "kind": "json",
+      "label": "Exported repository JSON",
+      "path": "test-doc/test-case-repository.json",
+      "phase": "publish_artifacts"
+    },
+    {
+      "id": "ev_mon9yiyr_tvxtf6",
+      "createdAt": "2026-05-01T18:57:15.651Z",
+      "kind": "workbook",
+      "label": "Exported TestCases workbook",
+      "path": "test_data/TestCases.xlsx",
+      "phase": "publish_artifacts"
+    },
+    {
+      "id": "ev_mon9yx9h_nhzu9z",
+      "createdAt": "2026-05-01T18:57:34.181Z",
+      "kind": "json",
+      "label": "Evidence verification",
+      "path": "test_data/test-results/uiqa_evidence_verification_20260501185734.json",
+      "phase": "verify_evidence"
+    },
+    {
+      "id": "ev_mon9yx9i_q3zet7",
+      "createdAt": "2026-05-01T18:57:34.182Z",
+      "kind": "report",
+      "label": "Final QA audit",
+      "path": "test_data/test-results/audit_uiqa_20260501185734.md",
+      "phase": "audit_run"
+    }
+  ],
+  "checkpoints": [],
+  "messages": [],
+  "blockerCount": 0,
+  "findingCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "generatedSpecPath": "test_data/ui-qa/generated/uiqa_mon9wyvm_pt7qds/test-case-repository.generated.json",
+  "gateStatus": "passed",
+  "auditVerdict": "approved"
+}

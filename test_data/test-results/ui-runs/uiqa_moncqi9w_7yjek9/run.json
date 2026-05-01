@@ -1,0 +1,2087 @@
+{
+  "id": "uiqa_moncqi9w_7yjek9",
+  "scope": "all",
+  "dryRun": false,
+  "autoApprove": true,
+  "status": "approved",
+  "currentPhase": "rag_ready",
+  "createdAt": "2026-05-01T20:15:00.357Z",
+  "updatedAt": "2026-05-01T20:21:15.055Z",
+  "uploads": [
+    {
+      "id": "src_moncqiai_9w5d5t",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "originalName": "01-business-requirements-document.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_moncqi9w_7yjek9/75ba74032f55_01-business-requirements-document.docx",
+      "documentType": "BRD",
+      "sha256": "75ba74032f5583526c3ce4035eb7f21f024045dda836b8ecafd3bad94c8ee7e9",
+      "size": 35621,
+      "status": "accepted",
+      "createdAt": "2026-05-01T20:15:00.378Z"
+    },
+    {
+      "id": "src_moncqiam_k2tayc",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "originalName": "02-functional-requirements-specification.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_moncqi9w_7yjek9/1bf29955d09f_02-functional-requirements-specification.docx",
+      "documentType": "FRS",
+      "sha256": "1bf29955d09ffb4597c4f2391daef5cdd474d9a2b7153ef5efa1715b8336733d",
+      "size": 36715,
+      "status": "accepted",
+      "createdAt": "2026-05-01T20:15:00.382Z"
+    },
+    {
+      "id": "src_moncqian_yg3oxg",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "originalName": "03-test-design-specification.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_moncqi9w_7yjek9/bc4a297e88b9_03-test-design-specification.docx",
+      "documentType": "SOURCE_DOC",
+      "sha256": "bc4a297e88b98dc0645d0a1bc1bc8fdd63760485d97f63446e34bc078f79de42",
+      "size": 16590,
+      "status": "accepted",
+      "createdAt": "2026-05-01T20:15:00.383Z"
+    },
+    {
+      "id": "src_moncqiao_bj8dbc",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "originalName": "04-test-strategy.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_moncqi9w_7yjek9/bc452080a746_04-test-strategy.docx",
+      "documentType": "TEST_STRATEGY",
+      "sha256": "bc452080a74613289d89e8a9866cb9ec99671f2e9f270c301793c0de976e8d2d",
+      "size": 14190,
+      "status": "accepted",
+      "createdAt": "2026-05-01T20:15:00.385Z"
+    },
+    {
+      "id": "src_moncqiap_oam8tz",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "originalName": "05-test-plan.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_moncqi9w_7yjek9/64cc7c5d20b4_05-test-plan.docx",
+      "documentType": "TEST_PLAN",
+      "sha256": "64cc7c5d20b4556484544b1bc46bd60c2cb6e94879c28b05db0677af83ade68a",
+      "size": 13567,
+      "status": "accepted",
+      "createdAt": "2026-05-01T20:15:00.385Z"
+    },
+    {
+      "id": "src_moncqiaq_jiek5z",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "originalName": "06-requirements-traceability-matrix.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_moncqi9w_7yjek9/bae75844e4bc_06-requirements-traceability-matrix.docx",
+      "documentType": "RTM",
+      "sha256": "bae75844e4bce6f5f4e083a5907b7978915ea77336a42177ea982b304a1b994c",
+      "size": 16106,
+      "status": "accepted",
+      "createdAt": "2026-05-01T20:15:00.386Z"
+    },
+    {
+      "id": "src_moncqiar_3rfmey",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "originalName": "07-test-data-environment-specification.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_moncqi9w_7yjek9/dee1179870fd_07-test-data-environment-specification.docx",
+      "documentType": "TEST_DATA",
+      "sha256": "dee1179870fd6bf2b315e1e240bf6f90ef4442aa6483f397380f2e3cb814a989",
+      "size": 13536,
+      "status": "accepted",
+      "createdAt": "2026-05-01T20:15:00.387Z"
+    },
+    {
+      "id": "src_moncqias_sqmrb5",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "originalName": "08-quality-risk-defect-governance.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_moncqi9w_7yjek9/c4d411862cc6_08-quality-risk-defect-governance.docx",
+      "documentType": "SOURCE_DOC",
+      "sha256": "c4d411862cc6615ebda78530cacdebd2378ccf25df873fd04545a7c49b15adc4",
+      "size": 13091,
+      "status": "accepted",
+      "createdAt": "2026-05-01T20:15:00.389Z"
+    },
+    {
+      "id": "src_moncqiat_ff4ky7",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "originalName": "09-test-case-repository.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_moncqi9w_7yjek9/2b17d95d7da3_09-test-case-repository.docx",
+      "documentType": "TEST_REPOSITORY",
+      "sha256": "2b17d95d7da3e424e205e904671f8b3b5485d4a1fae97a1bbb5f9114bf0d6431",
+      "size": 19269,
+      "status": "accepted",
+      "createdAt": "2026-05-01T20:15:00.389Z"
+    }
+  ],
+  "events": [
+    {
+      "id": "event_moncqiak_hhxsd3",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "phase": "upload_sources",
+      "title": "Uploaded 01-business-requirements-document.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:15:00.380Z",
+      "finishedAt": "2026-05-01T20:15:00.380Z",
+      "summary": "Classified as BRD.",
+      "technical": {
+        "rawLabel": "upload:01-business-requirements-document.docx",
+        "payload": {
+          "id": "src_moncqiai_9w5d5t",
+          "runId": "uiqa_moncqi9w_7yjek9",
+          "originalName": "01-business-requirements-document.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_moncqi9w_7yjek9/75ba74032f55_01-business-requirements-document.docx",
+          "documentType": "BRD",
+          "sha256": "75ba74032f5583526c3ce4035eb7f21f024045dda836b8ecafd3bad94c8ee7e9",
+          "size": 35621,
+          "status": "accepted",
+          "createdAt": "2026-05-01T20:15:00.378Z"
+        }
+      }
+    },
+    {
+      "id": "event_moncqian_gtx3z6",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "phase": "upload_sources",
+      "title": "Uploaded 02-functional-requirements-specification.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:15:00.383Z",
+      "finishedAt": "2026-05-01T20:15:00.383Z",
+      "summary": "Classified as FRS.",
+      "technical": {
+        "rawLabel": "upload:02-functional-requirements-specification.docx",
+        "payload": {
+          "id": "src_moncqiam_k2tayc",
+          "runId": "uiqa_moncqi9w_7yjek9",
+          "originalName": "02-functional-requirements-specification.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_moncqi9w_7yjek9/1bf29955d09f_02-functional-requirements-specification.docx",
+          "documentType": "FRS",
+          "sha256": "1bf29955d09ffb4597c4f2391daef5cdd474d9a2b7153ef5efa1715b8336733d",
+          "size": 36715,
+          "status": "accepted",
+          "createdAt": "2026-05-01T20:15:00.382Z"
+        }
+      }
+    },
+    {
+      "id": "event_moncqiao_o7zwle",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "phase": "upload_sources",
+      "title": "Uploaded 03-test-design-specification.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:15:00.384Z",
+      "finishedAt": "2026-05-01T20:15:00.384Z",
+      "summary": "Classified as SOURCE_DOC.",
+      "technical": {
+        "rawLabel": "upload:03-test-design-specification.docx",
+        "payload": {
+          "id": "src_moncqian_yg3oxg",
+          "runId": "uiqa_moncqi9w_7yjek9",
+          "originalName": "03-test-design-specification.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_moncqi9w_7yjek9/bc4a297e88b9_03-test-design-specification.docx",
+          "documentType": "SOURCE_DOC",
+          "sha256": "bc4a297e88b98dc0645d0a1bc1bc8fdd63760485d97f63446e34bc078f79de42",
+          "size": 16590,
+          "status": "accepted",
+          "createdAt": "2026-05-01T20:15:00.383Z"
+        }
+      }
+    },
+    {
+      "id": "event_moncqiap_uhyhsu",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "phase": "upload_sources",
+      "title": "Uploaded 04-test-strategy.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:15:00.385Z",
+      "finishedAt": "2026-05-01T20:15:00.385Z",
+      "summary": "Classified as TEST_STRATEGY.",
+      "technical": {
+        "rawLabel": "upload:04-test-strategy.docx",
+        "payload": {
+          "id": "src_moncqiao_bj8dbc",
+          "runId": "uiqa_moncqi9w_7yjek9",
+          "originalName": "04-test-strategy.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_moncqi9w_7yjek9/bc452080a746_04-test-strategy.docx",
+          "documentType": "TEST_STRATEGY",
+          "sha256": "bc452080a74613289d89e8a9866cb9ec99671f2e9f270c301793c0de976e8d2d",
+          "size": 14190,
+          "status": "accepted",
+          "createdAt": "2026-05-01T20:15:00.385Z"
+        }
+      }
+    },
+    {
+      "id": "event_moncqiaq_x1q9n5",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "phase": "upload_sources",
+      "title": "Uploaded 05-test-plan.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:15:00.386Z",
+      "finishedAt": "2026-05-01T20:15:00.386Z",
+      "summary": "Classified as TEST_PLAN.",
+      "technical": {
+        "rawLabel": "upload:05-test-plan.docx",
+        "payload": {
+          "id": "src_moncqiap_oam8tz",
+          "runId": "uiqa_moncqi9w_7yjek9",
+          "originalName": "05-test-plan.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_moncqi9w_7yjek9/64cc7c5d20b4_05-test-plan.docx",
+          "documentType": "TEST_PLAN",
+          "sha256": "64cc7c5d20b4556484544b1bc46bd60c2cb6e94879c28b05db0677af83ade68a",
+          "size": 13567,
+          "status": "accepted",
+          "createdAt": "2026-05-01T20:15:00.385Z"
+        }
+      }
+    },
+    {
+      "id": "event_moncqiar_l9h7oa",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "phase": "upload_sources",
+      "title": "Uploaded 06-requirements-traceability-matrix.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:15:00.387Z",
+      "finishedAt": "2026-05-01T20:15:00.387Z",
+      "summary": "Classified as RTM.",
+      "technical": {
+        "rawLabel": "upload:06-requirements-traceability-matrix.docx",
+        "payload": {
+          "id": "src_moncqiaq_jiek5z",
+          "runId": "uiqa_moncqi9w_7yjek9",
+          "originalName": "06-requirements-traceability-matrix.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_moncqi9w_7yjek9/bae75844e4bc_06-requirements-traceability-matrix.docx",
+          "documentType": "RTM",
+          "sha256": "bae75844e4bce6f5f4e083a5907b7978915ea77336a42177ea982b304a1b994c",
+          "size": 16106,
+          "status": "accepted",
+          "createdAt": "2026-05-01T20:15:00.386Z"
+        }
+      }
+    },
+    {
+      "id": "event_moncqias_yefooz",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "phase": "upload_sources",
+      "title": "Uploaded 07-test-data-environment-specification.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:15:00.388Z",
+      "finishedAt": "2026-05-01T20:15:00.388Z",
+      "summary": "Classified as TEST_DATA.",
+      "technical": {
+        "rawLabel": "upload:07-test-data-environment-specification.docx",
+        "payload": {
+          "id": "src_moncqiar_3rfmey",
+          "runId": "uiqa_moncqi9w_7yjek9",
+          "originalName": "07-test-data-environment-specification.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_moncqi9w_7yjek9/dee1179870fd_07-test-data-environment-specification.docx",
+          "documentType": "TEST_DATA",
+          "sha256": "dee1179870fd6bf2b315e1e240bf6f90ef4442aa6483f397380f2e3cb814a989",
+          "size": 13536,
+          "status": "accepted",
+          "createdAt": "2026-05-01T20:15:00.387Z"
+        }
+      }
+    },
+    {
+      "id": "event_moncqiat_t5e6iz",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "phase": "upload_sources",
+      "title": "Uploaded 08-quality-risk-defect-governance.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:15:00.389Z",
+      "finishedAt": "2026-05-01T20:15:00.389Z",
+      "summary": "Classified as SOURCE_DOC.",
+      "technical": {
+        "rawLabel": "upload:08-quality-risk-defect-governance.docx",
+        "payload": {
+          "id": "src_moncqias_sqmrb5",
+          "runId": "uiqa_moncqi9w_7yjek9",
+          "originalName": "08-quality-risk-defect-governance.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_moncqi9w_7yjek9/c4d411862cc6_08-quality-risk-defect-governance.docx",
+          "documentType": "SOURCE_DOC",
+          "sha256": "c4d411862cc6615ebda78530cacdebd2378ccf25df873fd04545a7c49b15adc4",
+          "size": 13091,
+          "status": "accepted",
+          "createdAt": "2026-05-01T20:15:00.389Z"
+        }
+      }
+    },
+    {
+      "id": "event_moncqiau_poqork",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "phase": "upload_sources",
+      "title": "Uploaded 09-test-case-repository.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:15:00.390Z",
+      "finishedAt": "2026-05-01T20:15:00.390Z",
+      "summary": "Classified as TEST_REPOSITORY.",
+      "technical": {
+        "rawLabel": "upload:09-test-case-repository.docx",
+        "payload": {
+          "id": "src_moncqiat_ff4ky7",
+          "runId": "uiqa_moncqi9w_7yjek9",
+          "originalName": "09-test-case-repository.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_moncqi9w_7yjek9/2b17d95d7da3_09-test-case-repository.docx",
+          "documentType": "TEST_REPOSITORY",
+          "sha256": "2b17d95d7da3e424e205e904671f8b3b5485d4a1fae97a1bbb5f9114bf0d6431",
+          "size": 19269,
+          "status": "accepted",
+          "createdAt": "2026-05-01T20:15:00.389Z"
+        }
+      }
+    },
+    {
+      "id": "event_moncqib3_pcbg81",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "phase": "upload_sources",
+      "title": "Active source pack ready",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:15:00.399Z",
+      "finishedAt": "2026-05-01T20:15:00.403Z",
+      "summary": "9 ingestible source document(s) ready."
+    },
+    {
+      "id": "event_moncqib8_r6p2bm",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "phase": "ingest_sources",
+      "title": "Ensure ingestion virtualenv",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:15:00.404Z",
+      "finishedAt": "2026-05-01T20:15:00.463Z",
+      "technical": {
+        "rawLabel": "Ensure ingestion virtualenv",
+        "command": "/bin/test -d ingestion/.venv || /usr/bin/python3 -m venv ingestion/.venv",
+        "stdout": "",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_moncqicv_oih52i",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "phase": "ingest_sources",
+      "title": "Install ingestion dependencies",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:15:00.463Z",
+      "finishedAt": "2026-05-01T20:15:03.971Z",
+      "technical": {
+        "rawLabel": "Install ingestion dependencies",
+        "command": "source ingestion/.venv/bin/activate && ingestion/.venv/bin/pip install -r ingestion/requirements.txt -q",
+        "stdout": "",
+        "stderr": "\n[notice] A new release of pip is available: 26.0.1 -> 26.1\n[notice] To update, run: pip install --upgrade pip\n",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_moncql2d_eyhv40",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "phase": "ingest_sources",
+      "title": "Inspect Docker pgvector service",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:15:03.973Z",
+      "finishedAt": "2026-05-01T20:15:05.143Z",
+      "technical": {
+        "rawLabel": "Inspect Docker pgvector service",
+        "command": "set -euo pipefail\nDOCKER_BIN=\"$(command -v docker || true)\"\nif [ -z \"$DOCKER_BIN\" ]; then\n  for candidate in /opt/homebrew/bin/docker /usr/local/bin/docker /Applications/Docker.app/Contents/Resources/bin/docker; do\n    if [ -x \"$candidate\" ]; then\n      DOCKER_BIN=\"$candidate\"\n      break\n    fi\n  done\nfi\nif [ -z \"$DOCKER_BIN\" ]; then\n  echo \"Docker CLI not found. Install Docker Desktop or add docker to PATH.\" >&2\n  exit 127\nfi\nif ! \"$DOCKER_BIN\" info >/dev/null 2>&1; then\n  echo \"Docker CLI was found at $DOCKER_BIN, but the Docker daemon is not reachable.\" >&2\n  echo \"Open Docker Desktop and wait for the engine to finish starting.\" >&2\n  exit 1\nfi\nCOMPOSE=(\"$DOCKER_BIN\" compose -f ingestion/docker-compose.yml)\n\"$DOCKER_BIN\" version\n\"${COMPOSE[@]}\" ps",
+        "stdout": "Client: Docker Engine - Community\n Version:           28.1.1\n API version:       1.49\n Go version:        go1.24.2\n Git commit:        4eba377327\n Built:             Fri Apr 18 09:44:47 2025\n OS/Arch:           darwin/arm64\n Context:           desktop-linux\n\nServer: Docker Desktop 4.55.0 (213807)\n Engine:\n  Version:          29.1.3\n  API version:      1.52 (minimum version 1.44)\n  Go version:       go1.25.5\n  Git commit:       fbf3ed2\n  Built:            Fri Dec 12 14:50:40 2025\n  OS/Arch:          linux/arm64\n  Experimental:     false\n containerd:\n  Version:          v2.2.0\n  GitCommit:        1c4457e00facac03ce1d75f7b6777a7a851e5c41\n runc:\n  Version:          1.3.4\n  GitCommit:        v1.3.4-0-gd6d73eb8\n docker-init:\n  Version:          0.19.0\n  GitCommit:        de40ad0\nNAME                 IMAGE                    COMMAND                  SERVICE    CREATED      STATUS                 PORTS\nqamvp-ingestion-pg   pgvector/pgvector:pg16   \"docker-entrypoint.s…\"   postgres   9 days ago   Up 6 hours (healthy)   0.0.0.0:5433->5432/tcp, [::]:5433->5432/tcp\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_moncqlyw_cscyof",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "phase": "ingest_sources",
+      "title": "Start local pgvector DB",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:15:05.144Z",
+      "finishedAt": "2026-05-01T20:15:05.349Z",
+      "technical": {
+        "rawLabel": "Start local pgvector DB",
+        "command": "set -euo pipefail\nDOCKER_BIN=\"$(command -v docker || true)\"\nif [ -z \"$DOCKER_BIN\" ]; then\n  for candidate in /opt/homebrew/bin/docker /usr/local/bin/docker /Applications/Docker.app/Contents/Resources/bin/docker; do\n    if [ -x \"$candidate\" ]; then\n      DOCKER_BIN=\"$candidate\"\n      break\n    fi\n  done\nfi\nif [ -z \"$DOCKER_BIN\" ]; then\n  echo \"Docker CLI not found. Install Docker Desktop or add docker to PATH.\" >&2\n  exit 127\nfi\nif ! \"$DOCKER_BIN\" info >/dev/null 2>&1; then\n  echo \"Docker CLI was found at $DOCKER_BIN, but the Docker daemon is not reachable.\" >&2\n  echo \"Open Docker Desktop and wait for the engine to finish starting.\" >&2\n  exit 1\nfi\nCOMPOSE=(\"$DOCKER_BIN\" compose -f ingestion/docker-compose.yml)\n\"${COMPOSE[@]}\" up -d postgres",
+        "stdout": "",
+        "stderr": " Container qamvp-ingestion-pg  Running\n",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_moncqm4l_k5rigk",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "phase": "ingest_sources",
+      "title": "Wait for pgvector DB readiness",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:15:05.349Z",
+      "finishedAt": "2026-05-01T20:15:05.588Z",
+      "technical": {
+        "rawLabel": "Wait for pgvector DB readiness",
+        "command": "set -euo pipefail\nDOCKER_BIN=\"$(command -v docker || true)\"\nif [ -z \"$DOCKER_BIN\" ]; then\n  for candidate in /opt/homebrew/bin/docker /usr/local/bin/docker /Applications/Docker.app/Contents/Resources/bin/docker; do\n    if [ -x \"$candidate\" ]; then\n      DOCKER_BIN=\"$candidate\"\n      break\n    fi\n  done\nfi\nif [ -z \"$DOCKER_BIN\" ]; then\n  echo \"Docker CLI not found. Install Docker Desktop or add docker to PATH.\" >&2\n  exit 127\nfi\nif ! \"$DOCKER_BIN\" info >/dev/null 2>&1; then\n  echo \"Docker CLI was found at $DOCKER_BIN, but the Docker daemon is not reachable.\" >&2\n  echo \"Open Docker Desktop and wait for the engine to finish starting.\" >&2\n  exit 1\nfi\nCOMPOSE=(\"$DOCKER_BIN\" compose -f ingestion/docker-compose.yml)\nfor attempt in {1..45}; do\n  if \"${COMPOSE[@]}\" exec -T postgres pg_isready -U ingestion -d ingestion >/dev/null 2>&1; then\n    echo \"Postgres is ready after $attempt attempt(s).\"\n    exit 0\n  fi\n  echo \"Waiting for Postgres/pgvector readiness ($attempt/45)...\"\n  sleep 2\ndone\necho \"Postgres did not become ready within 90 seconds.\" >&2\n\"${COMPOSE[@]}\" ps >&2 || true\n\"${COMPOSE[@]}\" logs --tail=120 postgres >&2 || true\nexit 1",
+        "stdout": "Postgres is ready after 1 attempt(s).\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_moncqmb9_jxvuh7",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "phase": "ingest_sources",
+      "title": "Apply ingestion migrations",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:15:05.589Z",
+      "finishedAt": "2026-05-01T20:15:06.109Z",
+      "technical": {
+        "rawLabel": "Apply ingestion migrations",
+        "command": "set -euo pipefail\nDOCKER_BIN=\"$(command -v docker || true)\"\nif [ -z \"$DOCKER_BIN\" ]; then\n  for candidate in /opt/homebrew/bin/docker /usr/local/bin/docker /Applications/Docker.app/Contents/Resources/bin/docker; do\n    if [ -x \"$candidate\" ]; then\n      DOCKER_BIN=\"$candidate\"\n      break\n    fi\n  done\nfi\nif [ -z \"$DOCKER_BIN\" ]; then\n  echo \"Docker CLI not found. Install Docker Desktop or add docker to PATH.\" >&2\n  exit 127\nfi\nif ! \"$DOCKER_BIN\" info >/dev/null 2>&1; then\n  echo \"Docker CLI was found at $DOCKER_BIN, but the Docker daemon is not reachable.\" >&2\n  echo \"Open Docker Desktop and wait for the engine to finish starting.\" >&2\n  exit 1\nfi\nCOMPOSE=(\"$DOCKER_BIN\" compose -f ingestion/docker-compose.yml)\nfor migration in ingestion/sql/*.sql; do\n  echo \"Applying $migration\"\n  \"${COMPOSE[@]}\" exec -T postgres psql -v ON_ERROR_STOP=1 -U ingestion -d ingestion < \"$migration\"\ndone\necho \"Migrations applied.\"",
+        "stdout": "Applying ingestion/sql/001_extensions.sql\nCREATE EXTENSION\nApplying ingestion/sql/002_schema.sql\nCREATE TABLE\nCREATE TABLE\nCREATE INDEX\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nCREATE INDEX\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nCREATE INDEX\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nCREATE INDEX\nCREATE INDEX\nApplying ingestion/sql/003_test_case_inventory.sql\nDO\nALTER TABLE\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nMigrations applied.\n",
+        "stderr": "NOTICE:  extension \"vector\" already exists, skipping\nNOTICE:  relation \"documents\" already exists, skipping\nNOTICE:  relation \"chunks\" already exists, skipping\nNOTICE:  relation \"idx_chunks_document\" already exists, skipping\nNOTICE:  relation \"entities\" already exists, skipping\nNOTICE:  relation \"idx_entities_document\" already exists, skipping\nNOTICE:  relation \"idx_entities_type\" already exists, skipping\nNOTICE:  relation \"idx_entities_canonical\" already exists, skipping\nNOTICE:  relation \"relationships\" already exists, skipping\nNOTICE:  relation \"idx_rel_source_chunk\" already exists, skipping\nNOTICE:  relation \"idx_rel_source_doc\" already exists, skipping\nNOTICE:  relation \"idx_rel_type\" already exists, skipping\nNOTICE:  relation \"test_cases\" already exists, skipping\nNOTICE:  relation \"idx_test_cases_requirement_ids\" already exists, skipping\nNOTICE:  relation \"idx_test_cases_suite\" already exists, skipping\nNOTICE:  relation \"test_case_steps\" already exists, skipping\nNOTICE:  relation \"idx_test_case_steps_requirement\" already exists, skipping\nNOTICE:  relation \"idx_test_case_steps_case\" already exists, skipping\nNOTICE:  relation \"chunks_embedding_hnsw\" already exists, skipping\nNOTICE:  relation \"chunks_content_fts\" already exists, skipping\nNOTICE:  relation \"test_cases\" already exists, skipping\nNOTICE:  relation \"idx_test_cases_requirement_ids\" already exists, skipping\nNOTICE:  relation \"idx_test_cases_suite\" already exists, skipping\nNOTICE:  relation \"test_case_steps\" already exists, skipping\nNOTICE:  relation \"idx_test_case_steps_requirement\" already exists, skipping\nNOTICE:  relation \"idx_test_case_steps_case\" already exists, skipping\n",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_moncqmpp_6amm5w",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "phase": "ingest_sources",
+      "title": "Verify pgvector DB schema",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:15:06.109Z",
+      "finishedAt": "2026-05-01T20:15:06.482Z",
+      "technical": {
+        "rawLabel": "Verify pgvector DB schema",
+        "command": "set -euo pipefail\nDOCKER_BIN=\"$(command -v docker || true)\"\nif [ -z \"$DOCKER_BIN\" ]; then\n  for candidate in /opt/homebrew/bin/docker /usr/local/bin/docker /Applications/Docker.app/Contents/Resources/bin/docker; do\n    if [ -x \"$candidate\" ]; then\n      DOCKER_BIN=\"$candidate\"\n      break\n    fi\n  done\nfi\nif [ -z \"$DOCKER_BIN\" ]; then\n  echo \"Docker CLI not found. Install Docker Desktop or add docker to PATH.\" >&2\n  exit 127\nfi\nif ! \"$DOCKER_BIN\" info >/dev/null 2>&1; then\n  echo \"Docker CLI was found at $DOCKER_BIN, but the Docker daemon is not reachable.\" >&2\n  echo \"Open Docker Desktop and wait for the engine to finish starting.\" >&2\n  exit 1\nfi\nCOMPOSE=(\"$DOCKER_BIN\" compose -f ingestion/docker-compose.yml)\n\"${COMPOSE[@]}\" exec -T postgres psql -U ingestion -d ingestion -c \"select extname from pg_extension where extname = 'vector';\"\n\"${COMPOSE[@]}\" exec -T postgres psql -U ingestion -d ingestion -c \"select table_name from information_schema.tables where table_schema = 'public' order by table_name;\"",
+        "stdout": " extname \n---------\n vector\n(1 row)\n\n   table_name    \n-----------------\n chunks\n documents\n entities\n relationships\n test_case_steps\n test_cases\n(6 rows)\n\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_moncqn03_qfffgh",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "phase": "ingest_sources",
+      "title": "Embed source documents into pgvector",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:15:06.483Z",
+      "finishedAt": "2026-05-01T20:15:40.292Z",
+      "technical": {
+        "rawLabel": "Embed source documents into pgvector",
+        "command": "source ingestion/.venv/bin/activate && DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python ingestion/scripts/ingest.py --format both --test-doc '/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/ui-qa/generated/uiqa_moncqi9w_7yjek9/source-pack'",
+        "stdout": "  ingested source-pack/01-business-requirements-document.docx (docx): 61 chunks\n  ingested source-pack/02-functional-requirements-specification.docx (docx): 114 chunks\n  ingested source-pack/03-test-design-specification.docx (docx): 26 chunks\n  ingested source-pack/04-test-strategy.docx (docx): 12 chunks\n  ingested source-pack/05-test-plan.docx (docx): 10 chunks\n  ingested source-pack/06-requirements-traceability-matrix.docx (docx): 10 chunks\n  ingested source-pack/07-test-data-environment-specification.docx (docx): 14 chunks\n  ingested source-pack/08-quality-risk-defect-governance.docx (docx): 12 chunks\n  ingested source-pack/09-test-case-repository.docx (docx): 18 chunks\n  ingested test_data/TestCases.xlsx (xlsx): 8 test cases, 24 steps\nDone.\n",
+        "stderr": "Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n\rLoading weights:   0%|          | 0/103 [00:00<?, ?it/s]\rLoading weights: 100%|██████████| 103/103 [00:00<00:00, 8621.30it/s]\n\u001b[1mBertModel LOAD REPORT\u001b[0m from: sentence-transformers/all-MiniLM-L6-v2\nKey                     | Status     |  | \n------------------------+------------+--+-\nembeddings.position_ids | UNEXPECTED |  | \n\nNotes:\n- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n\rBatches:   0%|          | 0/2 [00:00<?, ?it/s]\rBatches:  50%|█████     | 1/2 [00:00<00:00,  4.71it/s]\rBatches: 100%|██████████| 2/2 [00:00<00:00,  7.87it/s]\n\rBatches:   0%|          | 0/4 [00:00<?, ?it/s]\rBatches:  50%|█████     | 2/4 [00:00<00:00, 16.81it/s]\rBatches: 100%|██████████| 4/4 [00:00<00:00, 22.45it/s]\n\rBatches:   0%|          | 0/1 [00:00<?, ?it/s]\rBatches: 100%|██████████| 1/1 [00:00<00:00, 22.37it/s]\n\rBatches:   0%|          | 0/1 [00:00<?, ?it/s]\rBatches: 100%|██████████| 1/1 [00:00<00:00, 21.25it/s]\n",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_moncrd39_312n0v",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "phase": "ingest_sources",
+      "title": "Query ingestion knowledge graph",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:15:40.293Z",
+      "finishedAt": "2026-05-01T20:15:40.495Z",
+      "technical": {
+        "rawLabel": "Query ingestion knowledge graph",
+        "command": "source ingestion/.venv/bin/activate && DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport os, json, psycopg\nout = {\"documents\": [], \"entities\": [], \"relationships\": [], \"rel_samples\": []}\nwith psycopg.connect(os.environ['DATABASE_URL']) as conn, conn.cursor() as cur:\n    cur.execute(\"\"\"\n      select d.id,\n             coalesce(d.title, d.path) as label,\n             coalesce(d.kind, d.source_format, 'doc') as kind,\n             (select count(*) from chunks c where c.document_id = d.id) as chunks,\n             (select count(*) from entities e where e.document_id = d.id) as entities,\n             (select count(*) from relationships r where r.source_document_id = d.id) as rels\n      from documents d\n      order by d.created_at desc nulls last, d.id desc\n      limit 30\n    \"\"\")\n    for row in cur.fetchall():\n        out[\"documents\"].append({\n            \"id\": int(row[0]),\n            \"label\": row[1] or \"\",\n            \"kind\": (row[2] or \"doc\").upper(),\n            \"chunks\": int(row[3] or 0),\n            \"entities\": int(row[4] or 0),\n            \"rels\": int(row[5] or 0),\n        })\n    cur.execute(\"select entity_type, count(*) from entities group by entity_type order by count(*) desc, entity_type\")\n    out[\"entities\"] = [{\"type\": t, \"count\": int(c)} for t, c in cur.fetchall()]\n    cur.execute(\"select rel_type, count(*) from relationships group by rel_type order by count(*) desc, rel_type limit 12\")\n    out[\"relationships\"] = [{\"type\": t, \"count\": int(c)} for t, c in cur.fetchall()]\n    cur.execute(\"\"\"\n      select r.rel_type,\n             coalesce(sd.title, sd.path, '') as source_label,\n             coalesce(nullif(r.target_path, ''), nullif(r.target_anchor, ''), '') as target_label\n      from relationships r\n      left join documents sd on sd.id = r.source_document_id\n      order by r.id desc\n      limit 8\n    \"\"\")\n    out[\"rel_samples\"] = [{\"type\": t, \"from\": s or \"\", \"to\": tg or \"\"} for t, s, tg in cur.fetchall()]\nprint(json.dumps(out))\nPY",
+        "stdout": "{\"documents\": [{\"id\": 40, \"label\": \"TestCases\", \"kind\": \"TEST_CASE_REPOSITORY\", \"chunks\": 8, \"entities\": 8, \"rels\": 0}, {\"id\": 39, \"label\": \"09-test-case-repository\", \"kind\": \"TEST_CASE_REPOSITORY\", \"chunks\": 18, \"entities\": 1, \"rels\": 0}, {\"id\": 38, \"label\": \"08-quality-risk-defect-governance\", \"kind\": \"GOVERNANCE\", \"chunks\": 12, \"entities\": 0, \"rels\": 4}, {\"id\": 37, \"label\": \"07-test-data-environment-specification\", \"kind\": \"TEST_DATA\", \"chunks\": 14, \"entities\": 1, \"rels\": 3}, {\"id\": 36, \"label\": \"06-requirements-traceability-matrix\", \"kind\": \"RTM\", \"chunks\": 10, \"entities\": 18, \"rels\": 5}, {\"id\": 35, \"label\": \"05-test-plan\", \"kind\": \"PLAN\", \"chunks\": 10, \"entities\": 0, \"rels\": 6}, {\"id\": 34, \"label\": \"04-test-strategy\", \"kind\": \"STRATEGY\", \"chunks\": 12, \"entities\": 1, \"rels\": 8}, {\"id\": 33, \"label\": \"03-test-design-specification\", \"kind\": \"TDS\", \"chunks\": 26, \"entities\": 19, \"rels\": 10}, {\"id\": 32, \"label\": \"02-functional-requirements-specification\", \"kind\": \"FRS\", \"chunks\": 114, \"entities\": 127, \"rels\": 6}, {\"id\": 31, \"label\": \"01-business-requirements-document\", \"kind\": \"BRD\", \"chunks\": 61, \"entities\": 69, \"rels\": 8}], \"entities\": [{\"type\": \"BR\", \"count\": 126}, {\"type\": \"REQ\", \"count\": 87}, {\"type\": \"TC\", \"count\": 17}, {\"type\": \"SECTION\", \"count\": 8}, {\"type\": \"TKT\", \"count\": 6}], \"relationships\": [{\"type\": \"docx_hyperlink\", \"count\": 50}], \"rel_samples\": [{\"type\": \"docx_hyperlink\", \"from\": \"08-quality-risk-defect-governance\", \"to\": \"source-pack/SDLC-Test-Tracker.xlsx\"}, {\"type\": \"docx_hyperlink\", \"from\": \"08-quality-risk-defect-governance\", \"to\": \"source-pack/06-requirements-traceability-matrix.md\"}, {\"type\": \"docx_hyperlink\", \"from\": \"08-quality-risk-defect-governance\", \"to\": \"source-pack/05-test-plan.md\"}, {\"type\": \"docx_hyperlink\", \"from\": \"08-quality-risk-defect-governance\", \"to\": \"source-pack/04-test-strategy.md\"}, {\"type\": \"docx_hyperlink\", \"from\": \"07-test-data-environment-specification\", \"to\": \"source-pack/README.md\"}, {\"type\": \"docx_hyperlink\", \"from\": \"07-test-data-environment-specification\", \"to\": \"source-pack/06-requirements-traceability-matrix.md\"}, {\"type\": \"docx_hyperlink\", \"from\": \"07-test-data-environment-specification\", \"to\": \"source-pack/02-functional-requirements-specification.md\"}, {\"type\": \"docx_hyperlink\", \"from\": \"06-requirements-traceability-matrix\", \"to\": \"source-pack/09-test-case-repository.md\"}]}\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_moncrd8w_ylb5hk",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "phase": "ingest_sources",
+      "title": "Map ingested documents",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:15:40.496Z",
+      "finishedAt": "2026-05-01T20:15:40.677Z",
+      "summary": "Indexed 10 documents.",
+      "technical": {
+        "rawLabel": "ingest:documents",
+        "payload": {
+          "kind": "ingestion-section",
+          "section": "documents",
+          "documents": [
+            {
+              "id": 40,
+              "label": "TestCases",
+              "kind": "TEST_CASE_REPOSITORY",
+              "chunks": 8,
+              "entities": 8,
+              "rels": 0
+            },
+            {
+              "id": 39,
+              "label": "09-test-case-repository",
+              "kind": "TEST_CASE_REPOSITORY",
+              "chunks": 18,
+              "entities": 1,
+              "rels": 0
+            },
+            {
+              "id": 38,
+              "label": "08-quality-risk-defect-governance",
+              "kind": "GOVERNANCE",
+              "chunks": 12,
+              "entities": 0,
+              "rels": 4
+            },
+            {
+              "id": 37,
+              "label": "07-test-data-environment-specification",
+              "kind": "TEST_DATA",
+              "chunks": 14,
+              "entities": 1,
+              "rels": 3
+            },
+            {
+              "id": 36,
+              "label": "06-requirements-traceability-matrix",
+              "kind": "RTM",
+              "chunks": 10,
+              "entities": 18,
+              "rels": 5
+            },
+            {
+              "id": 35,
+              "label": "05-test-plan",
+              "kind": "PLAN",
+              "chunks": 10,
+              "entities": 0,
+              "rels": 6
+            },
+            {
+              "id": 34,
+              "label": "04-test-strategy",
+              "kind": "STRATEGY",
+              "chunks": 12,
+              "entities": 1,
+              "rels": 8
+            },
+            {
+              "id": 33,
+              "label": "03-test-design-specification",
+              "kind": "TDS",
+              "chunks": 26,
+              "entities": 19,
+              "rels": 10
+            },
+            {
+              "id": 32,
+              "label": "02-functional-requirements-specification",
+              "kind": "FRS",
+              "chunks": 114,
+              "entities": 127,
+              "rels": 6
+            },
+            {
+              "id": 31,
+              "label": "01-business-requirements-document",
+              "kind": "BRD",
+              "chunks": 61,
+              "entities": 69,
+              "rels": 8
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "event_moncrddy_t115yz",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "phase": "ingest_sources",
+      "title": "Build entity map",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:15:40.678Z",
+      "finishedAt": "2026-05-01T20:15:40.860Z",
+      "summary": "244 entities across 5 types.",
+      "technical": {
+        "rawLabel": "ingest:entities",
+        "payload": {
+          "kind": "ingestion-section",
+          "section": "entities",
+          "entities": [
+            {
+              "type": "BR",
+              "count": 126
+            },
+            {
+              "type": "REQ",
+              "count": 87
+            },
+            {
+              "type": "TC",
+              "count": 17
+            },
+            {
+              "type": "SECTION",
+              "count": 8
+            },
+            {
+              "type": "TKT",
+              "count": 6
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "event_moncrdj1_swy4q3",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "phase": "ingest_sources",
+      "title": "Trace relationships",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:15:40.861Z",
+      "finishedAt": "2026-05-01T20:15:41.046Z",
+      "summary": "50 relationships across 1 type.",
+      "technical": {
+        "rawLabel": "ingest:relationships",
+        "payload": {
+          "kind": "ingestion-section",
+          "section": "relationships",
+          "relationships": [
+            {
+              "type": "docx_hyperlink",
+              "count": 50
+            }
+          ],
+          "samples": [
+            {
+              "type": "docx_hyperlink",
+              "from": "08-quality-risk-defect-governance",
+              "to": "source-pack/SDLC-Test-Tracker.xlsx"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "08-quality-risk-defect-governance",
+              "to": "source-pack/06-requirements-traceability-matrix.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "08-quality-risk-defect-governance",
+              "to": "source-pack/05-test-plan.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "08-quality-risk-defect-governance",
+              "to": "source-pack/04-test-strategy.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "07-test-data-environment-specification",
+              "to": "source-pack/README.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "07-test-data-environment-specification",
+              "to": "source-pack/06-requirements-traceability-matrix.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "07-test-data-environment-specification",
+              "to": "source-pack/02-functional-requirements-specification.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "06-requirements-traceability-matrix",
+              "to": "source-pack/09-test-case-repository.md"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "event_moncrdrj_5k4g9m",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "phase": "ingest_sources",
+      "title": "Ingestion knowledge map",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:15:41.168Z",
+      "finishedAt": "2026-05-01T20:15:41.168Z",
+      "summary": "10 documents · 244 entities · 50 relationships.",
+      "technical": {
+        "rawLabel": "ingest:map",
+        "payload": {
+          "kind": "ingestion-map",
+          "documents": [
+            {
+              "id": 40,
+              "label": "TestCases",
+              "kind": "TEST_CASE_REPOSITORY",
+              "chunks": 8,
+              "entities": 8,
+              "rels": 0
+            },
+            {
+              "id": 39,
+              "label": "09-test-case-repository",
+              "kind": "TEST_CASE_REPOSITORY",
+              "chunks": 18,
+              "entities": 1,
+              "rels": 0
+            },
+            {
+              "id": 38,
+              "label": "08-quality-risk-defect-governance",
+              "kind": "GOVERNANCE",
+              "chunks": 12,
+              "entities": 0,
+              "rels": 4
+            },
+            {
+              "id": 37,
+              "label": "07-test-data-environment-specification",
+              "kind": "TEST_DATA",
+              "chunks": 14,
+              "entities": 1,
+              "rels": 3
+            },
+            {
+              "id": 36,
+              "label": "06-requirements-traceability-matrix",
+              "kind": "RTM",
+              "chunks": 10,
+              "entities": 18,
+              "rels": 5
+            },
+            {
+              "id": 35,
+              "label": "05-test-plan",
+              "kind": "PLAN",
+              "chunks": 10,
+              "entities": 0,
+              "rels": 6
+            },
+            {
+              "id": 34,
+              "label": "04-test-strategy",
+              "kind": "STRATEGY",
+              "chunks": 12,
+              "entities": 1,
+              "rels": 8
+            },
+            {
+              "id": 33,
+              "label": "03-test-design-specification",
+              "kind": "TDS",
+              "chunks": 26,
+              "entities": 19,
+              "rels": 10
+            },
+            {
+              "id": 32,
+              "label": "02-functional-requirements-specification",
+              "kind": "FRS",
+              "chunks": 114,
+              "entities": 127,
+              "rels": 6
+            },
+            {
+              "id": 31,
+              "label": "01-business-requirements-document",
+              "kind": "BRD",
+              "chunks": 61,
+              "entities": 69,
+              "rels": 8
+            }
+          ],
+          "entities": [
+            {
+              "type": "BR",
+              "count": 126
+            },
+            {
+              "type": "REQ",
+              "count": 87
+            },
+            {
+              "type": "TC",
+              "count": 17
+            },
+            {
+              "type": "SECTION",
+              "count": 8
+            },
+            {
+              "type": "TKT",
+              "count": 6
+            }
+          ],
+          "relationships": [
+            {
+              "type": "docx_hyperlink",
+              "count": 50
+            }
+          ],
+          "rel_samples": [
+            {
+              "type": "docx_hyperlink",
+              "from": "08-quality-risk-defect-governance",
+              "to": "source-pack/SDLC-Test-Tracker.xlsx"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "08-quality-risk-defect-governance",
+              "to": "source-pack/06-requirements-traceability-matrix.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "08-quality-risk-defect-governance",
+              "to": "source-pack/05-test-plan.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "08-quality-risk-defect-governance",
+              "to": "source-pack/04-test-strategy.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "07-test-data-environment-specification",
+              "to": "source-pack/README.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "07-test-data-environment-specification",
+              "to": "source-pack/06-requirements-traceability-matrix.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "07-test-data-environment-specification",
+              "to": "source-pack/02-functional-requirements-specification.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "06-requirements-traceability-matrix",
+              "to": "source-pack/09-test-case-repository.md"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "event_moncrdrq_ka8c9x",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "phase": "ingest_sources",
+      "title": "Summarize entity map",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:15:41.174Z",
+      "finishedAt": "2026-05-01T20:15:41.381Z",
+      "technical": {
+        "rawLabel": "Summarize entity map",
+        "command": "source ingestion/.venv/bin/activate && DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport os, psycopg\nwith psycopg.connect(os.environ['DATABASE_URL']) as conn, conn.cursor() as cur:\n    cur.execute(\"select entity_type, count(*) from entities group by entity_type order by entity_type\")\n    rows = cur.fetchall()\nprint('# Entity Map Summary')\nprint()\nprint('| Entity Type | Count |')\nprint('|---|---:|')\nfor t, c in rows:\n    print(f'| {t} | {c} |')\nPY",
+        "stdout": "# Entity Map Summary\n\n| Entity Type | Count |\n|---|---:|\n| BR | 126 |\n| REQ | 87 |\n| SECTION | 8 |\n| TC | 17 |\n| TKT | 6 |\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_moncrdxi_m44qv4",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "phase": "rag_ready",
+      "title": "Document QA knowledge base ready",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:15:41.382Z",
+      "finishedAt": "2026-05-01T20:15:41.382Z",
+      "summary": "Documents are ingested and ready for grounded Q&A. Ask questions about the source pack or request TestCases.xlsx generation."
+    },
+    {
+      "id": "event_moncrnfe_90ejas",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "phase": "rag_ready",
+      "title": "Cursor SDK tool harness",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:15:53.690Z",
+      "finishedAt": "2026-05-01T20:16:03.618Z",
+      "summary": "Cursor SDK tool harness completed.",
+      "technical": {
+        "rawLabel": "cursor-tools:rag_ready",
+        "sdkPrompt": "what is tc 1",
+        "payload": {
+          "toolResults": [
+            {
+              "ok": true,
+              "tool": "inspect_entities",
+              "result": {
+                "purpose": "Inspect KB entities",
+                "sql": "select entity_type, canonical_id, count(*) as mentions, count(distinct document_id) as documents from entities where entity_type = 'TC' and canonical_id ilike '%TC-001%' group by entity_type, canonical_id order by mentions desc, canonical_id limit 15",
+                "columns": [
+                  "entity_type",
+                  "canonical_id",
+                  "mentions",
+                  "documents"
+                ],
+                "rows": [
+                  {
+                    "entity_type": "TC",
+                    "canonical_id": "TC-001",
+                    "mentions": 3,
+                    "documents": 2
+                  }
+                ],
+                "rowCount": 1
+              }
+            },
+            {
+              "ok": true,
+              "tool": "search_kb_chunks",
+              "result": {
+                "query": "TC-001 test case 1",
+                "count": 10,
+                "snippets": [
+                  {
+                    "id": "chunk-1097",
+                    "document": "07-test-data-environment-specification",
+                    "path": "source-pack/07-test-data-environment-specification.docx",
+                    "heading": "Test Data & Environment Specification",
+                    "ordinal": 0,
+                    "content": "Document ID: QAMVP-TDES-001 Version: 0.1 Date: 2026-04-22 Related: FRS · RTM · README",
+                    "rank": 0
+                  },
+                  {
+                    "id": "chunk-1123",
+                    "document": "09-test-case-repository",
+                    "path": "source-pack/09-test-case-repository.docx",
+                    "heading": "Knowledge Base Test Case Repository",
+                    "ordinal": 0,
+                    "content": "Document ID: KB-TC-REPO-001 Version: 2026.05.01.102929 Status: Exported from ingestion DB structured test-case inventory. This document is generated from test-doc/test-case-repository.json. It gives the RAG corpus the same row-level test-case detail as the Excel inventory, while the ingestion pipeline also loads the workbook into structured SQL tables.",
+                    "rank": 0
+                  },
+                  {
+                    "id": "chunk-1087",
+                    "document": "06-requirements-traceability-matrix",
+                    "path": "source-pack/06-requirements-traceability-matrix.docx",
+                    "heading": "Requirements Traceability Matrix (RTM)",
+                    "ordinal": 0,
+                    "content": "Document ID: QAMVP-RTM-001 Version: 0.1 Date: 2026-04-22 Related: BRD · FRS · TDS · Tracker",
+                    "rank": 0
+                  },
+                  {
+                    "id": "chunk-1065",
+                    "document": "04-test-strategy",
+                    "path": "source-pack/04-test-strategy.docx",
+                    "heading": "Test Strategy",
+                    "ordinal": 0,
+                    "content": "Document ID: QAMVP-TSTRAT-001 Version: 0.1 Date: 2026-04-22 Related documents: README · BRD · FRS · TDS · Test Plan",
+                    "rank": 0
+                  },
+                  {
+                    "id": "chunk-1039",
+                    "document": "03-test-design-specification",
+                    "path": "source-pack/03-test-design-specification.docx",
+                    "heading": "Test Design Specification (TDS)",
+                    "ordinal": 0,
+                    "content": "Document ID: QAMVP-TDS-001 Version: 0.1 Date: 2026-04-22 Related: BRD · FRS · RTM · README",
+                    "rank": 0
+                  },
+                  {
+                    "id": "chunk-1111",
+                    "document": "08-quality-risk-defect-governance",
+                    "path": "source-pack/08-quality-risk-defect-governance.docx",
+                    "heading": "Quality, Risk & Defect Governance",
+                    "ordinal": 0,
+                    "content": "Document ID: QAMVP-QRDG-001 Version: 0.1 Date: 2026-04-22 Related: Test Strategy · Test Plan · RTM · Tracker",
+                    "rank": 0
+                  },
+                  {
+                    "id": "chunk-864",
+                    "document": "01-business-requirements-document",
+                    "path": "source-pack/01-business-requirements-document.docx",
+                    "heading": "Business Requirements Document (BRD) > Mock Trading & Approval Front-End (QAMVP System Under Test)",
+                    "ordinal": 0,
+                    "content": "Document ID: QAMVP-BRD-001 Version: 0.1 Status: Draft Date: 2026-04-22 Related documents: FRS · TDS · README Authoritative SUT behavior reference (repository): python-orchestrator/prompts/app_layout.md",
+                    "rank": 0
+                  },
+                  {
+                    "id": "chunk-1077",
+                    "document": "05-test-plan",
+                    "path": "source-pack/05-test-plan.docx",
+                    "heading": "Test Plan",
+                    "ordinal": 0,
+                    "content": "Document ID: QAMVP-TPLAN-001 Version: 0.1 Date: 2026-04-22 Related: Strategy · TDS · RTM · Test Data",
+                    "rank": 0
+                  },
+                  {
+                    "id": "chunk-925",
+                    "document": "02-functional-requirements-specification",
+                    "path": "source-pack/02-functional-requirements-specification.docx",
+                    "heading": "Functional Requirements Specification (FRS) > Mock Trading & Approval Front-End (QAMVP SUT)",
+                    "ordinal": 0,
+                    "content": "Document ID: QAMVP-FRS-001 Version: 0.1 Status: Draft Date: 2026-04-22 Related documents: BRD · TDS · README Behavioral reference: python-orchestrator/prompts/app_layout.md (REF-2) Locator / testability reference: python-orchestrator/prompts/locator_strategy.md (REF-3)",
+                    "rank": 0
+                  },
+                  {
+                    "id": "chunk-1141",
+                    "document": "TestCases",
+                    "path": "test_data/TestCases.xlsx",
+                    "heading": "Test Case Repository > TC-001",
+                    "ordinal": 0,
+                    "content": "TestCaseID: TC-001 Title: Document ID: QAMVP-TPLAN-001 Version: 0.1 Date: 2026-04-22 Related: Strategy · TDS · RTM · Te... Objective: Validate the behavior and controls described in 05-test-plan (Test Plan). RequirementIDs: REQ-KB-001 Priority: P1 Suite: Generated From KB Tags: kb-generated, 05-test-plan | Step | RequirementID | StepDescription | ExpectedOutput | TestData | |------|---------------|-----------------|----------------|----------| | 1 | REQ-KB-001 | Review source requirement REQ-KB-001 and prepare data for: Document ID: QAMVP-TPLAN-001 Version: 0.1 Date: 2026-04-22 Related: Strategy · TDS · RTM · Te.... | Relevant source context is available and traceable to source-pack/05-test-plan.docx#chunk-0. | 05-test-plan | | 2 | REQ-KB-001 | Execute the user-visible workflow or control described by 05-test-plan. | The system behavior matches the cited source requirement. | Use source-approved banking QA test data. | | 3 | REQ-KB-001 | Capture evidence and reconcile the observed result to the cited source document. | Evidence supports REQ-KB-001 and no unsupported behavior is introduced. | Screenshots, logs, exported workbook rows, and audit notes. |",
+                    "rank": 0
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "stdout": "## TC-001 (test case 1)\n\n**TC-001** is present in the KB as a **`TC`** entity with **`TC-001`**, counted as **3 mentions across 2 documents** (`inspect_entities`).\n\nFrom the workbook-derived chunk in the corpus, TC-001 is defined as follows:\n\n| Field | Value |\n|--------|--------|\n| **TestCaseID** | TC-001 |\n| **Title** | Anchored to Test Plan meta (snippet shows linkage to Document ID **QAMVP-TPLAN-001**, version 0.1, dated 2026-04-22 — text is truncated in the chunk). |\n| **Objective** | Validate behaviour and controls described in **05-test-plan (Test Plan)**. |\n| **RequirementIDs** | **REQ-KB-001** |\n| **Priority** | **P1** |\n| **Suite** | **Generated From KB** |\n| **Tags** | `kb-generated`, `05-test-plan` |\n\n**Steps (summary):**\n\n1. **REQ-KB-001** — Review REQ-KB-001 and prepare data for the cited Test Plan content; expect relevant source context traceable to `source-pack/05-test-plan.docx#chunk-0`.\n2. **REQ-KB-001** — Execute the user-visible workflow or control from **05-test-plan**; expect behaviour to match the cited requirement.\n3. **REQ-KB-001** — Capture evidence and reconcile results; expect evidence to support **REQ-KB-001** with no unsupported behaviour (screenshots, logs, workbook rows, audit notes).\n\n**Citations**\n\n- Structured row: **TestCases** → `test_data/TestCases.xlsx`, heading *Test Case Repository > TC-001* (chunk **chunk-1141**).\n- Entity index: **TC** / **TC-001** — 3 mentions, 2 documents.\n\n**Method:** Entity lookup for `TC-001`, plus **search_kb_chunks** for `TC-001 test case 1`, which surfaced the **TestCases.xlsx** row as the authoritative row-level definition in this run."
+      }
+    },
+    {
+      "id": "event_moncrqvx_hx10jx",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "phase": "rag_ready",
+      "title": "Tool inspect_entities",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:15:58.173Z",
+      "finishedAt": "2026-05-01T20:15:58.511Z",
+      "summary": "inspect_entities returned 1 row(s).",
+      "technical": {
+        "rawLabel": "tool:inspect_entities",
+        "toolName": "inspect_entities",
+        "payload": {
+          "ok": true,
+          "tool": "inspect_entities",
+          "result": {
+            "purpose": "Inspect KB entities",
+            "sql": "select entity_type, canonical_id, count(*) as mentions, count(distinct document_id) as documents from entities where entity_type = 'TC' and canonical_id ilike '%TC-001%' group by entity_type, canonical_id order by mentions desc, canonical_id limit 15",
+            "columns": [
+              "entity_type",
+              "canonical_id",
+              "mentions",
+              "documents"
+            ],
+            "rows": [
+              {
+                "entity_type": "TC",
+                "canonical_id": "TC-001",
+                "mentions": 3,
+                "documents": 2
+              }
+            ],
+            "rowCount": 1
+          }
+        },
+        "stdout": "{\n  \"purpose\": \"Inspect KB entities\",\n  \"sql\": \"select entity_type, canonical_id, count(*) as mentions, count(distinct document_id) as documents from entities where entity_type = 'TC' and canonical_id ilike '%TC-001%' group by entity_type, canonical_id order by mentions desc, canonical_id limit 15\",\n  \"columns\": [\n    \"entity_type\",\n    \"canonical_id\",\n    \"mentions\",\n    \"documents\"\n  ],\n  \"rows\": [\n    {\n      \"entity_type\": \"TC\",\n      \"canonical_id\": \"TC-001\",\n      \"mentions\": 3,\n      \"documents\": 2\n    }\n  ],\n  \"rowCount\": 1\n}"
+      }
+    },
+    {
+      "id": "event_moncrqvz_p8ifz0",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "phase": "rag_ready",
+      "title": "Tool query_kb_sql: Inspect KB entities",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:15:58.175Z",
+      "finishedAt": "2026-05-01T20:15:58.511Z",
+      "technical": {
+        "rawLabel": "Tool query_kb_sql: Inspect KB entities",
+        "command": "source ingestion/.venv/bin/activate && UI_QA_SQL='select entity_type,\n           canonical_id,\n           count(*) as mentions,\n           count(distinct document_id) as documents\n    from entities\n    where entity_type = '\\''TC'\\'' and canonical_id ilike '\\''%TC-001%'\\''\n    group by entity_type, canonical_id\n    order by mentions desc, canonical_id\n    limit 15' UI_QA_LIMIT=15 DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport json, os, psycopg\nsql = os.environ[\"UI_QA_SQL\"]\nlimit = int(os.environ.get(\"UI_QA_LIMIT\", \"50\"))\nwrapped = f\"select * from ({sql}) as uiqa_readonly_result limit {limit}\"\nwith psycopg.connect(os.environ[\"DATABASE_URL\"]) as conn:\n    conn.execute(\"set statement_timeout = '5000ms'\")\n    conn.execute(\"set transaction read only\")\n    with conn.cursor() as cur:\n        cur.execute(wrapped)\n        columns = [desc.name for desc in cur.description]\n        rows = [dict(zip(columns, row)) for row in cur.fetchall()]\nprint(json.dumps({\"columns\": columns, \"rows\": rows, \"rowCount\": len(rows)}))\nPY",
+        "stdout": "{\"columns\": [\"entity_type\", \"canonical_id\", \"mentions\", \"documents\"], \"rows\": [{\"entity_type\": \"TC\", \"canonical_id\": \"TC-001\", \"mentions\": 3, \"documents\": 2}], \"rowCount\": 1}\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_moncrr5c_otf526",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "phase": "rag_ready",
+      "title": "Tool search_kb_chunks",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:15:58.512Z",
+      "finishedAt": "2026-05-01T20:15:58.697Z",
+      "summary": "search_kb_chunks returned 10 item(s).",
+      "technical": {
+        "rawLabel": "tool:search_kb_chunks",
+        "toolName": "search_kb_chunks",
+        "payload": {
+          "ok": true,
+          "tool": "search_kb_chunks",
+          "result": {
+            "query": "TC-001 test case 1",
+            "count": 10,
+            "snippets": [
+              {
+                "id": "chunk-1097",
+                "document": "07-test-data-environment-specification",
+                "path": "source-pack/07-test-data-environment-specification.docx",
+                "heading": "Test Data & Environment Specification",
+                "ordinal": 0,
+                "content": "Document ID: QAMVP-TDES-001 Version: 0.1 Date: 2026-04-22 Related: FRS · RTM · README",
+                "rank": 0
+              },
+              {
+                "id": "chunk-1123",
+                "document": "09-test-case-repository",
+                "path": "source-pack/09-test-case-repository.docx",
+                "heading": "Knowledge Base Test Case Repository",
+                "ordinal": 0,
+                "content": "Document ID: KB-TC-REPO-001 Version: 2026.05.01.102929 Status: Exported from ingestion DB structured test-case inventory. This document is generated from test-doc/test-case-repository.json. It gives the RAG corpus the same row-level test-case detail as the Excel inventory, while the ingestion pipeline also loads the workbook into structured SQL tables.",
+                "rank": 0
+              },
+              {
+                "id": "chunk-1087",
+                "document": "06-requirements-traceability-matrix",
+                "path": "source-pack/06-requirements-traceability-matrix.docx",
+                "heading": "Requirements Traceability Matrix (RTM)",
+                "ordinal": 0,
+                "content": "Document ID: QAMVP-RTM-001 Version: 0.1 Date: 2026-04-22 Related: BRD · FRS · TDS · Tracker",
+                "rank": 0
+              },
+              {
+                "id": "chunk-1065",
+                "document": "04-test-strategy",
+                "path": "source-pack/04-test-strategy.docx",
+                "heading": "Test Strategy",
+                "ordinal": 0,
+                "content": "Document ID: QAMVP-TSTRAT-001 Version: 0.1 Date: 2026-04-22 Related documents: README · BRD · FRS · TDS · Test Plan",
+                "rank": 0
+              },
+              {
+                "id": "chunk-1039",
+                "document": "03-test-design-specification",
+                "path": "source-pack/03-test-design-specification.docx",
+                "heading": "Test Design Specification (TDS)",
+                "ordinal": 0,
+                "content": "Document ID: QAMVP-TDS-001 Version: 0.1 Date: 2026-04-22 Related: BRD · FRS · RTM · README",
+                "rank": 0
+              },
+              {
+                "id": "chunk-1111",
+                "document": "08-quality-risk-defect-governance",
+                "path": "source-pack/08-quality-risk-defect-governance.docx",
+                "heading": "Quality, Risk & Defect Governance",
+                "ordinal": 0,
+                "content": "Document ID: QAMVP-QRDG-001 Version: 0.1 Date: 2026-04-22 Related: Test Strategy · Test Plan · RTM · Tracker",
+                "rank": 0
+              },
+              {
+                "id": "chunk-864",
+                "document": "01-business-requirements-document",
+                "path": "source-pack/01-business-requirements-document.docx",
+                "heading": "Business Requirements Document (BRD) > Mock Trading & Approval Front-End (QAMVP System Under Test)",
+                "ordinal": 0,
+                "content": "Document ID: QAMVP-BRD-001 Version: 0.1 Status: Draft Date: 2026-04-22 Related documents: FRS · TDS · README Authoritative SUT behavior reference (repository): python-orchestrator/prompts/app_layout.md",
+                "rank": 0
+              },
+              {
+                "id": "chunk-1077",
+                "document": "05-test-plan",
+                "path": "source-pack/05-test-plan.docx",
+                "heading": "Test Plan",
+                "ordinal": 0,
+                "content": "Document ID: QAMVP-TPLAN-001 Version: 0.1 Date: 2026-04-22 Related: Strategy · TDS · RTM · Test Data",
+                "rank": 0
+              },
+              {
+                "id": "chunk-925",
+                "document": "02-functional-requirements-specification",
+                "path": "source-pack/02-functional-requirements-specification.docx",
+                "heading": "Functional Requirements Specification (FRS) > Mock Trading & Approval Front-End (QAMVP SUT)",
+                "ordinal": 0,
+                "content": "Document ID: QAMVP-FRS-001 Version: 0.1 Status: Draft Date: 2026-04-22 Related documents: BRD · TDS · README Behavioral reference: python-orchestrator/prompts/app_layout.md (REF-2) Locator / testability reference: python-orchestrator/prompts/locator_strategy.md (REF-3)",
+                "rank": 0
+              },
+              {
+                "id": "chunk-1141",
+                "document": "TestCases",
+                "path": "test_data/TestCases.xlsx",
+                "heading": "Test Case Repository > TC-001",
+                "ordinal": 0,
+                "content": "TestCaseID: TC-001 Title: Document ID: QAMVP-TPLAN-001 Version: 0.1 Date: 2026-04-22 Related: Strategy · TDS · RTM · Te... Objective: Validate the behavior and controls described in 05-test-plan (Test Plan). RequirementIDs: REQ-KB-001 Priority: P1 Suite: Generated From KB Tags: kb-generated, 05-test-plan | Step | RequirementID | StepDescription | ExpectedOutput | TestData | |------|---------------|-----------------|----------------|----------| | 1 | REQ-KB-001 | Review source requirement REQ-KB-001 and prepare data for: Document ID: QAMVP-TPLAN-001 Version: 0.1 Date: 2026-04-22 Related: Strategy · TDS · RTM · Te.... | Relevant source context is available and traceable to source-pack/05-test-plan.docx#chunk-0. | 05-test-plan | | 2 | REQ-KB-001 | Execute the user-visible workflow or control described by 05-test-plan. | The system behavior matches the cited source requirement. | Use source-approved banking QA test data. | | 3 | REQ-KB-001 | Capture evidence and reconcile the observed result to the cited source document. | Evidence supports REQ-KB-001 and no unsupported behavior is introduced. | Screenshots, logs, exported workbook rows, and audit notes. |",
+                "rank": 0
+              }
+            ]
+          }
+        },
+        "stdout": "{\n  \"query\": \"TC-001 test case 1\",\n  \"count\": 10,\n  \"snippets\": [\n    {\n      \"id\": \"chunk-1097\",\n      \"document\": \"07-test-data-environment-specification\",\n      \"path\": \"source-pack/07-test-data-environment-specification.docx\",\n      \"heading\": \"Test Data & Environment Specification\",\n      \"ordinal\": 0,\n      \"content\": \"Document ID: QAMVP-TDES-001 Version: 0.1 Date: 2026-04-22 Related: FRS · RTM · README\",\n      \"rank\": 0\n    },\n    {\n      \"id\": \"chunk-1123\",\n      \"document\": \"09-test-case-repository\",\n      \"path\": \"source-pack/09-test-case-repository.docx\",\n      \"heading\": \"Knowledge Base Test Case Repository\",\n      \"ordinal\": 0,\n      \"content\": \"Document ID: KB-TC-REPO-001 Version: 2026.05.01.102929 Status: Exported from ingestion DB structured test-case inventory. This document is generated from test-doc/test-case-repository.json. It gives the RAG corpus the same row-level test-case detail as the Excel inventory, while the ingestion pipeline also loads the workbook into structured SQL tables.\",\n      \"rank\": 0\n    },\n    {\n      \"id\": \"chunk-1087\",\n      \"document\": \"06-requirements-traceability-matrix\",\n      \"path\": \"source-pack/06-requirements-traceability-matrix.docx\",\n      \"heading\": \"Requirements Traceability Matrix (RTM)\",\n      \"ordinal\": 0,\n      \"content\": \"Document ID: QAMVP-RTM-001 Version: 0.1 Date: 2026-04-22 Related: BRD · FRS · TDS · Tracker\",\n      \"rank\": 0\n    },\n    {\n      \"id\": \"chunk-1065\",\n      \"document\": \"04-test-strategy\",\n      \"path\": \"source-pack/04-test-strategy.docx\",\n      \"heading\": \"Test Strategy\",\n      \"ordinal\": 0,\n      \"content\": \"Document ID: QAMVP-TSTRAT-001 Version: 0.1 Date: 2026-04-22 Related documents: README · BRD · FRS · TDS · Test Plan\",\n      \"rank\": 0\n    },\n    {\n      \"id\": \"chunk-1039\",\n      \"document\": \"03-test-design-specification\",\n      \"path\": \"source-pack/03-test-design-specification.docx\",\n      \"heading\": \"Test Design Specification (TDS)\",\n      \"ordinal\": 0,\n      \"content\": \"Document ID: QAMVP-TDS-001 Version: 0.1 Date: 2026-04-22 Related: BRD · FRS · RTM · README\",\n      \"rank\": 0\n    },\n    {\n      \"id\": \"chunk-1111\",\n      \"document\": \"08-quality-risk-defect-governance\",\n      \"path\": \"source-pack/08-quality-risk-defect-governance.docx\",\n      \"heading\": \"Quality, Risk & Defect Governance\",\n      \"ordinal\": 0,\n      \"content\": \"Document ID: QAMVP-QRDG-001 Version: 0.1 Date: 2026-04-22 Related: Test Strategy · Test Plan · RTM · Tracker\",\n      \"rank\": 0\n    },\n    {\n      \"id\": \"chunk-864\",\n      \"document\": \"01-business-requirements-document\",\n      \"path\": \"source-pack/01-business-requirements-document.docx\",\n      \"heading\": \"Business Requirements Document (BRD) > Mock Trading & Approval Front-End (QAMVP System Under Test)\",\n      \"ordinal\": 0,\n      \"content\": \"Document ID: QAMVP-BRD-001 Version: 0.1 Status: Draft Date: 2026-04-22 Related documents: FRS · TDS · README Authoritative SUT behavior reference (repository): python-orchestrator/prompts/app_layout.md\",\n      \"rank\": 0\n    },\n    {\n      \"id\": \"chunk-1077\",\n      \"document\": \"05-test-plan\",\n      \"path\": \"source-pack/05-test-plan.docx\",\n      \"heading\": \"Test Plan\",\n      \"ordinal\": 0,\n      \"content\": \"Document ID: QAMVP-TPLAN-001 Version: 0.1 Date: 2026-04-22 Related: Strategy · TDS · RTM · Test Data\",\n      \"rank\": 0\n    },\n    {\n      \"id\": \"chunk-925\",\n      \"document\": \"02-functional-requirements-specification\",\n      \"path\": \"source-pack/02-functional-requirements-specification.docx\",\n      \"heading\": \"Functional Requirements Specification (FRS) > Mock Trading & Approval Front-End (QAMVP SUT)\",\n      \"ordinal\": 0,\n      \"content\": \"Document ID: QAMVP-FRS-001 Version: 0.1 Status: Draft Date: 2026-04-22 Related documents: BRD · TDS · README Behavioral reference: python-orchestrator/prompts/app_layout.md (REF-2) Locator / testability reference: python-orchestrator/prompts/locator_strategy.md (REF-3)\",\n      \"rank\": 0\n    },\n    {\n      \"id\": \"chunk-1141\",\n      \"document\": \"TestCases\",\n      \"path\": \"test_data/TestCases.xlsx\",\n      \"heading\": \"Test Case Repository > TC-001\",\n      \"ordinal\": 0,\n      \"content\": \"TestCaseID: TC-001 Title: Document ID: QAMVP-TPLAN-001 Version: 0.1 Date: 2026-04-22 Related: Strategy · TDS · RTM · Te... Objective: Validate the behavior and controls described in 05-test-plan (Test Plan). RequirementIDs: REQ-KB-001 Priority: P1 Suite: Generated From KB Tags: kb-generated, 05-test-plan | Step | RequirementID | StepDescription | ExpectedOutput | TestData | |------|---------------|-----------------|----------------|----------| | 1 | REQ-KB-001 | Review source requirement REQ-KB-001 and prepare data for: Document ID: QAMVP-TPLAN-001 Version: 0.1 Date: 2026-04-22 Related: Strategy · TDS · RTM · Te.... | Relevant source context is available and traceable to source-pack/05-test-plan.docx#chunk-0. | 05-test-plan | | 2 | REQ-KB-001 | Execute the user-visible workflow or control described by 05-test-plan. | The system behavior matches the cited source requirement. | Use source-approved banking QA test data. | | 3 | REQ-KB-001 | Capture evidence and reconcile the observed result to the cited source document. | Evidence supports REQ-KB-001 and no unsupported behavior is introduced. | Screenshots, logs, exported workbook rows, and audit notes. |\",\n      \"rank\": 0\n    }\n  ]\n}"
+      }
+    },
+    {
+      "id": "event_moncrr5d_mw92i3",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "phase": "rag_ready",
+      "title": "Tool search_kb_chunks",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:15:58.513Z",
+      "finishedAt": "2026-05-01T20:15:58.696Z",
+      "technical": {
+        "rawLabel": "Tool search_kb_chunks",
+        "command": "source ingestion/.venv/bin/activate && UI_QA_QUERY='TC-001 test case 1' UI_QA_LIMIT=10 DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport json, os, psycopg\nquery = os.environ.get(\"UI_QA_QUERY\", \"\").strip()\nlimit = int(os.environ.get(\"UI_QA_LIMIT\", \"8\"))\nout = []\nwith psycopg.connect(os.environ[\"DATABASE_URL\"]) as conn, conn.cursor() as cur:\n    cur.execute(\"\"\"\n      with query as (\n        select websearch_to_tsquery('english', %s) as q\n      )\n      select c.id,\n             coalesce(d.title, d.path, '') as document,\n             d.path,\n             c.heading_path,\n             c.ordinal,\n             left(regexp_replace(c.content, '\\s+', ' ', 'g'), 1600) as content,\n             ts_rank_cd(to_tsvector('english', coalesce(c.content, '')), query.q) as rank\n      from chunks c\n      join documents d on d.id = c.document_id\n      cross join query\n      where query.q @@ to_tsvector('english', coalesce(c.content, ''))\n      order by rank desc, d.created_at desc nulls last, c.ordinal asc\n      limit %s\n    \"\"\", (query, limit))\n    rows = cur.fetchall()\n    if not rows:\n        cur.execute(\"\"\"\n          select c.id,\n                 coalesce(d.title, d.path, '') as document,\n                 d.path,\n                 c.heading_path,\n                 c.ordinal,\n                 left(regexp_replace(c.content, '\\s+', ' ', 'g'), 1600) as content,\n                 0.0 as rank\n          from chunks c\n          join documents d on d.id = c.document_id\n          order by d.created_at desc nulls last, c.ordinal asc\n          limit %s\n        \"\"\", (limit,))\n        rows = cur.fetchall()\n    for row in rows:\n        out.append({\n          \"id\": f\"chunk-{row[0]}\",\n          \"document\": row[1] or \"\",\n          \"path\": row[2] or \"\",\n          \"heading\": row[3] or \"\",\n          \"ordinal\": int(row[4] or 0),\n          \"content\": row[5] or \"\",\n          \"rank\": float(row[6] or 0),\n        })\nprint(json.dumps(out))\nPY",
+        "stdout": "[{\"id\": \"chunk-1097\", \"document\": \"07-test-data-environment-specification\", \"path\": \"source-pack/07-test-data-environment-specification.docx\", \"heading\": \"Test Data & Environment Specification\", \"ordinal\": 0, \"content\": \"Document ID: QAMVP-TDES-001 Version: 0.1 Date: 2026-04-22 Related: FRS \\u00b7 RTM \\u00b7 README\", \"rank\": 0.0}, {\"id\": \"chunk-1123\", \"document\": \"09-test-case-repository\", \"path\": \"source-pack/09-test-case-repository.docx\", \"heading\": \"Knowledge Base Test Case Repository\", \"ordinal\": 0, \"content\": \"Document ID: KB-TC-REPO-001 Version: 2026.05.01.102929 Status: Exported from ingestion DB structured test-case inventory. This document is generated from test-doc/test-case-repository.json. It gives the RAG corpus the same row-level test-case detail as the Excel inventory, while the ingestion pipeline also loads the workbook into structured SQL tables.\", \"rank\": 0.0}, {\"id\": \"chunk-1087\", \"document\": \"06-requirements-traceability-matrix\", \"path\": \"source-pack/06-requirements-traceability-matrix.docx\", \"heading\": \"Requirements Traceability Matrix (RTM)\", \"ordinal\": 0, \"content\": \"Document ID: QAMVP-RTM-001 Version: 0.1 Date: 2026-04-22 Related: BRD \\u00b7 FRS \\u00b7 TDS \\u00b7 Tracker\", \"rank\": 0.0}, {\"id\": \"chunk-1065\", \"document\": \"04-test-strategy\", \"path\": \"source-pack/04-test-strategy.docx\", \"heading\": \"Test Strategy\", \"ordinal\": 0, \"content\": \"Document ID: QAMVP-TSTRAT-001 Version: 0.1 Date: 2026-04-22 Related documents: README \\u00b7 BRD \\u00b7 FRS \\u00b7 TDS \\u00b7 Test Plan\", \"rank\": 0.0}, {\"id\": \"chunk-1039\", \"document\": \"03-test-design-specification\", \"path\": \"source-pack/03-test-design-specification.docx\", \"heading\": \"Test Design Specification (TDS)\", \"ordinal\": 0, \"content\": \"Document ID: QAMVP-TDS-001 Version: 0.1 Date: 2026-04-22 Related: BRD \\u00b7 FRS \\u00b7 RTM \\u00b7 README\", \"rank\": 0.0}, {\"id\": \"chunk-1111\", \"document\": \"08-quality-risk-defect-governance\", \"path\": \"source-pack/08-quality-risk-defect-governance.docx\", \"heading\": \"Quality, Risk & Defect Governance\", \"ordinal\": 0, \"content\": \"Document ID: QAMVP-QRDG-001 Version: 0.1 Date: 2026-04-22 Related: Test Strategy \\u00b7 Test Plan \\u00b7 RTM \\u00b7 Tracker\", \"rank\": 0.0}, {\"id\": \"chunk-864\", \"document\": \"01-business-requirements-document\", \"path\": \"source-pack/01-business-requirements-document.docx\", \"heading\": \"Business Requirements Document (BRD) > Mock Trading & Approval Front-End (QAMVP System Under Test)\", \"ordinal\": 0, \"content\": \"Document ID: QAMVP-BRD-001 Version: 0.1 Status: Draft Date: 2026-04-22 Related documents: FRS \\u00b7 TDS \\u00b7 README Authoritative SUT behavior reference (repository): python-orchestrator/prompts/app_layout.md\", \"rank\": 0.0}, {\"id\": \"chunk-1077\", \"document\": \"05-test-plan\", \"path\": \"source-pack/05-test-plan.docx\", \"heading\": \"Test Plan\", \"ordinal\": 0, \"content\": \"Document ID: QAMVP-TPLAN-001 Version: 0.1 Date: 2026-04-22 Related: Strategy \\u00b7 TDS \\u00b7 RTM \\u00b7 Test Data\", \"rank\": 0.0}, {\"id\": \"chunk-925\", \"document\": \"02-functional-requirements-specification\", \"path\": \"source-pack/02-functional-requirements-specification.docx\", \"heading\": \"Functional Requirements Specification (FRS) > Mock Trading & Approval Front-End (QAMVP SUT)\", \"ordinal\": 0, \"content\": \"Document ID: QAMVP-FRS-001 Version: 0.1 Status: Draft Date: 2026-04-22 Related documents: BRD \\u00b7 TDS \\u00b7 README Behavioral reference: python-orchestrator/prompts/app_layout.md (REF-2) Locator / testability reference: python-orchestrator/prompts/locator_strategy.md (REF-3)\", \"rank\": 0.0}, {\"id\": \"chunk-1141\", \"document\": \"TestCases\", \"path\": \"test_data/TestCases.xlsx\", \"heading\": \"Test Case Repository > TC-001\", \"ordinal\": 0, \"content\": \"TestCaseID: TC-001 Title: Document ID: QAMVP-TPLAN-001 Version: 0.1 Date: 2026-04-22 Related: Strategy \\u00b7 TDS \\u00b7 RTM \\u00b7 Te... Objective: Validate the behavior and controls described in 05-test-plan (Test Plan). RequirementIDs: REQ-KB-001 Priority: P1 Suite: Generated From KB Tags: kb-generated, 05-test-plan | Step | RequirementID | StepDescription | ExpectedOutput | TestData | |------|---------------|-----------------|----------------|----------| | 1 | REQ-KB-001 | Review source requirement REQ-KB-001 and prepare data for: Document ID: QAMVP-TPLAN-001 Version: 0.1 Date: 2026-04-22 Related: Strategy \\u00b7 TDS \\u00b7 RTM \\u00b7 Te.... | Relevant source context is available and traceable to source-pack/05-test-plan.docx#chunk-0. | 05-test-plan | | 2 | REQ-KB-001 | Execute the user-visible workflow or control described by 05-test-plan. | The system behavior matches the cited source requirement. | Use source-approved banking QA test data. | | 3 | REQ-KB-001 | Capture evidence and reconcile the observed result to the cited source document. | Evidence supports REQ-KB-001 and no unsupported behavior is introduced. | Screenshots, logs, exported workbook rows, and audit notes. |\", \"rank\": 0.0}]\n",
+        "stderr": "<stdin>:15: SyntaxWarning: \"\\s\" is an invalid escape sequence. Such sequences will not work in the future. Did you mean \"\\\\s\"? A raw string is also an option.\n<stdin>:32: SyntaxWarning: \"\\s\" is an invalid escape sequence. Such sequences will not work in the future. Did you mean \"\\\\s\"? A raw string is also an option.\n",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_moncsw0l_kq2ykg",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "phase": "generate_tests",
+      "title": "Tool search_kb_chunks",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:16:51.477Z",
+      "finishedAt": "2026-05-01T20:16:51.685Z",
+      "technical": {
+        "rawLabel": "Tool search_kb_chunks",
+        "command": "source ingestion/.venv/bin/activate && UI_QA_QUERY='requirements business rules acceptance criteria user flows validation controls' UI_QA_LIMIT=8 DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport json, os, psycopg\nquery = os.environ.get(\"UI_QA_QUERY\", \"\").strip()\nlimit = int(os.environ.get(\"UI_QA_LIMIT\", \"8\"))\nout = []\nwith psycopg.connect(os.environ[\"DATABASE_URL\"]) as conn, conn.cursor() as cur:\n    cur.execute(\"\"\"\n      with query as (\n        select websearch_to_tsquery('english', %s) as q\n      )\n      select c.id,\n             coalesce(d.title, d.path, '') as document,\n             d.path,\n             c.heading_path,\n             c.ordinal,\n             left(regexp_replace(c.content, '\\s+', ' ', 'g'), 1600) as content,\n             ts_rank_cd(to_tsvector('english', coalesce(c.content, '')), query.q) as rank\n      from chunks c\n      join documents d on d.id = c.document_id\n      cross join query\n      where query.q @@ to_tsvector('english', coalesce(c.content, ''))\n      order by rank desc, d.created_at desc nulls last, c.ordinal asc\n      limit %s\n    \"\"\", (query, limit))\n    rows = cur.fetchall()\n    if not rows:\n        cur.execute(\"\"\"\n          select c.id,\n                 coalesce(d.title, d.path, '') as document,\n                 d.path,\n                 c.heading_path,\n                 c.ordinal,\n                 left(regexp_replace(c.content, '\\s+', ' ', 'g'), 1600) as content,\n                 0.0 as rank\n          from chunks c\n          join documents d on d.id = c.document_id\n          order by d.created_at desc nulls last, c.ordinal asc\n          limit %s\n        \"\"\", (limit,))\n        rows = cur.fetchall()\n    for row in rows:\n        out.append({\n          \"id\": f\"chunk-{row[0]}\",\n          \"document\": row[1] or \"\",\n          \"path\": row[2] or \"\",\n          \"heading\": row[3] or \"\",\n          \"ordinal\": int(row[4] or 0),\n          \"content\": row[5] or \"\",\n          \"rank\": float(row[6] or 0),\n        })\nprint(json.dumps(out))\nPY",
+        "stdout": "[{\"id\": \"chunk-1065\", \"document\": \"04-test-strategy\", \"path\": \"source-pack/04-test-strategy.docx\", \"heading\": \"Test Strategy\", \"ordinal\": 0, \"content\": \"Document ID: QAMVP-TSTRAT-001 Version: 0.1 Date: 2026-04-22 Related documents: README \\u00b7 BRD \\u00b7 FRS \\u00b7 TDS \\u00b7 Test Plan\", \"rank\": 0.0}, {\"id\": \"chunk-1097\", \"document\": \"07-test-data-environment-specification\", \"path\": \"source-pack/07-test-data-environment-specification.docx\", \"heading\": \"Test Data & Environment Specification\", \"ordinal\": 0, \"content\": \"Document ID: QAMVP-TDES-001 Version: 0.1 Date: 2026-04-22 Related: FRS \\u00b7 RTM \\u00b7 README\", \"rank\": 0.0}, {\"id\": \"chunk-925\", \"document\": \"02-functional-requirements-specification\", \"path\": \"source-pack/02-functional-requirements-specification.docx\", \"heading\": \"Functional Requirements Specification (FRS) > Mock Trading & Approval Front-End (QAMVP SUT)\", \"ordinal\": 0, \"content\": \"Document ID: QAMVP-FRS-001 Version: 0.1 Status: Draft Date: 2026-04-22 Related documents: BRD \\u00b7 TDS \\u00b7 README Behavioral reference: python-orchestrator/prompts/app_layout.md (REF-2) Locator / testability reference: python-orchestrator/prompts/locator_strategy.md (REF-3)\", \"rank\": 0.0}, {\"id\": \"chunk-1039\", \"document\": \"03-test-design-specification\", \"path\": \"source-pack/03-test-design-specification.docx\", \"heading\": \"Test Design Specification (TDS)\", \"ordinal\": 0, \"content\": \"Document ID: QAMVP-TDS-001 Version: 0.1 Date: 2026-04-22 Related: BRD \\u00b7 FRS \\u00b7 RTM \\u00b7 README\", \"rank\": 0.0}, {\"id\": \"chunk-1077\", \"document\": \"05-test-plan\", \"path\": \"source-pack/05-test-plan.docx\", \"heading\": \"Test Plan\", \"ordinal\": 0, \"content\": \"Document ID: QAMVP-TPLAN-001 Version: 0.1 Date: 2026-04-22 Related: Strategy \\u00b7 TDS \\u00b7 RTM \\u00b7 Test Data\", \"rank\": 0.0}, {\"id\": \"chunk-1087\", \"document\": \"06-requirements-traceability-matrix\", \"path\": \"source-pack/06-requirements-traceability-matrix.docx\", \"heading\": \"Requirements Traceability Matrix (RTM)\", \"ordinal\": 0, \"content\": \"Document ID: QAMVP-RTM-001 Version: 0.1 Date: 2026-04-22 Related: BRD \\u00b7 FRS \\u00b7 TDS \\u00b7 Tracker\", \"rank\": 0.0}, {\"id\": \"chunk-864\", \"document\": \"01-business-requirements-document\", \"path\": \"source-pack/01-business-requirements-document.docx\", \"heading\": \"Business Requirements Document (BRD) > Mock Trading & Approval Front-End (QAMVP System Under Test)\", \"ordinal\": 0, \"content\": \"Document ID: QAMVP-BRD-001 Version: 0.1 Status: Draft Date: 2026-04-22 Related documents: FRS \\u00b7 TDS \\u00b7 README Authoritative SUT behavior reference (repository): python-orchestrator/prompts/app_layout.md\", \"rank\": 0.0}, {\"id\": \"chunk-1111\", \"document\": \"08-quality-risk-defect-governance\", \"path\": \"source-pack/08-quality-risk-defect-governance.docx\", \"heading\": \"Quality, Risk & Defect Governance\", \"ordinal\": 0, \"content\": \"Document ID: QAMVP-QRDG-001 Version: 0.1 Date: 2026-04-22 Related: Test Strategy \\u00b7 Test Plan \\u00b7 RTM \\u00b7 Tracker\", \"rank\": 0.0}]\n",
+        "stderr": "<stdin>:15: SyntaxWarning: \"\\s\" is an invalid escape sequence. Such sequences will not work in the future. Did you mean \"\\\\s\"? A raw string is also an option.\n<stdin>:32: SyntaxWarning: \"\\s\" is an invalid escape sequence. Such sequences will not work in the future. Did you mean \"\\\\s\"? A raw string is also an option.\n",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_moncsw6e_1o7wg3",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "phase": "generate_tests",
+      "title": "Cursor SDK agent",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:16:51.686Z",
+      "finishedAt": "2026-05-01T20:17:37.622Z",
+      "summary": "Cursor SDK call completed.",
+      "technical": {
+        "rawLabel": "cursor:generate_tests",
+        "sdkPrompt": "Generate source-aligned bank QA test cases from the active pgvector corpus. Use the retrieved KB excerpts below as grounding and preserve citations/source refs. Return repository JSON if confident.\n\n[1] 04-test-strategy Test Strategy\nDocument ID: QAMVP-TSTRAT-001 Version: 0.1 Date: 2026-04-22 Related documents: README · BRD · FRS · TDS · Test Plan\n\n[2] 07-test-data-environment-specification Test Data & Environment Specification\nDocument ID: QAMVP-TDES-001 Version: 0.1 Date: 2026-04-22 Related: FRS · RTM · README\n\n[3] 02-functional-requirements-specification Functional Requirements Specification (FRS) > Mock Trading & Approval Front-End (QAMVP SUT)\nDocument ID: QAMVP-FRS-001 Version: 0.1 Status: Draft Date: 2026-04-22 Related documents: BRD · TDS · README Behavioral reference: python-orchestrator/prompts/app_layout.md (REF-2) Locator / testability reference: python-orchestrator/prompts/locator_strategy.md (REF-3)\n\n[4] 03-test-design-specification Test Design Specification (TDS)\nDocument ID: QAMVP-TDS-001 Version: 0.1 Date: 2026-04-22 Related: BRD · FRS · RTM · README\n\n[5] 05-test-plan Test Plan\nDocument ID: QAMVP-TPLAN-001 Version: 0.1 Date: 2026-04-22 Related: Strategy · TDS · RTM · Test Data\n\n[6] 06-requirements-traceability-matrix Requirements Traceability Matrix (RTM)\nDocument ID: QAMVP-RTM-001 Version: 0.1 Date: 2026-04-22 Related: BRD · FRS · TDS · Tracker\n\n[7] 01-business-requirements-document Business Requirements Document (BRD) > Mock Trading & Approval Front-End (QAMVP System Under Test)\nDocument ID: QAMVP-BRD-001 Version: 0.1 Status: Draft Date: 2026-04-22 Related documents: FRS · TDS · README Authoritative SUT behavior reference (repository): python-orchestrator/prompts/app_layout.md\n\n[8] 08-quality-risk-defect-governance Quality, Risk & Defect Governance\nDocument ID: QAMVP-QRDG-001 Version: 0.1 Date: 2026-04-22 Related: Test Strategy · Test Plan · RTM · Tracker",
+        "stdout": "[6]\"],\n        \"document_ids\": [\"QAMVP-BRD-001\", \"QAMVP-FRS-001\", \"QAMVP-TDS-001\", \"QAMVP-RTM-001\"],\n        \"test_design_execution_refs\": [\"REF-2\", \"REF-3\"]\n      }\n    },\n    {\n      \"tc_id\": \"TC-BANK-003\",\n      \"title\": \"Segregation of duties — maker cannot self-approve same ticket (negative)\",\n      \"objective\": \"Validate segregation between maker and checker for the same instrument of approval.\",\n      \"risk_or_priority\": \"Critical\",\n      \"test_type\": \"Security / Control\",\n      \"preconditions\": [\"Same user must not hold both privileges if SoD is mandated by scenario; or system must block self-approval\"],\n      \"steps\": [\n        \"As maker, submit a trade.\",\n        \"Attempt approval using the same identity without role elevation.\",\n        \"If separate checker required, attempt illegitimate approval paths.\"\n      ],\n      \"expected_results\": [\n        \"System prevents self-approval or enforces distinct checker identity/session per governance intent described under BRD/FRS trading controls.\"\n      ],\n      \"source_alignment\": {\n        \"kb_excerpt_refs\": [\"[7]\", \"[3]\", \"[1]\", \"[8]\"],\n        \"document_ids\": [\"QAMVP-BRD-001\", \"QAMVP-FRS-001\", \"QAMVP-TSTRAT-001\", \"QAMVP-QRDG-001\"],\n        \"test_design_execution_refs\": [\"REF-2\"]\n      }\n    },\n    {\n      \"tc_id\": \"TC-BANK-004\",\n      \"title\": \"Reject / send-back path — pending trade does not appear as approved\",\n      \"objective\": \"Ensure non-approval outcomes keep books/dashboards honest.\",\n      \"risk_or_priority\": \"High\",\n      \"test_type\": \"Functional\",\n      \"preconditions\": [\"Pending trade exists\"],\n      \"steps\": [\n        \"As checker, reject or send back the pending trade (whichever the SUT supports).\",\n        \"Review trader dashboards and trade inventory views.\"\n      ],\n      \"expected_results\": [\n        \"Trade does not present as approved; status communicates rejection/pending remediation.\",\n        \"Evidence suitable for defect governance if mis-status occurs ([8]).\"\n      ],\n      \"source_alignment\": {\n        \"kb_excerpt_refs\": [\"[3]\", \"[4]\", \"[8]\", \"[6]\"],\n        \"document_ids\": [\"QAMVP-FRS-001\", \"QAMVP-TDS-001\", \"QAMVP-QRDG-001\", \"QAMVP-RTM-001\"],\n        \"test_design_execution_refs\": [\"REF-2\", \"REF-3\"]\n      }\n    },\n    {\n      \"tc_id\": \"TC-BANK-005\",\n      \"title\": \"Order economics — notional / totals recompute on quantity or price change\",\n      \"objective\": \"Verify front-end calculations for mock trading amounts remain consistent when inputs change.\",\n      \"risk_or_priority\": \"Medium\",\n      \"test_type\": \"Functional\",\n      \"preconditions\": [\"Maker authenticated\"],\n      \"steps\": [\n        \"Enter valid quantity and price; capture displayed notional/total.\",\n        \"Change quantity and/or price; tab away or trigger recalculation.\",\n        \"Compare displayed totals to manual calculation for the same inputs.\"\n      ],\n      \"expected_results\": [\n        \"Displayed totals update deterministically and match expected arithmetic for the mock pricing model.\"\n      ],\n      \"source_alignment\": {\n        \"kb_excerpt_refs\": [\"[3]\", \"[4]\", \"[7]\"],\n        \"document_ids\": [\"QAMVP-FRS-001\", \"QAMVP-TDS-001\", \"QAMVP-BRD-001\"],\n        \"test_design_execution_refs\": [\"REF-2\", \"REF-3\"]\n      }\n    },\n    {\n      \"tc_id\": \"TC-BANK-006\",\n      \"title\": \"Field validation — blocking submit when mandatory trade attributes missing\",\n      \"objective\": \"Prevent incomplete trades entering approval workflows.\",\n      \"risk_or_priority\": \"Medium\",\n      \"test_type\": \"Negative\",\n      \"preconditions\": [\"Maker authenticated\"],\n      \"steps\": [\n        \"Open trade capture.\",\n        \"Clear or omit each mandatory field one defect at a time (or combined minimal set).\",\n        \"Attempt submit.\"\n      ],\n      \"expected_results\": [\n        \"Client-side/server-side validation blocks submission with clear, safe messaging (no silent failure).\"\n      ],\n      \"source_alignment\": {\n        \"kb_excerpt_refs\": [\"[3]\", \"[4]\", \"[5]\"],\n        \"document_ids\": [\"QAMVP-FRS-001\", \"QAMVP-TDS-001\", \"QAMVP-TPLAN-001\"],\n        \"test_design_execution_refs\": [\"REF-2\", \"REF-3\"]\n      }\n    },\n    {\n      \"tc_id\": \"TC-BANK-007\",\n      \"title\": \"Authentication failure — invalid credentials do not establish a session\",\n      \"objective\": \"Baseline identity assurance for bank-facing UI.\",\n      \"risk_or_priority\": \"High\",\n      \"test_type\": \"Security\",\n      \"preconditions\": [\"Known invalid credential pair per TDES negative dataset\"],\n      \"steps\": [\n        \"Attempt login with invalid password.\",\n        \"Attempt traversal to protected routes directly via URL.\"\n      ],\n      \"expected_results\": [\n        \"No authenticated session; errors are non-enumerating/safe per test strategy emphasis ([1]).\",\n        \"Protected screens remain inaccessible.\"\n      ],\n      \"source_alignment\": {\n        \"kb_excerpt_refs\": [\"[1]\", \"[3]\", \"[5]\", \"[7]\"],\n        \"document_ids\": [\"QAMVP-TSTRAT-001\", \"QAMVP-FRS-001\", \"QAMVP-TPLAN-001\", \"QAMVP-BRD-001\"],\n        \"test_design_execution_refs\": [\"REF-2\", \"REF-3\"]\n      }\n    },\n    {\n      \"tc_id\": \"TC-BANK-008\",\n      \"title\": \"Session termination — logout clears protected access\",\n      \"objective\": \"Ensure logout invalidates UI access to sensitive trading surfaces.\",\n      \"risk_or_priority\": \"Medium\",\n      \"test_type\": \"Security\",\n      \"preconditions\": [\"Valid user authenticated\"],\n      \"steps\": [\n        \"Logout from the application shell.\",\n        \"Use browser back navigation and direct URLs to attempt re-entry without re-auth.\"\n      ],\n      \"expected_results\": [\n        \"Protected trading/admin destinations require re-authentication.\"\n      ],\n      \"source_alignment\": {\n        \"kb_excerpt_refs\": [\"[3]\", \"[7]\", \"[1]\"],\n        \"document_ids\": [\"QAMVP-FRS-001\", \"QAMVP-BRD-001\", \"QAMVP-TSTRAT-001\"],\n        \"test_design_execution_refs\": [\"REF-2\", \"REF-3\"]\n      }\n    },\n    {\n      \"tc_id\": \"TC-BANK-009\",\n      \"title\": \"Role-based navigation — maker vs checker vs admin destinations\",\n      \"objective\": \"Validate RBAC-aligned routing and menu visibility for banking personas.\",\n      \"risk_or_priority\": \"High\",\n      \"test_type\": \"Functional\",\n      \"preconditions\": [\"Separate accounts per role per TDES\"],\n      \"steps\": [\n        \"As maker, enumerate reachable navigation targets; note forbidden admin surfaces.\",\n        \"As checker, repeat.\",\n        \"As admin (if applicable), verify administrative entry points from authenticated shell.\"\n      ],\n      \"expected_results\": [\n        \"Navigation matches REF-2 layout expectations; unauthorized destinations are inaccessible.\"\n      ],\n      \"source_alignment\": {\n        \"kb_excerpt_refs\": [\"[7]\", \"[3]\", \"[4]\", \"[2]\"],\n        \"document_ids\": [\"QAMVP-BRD-001\", \"QAMVP-FRS-001\", \"QAMVP-TDS-001\", \"QAMVP-TDES-001\"],\n        \"test_design_execution_refs\": [\"REF-2\", \"REF-3\"]\n      }\n    },\n    {\n      \"tc_id\": \"TC-BANK-010\",\n      \"title\": \"Dashboard integrity — approved trades reflected without stale pending indicators\",\n      \"objective\": \"Operational correctness of summaries after approvals.\",\n      \"risk_or_priority\": \"Medium\",\n      \"test_type\": \"Functional\",\n      \"preconditions\": [\"At least one approved trade exists post checker action\"],\n      \"steps\": [\n        \"Open dashboard summarizing trades / approvals.\",\n        \"Cross-check counts against trade list detail.\"\n      ],\n      \"expected_results\": [\n        \"Dashboard metrics align with underlying trade records; no contradictory pending/approved signals.\"\n      ],\n      \"source_alignment\": {\n        \"kb_excerpt_refs\": [\"[7]\", \"[3]\", \"[4]\", \"[6]\"],\n        \"document_ids\": [\"QAMVP-BRD-001\", \"QAMVP-FRS-001\", \"QAMVP-TDS-001\", \"QAMVP-RTM-001\"],\n        \"test_design_execution_refs\": [\"REF-2\", \"REF-3\"]\n      }\n    },\n    {\n      \"tc_id\": \"TC-BANK-011\",\n      \"title\": \"Inventory / positions view — post-approval reflection\",\n      \"objective\": \"Verify mock inventory updates when trades achieve approved state.\",\n      \"risk_or_priority\": \"Medium\",\n      \"test_type\": \"Functional\",\n      \"preconditions\": [\"Approved trade exists affecting inventory model\"],\n      \"steps\": [\n        \"Capture baseline inventory snapshot.\",\n        \"Approve a trade that should move inventory.\",\n        \"Reload inventory view and compare deltas.\"\n      ],\n      \"expected_results\": [\n        \"Inventory reflects approved trade impact according to mock rules in REF-2/FRS scope.\"\n      ],\n      \"source_alignment\": {\n        \"kb_excerpt_refs\": [\"[3]\", \"[7]\", \"[6]\"],\n        \"document_ids\": [\"QAMVP-FRS-001\", \"QAMVP-BRD-001\", \"QAMVP-RTM-001\"],\n        \"test_design_execution_refs\": [\"REF-2\", \"REF-3\"]\n      }\n    },\n    {\n      \"tc_id\": \"TC-BANK-012\",\n      \"title\": \"Concurrency — maker and checker sessions operate independently without cross-session bleed\",\n      \"objective\": \"Confirm workflow correctness under realistic two-browser operator pattern.\",\n      \"risk_or_priority\": \"Medium\",\n      \"test_type\": \"Functional\",\n      \"preconditions\": [\"Two browsers or profiles\", \"TDES documents concurrent test hygiene\"],\n      \"steps\": [\n        \"Browser A: maker submits trade.\",\n        \"Browser B: checker approves.\",\n        \"Browser A: refresh lists/dashboards.\"\n      ],\n      \"expected_results\": [\n        \"States reconcile; no incorrect attribution of session roles.\"\n      ],\n      \"source_alignment\": {\n        \"kb_excerpt_refs\": [\"[2]\", \"[4]\", \"[5]\", \"[3]\"],\n        \"document_ids\": [\"QAMVP-TDES-001\", \"QAMVP-TDS-001\", \"QAMVP-TPLAN-001\", \"QAMVP-FRS-001\"],\n        \"test_design_execution_refs\": [\"REF-2\", \"REF-3\"]\n      }\n    },\n    {\n      \"tc_id\": \"TC-BANK-013\",\n      \"title\": \"Operational resilience messaging — handled errors do not expose internals\",\n      \"objective\": \"Align UI failure modes with bank-grade presentation expectations.\",\n      \"risk_or_priority\": \"Medium\",\n      \"test_type\": \"Non-functional / UX safety\",\n      \"preconditions\": [\"Ability to trigger a controlled error (bad network, invalid API payload if available)\"],\n      \"steps\": [\n        \"Trigger an application error path documented in TDS.\",\n        \"Observe user-visible messaging and logs (if permitted).\"\n      ],\n      \"expected_results\": [\n        \"No sensitive stack traces or internal identifiers leak to end users; defects traceable under governance ([8]).\"\n      ],\n      \"source_alignment\": {\n        \"kb_excerpt_refs\": [\"[8]\", \"[1]\", \"[4]\", \"[5]\"],\n        \"document_ids\": [\"QAMVP-QRDG-001\", \"QAMVP-TSTRAT-001\", \"QAMVP-TDS-001\", \"QAMVP-TPLAN-001\"],\n        \"test_design_execution_refs\": [\"REF-2\", \"REF-3\"]\n      }\n    },\n    {\n      \"tc_id\": \"TC-BANK-014\",\n      \"title\": \"Traceability spot-check — each executed scenario maps to RTM expectation\",\n      \"objective\": \"Meta-test: confirm bidirectional trace for sample requirements IDs when executing suite.\",\n      \"risk_or_priority\": \"Low\",\n      \"test_type\": \"Governance\",\n      \"preconditions\": [\"RTM worksheet available\", \"Requirement IDs assigned to scenarios\"],\n      \"steps\": [\n        \"Pick three functional scenarios.\",\n        \"Verify RTM rows exist linking BRD/FRS statements to test cases.\"\n      ],\n      \"expected_results\": [\n        \"No orphan tests; no orphan requirements for sampled scope ([6]).\"\n      ],\n      \"source_alignment\": {\n        \"kb_excerpt_refs\": [\"[6]\", \"[5]\", \"[8]\"],\n        \"document_ids\": [\"QAMVP-RTM-001\", \"QAMVP-TPLAN-001\", \"QAMVP-QRDG-001\"],\n        \"test_design_execution_refs\": []\n      }\n    }\n  ]\n}\n```\n\n### Confidence\n- **Structured citations**: High — every case carries `kb_excerpt_refs` **[1]–[8]**, matching document IDs from your retrieval headers, plus **REF-2 / REF-3** where execution/UI alignment applies.\n- **Exact repository file compatibility**: **Not verified** — tooling could not read `test-doc/test-case-repository.json`; paste a sample object if you want this reshaped to match your canonical schema.\n\nIf you want this saved into the repo as `test-doc/test-case-repository.json` (or appended), say which file and whether IDs should follow your existing `TC-###` convention from Playwright runs.",
+        "payload": {
+          "eventCount": 1632
+        }
+      }
+    },
+    {
+      "id": "event_monctvmf_bl0ggv",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "phase": "generate_tests",
+      "title": "Generated test cases",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:17:37.623Z",
+      "finishedAt": "2026-05-01T20:17:37.623Z",
+      "summary": "8 test case(s), 24 step(s).",
+      "technical": {
+        "rawLabel": "generate_tests:repository",
+        "payload": {
+          "cases": 8
+        }
+      }
+    },
+    {
+      "id": "event_monctvmg_sn3kt6",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "phase": "generate_tests",
+      "title": "Build TestCases workbook from generated repository",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:17:37.624Z",
+      "finishedAt": "2026-05-01T20:17:37.894Z",
+      "technical": {
+        "rawLabel": "Build TestCases workbook from generated repository",
+        "command": "source ingestion/.venv/bin/activate && ingestion/.venv/bin/python test-doc/scripts/build_test_case_repository.py --spec '/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/ui-qa/generated/uiqa_moncqi9w_7yjek9/test-case-repository.generated.json' --workbook-out '/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/TestCases.xlsx' --markdown-out '/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/ui-qa/generated/uiqa_moncqi9w_7yjek9/test-case-repository.generated.md'",
+        "stdout": "Wrote /Users/utsavsharma/Documents/GitHub/QAMVP/test_data/TestCases.xlsx\nWrote /Users/utsavsharma/Documents/GitHub/QAMVP/test_data/ui-qa/generated/uiqa_moncqi9w_7yjek9/test-case-repository.generated.md\nInventory: 8 test cases, 24 steps\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_monctvtz_qz24tr",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "phase": "audit_generated_tests",
+      "title": "Load KB entity IDs for traceability audit",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:17:37.895Z",
+      "finishedAt": "2026-05-01T20:17:38.096Z",
+      "technical": {
+        "rawLabel": "Load KB entity IDs for traceability audit",
+        "command": "source ingestion/.venv/bin/activate && DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport os, json, psycopg\nwith psycopg.connect(os.environ['DATABASE_URL']) as conn, conn.cursor() as cur:\n    cur.execute(\"select distinct upper(canonical_id) from entities where canonical_id is not null and canonical_id <> ''\")\n    print(json.dumps([r[0] for r in cur.fetchall()]))\nPY",
+        "stdout": "[\"BR-013\", \"REQ-FR-014\", \"TC-003\", \"REQ-FR-042\", \"REQ-FR-045\", \"TC-008\", \"REQ-FR-043\", \"BR-005\", \"REQ-FR-010\", \"BR-003\", \"BR-009\", \"TC-005\", \"TC-016\", \"REQ-FR-FUT-01\", \"BRD \\u00a74\", \"TC-QUEUE-004\", \"REQ-FR-040\", \"TKT-QAMVP-110\", \"REQ-FR-FUT-02\", \"REQ-FR-013\", \"REQ-FR-033\", \"REQ-FR-000\", \"REQ-FR-034\", \"BR-011\", \"BR-010\", \"TC-REPO-001\", \"REQ-FR-032\", \"REQ-FR-005\", \"TC-006\", \"BR-007\", \"REQ-NFR-002\", \"FRS \\u00a73\", \"TC-AUTH-001\", \"BR-014\", \"BR-001\", \"REQ-FR-041\", \"REQ-FR-031\", \"TC-ID\", \"TKT-QAMVP-101\", \"REQ-FR-012\", \"BR-000\", \"BR-002\", \"REQ-FR-060\", \"TKT-QAMVP-112\", \"REQ-FR-030\", \"TC-002\", \"TKT-QAMVP-111\", \"TC-001\", \"BR-008\", \"BRD \\u00a78\", \"REQ-NFR-003\", \"REQ-FR-050\", \"REQ-FR-044\", \"REQ-FR-051\", \"REQ-FR-023\", \"TC-004\", \"REQ-FR-004\", \"BR-006\", \"TC-NFR-001\", \"REQ-SEC-003\", \"BR-012\", \"BR-004\", \"REQ-FR-022\", \"REQ-FR-002\", \"REQ-FR-003\", \"REQ-FR-020\", \"REQ-FR-001\", \"TKT-QAMVP-102\", \"TC-007\", \"FRS \\u00a723\", \"REQ-FR-FUT-03\", \"REQ-FR-011\", \"BRD \\u00a76\"]\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_monctvzm_uqtydj",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "phase": "audit_generated_tests",
+      "title": "Generated test confidence audit passed",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:17:38.098Z",
+      "finishedAt": "2026-05-01T20:17:38.098Z",
+      "summary": "Finding counts: {\"critical\":0,\"high\":0,\"medium\":0,\"low\":8}."
+    },
+    {
+      "id": "event_monctvzm_rrieb6",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "phase": "complete",
+      "title": "TestCases.xlsx generation complete",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:17:38.098Z",
+      "finishedAt": "2026-05-01T20:17:38.098Z",
+      "summary": "Generated 8 test case(s). Confidence audit passed."
+    },
+    {
+      "id": "event_moncy4u9_10ewn8",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "phase": "rag_ready",
+      "title": "Cursor SDK tool harness",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:20:56.193Z",
+      "finishedAt": "2026-05-01T20:21:15.053Z",
+      "summary": "Cursor SDK tool harness completed.",
+      "technical": {
+        "rawLabel": "cursor-tools:rag_ready",
+        "sdkPrompt": "there are only 8 test cases? ",
+        "payload": {
+          "toolResults": [
+            {
+              "ok": true,
+              "tool": "inspect_entities",
+              "result": {
+                "purpose": "Inspect KB entities",
+                "sql": "select entity_type, canonical_id, count(*) as mentions, count(distinct document_id) as documents from entities where entity_type = 'TC' group by entity_type, canonical_id order by mentions desc, canonical_id limit 50",
+                "columns": [
+                  "entity_type",
+                  "canonical_id",
+                  "mentions",
+                  "documents"
+                ],
+                "rows": [
+                  {
+                    "entity_type": "TC",
+                    "canonical_id": "TC-001",
+                    "mentions": 3,
+                    "documents": 2
+                  },
+                  {
+                    "entity_type": "TC",
+                    "canonical_id": "TC-016",
+                    "mentions": 2,
+                    "documents": 1
+                  },
+                  {
+                    "entity_type": "TC",
+                    "canonical_id": "TC-002",
+                    "mentions": 1,
+                    "documents": 1
+                  },
+                  {
+                    "entity_type": "TC",
+                    "canonical_id": "TC-003",
+                    "mentions": 1,
+                    "documents": 1
+                  },
+                  {
+                    "entity_type": "TC",
+                    "canonical_id": "TC-004",
+                    "mentions": 1,
+                    "documents": 1
+                  },
+                  {
+                    "entity_type": "TC",
+                    "canonical_id": "TC-005",
+                    "mentions": 1,
+                    "documents": 1
+                  },
+                  {
+                    "entity_type": "TC",
+                    "canonical_id": "TC-006",
+                    "mentions": 1,
+                    "documents": 1
+                  },
+                  {
+                    "entity_type": "TC",
+                    "canonical_id": "TC-007",
+                    "mentions": 1,
+                    "documents": 1
+                  },
+                  {
+                    "entity_type": "TC",
+                    "canonical_id": "TC-008",
+                    "mentions": 1,
+                    "documents": 1
+                  },
+                  {
+                    "entity_type": "TC",
+                    "canonical_id": "TC-AUTH-001",
+                    "mentions": 1,
+                    "documents": 1
+                  },
+                  {
+                    "entity_type": "TC",
+                    "canonical_id": "TC-ID",
+                    "mentions": 1,
+                    "documents": 1
+                  },
+                  {
+                    "entity_type": "TC",
+                    "canonical_id": "TC-NFR-001",
+                    "mentions": 1,
+                    "documents": 1
+                  },
+                  {
+                    "entity_type": "TC",
+                    "canonical_id": "TC-QUEUE-004",
+                    "mentions": 1,
+                    "documents": 1
+                  },
+                  {
+                    "entity_type": "TC",
+                    "canonical_id": "TC-REPO-001",
+                    "mentions": 1,
+                    "documents": 1
+                  }
+                ],
+                "rowCount": 14
+              }
+            },
+            {
+              "ok": true,
+              "tool": "query_kb_sql",
+              "result": {
+                "purpose": "count TC entities",
+                "sql": "SELECT COUNT(*) AS test_case_count FROM entities WHERE entity_type = 'TC'",
+                "columns": [
+                  "test_case_count"
+                ],
+                "rows": [
+                  {
+                    "test_case_count": 17
+                  }
+                ],
+                "rowCount": 1
+              }
+            }
+          ]
+        },
+        "stdout": "## Answer\n\n**No.** In this KB, test cases are not limited to eight.\n\n### What the tools showed\n\n1. **`query_kb_sql`** — `COUNT(*)` over `entities` where `entity_type = 'TC'` returned **`17`** TC rows (**not** eight).\n\n2. **`inspect_entities`** — Grouping by `canonical_id` yielded **`14` distinct** TC identifiers (with **17** total rows implying some IDs appear more than once, e.g. `TC-001` with **3** mentions and `TC-016` with **2**).\n\n### Why “eight” can still feel right\n\nEight **sequentially numbered** IDs **`TC-001` … `TC-008`** are present, but the inventory also includes other TC-style IDs (**`TC-016`**, **`TC-AUTH-001`**, **`TC-NFR-001`**, **`TC-QUEUE-004`**, **`TC-REPO-001`**) and **`TC-ID`**, which may be section/header noise rather than a real test case.\n\n### Method\n\n- Definitive volume: **SQL count** on `entities` for type `TC`.  \n- Shape of the set: **`inspect_entities`** grouped by `canonical_id` (mentions and document spread)."
+      }
+    },
+    {
+      "id": "event_moncy602_yn4wjy",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "phase": "rag_ready",
+      "title": "Cursor SDK tool harness",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:20:57.698Z",
+      "finishedAt": "2026-05-01T20:21:10.849Z",
+      "summary": "Cursor SDK tool harness completed.",
+      "technical": {
+        "rawLabel": "cursor-tools:rag_ready",
+        "sdkPrompt": "there are only 8 test cases? ",
+        "payload": {
+          "toolResults": [
+            {
+              "ok": true,
+              "tool": "inspect_entities",
+              "result": {
+                "purpose": "Inspect KB entities",
+                "sql": "select entity_type, canonical_id, count(*) as mentions, count(distinct document_id) as documents from entities where entity_type = 'TC' group by entity_type, canonical_id order by mentions desc, canonical_id limit 100",
+                "columns": [
+                  "entity_type",
+                  "canonical_id",
+                  "mentions",
+                  "documents"
+                ],
+                "rows": [
+                  {
+                    "entity_type": "TC",
+                    "canonical_id": "TC-001",
+                    "mentions": 3,
+                    "documents": 2
+                  },
+                  {
+                    "entity_type": "TC",
+                    "canonical_id": "TC-016",
+                    "mentions": 2,
+                    "documents": 1
+                  },
+                  {
+                    "entity_type": "TC",
+                    "canonical_id": "TC-002",
+                    "mentions": 1,
+                    "documents": 1
+                  },
+                  {
+                    "entity_type": "TC",
+                    "canonical_id": "TC-003",
+                    "mentions": 1,
+                    "documents": 1
+                  },
+                  {
+                    "entity_type": "TC",
+                    "canonical_id": "TC-004",
+                    "mentions": 1,
+                    "documents": 1
+                  },
+                  {
+                    "entity_type": "TC",
+                    "canonical_id": "TC-005",
+                    "mentions": 1,
+                    "documents": 1
+                  },
+                  {
+                    "entity_type": "TC",
+                    "canonical_id": "TC-006",
+                    "mentions": 1,
+                    "documents": 1
+                  },
+                  {
+                    "entity_type": "TC",
+                    "canonical_id": "TC-007",
+                    "mentions": 1,
+                    "documents": 1
+                  },
+                  {
+                    "entity_type": "TC",
+                    "canonical_id": "TC-008",
+                    "mentions": 1,
+                    "documents": 1
+                  },
+                  {
+                    "entity_type": "TC",
+                    "canonical_id": "TC-AUTH-001",
+                    "mentions": 1,
+                    "documents": 1
+                  },
+                  {
+                    "entity_type": "TC",
+                    "canonical_id": "TC-ID",
+                    "mentions": 1,
+                    "documents": 1
+                  },
+                  {
+                    "entity_type": "TC",
+                    "canonical_id": "TC-NFR-001",
+                    "mentions": 1,
+                    "documents": 1
+                  },
+                  {
+                    "entity_type": "TC",
+                    "canonical_id": "TC-QUEUE-004",
+                    "mentions": 1,
+                    "documents": 1
+                  },
+                  {
+                    "entity_type": "TC",
+                    "canonical_id": "TC-REPO-001",
+                    "mentions": 1,
+                    "documents": 1
+                  }
+                ],
+                "rowCount": 14
+              }
+            },
+            {
+              "ok": false,
+              "tool": "query_kb_sql",
+              "error": "Table kb_entity is not in the KB read allowlist."
+            }
+          ]
+        },
+        "stdout": "## Answer\n\nNo. For this run’s KB, `inspect_entities` with `entityType: \"TC\"` shows **14 distinct test-case entity IDs**, not 8.\n\n**Method:** Entity inventory grouped by `entity_type` and `canonical_id` (what `inspect_entities` runs for TC).\n\n**What the KB has:**  \nNumbered-style IDs include **TC-001** … **TC-008** (8 in that sequence), plus **TC-016**, and identifiers **TC-AUTH-001**, **TC-NFR-001**, **TC-QUEUE-004**, **TC-REPO-001**, and **TC-ID**.\n\nSo if “only 8” came from **TC-001–TC-008**, that matches **one slice** of the extraction. The **full TC entity set in the KB is 14** canonical IDs.\n\n**Note:** Some IDs (for example **TC-ID**) may be **noise** from document text rather than real test case IDs; the harness does not classify “valid TC” vs “mention” here—it only reports extracted TC entities.\n\n**SQL cross-check:** A `COUNT` on `kb_entity` was **not available** (`kb_entity` not on the read allowlist), so the count above is entirely from **`inspect_entities`**."
+      }
+    },
+    {
+      "id": "event_moncyd0l_51ua3t",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "phase": "rag_ready",
+      "title": "Tool inspect_entities",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:21:06.789Z",
+      "finishedAt": "2026-05-01T20:21:07.070Z",
+      "summary": "inspect_entities returned 14 row(s).",
+      "technical": {
+        "rawLabel": "tool:inspect_entities",
+        "toolName": "inspect_entities",
+        "payload": {
+          "ok": true,
+          "tool": "inspect_entities",
+          "result": {
+            "purpose": "Inspect KB entities",
+            "sql": "select entity_type, canonical_id, count(*) as mentions, count(distinct document_id) as documents from entities where entity_type = 'TC' group by entity_type, canonical_id order by mentions desc, canonical_id limit 100",
+            "columns": [
+              "entity_type",
+              "canonical_id",
+              "mentions",
+              "documents"
+            ],
+            "rows": [
+              {
+                "entity_type": "TC",
+                "canonical_id": "TC-001",
+                "mentions": 3,
+                "documents": 2
+              },
+              {
+                "entity_type": "TC",
+                "canonical_id": "TC-016",
+                "mentions": 2,
+                "documents": 1
+              },
+              {
+                "entity_type": "TC",
+                "canonical_id": "TC-002",
+                "mentions": 1,
+                "documents": 1
+              },
+              {
+                "entity_type": "TC",
+                "canonical_id": "TC-003",
+                "mentions": 1,
+                "documents": 1
+              },
+              {
+                "entity_type": "TC",
+                "canonical_id": "TC-004",
+                "mentions": 1,
+                "documents": 1
+              },
+              {
+                "entity_type": "TC",
+                "canonical_id": "TC-005",
+                "mentions": 1,
+                "documents": 1
+              },
+              {
+                "entity_type": "TC",
+                "canonical_id": "TC-006",
+                "mentions": 1,
+                "documents": 1
+              },
+              {
+                "entity_type": "TC",
+                "canonical_id": "TC-007",
+                "mentions": 1,
+                "documents": 1
+              },
+              {
+                "entity_type": "TC",
+                "canonical_id": "TC-008",
+                "mentions": 1,
+                "documents": 1
+              },
+              {
+                "entity_type": "TC",
+                "canonical_id": "TC-AUTH-001",
+                "mentions": 1,
+                "documents": 1
+              },
+              {
+                "entity_type": "TC",
+                "canonical_id": "TC-ID",
+                "mentions": 1,
+                "documents": 1
+              },
+              {
+                "entity_type": "TC",
+                "canonical_id": "TC-NFR-001",
+                "mentions": 1,
+                "documents": 1
+              },
+              {
+                "entity_type": "TC",
+                "canonical_id": "TC-QUEUE-004",
+                "mentions": 1,
+                "documents": 1
+              },
+              {
+                "entity_type": "TC",
+                "canonical_id": "TC-REPO-001",
+                "mentions": 1,
+                "documents": 1
+              }
+            ],
+            "rowCount": 14
+          }
+        },
+        "stdout": "{\n  \"purpose\": \"Inspect KB entities\",\n  \"sql\": \"select entity_type, canonical_id, count(*) as mentions, count(distinct document_id) as documents from entities where entity_type = 'TC' group by entity_type, canonical_id order by mentions desc, canonical_id limit 100\",\n  \"columns\": [\n    \"entity_type\",\n    \"canonical_id\",\n    \"mentions\",\n    \"documents\"\n  ],\n  \"rows\": [\n    {\n      \"entity_type\": \"TC\",\n      \"canonical_id\": \"TC-001\",\n      \"mentions\": 3,\n      \"documents\": 2\n    },\n    {\n      \"entity_type\": \"TC\",\n      \"canonical_id\": \"TC-016\",\n      \"mentions\": 2,\n      \"documents\": 1\n    },\n    {\n      \"entity_type\": \"TC\",\n      \"canonical_id\": \"TC-002\",\n      \"mentions\": 1,\n      \"documents\": 1\n    },\n    {\n      \"entity_type\": \"TC\",\n      \"canonical_id\": \"TC-003\",\n      \"mentions\": 1,\n      \"documents\": 1\n    },\n    {\n      \"entity_type\": \"TC\",\n      \"canonical_id\": \"TC-004\",\n      \"mentions\": 1,\n      \"documents\": 1\n    },\n    {\n      \"entity_type\": \"TC\",\n      \"canonical_id\": \"TC-005\",\n      \"mentions\": 1,\n      \"documents\": 1\n    },\n    {\n      \"entity_type\": \"TC\",\n      \"canonical_id\": \"TC-006\",\n      \"mentions\": 1,\n      \"documents\": 1\n    },\n    {\n      \"entity_type\": \"TC\",\n      \"canonical_id\": \"TC-007\",\n      \"mentions\": 1,\n      \"documents\": 1\n    },\n    {\n      \"entity_type\": \"TC\",\n      \"canonical_id\": \"TC-008\",\n      \"mentions\": 1,\n      \"documents\": 1\n    },\n    {\n      \"entity_type\": \"TC\",\n      \"canonical_id\": \"TC-AUTH-001\",\n      \"mentions\": 1,\n      \"documents\": 1\n    },\n    {\n      \"entity_type\": \"TC\",\n      \"canonical_id\": \"TC-ID\",\n      \"mentions\": 1,\n      \"documents\": 1\n    },\n    {\n      \"entity_type\": \"TC\",\n      \"canonical_id\": \"TC-NFR-001\",\n      \"mentions\": 1,\n      \"documents\": 1\n    },\n    {\n      \"entity_type\": \"TC\",\n      \"canonical_id\": \"TC-QUEUE-004\",\n      \"mentions\": 1,\n      \"documents\": 1\n    },\n    {\n      \"entity_type\": \"TC\",\n      \"canonical_id\": \"TC-REPO-001\",\n      \"mentions\": 1,\n      \"documents\": 1\n    }\n  ],\n  \"rowCount\": 14\n}"
+      }
+    },
+    {
+      "id": "event_moncyd0n_8sc4dv",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "phase": "rag_ready",
+      "title": "Tool query_kb_sql: Inspect KB entities",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:21:06.791Z",
+      "finishedAt": "2026-05-01T20:21:07.069Z",
+      "technical": {
+        "rawLabel": "Tool query_kb_sql: Inspect KB entities",
+        "command": "source ingestion/.venv/bin/activate && UI_QA_SQL='select entity_type,\n           canonical_id,\n           count(*) as mentions,\n           count(distinct document_id) as documents\n    from entities\n    where entity_type = '\\''TC'\\''\n    group by entity_type, canonical_id\n    order by mentions desc, canonical_id\n    limit 100' UI_QA_LIMIT=100 DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport json, os, psycopg\nsql = os.environ[\"UI_QA_SQL\"]\nlimit = int(os.environ.get(\"UI_QA_LIMIT\", \"50\"))\nwrapped = f\"select * from ({sql}) as uiqa_readonly_result limit {limit}\"\nwith psycopg.connect(os.environ[\"DATABASE_URL\"]) as conn:\n    conn.execute(\"set statement_timeout = '5000ms'\")\n    conn.execute(\"set transaction read only\")\n    with conn.cursor() as cur:\n        cur.execute(wrapped)\n        columns = [desc.name for desc in cur.description]\n        rows = [dict(zip(columns, row)) for row in cur.fetchall()]\nprint(json.dumps({\"columns\": columns, \"rows\": rows, \"rowCount\": len(rows)}))\nPY",
+        "stdout": "{\"columns\": [\"entity_type\", \"canonical_id\", \"mentions\", \"documents\"], \"rows\": [{\"entity_type\": \"TC\", \"canonical_id\": \"TC-001\", \"mentions\": 3, \"documents\": 2}, {\"entity_type\": \"TC\", \"canonical_id\": \"TC-016\", \"mentions\": 2, \"documents\": 1}, {\"entity_type\": \"TC\", \"canonical_id\": \"TC-002\", \"mentions\": 1, \"documents\": 1}, {\"entity_type\": \"TC\", \"canonical_id\": \"TC-003\", \"mentions\": 1, \"documents\": 1}, {\"entity_type\": \"TC\", \"canonical_id\": \"TC-004\", \"mentions\": 1, \"documents\": 1}, {\"entity_type\": \"TC\", \"canonical_id\": \"TC-005\", \"mentions\": 1, \"documents\": 1}, {\"entity_type\": \"TC\", \"canonical_id\": \"TC-006\", \"mentions\": 1, \"documents\": 1}, {\"entity_type\": \"TC\", \"canonical_id\": \"TC-007\", \"mentions\": 1, \"documents\": 1}, {\"entity_type\": \"TC\", \"canonical_id\": \"TC-008\", \"mentions\": 1, \"documents\": 1}, {\"entity_type\": \"TC\", \"canonical_id\": \"TC-AUTH-001\", \"mentions\": 1, \"documents\": 1}, {\"entity_type\": \"TC\", \"canonical_id\": \"TC-ID\", \"mentions\": 1, \"documents\": 1}, {\"entity_type\": \"TC\", \"canonical_id\": \"TC-NFR-001\", \"mentions\": 1, \"documents\": 1}, {\"entity_type\": \"TC\", \"canonical_id\": \"TC-QUEUE-004\", \"mentions\": 1, \"documents\": 1}, {\"entity_type\": \"TC\", \"canonical_id\": \"TC-REPO-001\", \"mentions\": 1, \"documents\": 1}], \"rowCount\": 14}\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_moncyd8e_39v53a",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "phase": "rag_ready",
+      "title": "Tool query_kb_sql",
+      "status": "warning",
+      "createdAt": "2026-05-01T20:21:07.070Z",
+      "finishedAt": "2026-05-01T20:21:07.070Z",
+      "summary": "Table kb_entity is not in the KB read allowlist.",
+      "technical": {
+        "rawLabel": "tool:query_kb_sql",
+        "toolName": "query_kb_sql",
+        "payload": {
+          "ok": false,
+          "tool": "query_kb_sql",
+          "error": "Table kb_entity is not in the KB read allowlist."
+        },
+        "stdout": "{\n  \"error\": \"Table kb_entity is not in the KB read allowlist.\"\n}",
+        "stderr": "Table kb_entity is not in the KB read allowlist."
+      }
+    },
+    {
+      "id": "event_moncyehb_se7dhh",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "phase": "rag_ready",
+      "title": "Tool inspect_entities",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:21:08.687Z",
+      "finishedAt": "2026-05-01T20:21:08.886Z",
+      "summary": "inspect_entities returned 14 row(s).",
+      "technical": {
+        "rawLabel": "tool:inspect_entities",
+        "toolName": "inspect_entities",
+        "payload": {
+          "ok": true,
+          "tool": "inspect_entities",
+          "result": {
+            "purpose": "Inspect KB entities",
+            "sql": "select entity_type, canonical_id, count(*) as mentions, count(distinct document_id) as documents from entities where entity_type = 'TC' group by entity_type, canonical_id order by mentions desc, canonical_id limit 50",
+            "columns": [
+              "entity_type",
+              "canonical_id",
+              "mentions",
+              "documents"
+            ],
+            "rows": [
+              {
+                "entity_type": "TC",
+                "canonical_id": "TC-001",
+                "mentions": 3,
+                "documents": 2
+              },
+              {
+                "entity_type": "TC",
+                "canonical_id": "TC-016",
+                "mentions": 2,
+                "documents": 1
+              },
+              {
+                "entity_type": "TC",
+                "canonical_id": "TC-002",
+                "mentions": 1,
+                "documents": 1
+              },
+              {
+                "entity_type": "TC",
+                "canonical_id": "TC-003",
+                "mentions": 1,
+                "documents": 1
+              },
+              {
+                "entity_type": "TC",
+                "canonical_id": "TC-004",
+                "mentions": 1,
+                "documents": 1
+              },
+              {
+                "entity_type": "TC",
+                "canonical_id": "TC-005",
+                "mentions": 1,
+                "documents": 1
+              },
+              {
+                "entity_type": "TC",
+                "canonical_id": "TC-006",
+                "mentions": 1,
+                "documents": 1
+              },
+              {
+                "entity_type": "TC",
+                "canonical_id": "TC-007",
+                "mentions": 1,
+                "documents": 1
+              },
+              {
+                "entity_type": "TC",
+                "canonical_id": "TC-008",
+                "mentions": 1,
+                "documents": 1
+              },
+              {
+                "entity_type": "TC",
+                "canonical_id": "TC-AUTH-001",
+                "mentions": 1,
+                "documents": 1
+              },
+              {
+                "entity_type": "TC",
+                "canonical_id": "TC-ID",
+                "mentions": 1,
+                "documents": 1
+              },
+              {
+                "entity_type": "TC",
+                "canonical_id": "TC-NFR-001",
+                "mentions": 1,
+                "documents": 1
+              },
+              {
+                "entity_type": "TC",
+                "canonical_id": "TC-QUEUE-004",
+                "mentions": 1,
+                "documents": 1
+              },
+              {
+                "entity_type": "TC",
+                "canonical_id": "TC-REPO-001",
+                "mentions": 1,
+                "documents": 1
+              }
+            ],
+            "rowCount": 14
+          }
+        },
+        "stdout": "{\n  \"purpose\": \"Inspect KB entities\",\n  \"sql\": \"select entity_type, canonical_id, count(*) as mentions, count(distinct document_id) as documents from entities where entity_type = 'TC' group by entity_type, canonical_id order by mentions desc, canonical_id limit 50\",\n  \"columns\": [\n    \"entity_type\",\n    \"canonical_id\",\n    \"mentions\",\n    \"documents\"\n  ],\n  \"rows\": [\n    {\n      \"entity_type\": \"TC\",\n      \"canonical_id\": \"TC-001\",\n      \"mentions\": 3,\n      \"documents\": 2\n    },\n    {\n      \"entity_type\": \"TC\",\n      \"canonical_id\": \"TC-016\",\n      \"mentions\": 2,\n      \"documents\": 1\n    },\n    {\n      \"entity_type\": \"TC\",\n      \"canonical_id\": \"TC-002\",\n      \"mentions\": 1,\n      \"documents\": 1\n    },\n    {\n      \"entity_type\": \"TC\",\n      \"canonical_id\": \"TC-003\",\n      \"mentions\": 1,\n      \"documents\": 1\n    },\n    {\n      \"entity_type\": \"TC\",\n      \"canonical_id\": \"TC-004\",\n      \"mentions\": 1,\n      \"documents\": 1\n    },\n    {\n      \"entity_type\": \"TC\",\n      \"canonical_id\": \"TC-005\",\n      \"mentions\": 1,\n      \"documents\": 1\n    },\n    {\n      \"entity_type\": \"TC\",\n      \"canonical_id\": \"TC-006\",\n      \"mentions\": 1,\n      \"documents\": 1\n    },\n    {\n      \"entity_type\": \"TC\",\n      \"canonical_id\": \"TC-007\",\n      \"mentions\": 1,\n      \"documents\": 1\n    },\n    {\n      \"entity_type\": \"TC\",\n      \"canonical_id\": \"TC-008\",\n      \"mentions\": 1,\n      \"documents\": 1\n    },\n    {\n      \"entity_type\": \"TC\",\n      \"canonical_id\": \"TC-AUTH-001\",\n      \"mentions\": 1,\n      \"documents\": 1\n    },\n    {\n      \"entity_type\": \"TC\",\n      \"canonical_id\": \"TC-ID\",\n      \"mentions\": 1,\n      \"documents\": 1\n    },\n    {\n      \"entity_type\": \"TC\",\n      \"canonical_id\": \"TC-NFR-001\",\n      \"mentions\": 1,\n      \"documents\": 1\n    },\n    {\n      \"entity_type\": \"TC\",\n      \"canonical_id\": \"TC-QUEUE-004\",\n      \"mentions\": 1,\n      \"documents\": 1\n    },\n    {\n      \"entity_type\": \"TC\",\n      \"canonical_id\": \"TC-REPO-001\",\n      \"mentions\": 1,\n      \"documents\": 1\n    }\n  ],\n  \"rowCount\": 14\n}"
+      }
+    },
+    {
+      "id": "event_moncyehc_pw0rji",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "phase": "rag_ready",
+      "title": "Tool query_kb_sql: Inspect KB entities",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:21:08.688Z",
+      "finishedAt": "2026-05-01T20:21:08.886Z",
+      "technical": {
+        "rawLabel": "Tool query_kb_sql: Inspect KB entities",
+        "command": "source ingestion/.venv/bin/activate && UI_QA_SQL='select entity_type,\n           canonical_id,\n           count(*) as mentions,\n           count(distinct document_id) as documents\n    from entities\n    where entity_type = '\\''TC'\\''\n    group by entity_type, canonical_id\n    order by mentions desc, canonical_id\n    limit 50' UI_QA_LIMIT=50 DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport json, os, psycopg\nsql = os.environ[\"UI_QA_SQL\"]\nlimit = int(os.environ.get(\"UI_QA_LIMIT\", \"50\"))\nwrapped = f\"select * from ({sql}) as uiqa_readonly_result limit {limit}\"\nwith psycopg.connect(os.environ[\"DATABASE_URL\"]) as conn:\n    conn.execute(\"set statement_timeout = '5000ms'\")\n    conn.execute(\"set transaction read only\")\n    with conn.cursor() as cur:\n        cur.execute(wrapped)\n        columns = [desc.name for desc in cur.description]\n        rows = [dict(zip(columns, row)) for row in cur.fetchall()]\nprint(json.dumps({\"columns\": columns, \"rows\": rows, \"rowCount\": len(rows)}))\nPY",
+        "stdout": "{\"columns\": [\"entity_type\", \"canonical_id\", \"mentions\", \"documents\"], \"rows\": [{\"entity_type\": \"TC\", \"canonical_id\": \"TC-001\", \"mentions\": 3, \"documents\": 2}, {\"entity_type\": \"TC\", \"canonical_id\": \"TC-016\", \"mentions\": 2, \"documents\": 1}, {\"entity_type\": \"TC\", \"canonical_id\": \"TC-002\", \"mentions\": 1, \"documents\": 1}, {\"entity_type\": \"TC\", \"canonical_id\": \"TC-003\", \"mentions\": 1, \"documents\": 1}, {\"entity_type\": \"TC\", \"canonical_id\": \"TC-004\", \"mentions\": 1, \"documents\": 1}, {\"entity_type\": \"TC\", \"canonical_id\": \"TC-005\", \"mentions\": 1, \"documents\": 1}, {\"entity_type\": \"TC\", \"canonical_id\": \"TC-006\", \"mentions\": 1, \"documents\": 1}, {\"entity_type\": \"TC\", \"canonical_id\": \"TC-007\", \"mentions\": 1, \"documents\": 1}, {\"entity_type\": \"TC\", \"canonical_id\": \"TC-008\", \"mentions\": 1, \"documents\": 1}, {\"entity_type\": \"TC\", \"canonical_id\": \"TC-AUTH-001\", \"mentions\": 1, \"documents\": 1}, {\"entity_type\": \"TC\", \"canonical_id\": \"TC-ID\", \"mentions\": 1, \"documents\": 1}, {\"entity_type\": \"TC\", \"canonical_id\": \"TC-NFR-001\", \"mentions\": 1, \"documents\": 1}, {\"entity_type\": \"TC\", \"canonical_id\": \"TC-QUEUE-004\", \"mentions\": 1, \"documents\": 1}, {\"entity_type\": \"TC\", \"canonical_id\": \"TC-REPO-001\", \"mentions\": 1, \"documents\": 1}], \"rowCount\": 14}\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_moncyemv_fbkbkg",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "phase": "rag_ready",
+      "title": "Tool query_kb_sql",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:21:08.887Z",
+      "finishedAt": "2026-05-01T20:21:09.050Z",
+      "summary": "query_kb_sql returned 1 row(s).",
+      "technical": {
+        "rawLabel": "tool:query_kb_sql",
+        "toolName": "query_kb_sql",
+        "payload": {
+          "ok": true,
+          "tool": "query_kb_sql",
+          "result": {
+            "purpose": "count TC entities",
+            "sql": "SELECT COUNT(*) AS test_case_count FROM entities WHERE entity_type = 'TC'",
+            "columns": [
+              "test_case_count"
+            ],
+            "rows": [
+              {
+                "test_case_count": 17
+              }
+            ],
+            "rowCount": 1
+          }
+        },
+        "stdout": "{\n  \"purpose\": \"count TC entities\",\n  \"sql\": \"SELECT COUNT(*) AS test_case_count FROM entities WHERE entity_type = 'TC'\",\n  \"columns\": [\n    \"test_case_count\"\n  ],\n  \"rows\": [\n    {\n      \"test_case_count\": 17\n    }\n  ],\n  \"rowCount\": 1\n}"
+      }
+    },
+    {
+      "id": "event_moncyemv_tqb0i8",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "phase": "rag_ready",
+      "title": "Tool query_kb_sql: count TC entities",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:21:08.887Z",
+      "finishedAt": "2026-05-01T20:21:09.049Z",
+      "technical": {
+        "rawLabel": "Tool query_kb_sql: count TC entities",
+        "command": "source ingestion/.venv/bin/activate && UI_QA_SQL='SELECT COUNT(*) AS test_case_count FROM entities WHERE entity_type = '\\''TC'\\''' UI_QA_LIMIT=10 DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport json, os, psycopg\nsql = os.environ[\"UI_QA_SQL\"]\nlimit = int(os.environ.get(\"UI_QA_LIMIT\", \"50\"))\nwrapped = f\"select * from ({sql}) as uiqa_readonly_result limit {limit}\"\nwith psycopg.connect(os.environ[\"DATABASE_URL\"]) as conn:\n    conn.execute(\"set statement_timeout = '5000ms'\")\n    conn.execute(\"set transaction read only\")\n    with conn.cursor() as cur:\n        cur.execute(wrapped)\n        columns = [desc.name for desc in cur.description]\n        rows = [dict(zip(columns, row)) for row in cur.fetchall()]\nprint(json.dumps({\"columns\": columns, \"rows\": rows, \"rowCount\": len(rows)}))\nPY",
+        "stdout": "{\"columns\": [\"test_case_count\"], \"rows\": [{\"test_case_count\": 17}], \"rowCount\": 1}\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev_moncqiai_j7s9ob",
+      "createdAt": "2026-05-01T20:15:00.378Z",
+      "kind": "source",
+      "label": "01-business-requirements-document.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_moncqi9w_7yjek9/75ba74032f55_01-business-requirements-document.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_moncqiam_06wd6o",
+      "createdAt": "2026-05-01T20:15:00.382Z",
+      "kind": "source",
+      "label": "02-functional-requirements-specification.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_moncqi9w_7yjek9/1bf29955d09f_02-functional-requirements-specification.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_moncqian_xdvjxj",
+      "createdAt": "2026-05-01T20:15:00.383Z",
+      "kind": "source",
+      "label": "03-test-design-specification.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_moncqi9w_7yjek9/bc4a297e88b9_03-test-design-specification.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_moncqiap_efy19x",
+      "createdAt": "2026-05-01T20:15:00.385Z",
+      "kind": "source",
+      "label": "04-test-strategy.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_moncqi9w_7yjek9/bc452080a746_04-test-strategy.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_moncqiap_i2rmo5",
+      "createdAt": "2026-05-01T20:15:00.385Z",
+      "kind": "source",
+      "label": "05-test-plan.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_moncqi9w_7yjek9/64cc7c5d20b4_05-test-plan.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_moncqiaq_s020np",
+      "createdAt": "2026-05-01T20:15:00.386Z",
+      "kind": "source",
+      "label": "06-requirements-traceability-matrix.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_moncqi9w_7yjek9/bae75844e4bc_06-requirements-traceability-matrix.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_moncqias_svi6eg",
+      "createdAt": "2026-05-01T20:15:00.388Z",
+      "kind": "source",
+      "label": "07-test-data-environment-specification.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_moncqi9w_7yjek9/dee1179870fd_07-test-data-environment-specification.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_moncqiat_rwzjua",
+      "createdAt": "2026-05-01T20:15:00.389Z",
+      "kind": "source",
+      "label": "08-quality-risk-defect-governance.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_moncqi9w_7yjek9/c4d411862cc6_08-quality-risk-defect-governance.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_moncqiat_lbds60",
+      "createdAt": "2026-05-01T20:15:00.389Z",
+      "kind": "source",
+      "label": "09-test-case-repository.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_moncqi9w_7yjek9/2b17d95d7da3_09-test-case-repository.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_moncqib7_9lixq6",
+      "createdAt": "2026-05-01T20:15:00.403Z",
+      "kind": "folder",
+      "label": "Active source pack",
+      "path": "test_data/ui-qa/generated/uiqa_moncqi9w_7yjek9/source-pack",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_moncrdxi_oq48ze",
+      "createdAt": "2026-05-01T20:15:41.382Z",
+      "kind": "report",
+      "label": "Entity map summary",
+      "path": "test_data/test-results/uiqa_entity_summary_20260501201541.md",
+      "phase": "ingest_sources"
+    },
+    {
+      "id": "ev_monctvmf_ixb93c",
+      "createdAt": "2026-05-01T20:17:37.623Z",
+      "kind": "json",
+      "label": "Generated test case repository",
+      "path": "test_data/ui-qa/generated/uiqa_moncqi9w_7yjek9/test-case-repository.generated.json",
+      "phase": "generate_tests"
+    },
+    {
+      "id": "ev_monctvty_jysvlx",
+      "createdAt": "2026-05-01T20:17:37.894Z",
+      "kind": "workbook",
+      "label": "Generated TestCases.xlsx",
+      "path": "test_data/TestCases.xlsx",
+      "phase": "generate_tests"
+    },
+    {
+      "id": "ev_monctvtz_vidwyk",
+      "createdAt": "2026-05-01T20:17:37.895Z",
+      "kind": "report",
+      "label": "Generated test case repository Markdown",
+      "path": "test_data/ui-qa/generated/uiqa_moncqi9w_7yjek9/test-case-repository.generated.md",
+      "phase": "generate_tests"
+    },
+    {
+      "id": "ev_monctvzl_w3take",
+      "createdAt": "2026-05-01T20:17:38.097Z",
+      "kind": "report",
+      "label": "Generated test confidence audit",
+      "path": "test_data/test-results/generated_test_case_audit_20260501201738.md",
+      "phase": "audit_generated_tests"
+    },
+    {
+      "id": "ev_monctvzl_c7in08",
+      "createdAt": "2026-05-01T20:17:38.097Z",
+      "kind": "json",
+      "label": "Generated test confidence audit JSON",
+      "path": "test_data/test-results/generated_test_case_audit_20260501201738.json",
+      "phase": "audit_generated_tests"
+    }
+  ],
+  "checkpoints": [],
+  "messages": [
+    {
+      "id": "msg_moncrnfa_juovtp",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "role": "user",
+      "content": "what is tc 1",
+      "createdAt": "2026-05-01T20:15:53.686Z"
+    },
+    {
+      "id": "msg_moncrv38_lbc8ur",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "role": "assistant",
+      "content": "## TC-001 (test case 1)\n\n**TC-001** is present in the KB as a **`TC`** entity with **`TC-001`**, counted as **3 mentions across 2 documents** (`inspect_entities`).\n\nFrom the workbook-derived chunk in the corpus, TC-001 is defined as follows:\n\n| Field | Value |\n|--------|--------|\n| **TestCaseID** | TC-001 |\n| **Title** | Anchored to Test Plan meta (snippet shows linkage to Document ID **QAMVP-TPLAN-001**, version 0.1, dated 2026-04-22 — text is truncated in the chunk). |\n| **Objective** | Validate behaviour and controls described in **05-test-plan (Test Plan)**. |\n| **RequirementIDs** | **REQ-KB-001** |\n| **Priority** | **P1** |\n| **Suite** | **Generated From KB** |\n| **Tags** | `kb-generated`, `05-test-plan` |\n\n**Steps (summary):**\n\n1. **REQ-KB-001** — Review REQ-KB-001 and prepare data for the cited Test Plan content; expect relevant source context traceable to `source-pack/05-test-plan.docx#chunk-0`.\n2. **REQ-KB-001** — Execute the user-visible workflow or control from **05-test-plan**; expect behaviour to match the cited requirement.\n3. **REQ-KB-001** — Capture evidence and reconcile results; expect evidence to support **REQ-KB-001** with no unsupported behaviour (screenshots, logs, workbook rows, audit notes).\n\n**Citations**\n\n- Structured row: **TestCases** → `test_data/TestCases.xlsx`, heading *Test Case Repository > TC-001* (chunk **chunk-1141**).\n- Entity index: **TC** / **TC-001** — 3 mentions, 2 documents.\n\n**Method:** Entity lookup for `TC-001`, plus **search_kb_chunks** for `TC-001 test case 1`, which surfaced the **TestCases.xlsx** row as the authoritative row-level definition in this run.",
+      "createdAt": "2026-05-01T20:16:03.620Z"
+    },
+    {
+      "id": "msg_moncy4u6_cl5gqm",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "role": "user",
+      "content": "there are only 8 test cases? ",
+      "createdAt": "2026-05-01T20:20:56.190Z"
+    },
+    {
+      "id": "msg_moncy601_wsrb63",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "role": "user",
+      "content": "there are only 8 test cases? ",
+      "createdAt": "2026-05-01T20:20:57.697Z"
+    },
+    {
+      "id": "msg_moncyg5e_17ovvb",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "role": "assistant",
+      "content": "## Answer\n\nNo. For this run’s KB, `inspect_entities` with `entityType: \"TC\"` shows **14 distinct test-case entity IDs**, not 8.\n\n**Method:** Entity inventory grouped by `entity_type` and `canonical_id` (what `inspect_entities` runs for TC).\n\n**What the KB has:**  \nNumbered-style IDs include **TC-001** … **TC-008** (8 in that sequence), plus **TC-016**, and identifiers **TC-AUTH-001**, **TC-NFR-001**, **TC-QUEUE-004**, **TC-REPO-001**, and **TC-ID**.\n\nSo if “only 8” came from **TC-001–TC-008**, that matches **one slice** of the extraction. The **full TC entity set in the KB is 14** canonical IDs.\n\n**Note:** Some IDs (for example **TC-ID**) may be **noise** from document text rather than real test case IDs; the harness does not classify “valid TC” vs “mention” here—it only reports extracted TC entities.\n\n**SQL cross-check:** A `COUNT` on `kb_entity` was **not available** (`kb_entity` not on the read allowlist), so the count above is entirely from **`inspect_entities`**.",
+      "createdAt": "2026-05-01T20:21:10.850Z"
+    },
+    {
+      "id": "msg_moncyje7_yjt63z",
+      "runId": "uiqa_moncqi9w_7yjek9",
+      "role": "assistant",
+      "content": "## Answer\n\n**No.** In this KB, test cases are not limited to eight.\n\n### What the tools showed\n\n1. **`query_kb_sql`** — `COUNT(*)` over `entities` where `entity_type = 'TC'` returned **`17`** TC rows (**not** eight).\n\n2. **`inspect_entities`** — Grouping by `canonical_id` yielded **`14` distinct** TC identifiers (with **17** total rows implying some IDs appear more than once, e.g. `TC-001` with **3** mentions and `TC-016` with **2**).\n\n### Why “eight” can still feel right\n\nEight **sequentially numbered** IDs **`TC-001` … `TC-008`** are present, but the inventory also includes other TC-style IDs (**`TC-016`**, **`TC-AUTH-001`**, **`TC-NFR-001`**, **`TC-QUEUE-004`**, **`TC-REPO-001`**) and **`TC-ID`**, which may be section/header noise rather than a real test case.\n\n### Method\n\n- Definitive volume: **SQL count** on `entities` for type `TC`.  \n- Shape of the set: **`inspect_entities`** grouped by `canonical_id` (mentions and document spread).",
+      "createdAt": "2026-05-01T20:21:15.055Z"
+    }
+  ],
+  "blockerCount": 0,
+  "findingCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 8
+  },
+  "generatedSpecPath": "test_data/ui-qa/generated/uiqa_moncqi9w_7yjek9/test-case-repository.generated.json"
+}

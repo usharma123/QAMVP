@@ -1,0 +1,815 @@
+{
+  "id": "uiqa_mondg9ry_zmiz3i",
+  "scope": "ingestion-hardening-smoke",
+  "dryRun": false,
+  "autoApprove": true,
+  "status": "ready",
+  "currentPhase": "rag_ready",
+  "createdAt": "2026-05-01T20:35:02.398Z",
+  "updatedAt": "2026-05-01T20:35:22.574Z",
+  "uploads": [],
+  "events": [
+    {
+      "id": "event_mondg9rz_svw2x6",
+      "runId": "uiqa_mondg9ry_zmiz3i",
+      "phase": "upload_sources",
+      "title": "Active source pack ready",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:35:02.399Z",
+      "finishedAt": "2026-05-01T20:35:02.401Z",
+      "summary": "19 ingestible source document(s) ready."
+    },
+    {
+      "id": "event_mondg9s0_v2sefn",
+      "runId": "uiqa_mondg9ry_zmiz3i",
+      "phase": "upload_sources",
+      "title": "Validate BRD/FRS/HLD/LLD source contract",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:35:02.400Z",
+      "finishedAt": "2026-05-01T20:35:02.401Z",
+      "summary": "Source pack includes BRD, FRS, HLD, and LLD.",
+      "technical": {
+        "rawLabel": "source-contract",
+        "payload": {
+          "required": [
+            "BRD",
+            "FRS",
+            "HLD",
+            "LLD"
+          ],
+          "present": [
+            "FRS",
+            "HLD",
+            "LLD",
+            "BRD"
+          ],
+          "missing": []
+        }
+      }
+    },
+    {
+      "id": "event_mondg9s1_8w3i6z",
+      "runId": "uiqa_mondg9ry_zmiz3i",
+      "phase": "ingest_sources",
+      "title": "Ensure ingestion virtualenv",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:35:02.401Z",
+      "finishedAt": "2026-05-01T20:35:02.443Z",
+      "technical": {
+        "rawLabel": "Ensure ingestion virtualenv",
+        "command": "/bin/test -d ingestion/.venv || /usr/bin/python3 -m venv ingestion/.venv",
+        "stdout": "",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mondg9t7_wijym9",
+      "runId": "uiqa_mondg9ry_zmiz3i",
+      "phase": "ingest_sources",
+      "title": "Install ingestion dependencies",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:35:02.443Z",
+      "finishedAt": "2026-05-01T20:35:03.999Z",
+      "technical": {
+        "rawLabel": "Install ingestion dependencies",
+        "command": "source ingestion/.venv/bin/activate && ingestion/.venv/bin/pip install -r ingestion/requirements.txt -q",
+        "stdout": "",
+        "stderr": "\n[notice] A new release of pip is available: 26.0.1 -> 26.1\n[notice] To update, run: pip install --upgrade pip\n",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mondgb0f_5aj8s2",
+      "runId": "uiqa_mondg9ry_zmiz3i",
+      "phase": "ingest_sources",
+      "title": "Inspect Docker pgvector service",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:35:03.999Z",
+      "finishedAt": "2026-05-01T20:35:05.214Z",
+      "technical": {
+        "rawLabel": "Inspect Docker pgvector service",
+        "command": "set -euo pipefail\nDOCKER_BIN=\"$(command -v docker || true)\"\nif [ -z \"$DOCKER_BIN\" ]; then\n  for candidate in /opt/homebrew/bin/docker /usr/local/bin/docker /Applications/Docker.app/Contents/Resources/bin/docker; do\n    if [ -x \"$candidate\" ]; then\n      DOCKER_BIN=\"$candidate\"\n      break\n    fi\n  done\nfi\nif [ -z \"$DOCKER_BIN\" ]; then\n  echo \"Docker CLI not found. Install Docker Desktop or add docker to PATH.\" >&2\n  exit 127\nfi\nif ! \"$DOCKER_BIN\" info >/dev/null 2>&1; then\n  echo \"Docker CLI was found at $DOCKER_BIN, but the Docker daemon is not reachable.\" >&2\n  echo \"Open Docker Desktop and wait for the engine to finish starting.\" >&2\n  exit 1\nfi\nCOMPOSE=(\"$DOCKER_BIN\" compose -f ingestion/docker-compose.yml)\n\"$DOCKER_BIN\" version\n\"${COMPOSE[@]}\" ps",
+        "stdout": "Client: Docker Engine - Community\n Version:           28.1.1\n API version:       1.49\n Go version:        go1.24.2\n Git commit:        4eba377327\n Built:             Fri Apr 18 09:44:47 2025\n OS/Arch:           darwin/arm64\n Context:           desktop-linux\n\nServer: Docker Desktop 4.55.0 (213807)\n Engine:\n  Version:          29.1.3\n  API version:      1.52 (minimum version 1.44)\n  Go version:       go1.25.5\n  Git commit:       fbf3ed2\n  Built:            Fri Dec 12 14:50:40 2025\n  OS/Arch:          linux/arm64\n  Experimental:     false\n containerd:\n  Version:          v2.2.0\n  GitCommit:        1c4457e00facac03ce1d75f7b6777a7a851e5c41\n runc:\n  Version:          1.3.4\n  GitCommit:        v1.3.4-0-gd6d73eb8\n docker-init:\n  Version:          0.19.0\n  GitCommit:        de40ad0\nNAME                 IMAGE                    COMMAND                  SERVICE    CREATED      STATUS                 PORTS\nqamvp-ingestion-pg   pgvector/pgvector:pg16   \"docker-entrypoint.s…\"   postgres   9 days ago   Up 6 hours (healthy)   0.0.0.0:5433->5432/tcp, [::]:5433->5432/tcp\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mondgby6_6aros7",
+      "runId": "uiqa_mondg9ry_zmiz3i",
+      "phase": "ingest_sources",
+      "title": "Start local pgvector DB",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:35:05.214Z",
+      "finishedAt": "2026-05-01T20:35:05.432Z",
+      "technical": {
+        "rawLabel": "Start local pgvector DB",
+        "command": "set -euo pipefail\nDOCKER_BIN=\"$(command -v docker || true)\"\nif [ -z \"$DOCKER_BIN\" ]; then\n  for candidate in /opt/homebrew/bin/docker /usr/local/bin/docker /Applications/Docker.app/Contents/Resources/bin/docker; do\n    if [ -x \"$candidate\" ]; then\n      DOCKER_BIN=\"$candidate\"\n      break\n    fi\n  done\nfi\nif [ -z \"$DOCKER_BIN\" ]; then\n  echo \"Docker CLI not found. Install Docker Desktop or add docker to PATH.\" >&2\n  exit 127\nfi\nif ! \"$DOCKER_BIN\" info >/dev/null 2>&1; then\n  echo \"Docker CLI was found at $DOCKER_BIN, but the Docker daemon is not reachable.\" >&2\n  echo \"Open Docker Desktop and wait for the engine to finish starting.\" >&2\n  exit 1\nfi\nCOMPOSE=(\"$DOCKER_BIN\" compose -f ingestion/docker-compose.yml)\n\"${COMPOSE[@]}\" up -d postgres",
+        "stdout": "",
+        "stderr": " Container qamvp-ingestion-pg  Running\n",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mondgc49_aztwd6",
+      "runId": "uiqa_mondg9ry_zmiz3i",
+      "phase": "ingest_sources",
+      "title": "Wait for pgvector DB readiness",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:35:05.433Z",
+      "finishedAt": "2026-05-01T20:35:05.659Z",
+      "technical": {
+        "rawLabel": "Wait for pgvector DB readiness",
+        "command": "set -euo pipefail\nDOCKER_BIN=\"$(command -v docker || true)\"\nif [ -z \"$DOCKER_BIN\" ]; then\n  for candidate in /opt/homebrew/bin/docker /usr/local/bin/docker /Applications/Docker.app/Contents/Resources/bin/docker; do\n    if [ -x \"$candidate\" ]; then\n      DOCKER_BIN=\"$candidate\"\n      break\n    fi\n  done\nfi\nif [ -z \"$DOCKER_BIN\" ]; then\n  echo \"Docker CLI not found. Install Docker Desktop or add docker to PATH.\" >&2\n  exit 127\nfi\nif ! \"$DOCKER_BIN\" info >/dev/null 2>&1; then\n  echo \"Docker CLI was found at $DOCKER_BIN, but the Docker daemon is not reachable.\" >&2\n  echo \"Open Docker Desktop and wait for the engine to finish starting.\" >&2\n  exit 1\nfi\nCOMPOSE=(\"$DOCKER_BIN\" compose -f ingestion/docker-compose.yml)\nfor attempt in {1..45}; do\n  if \"${COMPOSE[@]}\" exec -T postgres pg_isready -U ingestion -d ingestion >/dev/null 2>&1; then\n    echo \"Postgres is ready after $attempt attempt(s).\"\n    exit 0\n  fi\n  echo \"Waiting for Postgres/pgvector readiness ($attempt/45)...\"\n  sleep 2\ndone\necho \"Postgres did not become ready within 90 seconds.\" >&2\n\"${COMPOSE[@]}\" ps >&2 || true\n\"${COMPOSE[@]}\" logs --tail=120 postgres >&2 || true\nexit 1",
+        "stdout": "Postgres is ready after 1 attempt(s).\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mondgcaj_l79wme",
+      "runId": "uiqa_mondg9ry_zmiz3i",
+      "phase": "ingest_sources",
+      "title": "Apply ingestion migrations",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:35:05.659Z",
+      "finishedAt": "2026-05-01T20:35:06.240Z",
+      "technical": {
+        "rawLabel": "Apply ingestion migrations",
+        "command": "set -euo pipefail\nDOCKER_BIN=\"$(command -v docker || true)\"\nif [ -z \"$DOCKER_BIN\" ]; then\n  for candidate in /opt/homebrew/bin/docker /usr/local/bin/docker /Applications/Docker.app/Contents/Resources/bin/docker; do\n    if [ -x \"$candidate\" ]; then\n      DOCKER_BIN=\"$candidate\"\n      break\n    fi\n  done\nfi\nif [ -z \"$DOCKER_BIN\" ]; then\n  echo \"Docker CLI not found. Install Docker Desktop or add docker to PATH.\" >&2\n  exit 127\nfi\nif ! \"$DOCKER_BIN\" info >/dev/null 2>&1; then\n  echo \"Docker CLI was found at $DOCKER_BIN, but the Docker daemon is not reachable.\" >&2\n  echo \"Open Docker Desktop and wait for the engine to finish starting.\" >&2\n  exit 1\nfi\nCOMPOSE=(\"$DOCKER_BIN\" compose -f ingestion/docker-compose.yml)\nfor migration in ingestion/sql/*.sql; do\n  echo \"Applying $migration\"\n  \"${COMPOSE[@]}\" exec -T postgres psql -v ON_ERROR_STOP=1 -U ingestion -d ingestion < \"$migration\"\ndone\necho \"Migrations applied.\"",
+        "stdout": "Applying ingestion/sql/001_extensions.sql\nCREATE EXTENSION\nApplying ingestion/sql/002_schema.sql\nCREATE TABLE\nCREATE TABLE\nCREATE INDEX\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nCREATE INDEX\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nCREATE INDEX\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nCREATE INDEX\nCREATE INDEX\nApplying ingestion/sql/003_test_case_inventory.sql\nDO\nALTER TABLE\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nApplying ingestion/sql/004_rtm_requirements.sql\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nCREATE INDEX\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nMigrations applied.\n",
+        "stderr": "NOTICE:  extension \"vector\" already exists, skipping\nNOTICE:  relation \"documents\" already exists, skipping\nNOTICE:  relation \"chunks\" already exists, skipping\nNOTICE:  relation \"idx_chunks_document\" already exists, skipping\nNOTICE:  relation \"entities\" already exists, skipping\nNOTICE:  relation \"idx_entities_document\" already exists, skipping\nNOTICE:  relation \"idx_entities_type\" already exists, skipping\nNOTICE:  relation \"idx_entities_canonical\" already exists, skipping\nNOTICE:  relation \"relationships\" already exists, skipping\nNOTICE:  relation \"idx_rel_source_chunk\" already exists, skipping\nNOTICE:  relation \"idx_rel_source_doc\" already exists, skipping\nNOTICE:  relation \"idx_rel_type\" already exists, skipping\nNOTICE:  relation \"test_cases\" already exists, skipping\nNOTICE:  relation \"idx_test_cases_requirement_ids\" already exists, skipping\nNOTICE:  relation \"idx_test_cases_suite\" already exists, skipping\nNOTICE:  relation \"test_case_steps\" already exists, skipping\nNOTICE:  relation \"idx_test_case_steps_requirement\" already exists, skipping\nNOTICE:  relation \"idx_test_case_steps_case\" already exists, skipping\nNOTICE:  relation \"chunks_embedding_hnsw\" already exists, skipping\nNOTICE:  relation \"chunks_content_fts\" already exists, skipping\nNOTICE:  relation \"test_cases\" already exists, skipping\nNOTICE:  relation \"idx_test_cases_requirement_ids\" already exists, skipping\nNOTICE:  relation \"idx_test_cases_suite\" already exists, skipping\nNOTICE:  relation \"test_case_steps\" already exists, skipping\nNOTICE:  relation \"idx_test_case_steps_requirement\" already exists, skipping\nNOTICE:  relation \"idx_test_case_steps_case\" already exists, skipping\nNOTICE:  relation \"requirements\" already exists, skipping\nNOTICE:  relation \"idx_requirements_document_kind\" already exists, skipping\nNOTICE:  relation \"idx_requirements_source_chunk\" already exists, skipping\nNOTICE:  relation \"requirement_links\" already exists, skipping\nNOTICE:  relation \"idx_requirement_links_source\" already exists, skipping\nNOTICE:  relation \"idx_requirement_links_target\" already exists, skipping\nNOTICE:  relation \"idx_requirement_links_type\" already exists, skipping\nNOTICE:  relation \"rtm_rows\" already exists, skipping\nNOTICE:  relation \"idx_rtm_rows_status\" already exists, skipping\nNOTICE:  relation \"idx_rtm_rows_confidence\" already exists, skipping\n",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mondgcqs_8n1l3l",
+      "runId": "uiqa_mondg9ry_zmiz3i",
+      "phase": "ingest_sources",
+      "title": "Verify pgvector DB schema",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:35:06.244Z",
+      "finishedAt": "2026-05-01T20:35:06.580Z",
+      "technical": {
+        "rawLabel": "Verify pgvector DB schema",
+        "command": "set -euo pipefail\nDOCKER_BIN=\"$(command -v docker || true)\"\nif [ -z \"$DOCKER_BIN\" ]; then\n  for candidate in /opt/homebrew/bin/docker /usr/local/bin/docker /Applications/Docker.app/Contents/Resources/bin/docker; do\n    if [ -x \"$candidate\" ]; then\n      DOCKER_BIN=\"$candidate\"\n      break\n    fi\n  done\nfi\nif [ -z \"$DOCKER_BIN\" ]; then\n  echo \"Docker CLI not found. Install Docker Desktop or add docker to PATH.\" >&2\n  exit 127\nfi\nif ! \"$DOCKER_BIN\" info >/dev/null 2>&1; then\n  echo \"Docker CLI was found at $DOCKER_BIN, but the Docker daemon is not reachable.\" >&2\n  echo \"Open Docker Desktop and wait for the engine to finish starting.\" >&2\n  exit 1\nfi\nCOMPOSE=(\"$DOCKER_BIN\" compose -f ingestion/docker-compose.yml)\n\"${COMPOSE[@]}\" exec -T postgres psql -U ingestion -d ingestion -c \"select extname from pg_extension where extname = 'vector';\"\n\"${COMPOSE[@]}\" exec -T postgres psql -U ingestion -d ingestion -c \"select table_name from information_schema.tables where table_schema = 'public' order by table_name;\"",
+        "stdout": " extname \n---------\n vector\n(1 row)\n\n    table_name     \n-------------------\n chunks\n documents\n entities\n relationships\n requirement_links\n requirements\n rtm_rows\n test_case_steps\n test_cases\n(9 rows)\n\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mondgd04_jrghge",
+      "runId": "uiqa_mondg9ry_zmiz3i",
+      "phase": "ingest_sources",
+      "title": "Embed source documents into pgvector",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:35:06.580Z",
+      "finishedAt": "2026-05-01T20:35:21.154Z",
+      "technical": {
+        "rawLabel": "Embed source documents into pgvector",
+        "command": "source ingestion/.venv/bin/activate && DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python ingestion/scripts/ingest.py --format both --skip-test-cases --test-doc '/Users/utsavsharma/Documents/GitHub/QAMVP/test-doc'",
+        "stdout": "  ingested test-doc/01-business-requirements-document.docx (docx): 61 chunks\n  ingested test-doc/02-functional-requirements-specification.docx (docx): 114 chunks\n  ingested test-doc/03-test-design-specification.docx (docx): 26 chunks\n  ingested test-doc/04-test-strategy.docx (docx): 12 chunks\n  skip non-source document for first-phase ingestion: test-doc/05-test-plan.docx (other)\n  skip non-source document for first-phase ingestion: test-doc/06-requirements-traceability-matrix.docx (other)\n  skip non-source document for first-phase ingestion: test-doc/07-test-data-environment-specification.docx (other)\n  skip non-source document for first-phase ingestion: test-doc/08-quality-risk-defect-governance.docx (other)\n  skip non-source document for first-phase ingestion: test-doc/09-test-case-repository.docx (test_case_repository)\n  ingested test-doc/01-business-requirements-document.md (md): 86 chunks\n  ingested test-doc/02-functional-requirements-specification.md (md): 142 chunks\n  ingested test-doc/03-test-design-specification.md (md): 38 chunks\n  ingested test-doc/04-test-strategy.md (md): 20 chunks\n  skip non-source document for first-phase ingestion: test-doc/05-test-plan.md (other)\n  skip non-source document for first-phase ingestion: test-doc/06-requirements-traceability-matrix.md (other)\n  skip non-source document for first-phase ingestion: test-doc/07-test-data-environment-specification.md (other)\n  skip non-source document for first-phase ingestion: test-doc/08-quality-risk-defect-governance.md (other)\n  skip non-source document for first-phase ingestion: test-doc/09-test-case-repository.md (test_case_repository)\n  skip non-source document for first-phase ingestion: test-doc/README.md (other)\nDone.\n",
+        "stderr": "Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n\rLoading weights:   0%|          | 0/103 [00:00<?, ?it/s]\rLoading weights: 100%|██████████| 103/103 [00:00<00:00, 7005.81it/s]\n\u001b[1mBertModel LOAD REPORT\u001b[0m from: sentence-transformers/all-MiniLM-L6-v2\nKey                     | Status     |  | \n------------------------+------------+--+-\nembeddings.position_ids | UNEXPECTED |  | \n\nNotes:\n- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n\rBatches:   0%|          | 0/2 [00:00<?, ?it/s]\rBatches:  50%|█████     | 1/2 [00:00<00:00,  5.25it/s]\rBatches: 100%|██████████| 2/2 [00:00<00:00,  8.44it/s]\n\rBatches:   0%|          | 0/4 [00:00<?, ?it/s]\rBatches:  50%|█████     | 2/4 [00:00<00:00, 16.88it/s]\rBatches: 100%|██████████| 4/4 [00:00<00:00, 22.19it/s]\n\rBatches:   0%|          | 0/1 [00:00<?, ?it/s]\rBatches: 100%|██████████| 1/1 [00:00<00:00, 20.15it/s]\n\rBatches:   0%|          | 0/3 [00:00<?, ?it/s]\rBatches:  67%|██████▋   | 2/3 [00:00<00:00, 11.83it/s]\rBatches: 100%|██████████| 3/3 [00:00<00:00, 14.70it/s]\n\rBatches:   0%|          | 0/5 [00:00<?, ?it/s]\rBatches:  40%|████      | 2/5 [00:00<00:00, 12.11it/s]\rBatches: 100%|██████████| 5/5 [00:00<00:00, 16.61it/s]\rBatches: 100%|██████████| 5/5 [00:00<00:00, 15.90it/s]\n\rBatches:   0%|          | 0/2 [00:00<?, ?it/s]\rBatches: 100%|██████████| 2/2 [00:00<00:00, 19.06it/s]\rBatches: 100%|██████████| 2/2 [00:00<00:00, 19.04it/s]\n\rBatches:   0%|          | 0/1 [00:00<?, ?it/s]\rBatches: 100%|██████████| 1/1 [00:00<00:00, 21.81it/s]\n",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mondgo8z_49w29f",
+      "runId": "uiqa_mondg9ry_zmiz3i",
+      "phase": "ingest_sources",
+      "title": "Derive requirement RTM",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:35:21.155Z",
+      "finishedAt": "2026-05-01T20:35:21.547Z",
+      "technical": {
+        "rawLabel": "Derive requirement RTM",
+        "command": "source ingestion/.venv/bin/activate && DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport hashlib, json, os, re\nfrom collections import defaultdict\n\nimport psycopg\nfrom psycopg.types.json import Json\n\nSOURCE_KINDS = (\"brd\", \"frs\", \"hld\", \"lld\")\nENTITY_TYPES = (\"REQ\", \"BR\", \"DESIGN\", \"SECTION\", \"API\", \"COMP\", \"DATA\", \"CTRL\")\nKIND_ORDER = {\"brd\": 0, \"frs\": 1, \"hld\": 2, \"lld\": 3}\n\ndef req_type(entity_type, req_id):\n    if entity_type == \"BR\" or req_id.startswith(\"BR-\"):\n        return \"business\"\n    if req_id.startswith(\"REQ-FR\") or req_id.startswith(\"FRS-\") or \"FRS\" in req_id:\n        return \"functional\"\n    if req_id.startswith(\"HLD-\") or \"HLD\" in req_id:\n        return \"hld_design\"\n    if req_id.startswith(\"LLD-\") or \"LLD\" in req_id:\n        return \"lld_design\"\n    if entity_type == \"SECTION\":\n        return \"section\"\n    if entity_type == \"DESIGN\":\n        return \"design\"\n    return \"requirement\"\n\ndef stable_hash(*parts):\n    return hashlib.sha256(\"|\".join(str(p or \"\") for p in parts).encode()).hexdigest()\n\nwith psycopg.connect(os.environ[\"DATABASE_URL\"]) as conn:\n    with conn.cursor() as cur:\n        cur.execute(\"delete from rtm_rows\")\n        cur.execute(\"delete from requirement_links\")\n        cur.execute(\"delete from requirements\")\n        cur.execute(\n            \"\"\"\n            select e.entity_type, e.canonical_id, d.id, c.id, d.kind, coalesce(c.heading_path, ''), c.content\n            from entities e\n            join documents d on d.id = e.document_id\n            join chunks c on c.id = e.chunk_id\n            where d.kind = any(%s)\n              and e.entity_type = any(%s)\n            order by d.kind, d.id, c.ordinal, e.canonical_id\n            \"\"\",\n            (list(SOURCE_KINDS), list(ENTITY_TYPES)),\n        )\n        rows = cur.fetchall()\n        by_chunk = defaultdict(list)\n        requirements = {}\n        for entity_type, canonical_id, doc_id, chunk_id, kind, heading, content in rows:\n            req_id = canonical_id.upper()\n            title = heading or req_id\n            text = re.sub(r\"\\s+\", \" \", content or \"\").strip()[:1200]\n            requirements[req_id] = {\n                \"requirement_id\": req_id,\n                \"requirement_type\": req_type(entity_type, req_id),\n                \"source_document_id\": doc_id,\n                \"source_chunk_id\": chunk_id,\n                \"document_kind\": kind,\n                \"title\": title[:240],\n                \"requirement_text\": text,\n                \"canonical_hash\": stable_hash(req_id, text),\n                \"metadata\": {\"entity_type\": entity_type},\n            }\n            by_chunk[chunk_id].append(req_id)\n\n        for item in requirements.values():\n            cur.execute(\n                \"\"\"\n                insert into requirements (\n                  requirement_id, requirement_type, source_document_id, source_chunk_id,\n                  document_kind, title, requirement_text, canonical_hash, metadata, updated_at\n                )\n                values (%s, %s, %s, %s, %s, %s, %s, %s, %s, now())\n                on conflict (requirement_id) do update set\n                  requirement_type = excluded.requirement_type,\n                  source_document_id = excluded.source_document_id,\n                  source_chunk_id = excluded.source_chunk_id,\n                  document_kind = excluded.document_kind,\n                  title = excluded.title,\n                  requirement_text = excluded.requirement_text,\n                  canonical_hash = excluded.canonical_hash,\n                  metadata = excluded.metadata,\n                  updated_at = now()\n                \"\"\",\n                (\n                    item[\"requirement_id\"],\n                    item[\"requirement_type\"],\n                    item[\"source_document_id\"],\n                    item[\"source_chunk_id\"],\n                    item[\"document_kind\"],\n                    item[\"title\"],\n                    item[\"requirement_text\"],\n                    item[\"canonical_hash\"],\n                    Json(item[\"metadata\"]),\n                ),\n            )\n\n        link_count = 0\n        for chunk_id, ids in by_chunk.items():\n            unique_ids = sorted(set(ids), key=lambda rid: (KIND_ORDER.get(requirements[rid][\"document_kind\"], 99), rid))\n            for source in unique_ids:\n                for target in unique_ids:\n                    if source == target:\n                        continue\n                    sk = requirements[source][\"document_kind\"]\n                    tk = requirements[target][\"document_kind\"]\n                    if KIND_ORDER.get(tk, 99) != KIND_ORDER.get(sk, 99) + 1:\n                        continue\n                    link_id = stable_hash(source, target, chunk_id)[:32]\n                    link_type = f\"{sk}_to_{tk}\"\n                    cur.execute(\n                        \"\"\"\n                        insert into requirement_links (\n                          id, source_requirement_id, target_requirement_id, link_type,\n                          confidence, evidence_chunk_id, evidence, metadata, updated_at\n                        )\n                        values (%s, %s, %s, %s, %s, %s, %s, %s, now())\n                        on conflict (id) do update set\n                          confidence = excluded.confidence,\n                          evidence_chunk_id = excluded.evidence_chunk_id,\n                          evidence = excluded.evidence,\n                          metadata = excluded.metadata,\n                          updated_at = now()\n                        \"\"\",\n                        (\n                            link_id,\n                            source,\n                            target,\n                            link_type,\n                            0.78,\n                            chunk_id,\n                            requirements[target][\"requirement_text\"][:500],\n                            Json({\"derivation\": \"same_chunk_adjacent_doc_kind\"}),\n                        ),\n                    )\n                    link_count += 1\n\n        by_kind = defaultdict(list)\n        for req_id, item in requirements.items():\n            by_kind[item[\"document_kind\"]].append(req_id)\n\n        rtm_count = 0\n        unmapped = 0\n        centers = by_kind[\"frs\"] or by_kind[\"brd\"] or sorted(requirements)\n        for idx, center in enumerate(sorted(centers)):\n            def nearest(kind):\n                candidates = sorted(by_kind[kind])\n                if not candidates:\n                    return None\n                return candidates[min(idx, len(candidates) - 1)]\n\n            br = nearest(\"brd\")\n            fr = center if requirements[center][\"document_kind\"] == \"frs\" else nearest(\"frs\")\n            hld = nearest(\"hld\")\n            lld = nearest(\"lld\")\n            linked = [x for x in (br, fr, hld, lld) if x]\n            missing = 4 - len(linked)\n            unmapped += missing\n            confidence = max(0.35, 1 - missing * 0.16)\n            status = \"complete\" if missing == 0 else \"partial\"\n            evidence = [requirements[x][\"source_chunk_id\"] for x in linked if requirements[x].get(\"source_chunk_id\")]\n            rtm_id = stable_hash(br, fr, hld, lld)[:32]\n            cur.execute(\n                \"\"\"\n                insert into rtm_rows (\n                  rtm_id, business_requirement_id, functional_requirement_id, hld_requirement_id,\n                  lld_requirement_id, coverage_status, confidence, evidence_chunk_ids, notes, metadata, updated_at\n                )\n                values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, now())\n                on conflict (rtm_id) do update set\n                  business_requirement_id = excluded.business_requirement_id,\n                  functional_requirement_id = excluded.functional_requirement_id,\n                  hld_requirement_id = excluded.hld_requirement_id,\n                  lld_requirement_id = excluded.lld_requirement_id,\n                  coverage_status = excluded.coverage_status,\n                  confidence = excluded.confidence,\n                  evidence_chunk_ids = excluded.evidence_chunk_ids,\n                  notes = excluded.notes,\n                  metadata = excluded.metadata,\n                  updated_at = now()\n                \"\"\",\n                (\n                    rtm_id,\n                    br,\n                    fr,\n                    hld,\n                    lld,\n                    status,\n                    confidence,\n                    evidence,\n                    f\"{missing} missing requirement column(s).\" if missing else \"All requirement columns mapped.\",\n                    Json({\"derived_from\": \"requirement_inventory\", \"center\": center}),\n                ),\n            )\n            rtm_count += 1\n\n        cur.execute(\"select count(*) from requirements\")\n        req_count = int(cur.fetchone()[0] or 0)\n        cur.execute(\"select count(*) from rtm_rows\")\n        row_count = int(cur.fetchone()[0] or 0)\n        cur.execute(\"select coalesce(avg(confidence), 0) from rtm_rows\")\n        avg_conf = float(cur.fetchone()[0] or 0)\n        conn.commit()\n\nprint(json.dumps({\n  \"requirements\": req_count,\n  \"rows\": row_count,\n  \"links\": link_count,\n  \"unmapped\": unmapped,\n  \"averageConfidence\": round(avg_conf, 3),\n}))\nPY",
+        "stdout": "{\"requirements\": 58, \"rows\": 22, \"links\": 634, \"unmapped\": 0, \"averageConfidence\": 1.0}\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mondgojw_5mpwkq",
+      "runId": "uiqa_mondg9ry_zmiz3i",
+      "phase": "ingest_sources",
+      "title": "Derived requirement RTM",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:35:21.548Z",
+      "finishedAt": "2026-05-01T20:35:21.548Z",
+      "summary": "22 RTM row(s), 58 requirement(s), 0 unmapped column(s).",
+      "technical": {
+        "rawLabel": "ingest:rtm",
+        "payload": {
+          "kind": "rtm-summary",
+          "requirements": 58,
+          "rows": 22,
+          "links": 634,
+          "unmapped": 0,
+          "averageConfidence": 1
+        }
+      }
+    },
+    {
+      "id": "event_mondgojx_u5wh3b",
+      "runId": "uiqa_mondg9ry_zmiz3i",
+      "phase": "ingest_sources",
+      "title": "Query ingestion knowledge graph",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:35:21.549Z",
+      "finishedAt": "2026-05-01T20:35:21.710Z",
+      "technical": {
+        "rawLabel": "Query ingestion knowledge graph",
+        "command": "source ingestion/.venv/bin/activate && DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport os, json, psycopg\nout = {\"documents\": [], \"entities\": [], \"relationships\": [], \"rel_samples\": [], \"rtm\": None}\nwith psycopg.connect(os.environ['DATABASE_URL']) as conn, conn.cursor() as cur:\n    cur.execute(\"\"\"\n      select d.id,\n             coalesce(d.title, d.path) as label,\n             coalesce(d.kind, d.source_format, 'doc') as kind,\n             (select count(*) from chunks c where c.document_id = d.id) as chunks,\n             (select count(*) from entities e where e.document_id = d.id) as entities,\n             (select count(*) from relationships r where r.source_document_id = d.id) as rels\n      from documents d\n      order by d.created_at desc nulls last, d.id desc\n      limit 30\n    \"\"\")\n    for row in cur.fetchall():\n        out[\"documents\"].append({\n            \"id\": int(row[0]),\n            \"label\": row[1] or \"\",\n            \"kind\": (row[2] or \"doc\").upper(),\n            \"chunks\": int(row[3] or 0),\n            \"entities\": int(row[4] or 0),\n            \"rels\": int(row[5] or 0),\n        })\n    cur.execute(\"select entity_type, count(*) from entities group by entity_type order by count(*) desc, entity_type\")\n    out[\"entities\"] = [{\"type\": t, \"count\": int(c)} for t, c in cur.fetchall()]\n    cur.execute(\"select rel_type, count(*) from relationships group by rel_type order by count(*) desc, rel_type limit 12\")\n    out[\"relationships\"] = [{\"type\": t, \"count\": int(c)} for t, c in cur.fetchall()]\n    cur.execute(\"\"\"\n      select r.rel_type,\n             coalesce(sd.title, sd.path, '') as source_label,\n             coalesce(nullif(r.target_path, ''), nullif(r.target_anchor, ''), '') as target_label\n      from relationships r\n      left join documents sd on sd.id = r.source_document_id\n      order by r.id desc\n      limit 8\n    \"\"\")\n    out[\"rel_samples\"] = [{\"type\": t, \"from\": s or \"\", \"to\": tg or \"\"} for t, s, tg in cur.fetchall()]\n    cur.execute(\"\"\"\n      select\n        coalesce((select count(*) from requirements), 0)::int,\n        coalesce((select count(*) from rtm_rows), 0)::int,\n        coalesce((select count(*) from requirement_links), 0)::int,\n        coalesce((select sum(4\n          - (case when business_requirement_id is null then 0 else 1 end)\n          - (case when functional_requirement_id is null then 0 else 1 end)\n          - (case when hld_requirement_id is null then 0 else 1 end)\n          - (case when lld_requirement_id is null then 0 else 1 end)\n        ) from rtm_rows), 0)::int,\n        coalesce((select avg(confidence) from rtm_rows), 0)::float\n    \"\"\")\n    reqs, rows, links, unmapped, avg_conf = cur.fetchone()\n    out[\"rtm\"] = {\n      \"requirements\": int(reqs or 0),\n      \"rows\": int(rows or 0),\n      \"links\": int(links or 0),\n      \"unmapped\": int(unmapped or 0),\n      \"averageConfidence\": round(float(avg_conf or 0), 3),\n    }\nprint(json.dumps(out))\nPY",
+        "stdout": "{\"documents\": [{\"id\": 52, \"label\": \"04-test-strategy\", \"kind\": \"LLD\", \"chunks\": 20, \"entities\": 2, \"rels\": 8}, {\"id\": 51, \"label\": \"03-test-design-specification\", \"kind\": \"HLD\", \"chunks\": 38, \"entities\": 42, \"rels\": 10}, {\"id\": 50, \"label\": \"02-functional-requirements-specification\", \"kind\": \"FRS\", \"chunks\": 142, \"entities\": 184, \"rels\": 6}, {\"id\": 49, \"label\": \"01-business-requirements-document\", \"kind\": \"BRD\", \"chunks\": 86, \"entities\": 161, \"rels\": 9}, {\"id\": 48, \"label\": \"04-test-strategy\", \"kind\": \"LLD\", \"chunks\": 12, \"entities\": 1, \"rels\": 8}, {\"id\": 47, \"label\": \"03-test-design-specification\", \"kind\": \"HLD\", \"chunks\": 26, \"entities\": 19, \"rels\": 10}, {\"id\": 46, \"label\": \"02-functional-requirements-specification\", \"kind\": \"FRS\", \"chunks\": 114, \"entities\": 127, \"rels\": 6}, {\"id\": 45, \"label\": \"01-business-requirements-document\", \"kind\": \"BRD\", \"chunks\": 61, \"entities\": 69, \"rels\": 8}, {\"id\": 40, \"label\": \"TestCases\", \"kind\": \"TEST_CASE_REPOSITORY\", \"chunks\": 8, \"entities\": 8, \"rels\": 0}, {\"id\": 39, \"label\": \"09-test-case-repository\", \"kind\": \"TEST_CASE_REPOSITORY\", \"chunks\": 18, \"entities\": 1, \"rels\": 0}, {\"id\": 38, \"label\": \"08-quality-risk-defect-governance\", \"kind\": \"GOVERNANCE\", \"chunks\": 12, \"entities\": 0, \"rels\": 4}, {\"id\": 37, \"label\": \"07-test-data-environment-specification\", \"kind\": \"TEST_DATA\", \"chunks\": 14, \"entities\": 1, \"rels\": 3}, {\"id\": 36, \"label\": \"06-requirements-traceability-matrix\", \"kind\": \"RTM\", \"chunks\": 10, \"entities\": 18, \"rels\": 5}, {\"id\": 35, \"label\": \"05-test-plan\", \"kind\": \"PLAN\", \"chunks\": 10, \"entities\": 0, \"rels\": 6}, {\"id\": 34, \"label\": \"04-test-strategy\", \"kind\": \"STRATEGY\", \"chunks\": 12, \"entities\": 1, \"rels\": 8}, {\"id\": 33, \"label\": \"03-test-design-specification\", \"kind\": \"TDS\", \"chunks\": 26, \"entities\": 19, \"rels\": 10}, {\"id\": 32, \"label\": \"02-functional-requirements-specification\", \"kind\": \"FRS\", \"chunks\": 114, \"entities\": 127, \"rels\": 6}, {\"id\": 31, \"label\": \"01-business-requirements-document\", \"kind\": \"BRD\", \"chunks\": 61, \"entities\": 69, \"rels\": 8}], \"entities\": [{\"type\": \"BR\", \"count\": 488}, {\"type\": \"REQ\", \"count\": 302}, {\"type\": \"SECTION\", \"count\": 26}, {\"type\": \"TC\", \"count\": 17}, {\"type\": \"TKT\", \"count\": 16}], \"relationships\": [{\"type\": \"docx_hyperlink\", \"count\": 82}, {\"type\": \"markdown_link\", \"count\": 33}], \"rel_samples\": [{\"type\": \"markdown_link\", \"from\": \"04-test-strategy\", \"to\": \"test-doc/05-test-plan.md\"}, {\"type\": \"markdown_link\", \"from\": \"04-test-strategy\", \"to\": \"test-doc/SDLC-Test-Tracker.xlsx\"}, {\"type\": \"markdown_link\", \"from\": \"04-test-strategy\", \"to\": \"test-doc/06-requirements-traceability-matrix.md\"}, {\"type\": \"markdown_link\", \"from\": \"04-test-strategy\", \"to\": \"test-doc/05-test-plan.md\"}, {\"type\": \"markdown_link\", \"from\": \"04-test-strategy\", \"to\": \"test-doc/03-test-design-specification.md\"}, {\"type\": \"markdown_link\", \"from\": \"04-test-strategy\", \"to\": \"test-doc/02-functional-requirements-specification.md\"}, {\"type\": \"markdown_link\", \"from\": \"04-test-strategy\", \"to\": \"test-doc/01-business-requirements-document.md\"}, {\"type\": \"markdown_link\", \"from\": \"04-test-strategy\", \"to\": \"test-doc/README.md\"}], \"rtm\": {\"requirements\": 58, \"rows\": 22, \"links\": 634, \"unmapped\": 0, \"averageConfidence\": 1.0}}\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mondgoof_urx83u",
+      "runId": "uiqa_mondg9ry_zmiz3i",
+      "phase": "ingest_sources",
+      "title": "Map ingested documents",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:35:21.711Z",
+      "finishedAt": "2026-05-01T20:35:21.892Z",
+      "summary": "Indexed 18 documents.",
+      "technical": {
+        "rawLabel": "ingest:documents",
+        "payload": {
+          "kind": "ingestion-section",
+          "section": "documents",
+          "documents": [
+            {
+              "id": 52,
+              "label": "04-test-strategy",
+              "kind": "LLD",
+              "chunks": 20,
+              "entities": 2,
+              "rels": 8
+            },
+            {
+              "id": 51,
+              "label": "03-test-design-specification",
+              "kind": "HLD",
+              "chunks": 38,
+              "entities": 42,
+              "rels": 10
+            },
+            {
+              "id": 50,
+              "label": "02-functional-requirements-specification",
+              "kind": "FRS",
+              "chunks": 142,
+              "entities": 184,
+              "rels": 6
+            },
+            {
+              "id": 49,
+              "label": "01-business-requirements-document",
+              "kind": "BRD",
+              "chunks": 86,
+              "entities": 161,
+              "rels": 9
+            },
+            {
+              "id": 48,
+              "label": "04-test-strategy",
+              "kind": "LLD",
+              "chunks": 12,
+              "entities": 1,
+              "rels": 8
+            },
+            {
+              "id": 47,
+              "label": "03-test-design-specification",
+              "kind": "HLD",
+              "chunks": 26,
+              "entities": 19,
+              "rels": 10
+            },
+            {
+              "id": 46,
+              "label": "02-functional-requirements-specification",
+              "kind": "FRS",
+              "chunks": 114,
+              "entities": 127,
+              "rels": 6
+            },
+            {
+              "id": 45,
+              "label": "01-business-requirements-document",
+              "kind": "BRD",
+              "chunks": 61,
+              "entities": 69,
+              "rels": 8
+            },
+            {
+              "id": 40,
+              "label": "TestCases",
+              "kind": "TEST_CASE_REPOSITORY",
+              "chunks": 8,
+              "entities": 8,
+              "rels": 0
+            },
+            {
+              "id": 39,
+              "label": "09-test-case-repository",
+              "kind": "TEST_CASE_REPOSITORY",
+              "chunks": 18,
+              "entities": 1,
+              "rels": 0
+            },
+            {
+              "id": 38,
+              "label": "08-quality-risk-defect-governance",
+              "kind": "GOVERNANCE",
+              "chunks": 12,
+              "entities": 0,
+              "rels": 4
+            },
+            {
+              "id": 37,
+              "label": "07-test-data-environment-specification",
+              "kind": "TEST_DATA",
+              "chunks": 14,
+              "entities": 1,
+              "rels": 3
+            },
+            {
+              "id": 36,
+              "label": "06-requirements-traceability-matrix",
+              "kind": "RTM",
+              "chunks": 10,
+              "entities": 18,
+              "rels": 5
+            },
+            {
+              "id": 35,
+              "label": "05-test-plan",
+              "kind": "PLAN",
+              "chunks": 10,
+              "entities": 0,
+              "rels": 6
+            },
+            {
+              "id": 34,
+              "label": "04-test-strategy",
+              "kind": "STRATEGY",
+              "chunks": 12,
+              "entities": 1,
+              "rels": 8
+            },
+            {
+              "id": 33,
+              "label": "03-test-design-specification",
+              "kind": "TDS",
+              "chunks": 26,
+              "entities": 19,
+              "rels": 10
+            },
+            {
+              "id": 32,
+              "label": "02-functional-requirements-specification",
+              "kind": "FRS",
+              "chunks": 114,
+              "entities": 127,
+              "rels": 6
+            },
+            {
+              "id": 31,
+              "label": "01-business-requirements-document",
+              "kind": "BRD",
+              "chunks": 61,
+              "entities": 69,
+              "rels": 8
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "event_mondgoth_0afq1t",
+      "runId": "uiqa_mondg9ry_zmiz3i",
+      "phase": "ingest_sources",
+      "title": "Build entity map",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:35:21.893Z",
+      "finishedAt": "2026-05-01T20:35:22.073Z",
+      "summary": "849 entities across 5 types.",
+      "technical": {
+        "rawLabel": "ingest:entities",
+        "payload": {
+          "kind": "ingestion-section",
+          "section": "entities",
+          "entities": [
+            {
+              "type": "BR",
+              "count": 488
+            },
+            {
+              "type": "REQ",
+              "count": 302
+            },
+            {
+              "type": "SECTION",
+              "count": 26
+            },
+            {
+              "type": "TC",
+              "count": 17
+            },
+            {
+              "type": "TKT",
+              "count": 16
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "event_mondgoyi_0z51bw",
+      "runId": "uiqa_mondg9ry_zmiz3i",
+      "phase": "ingest_sources",
+      "title": "Trace relationships",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:35:22.074Z",
+      "finishedAt": "2026-05-01T20:35:22.257Z",
+      "summary": "115 relationships across 2 types.",
+      "technical": {
+        "rawLabel": "ingest:relationships",
+        "payload": {
+          "kind": "ingestion-section",
+          "section": "relationships",
+          "relationships": [
+            {
+              "type": "docx_hyperlink",
+              "count": 82
+            },
+            {
+              "type": "markdown_link",
+              "count": 33
+            }
+          ],
+          "samples": [
+            {
+              "type": "markdown_link",
+              "from": "04-test-strategy",
+              "to": "test-doc/05-test-plan.md"
+            },
+            {
+              "type": "markdown_link",
+              "from": "04-test-strategy",
+              "to": "test-doc/SDLC-Test-Tracker.xlsx"
+            },
+            {
+              "type": "markdown_link",
+              "from": "04-test-strategy",
+              "to": "test-doc/06-requirements-traceability-matrix.md"
+            },
+            {
+              "type": "markdown_link",
+              "from": "04-test-strategy",
+              "to": "test-doc/05-test-plan.md"
+            },
+            {
+              "type": "markdown_link",
+              "from": "04-test-strategy",
+              "to": "test-doc/03-test-design-specification.md"
+            },
+            {
+              "type": "markdown_link",
+              "from": "04-test-strategy",
+              "to": "test-doc/02-functional-requirements-specification.md"
+            },
+            {
+              "type": "markdown_link",
+              "from": "04-test-strategy",
+              "to": "test-doc/01-business-requirements-document.md"
+            },
+            {
+              "type": "markdown_link",
+              "from": "04-test-strategy",
+              "to": "test-doc/README.md"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "event_mondgp6z_08jb5d",
+      "runId": "uiqa_mondg9ry_zmiz3i",
+      "phase": "ingest_sources",
+      "title": "Ingestion knowledge map",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:35:22.379Z",
+      "finishedAt": "2026-05-01T20:35:22.379Z",
+      "summary": "18 documents · 849 entities · 115 relationships · 22 RTM rows · 0 unmapped.",
+      "technical": {
+        "rawLabel": "ingest:map",
+        "payload": {
+          "kind": "ingestion-map",
+          "documents": [
+            {
+              "id": 52,
+              "label": "04-test-strategy",
+              "kind": "LLD",
+              "chunks": 20,
+              "entities": 2,
+              "rels": 8
+            },
+            {
+              "id": 51,
+              "label": "03-test-design-specification",
+              "kind": "HLD",
+              "chunks": 38,
+              "entities": 42,
+              "rels": 10
+            },
+            {
+              "id": 50,
+              "label": "02-functional-requirements-specification",
+              "kind": "FRS",
+              "chunks": 142,
+              "entities": 184,
+              "rels": 6
+            },
+            {
+              "id": 49,
+              "label": "01-business-requirements-document",
+              "kind": "BRD",
+              "chunks": 86,
+              "entities": 161,
+              "rels": 9
+            },
+            {
+              "id": 48,
+              "label": "04-test-strategy",
+              "kind": "LLD",
+              "chunks": 12,
+              "entities": 1,
+              "rels": 8
+            },
+            {
+              "id": 47,
+              "label": "03-test-design-specification",
+              "kind": "HLD",
+              "chunks": 26,
+              "entities": 19,
+              "rels": 10
+            },
+            {
+              "id": 46,
+              "label": "02-functional-requirements-specification",
+              "kind": "FRS",
+              "chunks": 114,
+              "entities": 127,
+              "rels": 6
+            },
+            {
+              "id": 45,
+              "label": "01-business-requirements-document",
+              "kind": "BRD",
+              "chunks": 61,
+              "entities": 69,
+              "rels": 8
+            },
+            {
+              "id": 40,
+              "label": "TestCases",
+              "kind": "TEST_CASE_REPOSITORY",
+              "chunks": 8,
+              "entities": 8,
+              "rels": 0
+            },
+            {
+              "id": 39,
+              "label": "09-test-case-repository",
+              "kind": "TEST_CASE_REPOSITORY",
+              "chunks": 18,
+              "entities": 1,
+              "rels": 0
+            },
+            {
+              "id": 38,
+              "label": "08-quality-risk-defect-governance",
+              "kind": "GOVERNANCE",
+              "chunks": 12,
+              "entities": 0,
+              "rels": 4
+            },
+            {
+              "id": 37,
+              "label": "07-test-data-environment-specification",
+              "kind": "TEST_DATA",
+              "chunks": 14,
+              "entities": 1,
+              "rels": 3
+            },
+            {
+              "id": 36,
+              "label": "06-requirements-traceability-matrix",
+              "kind": "RTM",
+              "chunks": 10,
+              "entities": 18,
+              "rels": 5
+            },
+            {
+              "id": 35,
+              "label": "05-test-plan",
+              "kind": "PLAN",
+              "chunks": 10,
+              "entities": 0,
+              "rels": 6
+            },
+            {
+              "id": 34,
+              "label": "04-test-strategy",
+              "kind": "STRATEGY",
+              "chunks": 12,
+              "entities": 1,
+              "rels": 8
+            },
+            {
+              "id": 33,
+              "label": "03-test-design-specification",
+              "kind": "TDS",
+              "chunks": 26,
+              "entities": 19,
+              "rels": 10
+            },
+            {
+              "id": 32,
+              "label": "02-functional-requirements-specification",
+              "kind": "FRS",
+              "chunks": 114,
+              "entities": 127,
+              "rels": 6
+            },
+            {
+              "id": 31,
+              "label": "01-business-requirements-document",
+              "kind": "BRD",
+              "chunks": 61,
+              "entities": 69,
+              "rels": 8
+            }
+          ],
+          "entities": [
+            {
+              "type": "BR",
+              "count": 488
+            },
+            {
+              "type": "REQ",
+              "count": 302
+            },
+            {
+              "type": "SECTION",
+              "count": 26
+            },
+            {
+              "type": "TC",
+              "count": 17
+            },
+            {
+              "type": "TKT",
+              "count": 16
+            }
+          ],
+          "relationships": [
+            {
+              "type": "docx_hyperlink",
+              "count": 82
+            },
+            {
+              "type": "markdown_link",
+              "count": 33
+            }
+          ],
+          "rel_samples": [
+            {
+              "type": "markdown_link",
+              "from": "04-test-strategy",
+              "to": "test-doc/05-test-plan.md"
+            },
+            {
+              "type": "markdown_link",
+              "from": "04-test-strategy",
+              "to": "test-doc/SDLC-Test-Tracker.xlsx"
+            },
+            {
+              "type": "markdown_link",
+              "from": "04-test-strategy",
+              "to": "test-doc/06-requirements-traceability-matrix.md"
+            },
+            {
+              "type": "markdown_link",
+              "from": "04-test-strategy",
+              "to": "test-doc/05-test-plan.md"
+            },
+            {
+              "type": "markdown_link",
+              "from": "04-test-strategy",
+              "to": "test-doc/03-test-design-specification.md"
+            },
+            {
+              "type": "markdown_link",
+              "from": "04-test-strategy",
+              "to": "test-doc/02-functional-requirements-specification.md"
+            },
+            {
+              "type": "markdown_link",
+              "from": "04-test-strategy",
+              "to": "test-doc/01-business-requirements-document.md"
+            },
+            {
+              "type": "markdown_link",
+              "from": "04-test-strategy",
+              "to": "test-doc/README.md"
+            }
+          ],
+          "rtm": {
+            "requirements": 58,
+            "rows": 22,
+            "links": 634,
+            "unmapped": 0,
+            "averageConfidence": 1
+          }
+        }
+      }
+    },
+    {
+      "id": "event_mondgp72_5g2wel",
+      "runId": "uiqa_mondg9ry_zmiz3i",
+      "phase": "ingest_sources",
+      "title": "Summarize entity map",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:35:22.382Z",
+      "finishedAt": "2026-05-01T20:35:22.573Z",
+      "technical": {
+        "rawLabel": "Summarize entity map",
+        "command": "source ingestion/.venv/bin/activate && DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport os, psycopg\nwith psycopg.connect(os.environ['DATABASE_URL']) as conn, conn.cursor() as cur:\n    cur.execute(\"select entity_type, count(*) from entities group by entity_type order by entity_type\")\n    rows = cur.fetchall()\nprint('# Entity Map Summary')\nprint()\nprint('| Entity Type | Count |')\nprint('|---|---:|')\nfor t, c in rows:\n    print(f'| {t} | {c} |')\nPY",
+        "stdout": "# Entity Map Summary\n\n| Entity Type | Count |\n|---|---:|\n| BR | 488 |\n| REQ | 302 |\n| SECTION | 26 |\n| TC | 17 |\n| TKT | 16 |\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mondgpce_eg527v",
+      "runId": "uiqa_mondg9ry_zmiz3i",
+      "phase": "rag_ready",
+      "title": "Document QA knowledge base ready",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T20:35:22.574Z",
+      "finishedAt": "2026-05-01T20:35:22.574Z",
+      "summary": "Documents are ingested and ready for grounded Q&A. Ask questions about the source pack or request TestCases.xlsx generation."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev_mondg9s1_gykzkw",
+      "createdAt": "2026-05-01T20:35:02.401Z",
+      "kind": "folder",
+      "label": "Active source pack",
+      "path": "test_data/ui-qa/generated/uiqa_mondg9ry_zmiz3i/source-pack",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_mondgojw_1nz8yl",
+      "createdAt": "2026-05-01T20:35:21.548Z",
+      "kind": "json",
+      "label": "Derived RTM JSON",
+      "path": "test_data/test-results/derived_rtm_20260501203521.json",
+      "phase": "ingest_sources"
+    },
+    {
+      "id": "ev_mondgojw_dzistl",
+      "createdAt": "2026-05-01T20:35:21.548Z",
+      "kind": "report",
+      "label": "Derived RTM report",
+      "path": "test_data/test-results/derived_rtm_20260501203521.md",
+      "phase": "ingest_sources"
+    },
+    {
+      "id": "ev_mondgpce_h24dlw",
+      "createdAt": "2026-05-01T20:35:22.574Z",
+      "kind": "report",
+      "label": "Entity map summary",
+      "path": "test_data/test-results/uiqa_entity_summary_20260501203522.md",
+      "phase": "ingest_sources"
+    }
+  ],
+  "checkpoints": [],
+  "messages": [],
+  "blockerCount": 0,
+  "findingCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  }
+}

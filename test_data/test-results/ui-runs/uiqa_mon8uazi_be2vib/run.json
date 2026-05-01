@@ -1,0 +1,529 @@
+{
+  "id": "uiqa_mon8uazi_be2vib",
+  "scope": "all",
+  "dryRun": false,
+  "autoApprove": true,
+  "status": "blocked",
+  "currentPhase": "ingest_sources",
+  "createdAt": "2026-05-01T18:25:59.070Z",
+  "updatedAt": "2026-05-01T18:26:04.777Z",
+  "uploads": [
+    {
+      "id": "src_mon8uazt_utxlu5",
+      "runId": "uiqa_mon8uazi_be2vib",
+      "originalName": "01-business-requirements-document.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_mon8uazi_be2vib/75ba74032f55_01-business-requirements-document.docx",
+      "documentType": "BRD",
+      "sha256": "75ba74032f5583526c3ce4035eb7f21f024045dda836b8ecafd3bad94c8ee7e9",
+      "size": 35621,
+      "status": "accepted",
+      "createdAt": "2026-05-01T18:25:59.081Z"
+    },
+    {
+      "id": "src_mon8uazu_ovg01e",
+      "runId": "uiqa_mon8uazi_be2vib",
+      "originalName": "02-functional-requirements-specification.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_mon8uazi_be2vib/1bf29955d09f_02-functional-requirements-specification.docx",
+      "documentType": "FRS",
+      "sha256": "1bf29955d09ffb4597c4f2391daef5cdd474d9a2b7153ef5efa1715b8336733d",
+      "size": 36715,
+      "status": "accepted",
+      "createdAt": "2026-05-01T18:25:59.082Z"
+    },
+    {
+      "id": "src_mon8uazv_d6akqm",
+      "runId": "uiqa_mon8uazi_be2vib",
+      "originalName": "03-test-design-specification.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_mon8uazi_be2vib/bc4a297e88b9_03-test-design-specification.docx",
+      "documentType": "SOURCE_DOC",
+      "sha256": "bc4a297e88b98dc0645d0a1bc1bc8fdd63760485d97f63446e34bc078f79de42",
+      "size": 16590,
+      "status": "accepted",
+      "createdAt": "2026-05-01T18:25:59.083Z"
+    },
+    {
+      "id": "src_mon8uazw_ot3ng9",
+      "runId": "uiqa_mon8uazi_be2vib",
+      "originalName": "04-test-strategy.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_mon8uazi_be2vib/bc452080a746_04-test-strategy.docx",
+      "documentType": "TEST_STRATEGY",
+      "sha256": "bc452080a74613289d89e8a9866cb9ec99671f2e9f270c301793c0de976e8d2d",
+      "size": 14190,
+      "status": "accepted",
+      "createdAt": "2026-05-01T18:25:59.084Z"
+    },
+    {
+      "id": "src_mon8uazw_r84yzl",
+      "runId": "uiqa_mon8uazi_be2vib",
+      "originalName": "05-test-plan.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_mon8uazi_be2vib/64cc7c5d20b4_05-test-plan.docx",
+      "documentType": "TEST_PLAN",
+      "sha256": "64cc7c5d20b4556484544b1bc46bd60c2cb6e94879c28b05db0677af83ade68a",
+      "size": 13567,
+      "status": "accepted",
+      "createdAt": "2026-05-01T18:25:59.084Z"
+    },
+    {
+      "id": "src_mon8uazx_319sen",
+      "runId": "uiqa_mon8uazi_be2vib",
+      "originalName": "06-requirements-traceability-matrix.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_mon8uazi_be2vib/bae75844e4bc_06-requirements-traceability-matrix.docx",
+      "documentType": "RTM",
+      "sha256": "bae75844e4bce6f5f4e083a5907b7978915ea77336a42177ea982b304a1b994c",
+      "size": 16106,
+      "status": "accepted",
+      "createdAt": "2026-05-01T18:25:59.085Z"
+    },
+    {
+      "id": "src_mon8uazy_1cq34s",
+      "runId": "uiqa_mon8uazi_be2vib",
+      "originalName": "07-test-data-environment-specification.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_mon8uazi_be2vib/dee1179870fd_07-test-data-environment-specification.docx",
+      "documentType": "TEST_DATA",
+      "sha256": "dee1179870fd6bf2b315e1e240bf6f90ef4442aa6483f397380f2e3cb814a989",
+      "size": 13536,
+      "status": "accepted",
+      "createdAt": "2026-05-01T18:25:59.086Z"
+    },
+    {
+      "id": "src_mon8uazz_35rf3n",
+      "runId": "uiqa_mon8uazi_be2vib",
+      "originalName": "08-quality-risk-defect-governance.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_mon8uazi_be2vib/c4d411862cc6_08-quality-risk-defect-governance.docx",
+      "documentType": "SOURCE_DOC",
+      "sha256": "c4d411862cc6615ebda78530cacdebd2378ccf25df873fd04545a7c49b15adc4",
+      "size": 13091,
+      "status": "accepted",
+      "createdAt": "2026-05-01T18:25:59.087Z"
+    },
+    {
+      "id": "src_mon8ub01_ytqjm8",
+      "runId": "uiqa_mon8uazi_be2vib",
+      "originalName": "09-test-case-repository.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_mon8uazi_be2vib/2b17d95d7da3_09-test-case-repository.docx",
+      "documentType": "TEST_REPOSITORY",
+      "sha256": "2b17d95d7da3e424e205e904671f8b3b5485d4a1fae97a1bbb5f9114bf0d6431",
+      "size": 19269,
+      "status": "accepted",
+      "createdAt": "2026-05-01T18:25:59.089Z"
+    }
+  ],
+  "events": [
+    {
+      "id": "event_mon8uazk_3urkje",
+      "runId": "uiqa_mon8uazi_be2vib",
+      "phase": "upload_sources",
+      "title": "Prepare active source pack",
+      "status": "running",
+      "createdAt": "2026-05-01T18:25:59.072Z"
+    },
+    {
+      "id": "event_mon8uazm_jl0q6m",
+      "runId": "uiqa_mon8uazi_be2vib",
+      "phase": "upload_sources",
+      "title": "Active source pack ready",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:25:59.074Z",
+      "finishedAt": "2026-05-01T18:25:59.074Z",
+      "summary": "0 uploaded source document(s)."
+    },
+    {
+      "id": "event_mon8uazm_phvq7o",
+      "runId": "uiqa_mon8uazi_be2vib",
+      "phase": "ingest_sources",
+      "title": "Ensure ingestion virtualenv",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:25:59.074Z",
+      "finishedAt": "2026-05-01T18:25:59.137Z",
+      "technical": {
+        "rawLabel": "Ensure ingestion virtualenv",
+        "command": "/bin/test -d ingestion/.venv || /usr/bin/python3 -m venv ingestion/.venv",
+        "stdout": "",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon8uazt_1o71cq",
+      "runId": "uiqa_mon8uazi_be2vib",
+      "phase": "upload_sources",
+      "title": "Uploaded 01-business-requirements-document.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:25:59.081Z",
+      "finishedAt": "2026-05-01T18:25:59.081Z",
+      "summary": "Classified as BRD.",
+      "technical": {
+        "rawLabel": "upload:01-business-requirements-document.docx",
+        "payload": {
+          "id": "src_mon8uazt_utxlu5",
+          "runId": "uiqa_mon8uazi_be2vib",
+          "originalName": "01-business-requirements-document.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_mon8uazi_be2vib/75ba74032f55_01-business-requirements-document.docx",
+          "documentType": "BRD",
+          "sha256": "75ba74032f5583526c3ce4035eb7f21f024045dda836b8ecafd3bad94c8ee7e9",
+          "size": 35621,
+          "status": "accepted",
+          "createdAt": "2026-05-01T18:25:59.081Z"
+        }
+      }
+    },
+    {
+      "id": "event_mon8uazu_np081y",
+      "runId": "uiqa_mon8uazi_be2vib",
+      "phase": "upload_sources",
+      "title": "Uploaded 02-functional-requirements-specification.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:25:59.082Z",
+      "finishedAt": "2026-05-01T18:25:59.082Z",
+      "summary": "Classified as FRS.",
+      "technical": {
+        "rawLabel": "upload:02-functional-requirements-specification.docx",
+        "payload": {
+          "id": "src_mon8uazu_ovg01e",
+          "runId": "uiqa_mon8uazi_be2vib",
+          "originalName": "02-functional-requirements-specification.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_mon8uazi_be2vib/1bf29955d09f_02-functional-requirements-specification.docx",
+          "documentType": "FRS",
+          "sha256": "1bf29955d09ffb4597c4f2391daef5cdd474d9a2b7153ef5efa1715b8336733d",
+          "size": 36715,
+          "status": "accepted",
+          "createdAt": "2026-05-01T18:25:59.082Z"
+        }
+      }
+    },
+    {
+      "id": "event_mon8uazv_ewlzh1",
+      "runId": "uiqa_mon8uazi_be2vib",
+      "phase": "upload_sources",
+      "title": "Uploaded 03-test-design-specification.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:25:59.083Z",
+      "finishedAt": "2026-05-01T18:25:59.083Z",
+      "summary": "Classified as SOURCE_DOC.",
+      "technical": {
+        "rawLabel": "upload:03-test-design-specification.docx",
+        "payload": {
+          "id": "src_mon8uazv_d6akqm",
+          "runId": "uiqa_mon8uazi_be2vib",
+          "originalName": "03-test-design-specification.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_mon8uazi_be2vib/bc4a297e88b9_03-test-design-specification.docx",
+          "documentType": "SOURCE_DOC",
+          "sha256": "bc4a297e88b98dc0645d0a1bc1bc8fdd63760485d97f63446e34bc078f79de42",
+          "size": 16590,
+          "status": "accepted",
+          "createdAt": "2026-05-01T18:25:59.083Z"
+        }
+      }
+    },
+    {
+      "id": "event_mon8uazw_c1ekb4",
+      "runId": "uiqa_mon8uazi_be2vib",
+      "phase": "upload_sources",
+      "title": "Uploaded 04-test-strategy.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:25:59.084Z",
+      "finishedAt": "2026-05-01T18:25:59.084Z",
+      "summary": "Classified as TEST_STRATEGY.",
+      "technical": {
+        "rawLabel": "upload:04-test-strategy.docx",
+        "payload": {
+          "id": "src_mon8uazw_ot3ng9",
+          "runId": "uiqa_mon8uazi_be2vib",
+          "originalName": "04-test-strategy.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_mon8uazi_be2vib/bc452080a746_04-test-strategy.docx",
+          "documentType": "TEST_STRATEGY",
+          "sha256": "bc452080a74613289d89e8a9866cb9ec99671f2e9f270c301793c0de976e8d2d",
+          "size": 14190,
+          "status": "accepted",
+          "createdAt": "2026-05-01T18:25:59.084Z"
+        }
+      }
+    },
+    {
+      "id": "event_mon8uazw_b2qwf4",
+      "runId": "uiqa_mon8uazi_be2vib",
+      "phase": "upload_sources",
+      "title": "Uploaded 05-test-plan.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:25:59.084Z",
+      "finishedAt": "2026-05-01T18:25:59.085Z",
+      "summary": "Classified as TEST_PLAN.",
+      "technical": {
+        "rawLabel": "upload:05-test-plan.docx",
+        "payload": {
+          "id": "src_mon8uazw_r84yzl",
+          "runId": "uiqa_mon8uazi_be2vib",
+          "originalName": "05-test-plan.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_mon8uazi_be2vib/64cc7c5d20b4_05-test-plan.docx",
+          "documentType": "TEST_PLAN",
+          "sha256": "64cc7c5d20b4556484544b1bc46bd60c2cb6e94879c28b05db0677af83ade68a",
+          "size": 13567,
+          "status": "accepted",
+          "createdAt": "2026-05-01T18:25:59.084Z"
+        }
+      }
+    },
+    {
+      "id": "event_mon8uazx_pmw37x",
+      "runId": "uiqa_mon8uazi_be2vib",
+      "phase": "upload_sources",
+      "title": "Uploaded 06-requirements-traceability-matrix.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:25:59.085Z",
+      "finishedAt": "2026-05-01T18:25:59.085Z",
+      "summary": "Classified as RTM.",
+      "technical": {
+        "rawLabel": "upload:06-requirements-traceability-matrix.docx",
+        "payload": {
+          "id": "src_mon8uazx_319sen",
+          "runId": "uiqa_mon8uazi_be2vib",
+          "originalName": "06-requirements-traceability-matrix.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_mon8uazi_be2vib/bae75844e4bc_06-requirements-traceability-matrix.docx",
+          "documentType": "RTM",
+          "sha256": "bae75844e4bce6f5f4e083a5907b7978915ea77336a42177ea982b304a1b994c",
+          "size": 16106,
+          "status": "accepted",
+          "createdAt": "2026-05-01T18:25:59.085Z"
+        }
+      }
+    },
+    {
+      "id": "event_mon8uazy_zg3lpq",
+      "runId": "uiqa_mon8uazi_be2vib",
+      "phase": "upload_sources",
+      "title": "Uploaded 07-test-data-environment-specification.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:25:59.086Z",
+      "finishedAt": "2026-05-01T18:25:59.086Z",
+      "summary": "Classified as TEST_DATA.",
+      "technical": {
+        "rawLabel": "upload:07-test-data-environment-specification.docx",
+        "payload": {
+          "id": "src_mon8uazy_1cq34s",
+          "runId": "uiqa_mon8uazi_be2vib",
+          "originalName": "07-test-data-environment-specification.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_mon8uazi_be2vib/dee1179870fd_07-test-data-environment-specification.docx",
+          "documentType": "TEST_DATA",
+          "sha256": "dee1179870fd6bf2b315e1e240bf6f90ef4442aa6483f397380f2e3cb814a989",
+          "size": 13536,
+          "status": "accepted",
+          "createdAt": "2026-05-01T18:25:59.086Z"
+        }
+      }
+    },
+    {
+      "id": "event_mon8uazz_zy60z9",
+      "runId": "uiqa_mon8uazi_be2vib",
+      "phase": "upload_sources",
+      "title": "Uploaded 08-quality-risk-defect-governance.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:25:59.087Z",
+      "finishedAt": "2026-05-01T18:25:59.087Z",
+      "summary": "Classified as SOURCE_DOC.",
+      "technical": {
+        "rawLabel": "upload:08-quality-risk-defect-governance.docx",
+        "payload": {
+          "id": "src_mon8uazz_35rf3n",
+          "runId": "uiqa_mon8uazi_be2vib",
+          "originalName": "08-quality-risk-defect-governance.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_mon8uazi_be2vib/c4d411862cc6_08-quality-risk-defect-governance.docx",
+          "documentType": "SOURCE_DOC",
+          "sha256": "c4d411862cc6615ebda78530cacdebd2378ccf25df873fd04545a7c49b15adc4",
+          "size": 13091,
+          "status": "accepted",
+          "createdAt": "2026-05-01T18:25:59.087Z"
+        }
+      }
+    },
+    {
+      "id": "event_mon8ub02_eslveb",
+      "runId": "uiqa_mon8uazi_be2vib",
+      "phase": "upload_sources",
+      "title": "Uploaded 09-test-case-repository.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:25:59.090Z",
+      "finishedAt": "2026-05-01T18:25:59.090Z",
+      "summary": "Classified as TEST_REPOSITORY.",
+      "technical": {
+        "rawLabel": "upload:09-test-case-repository.docx",
+        "payload": {
+          "id": "src_mon8ub01_ytqjm8",
+          "runId": "uiqa_mon8uazi_be2vib",
+          "originalName": "09-test-case-repository.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_mon8uazi_be2vib/2b17d95d7da3_09-test-case-repository.docx",
+          "documentType": "TEST_REPOSITORY",
+          "sha256": "2b17d95d7da3e424e205e904671f8b3b5485d4a1fae97a1bbb5f9114bf0d6431",
+          "size": 19269,
+          "status": "accepted",
+          "createdAt": "2026-05-01T18:25:59.089Z"
+        }
+      }
+    },
+    {
+      "id": "event_mon8ub1d_ndy2en",
+      "runId": "uiqa_mon8uazi_be2vib",
+      "phase": "ingest_sources",
+      "title": "Install ingestion dependencies",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:25:59.137Z",
+      "finishedAt": "2026-05-01T18:26:02.028Z",
+      "technical": {
+        "rawLabel": "Install ingestion dependencies",
+        "command": "source ingestion/.venv/bin/activate && ingestion/.venv/bin/pip install -r ingestion/requirements.txt -q",
+        "stdout": "",
+        "stderr": "\n[notice] A new release of pip is available: 26.0.1 -> 26.1\n[notice] To update, run: pip install --upgrade pip\n",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon8ud9p_mkmfud",
+      "runId": "uiqa_mon8uazi_be2vib",
+      "phase": "ingest_sources",
+      "title": "Check local pgvector DB",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:26:02.029Z",
+      "finishedAt": "2026-05-01T18:26:02.259Z",
+      "technical": {
+        "rawLabel": "Check local pgvector DB",
+        "command": "/opt/homebrew/bin/pg_isready -h localhost -p 5433 -U ingestion -d ingestion",
+        "stdout": "localhost:5433 - accepting connections\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon8udg3_nnldle",
+      "runId": "uiqa_mon8uazi_be2vib",
+      "phase": "ingest_sources",
+      "title": "Apply ingestion migrations",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:26:02.259Z",
+      "finishedAt": "2026-05-01T18:26:02.559Z",
+      "technical": {
+        "rawLabel": "Apply ingestion migrations",
+        "command": "PGPASSWORD=ingestion ingestion/scripts/apply_migrations.sh",
+        "stdout": "CREATE EXTENSION\nCREATE TABLE\nCREATE TABLE\nCREATE INDEX\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nCREATE INDEX\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nCREATE INDEX\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nCREATE INDEX\nCREATE INDEX\nDO\nALTER TABLE\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nMigrations applied.\n",
+        "stderr": "psql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/001_extensions.sql:1: NOTICE:  extension \"vector\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/002_schema.sql:15: NOTICE:  relation \"documents\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/002_schema.sql:26: NOTICE:  relation \"chunks\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/002_schema.sql:28: NOTICE:  relation \"idx_chunks_document\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/002_schema.sql:37: NOTICE:  relation \"entities\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/002_schema.sql:39: NOTICE:  relation \"idx_entities_document\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/002_schema.sql:40: NOTICE:  relation \"idx_entities_type\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/002_schema.sql:41: NOTICE:  relation \"idx_entities_canonical\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/002_schema.sql:51: NOTICE:  relation \"relationships\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/002_schema.sql:53: NOTICE:  relation \"idx_rel_source_chunk\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/002_schema.sql:54: NOTICE:  relation \"idx_rel_source_doc\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/002_schema.sql:55: NOTICE:  relation \"idx_rel_type\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/002_schema.sql:69: NOTICE:  relation \"test_cases\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/002_schema.sql:71: NOTICE:  relation \"idx_test_cases_requirement_ids\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/002_schema.sql:72: NOTICE:  relation \"idx_test_cases_suite\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/002_schema.sql:85: NOTICE:  relation \"test_case_steps\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/002_schema.sql:87: NOTICE:  relation \"idx_test_case_steps_requirement\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/002_schema.sql:88: NOTICE:  relation \"idx_test_case_steps_case\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/002_schema.sql:91: NOTICE:  relation \"chunks_embedding_hnsw\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/002_schema.sql:94: NOTICE:  relation \"chunks_content_fts\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/003_test_case_inventory.sql:31: NOTICE:  relation \"test_cases\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/003_test_case_inventory.sql:33: NOTICE:  relation \"idx_test_cases_requirement_ids\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/003_test_case_inventory.sql:34: NOTICE:  relation \"idx_test_cases_suite\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/003_test_case_inventory.sql:47: NOTICE:  relation \"test_case_steps\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/003_test_case_inventory.sql:49: NOTICE:  relation \"idx_test_case_steps_requirement\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/003_test_case_inventory.sql:50: NOTICE:  relation \"idx_test_case_steps_case\" already exists, skipping\n",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon8udof_1udq7y",
+      "runId": "uiqa_mon8uazi_be2vib",
+      "phase": "ingest_sources",
+      "title": "Ingest source documents into pgvector",
+      "status": "failed",
+      "createdAt": "2026-05-01T18:26:02.559Z",
+      "finishedAt": "2026-05-01T18:26:04.776Z",
+      "summary": "Command failed with exit code 1.",
+      "technical": {
+        "rawLabel": "Ingest source documents into pgvector",
+        "command": "source ingestion/.venv/bin/activate && DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python ingestion/scripts/ingest.py --format both --test-doc '/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/ui-qa/generated/uiqa_mon8uazi_be2vib/source-pack'",
+        "stdout": "",
+        "stderr": "No files matched.\n",
+        "exitCode": 1
+      }
+    },
+    {
+      "id": "event_mon8ufe1_kbpvqm",
+      "runId": "uiqa_mon8uazi_be2vib",
+      "phase": "ingest_sources",
+      "title": "Workflow stopped",
+      "status": "blocked",
+      "createdAt": "2026-05-01T18:26:04.777Z",
+      "finishedAt": "2026-05-01T18:26:04.777Z",
+      "summary": "Ingest source documents into pgvector failed with exit code 1: No files matched.\n"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev_mon8uazl_5c3mc4",
+      "createdAt": "2026-05-01T18:25:59.073Z",
+      "kind": "folder",
+      "label": "Active source pack",
+      "path": "test_data/ui-qa/generated/uiqa_mon8uazi_be2vib/source-pack",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_mon8uazt_sgt5oe",
+      "createdAt": "2026-05-01T18:25:59.081Z",
+      "kind": "source",
+      "label": "01-business-requirements-document.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_mon8uazi_be2vib/75ba74032f55_01-business-requirements-document.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_mon8uazu_p1hw2q",
+      "createdAt": "2026-05-01T18:25:59.082Z",
+      "kind": "source",
+      "label": "02-functional-requirements-specification.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_mon8uazi_be2vib/1bf29955d09f_02-functional-requirements-specification.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_mon8uazv_167aq1",
+      "createdAt": "2026-05-01T18:25:59.083Z",
+      "kind": "source",
+      "label": "03-test-design-specification.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_mon8uazi_be2vib/bc4a297e88b9_03-test-design-specification.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_mon8uazw_t42lft",
+      "createdAt": "2026-05-01T18:25:59.084Z",
+      "kind": "source",
+      "label": "04-test-strategy.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_mon8uazi_be2vib/bc452080a746_04-test-strategy.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_mon8uazw_gzrphr",
+      "createdAt": "2026-05-01T18:25:59.084Z",
+      "kind": "source",
+      "label": "05-test-plan.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_mon8uazi_be2vib/64cc7c5d20b4_05-test-plan.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_mon8uazx_310ffg",
+      "createdAt": "2026-05-01T18:25:59.085Z",
+      "kind": "source",
+      "label": "06-requirements-traceability-matrix.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_mon8uazi_be2vib/bae75844e4bc_06-requirements-traceability-matrix.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_mon8uazy_cgme94",
+      "createdAt": "2026-05-01T18:25:59.086Z",
+      "kind": "source",
+      "label": "07-test-data-environment-specification.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_mon8uazi_be2vib/dee1179870fd_07-test-data-environment-specification.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_mon8uazz_0yufqg",
+      "createdAt": "2026-05-01T18:25:59.087Z",
+      "kind": "source",
+      "label": "08-quality-risk-defect-governance.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_mon8uazi_be2vib/c4d411862cc6_08-quality-risk-defect-governance.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_mon8ub01_aekw1i",
+      "createdAt": "2026-05-01T18:25:59.089Z",
+      "kind": "source",
+      "label": "09-test-case-repository.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_mon8uazi_be2vib/2b17d95d7da3_09-test-case-repository.docx",
+      "phase": "upload_sources"
+    }
+  ],
+  "checkpoints": [],
+  "messages": [],
+  "blockerCount": 0,
+  "findingCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  }
+}

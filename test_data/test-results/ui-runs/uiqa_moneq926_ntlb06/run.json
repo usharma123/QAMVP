@@ -1,0 +1,2487 @@
+{
+  "id": "uiqa_moneq926_ntlb06",
+  "scope": "all",
+  "dryRun": false,
+  "autoApprove": true,
+  "status": "ready",
+  "currentPhase": "rag_ready",
+  "createdAt": "2026-05-01T21:10:47.646Z",
+  "updatedAt": "2026-05-01T21:15:51.881Z",
+  "uploads": [
+    {
+      "id": "src_moneq930_v53m89",
+      "runId": "uiqa_moneq926_ntlb06",
+      "originalName": "01-business-requirements-document.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_moneq926_ntlb06/376a76296efb_01-business-requirements-document.docx",
+      "documentType": "BRD",
+      "sha256": "376a76296efbcaac3daafe18b0b1198ecd3fe08d9e8bb3f401dd24c907ad6527",
+      "size": 12860,
+      "status": "accepted",
+      "createdAt": "2026-05-01T21:10:47.676Z"
+    },
+    {
+      "id": "src_moneq930_ez7qwy",
+      "runId": "uiqa_moneq926_ntlb06",
+      "originalName": "02-functional-requirements-specification.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_moneq926_ntlb06/d8a999575556_02-functional-requirements-specification.docx",
+      "documentType": "FRS",
+      "sha256": "d8a9995755567aae5d9f9fac50344807f9863714b751d2cadb56770692bc2573",
+      "size": 13119,
+      "status": "accepted",
+      "createdAt": "2026-05-01T21:10:47.676Z"
+    },
+    {
+      "id": "src_moneq931_hyal8a",
+      "runId": "uiqa_moneq926_ntlb06",
+      "originalName": "03-high-level-design.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_moneq926_ntlb06/27dbf4c71fc8_03-high-level-design.docx",
+      "documentType": "HLD",
+      "sha256": "27dbf4c71fc89b98221cf063f49fb4f1dd48a605a7c827bff50e6c58335689f9",
+      "size": 12997,
+      "status": "accepted",
+      "createdAt": "2026-05-01T21:10:47.677Z"
+    },
+    {
+      "id": "src_moneq931_eojlmf",
+      "runId": "uiqa_moneq926_ntlb06",
+      "originalName": "04-low-level-design.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_moneq926_ntlb06/d80f11429cf2_04-low-level-design.docx",
+      "documentType": "LLD",
+      "sha256": "d80f11429cf240210e7b0e0f823ebcf4dfc3a233546537d9cd95030bcf61b49b",
+      "size": 14147,
+      "status": "accepted",
+      "createdAt": "2026-05-01T21:10:47.677Z"
+    }
+  ],
+  "events": [
+    {
+      "id": "event_moneq930_fm3cn5",
+      "runId": "uiqa_moneq926_ntlb06",
+      "phase": "upload_sources",
+      "title": "Uploaded 01-business-requirements-document.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T21:10:47.676Z",
+      "finishedAt": "2026-05-01T21:10:47.676Z",
+      "summary": "Classified as BRD.",
+      "technical": {
+        "rawLabel": "upload:01-business-requirements-document.docx",
+        "payload": {
+          "id": "src_moneq930_v53m89",
+          "runId": "uiqa_moneq926_ntlb06",
+          "originalName": "01-business-requirements-document.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_moneq926_ntlb06/376a76296efb_01-business-requirements-document.docx",
+          "documentType": "BRD",
+          "sha256": "376a76296efbcaac3daafe18b0b1198ecd3fe08d9e8bb3f401dd24c907ad6527",
+          "size": 12860,
+          "status": "accepted",
+          "createdAt": "2026-05-01T21:10:47.676Z"
+        }
+      }
+    },
+    {
+      "id": "event_moneq931_ux7ten",
+      "runId": "uiqa_moneq926_ntlb06",
+      "phase": "upload_sources",
+      "title": "Uploaded 02-functional-requirements-specification.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T21:10:47.677Z",
+      "finishedAt": "2026-05-01T21:10:47.677Z",
+      "summary": "Classified as FRS.",
+      "technical": {
+        "rawLabel": "upload:02-functional-requirements-specification.docx",
+        "payload": {
+          "id": "src_moneq930_ez7qwy",
+          "runId": "uiqa_moneq926_ntlb06",
+          "originalName": "02-functional-requirements-specification.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_moneq926_ntlb06/d8a999575556_02-functional-requirements-specification.docx",
+          "documentType": "FRS",
+          "sha256": "d8a9995755567aae5d9f9fac50344807f9863714b751d2cadb56770692bc2573",
+          "size": 13119,
+          "status": "accepted",
+          "createdAt": "2026-05-01T21:10:47.676Z"
+        }
+      }
+    },
+    {
+      "id": "event_moneq931_tvic1z",
+      "runId": "uiqa_moneq926_ntlb06",
+      "phase": "upload_sources",
+      "title": "Uploaded 03-high-level-design.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T21:10:47.677Z",
+      "finishedAt": "2026-05-01T21:10:47.677Z",
+      "summary": "Classified as HLD.",
+      "technical": {
+        "rawLabel": "upload:03-high-level-design.docx",
+        "payload": {
+          "id": "src_moneq931_hyal8a",
+          "runId": "uiqa_moneq926_ntlb06",
+          "originalName": "03-high-level-design.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_moneq926_ntlb06/27dbf4c71fc8_03-high-level-design.docx",
+          "documentType": "HLD",
+          "sha256": "27dbf4c71fc89b98221cf063f49fb4f1dd48a605a7c827bff50e6c58335689f9",
+          "size": 12997,
+          "status": "accepted",
+          "createdAt": "2026-05-01T21:10:47.677Z"
+        }
+      }
+    },
+    {
+      "id": "event_moneq931_a8p0rz",
+      "runId": "uiqa_moneq926_ntlb06",
+      "phase": "upload_sources",
+      "title": "Uploaded 04-low-level-design.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T21:10:47.677Z",
+      "finishedAt": "2026-05-01T21:10:47.677Z",
+      "summary": "Classified as LLD.",
+      "technical": {
+        "rawLabel": "upload:04-low-level-design.docx",
+        "payload": {
+          "id": "src_moneq931_eojlmf",
+          "runId": "uiqa_moneq926_ntlb06",
+          "originalName": "04-low-level-design.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_moneq926_ntlb06/d80f11429cf2_04-low-level-design.docx",
+          "documentType": "LLD",
+          "sha256": "d80f11429cf240210e7b0e0f823ebcf4dfc3a233546537d9cd95030bcf61b49b",
+          "size": 14147,
+          "status": "accepted",
+          "createdAt": "2026-05-01T21:10:47.677Z"
+        }
+      }
+    },
+    {
+      "id": "event_moneq93g_9q93ld",
+      "runId": "uiqa_moneq926_ntlb06",
+      "phase": "upload_sources",
+      "title": "Active source pack ready",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T21:10:47.692Z",
+      "finishedAt": "2026-05-01T21:10:47.696Z",
+      "summary": "4 ingestible source document(s) ready."
+    },
+    {
+      "id": "event_moneq93j_936zn7",
+      "runId": "uiqa_moneq926_ntlb06",
+      "phase": "upload_sources",
+      "title": "Validate BRD/FRS/HLD/LLD source contract",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T21:10:47.695Z",
+      "finishedAt": "2026-05-01T21:10:47.696Z",
+      "summary": "Source pack includes BRD, FRS, HLD, and LLD.",
+      "technical": {
+        "rawLabel": "source-contract",
+        "payload": {
+          "required": [
+            "BRD",
+            "FRS",
+            "HLD",
+            "LLD"
+          ],
+          "present": [
+            "BRD",
+            "FRS",
+            "HLD",
+            "LLD"
+          ],
+          "missing": []
+        }
+      }
+    },
+    {
+      "id": "event_moneq93l_zy1i4d",
+      "runId": "uiqa_moneq926_ntlb06",
+      "phase": "ingest_sources",
+      "title": "Ensure ingestion virtualenv",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T21:10:47.697Z",
+      "finishedAt": "2026-05-01T21:10:47.753Z",
+      "technical": {
+        "rawLabel": "Ensure ingestion virtualenv",
+        "command": "/bin/test -d ingestion/.venv || /usr/bin/python3 -m venv ingestion/.venv",
+        "stdout": "",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_moneq955_3x0zlf",
+      "runId": "uiqa_moneq926_ntlb06",
+      "phase": "ingest_sources",
+      "title": "Install ingestion dependencies",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T21:10:47.753Z",
+      "finishedAt": "2026-05-01T21:10:50.565Z",
+      "technical": {
+        "rawLabel": "Install ingestion dependencies",
+        "command": "source ingestion/.venv/bin/activate && ingestion/.venv/bin/pip install -r ingestion/requirements.txt -q",
+        "stdout": "",
+        "stderr": "\n[notice] A new release of pip is available: 26.0.1 -> 26.1\n[notice] To update, run: pip install --upgrade pip\n",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_moneqbba_wlc69t",
+      "runId": "uiqa_moneq926_ntlb06",
+      "phase": "ingest_sources",
+      "title": "Inspect Docker pgvector service",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T21:10:50.566Z",
+      "finishedAt": "2026-05-01T21:10:51.725Z",
+      "technical": {
+        "rawLabel": "Inspect Docker pgvector service",
+        "command": "set -euo pipefail\nDOCKER_BIN=\"$(command -v docker || true)\"\nif [ -z \"$DOCKER_BIN\" ]; then\n  for candidate in /opt/homebrew/bin/docker /usr/local/bin/docker /Applications/Docker.app/Contents/Resources/bin/docker; do\n    if [ -x \"$candidate\" ]; then\n      DOCKER_BIN=\"$candidate\"\n      break\n    fi\n  done\nfi\nif [ -z \"$DOCKER_BIN\" ]; then\n  echo \"Docker CLI not found. Install Docker Desktop or add docker to PATH.\" >&2\n  exit 127\nfi\nif ! \"$DOCKER_BIN\" info >/dev/null 2>&1; then\n  echo \"Docker CLI was found at $DOCKER_BIN, but the Docker daemon is not reachable.\" >&2\n  echo \"Open Docker Desktop and wait for the engine to finish starting.\" >&2\n  exit 1\nfi\nCOMPOSE=(\"$DOCKER_BIN\" compose -f ingestion/docker-compose.yml)\n\"$DOCKER_BIN\" version\n\"${COMPOSE[@]}\" ps",
+        "stdout": "Client: Docker Engine - Community\n Version:           28.1.1\n API version:       1.49\n Go version:        go1.24.2\n Git commit:        4eba377327\n Built:             Fri Apr 18 09:44:47 2025\n OS/Arch:           darwin/arm64\n Context:           desktop-linux\n\nServer: Docker Desktop 4.55.0 (213807)\n Engine:\n  Version:          29.1.3\n  API version:      1.52 (minimum version 1.44)\n  Go version:       go1.25.5\n  Git commit:       fbf3ed2\n  Built:            Fri Dec 12 14:50:40 2025\n  OS/Arch:          linux/arm64\n  Experimental:     false\n containerd:\n  Version:          v2.2.0\n  GitCommit:        1c4457e00facac03ce1d75f7b6777a7a851e5c41\n runc:\n  Version:          1.3.4\n  GitCommit:        v1.3.4-0-gd6d73eb8\n docker-init:\n  Version:          0.19.0\n  GitCommit:        de40ad0\nNAME                 IMAGE                    COMMAND                  SERVICE    CREATED      STATUS                 PORTS\nqamvp-ingestion-pg   pgvector/pgvector:pg16   \"docker-entrypoint.s…\"   postgres   9 days ago   Up 7 hours (healthy)   0.0.0.0:5433->5432/tcp, [::]:5433->5432/tcp\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_moneqc7h_lg9rtm",
+      "runId": "uiqa_moneq926_ntlb06",
+      "phase": "ingest_sources",
+      "title": "Start local pgvector DB",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T21:10:51.725Z",
+      "finishedAt": "2026-05-01T21:10:51.934Z",
+      "technical": {
+        "rawLabel": "Start local pgvector DB",
+        "command": "set -euo pipefail\nDOCKER_BIN=\"$(command -v docker || true)\"\nif [ -z \"$DOCKER_BIN\" ]; then\n  for candidate in /opt/homebrew/bin/docker /usr/local/bin/docker /Applications/Docker.app/Contents/Resources/bin/docker; do\n    if [ -x \"$candidate\" ]; then\n      DOCKER_BIN=\"$candidate\"\n      break\n    fi\n  done\nfi\nif [ -z \"$DOCKER_BIN\" ]; then\n  echo \"Docker CLI not found. Install Docker Desktop or add docker to PATH.\" >&2\n  exit 127\nfi\nif ! \"$DOCKER_BIN\" info >/dev/null 2>&1; then\n  echo \"Docker CLI was found at $DOCKER_BIN, but the Docker daemon is not reachable.\" >&2\n  echo \"Open Docker Desktop and wait for the engine to finish starting.\" >&2\n  exit 1\nfi\nCOMPOSE=(\"$DOCKER_BIN\" compose -f ingestion/docker-compose.yml)\n\"${COMPOSE[@]}\" up -d postgres",
+        "stdout": "",
+        "stderr": " Container qamvp-ingestion-pg  Running\n",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_moneqcda_kn6n52",
+      "runId": "uiqa_moneq926_ntlb06",
+      "phase": "ingest_sources",
+      "title": "Wait for pgvector DB readiness",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T21:10:51.934Z",
+      "finishedAt": "2026-05-01T21:10:52.166Z",
+      "technical": {
+        "rawLabel": "Wait for pgvector DB readiness",
+        "command": "set -euo pipefail\nDOCKER_BIN=\"$(command -v docker || true)\"\nif [ -z \"$DOCKER_BIN\" ]; then\n  for candidate in /opt/homebrew/bin/docker /usr/local/bin/docker /Applications/Docker.app/Contents/Resources/bin/docker; do\n    if [ -x \"$candidate\" ]; then\n      DOCKER_BIN=\"$candidate\"\n      break\n    fi\n  done\nfi\nif [ -z \"$DOCKER_BIN\" ]; then\n  echo \"Docker CLI not found. Install Docker Desktop or add docker to PATH.\" >&2\n  exit 127\nfi\nif ! \"$DOCKER_BIN\" info >/dev/null 2>&1; then\n  echo \"Docker CLI was found at $DOCKER_BIN, but the Docker daemon is not reachable.\" >&2\n  echo \"Open Docker Desktop and wait for the engine to finish starting.\" >&2\n  exit 1\nfi\nCOMPOSE=(\"$DOCKER_BIN\" compose -f ingestion/docker-compose.yml)\nfor attempt in {1..45}; do\n  if \"${COMPOSE[@]}\" exec -T postgres pg_isready -U ingestion -d ingestion >/dev/null 2>&1; then\n    echo \"Postgres is ready after $attempt attempt(s).\"\n    exit 0\n  fi\n  echo \"Waiting for Postgres/pgvector readiness ($attempt/45)...\"\n  sleep 2\ndone\necho \"Postgres did not become ready within 90 seconds.\" >&2\n\"${COMPOSE[@]}\" ps >&2 || true\n\"${COMPOSE[@]}\" logs --tail=120 postgres >&2 || true\nexit 1",
+        "stdout": "Postgres is ready after 1 attempt(s).\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_moneqcjr_3d6oct",
+      "runId": "uiqa_moneq926_ntlb06",
+      "phase": "ingest_sources",
+      "title": "Apply ingestion migrations",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T21:10:52.167Z",
+      "finishedAt": "2026-05-01T21:10:52.901Z",
+      "technical": {
+        "rawLabel": "Apply ingestion migrations",
+        "command": "set -euo pipefail\nDOCKER_BIN=\"$(command -v docker || true)\"\nif [ -z \"$DOCKER_BIN\" ]; then\n  for candidate in /opt/homebrew/bin/docker /usr/local/bin/docker /Applications/Docker.app/Contents/Resources/bin/docker; do\n    if [ -x \"$candidate\" ]; then\n      DOCKER_BIN=\"$candidate\"\n      break\n    fi\n  done\nfi\nif [ -z \"$DOCKER_BIN\" ]; then\n  echo \"Docker CLI not found. Install Docker Desktop or add docker to PATH.\" >&2\n  exit 127\nfi\nif ! \"$DOCKER_BIN\" info >/dev/null 2>&1; then\n  echo \"Docker CLI was found at $DOCKER_BIN, but the Docker daemon is not reachable.\" >&2\n  echo \"Open Docker Desktop and wait for the engine to finish starting.\" >&2\n  exit 1\nfi\nCOMPOSE=(\"$DOCKER_BIN\" compose -f ingestion/docker-compose.yml)\nfor migration in ingestion/sql/*.sql; do\n  echo \"Applying $migration\"\n  \"${COMPOSE[@]}\" exec -T postgres psql -v ON_ERROR_STOP=1 -U ingestion -d ingestion < \"$migration\"\ndone\necho \"Migrations applied.\"",
+        "stdout": "Applying ingestion/sql/001_extensions.sql\nCREATE EXTENSION\nApplying ingestion/sql/002_schema.sql\nCREATE TABLE\nCREATE TABLE\nCREATE INDEX\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nCREATE INDEX\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nCREATE INDEX\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nCREATE INDEX\nCREATE INDEX\nApplying ingestion/sql/003_test_case_inventory.sql\nDO\nALTER TABLE\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nApplying ingestion/sql/004_rtm_requirements.sql\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nCREATE INDEX\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nApplying ingestion/sql/005_document_versions.sql\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nCREATE INDEX\nMigrations applied.\n",
+        "stderr": "NOTICE:  extension \"vector\" already exists, skipping\nNOTICE:  relation \"documents\" already exists, skipping\nNOTICE:  relation \"chunks\" already exists, skipping\nNOTICE:  relation \"idx_chunks_document\" already exists, skipping\nNOTICE:  relation \"entities\" already exists, skipping\nNOTICE:  relation \"idx_entities_document\" already exists, skipping\nNOTICE:  relation \"idx_entities_type\" already exists, skipping\nNOTICE:  relation \"idx_entities_canonical\" already exists, skipping\nNOTICE:  relation \"relationships\" already exists, skipping\nNOTICE:  relation \"idx_rel_source_chunk\" already exists, skipping\nNOTICE:  relation \"idx_rel_source_doc\" already exists, skipping\nNOTICE:  relation \"idx_rel_type\" already exists, skipping\nNOTICE:  relation \"test_cases\" already exists, skipping\nNOTICE:  relation \"idx_test_cases_requirement_ids\" already exists, skipping\nNOTICE:  relation \"idx_test_cases_suite\" already exists, skipping\nNOTICE:  relation \"test_case_steps\" already exists, skipping\nNOTICE:  relation \"idx_test_case_steps_requirement\" already exists, skipping\nNOTICE:  relation \"idx_test_case_steps_case\" already exists, skipping\nNOTICE:  relation \"chunks_embedding_hnsw\" already exists, skipping\nNOTICE:  relation \"chunks_content_fts\" already exists, skipping\nNOTICE:  relation \"test_cases\" already exists, skipping\nNOTICE:  relation \"idx_test_cases_requirement_ids\" already exists, skipping\nNOTICE:  relation \"idx_test_cases_suite\" already exists, skipping\nNOTICE:  relation \"test_case_steps\" already exists, skipping\nNOTICE:  relation \"idx_test_case_steps_requirement\" already exists, skipping\nNOTICE:  relation \"idx_test_case_steps_case\" already exists, skipping\nNOTICE:  relation \"requirements\" already exists, skipping\nNOTICE:  relation \"idx_requirements_document_kind\" already exists, skipping\nNOTICE:  relation \"idx_requirements_source_chunk\" already exists, skipping\nNOTICE:  relation \"requirement_links\" already exists, skipping\nNOTICE:  relation \"idx_requirement_links_source\" already exists, skipping\nNOTICE:  relation \"idx_requirement_links_target\" already exists, skipping\nNOTICE:  relation \"idx_requirement_links_type\" already exists, skipping\nNOTICE:  relation \"rtm_rows\" already exists, skipping\nNOTICE:  relation \"idx_rtm_rows_status\" already exists, skipping\nNOTICE:  relation \"idx_rtm_rows_confidence\" already exists, skipping\nNOTICE:  relation \"source_document_versions\" already exists, skipping\nNOTICE:  relation \"idx_source_doc_versions_active\" already exists, skipping\nNOTICE:  relation \"idx_source_doc_versions_doc\" already exists, skipping\nNOTICE:  relation \"idx_source_doc_versions_kind\" already exists, skipping\n",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_moneqd46_jr3prw",
+      "runId": "uiqa_moneq926_ntlb06",
+      "phase": "ingest_sources",
+      "title": "Verify pgvector DB schema",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T21:10:52.902Z",
+      "finishedAt": "2026-05-01T21:10:53.232Z",
+      "technical": {
+        "rawLabel": "Verify pgvector DB schema",
+        "command": "set -euo pipefail\nDOCKER_BIN=\"$(command -v docker || true)\"\nif [ -z \"$DOCKER_BIN\" ]; then\n  for candidate in /opt/homebrew/bin/docker /usr/local/bin/docker /Applications/Docker.app/Contents/Resources/bin/docker; do\n    if [ -x \"$candidate\" ]; then\n      DOCKER_BIN=\"$candidate\"\n      break\n    fi\n  done\nfi\nif [ -z \"$DOCKER_BIN\" ]; then\n  echo \"Docker CLI not found. Install Docker Desktop or add docker to PATH.\" >&2\n  exit 127\nfi\nif ! \"$DOCKER_BIN\" info >/dev/null 2>&1; then\n  echo \"Docker CLI was found at $DOCKER_BIN, but the Docker daemon is not reachable.\" >&2\n  echo \"Open Docker Desktop and wait for the engine to finish starting.\" >&2\n  exit 1\nfi\nCOMPOSE=(\"$DOCKER_BIN\" compose -f ingestion/docker-compose.yml)\n\"${COMPOSE[@]}\" exec -T postgres psql -U ingestion -d ingestion -c \"select extname from pg_extension where extname = 'vector';\"\n\"${COMPOSE[@]}\" exec -T postgres psql -U ingestion -d ingestion -c \"select table_name from information_schema.tables where table_schema = 'public' order by table_name;\"",
+        "stdout": " extname \n---------\n vector\n(1 row)\n\n        table_name        \n--------------------------\n chunks\n documents\n entities\n relationships\n requirement_links\n requirements\n rtm_rows\n source_document_versions\n test_case_steps\n test_cases\n(10 rows)\n\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_moneqddd_j90739",
+      "runId": "uiqa_moneq926_ntlb06",
+      "phase": "ingest_sources",
+      "title": "Embed source documents into pgvector",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T21:10:53.233Z",
+      "finishedAt": "2026-05-01T21:11:16.179Z",
+      "technical": {
+        "rawLabel": "Embed source documents into pgvector",
+        "command": "source ingestion/.venv/bin/activate && DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python ingestion/scripts/ingest.py --format both --skip-test-cases --test-doc '/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/ui-qa/generated/uiqa_moneq926_ntlb06/source-pack'",
+        "stdout": "  ingested source-pack/01-business-requirements-document.docx (docx): 12 chunks\n  ingested source-pack/02-functional-requirements-specification.docx (docx): 15 chunks\n  ingested source-pack/03-high-level-design.docx (docx): 9 chunks\n  ingested source-pack/04-low-level-design.docx (docx): 9 chunks\nDone.\n",
+        "stderr": "Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n\rLoading weights:   0%|          | 0/103 [00:00<?, ?it/s]\rLoading weights: 100%|██████████| 103/103 [00:00<00:00, 8709.77it/s]\n\u001b[1mBertModel LOAD REPORT\u001b[0m from: sentence-transformers/all-MiniLM-L6-v2\nKey                     | Status     |  | \n------------------------+------------+--+-\nembeddings.position_ids | UNEXPECTED |  | \n\nNotes:\n- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_moneqv33_dktpr3",
+      "runId": "uiqa_moneq926_ntlb06",
+      "phase": "ingest_sources",
+      "title": "Derive requirement RTM",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T21:11:16.191Z",
+      "finishedAt": "2026-05-01T21:11:16.459Z",
+      "technical": {
+        "rawLabel": "Derive requirement RTM",
+        "command": "source ingestion/.venv/bin/activate && DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport hashlib, json, os, re\nfrom collections import defaultdict\n\nimport psycopg\nfrom psycopg.types.json import Json\n\nSOURCE_KINDS = (\"brd\", \"frs\", \"hld\", \"lld\")\nENTITY_TYPES = (\"REQ\", \"BR\", \"DESIGN\", \"SECTION\", \"API\", \"COMP\", \"DATA\", \"CTRL\")\nKIND_ORDER = {\"brd\": 0, \"frs\": 1, \"hld\": 2, \"lld\": 3}\n\ndef req_type(entity_type, req_id):\n    if entity_type == \"BR\" or req_id.startswith(\"BR-\"):\n        return \"business\"\n    if req_id.startswith(\"REQ-FR\") or req_id.startswith(\"FRS-\") or \"FRS\" in req_id:\n        return \"functional\"\n    if req_id.startswith(\"HLD-\") or \"HLD\" in req_id:\n        return \"hld_design\"\n    if req_id.startswith(\"LLD-\") or \"LLD\" in req_id:\n        return \"lld_design\"\n    if entity_type == \"SECTION\":\n        return \"section\"\n    if entity_type == \"DESIGN\":\n        return \"design\"\n    return \"requirement\"\n\ndef canonical_doc_kind(req_id, fallback):\n    if req_id.startswith(\"BR-\") or req_id.startswith(\"BRD \"):\n        return \"brd\"\n    if req_id.startswith((\"REQ-FR\", \"REQ-NFR\", \"REQ-SEC\", \"FRS-\")) or req_id.startswith(\"FRS \"):\n        return \"frs\"\n    if req_id.startswith((\"HLD-\", \"DES-\")) or req_id.startswith(\"HLD \"):\n        return \"hld\"\n    if req_id.startswith(\"LLD-\") or req_id.startswith((\"API-\", \"COMP-\", \"DATA-\", \"CTRL-\")) or req_id.startswith(\"LLD \"):\n        return \"lld\"\n    return fallback\n\ndef stable_hash(*parts):\n    return hashlib.sha256(\"|\".join(str(p or \"\") for p in parts).encode()).hexdigest()\n\nwith psycopg.connect(os.environ[\"DATABASE_URL\"]) as conn:\n    with conn.cursor() as cur:\n        cur.execute(\"delete from rtm_rows\")\n        cur.execute(\"delete from requirement_links\")\n        cur.execute(\"delete from requirements\")\n        cur.execute(\n            \"\"\"\n            select e.entity_type, e.canonical_id, d.id, c.id, d.kind, coalesce(c.heading_path, ''), c.content\n            from entities e\n            join documents d on d.id = e.document_id\n            join chunks c on c.id = e.chunk_id\n            join source_document_versions sv on sv.document_id = d.id and sv.is_active = true\n            where d.kind = any(%s)\n              and e.entity_type = any(%s)\n            order by d.kind, d.id, c.ordinal, e.canonical_id\n            \"\"\",\n            (list(SOURCE_KINDS), list(ENTITY_TYPES)),\n        )\n        rows = cur.fetchall()\n        by_chunk = defaultdict(list)\n        requirements = {}\n        for entity_type, canonical_id, doc_id, chunk_id, kind, heading, content in rows:\n            req_id = canonical_id.upper()\n            doc_kind = canonical_doc_kind(req_id, kind)\n            title = heading or req_id\n            text = re.sub(r\"\\s+\", \" \", content or \"\").strip()[:1200]\n            requirements[req_id] = {\n                \"requirement_id\": req_id,\n                \"requirement_type\": req_type(entity_type, req_id),\n                \"source_document_id\": doc_id,\n                \"source_chunk_id\": chunk_id,\n                \"document_kind\": doc_kind,\n                \"title\": title[:240],\n                \"requirement_text\": text,\n                \"canonical_hash\": stable_hash(req_id, text),\n                \"metadata\": {\"entity_type\": entity_type},\n            }\n            by_chunk[chunk_id].append(req_id)\n\n        for item in requirements.values():\n            cur.execute(\n                \"\"\"\n                insert into requirements (\n                  requirement_id, requirement_type, source_document_id, source_chunk_id,\n                  document_kind, title, requirement_text, canonical_hash, metadata, updated_at\n                )\n                values (%s, %s, %s, %s, %s, %s, %s, %s, %s, now())\n                on conflict (requirement_id) do update set\n                  requirement_type = excluded.requirement_type,\n                  source_document_id = excluded.source_document_id,\n                  source_chunk_id = excluded.source_chunk_id,\n                  document_kind = excluded.document_kind,\n                  title = excluded.title,\n                  requirement_text = excluded.requirement_text,\n                  canonical_hash = excluded.canonical_hash,\n                  metadata = excluded.metadata,\n                  updated_at = now()\n                \"\"\",\n                (\n                    item[\"requirement_id\"],\n                    item[\"requirement_type\"],\n                    item[\"source_document_id\"],\n                    item[\"source_chunk_id\"],\n                    item[\"document_kind\"],\n                    item[\"title\"],\n                    item[\"requirement_text\"],\n                    item[\"canonical_hash\"],\n                    Json(item[\"metadata\"]),\n                ),\n            )\n\n        link_count = 0\n        for chunk_id, ids in by_chunk.items():\n            unique_ids = sorted(set(ids), key=lambda rid: (KIND_ORDER.get(requirements[rid][\"document_kind\"], 99), rid))\n            for source in unique_ids:\n                for target in unique_ids:\n                    if source == target:\n                        continue\n                    sk = requirements[source][\"document_kind\"]\n                    tk = requirements[target][\"document_kind\"]\n                    if KIND_ORDER.get(tk, 99) != KIND_ORDER.get(sk, 99) + 1:\n                        continue\n                    link_id = stable_hash(source, target, chunk_id)[:32]\n                    link_type = f\"{sk}_to_{tk}\"\n                    cur.execute(\n                        \"\"\"\n                        insert into requirement_links (\n                          id, source_requirement_id, target_requirement_id, link_type,\n                          confidence, evidence_chunk_id, evidence, metadata, updated_at\n                        )\n                        values (%s, %s, %s, %s, %s, %s, %s, %s, now())\n                        on conflict (id) do update set\n                          confidence = excluded.confidence,\n                          evidence_chunk_id = excluded.evidence_chunk_id,\n                          evidence = excluded.evidence,\n                          metadata = excluded.metadata,\n                          updated_at = now()\n                        \"\"\",\n                        (\n                            link_id,\n                            source,\n                            target,\n                            link_type,\n                            0.78,\n                            chunk_id,\n                            requirements[target][\"requirement_text\"][:500],\n                            Json({\"derivation\": \"same_chunk_adjacent_doc_kind\"}),\n                        ),\n                    )\n                    link_count += 1\n\n        by_kind = defaultdict(list)\n        for req_id, item in requirements.items():\n            by_kind[item[\"document_kind\"]].append(req_id)\n\n        rtm_count = 0\n        unmapped = 0\n        centers = by_kind[\"frs\"] or by_kind[\"brd\"] or sorted(requirements)\n        for idx, center in enumerate(sorted(centers)):\n            def nearest(kind):\n                candidates = sorted(by_kind[kind])\n                if not candidates:\n                    return None\n                return candidates[min(idx, len(candidates) - 1)]\n\n            br = nearest(\"brd\")\n            fr = center if requirements[center][\"document_kind\"] == \"frs\" else nearest(\"frs\")\n            hld = nearest(\"hld\")\n            lld = nearest(\"lld\")\n            linked = [x for x in (br, fr, hld, lld) if x]\n            missing = 4 - len(linked)\n            unmapped += missing\n            confidence = max(0.35, 1 - missing * 0.16)\n            status = \"complete\" if missing == 0 else \"partial\"\n            evidence = [requirements[x][\"source_chunk_id\"] for x in linked if requirements[x].get(\"source_chunk_id\")]\n            rtm_id = stable_hash(br, fr, hld, lld)[:32]\n            cur.execute(\n                \"\"\"\n                insert into rtm_rows (\n                  rtm_id, business_requirement_id, functional_requirement_id, hld_requirement_id,\n                  lld_requirement_id, coverage_status, confidence, evidence_chunk_ids, notes, metadata, updated_at\n                )\n                values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, now())\n                on conflict (rtm_id) do update set\n                  business_requirement_id = excluded.business_requirement_id,\n                  functional_requirement_id = excluded.functional_requirement_id,\n                  hld_requirement_id = excluded.hld_requirement_id,\n                  lld_requirement_id = excluded.lld_requirement_id,\n                  coverage_status = excluded.coverage_status,\n                  confidence = excluded.confidence,\n                  evidence_chunk_ids = excluded.evidence_chunk_ids,\n                  notes = excluded.notes,\n                  metadata = excluded.metadata,\n                  updated_at = now()\n                \"\"\",\n                (\n                    rtm_id,\n                    br,\n                    fr,\n                    hld,\n                    lld,\n                    status,\n                    confidence,\n                    evidence,\n                    f\"{missing} missing requirement column(s).\" if missing else \"All requirement columns mapped.\",\n                    Json({\"derived_from\": \"requirement_inventory\", \"center\": center}),\n                ),\n            )\n            rtm_count += 1\n\n        cur.execute(\"select count(*) from requirements\")\n        req_count = int(cur.fetchone()[0] or 0)\n        cur.execute(\"select count(*) from rtm_rows\")\n        row_count = int(cur.fetchone()[0] or 0)\n        cur.execute(\"select coalesce(avg(confidence), 0) from rtm_rows\")\n        avg_conf = float(cur.fetchone()[0] or 0)\n        conn.commit()\n\nprint(json.dumps({\n  \"requirements\": req_count,\n  \"rows\": row_count,\n  \"links\": link_count,\n  \"unmapped\": unmapped,\n  \"averageConfidence\": round(avg_conf, 3),\n}))\nPY",
+        "stdout": "{\"requirements\": 54, \"rows\": 15, \"links\": 167, \"unmapped\": 0, \"averageConfidence\": 1.0}\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_moneqvao_crnz54",
+      "runId": "uiqa_moneq926_ntlb06",
+      "phase": "ingest_sources",
+      "title": "Derived requirement RTM",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T21:11:16.464Z",
+      "finishedAt": "2026-05-01T21:11:16.464Z",
+      "summary": "15 active-baseline RTM row(s), 54 requirement(s), 0 unmapped column(s).",
+      "technical": {
+        "rawLabel": "ingest:rtm",
+        "payload": {
+          "kind": "rtm-summary",
+          "requirements": 54,
+          "rows": 15,
+          "links": 167,
+          "unmapped": 0,
+          "averageConfidence": 1
+        }
+      }
+    },
+    {
+      "id": "event_moneqvap_hfqqp1",
+      "runId": "uiqa_moneq926_ntlb06",
+      "phase": "ingest_sources",
+      "title": "Query ingestion knowledge graph",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T21:11:16.465Z",
+      "finishedAt": "2026-05-01T21:11:16.654Z",
+      "technical": {
+        "rawLabel": "Query ingestion knowledge graph",
+        "command": "source ingestion/.venv/bin/activate && DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport os, json, psycopg\nout = {\"documents\": [], \"entities\": [], \"relationships\": [], \"rel_samples\": [], \"rtm\": None}\nwith psycopg.connect(os.environ['DATABASE_URL']) as conn, conn.cursor() as cur:\n    cur.execute(\"\"\"\n      select d.id,\n             coalesce(d.metadata->>'original_path', d.title, d.path) as label,\n             coalesce(d.kind, d.source_format, 'doc') as kind,\n             coalesce(sv.version_label, d.metadata->>'document_version', '') as version_label,\n             coalesce(sv.is_active, false) as is_active,\n             (select count(*) from source_document_versions v where v.logical_doc_key = d.logical_doc_key and v.document_kind = d.kind) as version_count,\n             (select count(*) from chunks c where c.document_id = d.id) as chunks,\n             (select count(*) from entities e where e.document_id = d.id) as entities,\n             (select count(*) from relationships r where r.source_document_id = d.id) as rels\n      from documents d\n      left join source_document_versions sv on sv.document_id = d.id\n      where d.kind in ('brd', 'frs', 'hld', 'lld')\n        and coalesce(sv.is_active, true) = true\n      order by d.kind, d.created_at desc nulls last, d.id desc\n      limit 30\n    \"\"\")\n    for row in cur.fetchall():\n        out[\"documents\"].append({\n            \"id\": int(row[0]),\n            \"label\": row[1] or \"\",\n            \"kind\": (row[2] or \"doc\").upper(),\n            \"version\": row[3] or \"\",\n            \"isActive\": bool(row[4]),\n            \"versionCount\": int(row[5] or 0),\n            \"chunks\": int(row[6] or 0),\n            \"entities\": int(row[7] or 0),\n            \"rels\": int(row[8] or 0),\n        })\n    cur.execute(\"select entity_type, count(*) from entities group by entity_type order by count(*) desc, entity_type\")\n    out[\"entities\"] = [{\"type\": t, \"count\": int(c)} for t, c in cur.fetchall()]\n    cur.execute(\"select rel_type, count(*) from relationships group by rel_type order by count(*) desc, rel_type limit 12\")\n    out[\"relationships\"] = [{\"type\": t, \"count\": int(c)} for t, c in cur.fetchall()]\n    cur.execute(\"\"\"\n      select r.rel_type,\n             coalesce(sd.title, sd.path, '') as source_label,\n             coalesce(nullif(r.target_path, ''), nullif(r.target_anchor, ''), '') as target_label\n      from relationships r\n      left join documents sd on sd.id = r.source_document_id\n      order by r.id desc\n      limit 8\n    \"\"\")\n    out[\"rel_samples\"] = [{\"type\": t, \"from\": s or \"\", \"to\": tg or \"\"} for t, s, tg in cur.fetchall()]\n    cur.execute(\"\"\"\n      select\n        coalesce((select count(*) from requirements), 0)::int,\n        coalesce((select count(*) from rtm_rows), 0)::int,\n        coalesce((select count(*) from requirement_links), 0)::int,\n        coalesce((select sum(4\n          - (case when business_requirement_id is null then 0 else 1 end)\n          - (case when functional_requirement_id is null then 0 else 1 end)\n          - (case when hld_requirement_id is null then 0 else 1 end)\n          - (case when lld_requirement_id is null then 0 else 1 end)\n        ) from rtm_rows), 0)::int,\n        coalesce((select avg(confidence) from rtm_rows), 0)::float\n    \"\"\")\n    reqs, rows, links, unmapped, avg_conf = cur.fetchone()\n    out[\"rtm\"] = {\n      \"requirements\": int(reqs or 0),\n      \"rows\": int(rows or 0),\n      \"links\": int(links or 0),\n      \"unmapped\": int(unmapped or 0),\n      \"averageConfidence\": round(float(avg_conf or 0), 3),\n    }\nprint(json.dumps(out))\nPY",
+        "stdout": "{\"documents\": [{\"id\": 107, \"label\": \"source-pack/01-business-requirements-document.docx\", \"kind\": \"BRD\", \"version\": \"1.0\", \"isActive\": true, \"versionCount\": 2, \"chunks\": 12, \"entities\": 48, \"rels\": 3}, {\"id\": 108, \"label\": \"source-pack/02-functional-requirements-specification.docx\", \"kind\": \"FRS\", \"version\": \"1.0\", \"isActive\": true, \"versionCount\": 4, \"chunks\": 15, \"entities\": 69, \"rels\": 3}, {\"id\": 109, \"label\": \"source-pack/03-high-level-design.docx\", \"kind\": \"HLD\", \"version\": \"1.0\", \"isActive\": true, \"versionCount\": 2, \"chunks\": 9, \"entities\": 60, \"rels\": 3}, {\"id\": 110, \"label\": \"source-pack/04-low-level-design.docx\", \"kind\": \"LLD\", \"version\": \"1.0\", \"isActive\": true, \"versionCount\": 2, \"chunks\": 9, \"entities\": 39, \"rels\": 3}], \"entities\": [{\"type\": \"REQ\", \"count\": 268}, {\"type\": \"DESIGN\", \"count\": 232}, {\"type\": \"BR\", \"count\": 95}, {\"type\": \"SECTION\", \"count\": 16}, {\"type\": \"CTRL\", \"count\": 13}, {\"type\": \"DATA\", \"count\": 12}, {\"type\": \"API\", \"count\": 4}], \"relationships\": [{\"type\": \"markdown_link\", \"count\": 18}, {\"type\": \"docx_hyperlink\", \"count\": 12}], \"rel_samples\": [{\"type\": \"docx_hyperlink\", \"from\": \"04-low-level-design\", \"to\": \"source-pack/03-high-level-design.md\"}, {\"type\": \"docx_hyperlink\", \"from\": \"04-low-level-design\", \"to\": \"source-pack/02-functional-requirements-specification.md\"}, {\"type\": \"docx_hyperlink\", \"from\": \"04-low-level-design\", \"to\": \"source-pack/01-business-requirements-document.md\"}, {\"type\": \"docx_hyperlink\", \"from\": \"03-high-level-design\", \"to\": \"source-pack/04-low-level-design.md\"}, {\"type\": \"docx_hyperlink\", \"from\": \"03-high-level-design\", \"to\": \"source-pack/02-functional-requirements-specification.md\"}, {\"type\": \"docx_hyperlink\", \"from\": \"03-high-level-design\", \"to\": \"source-pack/01-business-requirements-document.md\"}, {\"type\": \"docx_hyperlink\", \"from\": \"02-functional-requirements-specification\", \"to\": \"source-pack/04-low-level-design.md\"}, {\"type\": \"docx_hyperlink\", \"from\": \"02-functional-requirements-specification\", \"to\": \"source-pack/03-high-level-design.md\"}], \"rtm\": {\"requirements\": 54, \"rows\": 15, \"links\": 167, \"unmapped\": 0, \"averageConfidence\": 1.0}}\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_moneqvfz_zp00c2",
+      "runId": "uiqa_moneq926_ntlb06",
+      "phase": "ingest_sources",
+      "title": "Map ingested documents",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T21:11:16.655Z",
+      "finishedAt": "2026-05-01T21:11:16.836Z",
+      "summary": "Indexed 4 documents.",
+      "technical": {
+        "rawLabel": "ingest:documents",
+        "payload": {
+          "kind": "ingestion-section",
+          "section": "documents",
+          "documents": [
+            {
+              "id": 107,
+              "label": "source-pack/01-business-requirements-document.docx",
+              "kind": "BRD",
+              "version": "1.0",
+              "isActive": true,
+              "versionCount": 2,
+              "chunks": 12,
+              "entities": 48,
+              "rels": 3
+            },
+            {
+              "id": 108,
+              "label": "source-pack/02-functional-requirements-specification.docx",
+              "kind": "FRS",
+              "version": "1.0",
+              "isActive": true,
+              "versionCount": 4,
+              "chunks": 15,
+              "entities": 69,
+              "rels": 3
+            },
+            {
+              "id": 109,
+              "label": "source-pack/03-high-level-design.docx",
+              "kind": "HLD",
+              "version": "1.0",
+              "isActive": true,
+              "versionCount": 2,
+              "chunks": 9,
+              "entities": 60,
+              "rels": 3
+            },
+            {
+              "id": 110,
+              "label": "source-pack/04-low-level-design.docx",
+              "kind": "LLD",
+              "version": "1.0",
+              "isActive": true,
+              "versionCount": 2,
+              "chunks": 9,
+              "entities": 39,
+              "rels": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "event_moneqvl2_zdk0mp",
+      "runId": "uiqa_moneq926_ntlb06",
+      "phase": "ingest_sources",
+      "title": "Build entity map",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T21:11:16.838Z",
+      "finishedAt": "2026-05-01T21:11:17.019Z",
+      "summary": "640 entities across 7 types.",
+      "technical": {
+        "rawLabel": "ingest:entities",
+        "payload": {
+          "kind": "ingestion-section",
+          "section": "entities",
+          "entities": [
+            {
+              "type": "REQ",
+              "count": 268
+            },
+            {
+              "type": "DESIGN",
+              "count": 232
+            },
+            {
+              "type": "BR",
+              "count": 95
+            },
+            {
+              "type": "SECTION",
+              "count": 16
+            },
+            {
+              "type": "CTRL",
+              "count": 13
+            },
+            {
+              "type": "DATA",
+              "count": 12
+            },
+            {
+              "type": "API",
+              "count": 4
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "event_moneqvq6_xwqe3z",
+      "runId": "uiqa_moneq926_ntlb06",
+      "phase": "ingest_sources",
+      "title": "Trace relationships",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T21:11:17.022Z",
+      "finishedAt": "2026-05-01T21:11:17.205Z",
+      "summary": "30 relationships across 2 types.",
+      "technical": {
+        "rawLabel": "ingest:relationships",
+        "payload": {
+          "kind": "ingestion-section",
+          "section": "relationships",
+          "relationships": [
+            {
+              "type": "markdown_link",
+              "count": 18
+            },
+            {
+              "type": "docx_hyperlink",
+              "count": 12
+            }
+          ],
+          "samples": [
+            {
+              "type": "docx_hyperlink",
+              "from": "04-low-level-design",
+              "to": "source-pack/03-high-level-design.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "04-low-level-design",
+              "to": "source-pack/02-functional-requirements-specification.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "04-low-level-design",
+              "to": "source-pack/01-business-requirements-document.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "03-high-level-design",
+              "to": "source-pack/04-low-level-design.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "03-high-level-design",
+              "to": "source-pack/02-functional-requirements-specification.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "03-high-level-design",
+              "to": "source-pack/01-business-requirements-document.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "02-functional-requirements-specification",
+              "to": "source-pack/04-low-level-design.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "02-functional-requirements-specification",
+              "to": "source-pack/03-high-level-design.md"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "event_moneqvyo_w8tbuw",
+      "runId": "uiqa_moneq926_ntlb06",
+      "phase": "ingest_sources",
+      "title": "Ingestion knowledge map",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T21:11:17.328Z",
+      "finishedAt": "2026-05-01T21:11:17.328Z",
+      "summary": "4 documents · 640 entities · 30 relationships · 15 RTM rows · 0 unmapped.",
+      "technical": {
+        "rawLabel": "ingest:map",
+        "payload": {
+          "kind": "ingestion-map",
+          "documents": [
+            {
+              "id": 107,
+              "label": "source-pack/01-business-requirements-document.docx",
+              "kind": "BRD",
+              "version": "1.0",
+              "isActive": true,
+              "versionCount": 2,
+              "chunks": 12,
+              "entities": 48,
+              "rels": 3
+            },
+            {
+              "id": 108,
+              "label": "source-pack/02-functional-requirements-specification.docx",
+              "kind": "FRS",
+              "version": "1.0",
+              "isActive": true,
+              "versionCount": 4,
+              "chunks": 15,
+              "entities": 69,
+              "rels": 3
+            },
+            {
+              "id": 109,
+              "label": "source-pack/03-high-level-design.docx",
+              "kind": "HLD",
+              "version": "1.0",
+              "isActive": true,
+              "versionCount": 2,
+              "chunks": 9,
+              "entities": 60,
+              "rels": 3
+            },
+            {
+              "id": 110,
+              "label": "source-pack/04-low-level-design.docx",
+              "kind": "LLD",
+              "version": "1.0",
+              "isActive": true,
+              "versionCount": 2,
+              "chunks": 9,
+              "entities": 39,
+              "rels": 3
+            }
+          ],
+          "entities": [
+            {
+              "type": "REQ",
+              "count": 268
+            },
+            {
+              "type": "DESIGN",
+              "count": 232
+            },
+            {
+              "type": "BR",
+              "count": 95
+            },
+            {
+              "type": "SECTION",
+              "count": 16
+            },
+            {
+              "type": "CTRL",
+              "count": 13
+            },
+            {
+              "type": "DATA",
+              "count": 12
+            },
+            {
+              "type": "API",
+              "count": 4
+            }
+          ],
+          "relationships": [
+            {
+              "type": "markdown_link",
+              "count": 18
+            },
+            {
+              "type": "docx_hyperlink",
+              "count": 12
+            }
+          ],
+          "rel_samples": [
+            {
+              "type": "docx_hyperlink",
+              "from": "04-low-level-design",
+              "to": "source-pack/03-high-level-design.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "04-low-level-design",
+              "to": "source-pack/02-functional-requirements-specification.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "04-low-level-design",
+              "to": "source-pack/01-business-requirements-document.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "03-high-level-design",
+              "to": "source-pack/04-low-level-design.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "03-high-level-design",
+              "to": "source-pack/02-functional-requirements-specification.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "03-high-level-design",
+              "to": "source-pack/01-business-requirements-document.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "02-functional-requirements-specification",
+              "to": "source-pack/04-low-level-design.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "02-functional-requirements-specification",
+              "to": "source-pack/03-high-level-design.md"
+            }
+          ],
+          "rtm": {
+            "requirements": 54,
+            "rows": 15,
+            "links": 167,
+            "unmapped": 0,
+            "averageConfidence": 1
+          }
+        }
+      }
+    },
+    {
+      "id": "event_moneqvyr_l8aayh",
+      "runId": "uiqa_moneq926_ntlb06",
+      "phase": "ingest_sources",
+      "title": "Summarize entity map",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T21:11:17.331Z",
+      "finishedAt": "2026-05-01T21:11:17.541Z",
+      "technical": {
+        "rawLabel": "Summarize entity map",
+        "command": "source ingestion/.venv/bin/activate && DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport os, psycopg\nwith psycopg.connect(os.environ['DATABASE_URL']) as conn, conn.cursor() as cur:\n    cur.execute(\"select entity_type, count(*) from entities group by entity_type order by entity_type\")\n    rows = cur.fetchall()\nprint('# Entity Map Summary')\nprint()\nprint('| Entity Type | Count |')\nprint('|---|---:|')\nfor t, c in rows:\n    print(f'| {t} | {c} |')\nPY",
+        "stdout": "# Entity Map Summary\n\n| Entity Type | Count |\n|---|---:|\n| API | 4 |\n| BR | 95 |\n| CTRL | 13 |\n| DATA | 12 |\n| DESIGN | 232 |\n| REQ | 268 |\n| SECTION | 16 |\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_moneqw4m_r33cng",
+      "runId": "uiqa_moneq926_ntlb06",
+      "phase": "rag_ready",
+      "title": "Document QA knowledge base ready",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T21:11:17.542Z",
+      "finishedAt": "2026-05-01T21:11:17.542Z",
+      "summary": "Documents are ingested and ready for grounded Q&A. Ask questions about the source pack or request TestCases.xlsx generation."
+    },
+    {
+      "id": "event_moner9uk_4980c1",
+      "runId": "uiqa_moneq926_ntlb06",
+      "phase": "rag_ready",
+      "title": "Cursor SDK tool harness",
+      "status": "warning",
+      "createdAt": "2026-05-01T21:11:35.324Z",
+      "finishedAt": "2026-05-01T21:13:07.521Z",
+      "summary": "I inspected the KB with available tools but did not reach a final answer within the tool-call budget.",
+      "technical": {
+        "rawLabel": "cursor-tools:rag_ready",
+        "sdkPrompt": "what is the most linked business requirment ",
+        "payload": {
+          "toolResults": [
+            {
+              "ok": false,
+              "tool": "query_kb_sql",
+              "error": "Table edges is not in the KB read allowlist."
+            },
+            {
+              "ok": true,
+              "tool": "query_kb_sql",
+              "result": {
+                "purpose": "Top BR identifiers by undirected relationship degree",
+                "sql": "WITH br AS ( SELECT id, entity_key, title, label FROM entities WHERE entity_type = 'BR' ) SELECT b.entity_key AS business_requirement_key, COALESCE(b.title, b.label) AS title, COUNT(r.id)::bigint AS link_count FROM br b JOIN relationships r ON r.source_entity_id = b.id OR r.target_entity_id = b.id GROUP BY b.entity_key, COALESCE(b.title, b.label) ORDER BY link_count DESC LIMIT 5",
+                "rowCount": 0,
+                "rows": [],
+                "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 15, in <module>\n  File \"/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/.venv/lib/python3.14/site-packages/psycopg/cursor.py\", line 117, in execute\n    raise ex.with_traceback(None)\npsycopg.errors.UndefinedColumn: column \"entity_key\" does not exist\nLINE 2:   SELECT id, entity_key, title, label\n                     ^\n"
+              }
+            },
+            {
+              "ok": false,
+              "tool": "query_kb_sql",
+              "error": "Table information_schema.columns is not in the KB read allowlist."
+            },
+            {
+              "ok": true,
+              "tool": "inspect_entities",
+              "result": {
+                "purpose": "Inspect KB entities",
+                "sql": "select entity_type, canonical_id, count(*) as mentions, count(distinct document_id) as documents from entities where entity_type = 'BR' group by entity_type, canonical_id order by mentions desc, canonical_id limit 20",
+                "columns": [
+                  "entity_type",
+                  "canonical_id",
+                  "mentions",
+                  "documents"
+                ],
+                "rows": [
+                  {
+                    "entity_type": "BR",
+                    "canonical_id": "BR-001",
+                    "mentions": 14,
+                    "documents": 6
+                  },
+                  {
+                    "entity_type": "BR",
+                    "canonical_id": "BR-002",
+                    "mentions": 13,
+                    "documents": 6
+                  },
+                  {
+                    "entity_type": "BR",
+                    "canonical_id": "BR-003",
+                    "mentions": 13,
+                    "documents": 6
+                  },
+                  {
+                    "entity_type": "BR",
+                    "canonical_id": "BR-004",
+                    "mentions": 13,
+                    "documents": 6
+                  },
+                  {
+                    "entity_type": "BR",
+                    "canonical_id": "BR-005",
+                    "mentions": 13,
+                    "documents": 6
+                  },
+                  {
+                    "entity_type": "BR",
+                    "canonical_id": "BR-006",
+                    "mentions": 13,
+                    "documents": 6
+                  },
+                  {
+                    "entity_type": "BR",
+                    "canonical_id": "BR-007",
+                    "mentions": 9,
+                    "documents": 6
+                  },
+                  {
+                    "entity_type": "BR",
+                    "canonical_id": "BR-008",
+                    "mentions": 7,
+                    "documents": 6
+                  }
+                ],
+                "rowCount": 8
+              }
+            },
+            {
+              "ok": true,
+              "tool": "query_kb_sql",
+              "result": {
+                "purpose": "Top BR by relationship edge count",
+                "sql": "WITH br AS ( SELECT id, canonical_id FROM entities WHERE entity_type = 'BR' ) SELECT b.canonical_id AS business_requirement_key, COUNT(r.id)::bigint AS link_count FROM br b JOIN relationships r ON r.source_entity_id = b.id OR r.target_entity_id = b.id GROUP BY b.canonical_id ORDER BY link_count DESC LIMIT 10",
+                "rowCount": 0,
+                "rows": [],
+                "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 15, in <module>\n  File \"/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/.venv/lib/python3.14/site-packages/psycopg/cursor.py\", line 117, in execute\n    raise ex.with_traceback(None)\npsycopg.errors.UndefinedColumn: column r.source_entity_id does not exist\nLINE 9: JOIN relationships r ON r.source_entity_id = b.id OR r.targe...\n                                ^\n"
+              }
+            },
+            {
+              "ok": true,
+              "tool": "inspect_relationships",
+              "result": {
+                "purpose": "Inspect KB relationships",
+                "sql": "select r.rel_type, coalesce(sd.title, sd.path, '') as source, coalesce(r.target_path, r.target_anchor, '') as target, left(regexp_replace(coalesce(r.evidence, ''), '\\s+', ' ', 'g'), 300) as evidence from relationships r left join documents sd on sd.id = r.source_document_id order by r.id desc limit 40",
+                "columns": [
+                  "rel_type",
+                  "source",
+                  "target",
+                  "evidence"
+                ],
+                "rows": [
+                  {
+                    "rel_type": "docx_hyperlink",
+                    "source": "04-low-level-design",
+                    "target": "source-pack/03-high-level-design.md",
+                    "evidence": "03-high-level-design.md"
+                  },
+                  {
+                    "rel_type": "docx_hyperlink",
+                    "source": "04-low-level-design",
+                    "target": "source-pack/02-functional-requirements-specification.md",
+                    "evidence": "02-functional-requirements-specification.md"
+                  },
+                  {
+                    "rel_type": "docx_hyperlink",
+                    "source": "04-low-level-design",
+                    "target": "source-pack/01-business-requirements-document.md",
+                    "evidence": "01-business-requirements-document.md"
+                  },
+                  {
+                    "rel_type": "docx_hyperlink",
+                    "source": "03-high-level-design",
+                    "target": "source-pack/04-low-level-design.md",
+                    "evidence": "04-low-level-design.md"
+                  },
+                  {
+                    "rel_type": "docx_hyperlink",
+                    "source": "03-high-level-design",
+                    "target": "source-pack/02-functional-requirements-specification.md",
+                    "evidence": "02-functional-requirements-specification.md"
+                  },
+                  {
+                    "rel_type": "docx_hyperlink",
+                    "source": "03-high-level-design",
+                    "target": "source-pack/01-business-requirements-document.md",
+                    "evidence": "01-business-requirements-document.md"
+                  },
+                  {
+                    "rel_type": "docx_hyperlink",
+                    "source": "02-functional-requirements-specification",
+                    "target": "source-pack/04-low-level-design.md",
+                    "evidence": "04-low-level-design.md"
+                  },
+                  {
+                    "rel_type": "docx_hyperlink",
+                    "source": "02-functional-requirements-specification",
+                    "target": "source-pack/03-high-level-design.md",
+                    "evidence": "03-high-level-design.md"
+                  },
+                  {
+                    "rel_type": "docx_hyperlink",
+                    "source": "02-functional-requirements-specification",
+                    "target": "source-pack/01-business-requirements-document.md",
+                    "evidence": "01-business-requirements-document.md"
+                  },
+                  {
+                    "rel_type": "docx_hyperlink",
+                    "source": "01-business-requirements-document",
+                    "target": "source-pack/04-low-level-design.md",
+                    "evidence": "04-low-level-design.md"
+                  },
+                  {
+                    "rel_type": "docx_hyperlink",
+                    "source": "01-business-requirements-document",
+                    "target": "source-pack/03-high-level-design.md",
+                    "evidence": "03-high-level-design.md"
+                  },
+                  {
+                    "rel_type": "docx_hyperlink",
+                    "source": "01-business-requirements-document",
+                    "target": "source-pack/02-functional-requirements-specification.md",
+                    "evidence": "02-functional-requirements-specification.md"
+                  },
+                  {
+                    "rel_type": "markdown_link",
+                    "source": "04-low-level-design",
+                    "target": "test-doc/03-high-level-design.md",
+                    "evidence": "03-high-level-design.md"
+                  },
+                  {
+                    "rel_type": "markdown_link",
+                    "source": "04-low-level-design",
+                    "target": "test-doc/02-functional-requirements-specification.md",
+                    "evidence": "02-functional-requirements-specification.md"
+                  },
+                  {
+                    "rel_type": "markdown_link",
+                    "source": "04-low-level-design",
+                    "target": "test-doc/01-business-requirements-document.md",
+                    "evidence": "01-business-requirements-document.md"
+                  },
+                  {
+                    "rel_type": "markdown_link",
+                    "source": "03-high-level-design",
+                    "target": "test-doc/04-low-level-design.md",
+                    "evidence": "04-low-level-design.md"
+                  },
+                  {
+                    "rel_type": "markdown_link",
+                    "source": "03-high-level-design",
+                    "target": "test-doc/02-functional-requirements-specification.md",
+                    "evidence": "02-functional-requirements-specification.md"
+                  },
+                  {
+                    "rel_type": "markdown_link",
+                    "source": "03-high-level-design",
+                    "target": "test-doc/01-business-requirements-document.md",
+                    "evidence": "01-business-requirements-document.md"
+                  },
+                  {
+                    "rel_type": "markdown_link",
+                    "source": "02-functional-requirements-specification",
+                    "target": "test-doc/04-low-level-design.md",
+                    "evidence": "04-low-level-design.md"
+                  },
+                  {
+                    "rel_type": "markdown_link",
+                    "source": "02-functional-requirements-specification",
+                    "target": "test-doc/03-high-level-design.md",
+                    "evidence": "03-high-level-design.md"
+                  },
+                  {
+                    "rel_type": "markdown_link",
+                    "source": "02-functional-requirements-specification",
+                    "target": "test-doc/01-business-requirements-document.md",
+                    "evidence": "01-business-requirements-document.md"
+                  },
+                  {
+                    "rel_type": "markdown_link",
+                    "source": "01-business-requirements-document",
+                    "target": "test-doc/04-low-level-design.md",
+                    "evidence": "04-low-level-design.md"
+                  },
+                  {
+                    "rel_type": "markdown_link",
+                    "source": "01-business-requirements-document",
+                    "target": "test-doc/03-high-level-design.md",
+                    "evidence": "03-high-level-design.md"
+                  },
+                  {
+                    "rel_type": "markdown_link",
+                    "source": "01-business-requirements-document",
+                    "target": "test-doc/02-functional-requirements-specification.md",
+                    "evidence": "02-functional-requirements-specification.md"
+                  },
+                  {
+                    "rel_type": "markdown_link",
+                    "source": "02-functional-requirements-specification",
+                    "target": "test-doc/04-low-level-design.md",
+                    "evidence": "04-low-level-design.md"
+                  },
+                  {
+                    "rel_type": "markdown_link",
+                    "source": "02-functional-requirements-specification",
+                    "target": "test-doc/03-high-level-design.md",
+                    "evidence": "03-high-level-design.md"
+                  },
+                  {
+                    "rel_type": "markdown_link",
+                    "source": "02-functional-requirements-specification",
+                    "target": "test-doc/01-business-requirements-document.md",
+                    "evidence": "01-business-requirements-document.md"
+                  },
+                  {
+                    "rel_type": "markdown_link",
+                    "source": "02-functional-requirements-specification",
+                    "target": "test-doc/04-low-level-design.md",
+                    "evidence": "04-low-level-design.md"
+                  },
+                  {
+                    "rel_type": "markdown_link",
+                    "source": "02-functional-requirements-specification",
+                    "target": "test-doc/03-high-level-design.md",
+                    "evidence": "03-high-level-design.md"
+                  },
+                  {
+                    "rel_type": "markdown_link",
+                    "source": "02-functional-requirements-specification",
+                    "target": "test-doc/01-business-requirements-document.md",
+                    "evidence": "01-business-requirements-document.md"
+                  }
+                ],
+                "rowCount": 30
+              }
+            }
+          ]
+        },
+        "stdout": "I inspected the KB with available tools but did not reach a final answer within the tool-call budget."
+      }
+    },
+    {
+      "id": "event_mones0d9_b3nnrr",
+      "runId": "uiqa_moneq926_ntlb06",
+      "phase": "rag_ready",
+      "title": "Tool query_kb_sql",
+      "status": "warning",
+      "createdAt": "2026-05-01T21:12:09.693Z",
+      "finishedAt": "2026-05-01T21:12:09.701Z",
+      "summary": "Table edges is not in the KB read allowlist.",
+      "technical": {
+        "rawLabel": "tool:query_kb_sql",
+        "toolName": "query_kb_sql",
+        "payload": {
+          "ok": false,
+          "tool": "query_kb_sql",
+          "error": "Table edges is not in the KB read allowlist."
+        },
+        "stdout": "{\n  \"error\": \"Table edges is not in the KB read allowlist.\"\n}",
+        "stderr": "Table edges is not in the KB read allowlist."
+      }
+    },
+    {
+      "id": "event_mones4k9_ifaits",
+      "runId": "uiqa_moneq926_ntlb06",
+      "phase": "rag_ready",
+      "title": "Tool query_kb_sql",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T21:12:15.129Z",
+      "finishedAt": "2026-05-01T21:12:15.405Z",
+      "summary": "query_kb_sql returned 0 row(s).",
+      "technical": {
+        "rawLabel": "tool:query_kb_sql",
+        "toolName": "query_kb_sql",
+        "payload": {
+          "ok": true,
+          "tool": "query_kb_sql",
+          "result": {
+            "purpose": "Top BR identifiers by undirected relationship degree",
+            "sql": "WITH br AS ( SELECT id, entity_key, title, label FROM entities WHERE entity_type = 'BR' ) SELECT b.entity_key AS business_requirement_key, COALESCE(b.title, b.label) AS title, COUNT(r.id)::bigint AS link_count FROM br b JOIN relationships r ON r.source_entity_id = b.id OR r.target_entity_id = b.id GROUP BY b.entity_key, COALESCE(b.title, b.label) ORDER BY link_count DESC LIMIT 5",
+            "rowCount": 0,
+            "rows": [],
+            "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 15, in <module>\n  File \"/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/.venv/lib/python3.14/site-packages/psycopg/cursor.py\", line 117, in execute\n    raise ex.with_traceback(None)\npsycopg.errors.UndefinedColumn: column \"entity_key\" does not exist\nLINE 2:   SELECT id, entity_key, title, label\n                     ^\n"
+          }
+        },
+        "stdout": "{\n  \"purpose\": \"Top BR identifiers by undirected relationship degree\",\n  \"sql\": \"WITH br AS ( SELECT id, entity_key, title, label FROM entities WHERE entity_type = 'BR' ) SELECT b.entity_key AS business_requirement_key, COALESCE(b.title, b.label) AS title, COUNT(r.id)::bigint AS link_count FROM br b JOIN relationships r ON r.source_entity_id = b.id OR r.target_entity_id = b.id GROUP BY b.entity_key, COALESCE(b.title, b.label) ORDER BY link_count DESC LIMIT 5\",\n  \"rowCount\": 0,\n  \"rows\": [],\n  \"error\": \"Traceback (most recent call last):\\n  File \\\"<stdin>\\\", line 15, in <module>\\n  File \\\"/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/.venv/lib/python3.14/site-packages/psycopg/cursor.py\\\", line 117, in execute\\n    raise ex.with_traceback(None)\\npsycopg.errors.UndefinedColumn: column \\\"entity_key\\\" does not exist\\nLINE 2:   SELECT id, entity_key, title, label\\n                     ^\\n\"\n}"
+      }
+    },
+    {
+      "id": "event_mones4ka_atz31d",
+      "runId": "uiqa_moneq926_ntlb06",
+      "phase": "rag_ready",
+      "title": "Tool query_kb_sql: Top BR identifiers by undirected relationship degree",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T21:12:15.130Z",
+      "finishedAt": "2026-05-01T21:12:15.405Z",
+      "technical": {
+        "rawLabel": "Tool query_kb_sql: Top BR identifiers by undirected relationship degree",
+        "command": "source ingestion/.venv/bin/activate && UI_QA_SQL='WITH br AS (\n  SELECT id, entity_key, title, label\n  FROM entities\n  WHERE entity_type = '\\''BR'\\''\n)\nSELECT b.entity_key AS business_requirement_key,\n       COALESCE(b.title, b.label) AS title,\n       COUNT(r.id)::bigint AS link_count\nFROM br b\nJOIN relationships r ON r.source_entity_id = b.id OR r.target_entity_id = b.id\nGROUP BY b.entity_key, COALESCE(b.title, b.label)\nORDER BY link_count DESC\nLIMIT 5' UI_QA_LIMIT=50 DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport datetime, decimal, json, os, psycopg\nsql = os.environ[\"UI_QA_SQL\"]\nlimit = int(os.environ.get(\"UI_QA_LIMIT\", \"50\"))\nwrapped = f\"select * from ({sql}) as uiqa_readonly_result limit {limit}\"\ndef encode(value):\n    if isinstance(value, decimal.Decimal):\n        return float(value)\n    if isinstance(value, (datetime.date, datetime.datetime)):\n        return value.isoformat()\n    return value\nwith psycopg.connect(os.environ[\"DATABASE_URL\"]) as conn:\n    conn.execute(\"set statement_timeout = '5000ms'\")\n    conn.execute(\"set transaction read only\")\n    with conn.cursor() as cur:\n        cur.execute(wrapped)\n        columns = [desc.name for desc in cur.description]\n        rows = [{col: encode(value) for col, value in zip(columns, row)} for row in cur.fetchall()]\nprint(json.dumps({\"columns\": columns, \"rows\": rows, \"rowCount\": len(rows)}))\nPY",
+        "stdout": "",
+        "stderr": "Traceback (most recent call last):\n  File \"<stdin>\", line 15, in <module>\n  File \"/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/.venv/lib/python3.14/site-packages/psycopg/cursor.py\", line 117, in execute\n    raise ex.with_traceback(None)\npsycopg.errors.UndefinedColumn: column \"entity_key\" does not exist\nLINE 2:   SELECT id, entity_key, title, label\n                     ^\n",
+        "exitCode": 1
+      }
+    },
+    {
+      "id": "event_monesivq_x8rr1b",
+      "runId": "uiqa_moneq926_ntlb06",
+      "phase": "rag_ready",
+      "title": "Tool query_kb_sql",
+      "status": "warning",
+      "createdAt": "2026-05-01T21:12:33.686Z",
+      "finishedAt": "2026-05-01T21:12:33.688Z",
+      "summary": "Table information_schema.columns is not in the KB read allowlist.",
+      "technical": {
+        "rawLabel": "tool:query_kb_sql",
+        "toolName": "query_kb_sql",
+        "payload": {
+          "ok": false,
+          "tool": "query_kb_sql",
+          "error": "Table information_schema.columns is not in the KB read allowlist."
+        },
+        "stdout": "{\n  \"error\": \"Table information_schema.columns is not in the KB read allowlist.\"\n}",
+        "stderr": "Table information_schema.columns is not in the KB read allowlist."
+      }
+    },
+    {
+      "id": "event_monesivt_p5z9k7",
+      "runId": "uiqa_moneq926_ntlb06",
+      "phase": "rag_ready",
+      "title": "Tool inspect_entities",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T21:12:33.689Z",
+      "finishedAt": "2026-05-01T21:12:33.979Z",
+      "summary": "inspect_entities returned 8 row(s).",
+      "technical": {
+        "rawLabel": "tool:inspect_entities",
+        "toolName": "inspect_entities",
+        "payload": {
+          "ok": true,
+          "tool": "inspect_entities",
+          "result": {
+            "purpose": "Inspect KB entities",
+            "sql": "select entity_type, canonical_id, count(*) as mentions, count(distinct document_id) as documents from entities where entity_type = 'BR' group by entity_type, canonical_id order by mentions desc, canonical_id limit 20",
+            "columns": [
+              "entity_type",
+              "canonical_id",
+              "mentions",
+              "documents"
+            ],
+            "rows": [
+              {
+                "entity_type": "BR",
+                "canonical_id": "BR-001",
+                "mentions": 14,
+                "documents": 6
+              },
+              {
+                "entity_type": "BR",
+                "canonical_id": "BR-002",
+                "mentions": 13,
+                "documents": 6
+              },
+              {
+                "entity_type": "BR",
+                "canonical_id": "BR-003",
+                "mentions": 13,
+                "documents": 6
+              },
+              {
+                "entity_type": "BR",
+                "canonical_id": "BR-004",
+                "mentions": 13,
+                "documents": 6
+              },
+              {
+                "entity_type": "BR",
+                "canonical_id": "BR-005",
+                "mentions": 13,
+                "documents": 6
+              },
+              {
+                "entity_type": "BR",
+                "canonical_id": "BR-006",
+                "mentions": 13,
+                "documents": 6
+              },
+              {
+                "entity_type": "BR",
+                "canonical_id": "BR-007",
+                "mentions": 9,
+                "documents": 6
+              },
+              {
+                "entity_type": "BR",
+                "canonical_id": "BR-008",
+                "mentions": 7,
+                "documents": 6
+              }
+            ],
+            "rowCount": 8
+          }
+        },
+        "stdout": "{\n  \"purpose\": \"Inspect KB entities\",\n  \"sql\": \"select entity_type, canonical_id, count(*) as mentions, count(distinct document_id) as documents from entities where entity_type = 'BR' group by entity_type, canonical_id order by mentions desc, canonical_id limit 20\",\n  \"columns\": [\n    \"entity_type\",\n    \"canonical_id\",\n    \"mentions\",\n    \"documents\"\n  ],\n  \"rows\": [\n    {\n      \"entity_type\": \"BR\",\n      \"canonical_id\": \"BR-001\",\n      \"mentions\": 14,\n      \"documents\": 6\n    },\n    {\n      \"entity_type\": \"BR\",\n      \"canonical_id\": \"BR-002\",\n      \"mentions\": 13,\n      \"documents\": 6\n    },\n    {\n      \"entity_type\": \"BR\",\n      \"canonical_id\": \"BR-003\",\n      \"mentions\": 13,\n      \"documents\": 6\n    },\n    {\n      \"entity_type\": \"BR\",\n      \"canonical_id\": \"BR-004\",\n      \"mentions\": 13,\n      \"documents\": 6\n    },\n    {\n      \"entity_type\": \"BR\",\n      \"canonical_id\": \"BR-005\",\n      \"mentions\": 13,\n      \"documents\": 6\n    },\n    {\n      \"entity_type\": \"BR\",\n      \"canonical_id\": \"BR-006\",\n      \"mentions\": 13,\n      \"documents\": 6\n    },\n    {\n      \"entity_type\": \"BR\",\n      \"canonical_id\": \"BR-007\",\n      \"mentions\": 9,\n      \"documents\": 6\n    },\n    {\n      \"entity_type\": \"BR\",\n      \"canonical_id\": \"BR-008\",\n      \"mentions\": 7,\n      \"documents\": 6\n    }\n  ],\n  \"rowCount\": 8\n}"
+      }
+    },
+    {
+      "id": "event_monesiw1_6tfj4d",
+      "runId": "uiqa_moneq926_ntlb06",
+      "phase": "rag_ready",
+      "title": "Tool query_kb_sql: Inspect KB entities",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T21:12:33.697Z",
+      "finishedAt": "2026-05-01T21:12:33.979Z",
+      "technical": {
+        "rawLabel": "Tool query_kb_sql: Inspect KB entities",
+        "command": "source ingestion/.venv/bin/activate && UI_QA_SQL='select entity_type,\n           canonical_id,\n           count(*) as mentions,\n           count(distinct document_id) as documents\n    from entities\n    where entity_type = '\\''BR'\\''\n    group by entity_type, canonical_id\n    order by mentions desc, canonical_id\n    limit 20' UI_QA_LIMIT=20 DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport datetime, decimal, json, os, psycopg\nsql = os.environ[\"UI_QA_SQL\"]\nlimit = int(os.environ.get(\"UI_QA_LIMIT\", \"50\"))\nwrapped = f\"select * from ({sql}) as uiqa_readonly_result limit {limit}\"\ndef encode(value):\n    if isinstance(value, decimal.Decimal):\n        return float(value)\n    if isinstance(value, (datetime.date, datetime.datetime)):\n        return value.isoformat()\n    return value\nwith psycopg.connect(os.environ[\"DATABASE_URL\"]) as conn:\n    conn.execute(\"set statement_timeout = '5000ms'\")\n    conn.execute(\"set transaction read only\")\n    with conn.cursor() as cur:\n        cur.execute(wrapped)\n        columns = [desc.name for desc in cur.description]\n        rows = [{col: encode(value) for col, value in zip(columns, row)} for row in cur.fetchall()]\nprint(json.dumps({\"columns\": columns, \"rows\": rows, \"rowCount\": len(rows)}))\nPY",
+        "stdout": "{\"columns\": [\"entity_type\", \"canonical_id\", \"mentions\", \"documents\"], \"rows\": [{\"entity_type\": \"BR\", \"canonical_id\": \"BR-001\", \"mentions\": 14, \"documents\": 6}, {\"entity_type\": \"BR\", \"canonical_id\": \"BR-002\", \"mentions\": 13, \"documents\": 6}, {\"entity_type\": \"BR\", \"canonical_id\": \"BR-003\", \"mentions\": 13, \"documents\": 6}, {\"entity_type\": \"BR\", \"canonical_id\": \"BR-004\", \"mentions\": 13, \"documents\": 6}, {\"entity_type\": \"BR\", \"canonical_id\": \"BR-005\", \"mentions\": 13, \"documents\": 6}, {\"entity_type\": \"BR\", \"canonical_id\": \"BR-006\", \"mentions\": 13, \"documents\": 6}, {\"entity_type\": \"BR\", \"canonical_id\": \"BR-007\", \"mentions\": 9, \"documents\": 6}, {\"entity_type\": \"BR\", \"canonical_id\": \"BR-008\", \"mentions\": 7, \"documents\": 6}], \"rowCount\": 8}\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_monessr1_trjr50",
+      "runId": "uiqa_moneq926_ntlb06",
+      "phase": "rag_ready",
+      "title": "Tool query_kb_sql",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T21:12:46.477Z",
+      "finishedAt": "2026-05-01T21:12:46.663Z",
+      "summary": "query_kb_sql returned 0 row(s).",
+      "technical": {
+        "rawLabel": "tool:query_kb_sql",
+        "toolName": "query_kb_sql",
+        "payload": {
+          "ok": true,
+          "tool": "query_kb_sql",
+          "result": {
+            "purpose": "Top BR by relationship edge count",
+            "sql": "WITH br AS ( SELECT id, canonical_id FROM entities WHERE entity_type = 'BR' ) SELECT b.canonical_id AS business_requirement_key, COUNT(r.id)::bigint AS link_count FROM br b JOIN relationships r ON r.source_entity_id = b.id OR r.target_entity_id = b.id GROUP BY b.canonical_id ORDER BY link_count DESC LIMIT 10",
+            "rowCount": 0,
+            "rows": [],
+            "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 15, in <module>\n  File \"/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/.venv/lib/python3.14/site-packages/psycopg/cursor.py\", line 117, in execute\n    raise ex.with_traceback(None)\npsycopg.errors.UndefinedColumn: column r.source_entity_id does not exist\nLINE 9: JOIN relationships r ON r.source_entity_id = b.id OR r.targe...\n                                ^\n"
+          }
+        },
+        "stdout": "{\n  \"purpose\": \"Top BR by relationship edge count\",\n  \"sql\": \"WITH br AS ( SELECT id, canonical_id FROM entities WHERE entity_type = 'BR' ) SELECT b.canonical_id AS business_requirement_key, COUNT(r.id)::bigint AS link_count FROM br b JOIN relationships r ON r.source_entity_id = b.id OR r.target_entity_id = b.id GROUP BY b.canonical_id ORDER BY link_count DESC LIMIT 10\",\n  \"rowCount\": 0,\n  \"rows\": [],\n  \"error\": \"Traceback (most recent call last):\\n  File \\\"<stdin>\\\", line 15, in <module>\\n  File \\\"/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/.venv/lib/python3.14/site-packages/psycopg/cursor.py\\\", line 117, in execute\\n    raise ex.with_traceback(None)\\npsycopg.errors.UndefinedColumn: column r.source_entity_id does not exist\\nLINE 9: JOIN relationships r ON r.source_entity_id = b.id OR r.targe...\\n                                ^\\n\"\n}"
+      }
+    },
+    {
+      "id": "event_monessr2_gcia84",
+      "runId": "uiqa_moneq926_ntlb06",
+      "phase": "rag_ready",
+      "title": "Tool query_kb_sql: Top BR by relationship edge count",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T21:12:46.478Z",
+      "finishedAt": "2026-05-01T21:12:46.663Z",
+      "technical": {
+        "rawLabel": "Tool query_kb_sql: Top BR by relationship edge count",
+        "command": "source ingestion/.venv/bin/activate && UI_QA_SQL='WITH br AS (\n  SELECT id, canonical_id\n  FROM entities\n  WHERE entity_type = '\\''BR'\\''\n)\nSELECT b.canonical_id AS business_requirement_key,\n       COUNT(r.id)::bigint AS link_count\nFROM br b\nJOIN relationships r ON r.source_entity_id = b.id OR r.target_entity_id = b.id\nGROUP BY b.canonical_id\nORDER BY link_count DESC\nLIMIT 10' UI_QA_LIMIT=50 DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport datetime, decimal, json, os, psycopg\nsql = os.environ[\"UI_QA_SQL\"]\nlimit = int(os.environ.get(\"UI_QA_LIMIT\", \"50\"))\nwrapped = f\"select * from ({sql}) as uiqa_readonly_result limit {limit}\"\ndef encode(value):\n    if isinstance(value, decimal.Decimal):\n        return float(value)\n    if isinstance(value, (datetime.date, datetime.datetime)):\n        return value.isoformat()\n    return value\nwith psycopg.connect(os.environ[\"DATABASE_URL\"]) as conn:\n    conn.execute(\"set statement_timeout = '5000ms'\")\n    conn.execute(\"set transaction read only\")\n    with conn.cursor() as cur:\n        cur.execute(wrapped)\n        columns = [desc.name for desc in cur.description]\n        rows = [{col: encode(value) for col, value in zip(columns, row)} for row in cur.fetchall()]\nprint(json.dumps({\"columns\": columns, \"rows\": rows, \"rowCount\": len(rows)}))\nPY",
+        "stdout": "",
+        "stderr": "Traceback (most recent call last):\n  File \"<stdin>\", line 15, in <module>\n  File \"/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/.venv/lib/python3.14/site-packages/psycopg/cursor.py\", line 117, in execute\n    raise ex.with_traceback(None)\npsycopg.errors.UndefinedColumn: column r.source_entity_id does not exist\nLINE 9: JOIN relationships r ON r.source_entity_id = b.id OR r.targe...\n                                ^\n",
+        "exitCode": 1
+      }
+    },
+    {
+      "id": "event_monet8qs_qzo6hs",
+      "runId": "uiqa_moneq926_ntlb06",
+      "phase": "rag_ready",
+      "title": "Tool inspect_relationships",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T21:13:07.204Z",
+      "finishedAt": "2026-05-01T21:13:07.521Z",
+      "summary": "inspect_relationships returned 30 row(s).",
+      "technical": {
+        "rawLabel": "tool:inspect_relationships",
+        "toolName": "inspect_relationships",
+        "payload": {
+          "ok": true,
+          "tool": "inspect_relationships",
+          "result": {
+            "purpose": "Inspect KB relationships",
+            "sql": "select r.rel_type, coalesce(sd.title, sd.path, '') as source, coalesce(r.target_path, r.target_anchor, '') as target, left(regexp_replace(coalesce(r.evidence, ''), '\\s+', ' ', 'g'), 300) as evidence from relationships r left join documents sd on sd.id = r.source_document_id order by r.id desc limit 40",
+            "columns": [
+              "rel_type",
+              "source",
+              "target",
+              "evidence"
+            ],
+            "rows": [
+              {
+                "rel_type": "docx_hyperlink",
+                "source": "04-low-level-design",
+                "target": "source-pack/03-high-level-design.md",
+                "evidence": "03-high-level-design.md"
+              },
+              {
+                "rel_type": "docx_hyperlink",
+                "source": "04-low-level-design",
+                "target": "source-pack/02-functional-requirements-specification.md",
+                "evidence": "02-functional-requirements-specification.md"
+              },
+              {
+                "rel_type": "docx_hyperlink",
+                "source": "04-low-level-design",
+                "target": "source-pack/01-business-requirements-document.md",
+                "evidence": "01-business-requirements-document.md"
+              },
+              {
+                "rel_type": "docx_hyperlink",
+                "source": "03-high-level-design",
+                "target": "source-pack/04-low-level-design.md",
+                "evidence": "04-low-level-design.md"
+              },
+              {
+                "rel_type": "docx_hyperlink",
+                "source": "03-high-level-design",
+                "target": "source-pack/02-functional-requirements-specification.md",
+                "evidence": "02-functional-requirements-specification.md"
+              },
+              {
+                "rel_type": "docx_hyperlink",
+                "source": "03-high-level-design",
+                "target": "source-pack/01-business-requirements-document.md",
+                "evidence": "01-business-requirements-document.md"
+              },
+              {
+                "rel_type": "docx_hyperlink",
+                "source": "02-functional-requirements-specification",
+                "target": "source-pack/04-low-level-design.md",
+                "evidence": "04-low-level-design.md"
+              },
+              {
+                "rel_type": "docx_hyperlink",
+                "source": "02-functional-requirements-specification",
+                "target": "source-pack/03-high-level-design.md",
+                "evidence": "03-high-level-design.md"
+              },
+              {
+                "rel_type": "docx_hyperlink",
+                "source": "02-functional-requirements-specification",
+                "target": "source-pack/01-business-requirements-document.md",
+                "evidence": "01-business-requirements-document.md"
+              },
+              {
+                "rel_type": "docx_hyperlink",
+                "source": "01-business-requirements-document",
+                "target": "source-pack/04-low-level-design.md",
+                "evidence": "04-low-level-design.md"
+              },
+              {
+                "rel_type": "docx_hyperlink",
+                "source": "01-business-requirements-document",
+                "target": "source-pack/03-high-level-design.md",
+                "evidence": "03-high-level-design.md"
+              },
+              {
+                "rel_type": "docx_hyperlink",
+                "source": "01-business-requirements-document",
+                "target": "source-pack/02-functional-requirements-specification.md",
+                "evidence": "02-functional-requirements-specification.md"
+              },
+              {
+                "rel_type": "markdown_link",
+                "source": "04-low-level-design",
+                "target": "test-doc/03-high-level-design.md",
+                "evidence": "03-high-level-design.md"
+              },
+              {
+                "rel_type": "markdown_link",
+                "source": "04-low-level-design",
+                "target": "test-doc/02-functional-requirements-specification.md",
+                "evidence": "02-functional-requirements-specification.md"
+              },
+              {
+                "rel_type": "markdown_link",
+                "source": "04-low-level-design",
+                "target": "test-doc/01-business-requirements-document.md",
+                "evidence": "01-business-requirements-document.md"
+              },
+              {
+                "rel_type": "markdown_link",
+                "source": "03-high-level-design",
+                "target": "test-doc/04-low-level-design.md",
+                "evidence": "04-low-level-design.md"
+              },
+              {
+                "rel_type": "markdown_link",
+                "source": "03-high-level-design",
+                "target": "test-doc/02-functional-requirements-specification.md",
+                "evidence": "02-functional-requirements-specification.md"
+              },
+              {
+                "rel_type": "markdown_link",
+                "source": "03-high-level-design",
+                "target": "test-doc/01-business-requirements-document.md",
+                "evidence": "01-business-requirements-document.md"
+              },
+              {
+                "rel_type": "markdown_link",
+                "source": "02-functional-requirements-specification",
+                "target": "test-doc/04-low-level-design.md",
+                "evidence": "04-low-level-design.md"
+              },
+              {
+                "rel_type": "markdown_link",
+                "source": "02-functional-requirements-specification",
+                "target": "test-doc/03-high-level-design.md",
+                "evidence": "03-high-level-design.md"
+              },
+              {
+                "rel_type": "markdown_link",
+                "source": "02-functional-requirements-specification",
+                "target": "test-doc/01-business-requirements-document.md",
+                "evidence": "01-business-requirements-document.md"
+              },
+              {
+                "rel_type": "markdown_link",
+                "source": "01-business-requirements-document",
+                "target": "test-doc/04-low-level-design.md",
+                "evidence": "04-low-level-design.md"
+              },
+              {
+                "rel_type": "markdown_link",
+                "source": "01-business-requirements-document",
+                "target": "test-doc/03-high-level-design.md",
+                "evidence": "03-high-level-design.md"
+              },
+              {
+                "rel_type": "markdown_link",
+                "source": "01-business-requirements-document",
+                "target": "test-doc/02-functional-requirements-specification.md",
+                "evidence": "02-functional-requirements-specification.md"
+              },
+              {
+                "rel_type": "markdown_link",
+                "source": "02-functional-requirements-specification",
+                "target": "test-doc/04-low-level-design.md",
+                "evidence": "04-low-level-design.md"
+              },
+              {
+                "rel_type": "markdown_link",
+                "source": "02-functional-requirements-specification",
+                "target": "test-doc/03-high-level-design.md",
+                "evidence": "03-high-level-design.md"
+              },
+              {
+                "rel_type": "markdown_link",
+                "source": "02-functional-requirements-specification",
+                "target": "test-doc/01-business-requirements-document.md",
+                "evidence": "01-business-requirements-document.md"
+              },
+              {
+                "rel_type": "markdown_link",
+                "source": "02-functional-requirements-specification",
+                "target": "test-doc/04-low-level-design.md",
+                "evidence": "04-low-level-design.md"
+              },
+              {
+                "rel_type": "markdown_link",
+                "source": "02-functional-requirements-specification",
+                "target": "test-doc/03-high-level-design.md",
+                "evidence": "03-high-level-design.md"
+              },
+              {
+                "rel_type": "markdown_link",
+                "source": "02-functional-requirements-specification",
+                "target": "test-doc/01-business-requirements-document.md",
+                "evidence": "01-business-requirements-document.md"
+              }
+            ],
+            "rowCount": 30
+          }
+        },
+        "stdout": "{\n  \"purpose\": \"Inspect KB relationships\",\n  \"sql\": \"select r.rel_type, coalesce(sd.title, sd.path, '') as source, coalesce(r.target_path, r.target_anchor, '') as target, left(regexp_replace(coalesce(r.evidence, ''), '\\\\s+', ' ', 'g'), 300) as evidence from relationships r left join documents sd on sd.id = r.source_document_id order by r.id desc limit 40\",\n  \"columns\": [\n    \"rel_type\",\n    \"source\",\n    \"target\",\n    \"evidence\"\n  ],\n  \"rows\": [\n    {\n      \"rel_type\": \"docx_hyperlink\",\n      \"source\": \"04-low-level-design\",\n      \"target\": \"source-pack/03-high-level-design.md\",\n      \"evidence\": \"03-high-level-design.md\"\n    },\n    {\n      \"rel_type\": \"docx_hyperlink\",\n      \"source\": \"04-low-level-design\",\n      \"target\": \"source-pack/02-functional-requirements-specification.md\",\n      \"evidence\": \"02-functional-requirements-specification.md\"\n    },\n    {\n      \"rel_type\": \"docx_hyperlink\",\n      \"source\": \"04-low-level-design\",\n      \"target\": \"source-pack/01-business-requirements-document.md\",\n      \"evidence\": \"01-business-requirements-document.md\"\n    },\n    {\n      \"rel_type\": \"docx_hyperlink\",\n      \"source\": \"03-high-level-design\",\n      \"target\": \"source-pack/04-low-level-design.md\",\n      \"evidence\": \"04-low-level-design.md\"\n    },\n    {\n      \"rel_type\": \"docx_hyperlink\",\n      \"source\": \"03-high-level-design\",\n      \"target\": \"source-pack/02-functional-requirements-specification.md\",\n      \"evidence\": \"02-functional-requirements-specification.md\"\n    },\n    {\n      \"rel_type\": \"docx_hyperlink\",\n      \"source\": \"03-high-level-design\",\n      \"target\": \"source-pack/01-business-requirements-document.md\",\n      \"evidence\": \"01-business-requirements-document.md\"\n    },\n    {\n      \"rel_type\": \"docx_hyperlink\",\n      \"source\": \"02-functional-requirements-specification\",\n      \"target\": \"source-pack/04-low-level-design.md\",\n      \"evidence\": \"04-low-level-design.md\"\n    },\n    {\n      \"rel_type\": \"docx_hyperlink\",\n      \"source\": \"02-functional-requirements-specification\",\n      \"target\": \"source-pack/03-high-level-design.md\",\n      \"evidence\": \"03-high-level-design.md\"\n    },\n    {\n      \"rel_type\": \"docx_hyperlink\",\n      \"source\": \"02-functional-requirements-specification\",\n      \"target\": \"source-pack/01-business-requirements-document.md\",\n      \"evidence\": \"01-business-requirements-document.md\"\n    },\n    {\n      \"rel_type\": \"docx_hyperlink\",\n      \"source\": \"01-business-requirements-document\",\n      \"target\": \"source-pack/04-low-level-design.md\",\n      \"evidence\": \"04-low-level-design.md\"\n    },\n    {\n      \"rel_type\": \"docx_hyperlink\",\n      \"source\": \"01-business-requirements-document\",\n      \"target\": \"source-pack/03-high-level-design.md\",\n      \"evidence\": \"03-high-level-design.md\"\n    },\n    {\n      \"rel_type\": \"docx_hyperlink\",\n      \"source\": \"01-business-requirements-document\",\n      \"target\": \"source-pack/02-functional-requirements-specification.md\",\n      \"evidence\": \"02-functional-requirements-specification.md\"\n    },\n    {\n      \"rel_type\": \"markdown_link\",\n      \"source\": \"04-low-level-design\",\n      \"target\": \"test-doc/03-high-level-design.md\",\n      \"evidence\": \"03-high-level-design.md\"\n    },\n    {\n      \"rel_type\": \"markdown_link\",\n      \"source\": \"04-low-level-design\",\n      \"target\": \"test-doc/02-functional-requirements-specification.md\",\n      \"evidence\": \"02-functional-requirements-specification.md\"\n    },\n    {\n      \"rel_type\": \"markdown_link\",\n      \"source\": \"04-low-level-design\",\n      \"target\": \"test-doc/01-business-requirements-document.md\",\n      \"evidence\": \"01-business-requirements-document.md\"\n    },\n    {\n      \"rel_type\": \"markdown_link\",\n      \"source\": \"03-high-level-design\",\n      \"target\": \"test-doc/04-low-level-design.md\",\n      \"evidence\": \"04-low-level-design.md\"\n    },\n    {\n      \"rel_type\": \"markdown_link\",\n      \"source\": \"03-high-level-design\",\n      \"target\": \"test-doc/02-functional-requirements-specification.md\",\n      \"evidence\": \"02-functional-requirements-specification.md\"\n    },\n    {\n      \"rel_type\": \"markdown_link\",\n      \"source\": \"03-high-level-design\",\n      \"target\": \"test-doc/01-business-requirements-document.md\",\n      \"evidence\": \"01-business-requirements-document.md\"\n    },\n    {\n      \"rel_type\": \"markdown_link\",\n      \"source\": \"02-functional-requirements-specification\",\n      \"target\": \"test-doc/04-low-level-design.md\",\n      \"evidence\": \"04-low-level-design.md\"\n    },\n    {\n      \"rel_type\": \"markdown_link\",\n      \"source\": \"02-functional-requirements-specification\",\n      \"target\": \"test-doc/03-high-level-design.md\",\n      \"evidence\": \"03-high-level-design.md\"\n    },\n    {\n      \"rel_type\": \"markdown_link\",\n      \"source\": \"02-functional-requirements-specification\",\n      \"target\": \"test-doc/01-business-requirements-document.md\",\n      \"evidence\": \"01-business-requirements-document.md\"\n    },\n    {\n      \"rel_type\": \"markdown_link\",\n      \"source\": \"01-business-requirements-document\",\n      \"target\": \"test-doc/04-low-level-design.md\",\n      \"evidence\": \"04-low-level-design.md\"\n    },\n    {\n      \"rel_type\": \"markdown_link\",\n      \"source\": \"01-business-requirements-document\",\n      \"target\": \"test-doc/03-high-level-design.md\",\n      \"evidence\": \"03-high-level-design.md\"\n    },\n    {\n      \"rel_type\": \"markdown_link\",\n      \"source\": \"01-business-requirements-document\",\n      \"target\": \"test-doc/02-functional-requirements-specification.md\",\n      \"evidence\": \"02-functional-requirements-specification.md\"\n    },\n    {\n      \"rel_type\": \"markdown_link\",\n      \"source\": \"02-functional-requirements-specification\",\n      \"target\": \"test-doc/04-low-level-design.md\",\n      \"evidence\": \"04-low-level-design.md\"\n    },\n    {\n      \"rel_type\": \"markdown_link\",\n      \"source\": \"02-functional-requirements-specification\",\n      \"target\": \"test-doc/03-high-level-design.md\",\n      \"evidence\": \"03-high-level-design.md\"\n    },\n    {\n      \"rel_type\": \"markdown_link\",\n      \"source\": \"02-functional-requirements-specification\",\n      \"target\": \"test-doc/01-business-requirements-document.md\",\n      \"evidence\": \"01-business-requirements-document.md\"\n    },\n    {\n      \"rel_type\": \"markdown_link\",\n      \"source\": \"02-functional-requirements-specification\",\n      \"target\": \"test-doc/04-low-level-design.md\",\n      \"evidence\": \"04-low-level-design.md\"\n    },\n    {\n      \"rel_type\": \"markdown_link\",\n      \"source\": \"02-functional-requirements-specification\",\n      \"target\": \"test-doc/03-high-level-design.md\",\n      \"evidence\": \"03-high-level-design.md\"\n    },\n    {\n      \"rel_type\": \"markdown_link\",\n      \"source\": \"02-functional-requirements-specification\",\n      \"target\": \"test-doc/01-business-requirements-document.md\",\n      \"evidence\": \"01-business-requirements-document.md\"\n    }\n  ],\n  \"rowCount\": 30\n}"
+      }
+    },
+    {
+      "id": "event_monet8qu_d8csmg",
+      "runId": "uiqa_moneq926_ntlb06",
+      "phase": "rag_ready",
+      "title": "Tool query_kb_sql: Inspect KB relationships",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T21:13:07.206Z",
+      "finishedAt": "2026-05-01T21:13:07.520Z",
+      "technical": {
+        "rawLabel": "Tool query_kb_sql: Inspect KB relationships",
+        "command": "source ingestion/.venv/bin/activate && UI_QA_SQL='select r.rel_type,\n           coalesce(sd.title, sd.path, '\\'''\\'') as source,\n           coalesce(r.target_path, r.target_anchor, '\\'''\\'') as target,\n           left(regexp_replace(coalesce(r.evidence, '\\'''\\''), '\\''\\s+'\\'', '\\'' '\\'', '\\''g'\\''), 300) as evidence\n    from relationships r\n    left join documents sd on sd.id = r.source_document_id\n    \n    order by r.id desc\n    limit 40' UI_QA_LIMIT=40 DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport datetime, decimal, json, os, psycopg\nsql = os.environ[\"UI_QA_SQL\"]\nlimit = int(os.environ.get(\"UI_QA_LIMIT\", \"50\"))\nwrapped = f\"select * from ({sql}) as uiqa_readonly_result limit {limit}\"\ndef encode(value):\n    if isinstance(value, decimal.Decimal):\n        return float(value)\n    if isinstance(value, (datetime.date, datetime.datetime)):\n        return value.isoformat()\n    return value\nwith psycopg.connect(os.environ[\"DATABASE_URL\"]) as conn:\n    conn.execute(\"set statement_timeout = '5000ms'\")\n    conn.execute(\"set transaction read only\")\n    with conn.cursor() as cur:\n        cur.execute(wrapped)\n        columns = [desc.name for desc in cur.description]\n        rows = [{col: encode(value) for col, value in zip(columns, row)} for row in cur.fetchall()]\nprint(json.dumps({\"columns\": columns, \"rows\": rows, \"rowCount\": len(rows)}))\nPY",
+        "stdout": "{\"columns\": [\"rel_type\", \"source\", \"target\", \"evidence\"], \"rows\": [{\"rel_type\": \"docx_hyperlink\", \"source\": \"04-low-level-design\", \"target\": \"source-pack/03-high-level-design.md\", \"evidence\": \"03-high-level-design.md\"}, {\"rel_type\": \"docx_hyperlink\", \"source\": \"04-low-level-design\", \"target\": \"source-pack/02-functional-requirements-specification.md\", \"evidence\": \"02-functional-requirements-specification.md\"}, {\"rel_type\": \"docx_hyperlink\", \"source\": \"04-low-level-design\", \"target\": \"source-pack/01-business-requirements-document.md\", \"evidence\": \"01-business-requirements-document.md\"}, {\"rel_type\": \"docx_hyperlink\", \"source\": \"03-high-level-design\", \"target\": \"source-pack/04-low-level-design.md\", \"evidence\": \"04-low-level-design.md\"}, {\"rel_type\": \"docx_hyperlink\", \"source\": \"03-high-level-design\", \"target\": \"source-pack/02-functional-requirements-specification.md\", \"evidence\": \"02-functional-requirements-specification.md\"}, {\"rel_type\": \"docx_hyperlink\", \"source\": \"03-high-level-design\", \"target\": \"source-pack/01-business-requirements-document.md\", \"evidence\": \"01-business-requirements-document.md\"}, {\"rel_type\": \"docx_hyperlink\", \"source\": \"02-functional-requirements-specification\", \"target\": \"source-pack/04-low-level-design.md\", \"evidence\": \"04-low-level-design.md\"}, {\"rel_type\": \"docx_hyperlink\", \"source\": \"02-functional-requirements-specification\", \"target\": \"source-pack/03-high-level-design.md\", \"evidence\": \"03-high-level-design.md\"}, {\"rel_type\": \"docx_hyperlink\", \"source\": \"02-functional-requirements-specification\", \"target\": \"source-pack/01-business-requirements-document.md\", \"evidence\": \"01-business-requirements-document.md\"}, {\"rel_type\": \"docx_hyperlink\", \"source\": \"01-business-requirements-document\", \"target\": \"source-pack/04-low-level-design.md\", \"evidence\": \"04-low-level-design.md\"}, {\"rel_type\": \"docx_hyperlink\", \"source\": \"01-business-requirements-document\", \"target\": \"source-pack/03-high-level-design.md\", \"evidence\": \"03-high-level-design.md\"}, {\"rel_type\": \"docx_hyperlink\", \"source\": \"01-business-requirements-document\", \"target\": \"source-pack/02-functional-requirements-specification.md\", \"evidence\": \"02-functional-requirements-specification.md\"}, {\"rel_type\": \"markdown_link\", \"source\": \"04-low-level-design\", \"target\": \"test-doc/03-high-level-design.md\", \"evidence\": \"03-high-level-design.md\"}, {\"rel_type\": \"markdown_link\", \"source\": \"04-low-level-design\", \"target\": \"test-doc/02-functional-requirements-specification.md\", \"evidence\": \"02-functional-requirements-specification.md\"}, {\"rel_type\": \"markdown_link\", \"source\": \"04-low-level-design\", \"target\": \"test-doc/01-business-requirements-document.md\", \"evidence\": \"01-business-requirements-document.md\"}, {\"rel_type\": \"markdown_link\", \"source\": \"03-high-level-design\", \"target\": \"test-doc/04-low-level-design.md\", \"evidence\": \"04-low-level-design.md\"}, {\"rel_type\": \"markdown_link\", \"source\": \"03-high-level-design\", \"target\": \"test-doc/02-functional-requirements-specification.md\", \"evidence\": \"02-functional-requirements-specification.md\"}, {\"rel_type\": \"markdown_link\", \"source\": \"03-high-level-design\", \"target\": \"test-doc/01-business-requirements-document.md\", \"evidence\": \"01-business-requirements-document.md\"}, {\"rel_type\": \"markdown_link\", \"source\": \"02-functional-requirements-specification\", \"target\": \"test-doc/04-low-level-design.md\", \"evidence\": \"04-low-level-design.md\"}, {\"rel_type\": \"markdown_link\", \"source\": \"02-functional-requirements-specification\", \"target\": \"test-doc/03-high-level-design.md\", \"evidence\": \"03-high-level-design.md\"}, {\"rel_type\": \"markdown_link\", \"source\": \"02-functional-requirements-specification\", \"target\": \"test-doc/01-business-requirements-document.md\", \"evidence\": \"01-business-requirements-document.md\"}, {\"rel_type\": \"markdown_link\", \"source\": \"01-business-requirements-document\", \"target\": \"test-doc/04-low-level-design.md\", \"evidence\": \"04-low-level-design.md\"}, {\"rel_type\": \"markdown_link\", \"source\": \"01-business-requirements-document\", \"target\": \"test-doc/03-high-level-design.md\", \"evidence\": \"03-high-level-design.md\"}, {\"rel_type\": \"markdown_link\", \"source\": \"01-business-requirements-document\", \"target\": \"test-doc/02-functional-requirements-specification.md\", \"evidence\": \"02-functional-requirements-specification.md\"}, {\"rel_type\": \"markdown_link\", \"source\": \"02-functional-requirements-specification\", \"target\": \"test-doc/04-low-level-design.md\", \"evidence\": \"04-low-level-design.md\"}, {\"rel_type\": \"markdown_link\", \"source\": \"02-functional-requirements-specification\", \"target\": \"test-doc/03-high-level-design.md\", \"evidence\": \"03-high-level-design.md\"}, {\"rel_type\": \"markdown_link\", \"source\": \"02-functional-requirements-specification\", \"target\": \"test-doc/01-business-requirements-document.md\", \"evidence\": \"01-business-requirements-document.md\"}, {\"rel_type\": \"markdown_link\", \"source\": \"02-functional-requirements-specification\", \"target\": \"test-doc/04-low-level-design.md\", \"evidence\": \"04-low-level-design.md\"}, {\"rel_type\": \"markdown_link\", \"source\": \"02-functional-requirements-specification\", \"target\": \"test-doc/03-high-level-design.md\", \"evidence\": \"03-high-level-design.md\"}, {\"rel_type\": \"markdown_link\", \"source\": \"02-functional-requirements-specification\", \"target\": \"test-doc/01-business-requirements-document.md\", \"evidence\": \"01-business-requirements-document.md\"}], \"rowCount\": 30}\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_monev2t8_igd2s4",
+      "runId": "uiqa_moneq926_ntlb06",
+      "phase": "rag_ready",
+      "title": "Cursor SDK tool harness",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T21:14:32.828Z",
+      "finishedAt": "2026-05-01T21:15:10.215Z",
+      "summary": "Cursor SDK tool harness completed.",
+      "technical": {
+        "rawLabel": "cursor-tools:rag_ready",
+        "sdkPrompt": "what is the most linked business requirement",
+        "payload": {
+          "toolResults": [
+            {
+              "ok": false,
+              "tool": "inspect_business_requirement_links",
+              "error": "Table rtm_degree is not in the KB read allowlist."
+            },
+            {
+              "ok": true,
+              "tool": "inspect_requirements",
+              "result": {
+                "purpose": "Inspect derived requirements",
+                "sql": "select requirement_id, requirement_type, document_kind, title, left(regexp_replace(requirement_text, '\\s+', ' ', 'g'), 300) as excerpt from requirements where document_kind = 'brd' order by document_kind, requirement_id limit 30",
+                "columns": [
+                  "requirement_id",
+                  "requirement_type",
+                  "document_kind",
+                  "title",
+                  "excerpt"
+                ],
+                "rows": [
+                  {
+                    "requirement_id": "BR-001",
+                    "requirement_type": "business",
+                    "document_kind": "brd",
+                    "title": "High Level Design (HLD) > HLD §1. Architecture Overview > HLD-REQ-001 — Identity and access boundary",
+                    "excerpt": "The architecture shall include an authentication boundary that protects application routes and exposes role context to the UI. Maps to: BR-001, REQ-FR-001, REQ-FR-002, REQ-SEC-001 Components: HLD-COMP-001 Identity Shell, HLD-COMP-002 Route Guard LLD mapping: LLD-REQ-001"
+                  },
+                  {
+                    "requirement_id": "BR-002",
+                    "requirement_type": "business",
+                    "document_kind": "brd",
+                    "title": "High Level Design (HLD) > HLD §3. Functional Design > HLD-REQ-002 — Trade capture design",
+                    "excerpt": "The architecture shall route maker users to HLD-COMP-003, validate submitted trade fields, and persist valid trades with pending status. Maps to: BR-002, BR-007, REQ-FR-003, REQ-FR-004 Data objects: DATA-TRADE-001 TradeInstruction LLD mapping: LLD-REQ-002"
+                  },
+                  {
+                    "requirement_id": "BR-003",
+                    "requirement_type": "business",
+                    "document_kind": "brd",
+                    "title": "High Level Design (HLD) > HLD §3. Functional Design > HLD-REQ-003 — Approval queue design",
+                    "excerpt": "The architecture shall route checker users to HLD-COMP-004, load pending trade instructions, and execute approve or reject commands while enforcing maker-checker separation. Maps to: BR-003, BR-006, REQ-FR-005, REQ-FR-006, REQ-SEC-002 APIs: API-APPROVAL-001 LLD mapping: LLD-REQ-003"
+                  },
+                  {
+                    "requirement_id": "BR-004",
+                    "requirement_type": "business",
+                    "document_kind": "brd",
+                    "title": "High Level Design (HLD) > HLD §3. Functional Design > HLD-REQ-004 — Dashboard design",
+                    "excerpt": "The architecture shall expose read models for status counts and approved notional totals through HLD-COMP-005. Maps to: BR-004, REQ-FR-007, REQ-FR-008 Data objects: DATA-DASHBOARD-001 DashboardSummary LLD mapping: LLD-REQ-004"
+                  },
+                  {
+                    "requirement_id": "BR-005",
+                    "requirement_type": "business",
+                    "document_kind": "brd",
+                    "title": "High Level Design (HLD) > HLD §3. Functional Design > HLD-REQ-005 — Audit design",
+                    "excerpt": "The architecture shall emit audit events for authentication, trade creation, approval, rejection, and status transitions through HLD-COMP-006. Maps to: BR-005, REQ-FR-009, REQ-NFR-001, REQ-SEC-003 Controls: CTRL-AUDIT-001 LLD mapping: LLD-REQ-005"
+                  },
+                  {
+                    "requirement_id": "BR-006",
+                    "requirement_type": "business",
+                    "document_kind": "brd",
+                    "title": "High Level Design (HLD) > HLD §3. Functional Design > HLD-REQ-003 — Approval queue design",
+                    "excerpt": "The architecture shall route checker users to HLD-COMP-004, load pending trade instructions, and execute approve or reject commands while enforcing maker-checker separation. Maps to: BR-003, BR-006, REQ-FR-005, REQ-FR-006, REQ-SEC-002 APIs: API-APPROVAL-001 LLD mapping: LLD-REQ-003"
+                  },
+                  {
+                    "requirement_id": "BR-007",
+                    "requirement_type": "business",
+                    "document_kind": "brd",
+                    "title": "High Level Design (HLD) > HLD §3. Functional Design > HLD-REQ-002 — Trade capture design",
+                    "excerpt": "The architecture shall route maker users to HLD-COMP-003, validate submitted trade fields, and persist valid trades with pending status. Maps to: BR-002, BR-007, REQ-FR-003, REQ-FR-004 Data objects: DATA-TRADE-001 TradeInstruction LLD mapping: LLD-REQ-002"
+                  },
+                  {
+                    "requirement_id": "BR-008",
+                    "requirement_type": "business",
+                    "document_kind": "brd",
+                    "title": "High Level Design (HLD) > HLD §3. Functional Design > HLD-REQ-006 — QA traceability design",
+                    "excerpt": "The architecture shall expose ingested requirements, source chunks, derived RTM rows, and confidence evidence to the Cursor SDK QA harness through read-only tools. Maps to: BR-008, REQ-NFR-002 Components: HLD-COMP-007 QA Traceability Service LLD mapping: LLD-REQ-006"
+                  },
+                  {
+                    "requirement_id": "BRD §2",
+                    "requirement_type": "section",
+                    "document_kind": "brd",
+                    "title": "High Level Design (HLD) > HLD §4. Data Flow",
+                    "excerpt": "User authenticates through HLD-COMP-001 and HLD-COMP-002. Maker submits DATA-TRADE-001 through HLD-COMP-003. Checker reviews DATA-TRADE-001 through HLD-COMP-004. HLD-COMP-005 updates DATA-DASHBOARD-001 from trade status. HLD-COMP-006 records CTRL-AUDIT-001 evidence for all controlled actions. HLD-CO"
+                  },
+                  {
+                    "requirement_id": "BRD §4",
+                    "requirement_type": "section",
+                    "document_kind": "brd",
+                    "title": "Functional Requirements Specification (FRS) > FRS §1. Purpose",
+                    "excerpt": "This FRS translates the business requirements in BRD §2 and BRD §4 into functional and control requirements. Each requirement is intended to be mapped into the derived RTM and used by the Cursor SDK harness to generate TestCases.xlsx."
+                  }
+                ],
+                "rowCount": 10
+              }
+            },
+            {
+              "ok": true,
+              "tool": "inspect_rtm",
+              "result": {
+                "purpose": "Inspect derived RTM",
+                "sql": "select rtm_id, business_requirement_id, functional_requirement_id, hld_requirement_id, lld_requirement_id, coverage_status, confidence, notes from rtm_rows order by confidence asc, rtm_id limit 50",
+                "columns": [
+                  "rtm_id",
+                  "business_requirement_id",
+                  "functional_requirement_id",
+                  "hld_requirement_id",
+                  "lld_requirement_id",
+                  "coverage_status",
+                  "confidence",
+                  "notes"
+                ],
+                "rows": [
+                  {
+                    "rtm_id": "209c6536514bd315a43dce6093f87f78",
+                    "business_requirement_id": "BR-003",
+                    "functional_requirement_id": "REQ-FR-002",
+                    "hld_requirement_id": "HLD-COMP-002",
+                    "lld_requirement_id": "CTRL-AUTH-001",
+                    "coverage_status": "complete",
+                    "confidence": 1,
+                    "notes": "All requirement columns mapped."
+                  },
+                  {
+                    "rtm_id": "36b0a258aa281d336af24635f508d684",
+                    "business_requirement_id": "BR-007",
+                    "functional_requirement_id": "REQ-FR-006",
+                    "hld_requirement_id": "HLD-COMP-006",
+                    "lld_requirement_id": "LLD §3",
+                    "coverage_status": "complete",
+                    "confidence": 1,
+                    "notes": "All requirement columns mapped."
+                  },
+                  {
+                    "rtm_id": "482f74a07da2c3956c733aee32c6f584",
+                    "business_requirement_id": "BR-005",
+                    "functional_requirement_id": "REQ-FR-004",
+                    "hld_requirement_id": "HLD-COMP-004",
+                    "lld_requirement_id": "DATA-DASHBOARD-001",
+                    "coverage_status": "complete",
+                    "confidence": 1,
+                    "notes": "All requirement columns mapped."
+                  },
+                  {
+                    "rtm_id": "49b5868d31eac6fbf907c5d51c474a1c",
+                    "business_requirement_id": "BRD §4",
+                    "functional_requirement_id": "REQ-NFR-002",
+                    "hld_requirement_id": "HLD-REQ-004",
+                    "lld_requirement_id": "LLD-REQ-005",
+                    "coverage_status": "complete",
+                    "confidence": 1,
+                    "notes": "All requirement columns mapped."
+                  },
+                  {
+                    "rtm_id": "5828e210c9157946bde1ea6d267ce39e",
+                    "business_requirement_id": "BRD §4",
+                    "functional_requirement_id": "REQ-SEC-003",
+                    "hld_requirement_id": "HLD-TESTDRIVE-001",
+                    "lld_requirement_id": "LLD-TESTDRIVE-001",
+                    "coverage_status": "complete",
+                    "confidence": 1,
+                    "notes": "All requirement columns mapped."
+                  },
+                  {
+                    "rtm_id": "61a9ef201ea8fc820d2d1bc1b58274ad",
+                    "business_requirement_id": "BRD §2",
+                    "functional_requirement_id": "REQ-FR-008",
+                    "hld_requirement_id": "HLD-REQ-001",
+                    "lld_requirement_id": "LLD-REQ-002",
+                    "coverage_status": "complete",
+                    "confidence": 1,
+                    "notes": "All requirement columns mapped."
+                  },
+                  {
+                    "rtm_id": "65e171683952507235aa096ad7bf9991",
+                    "business_requirement_id": "BR-002",
+                    "functional_requirement_id": "REQ-FR-001",
+                    "hld_requirement_id": "HLD-COMP-001",
+                    "lld_requirement_id": "CTRL-AUDIT-001",
+                    "coverage_status": "complete",
+                    "confidence": 1,
+                    "notes": "All requirement columns mapped."
+                  },
+                  {
+                    "rtm_id": "70db6cb871510a8fc9cd5da7cec07e4b",
+                    "business_requirement_id": "BRD §4",
+                    "functional_requirement_id": "REQ-FR-009",
+                    "hld_requirement_id": "HLD-REQ-002",
+                    "lld_requirement_id": "LLD-REQ-003",
+                    "coverage_status": "complete",
+                    "confidence": 1,
+                    "notes": "All requirement columns mapped."
+                  },
+                  {
+                    "rtm_id": "71381bec309132c0475d19168c1c3316",
+                    "business_requirement_id": "BR-001",
+                    "functional_requirement_id": "FRS §3",
+                    "hld_requirement_id": "HLD §3",
+                    "lld_requirement_id": "API-APPROVAL-001",
+                    "coverage_status": "complete",
+                    "confidence": 1,
+                    "notes": "All requirement columns mapped."
+                  },
+                  {
+                    "rtm_id": "b48ea41b3eaec7148460bb0fde8e58cc",
+                    "business_requirement_id": "BR-006",
+                    "functional_requirement_id": "REQ-FR-005",
+                    "hld_requirement_id": "HLD-COMP-005",
+                    "lld_requirement_id": "DATA-TRADE-001",
+                    "coverage_status": "complete",
+                    "confidence": 1,
+                    "notes": "All requirement columns mapped."
+                  },
+                  {
+                    "rtm_id": "c51c55781549fc09ce0d3b48dae4b581",
+                    "business_requirement_id": "BR-008",
+                    "functional_requirement_id": "REQ-FR-007",
+                    "hld_requirement_id": "HLD-COMP-007",
+                    "lld_requirement_id": "LLD-REQ-001",
+                    "coverage_status": "complete",
+                    "confidence": 1,
+                    "notes": "All requirement columns mapped."
+                  },
+                  {
+                    "rtm_id": "c667c61cb5ef06ad6a0dc40fdf9c5d3e",
+                    "business_requirement_id": "BRD §4",
+                    "functional_requirement_id": "REQ-SEC-001",
+                    "hld_requirement_id": "HLD-REQ-005",
+                    "lld_requirement_id": "LLD-REQ-006",
+                    "coverage_status": "complete",
+                    "confidence": 1,
+                    "notes": "All requirement columns mapped."
+                  },
+                  {
+                    "rtm_id": "cd779b639f01e823b35a22208dee98c5",
+                    "business_requirement_id": "BRD §4",
+                    "functional_requirement_id": "REQ-NFR-001",
+                    "hld_requirement_id": "HLD-REQ-003",
+                    "lld_requirement_id": "LLD-REQ-004",
+                    "coverage_status": "complete",
+                    "confidence": 1,
+                    "notes": "All requirement columns mapped."
+                  },
+                  {
+                    "rtm_id": "d4f2dc56c3b2437217ca190597e83236",
+                    "business_requirement_id": "BR-004",
+                    "functional_requirement_id": "REQ-FR-003",
+                    "hld_requirement_id": "HLD-COMP-003",
+                    "lld_requirement_id": "CTRL-QA-001",
+                    "coverage_status": "complete",
+                    "confidence": 1,
+                    "notes": "All requirement columns mapped."
+                  },
+                  {
+                    "rtm_id": "ff605aee8c3648de2a8b2aac83e4076b",
+                    "business_requirement_id": "BRD §4",
+                    "functional_requirement_id": "REQ-SEC-002",
+                    "hld_requirement_id": "HLD-REQ-006",
+                    "lld_requirement_id": "LLD-TESTDRIVE-001",
+                    "coverage_status": "complete",
+                    "confidence": 1,
+                    "notes": "All requirement columns mapped."
+                  }
+                ],
+                "rowCount": 15
+              }
+            },
+            {
+              "ok": false,
+              "tool": "query_kb_sql",
+              "error": "Table link_degree is not in the KB read allowlist."
+            }
+          ]
+        },
+        "stdout": "Checking for KB tools in this session to satisfy the “call at least one tool” rule and verify RTM counts.\n\nNo KB connector is wired in this Cursor session (no matching MCP tools), so the answer below uses only the harness outputs you already have from **inspect_rtm** (full RTM set: **15 rows**) and **inspect_requirements**.\n\n## Answer\n\n**By derived RTM rows (how often a business requirement appears in `rtm_rows.business_requirement_id`), the most linked item is `BRD §4` — it appears on 6 of 15 RTM rows.** Every other business-side identifier in that RTM snapshot appears **once** (`BR-001` … `BR-008`, `BRD §2`).\n\nSo:\n\n- If “business requirement” includes **section-style BRD refs** (`BRD §4`), the winner is **`BRD §4`** (6 RTM links).\n- If you mean only **`BR-*` IDs**, they are **all tied at one RTM row each** in this KB; there is no single “most linked” among them on RTM alone.\n\n## Method and limits\n\n1. **`inspect_business_requirement_links`** failed (`rtm_degree` not allowlisted), so the intended combined ranking (RTM + explicit links + mentions) was not available.\n2. **`query_kb_sql`** failed because the guardrail treated the CTE name `link_degree` as a non-allowlisted “table,” so link-degree SQL could not be completed here.\n3. **`inspect_rtm`** returned **`rowCount`: 15**, so counting `business_requirement_id` over those rows is a complete RTM-wide tally for this run, not a truncated sample.\n\nIf you need a definitive “most linked” including **`requirement_links`**, rerun **`query_kb_sql`** with **no CTEs** (only subqueries against `requirements`, `requirement_links`, and `rtm_rows`) so the allowlist checker does not mis-classify CTE aliases."
+      }
+    },
+    {
+      "id": "event_monev7h6_jkx9rz",
+      "runId": "uiqa_moneq926_ntlb06",
+      "phase": "rag_ready",
+      "title": "Tool inspect_business_requirement_links",
+      "status": "warning",
+      "createdAt": "2026-05-01T21:14:38.874Z",
+      "finishedAt": "2026-05-01T21:14:38.876Z",
+      "summary": "Table rtm_degree is not in the KB read allowlist.",
+      "technical": {
+        "rawLabel": "tool:inspect_business_requirement_links",
+        "toolName": "inspect_business_requirement_links",
+        "payload": {
+          "ok": false,
+          "tool": "inspect_business_requirement_links",
+          "error": "Table rtm_degree is not in the KB read allowlist."
+        },
+        "stdout": "{\n  \"error\": \"Table rtm_degree is not in the KB read allowlist.\"\n}",
+        "stderr": "Table rtm_degree is not in the KB read allowlist."
+      }
+    },
+    {
+      "id": "event_monevfmo_ogcqd4",
+      "runId": "uiqa_moneq926_ntlb06",
+      "phase": "rag_ready",
+      "title": "Tool inspect_requirements",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T21:14:49.440Z",
+      "finishedAt": "2026-05-01T21:14:49.723Z",
+      "summary": "inspect_requirements returned 10 row(s).",
+      "technical": {
+        "rawLabel": "tool:inspect_requirements",
+        "toolName": "inspect_requirements",
+        "payload": {
+          "ok": true,
+          "tool": "inspect_requirements",
+          "result": {
+            "purpose": "Inspect derived requirements",
+            "sql": "select requirement_id, requirement_type, document_kind, title, left(regexp_replace(requirement_text, '\\s+', ' ', 'g'), 300) as excerpt from requirements where document_kind = 'brd' order by document_kind, requirement_id limit 30",
+            "columns": [
+              "requirement_id",
+              "requirement_type",
+              "document_kind",
+              "title",
+              "excerpt"
+            ],
+            "rows": [
+              {
+                "requirement_id": "BR-001",
+                "requirement_type": "business",
+                "document_kind": "brd",
+                "title": "High Level Design (HLD) > HLD §1. Architecture Overview > HLD-REQ-001 — Identity and access boundary",
+                "excerpt": "The architecture shall include an authentication boundary that protects application routes and exposes role context to the UI. Maps to: BR-001, REQ-FR-001, REQ-FR-002, REQ-SEC-001 Components: HLD-COMP-001 Identity Shell, HLD-COMP-002 Route Guard LLD mapping: LLD-REQ-001"
+              },
+              {
+                "requirement_id": "BR-002",
+                "requirement_type": "business",
+                "document_kind": "brd",
+                "title": "High Level Design (HLD) > HLD §3. Functional Design > HLD-REQ-002 — Trade capture design",
+                "excerpt": "The architecture shall route maker users to HLD-COMP-003, validate submitted trade fields, and persist valid trades with pending status. Maps to: BR-002, BR-007, REQ-FR-003, REQ-FR-004 Data objects: DATA-TRADE-001 TradeInstruction LLD mapping: LLD-REQ-002"
+              },
+              {
+                "requirement_id": "BR-003",
+                "requirement_type": "business",
+                "document_kind": "brd",
+                "title": "High Level Design (HLD) > HLD §3. Functional Design > HLD-REQ-003 — Approval queue design",
+                "excerpt": "The architecture shall route checker users to HLD-COMP-004, load pending trade instructions, and execute approve or reject commands while enforcing maker-checker separation. Maps to: BR-003, BR-006, REQ-FR-005, REQ-FR-006, REQ-SEC-002 APIs: API-APPROVAL-001 LLD mapping: LLD-REQ-003"
+              },
+              {
+                "requirement_id": "BR-004",
+                "requirement_type": "business",
+                "document_kind": "brd",
+                "title": "High Level Design (HLD) > HLD §3. Functional Design > HLD-REQ-004 — Dashboard design",
+                "excerpt": "The architecture shall expose read models for status counts and approved notional totals through HLD-COMP-005. Maps to: BR-004, REQ-FR-007, REQ-FR-008 Data objects: DATA-DASHBOARD-001 DashboardSummary LLD mapping: LLD-REQ-004"
+              },
+              {
+                "requirement_id": "BR-005",
+                "requirement_type": "business",
+                "document_kind": "brd",
+                "title": "High Level Design (HLD) > HLD §3. Functional Design > HLD-REQ-005 — Audit design",
+                "excerpt": "The architecture shall emit audit events for authentication, trade creation, approval, rejection, and status transitions through HLD-COMP-006. Maps to: BR-005, REQ-FR-009, REQ-NFR-001, REQ-SEC-003 Controls: CTRL-AUDIT-001 LLD mapping: LLD-REQ-005"
+              },
+              {
+                "requirement_id": "BR-006",
+                "requirement_type": "business",
+                "document_kind": "brd",
+                "title": "High Level Design (HLD) > HLD §3. Functional Design > HLD-REQ-003 — Approval queue design",
+                "excerpt": "The architecture shall route checker users to HLD-COMP-004, load pending trade instructions, and execute approve or reject commands while enforcing maker-checker separation. Maps to: BR-003, BR-006, REQ-FR-005, REQ-FR-006, REQ-SEC-002 APIs: API-APPROVAL-001 LLD mapping: LLD-REQ-003"
+              },
+              {
+                "requirement_id": "BR-007",
+                "requirement_type": "business",
+                "document_kind": "brd",
+                "title": "High Level Design (HLD) > HLD §3. Functional Design > HLD-REQ-002 — Trade capture design",
+                "excerpt": "The architecture shall route maker users to HLD-COMP-003, validate submitted trade fields, and persist valid trades with pending status. Maps to: BR-002, BR-007, REQ-FR-003, REQ-FR-004 Data objects: DATA-TRADE-001 TradeInstruction LLD mapping: LLD-REQ-002"
+              },
+              {
+                "requirement_id": "BR-008",
+                "requirement_type": "business",
+                "document_kind": "brd",
+                "title": "High Level Design (HLD) > HLD §3. Functional Design > HLD-REQ-006 — QA traceability design",
+                "excerpt": "The architecture shall expose ingested requirements, source chunks, derived RTM rows, and confidence evidence to the Cursor SDK QA harness through read-only tools. Maps to: BR-008, REQ-NFR-002 Components: HLD-COMP-007 QA Traceability Service LLD mapping: LLD-REQ-006"
+              },
+              {
+                "requirement_id": "BRD §2",
+                "requirement_type": "section",
+                "document_kind": "brd",
+                "title": "High Level Design (HLD) > HLD §4. Data Flow",
+                "excerpt": "User authenticates through HLD-COMP-001 and HLD-COMP-002. Maker submits DATA-TRADE-001 through HLD-COMP-003. Checker reviews DATA-TRADE-001 through HLD-COMP-004. HLD-COMP-005 updates DATA-DASHBOARD-001 from trade status. HLD-COMP-006 records CTRL-AUDIT-001 evidence for all controlled actions. HLD-CO"
+              },
+              {
+                "requirement_id": "BRD §4",
+                "requirement_type": "section",
+                "document_kind": "brd",
+                "title": "Functional Requirements Specification (FRS) > FRS §1. Purpose",
+                "excerpt": "This FRS translates the business requirements in BRD §2 and BRD §4 into functional and control requirements. Each requirement is intended to be mapped into the derived RTM and used by the Cursor SDK harness to generate TestCases.xlsx."
+              }
+            ],
+            "rowCount": 10
+          }
+        },
+        "stdout": "{\n  \"purpose\": \"Inspect derived requirements\",\n  \"sql\": \"select requirement_id, requirement_type, document_kind, title, left(regexp_replace(requirement_text, '\\\\s+', ' ', 'g'), 300) as excerpt from requirements where document_kind = 'brd' order by document_kind, requirement_id limit 30\",\n  \"columns\": [\n    \"requirement_id\",\n    \"requirement_type\",\n    \"document_kind\",\n    \"title\",\n    \"excerpt\"\n  ],\n  \"rows\": [\n    {\n      \"requirement_id\": \"BR-001\",\n      \"requirement_type\": \"business\",\n      \"document_kind\": \"brd\",\n      \"title\": \"High Level Design (HLD) > HLD §1. Architecture Overview > HLD-REQ-001 — Identity and access boundary\",\n      \"excerpt\": \"The architecture shall include an authentication boundary that protects application routes and exposes role context to the UI. Maps to: BR-001, REQ-FR-001, REQ-FR-002, REQ-SEC-001 Components: HLD-COMP-001 Identity Shell, HLD-COMP-002 Route Guard LLD mapping: LLD-REQ-001\"\n    },\n    {\n      \"requirement_id\": \"BR-002\",\n      \"requirement_type\": \"business\",\n      \"document_kind\": \"brd\",\n      \"title\": \"High Level Design (HLD) > HLD §3. Functional Design > HLD-REQ-002 — Trade capture design\",\n      \"excerpt\": \"The architecture shall route maker users to HLD-COMP-003, validate submitted trade fields, and persist valid trades with pending status. Maps to: BR-002, BR-007, REQ-FR-003, REQ-FR-004 Data objects: DATA-TRADE-001 TradeInstruction LLD mapping: LLD-REQ-002\"\n    },\n    {\n      \"requirement_id\": \"BR-003\",\n      \"requirement_type\": \"business\",\n      \"document_kind\": \"brd\",\n      \"title\": \"High Level Design (HLD) > HLD §3. Functional Design > HLD-REQ-003 — Approval queue design\",\n      \"excerpt\": \"The architecture shall route checker users to HLD-COMP-004, load pending trade instructions, and execute approve or reject commands while enforcing maker-checker separation. Maps to: BR-003, BR-006, REQ-FR-005, REQ-FR-006, REQ-SEC-002 APIs: API-APPROVAL-001 LLD mapping: LLD-REQ-003\"\n    },\n    {\n      \"requirement_id\": \"BR-004\",\n      \"requirement_type\": \"business\",\n      \"document_kind\": \"brd\",\n      \"title\": \"High Level Design (HLD) > HLD §3. Functional Design > HLD-REQ-004 — Dashboard design\",\n      \"excerpt\": \"The architecture shall expose read models for status counts and approved notional totals through HLD-COMP-005. Maps to: BR-004, REQ-FR-007, REQ-FR-008 Data objects: DATA-DASHBOARD-001 DashboardSummary LLD mapping: LLD-REQ-004\"\n    },\n    {\n      \"requirement_id\": \"BR-005\",\n      \"requirement_type\": \"business\",\n      \"document_kind\": \"brd\",\n      \"title\": \"High Level Design (HLD) > HLD §3. Functional Design > HLD-REQ-005 — Audit design\",\n      \"excerpt\": \"The architecture shall emit audit events for authentication, trade creation, approval, rejection, and status transitions through HLD-COMP-006. Maps to: BR-005, REQ-FR-009, REQ-NFR-001, REQ-SEC-003 Controls: CTRL-AUDIT-001 LLD mapping: LLD-REQ-005\"\n    },\n    {\n      \"requirement_id\": \"BR-006\",\n      \"requirement_type\": \"business\",\n      \"document_kind\": \"brd\",\n      \"title\": \"High Level Design (HLD) > HLD §3. Functional Design > HLD-REQ-003 — Approval queue design\",\n      \"excerpt\": \"The architecture shall route checker users to HLD-COMP-004, load pending trade instructions, and execute approve or reject commands while enforcing maker-checker separation. Maps to: BR-003, BR-006, REQ-FR-005, REQ-FR-006, REQ-SEC-002 APIs: API-APPROVAL-001 LLD mapping: LLD-REQ-003\"\n    },\n    {\n      \"requirement_id\": \"BR-007\",\n      \"requirement_type\": \"business\",\n      \"document_kind\": \"brd\",\n      \"title\": \"High Level Design (HLD) > HLD §3. Functional Design > HLD-REQ-002 — Trade capture design\",\n      \"excerpt\": \"The architecture shall route maker users to HLD-COMP-003, validate submitted trade fields, and persist valid trades with pending status. Maps to: BR-002, BR-007, REQ-FR-003, REQ-FR-004 Data objects: DATA-TRADE-001 TradeInstruction LLD mapping: LLD-REQ-002\"\n    },\n    {\n      \"requirement_id\": \"BR-008\",\n      \"requirement_type\": \"business\",\n      \"document_kind\": \"brd\",\n      \"title\": \"High Level Design (HLD) > HLD §3. Functional Design > HLD-REQ-006 — QA traceability design\",\n      \"excerpt\": \"The architecture shall expose ingested requirements, source chunks, derived RTM rows, and confidence evidence to the Cursor SDK QA harness through read-only tools. Maps to: BR-008, REQ-NFR-002 Components: HLD-COMP-007 QA Traceability Service LLD mapping: LLD-REQ-006\"\n    },\n    {\n      \"requirement_id\": \"BRD §2\",\n      \"requirement_type\": \"section\",\n      \"document_kind\": \"brd\",\n      \"title\": \"High Level Design (HLD) > HLD §4. Data Flow\",\n      \"excerpt\": \"User authenticates through HLD-COMP-001 and HLD-COMP-002. Maker submits DATA-TRADE-001 through HLD-COMP-003. Checker reviews DATA-TRADE-001 through HLD-COMP-004. HLD-COMP-005 updates DATA-DASHBOARD-001 from trade status. HLD-COMP-006 records CTRL-AUDIT-001 evidence for all controlled actions. HLD-CO\"\n    },\n    {\n      \"requirement_id\": \"BRD §4\",\n      \"requirement_type\": \"section\",\n      \"document_kind\": \"brd\",\n      \"title\": \"Functional Requirements Specification (FRS) > FRS §1. Purpose\",\n      \"excerpt\": \"This FRS translates the business requirements in BRD §2 and BRD §4 into functional and control requirements. Each requirement is intended to be mapped into the derived RTM and used by the Cursor SDK harness to generate TestCases.xlsx.\"\n    }\n  ],\n  \"rowCount\": 10\n}"
+      }
+    },
+    {
+      "id": "event_monevfms_x0sxj9",
+      "runId": "uiqa_moneq926_ntlb06",
+      "phase": "rag_ready",
+      "title": "Tool query_kb_sql: Inspect derived requirements",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T21:14:49.444Z",
+      "finishedAt": "2026-05-01T21:14:49.723Z",
+      "technical": {
+        "rawLabel": "Tool query_kb_sql: Inspect derived requirements",
+        "command": "source ingestion/.venv/bin/activate && UI_QA_SQL='select requirement_id,\n           requirement_type,\n           document_kind,\n           title,\n           left(regexp_replace(requirement_text, '\\''\\s+'\\'', '\\'' '\\'', '\\''g'\\''), 300) as excerpt\n    from requirements\n    where document_kind = '\\''brd'\\''\n    order by document_kind, requirement_id\n    limit 30' UI_QA_LIMIT=30 DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport datetime, decimal, json, os, psycopg\nsql = os.environ[\"UI_QA_SQL\"]\nlimit = int(os.environ.get(\"UI_QA_LIMIT\", \"50\"))\nwrapped = f\"select * from ({sql}) as uiqa_readonly_result limit {limit}\"\ndef encode(value):\n    if isinstance(value, decimal.Decimal):\n        return float(value)\n    if isinstance(value, (datetime.date, datetime.datetime)):\n        return value.isoformat()\n    return value\nwith psycopg.connect(os.environ[\"DATABASE_URL\"]) as conn:\n    conn.execute(\"set statement_timeout = '5000ms'\")\n    conn.execute(\"set transaction read only\")\n    with conn.cursor() as cur:\n        cur.execute(wrapped)\n        columns = [desc.name for desc in cur.description]\n        rows = [{col: encode(value) for col, value in zip(columns, row)} for row in cur.fetchall()]\nprint(json.dumps({\"columns\": columns, \"rows\": rows, \"rowCount\": len(rows)}))\nPY",
+        "stdout": "{\"columns\": [\"requirement_id\", \"requirement_type\", \"document_kind\", \"title\", \"excerpt\"], \"rows\": [{\"requirement_id\": \"BR-001\", \"requirement_type\": \"business\", \"document_kind\": \"brd\", \"title\": \"High Level Design (HLD) > HLD \\u00a71. Architecture Overview > HLD-REQ-001 \\u2014 Identity and access boundary\", \"excerpt\": \"The architecture shall include an authentication boundary that protects application routes and exposes role context to the UI. Maps to: BR-001, REQ-FR-001, REQ-FR-002, REQ-SEC-001 Components: HLD-COMP-001 Identity Shell, HLD-COMP-002 Route Guard LLD mapping: LLD-REQ-001\"}, {\"requirement_id\": \"BR-002\", \"requirement_type\": \"business\", \"document_kind\": \"brd\", \"title\": \"High Level Design (HLD) > HLD \\u00a73. Functional Design > HLD-REQ-002 \\u2014 Trade capture design\", \"excerpt\": \"The architecture shall route maker users to HLD-COMP-003, validate submitted trade fields, and persist valid trades with pending status. Maps to: BR-002, BR-007, REQ-FR-003, REQ-FR-004 Data objects: DATA-TRADE-001 TradeInstruction LLD mapping: LLD-REQ-002\"}, {\"requirement_id\": \"BR-003\", \"requirement_type\": \"business\", \"document_kind\": \"brd\", \"title\": \"High Level Design (HLD) > HLD \\u00a73. Functional Design > HLD-REQ-003 \\u2014 Approval queue design\", \"excerpt\": \"The architecture shall route checker users to HLD-COMP-004, load pending trade instructions, and execute approve or reject commands while enforcing maker-checker separation. Maps to: BR-003, BR-006, REQ-FR-005, REQ-FR-006, REQ-SEC-002 APIs: API-APPROVAL-001 LLD mapping: LLD-REQ-003\"}, {\"requirement_id\": \"BR-004\", \"requirement_type\": \"business\", \"document_kind\": \"brd\", \"title\": \"High Level Design (HLD) > HLD \\u00a73. Functional Design > HLD-REQ-004 \\u2014 Dashboard design\", \"excerpt\": \"The architecture shall expose read models for status counts and approved notional totals through HLD-COMP-005. Maps to: BR-004, REQ-FR-007, REQ-FR-008 Data objects: DATA-DASHBOARD-001 DashboardSummary LLD mapping: LLD-REQ-004\"}, {\"requirement_id\": \"BR-005\", \"requirement_type\": \"business\", \"document_kind\": \"brd\", \"title\": \"High Level Design (HLD) > HLD \\u00a73. Functional Design > HLD-REQ-005 \\u2014 Audit design\", \"excerpt\": \"The architecture shall emit audit events for authentication, trade creation, approval, rejection, and status transitions through HLD-COMP-006. Maps to: BR-005, REQ-FR-009, REQ-NFR-001, REQ-SEC-003 Controls: CTRL-AUDIT-001 LLD mapping: LLD-REQ-005\"}, {\"requirement_id\": \"BR-006\", \"requirement_type\": \"business\", \"document_kind\": \"brd\", \"title\": \"High Level Design (HLD) > HLD \\u00a73. Functional Design > HLD-REQ-003 \\u2014 Approval queue design\", \"excerpt\": \"The architecture shall route checker users to HLD-COMP-004, load pending trade instructions, and execute approve or reject commands while enforcing maker-checker separation. Maps to: BR-003, BR-006, REQ-FR-005, REQ-FR-006, REQ-SEC-002 APIs: API-APPROVAL-001 LLD mapping: LLD-REQ-003\"}, {\"requirement_id\": \"BR-007\", \"requirement_type\": \"business\", \"document_kind\": \"brd\", \"title\": \"High Level Design (HLD) > HLD \\u00a73. Functional Design > HLD-REQ-002 \\u2014 Trade capture design\", \"excerpt\": \"The architecture shall route maker users to HLD-COMP-003, validate submitted trade fields, and persist valid trades with pending status. Maps to: BR-002, BR-007, REQ-FR-003, REQ-FR-004 Data objects: DATA-TRADE-001 TradeInstruction LLD mapping: LLD-REQ-002\"}, {\"requirement_id\": \"BR-008\", \"requirement_type\": \"business\", \"document_kind\": \"brd\", \"title\": \"High Level Design (HLD) > HLD \\u00a73. Functional Design > HLD-REQ-006 \\u2014 QA traceability design\", \"excerpt\": \"The architecture shall expose ingested requirements, source chunks, derived RTM rows, and confidence evidence to the Cursor SDK QA harness through read-only tools. Maps to: BR-008, REQ-NFR-002 Components: HLD-COMP-007 QA Traceability Service LLD mapping: LLD-REQ-006\"}, {\"requirement_id\": \"BRD \\u00a72\", \"requirement_type\": \"section\", \"document_kind\": \"brd\", \"title\": \"High Level Design (HLD) > HLD \\u00a74. Data Flow\", \"excerpt\": \"User authenticates through HLD-COMP-001 and HLD-COMP-002. Maker submits DATA-TRADE-001 through HLD-COMP-003. Checker reviews DATA-TRADE-001 through HLD-COMP-004. HLD-COMP-005 updates DATA-DASHBOARD-001 from trade status. HLD-COMP-006 records CTRL-AUDIT-001 evidence for all controlled actions. HLD-CO\"}, {\"requirement_id\": \"BRD \\u00a74\", \"requirement_type\": \"section\", \"document_kind\": \"brd\", \"title\": \"Functional Requirements Specification (FRS) > FRS \\u00a71. Purpose\", \"excerpt\": \"This FRS translates the business requirements in BRD \\u00a72 and BRD \\u00a74 into functional and control requirements. Each requirement is intended to be mapped into the derived RTM and used by the Cursor SDK harness to generate TestCases.xlsx.\"}], \"rowCount\": 10}\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_monevfuk_cqr8fi",
+      "runId": "uiqa_moneq926_ntlb06",
+      "phase": "rag_ready",
+      "title": "Tool inspect_rtm",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T21:14:49.724Z",
+      "finishedAt": "2026-05-01T21:14:49.897Z",
+      "summary": "inspect_rtm returned 15 row(s).",
+      "technical": {
+        "rawLabel": "tool:inspect_rtm",
+        "toolName": "inspect_rtm",
+        "payload": {
+          "ok": true,
+          "tool": "inspect_rtm",
+          "result": {
+            "purpose": "Inspect derived RTM",
+            "sql": "select rtm_id, business_requirement_id, functional_requirement_id, hld_requirement_id, lld_requirement_id, coverage_status, confidence, notes from rtm_rows order by confidence asc, rtm_id limit 50",
+            "columns": [
+              "rtm_id",
+              "business_requirement_id",
+              "functional_requirement_id",
+              "hld_requirement_id",
+              "lld_requirement_id",
+              "coverage_status",
+              "confidence",
+              "notes"
+            ],
+            "rows": [
+              {
+                "rtm_id": "209c6536514bd315a43dce6093f87f78",
+                "business_requirement_id": "BR-003",
+                "functional_requirement_id": "REQ-FR-002",
+                "hld_requirement_id": "HLD-COMP-002",
+                "lld_requirement_id": "CTRL-AUTH-001",
+                "coverage_status": "complete",
+                "confidence": 1,
+                "notes": "All requirement columns mapped."
+              },
+              {
+                "rtm_id": "36b0a258aa281d336af24635f508d684",
+                "business_requirement_id": "BR-007",
+                "functional_requirement_id": "REQ-FR-006",
+                "hld_requirement_id": "HLD-COMP-006",
+                "lld_requirement_id": "LLD §3",
+                "coverage_status": "complete",
+                "confidence": 1,
+                "notes": "All requirement columns mapped."
+              },
+              {
+                "rtm_id": "482f74a07da2c3956c733aee32c6f584",
+                "business_requirement_id": "BR-005",
+                "functional_requirement_id": "REQ-FR-004",
+                "hld_requirement_id": "HLD-COMP-004",
+                "lld_requirement_id": "DATA-DASHBOARD-001",
+                "coverage_status": "complete",
+                "confidence": 1,
+                "notes": "All requirement columns mapped."
+              },
+              {
+                "rtm_id": "49b5868d31eac6fbf907c5d51c474a1c",
+                "business_requirement_id": "BRD §4",
+                "functional_requirement_id": "REQ-NFR-002",
+                "hld_requirement_id": "HLD-REQ-004",
+                "lld_requirement_id": "LLD-REQ-005",
+                "coverage_status": "complete",
+                "confidence": 1,
+                "notes": "All requirement columns mapped."
+              },
+              {
+                "rtm_id": "5828e210c9157946bde1ea6d267ce39e",
+                "business_requirement_id": "BRD §4",
+                "functional_requirement_id": "REQ-SEC-003",
+                "hld_requirement_id": "HLD-TESTDRIVE-001",
+                "lld_requirement_id": "LLD-TESTDRIVE-001",
+                "coverage_status": "complete",
+                "confidence": 1,
+                "notes": "All requirement columns mapped."
+              },
+              {
+                "rtm_id": "61a9ef201ea8fc820d2d1bc1b58274ad",
+                "business_requirement_id": "BRD §2",
+                "functional_requirement_id": "REQ-FR-008",
+                "hld_requirement_id": "HLD-REQ-001",
+                "lld_requirement_id": "LLD-REQ-002",
+                "coverage_status": "complete",
+                "confidence": 1,
+                "notes": "All requirement columns mapped."
+              },
+              {
+                "rtm_id": "65e171683952507235aa096ad7bf9991",
+                "business_requirement_id": "BR-002",
+                "functional_requirement_id": "REQ-FR-001",
+                "hld_requirement_id": "HLD-COMP-001",
+                "lld_requirement_id": "CTRL-AUDIT-001",
+                "coverage_status": "complete",
+                "confidence": 1,
+                "notes": "All requirement columns mapped."
+              },
+              {
+                "rtm_id": "70db6cb871510a8fc9cd5da7cec07e4b",
+                "business_requirement_id": "BRD §4",
+                "functional_requirement_id": "REQ-FR-009",
+                "hld_requirement_id": "HLD-REQ-002",
+                "lld_requirement_id": "LLD-REQ-003",
+                "coverage_status": "complete",
+                "confidence": 1,
+                "notes": "All requirement columns mapped."
+              },
+              {
+                "rtm_id": "71381bec309132c0475d19168c1c3316",
+                "business_requirement_id": "BR-001",
+                "functional_requirement_id": "FRS §3",
+                "hld_requirement_id": "HLD §3",
+                "lld_requirement_id": "API-APPROVAL-001",
+                "coverage_status": "complete",
+                "confidence": 1,
+                "notes": "All requirement columns mapped."
+              },
+              {
+                "rtm_id": "b48ea41b3eaec7148460bb0fde8e58cc",
+                "business_requirement_id": "BR-006",
+                "functional_requirement_id": "REQ-FR-005",
+                "hld_requirement_id": "HLD-COMP-005",
+                "lld_requirement_id": "DATA-TRADE-001",
+                "coverage_status": "complete",
+                "confidence": 1,
+                "notes": "All requirement columns mapped."
+              },
+              {
+                "rtm_id": "c51c55781549fc09ce0d3b48dae4b581",
+                "business_requirement_id": "BR-008",
+                "functional_requirement_id": "REQ-FR-007",
+                "hld_requirement_id": "HLD-COMP-007",
+                "lld_requirement_id": "LLD-REQ-001",
+                "coverage_status": "complete",
+                "confidence": 1,
+                "notes": "All requirement columns mapped."
+              },
+              {
+                "rtm_id": "c667c61cb5ef06ad6a0dc40fdf9c5d3e",
+                "business_requirement_id": "BRD §4",
+                "functional_requirement_id": "REQ-SEC-001",
+                "hld_requirement_id": "HLD-REQ-005",
+                "lld_requirement_id": "LLD-REQ-006",
+                "coverage_status": "complete",
+                "confidence": 1,
+                "notes": "All requirement columns mapped."
+              },
+              {
+                "rtm_id": "cd779b639f01e823b35a22208dee98c5",
+                "business_requirement_id": "BRD §4",
+                "functional_requirement_id": "REQ-NFR-001",
+                "hld_requirement_id": "HLD-REQ-003",
+                "lld_requirement_id": "LLD-REQ-004",
+                "coverage_status": "complete",
+                "confidence": 1,
+                "notes": "All requirement columns mapped."
+              },
+              {
+                "rtm_id": "d4f2dc56c3b2437217ca190597e83236",
+                "business_requirement_id": "BR-004",
+                "functional_requirement_id": "REQ-FR-003",
+                "hld_requirement_id": "HLD-COMP-003",
+                "lld_requirement_id": "CTRL-QA-001",
+                "coverage_status": "complete",
+                "confidence": 1,
+                "notes": "All requirement columns mapped."
+              },
+              {
+                "rtm_id": "ff605aee8c3648de2a8b2aac83e4076b",
+                "business_requirement_id": "BRD §4",
+                "functional_requirement_id": "REQ-SEC-002",
+                "hld_requirement_id": "HLD-REQ-006",
+                "lld_requirement_id": "LLD-TESTDRIVE-001",
+                "coverage_status": "complete",
+                "confidence": 1,
+                "notes": "All requirement columns mapped."
+              }
+            ],
+            "rowCount": 15
+          }
+        },
+        "stdout": "{\n  \"purpose\": \"Inspect derived RTM\",\n  \"sql\": \"select rtm_id, business_requirement_id, functional_requirement_id, hld_requirement_id, lld_requirement_id, coverage_status, confidence, notes from rtm_rows order by confidence asc, rtm_id limit 50\",\n  \"columns\": [\n    \"rtm_id\",\n    \"business_requirement_id\",\n    \"functional_requirement_id\",\n    \"hld_requirement_id\",\n    \"lld_requirement_id\",\n    \"coverage_status\",\n    \"confidence\",\n    \"notes\"\n  ],\n  \"rows\": [\n    {\n      \"rtm_id\": \"209c6536514bd315a43dce6093f87f78\",\n      \"business_requirement_id\": \"BR-003\",\n      \"functional_requirement_id\": \"REQ-FR-002\",\n      \"hld_requirement_id\": \"HLD-COMP-002\",\n      \"lld_requirement_id\": \"CTRL-AUTH-001\",\n      \"coverage_status\": \"complete\",\n      \"confidence\": 1,\n      \"notes\": \"All requirement columns mapped.\"\n    },\n    {\n      \"rtm_id\": \"36b0a258aa281d336af24635f508d684\",\n      \"business_requirement_id\": \"BR-007\",\n      \"functional_requirement_id\": \"REQ-FR-006\",\n      \"hld_requirement_id\": \"HLD-COMP-006\",\n      \"lld_requirement_id\": \"LLD §3\",\n      \"coverage_status\": \"complete\",\n      \"confidence\": 1,\n      \"notes\": \"All requirement columns mapped.\"\n    },\n    {\n      \"rtm_id\": \"482f74a07da2c3956c733aee32c6f584\",\n      \"business_requirement_id\": \"BR-005\",\n      \"functional_requirement_id\": \"REQ-FR-004\",\n      \"hld_requirement_id\": \"HLD-COMP-004\",\n      \"lld_requirement_id\": \"DATA-DASHBOARD-001\",\n      \"coverage_status\": \"complete\",\n      \"confidence\": 1,\n      \"notes\": \"All requirement columns mapped.\"\n    },\n    {\n      \"rtm_id\": \"49b5868d31eac6fbf907c5d51c474a1c\",\n      \"business_requirement_id\": \"BRD §4\",\n      \"functional_requirement_id\": \"REQ-NFR-002\",\n      \"hld_requirement_id\": \"HLD-REQ-004\",\n      \"lld_requirement_id\": \"LLD-REQ-005\",\n      \"coverage_status\": \"complete\",\n      \"confidence\": 1,\n      \"notes\": \"All requirement columns mapped.\"\n    },\n    {\n      \"rtm_id\": \"5828e210c9157946bde1ea6d267ce39e\",\n      \"business_requirement_id\": \"BRD §4\",\n      \"functional_requirement_id\": \"REQ-SEC-003\",\n      \"hld_requirement_id\": \"HLD-TESTDRIVE-001\",\n      \"lld_requirement_id\": \"LLD-TESTDRIVE-001\",\n      \"coverage_status\": \"complete\",\n      \"confidence\": 1,\n      \"notes\": \"All requirement columns mapped.\"\n    },\n    {\n      \"rtm_id\": \"61a9ef201ea8fc820d2d1bc1b58274ad\",\n      \"business_requirement_id\": \"BRD §2\",\n      \"functional_requirement_id\": \"REQ-FR-008\",\n      \"hld_requirement_id\": \"HLD-REQ-001\",\n      \"lld_requirement_id\": \"LLD-REQ-002\",\n      \"coverage_status\": \"complete\",\n      \"confidence\": 1,\n      \"notes\": \"All requirement columns mapped.\"\n    },\n    {\n      \"rtm_id\": \"65e171683952507235aa096ad7bf9991\",\n      \"business_requirement_id\": \"BR-002\",\n      \"functional_requirement_id\": \"REQ-FR-001\",\n      \"hld_requirement_id\": \"HLD-COMP-001\",\n      \"lld_requirement_id\": \"CTRL-AUDIT-001\",\n      \"coverage_status\": \"complete\",\n      \"confidence\": 1,\n      \"notes\": \"All requirement columns mapped.\"\n    },\n    {\n      \"rtm_id\": \"70db6cb871510a8fc9cd5da7cec07e4b\",\n      \"business_requirement_id\": \"BRD §4\",\n      \"functional_requirement_id\": \"REQ-FR-009\",\n      \"hld_requirement_id\": \"HLD-REQ-002\",\n      \"lld_requirement_id\": \"LLD-REQ-003\",\n      \"coverage_status\": \"complete\",\n      \"confidence\": 1,\n      \"notes\": \"All requirement columns mapped.\"\n    },\n    {\n      \"rtm_id\": \"71381bec309132c0475d19168c1c3316\",\n      \"business_requirement_id\": \"BR-001\",\n      \"functional_requirement_id\": \"FRS §3\",\n      \"hld_requirement_id\": \"HLD §3\",\n      \"lld_requirement_id\": \"API-APPROVAL-001\",\n      \"coverage_status\": \"complete\",\n      \"confidence\": 1,\n      \"notes\": \"All requirement columns mapped.\"\n    },\n    {\n      \"rtm_id\": \"b48ea41b3eaec7148460bb0fde8e58cc\",\n      \"business_requirement_id\": \"BR-006\",\n      \"functional_requirement_id\": \"REQ-FR-005\",\n      \"hld_requirement_id\": \"HLD-COMP-005\",\n      \"lld_requirement_id\": \"DATA-TRADE-001\",\n      \"coverage_status\": \"complete\",\n      \"confidence\": 1,\n      \"notes\": \"All requirement columns mapped.\"\n    },\n    {\n      \"rtm_id\": \"c51c55781549fc09ce0d3b48dae4b581\",\n      \"business_requirement_id\": \"BR-008\",\n      \"functional_requirement_id\": \"REQ-FR-007\",\n      \"hld_requirement_id\": \"HLD-COMP-007\",\n      \"lld_requirement_id\": \"LLD-REQ-001\",\n      \"coverage_status\": \"complete\",\n      \"confidence\": 1,\n      \"notes\": \"All requirement columns mapped.\"\n    },\n    {\n      \"rtm_id\": \"c667c61cb5ef06ad6a0dc40fdf9c5d3e\",\n      \"business_requirement_id\": \"BRD §4\",\n      \"functional_requirement_id\": \"REQ-SEC-001\",\n      \"hld_requirement_id\": \"HLD-REQ-005\",\n      \"lld_requirement_id\": \"LLD-REQ-006\",\n      \"coverage_status\": \"complete\",\n      \"confidence\": 1,\n      \"notes\": \"All requirement columns mapped.\"\n    },\n    {\n      \"rtm_id\": \"cd779b639f01e823b35a22208dee98c5\",\n      \"business_requirement_id\": \"BRD §4\",\n      \"functional_requirement_id\": \"REQ-NFR-001\",\n      \"hld_requirement_id\": \"HLD-REQ-003\",\n      \"lld_requirement_id\": \"LLD-REQ-004\",\n      \"coverage_status\": \"complete\",\n      \"confidence\": 1,\n      \"notes\": \"All requirement columns mapped.\"\n    },\n    {\n      \"rtm_id\": \"d4f2dc56c3b2437217ca190597e83236\",\n      \"business_requirement_id\": \"BR-004\",\n      \"functional_requirement_id\": \"REQ-FR-003\",\n      \"hld_requirement_id\": \"HLD-COMP-003\",\n      \"lld_requirement_id\": \"CTRL-QA-001\",\n      \"coverage_status\": \"complete\",\n      \"confidence\": 1,\n      \"notes\": \"All requirement columns mapped.\"\n    },\n    {\n      \"rtm_id\": \"ff605aee8c3648de2a8b2aac83e4076b\",\n      \"business_requirement_id\": \"BRD §4\",\n      \"functional_requirement_id\": \"REQ-SEC-002\",\n      \"hld_requirement_id\": \"HLD-REQ-006\",\n      \"lld_requirement_id\": \"LLD-TESTDRIVE-001\",\n      \"coverage_status\": \"complete\",\n      \"confidence\": 1,\n      \"notes\": \"All requirement columns mapped.\"\n    }\n  ],\n  \"rowCount\": 15\n}"
+      }
+    },
+    {
+      "id": "event_monevfuk_28viq1",
+      "runId": "uiqa_moneq926_ntlb06",
+      "phase": "rag_ready",
+      "title": "Tool query_kb_sql: Inspect derived RTM",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T21:14:49.724Z",
+      "finishedAt": "2026-05-01T21:14:49.896Z",
+      "technical": {
+        "rawLabel": "Tool query_kb_sql: Inspect derived RTM",
+        "command": "source ingestion/.venv/bin/activate && UI_QA_SQL='select rtm_id,\n           business_requirement_id,\n           functional_requirement_id,\n           hld_requirement_id,\n           lld_requirement_id,\n           coverage_status,\n           confidence,\n           notes\n    from rtm_rows\n    \n    order by confidence asc, rtm_id\n    limit 50' UI_QA_LIMIT=50 DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport datetime, decimal, json, os, psycopg\nsql = os.environ[\"UI_QA_SQL\"]\nlimit = int(os.environ.get(\"UI_QA_LIMIT\", \"50\"))\nwrapped = f\"select * from ({sql}) as uiqa_readonly_result limit {limit}\"\ndef encode(value):\n    if isinstance(value, decimal.Decimal):\n        return float(value)\n    if isinstance(value, (datetime.date, datetime.datetime)):\n        return value.isoformat()\n    return value\nwith psycopg.connect(os.environ[\"DATABASE_URL\"]) as conn:\n    conn.execute(\"set statement_timeout = '5000ms'\")\n    conn.execute(\"set transaction read only\")\n    with conn.cursor() as cur:\n        cur.execute(wrapped)\n        columns = [desc.name for desc in cur.description]\n        rows = [{col: encode(value) for col, value in zip(columns, row)} for row in cur.fetchall()]\nprint(json.dumps({\"columns\": columns, \"rows\": rows, \"rowCount\": len(rows)}))\nPY",
+        "stdout": "{\"columns\": [\"rtm_id\", \"business_requirement_id\", \"functional_requirement_id\", \"hld_requirement_id\", \"lld_requirement_id\", \"coverage_status\", \"confidence\", \"notes\"], \"rows\": [{\"rtm_id\": \"209c6536514bd315a43dce6093f87f78\", \"business_requirement_id\": \"BR-003\", \"functional_requirement_id\": \"REQ-FR-002\", \"hld_requirement_id\": \"HLD-COMP-002\", \"lld_requirement_id\": \"CTRL-AUTH-001\", \"coverage_status\": \"complete\", \"confidence\": 1.0, \"notes\": \"All requirement columns mapped.\"}, {\"rtm_id\": \"36b0a258aa281d336af24635f508d684\", \"business_requirement_id\": \"BR-007\", \"functional_requirement_id\": \"REQ-FR-006\", \"hld_requirement_id\": \"HLD-COMP-006\", \"lld_requirement_id\": \"LLD \\u00a73\", \"coverage_status\": \"complete\", \"confidence\": 1.0, \"notes\": \"All requirement columns mapped.\"}, {\"rtm_id\": \"482f74a07da2c3956c733aee32c6f584\", \"business_requirement_id\": \"BR-005\", \"functional_requirement_id\": \"REQ-FR-004\", \"hld_requirement_id\": \"HLD-COMP-004\", \"lld_requirement_id\": \"DATA-DASHBOARD-001\", \"coverage_status\": \"complete\", \"confidence\": 1.0, \"notes\": \"All requirement columns mapped.\"}, {\"rtm_id\": \"49b5868d31eac6fbf907c5d51c474a1c\", \"business_requirement_id\": \"BRD \\u00a74\", \"functional_requirement_id\": \"REQ-NFR-002\", \"hld_requirement_id\": \"HLD-REQ-004\", \"lld_requirement_id\": \"LLD-REQ-005\", \"coverage_status\": \"complete\", \"confidence\": 1.0, \"notes\": \"All requirement columns mapped.\"}, {\"rtm_id\": \"5828e210c9157946bde1ea6d267ce39e\", \"business_requirement_id\": \"BRD \\u00a74\", \"functional_requirement_id\": \"REQ-SEC-003\", \"hld_requirement_id\": \"HLD-TESTDRIVE-001\", \"lld_requirement_id\": \"LLD-TESTDRIVE-001\", \"coverage_status\": \"complete\", \"confidence\": 1.0, \"notes\": \"All requirement columns mapped.\"}, {\"rtm_id\": \"61a9ef201ea8fc820d2d1bc1b58274ad\", \"business_requirement_id\": \"BRD \\u00a72\", \"functional_requirement_id\": \"REQ-FR-008\", \"hld_requirement_id\": \"HLD-REQ-001\", \"lld_requirement_id\": \"LLD-REQ-002\", \"coverage_status\": \"complete\", \"confidence\": 1.0, \"notes\": \"All requirement columns mapped.\"}, {\"rtm_id\": \"65e171683952507235aa096ad7bf9991\", \"business_requirement_id\": \"BR-002\", \"functional_requirement_id\": \"REQ-FR-001\", \"hld_requirement_id\": \"HLD-COMP-001\", \"lld_requirement_id\": \"CTRL-AUDIT-001\", \"coverage_status\": \"complete\", \"confidence\": 1.0, \"notes\": \"All requirement columns mapped.\"}, {\"rtm_id\": \"70db6cb871510a8fc9cd5da7cec07e4b\", \"business_requirement_id\": \"BRD \\u00a74\", \"functional_requirement_id\": \"REQ-FR-009\", \"hld_requirement_id\": \"HLD-REQ-002\", \"lld_requirement_id\": \"LLD-REQ-003\", \"coverage_status\": \"complete\", \"confidence\": 1.0, \"notes\": \"All requirement columns mapped.\"}, {\"rtm_id\": \"71381bec309132c0475d19168c1c3316\", \"business_requirement_id\": \"BR-001\", \"functional_requirement_id\": \"FRS \\u00a73\", \"hld_requirement_id\": \"HLD \\u00a73\", \"lld_requirement_id\": \"API-APPROVAL-001\", \"coverage_status\": \"complete\", \"confidence\": 1.0, \"notes\": \"All requirement columns mapped.\"}, {\"rtm_id\": \"b48ea41b3eaec7148460bb0fde8e58cc\", \"business_requirement_id\": \"BR-006\", \"functional_requirement_id\": \"REQ-FR-005\", \"hld_requirement_id\": \"HLD-COMP-005\", \"lld_requirement_id\": \"DATA-TRADE-001\", \"coverage_status\": \"complete\", \"confidence\": 1.0, \"notes\": \"All requirement columns mapped.\"}, {\"rtm_id\": \"c51c55781549fc09ce0d3b48dae4b581\", \"business_requirement_id\": \"BR-008\", \"functional_requirement_id\": \"REQ-FR-007\", \"hld_requirement_id\": \"HLD-COMP-007\", \"lld_requirement_id\": \"LLD-REQ-001\", \"coverage_status\": \"complete\", \"confidence\": 1.0, \"notes\": \"All requirement columns mapped.\"}, {\"rtm_id\": \"c667c61cb5ef06ad6a0dc40fdf9c5d3e\", \"business_requirement_id\": \"BRD \\u00a74\", \"functional_requirement_id\": \"REQ-SEC-001\", \"hld_requirement_id\": \"HLD-REQ-005\", \"lld_requirement_id\": \"LLD-REQ-006\", \"coverage_status\": \"complete\", \"confidence\": 1.0, \"notes\": \"All requirement columns mapped.\"}, {\"rtm_id\": \"cd779b639f01e823b35a22208dee98c5\", \"business_requirement_id\": \"BRD \\u00a74\", \"functional_requirement_id\": \"REQ-NFR-001\", \"hld_requirement_id\": \"HLD-REQ-003\", \"lld_requirement_id\": \"LLD-REQ-004\", \"coverage_status\": \"complete\", \"confidence\": 1.0, \"notes\": \"All requirement columns mapped.\"}, {\"rtm_id\": \"d4f2dc56c3b2437217ca190597e83236\", \"business_requirement_id\": \"BR-004\", \"functional_requirement_id\": \"REQ-FR-003\", \"hld_requirement_id\": \"HLD-COMP-003\", \"lld_requirement_id\": \"CTRL-QA-001\", \"coverage_status\": \"complete\", \"confidence\": 1.0, \"notes\": \"All requirement columns mapped.\"}, {\"rtm_id\": \"ff605aee8c3648de2a8b2aac83e4076b\", \"business_requirement_id\": \"BRD \\u00a74\", \"functional_requirement_id\": \"REQ-SEC-002\", \"hld_requirement_id\": \"HLD-REQ-006\", \"lld_requirement_id\": \"LLD-TESTDRIVE-001\", \"coverage_status\": \"complete\", \"confidence\": 1.0, \"notes\": \"All requirement columns mapped.\"}], \"rowCount\": 15}\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_monevfzd_xxzd3p",
+      "runId": "uiqa_moneq926_ntlb06",
+      "phase": "rag_ready",
+      "title": "Tool query_kb_sql",
+      "status": "warning",
+      "createdAt": "2026-05-01T21:14:49.897Z",
+      "finishedAt": "2026-05-01T21:14:49.898Z",
+      "summary": "Table link_degree is not in the KB read allowlist.",
+      "technical": {
+        "rawLabel": "tool:query_kb_sql",
+        "toolName": "query_kb_sql",
+        "payload": {
+          "ok": false,
+          "tool": "query_kb_sql",
+          "error": "Table link_degree is not in the KB read allowlist."
+        },
+        "stdout": "{\n  \"error\": \"Table link_degree is not in the KB read allowlist.\"\n}",
+        "stderr": "Table link_degree is not in the KB read allowlist."
+      }
+    },
+    {
+      "id": "event_monewjsr_304rju",
+      "runId": "uiqa_moneq926_ntlb06",
+      "phase": "rag_ready",
+      "title": "Cursor SDK tool harness",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T21:15:41.499Z",
+      "finishedAt": "2026-05-01T21:15:51.880Z",
+      "summary": "Cursor SDK tool harness completed.",
+      "technical": {
+        "rawLabel": "cursor-tools:rag_ready",
+        "sdkPrompt": "what is the most linked business requirement",
+        "payload": {
+          "toolResults": [
+            {
+              "ok": true,
+              "tool": "inspect_business_requirement_links",
+              "result": {
+                "purpose": "Inspect most-linked business requirements",
+                "sql": "with brs as ( select requirement_id from requirements where document_kind = 'brd' or requirement_id like 'BR-%' or requirement_id like 'BRD %' ), rtm_degree as ( select business_requirement_id as requirement_id, count(*)::int as rtm_rows from rtm_rows where business_requirement_id is not null group by business_requirement_id ), link_degree as ( select requirement_id, count(*)::int as explicit_links from ( select source_requirement_id as requirement_id from requirement_links union all select target_requirement_id as requirement_id from requirement_links ) x group by requirement_id ), mentions as ( select canonical_id as requirement_id, count(*)::int as mentions from entities where entity_type in ('BR', 'REQ', 'SECTION') group by canonical_id ) select b.requirement_id, coalesce(rd.rtm_rows, 0) as rtm_rows, coalesce(ld.explicit_links, 0) as explicit_links, coalesce(m.mentions, 0) as mentions, coalesce(rd.rtm_rows, 0) + coalesce(ld.explicit_links, 0) + coalesce(m.mentions, 0) as total_link",
+                "columns": [
+                  "requirement_id",
+                  "rtm_rows",
+                  "explicit_links",
+                  "mentions",
+                  "total_link_score"
+                ],
+                "rows": [
+                  {
+                    "requirement_id": "BR-001",
+                    "rtm_rows": 1,
+                    "explicit_links": 3,
+                    "mentions": 14,
+                    "total_link_score": 18
+                  },
+                  {
+                    "requirement_id": "BR-003",
+                    "rtm_rows": 1,
+                    "explicit_links": 3,
+                    "mentions": 13,
+                    "total_link_score": 17
+                  },
+                  {
+                    "requirement_id": "BR-005",
+                    "rtm_rows": 1,
+                    "explicit_links": 3,
+                    "mentions": 13,
+                    "total_link_score": 17
+                  },
+                  {
+                    "requirement_id": "BR-006",
+                    "rtm_rows": 1,
+                    "explicit_links": 3,
+                    "mentions": 13,
+                    "total_link_score": 17
+                  },
+                  {
+                    "requirement_id": "BR-002",
+                    "rtm_rows": 1,
+                    "explicit_links": 2,
+                    "mentions": 13,
+                    "total_link_score": 16
+                  },
+                  {
+                    "requirement_id": "BR-004",
+                    "rtm_rows": 1,
+                    "explicit_links": 2,
+                    "mentions": 13,
+                    "total_link_score": 16
+                  },
+                  {
+                    "requirement_id": "BR-007",
+                    "rtm_rows": 1,
+                    "explicit_links": 2,
+                    "mentions": 9,
+                    "total_link_score": 12
+                  },
+                  {
+                    "requirement_id": "BRD §4",
+                    "rtm_rows": 6,
+                    "explicit_links": 0,
+                    "mentions": 4,
+                    "total_link_score": 10
+                  },
+                  {
+                    "requirement_id": "BR-008",
+                    "rtm_rows": 1,
+                    "explicit_links": 1,
+                    "mentions": 7,
+                    "total_link_score": 9
+                  },
+                  {
+                    "requirement_id": "BRD §2",
+                    "rtm_rows": 1,
+                    "explicit_links": 1,
+                    "mentions": 6,
+                    "total_link_score": 8
+                  }
+                ],
+                "rowCount": 10
+              }
+            }
+          ]
+        },
+        "stdout": "## Most linked business requirement\n\nBy the harness ranking (`inspect_business_requirement_links`), **BR-001** is the most linked business requirement.\n\n**Score breakdown for BR-001**\n\n| Signal | Count |\n|--------|-------|\n| RTM rows | 1 |\n| Explicit requirement links | 3 |\n| Entity / KB mentions | 14 |\n| **Total link score** | **18** |\n\nThe next tier is **BR-003, BR-005, and BR-006**, each with **17** (1 + 3 + 13).\n\n**Method:** The tool scores each BR as `rtm_rows + explicit_links + mentions` over BRD-aligned requirements, then sorts by that total. **BR-001** is first in that list for `limit=25`, so it is the single top item on this composite measure.\n\n**Caveat:** A row like **`BRD §4`** has more RTM rows (6) but a lower total score (10) because it has no explicit links and fewer mentions—so “most linked” here is **by this combined score**, not “most RTM rows only.” If you want strictly RTM-row count, say so and the right comparison would be RTM-only."
+      }
+    },
+    {
+      "id": "event_monewonl_yym4i0",
+      "runId": "uiqa_moneq926_ntlb06",
+      "phase": "rag_ready",
+      "title": "Tool inspect_business_requirement_links",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T21:15:47.793Z",
+      "finishedAt": "2026-05-01T21:15:48.063Z",
+      "summary": "inspect_business_requirement_links returned 10 row(s).",
+      "technical": {
+        "rawLabel": "tool:inspect_business_requirement_links",
+        "toolName": "inspect_business_requirement_links",
+        "payload": {
+          "ok": true,
+          "tool": "inspect_business_requirement_links",
+          "result": {
+            "purpose": "Inspect most-linked business requirements",
+            "sql": "with brs as ( select requirement_id from requirements where document_kind = 'brd' or requirement_id like 'BR-%' or requirement_id like 'BRD %' ), rtm_degree as ( select business_requirement_id as requirement_id, count(*)::int as rtm_rows from rtm_rows where business_requirement_id is not null group by business_requirement_id ), link_degree as ( select requirement_id, count(*)::int as explicit_links from ( select source_requirement_id as requirement_id from requirement_links union all select target_requirement_id as requirement_id from requirement_links ) x group by requirement_id ), mentions as ( select canonical_id as requirement_id, count(*)::int as mentions from entities where entity_type in ('BR', 'REQ', 'SECTION') group by canonical_id ) select b.requirement_id, coalesce(rd.rtm_rows, 0) as rtm_rows, coalesce(ld.explicit_links, 0) as explicit_links, coalesce(m.mentions, 0) as mentions, coalesce(rd.rtm_rows, 0) + coalesce(ld.explicit_links, 0) + coalesce(m.mentions, 0) as total_link",
+            "columns": [
+              "requirement_id",
+              "rtm_rows",
+              "explicit_links",
+              "mentions",
+              "total_link_score"
+            ],
+            "rows": [
+              {
+                "requirement_id": "BR-001",
+                "rtm_rows": 1,
+                "explicit_links": 3,
+                "mentions": 14,
+                "total_link_score": 18
+              },
+              {
+                "requirement_id": "BR-003",
+                "rtm_rows": 1,
+                "explicit_links": 3,
+                "mentions": 13,
+                "total_link_score": 17
+              },
+              {
+                "requirement_id": "BR-005",
+                "rtm_rows": 1,
+                "explicit_links": 3,
+                "mentions": 13,
+                "total_link_score": 17
+              },
+              {
+                "requirement_id": "BR-006",
+                "rtm_rows": 1,
+                "explicit_links": 3,
+                "mentions": 13,
+                "total_link_score": 17
+              },
+              {
+                "requirement_id": "BR-002",
+                "rtm_rows": 1,
+                "explicit_links": 2,
+                "mentions": 13,
+                "total_link_score": 16
+              },
+              {
+                "requirement_id": "BR-004",
+                "rtm_rows": 1,
+                "explicit_links": 2,
+                "mentions": 13,
+                "total_link_score": 16
+              },
+              {
+                "requirement_id": "BR-007",
+                "rtm_rows": 1,
+                "explicit_links": 2,
+                "mentions": 9,
+                "total_link_score": 12
+              },
+              {
+                "requirement_id": "BRD §4",
+                "rtm_rows": 6,
+                "explicit_links": 0,
+                "mentions": 4,
+                "total_link_score": 10
+              },
+              {
+                "requirement_id": "BR-008",
+                "rtm_rows": 1,
+                "explicit_links": 1,
+                "mentions": 7,
+                "total_link_score": 9
+              },
+              {
+                "requirement_id": "BRD §2",
+                "rtm_rows": 1,
+                "explicit_links": 1,
+                "mentions": 6,
+                "total_link_score": 8
+              }
+            ],
+            "rowCount": 10
+          }
+        },
+        "stdout": "{\n  \"purpose\": \"Inspect most-linked business requirements\",\n  \"sql\": \"with brs as ( select requirement_id from requirements where document_kind = 'brd' or requirement_id like 'BR-%' or requirement_id like 'BRD %' ), rtm_degree as ( select business_requirement_id as requirement_id, count(*)::int as rtm_rows from rtm_rows where business_requirement_id is not null group by business_requirement_id ), link_degree as ( select requirement_id, count(*)::int as explicit_links from ( select source_requirement_id as requirement_id from requirement_links union all select target_requirement_id as requirement_id from requirement_links ) x group by requirement_id ), mentions as ( select canonical_id as requirement_id, count(*)::int as mentions from entities where entity_type in ('BR', 'REQ', 'SECTION') group by canonical_id ) select b.requirement_id, coalesce(rd.rtm_rows, 0) as rtm_rows, coalesce(ld.explicit_links, 0) as explicit_links, coalesce(m.mentions, 0) as mentions, coalesce(rd.rtm_rows, 0) + coalesce(ld.explicit_links, 0) + coalesce(m.mentions, 0) as total_link\",\n  \"columns\": [\n    \"requirement_id\",\n    \"rtm_rows\",\n    \"explicit_links\",\n    \"mentions\",\n    \"total_link_score\"\n  ],\n  \"rows\": [\n    {\n      \"requirement_id\": \"BR-001\",\n      \"rtm_rows\": 1,\n      \"explicit_links\": 3,\n      \"mentions\": 14,\n      \"total_link_score\": 18\n    },\n    {\n      \"requirement_id\": \"BR-003\",\n      \"rtm_rows\": 1,\n      \"explicit_links\": 3,\n      \"mentions\": 13,\n      \"total_link_score\": 17\n    },\n    {\n      \"requirement_id\": \"BR-005\",\n      \"rtm_rows\": 1,\n      \"explicit_links\": 3,\n      \"mentions\": 13,\n      \"total_link_score\": 17\n    },\n    {\n      \"requirement_id\": \"BR-006\",\n      \"rtm_rows\": 1,\n      \"explicit_links\": 3,\n      \"mentions\": 13,\n      \"total_link_score\": 17\n    },\n    {\n      \"requirement_id\": \"BR-002\",\n      \"rtm_rows\": 1,\n      \"explicit_links\": 2,\n      \"mentions\": 13,\n      \"total_link_score\": 16\n    },\n    {\n      \"requirement_id\": \"BR-004\",\n      \"rtm_rows\": 1,\n      \"explicit_links\": 2,\n      \"mentions\": 13,\n      \"total_link_score\": 16\n    },\n    {\n      \"requirement_id\": \"BR-007\",\n      \"rtm_rows\": 1,\n      \"explicit_links\": 2,\n      \"mentions\": 9,\n      \"total_link_score\": 12\n    },\n    {\n      \"requirement_id\": \"BRD §4\",\n      \"rtm_rows\": 6,\n      \"explicit_links\": 0,\n      \"mentions\": 4,\n      \"total_link_score\": 10\n    },\n    {\n      \"requirement_id\": \"BR-008\",\n      \"rtm_rows\": 1,\n      \"explicit_links\": 1,\n      \"mentions\": 7,\n      \"total_link_score\": 9\n    },\n    {\n      \"requirement_id\": \"BRD §2\",\n      \"rtm_rows\": 1,\n      \"explicit_links\": 1,\n      \"mentions\": 6,\n      \"total_link_score\": 8\n    }\n  ],\n  \"rowCount\": 10\n}"
+      }
+    },
+    {
+      "id": "event_monewono_jzqe9c",
+      "runId": "uiqa_moneq926_ntlb06",
+      "phase": "rag_ready",
+      "title": "Tool query_kb_sql: Inspect most-linked business requirements",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T21:15:47.796Z",
+      "finishedAt": "2026-05-01T21:15:48.062Z",
+      "technical": {
+        "rawLabel": "Tool query_kb_sql: Inspect most-linked business requirements",
+        "command": "source ingestion/.venv/bin/activate && UI_QA_SQL='with brs as (\n      select requirement_id\n      from requirements\n      where document_kind = '\\''brd'\\''\n         or requirement_id like '\\''BR-%'\\''\n         or requirement_id like '\\''BRD %'\\''\n    ),\n    rtm_degree as (\n      select business_requirement_id as requirement_id, count(*)::int as rtm_rows\n      from rtm_rows\n      where business_requirement_id is not null\n      group by business_requirement_id\n    ),\n    link_degree as (\n      select requirement_id, count(*)::int as explicit_links\n      from (\n        select source_requirement_id as requirement_id from requirement_links\n        union all\n        select target_requirement_id as requirement_id from requirement_links\n      ) x\n      group by requirement_id\n    ),\n    mentions as (\n      select canonical_id as requirement_id, count(*)::int as mentions\n      from entities\n      where entity_type in ('\\''BR'\\'', '\\''REQ'\\'', '\\''SECTION'\\'')\n      group by canonical_id\n    )\n    select b.requirement_id,\n           coalesce(rd.rtm_rows, 0) as rtm_rows,\n           coalesce(ld.explicit_links, 0) as explicit_links,\n           coalesce(m.mentions, 0) as mentions,\n           coalesce(rd.rtm_rows, 0) + coalesce(ld.explicit_links, 0) + coalesce(m.mentions, 0) as total_link_score\n    from brs b\n    left join rtm_degree rd on rd.requirement_id = b.requirement_id\n    left join link_degree ld on ld.requirement_id = b.requirement_id\n    left join mentions m on m.requirement_id = b.requirement_id\n    order by total_link_score desc, rtm_rows desc, explicit_links desc, mentions desc, b.requirement_id\n    limit 25' UI_QA_LIMIT=25 DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport datetime, decimal, json, os, psycopg\nsql = os.environ[\"UI_QA_SQL\"]\nlimit = int(os.environ.get(\"UI_QA_LIMIT\", \"50\"))\nwrapped = f\"select * from ({sql}) as uiqa_readonly_result limit {limit}\"\ndef encode(value):\n    if isinstance(value, decimal.Decimal):\n        return float(value)\n    if isinstance(value, (datetime.date, datetime.datetime)):\n        return value.isoformat()\n    return value\nwith psycopg.connect(os.environ[\"DATABASE_URL\"]) as conn:\n    conn.execute(\"set statement_timeout = '5000ms'\")\n    conn.execute(\"set transaction read only\")\n    with conn.cursor() as cur:\n        cur.execute(wrapped)\n        columns = [desc.name for desc in cur.description]\n        rows = [{col: encode(value) for col, value in zip(columns, row)} for row in cur.fetchall()]\nprint(json.dumps({\"columns\": columns, \"rows\": rows, \"rowCount\": len(rows)}))\nPY",
+        "stdout": "{\"columns\": [\"requirement_id\", \"rtm_rows\", \"explicit_links\", \"mentions\", \"total_link_score\"], \"rows\": [{\"requirement_id\": \"BR-001\", \"rtm_rows\": 1, \"explicit_links\": 3, \"mentions\": 14, \"total_link_score\": 18}, {\"requirement_id\": \"BR-003\", \"rtm_rows\": 1, \"explicit_links\": 3, \"mentions\": 13, \"total_link_score\": 17}, {\"requirement_id\": \"BR-005\", \"rtm_rows\": 1, \"explicit_links\": 3, \"mentions\": 13, \"total_link_score\": 17}, {\"requirement_id\": \"BR-006\", \"rtm_rows\": 1, \"explicit_links\": 3, \"mentions\": 13, \"total_link_score\": 17}, {\"requirement_id\": \"BR-002\", \"rtm_rows\": 1, \"explicit_links\": 2, \"mentions\": 13, \"total_link_score\": 16}, {\"requirement_id\": \"BR-004\", \"rtm_rows\": 1, \"explicit_links\": 2, \"mentions\": 13, \"total_link_score\": 16}, {\"requirement_id\": \"BR-007\", \"rtm_rows\": 1, \"explicit_links\": 2, \"mentions\": 9, \"total_link_score\": 12}, {\"requirement_id\": \"BRD \\u00a74\", \"rtm_rows\": 6, \"explicit_links\": 0, \"mentions\": 4, \"total_link_score\": 10}, {\"requirement_id\": \"BR-008\", \"rtm_rows\": 1, \"explicit_links\": 1, \"mentions\": 7, \"total_link_score\": 9}, {\"requirement_id\": \"BRD \\u00a72\", \"rtm_rows\": 1, \"explicit_links\": 1, \"mentions\": 6, \"total_link_score\": 8}], \"rowCount\": 10}\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev_moneq930_8tajrw",
+      "createdAt": "2026-05-01T21:10:47.676Z",
+      "kind": "source",
+      "label": "01-business-requirements-document.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_moneq926_ntlb06/376a76296efb_01-business-requirements-document.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_moneq930_24dud8",
+      "createdAt": "2026-05-01T21:10:47.676Z",
+      "kind": "source",
+      "label": "02-functional-requirements-specification.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_moneq926_ntlb06/d8a999575556_02-functional-requirements-specification.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_moneq931_pbf5x3",
+      "createdAt": "2026-05-01T21:10:47.677Z",
+      "kind": "source",
+      "label": "03-high-level-design.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_moneq926_ntlb06/27dbf4c71fc8_03-high-level-design.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_moneq931_d9modx",
+      "createdAt": "2026-05-01T21:10:47.677Z",
+      "kind": "source",
+      "label": "04-low-level-design.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_moneq926_ntlb06/d80f11429cf2_04-low-level-design.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_moneq93k_vmaw3c",
+      "createdAt": "2026-05-01T21:10:47.696Z",
+      "kind": "folder",
+      "label": "Active source pack",
+      "path": "test_data/ui-qa/generated/uiqa_moneq926_ntlb06/source-pack",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_moneqvan_bhkn5r",
+      "createdAt": "2026-05-01T21:11:16.463Z",
+      "kind": "json",
+      "label": "Derived RTM JSON",
+      "path": "test_data/test-results/derived_rtm_20260501211116.json",
+      "phase": "ingest_sources"
+    },
+    {
+      "id": "ev_moneqvao_k79zjz",
+      "createdAt": "2026-05-01T21:11:16.464Z",
+      "kind": "report",
+      "label": "Derived RTM report",
+      "path": "test_data/test-results/derived_rtm_20260501211116.md",
+      "phase": "ingest_sources"
+    },
+    {
+      "id": "ev_moneqw4m_9937hg",
+      "createdAt": "2026-05-01T21:11:17.542Z",
+      "kind": "report",
+      "label": "Entity map summary",
+      "path": "test_data/test-results/uiqa_entity_summary_20260501211117.md",
+      "phase": "ingest_sources"
+    }
+  ],
+  "checkpoints": [],
+  "messages": [
+    {
+      "id": "msg_moner9uh_id3iik",
+      "runId": "uiqa_moneq926_ntlb06",
+      "role": "user",
+      "content": "what is the most linked business requirment ",
+      "createdAt": "2026-05-01T21:11:35.321Z"
+    },
+    {
+      "id": "msg_monet8zl_zkacb2",
+      "runId": "uiqa_moneq926_ntlb06",
+      "role": "assistant",
+      "content": "I inspected the KB with available tools but did not reach a final answer within the tool-call budget.",
+      "createdAt": "2026-05-01T21:13:07.521Z"
+    },
+    {
+      "id": "msg_monev2t7_2ekaa9",
+      "runId": "uiqa_moneq926_ntlb06",
+      "role": "user",
+      "content": "what is the most linked business requirement",
+      "createdAt": "2026-05-01T21:14:32.827Z"
+    },
+    {
+      "id": "msg_monevvns_ca4lj3",
+      "runId": "uiqa_moneq926_ntlb06",
+      "role": "assistant",
+      "content": "Checking for KB tools in this session to satisfy the “call at least one tool” rule and verify RTM counts.\n\nNo KB connector is wired in this Cursor session (no matching MCP tools), so the answer below uses only the harness outputs you already have from **inspect_rtm** (full RTM set: **15 rows**) and **inspect_requirements**.\n\n## Answer\n\n**By derived RTM rows (how often a business requirement appears in `rtm_rows.business_requirement_id`), the most linked item is `BRD §4` — it appears on 6 of 15 RTM rows.** Every other business-side identifier in that RTM snapshot appears **once** (`BR-001` … `BR-008`, `BRD §2`).\n\nSo:\n\n- If “business requirement” includes **section-style BRD refs** (`BRD §4`), the winner is **`BRD §4`** (6 RTM links).\n- If you mean only **`BR-*` IDs**, they are **all tied at one RTM row each** in this KB; there is no single “most linked” among them on RTM alone.\n\n## Method and limits\n\n1. **`inspect_business_requirement_links`** failed (`rtm_degree` not allowlisted), so the intended combined ranking (RTM + explicit links + mentions) was not available.\n2. **`query_kb_sql`** failed because the guardrail treated the CTE name `link_degree` as a non-allowlisted “table,” so link-degree SQL could not be completed here.\n3. **`inspect_rtm`** returned **`rowCount`: 15**, so counting `business_requirement_id` over those rows is a complete RTM-wide tally for this run, not a truncated sample.\n\nIf you need a definitive “most linked” including **`requirement_links`**, rerun **`query_kb_sql`** with **no CTEs** (only subqueries against `requirements`, `requirement_links`, and `rtm_rows`) so the allowlist checker does not mis-classify CTE aliases.",
+      "createdAt": "2026-05-01T21:15:10.216Z"
+    },
+    {
+      "id": "msg_monewjsq_kflwo2",
+      "runId": "uiqa_moneq926_ntlb06",
+      "role": "user",
+      "content": "what is the most linked business requirement",
+      "createdAt": "2026-05-01T21:15:41.498Z"
+    },
+    {
+      "id": "msg_monewrt5_tywi8m",
+      "runId": "uiqa_moneq926_ntlb06",
+      "role": "assistant",
+      "content": "## Most linked business requirement\n\nBy the harness ranking (`inspect_business_requirement_links`), **BR-001** is the most linked business requirement.\n\n**Score breakdown for BR-001**\n\n| Signal | Count |\n|--------|-------|\n| RTM rows | 1 |\n| Explicit requirement links | 3 |\n| Entity / KB mentions | 14 |\n| **Total link score** | **18** |\n\nThe next tier is **BR-003, BR-005, and BR-006**, each with **17** (1 + 3 + 13).\n\n**Method:** The tool scores each BR as `rtm_rows + explicit_links + mentions` over BRD-aligned requirements, then sorts by that total. **BR-001** is first in that list for `limit=25`, so it is the single top item on this composite measure.\n\n**Caveat:** A row like **`BRD §4`** has more RTM rows (6) but a lower total score (10) because it has no explicit links and fewer mentions—so “most linked” here is **by this combined score**, not “most RTM rows only.” If you want strictly RTM-row count, say so and the right comparison would be RTM-only.",
+      "createdAt": "2026-05-01T21:15:51.881Z"
+    }
+  ],
+  "blockerCount": 0,
+  "findingCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  }
+}

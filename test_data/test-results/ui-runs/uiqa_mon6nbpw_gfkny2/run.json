@@ -1,0 +1,456 @@
+{
+  "id": "uiqa_mon6nbpw_gfkny2",
+  "scope": "all",
+  "dryRun": false,
+  "autoApprove": true,
+  "status": "approved",
+  "currentPhase": "complete",
+  "createdAt": "2026-05-01T17:24:34.196Z",
+  "updatedAt": "2026-05-01T17:25:47.192Z",
+  "uploads": [],
+  "events": [
+    {
+      "id": "event_mon6nbpx_bs84nq",
+      "runId": "uiqa_mon6nbpw_gfkny2",
+      "phase": "upload_sources",
+      "title": "Prepare active source pack",
+      "status": "running",
+      "createdAt": "2026-05-01T17:24:34.197Z"
+    },
+    {
+      "id": "event_mon6nbpy_vyqu9f",
+      "runId": "uiqa_mon6nbpw_gfkny2",
+      "phase": "upload_sources",
+      "title": "Active source pack ready",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T17:24:34.198Z",
+      "finishedAt": "2026-05-01T17:24:34.198Z",
+      "summary": "0 uploaded source document(s)."
+    },
+    {
+      "id": "event_mon6nbpy_o4t700",
+      "runId": "uiqa_mon6nbpw_gfkny2",
+      "phase": "ingest_sources",
+      "title": "Ensure ingestion virtualenv",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T17:24:34.198Z",
+      "finishedAt": "2026-05-01T17:24:34.249Z",
+      "technical": {
+        "rawLabel": "Ensure ingestion virtualenv",
+        "command": "/bin/test -d ingestion/.venv || /usr/bin/python3 -m venv ingestion/.venv",
+        "stdout": "",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon6nbrd_yhi2bh",
+      "runId": "uiqa_mon6nbpw_gfkny2",
+      "phase": "ingest_sources",
+      "title": "Install ingestion dependencies",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T17:24:34.249Z",
+      "finishedAt": "2026-05-01T17:24:37.095Z",
+      "technical": {
+        "rawLabel": "Install ingestion dependencies",
+        "command": "source ingestion/.venv/bin/activate && ingestion/.venv/bin/pip install -r ingestion/requirements.txt -q",
+        "stdout": "",
+        "stderr": "\n[notice] A new release of pip is available: 26.0.1 -> 26.1\n[notice] To update, run: pip install --upgrade pip\n",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon6ndyg_2sxrx0",
+      "runId": "uiqa_mon6nbpw_gfkny2",
+      "phase": "ingest_sources",
+      "title": "Check local pgvector DB",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T17:24:37.096Z",
+      "finishedAt": "2026-05-01T17:24:37.325Z",
+      "technical": {
+        "rawLabel": "Check local pgvector DB",
+        "command": "/opt/homebrew/bin/pg_isready -h localhost -p 5433 -U ingestion -d ingestion",
+        "stdout": "localhost:5433 - accepting connections\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon6ne4t_w0yfso",
+      "runId": "uiqa_mon6nbpw_gfkny2",
+      "phase": "ingest_sources",
+      "title": "Apply ingestion migrations",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T17:24:37.325Z",
+      "finishedAt": "2026-05-01T17:24:37.614Z",
+      "technical": {
+        "rawLabel": "Apply ingestion migrations",
+        "command": "PGPASSWORD=ingestion ingestion/scripts/apply_migrations.sh",
+        "stdout": "CREATE EXTENSION\nCREATE TABLE\nCREATE TABLE\nCREATE INDEX\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nCREATE INDEX\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nCREATE INDEX\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nCREATE INDEX\nCREATE INDEX\nDO\nALTER TABLE\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nMigrations applied.\n",
+        "stderr": "psql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/001_extensions.sql:1: NOTICE:  extension \"vector\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/002_schema.sql:15: NOTICE:  relation \"documents\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/002_schema.sql:26: NOTICE:  relation \"chunks\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/002_schema.sql:28: NOTICE:  relation \"idx_chunks_document\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/002_schema.sql:37: NOTICE:  relation \"entities\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/002_schema.sql:39: NOTICE:  relation \"idx_entities_document\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/002_schema.sql:40: NOTICE:  relation \"idx_entities_type\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/002_schema.sql:41: NOTICE:  relation \"idx_entities_canonical\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/002_schema.sql:51: NOTICE:  relation \"relationships\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/002_schema.sql:53: NOTICE:  relation \"idx_rel_source_chunk\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/002_schema.sql:54: NOTICE:  relation \"idx_rel_source_doc\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/002_schema.sql:55: NOTICE:  relation \"idx_rel_type\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/002_schema.sql:69: NOTICE:  relation \"test_cases\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/002_schema.sql:71: NOTICE:  relation \"idx_test_cases_requirement_ids\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/002_schema.sql:72: NOTICE:  relation \"idx_test_cases_suite\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/002_schema.sql:85: NOTICE:  relation \"test_case_steps\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/002_schema.sql:87: NOTICE:  relation \"idx_test_case_steps_requirement\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/002_schema.sql:88: NOTICE:  relation \"idx_test_case_steps_case\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/002_schema.sql:91: NOTICE:  relation \"chunks_embedding_hnsw\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/002_schema.sql:94: NOTICE:  relation \"chunks_content_fts\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/003_test_case_inventory.sql:31: NOTICE:  relation \"test_cases\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/003_test_case_inventory.sql:33: NOTICE:  relation \"idx_test_cases_requirement_ids\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/003_test_case_inventory.sql:34: NOTICE:  relation \"idx_test_cases_suite\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/003_test_case_inventory.sql:47: NOTICE:  relation \"test_case_steps\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/003_test_case_inventory.sql:49: NOTICE:  relation \"idx_test_case_steps_requirement\" already exists, skipping\npsql:/Users/utsavsharma/Documents/GitHub/QAMVP/ingestion/sql/003_test_case_inventory.sql:50: NOTICE:  relation \"idx_test_case_steps_case\" already exists, skipping\n",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon6necv_x3jfqk",
+      "runId": "uiqa_mon6nbpw_gfkny2",
+      "phase": "ingest_sources",
+      "title": "Ingest source documents into pgvector",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T17:24:37.615Z",
+      "finishedAt": "2026-05-01T17:25:14.306Z",
+      "technical": {
+        "rawLabel": "Ingest source documents into pgvector",
+        "command": "source ingestion/.venv/bin/activate && DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python ingestion/scripts/ingest.py --format both --test-doc '/Users/utsavsharma/Documents/GitHub/QAMVP/test-doc'",
+        "stdout": "  ingested test-doc/01-business-requirements-document.docx (docx): 61 chunks\n  ingested test-doc/02-functional-requirements-specification.docx (docx): 114 chunks\n  ingested test-doc/03-test-design-specification.docx (docx): 26 chunks\n  ingested test-doc/04-test-strategy.docx (docx): 12 chunks\n  ingested test-doc/05-test-plan.docx (docx): 10 chunks\n  ingested test-doc/06-requirements-traceability-matrix.docx (docx): 10 chunks\n  ingested test-doc/07-test-data-environment-specification.docx (docx): 14 chunks\n  ingested test-doc/08-quality-risk-defect-governance.docx (docx): 12 chunks\n  ingested test-doc/09-test-case-repository.docx (docx): 18 chunks\n  ingested test-doc/01-business-requirements-document.md (md): 86 chunks\n  ingested test-doc/02-functional-requirements-specification.md (md): 142 chunks\n  ingested test-doc/03-test-design-specification.md (md): 38 chunks\n  ingested test-doc/04-test-strategy.md (md): 20 chunks\n  ingested test-doc/05-test-plan.md (md): 19 chunks\n  ingested test-doc/06-requirements-traceability-matrix.md (md): 16 chunks\n  ingested test-doc/07-test-data-environment-specification.md (md): 19 chunks\n  ingested test-doc/08-quality-risk-defect-governance.md (md): 18 chunks\n  ingested test-doc/09-test-case-repository.md (md): 19 chunks\n  ingested test-doc/README.md (md): 10 chunks\n  ingested test_data/TestCases.xlsx (xlsx): 16 test cases, 102 steps\nDone.\n",
+        "stderr": "Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n\rLoading weights:   0%|          | 0/103 [00:00<?, ?it/s]\rLoading weights: 100%|██████████| 103/103 [00:00<00:00, 7466.92it/s]\n\u001b[1mBertModel LOAD REPORT\u001b[0m from: sentence-transformers/all-MiniLM-L6-v2\nKey                     | Status     |  | \n------------------------+------------+--+-\nembeddings.position_ids | UNEXPECTED |  | \n\nNotes:\n- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n\rBatches:   0%|          | 0/2 [00:00<?, ?it/s]\rBatches:  50%|█████     | 1/2 [00:00<00:00,  3.52it/s]\rBatches: 100%|██████████| 2/2 [00:00<00:00,  6.18it/s]\n\rBatches:   0%|          | 0/4 [00:00<?, ?it/s]\rBatches:  50%|█████     | 2/4 [00:00<00:00, 15.78it/s]\rBatches: 100%|██████████| 4/4 [00:00<00:00, 19.99it/s]\n\rBatches:   0%|          | 0/1 [00:00<?, ?it/s]\rBatches: 100%|██████████| 1/1 [00:00<00:00, 22.00it/s]\n\rBatches:   0%|          | 0/1 [00:00<?, ?it/s]\rBatches: 100%|██████████| 1/1 [00:00<00:00, 25.93it/s]\n\rBatches:   0%|          | 0/3 [00:00<?, ?it/s]\rBatches:  67%|██████▋   | 2/3 [00:00<00:00, 11.41it/s]\rBatches: 100%|██████████| 3/3 [00:00<00:00, 14.35it/s]\n\rBatches:   0%|          | 0/5 [00:00<?, ?it/s]\rBatches:  40%|████      | 2/5 [00:00<00:00, 13.46it/s]\rBatches:  80%|████████  | 4/5 [00:00<00:00, 13.58it/s]\rBatches: 100%|██████████| 5/5 [00:00<00:00, 15.52it/s]\n\rBatches:   0%|          | 0/2 [00:00<?, ?it/s]\rBatches: 100%|██████████| 2/2 [00:00<00:00, 19.06it/s]\rBatches: 100%|██████████| 2/2 [00:00<00:00, 19.04it/s]\n\rBatches:   0%|          | 0/1 [00:00<?, ?it/s]\rBatches: 100%|██████████| 1/1 [00:00<00:00, 23.74it/s]\n\rBatches:   0%|          | 0/1 [00:00<?, ?it/s]\rBatches: 100%|██████████| 1/1 [00:00<00:00, 24.54it/s]\n\rBatches:   0%|          | 0/1 [00:00<?, ?it/s]\rBatches: 100%|██████████| 1/1 [00:00<00:00, 24.92it/s]\n\rBatches:   0%|          | 0/1 [00:00<?, ?it/s]\rBatches: 100%|██████████| 1/1 [00:00<00:00, 25.45it/s]\n\rBatches:   0%|          | 0/1 [00:00<?, ?it/s]\rBatches: 100%|██████████| 1/1 [00:00<00:00, 13.45it/s]\n",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon6o6o3_gqely1",
+      "runId": "uiqa_mon6nbpw_gfkny2",
+      "phase": "ingest_sources",
+      "title": "Summarize entity map",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T17:25:14.307Z",
+      "finishedAt": "2026-05-01T17:25:14.534Z",
+      "technical": {
+        "rawLabel": "Summarize entity map",
+        "command": "source ingestion/.venv/bin/activate && DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport os, psycopg\nwith psycopg.connect(os.environ['DATABASE_URL']) as conn, conn.cursor() as cur:\n    cur.execute(\"select entity_type, count(*) from entities group by entity_type order by entity_type\")\n    rows = cur.fetchall()\nprint('# Entity Map Summary')\nprint()\nprint('| Entity Type | Count |')\nprint('|---|---:|')\nfor t, c in rows:\n    print(f'| {t} | {c} |')\nPY",
+        "stdout": "# Entity Map Summary\n\n| Entity Type | Count |\n|---|---:|\n| BR | 384 |\n| REQ | 509 |\n| SECTION | 20 |\n| TC | 281 |\n| TKT | 45 |\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon6o6uf_s0cbxw",
+      "runId": "uiqa_mon6nbpw_gfkny2",
+      "phase": "generate_tests",
+      "title": "Cursor SDK agent",
+      "status": "warning",
+      "createdAt": "2026-05-01T17:25:14.535Z",
+      "finishedAt": "2026-05-01T17:25:14.535Z",
+      "summary": "CURSOR_API_KEY is not set; used deterministic local workflow.",
+      "technical": {
+        "rawLabel": "cursor:generate_tests",
+        "sdkPrompt": "Generate source-aligned QA test cases from the active pgvector corpus. Use citations and return repository JSON if confident.",
+        "stdout": "CURSOR_API_KEY is not set; used deterministic local workflow."
+      }
+    },
+    {
+      "id": "event_mon6o6uh_p9uq77",
+      "runId": "uiqa_mon6nbpw_gfkny2",
+      "phase": "generate_tests",
+      "title": "Generated test cases",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T17:25:14.537Z",
+      "finishedAt": "2026-05-01T17:25:14.537Z",
+      "summary": "16 test case(s), 102 step(s).",
+      "technical": {
+        "rawLabel": "generate_tests:repository",
+        "payload": {
+          "cases": 16
+        }
+      }
+    },
+    {
+      "id": "event_mon6o6uh_cvkpi7",
+      "runId": "uiqa_mon6nbpw_gfkny2",
+      "phase": "audit_generated_tests",
+      "title": "Generated test confidence audit passed",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T17:25:14.537Z",
+      "finishedAt": "2026-05-01T17:25:14.537Z",
+      "summary": "Finding counts: {\"critical\":0,\"high\":0,\"medium\":0,\"low\":0}."
+    },
+    {
+      "id": "event_mon6o6ui_919ciq",
+      "runId": "uiqa_mon6nbpw_gfkny2",
+      "phase": "reseed_structured_db",
+      "title": "Build repository Markdown and workbook",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T17:25:14.538Z",
+      "finishedAt": "2026-05-01T17:25:14.766Z",
+      "technical": {
+        "rawLabel": "Build repository Markdown and workbook",
+        "command": "source ingestion/.venv/bin/activate && ingestion/.venv/bin/python test-doc/scripts/build_test_case_repository.py --spec test-doc/test-case-repository.json --workbook-out test_data/TestCases.xlsx --markdown-out test-doc/09-test-case-repository.md",
+        "stdout": "Wrote test_data/TestCases.xlsx\nWrote test-doc/09-test-case-repository.md\nInventory: 16 test cases, 102 steps\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon6o70u_xtvds0",
+      "runId": "uiqa_mon6nbpw_gfkny2",
+      "phase": "reseed_structured_db",
+      "title": "Reload structured test cases into DB",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T17:25:14.766Z",
+      "finishedAt": "2026-05-01T17:25:23.233Z",
+      "technical": {
+        "rawLabel": "Reload structured test cases into DB",
+        "command": "source ingestion/.venv/bin/activate && DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python ingestion/scripts/ingest.py --format both",
+        "stdout": "  ingested test-doc/01-business-requirements-document.docx (docx): 61 chunks\n  ingested test-doc/02-functional-requirements-specification.docx (docx): 114 chunks\n  ingested test-doc/03-test-design-specification.docx (docx): 26 chunks\n  ingested test-doc/04-test-strategy.docx (docx): 12 chunks\n  ingested test-doc/05-test-plan.docx (docx): 10 chunks\n  ingested test-doc/06-requirements-traceability-matrix.docx (docx): 10 chunks\n  ingested test-doc/07-test-data-environment-specification.docx (docx): 14 chunks\n  ingested test-doc/08-quality-risk-defect-governance.docx (docx): 12 chunks\n  ingested test-doc/09-test-case-repository.docx (docx): 18 chunks\n  ingested test-doc/01-business-requirements-document.md (md): 86 chunks\n  ingested test-doc/02-functional-requirements-specification.md (md): 142 chunks\n  ingested test-doc/03-test-design-specification.md (md): 38 chunks\n  ingested test-doc/04-test-strategy.md (md): 20 chunks\n  ingested test-doc/05-test-plan.md (md): 19 chunks\n  ingested test-doc/06-requirements-traceability-matrix.md (md): 16 chunks\n  ingested test-doc/07-test-data-environment-specification.md (md): 19 chunks\n  ingested test-doc/08-quality-risk-defect-governance.md (md): 18 chunks\n  ingested test-doc/09-test-case-repository.md (md): 19 chunks\n  ingested test-doc/README.md (md): 10 chunks\n  ingested test_data/TestCases.xlsx (xlsx): 16 test cases, 102 steps\nDone.\n",
+        "stderr": "Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n\rLoading weights:   0%|          | 0/103 [00:00<?, ?it/s]\rLoading weights: 100%|██████████| 103/103 [00:00<00:00, 17474.85it/s]\n\u001b[1mBertModel LOAD REPORT\u001b[0m from: sentence-transformers/all-MiniLM-L6-v2\nKey                     | Status     |  | \n------------------------+------------+--+-\nembeddings.position_ids | UNEXPECTED |  | \n\nNotes:\n- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n\rBatches:   0%|          | 0/2 [00:00<?, ?it/s]\rBatches:  50%|█████     | 1/2 [00:00<00:00,  6.40it/s]\rBatches: 100%|██████████| 2/2 [00:00<00:00, 10.01it/s]\n\rBatches:   0%|          | 0/4 [00:00<?, ?it/s]\rBatches:  50%|█████     | 2/4 [00:00<00:00, 15.23it/s]\rBatches: 100%|██████████| 4/4 [00:00<00:00, 18.68it/s]\n\rBatches:   0%|          | 0/1 [00:00<?, ?it/s]\rBatches: 100%|██████████| 1/1 [00:00<00:00, 22.56it/s]\n\rBatches:   0%|          | 0/1 [00:00<?, ?it/s]\rBatches: 100%|██████████| 1/1 [00:00<00:00, 15.88it/s]\n\rBatches:   0%|          | 0/3 [00:00<?, ?it/s]\rBatches:  67%|██████▋   | 2/3 [00:00<00:00, 10.36it/s]\rBatches: 100%|██████████| 3/3 [00:00<00:00, 13.23it/s]\n\rBatches:   0%|          | 0/5 [00:00<?, ?it/s]\rBatches:  20%|██        | 1/5 [00:00<00:00,  8.38it/s]\rBatches:  60%|██████    | 3/5 [00:00<00:00, 14.22it/s]\rBatches: 100%|██████████| 5/5 [00:00<00:00, 17.33it/s]\n\rBatches:   0%|          | 0/2 [00:00<?, ?it/s]\rBatches: 100%|██████████| 2/2 [00:00<00:00, 19.18it/s]\rBatches: 100%|██████████| 2/2 [00:00<00:00, 19.16it/s]\n\rBatches:   0%|          | 0/1 [00:00<?, ?it/s]\rBatches: 100%|██████████| 1/1 [00:00<00:00, 23.02it/s]\n\rBatches:   0%|          | 0/1 [00:00<?, ?it/s]\rBatches: 100%|██████████| 1/1 [00:00<00:00, 22.99it/s]\n\rBatches:   0%|          | 0/1 [00:00<?, ?it/s]\rBatches: 100%|██████████| 1/1 [00:00<00:00, 26.00it/s]\n\rBatches:   0%|          | 0/1 [00:00<?, ?it/s]\rBatches: 100%|██████████| 1/1 [00:00<00:00, 26.31it/s]\n\rBatches:   0%|          | 0/1 [00:00<?, ?it/s]\rBatches: 100%|██████████| 1/1 [00:00<00:00, 16.12it/s]\n",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon6odk4_q2prqx",
+      "runId": "uiqa_mon6nbpw_gfkny2",
+      "phase": "audit_ingestion",
+      "title": "Run ingestion audit gate",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T17:25:23.236Z",
+      "finishedAt": "2026-05-01T17:25:23.433Z",
+      "technical": {
+        "rawLabel": "Run ingestion audit gate",
+        "command": "source ingestion/.venv/bin/activate && DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python ingestion/scripts/audit_test_case_ingestion.py --report '/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/ingestion_audit_20260501172523.md' --json '/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/ingestion_audit_20260501172523.json'",
+        "stdout": "{\n  \"case_count\": 16,\n  \"step_count\": 102,\n  \"hard_doc_requirement_count\": 38,\n  \"covered_requirement_count\": 34,\n  \"uncovered_requirements\": [\n    \"REQ-FR-000\",\n    \"REQ-NFR-003\",\n    \"REQ-NFR-005\",\n    \"REQ-SEC-003\"\n  ],\n  \"finding_counts\": {\n    \"critical\": 0,\n    \"high\": 0,\n    \"medium\": 0,\n    \"low\": 0\n  }\n}\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon6odpn_6v3nvz",
+      "runId": "uiqa_mon6nbpw_gfkny2",
+      "phase": "audit_ingestion",
+      "title": "Ingestion audit gate passed",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T17:25:23.435Z",
+      "finishedAt": "2026-05-01T17:25:23.435Z",
+      "summary": "Finding counts: {\"critical\":0,\"high\":0,\"medium\":0,\"low\":0}."
+    },
+    {
+      "id": "event_mon6odpn_dffq5p",
+      "runId": "uiqa_mon6nbpw_gfkny2",
+      "phase": "checkpoint",
+      "title": "Approve browser execution",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T17:25:23.435Z",
+      "finishedAt": "2026-05-01T17:25:23.435Z",
+      "summary": "Auto-approved for this run."
+    },
+    {
+      "id": "event_mon6odpn_gsoo2n",
+      "runId": "uiqa_mon6nbpw_gfkny2",
+      "phase": "publish_artifacts",
+      "title": "Export repository JSON from DB",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T17:25:23.435Z",
+      "finishedAt": "2026-05-01T17:25:23.614Z",
+      "technical": {
+        "rawLabel": "Export repository JSON from DB",
+        "command": "source ingestion/.venv/bin/activate && DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python ingestion/scripts/export_test_case_repository.py --output test-doc/test-case-repository.json",
+        "stdout": "Exported 16 test cases, 102 steps to test-doc/test-case-repository.json\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon6odum_mbxdqc",
+      "runId": "uiqa_mon6nbpw_gfkny2",
+      "phase": "publish_artifacts",
+      "title": "Render repository Markdown and workbook",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T17:25:23.614Z",
+      "finishedAt": "2026-05-01T17:25:23.814Z",
+      "technical": {
+        "rawLabel": "Render repository Markdown and workbook",
+        "command": "source ingestion/.venv/bin/activate && ingestion/.venv/bin/python test-doc/scripts/build_test_case_repository.py --spec test-doc/test-case-repository.json --workbook-out test_data/TestCases.xlsx --markdown-out test-doc/09-test-case-repository.md",
+        "stdout": "Wrote test_data/TestCases.xlsx\nWrote test-doc/09-test-case-repository.md\nInventory: 16 test cases, 102 steps\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon6oe07_1xkqpv",
+      "runId": "uiqa_mon6nbpw_gfkny2",
+      "phase": "execute_browser",
+      "title": "Install Playwright dependencies",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T17:25:23.815Z",
+      "finishedAt": "2026-05-01T17:25:26.628Z",
+      "technical": {
+        "rawLabel": "Install Playwright dependencies",
+        "command": "npm install --prefix playwright-runner",
+        "stdout": "\nup to date, audited 8 packages in 2s\n\nfound 0 vulnerabilities\n",
+        "stderr": "npm warn Unknown env config \"devdir\". This will stop working in the next major version of npm.\nnpm notice\nnpm notice New minor version of npm available! 11.5.2 -> 11.13.0\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v11.13.0\nnpm notice To update run: npm install -g npm@11.13.0\nnpm notice\n",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon6og6n_c9ftef",
+      "runId": "uiqa_mon6nbpw_gfkny2",
+      "phase": "execute_browser",
+      "title": "Run Playwright",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T17:25:26.640Z",
+      "finishedAt": "2026-05-01T17:25:47.183Z",
+      "technical": {
+        "rawLabel": "Run Playwright",
+        "command": "TC_ID='all' PLAYWRIGHT_WORKERS=2 npx --prefix playwright-runner playwright test --config '/Users/utsavsharma/Documents/GitHub/QAMVP/playwright-runner/playwright.config.ts' --workers=2",
+        "stdout": "\nRunning 17 tests using 2 workers\n\n  ✘   1 [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-001: Maker submits BUY, checker approves, dashboard reflects one approved trade (1ms)\n  ✘   2 [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-002: Two pending trades are counted in queue and absent from dashboard until approval (1ms)\n  ✘   3 [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-003: Approved BUY and matching SELL become Matched in Trade List (1ms)\n  ✘   4 [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-004: GTC trade requires expiration date and calculates notional total (1ms)\n  ✘   5 [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-005: Trade list shows unmatched approved trade until compatible opposite trade is approved (1ms)\n  ✘   6 [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-006: Invalid credentials do not authenticate and show safe error (1ms)\n  ✘   7 [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-007: Unauthenticated deep link is gated and logout clears protected access (1ms)\n  ✘   8 [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-008: Navigation menus expose all trading and admin destinations (1ms)\n  ✘  10 [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-009: Trade form prevents submission when required fields are missing (0ms)\n  ✘   9 [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-010: Dashboard columns and loading state render for approved trades (1ms)\n  ✘  12 [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-012: Checker approval queue displays empty state and pending count zero (1ms)\n  ✘  11 [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-011: Trade List columns and summary bar reflect approved inventory (1ms)\n  ✘  14 [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-013: Role label distinguishes maker and checker sessions (1ms)\n  ✘  13 [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-014: Ticker selection drives price and total recalculation (1ms)\n  ✘  16 [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-015: Admin Users placeholder is reachable from authenticated shell (1ms)\n  ✘  15 [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-016: Local operability and automation hooks are verifiable from the browser (1ms)\n  ✓  17 [chromium] › playwright-runner/tests/mapping.spec.ts:5:5 › all current KB test-case steps have deterministic Playwright mappings (2ms)\n\n\n  1) [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-001: Maker submits BUY, checker approves, dashboard reflects one approved trade \n\n    Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n    ╔════════════════════════════════════════════════════════════╗\n    ║ Looks like Playwright was just installed or updated.       ║\n    ║ Please run the following command to download new browsers: ║\n    ║                                                            ║\n    ║     npx playwright install                                 ║\n    ║                                                            ║\n    ║ <3 Playwright Team                                         ║\n    ╚════════════════════════════════════════════════════════════╝\n\n    Error Context: test_data/test-results/playwright-output/kb-test-cases-TC-001-Maker-247b7-reflects-one-approved-trade-chromium/error-context.md\n\n  2) [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-002: Two pending trades are counted in queue and absent from dashboard until approval \n\n    Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n    ╔════════════════════════════════════════════════════════════╗\n    ║ Looks like Playwright was just installed or updated.       ║\n    ║ Please run the following command to download new browsers: ║\n    ║                                                            ║\n    ║     npx playwright install                                 ║\n    ║                                                            ║\n    ║ <3 Playwright Team                                         ║\n    ╚════════════════════════════════════════════════════════════╝\n\n    Error Context: test_data/test-results/playwright-output/kb-test-cases-TC-002-Two-p-b139b-om-dashboard-until-approval-chromium/error-context.md\n\n  3) [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-003: Approved BUY and matching SELL become Matched in Trade List \n\n    Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n    ╔════════════════════════════════════════════════════════════╗\n    ║ Looks like Playwright was just installed or updated.       ║\n    ║ Please run the following command to download new browsers: ║\n    ║                                                            ║\n    ║     npx playwright install                                 ║\n    ║                                                            ║\n    ║ <3 Playwright Team                                         ║\n    ╚════════════════════════════════════════════════════════════╝\n\n    Error Context: test_data/test-results/playwright-output/kb-test-cases-TC-003-Appro-08b91-ecome-Matched-in-Trade-List-chromium/error-context.md\n\n  4) [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-004: GTC trade requires expiration date and calculates notional total \n\n    Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n    ╔════════════════════════════════════════════════════════════╗\n    ║ Looks like Playwright was just installed or updated.       ║\n    ║ Please run the following command to download new browsers: ║\n    ║                                                            ║\n    ║     npx playwright install                                 ║\n    ║                                                            ║\n    ║ <3 Playwright Team                                         ║\n    ╚════════════════════════════════════════════════════════════╝\n\n    Error Context: test_data/test-results/playwright-output/kb-test-cases-TC-004-GTC-t-80790-d-calculates-notional-total-chromium/error-context.md\n\n  5) [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-005: Trade list shows unmatched approved trade until compatible opposite trade is approved \n\n    Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n    ╔════════════════════════════════════════════════════════════╗\n    ║ Looks like Playwright was just installed or updated.       ║\n    ║ Please run the following command to download new browsers: ║\n    ║                                                            ║\n    ║     npx playwright install                                 ║\n    ║                                                            ║\n    ║ <3 Playwright Team                                         ║\n    ╚════════════════════════════════════════════════════════════╝\n\n    Error Context: test_data/test-results/playwright-output/kb-test-cases-TC-005-Trade-d3058--opposite-trade-is-approved-chromium/error-context.md\n\n  6) [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-006: Invalid credentials do not authenticate and show safe error \n\n    Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n    ╔════════════════════════════════════════════════════════════╗\n    ║ Looks like Playwright was just installed or updated.       ║\n    ║ Please run the following command to download new browsers: ║\n    ║                                                            ║\n    ║     npx playwright install                                 ║\n    ║                                                            ║\n    ║ <3 Playwright Team                                         ║\n    ╚════════════════════════════════════════════════════════════╝\n\n    Error Context: test_data/test-results/playwright-output/kb-test-cases-TC-006-Inval-e1083-nticate-and-show-safe-error-chromium/error-context.md\n\n  7) [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-007: Unauthenticated deep link is gated and logout clears protected access \n\n    Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n    ╔════════════════════════════════════════════════════════════╗\n    ║ Looks like Playwright was just installed or updated.       ║\n    ║ Please run the following command to download new browsers: ║\n    ║                                                            ║\n    ║     npx playwright install                                 ║\n    ║                                                            ║\n    ║ <3 Playwright Team                                         ║\n    ╚════════════════════════════════════════════════════════════╝\n\n    Error Context: test_data/test-results/playwright-output/kb-test-cases-TC-007-Unaut-a810f-out-clears-protected-access-chromium/error-context.md\n\n  8) [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-008: Navigation menus expose all trading and admin destinations \n\n    Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n    ╔════════════════════════════════════════════════════════════╗\n    ║ Looks like Playwright was just installed or updated.       ║\n    ║ Please run the following command to download new browsers: ║\n    ║                                                            ║\n    ║     npx playwright install                                 ║\n    ║                                                            ║\n    ║ <3 Playwright Team                                         ║\n    ╚════════════════════════════════════════════════════════════╝\n\n    Error Context: test_data/test-results/playwright-output/kb-test-cases-TC-008-Navig-5ba1b-ding-and-admin-destinations-chromium/error-context.md\n\n  9) [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-009: Trade form prevents submission when required fields are missing \n\n    Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n    ╔════════════════════════════════════════════════════════════╗\n    ║ Looks like Playwright was just installed or updated.       ║\n    ║ Please run the following command to download new browsers: ║\n    ║                                                            ║\n    ║     npx playwright install                                 ║\n    ║                                                            ║\n    ║ <3 Playwright Team                                         ║\n    ╚════════════════════════════════════════════════════════════╝\n\n    Error Context: test_data/test-results/playwright-output/kb-test-cases-TC-009-Trade-2f197-required-fields-are-missing-chromium/error-context.md\n\n  10) [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-010: Dashboard columns and loading state render for approved trades \n\n    Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n    ╔════════════════════════════════════════════════════════════╗\n    ║ Looks like Playwright was just installed or updated.       ║\n    ║ Please run the following command to download new browsers: ║\n    ║                                                            ║\n    ║     npx playwright install                                 ║\n    ║                                                            ║\n    ║ <3 Playwright Team                                         ║\n    ╚════════════════════════════════════════════════════════════╝\n\n    Error Context: test_data/test-results/playwright-output/kb-test-cases-TC-010-Dashb-d14e7--render-for-approved-trades-chromium/error-context.md\n\n  11) [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-011: Trade List columns and summary bar reflect approved inventory \n\n    Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n    ╔════════════════════════════════════════════════════════════╗\n    ║ Looks like Playwright was just installed or updated.       ║\n    ║ Please run the following command to download new browsers: ║\n    ║                                                            ║\n    ║     npx playwright install                                 ║\n    ║                                                            ║\n    ║ <3 Playwright Team                                         ║\n    ╚════════════════════════════════════════════════════════════╝\n\n    Error Context: test_data/test-results/playwright-output/kb-test-cases-TC-011-Trade-d3097--reflect-approved-inventory-chromium/error-context.md\n\n  12) [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-012: Checker approval queue displays empty state and pending count zero \n\n    Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n    ╔════════════════════════════════════════════════════════════╗\n    ║ Looks like Playwright was just installed or updated.       ║\n    ║ Please run the following command to download new browsers: ║\n    ║                                                            ║\n    ║     npx playwright install                                 ║\n    ║                                                            ║\n    ║ <3 Playwright Team                                         ║\n    ╚════════════════════════════════════════════════════════════╝\n\n    Error Context: test_data/test-results/playwright-output/kb-test-cases-TC-012-Check-a7797-tate-and-pending-count-zero-chromium/error-context.md\n\n  13) [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-013: Role label distinguishes maker and checker sessions \n\n    Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n    ╔════════════════════════════════════════════════════════════╗\n    ║ Looks like Playwright was just installed or updated.       ║\n    ║ Please run the following command to download new browsers: ║\n    ║                                                            ║\n    ║     npx playwright install                                 ║\n    ║                                                            ║\n    ║ <3 Playwright Team                                         ║\n    ╚════════════════════════════════════════════════════════════╝\n\n    Error Context: test_data/test-results/playwright-output/kb-test-cases-TC-013-Role--2af67--maker-and-checker-sessions-chromium/error-context.md\n\n  14) [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-014: Ticker selection drives price and total recalculation \n\n    Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n    ╔════════════════════════════════════════════════════════════╗\n    ║ Looks like Playwright was just installed or updated.       ║\n    ║ Please run the following command to download new browsers: ║\n    ║                                                            ║\n    ║     npx playwright install                                 ║\n    ║                                                            ║\n    ║ <3 Playwright Team                                         ║\n    ╚════════════════════════════════════════════════════════════╝\n\n    Error Context: test_data/test-results/playwright-output/kb-test-cases-TC-014-Ticke-42ce3-ice-and-total-recalculation-chromium/error-context.md\n\n  15) [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-015: Admin Users placeholder is reachable from authenticated shell \n\n    Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n    ╔════════════════════════════════════════════════════════════╗\n    ║ Looks like Playwright was just installed or updated.       ║\n    ║ Please run the following command to download new browsers: ║\n    ║                                                            ║\n    ║     npx playwright install                                 ║\n    ║                                                            ║\n    ║ <3 Playwright Team                                         ║\n    ╚════════════════════════════════════════════════════════════╝\n\n    Error Context: test_data/test-results/playwright-output/kb-test-cases-TC-015-Admin-961b2-le-from-authenticated-shell-chromium/error-context.md\n\n  16) [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-016: Local operability and automation hooks are verifiable from the browser \n\n    Error: browserType.launch: Executable doesn't exist at /var/folders/l3/6x2gqh2x1rbdkr21_hzckff40000gn/T/cursor-sandbox-cache/aae208b1b5b150b5369be7fab657a771/playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell\n    ╔════════════════════════════════════════════════════════════╗\n    ║ Looks like Playwright was just installed or updated.       ║\n    ║ Please run the following command to download new browsers: ║\n    ║                                                            ║\n    ║     npx playwright install                                 ║\n    ║                                                            ║\n    ║ <3 Playwright Team                                         ║\n    ╚════════════════════════════════════════════════════════════╝\n\n    Error Context: test_data/test-results/playwright-output/kb-test-cases-TC-016-Local-19ed2-verifiable-from-the-browser-chromium/error-context.md\n\n  16 failed\n    [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-001: Maker submits BUY, checker approves, dashboard reflects one approved trade \n    [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-002: Two pending trades are counted in queue and absent from dashboard until approval \n    [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-003: Approved BUY and matching SELL become Matched in Trade List \n    [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-004: GTC trade requires expiration date and calculates notional total \n    [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-005: Trade list shows unmatched approved trade until compatible opposite trade is approved \n    [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-006: Invalid credentials do not authenticate and show safe error \n    [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-007: Unauthenticated deep link is gated and logout clears protected access \n    [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-008: Navigation menus expose all trading and admin destinations \n    [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-009: Trade form prevents submission when required fields are missing \n    [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-010: Dashboard columns and loading state render for approved trades \n    [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-011: Trade List columns and summary bar reflect approved inventory \n    [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-012: Checker approval queue displays empty state and pending count zero \n    [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-013: Role label distinguishes maker and checker sessions \n    [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-014: Ticker selection drives price and total recalculation \n    [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-015: Admin Users placeholder is reachable from authenticated shell \n    [chromium] › playwright-runner/tests/kb-test-cases.spec.ts:18:7 › TC-016: Local operability and automation hooks are verifiable from the browser \n  1 passed (18.1s)\n",
+        "stderr": "npm warn Unknown env config \"devdir\". This will stop working in the next major version of npm.\n[WebServer] npm warn Unknown env config \"devdir\". This will stop working in the next major version of npm.\n[WebServer] - Building...\n[WebServer] \n",
+        "exitCode": 1
+      }
+    },
+    {
+      "id": "event_mon6ow1i_lqrrrk",
+      "runId": "uiqa_mon6nbpw_gfkny2",
+      "phase": "verify_evidence",
+      "title": "Verify Playwright artifacts",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T17:25:47.190Z",
+      "finishedAt": "2026-05-01T17:25:47.190Z",
+      "summary": "Verified latest artifacts for 16 test case(s)."
+    },
+    {
+      "id": "event_mon6ow1j_n25gw3",
+      "runId": "uiqa_mon6nbpw_gfkny2",
+      "phase": "audit_run",
+      "title": "Run independent final audit",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T17:25:47.191Z",
+      "finishedAt": "2026-05-01T17:25:47.191Z",
+      "summary": "Verdict: approved."
+    },
+    {
+      "id": "event_mon6ow1j_i0iz1k",
+      "runId": "uiqa_mon6nbpw_gfkny2",
+      "phase": "complete",
+      "title": "QA workflow complete",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T17:25:47.191Z",
+      "finishedAt": "2026-05-01T17:25:47.191Z",
+      "summary": "Final verdict: approved."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev_mon6nbpx_zrnldv",
+      "createdAt": "2026-05-01T17:24:34.197Z",
+      "kind": "folder",
+      "label": "Active source pack",
+      "path": "test_data/ui-qa/generated/uiqa_mon6nbpw_gfkny2/source-pack",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_mon6o6uf_7lls5r",
+      "createdAt": "2026-05-01T17:25:14.535Z",
+      "kind": "report",
+      "label": "Entity map summary",
+      "path": "test_data/test-results/uiqa_entity_summary_20260501172514.md",
+      "phase": "ingest_sources"
+    },
+    {
+      "id": "ev_mon6o6ug_g575nb",
+      "createdAt": "2026-05-01T17:25:14.536Z",
+      "kind": "json",
+      "label": "Generated test case repository",
+      "path": "test_data/ui-qa/generated/uiqa_mon6nbpw_gfkny2/test-case-repository.generated.json",
+      "phase": "generate_tests"
+    },
+    {
+      "id": "ev_mon6o6uh_ujhyxs",
+      "createdAt": "2026-05-01T17:25:14.537Z",
+      "kind": "report",
+      "label": "Generated test confidence audit",
+      "path": "test_data/test-results/generated_test_case_audit_20260501172514.md",
+      "phase": "audit_generated_tests"
+    },
+    {
+      "id": "ev_mon6o6uh_fckppn",
+      "createdAt": "2026-05-01T17:25:14.537Z",
+      "kind": "json",
+      "label": "Generated test confidence audit JSON",
+      "path": "test_data/test-results/generated_test_case_audit_20260501172514.json",
+      "phase": "audit_generated_tests"
+    },
+    {
+      "id": "ev_mon6o6ui_wsqesn",
+      "createdAt": "2026-05-01T17:25:14.538Z",
+      "kind": "json",
+      "label": "Active test case repository JSON",
+      "path": "test-doc/test-case-repository.json",
+      "phase": "reseed_structured_db"
+    },
+    {
+      "id": "ev_mon6odk3_1rhiou",
+      "createdAt": "2026-05-01T17:25:23.236Z",
+      "kind": "workbook",
+      "label": "Executable TestCases workbook",
+      "path": "test_data/TestCases.xlsx",
+      "phase": "reseed_structured_db"
+    },
+    {
+      "id": "ev_mon6odk4_bnq133",
+      "createdAt": "2026-05-01T17:25:23.236Z",
+      "kind": "report",
+      "label": "Rendered test case repository",
+      "path": "test-doc/09-test-case-repository.md",
+      "phase": "reseed_structured_db"
+    },
+    {
+      "id": "ev_mon6odpm_1fxkp9",
+      "createdAt": "2026-05-01T17:25:23.434Z",
+      "kind": "report",
+      "label": "Ingestion audit report",
+      "path": "test_data/test-results/ingestion_audit_20260501172523.md",
+      "phase": "audit_ingestion"
+    },
+    {
+      "id": "ev_mon6odpm_bg4lbf",
+      "createdAt": "2026-05-01T17:25:23.434Z",
+      "kind": "json",
+      "label": "Ingestion audit JSON",
+      "path": "test_data/test-results/ingestion_audit_20260501172523.json",
+      "phase": "audit_ingestion"
+    },
+    {
+      "id": "ev_mon6oe06_7rmz9x",
+      "createdAt": "2026-05-01T17:25:23.814Z",
+      "kind": "json",
+      "label": "Exported repository JSON",
+      "path": "test-doc/test-case-repository.json",
+      "phase": "publish_artifacts"
+    },
+    {
+      "id": "ev_mon6oe06_m6845q",
+      "createdAt": "2026-05-01T17:25:23.814Z",
+      "kind": "workbook",
+      "label": "Exported TestCases workbook",
+      "path": "test_data/TestCases.xlsx",
+      "phase": "publish_artifacts"
+    },
+    {
+      "id": "ev_mon6ow1i_vqz8zo",
+      "createdAt": "2026-05-01T17:25:47.190Z",
+      "kind": "json",
+      "label": "Evidence verification",
+      "path": "test_data/test-results/uiqa_evidence_verification_20260501172547.json",
+      "phase": "verify_evidence"
+    },
+    {
+      "id": "ev_mon6ow1j_x3r3ev",
+      "createdAt": "2026-05-01T17:25:47.191Z",
+      "kind": "report",
+      "label": "Final QA audit",
+      "path": "test_data/test-results/audit_uiqa_20260501172547.md",
+      "phase": "audit_run"
+    }
+  ],
+  "checkpoints": [],
+  "messages": [],
+  "blockerCount": 0,
+  "findingCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "generatedSpecPath": "test_data/ui-qa/generated/uiqa_mon6nbpw_gfkny2/test-case-repository.generated.json",
+  "gateStatus": "passed",
+  "auditVerdict": "approved"
+}

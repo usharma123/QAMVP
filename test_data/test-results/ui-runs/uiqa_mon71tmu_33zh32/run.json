@@ -1,0 +1,53 @@
+{
+  "id": "uiqa_mon71tmu_33zh32",
+  "scope": "chat",
+  "dryRun": false,
+  "autoApprove": false,
+  "status": "created",
+  "currentPhase": "upload_sources",
+  "createdAt": "2026-05-01T17:35:50.598Z",
+  "updatedAt": "2026-05-01T17:35:50.640Z",
+  "uploads": [],
+  "events": [
+    {
+      "id": "event_mon71tmz_m2mq9m",
+      "runId": "uiqa_mon71tmu_33zh32",
+      "phase": "upload_sources",
+      "title": "Cursor SDK agent",
+      "status": "warning",
+      "createdAt": "2026-05-01T17:35:50.603Z",
+      "finishedAt": "2026-05-01T17:35:50.638Z",
+      "summary": "Cursor SDK unavailable: AuthenticationError\nError\nAuthenticationError: Error\n    at throwApiError (/Users/utsavsharma/Documents/GitHub/QAMVP/ui-qa/node_modules/@cursor/sdk/dist/esm/index.js:8:1069581)\n    at <anonymous> (/Users/utsavsharma/Documents/GitHub/QAMVP/ui-qa/node_modules/@cursor/sdk/dist/esm/index.js:8:1068522)\n    at i (/Users/utsavsharma/Documents/GitHub/QAMVP/ui-qa/node_modules/@cursor/sdk/dist/esm/index.js:8:1066606)",
+      "technical": {
+        "rawLabel": "cursor:upload_sources",
+        "sdkPrompt": "inspect, generate test cases, then execute ",
+        "stderr": "AuthenticationError\nError\nAuthenticationError: Error\n    at throwApiError (/Users/utsavsharma/Documents/GitHub/QAMVP/ui-qa/node_modules/@cursor/sdk/dist/esm/index.js:8:1069581)\n    at <anonymous> (/Users/utsavsharma/Documents/GitHub/QAMVP/ui-qa/node_modules/@cursor/sdk/dist/esm/index.js:8:1068522)\n    at i (/Users/utsavsharma/Documents/GitHub/QAMVP/ui-qa/node_modules/@cursor/sdk/dist/esm/index.js:8:1066606)"
+      }
+    }
+  ],
+  "evidence": [],
+  "checkpoints": [],
+  "messages": [
+    {
+      "id": "msg_mon71tmy_q7qqhn",
+      "runId": "uiqa_mon71tmu_33zh32",
+      "role": "user",
+      "content": "inspect, generate test cases, then execute ",
+      "createdAt": "2026-05-01T17:35:50.602Z"
+    },
+    {
+      "id": "msg_mon71to0_vgt38y",
+      "runId": "uiqa_mon71tmu_33zh32",
+      "role": "assistant",
+      "content": "Cursor SDK unavailable: AuthenticationError\nError\nAuthenticationError: Error\n    at throwApiError (/Users/utsavsharma/Documents/GitHub/QAMVP/ui-qa/node_modules/@cursor/sdk/dist/esm/index.js:8:1069581)\n    at <anonymous> (/Users/utsavsharma/Documents/GitHub/QAMVP/ui-qa/node_modules/@cursor/sdk/dist/esm/index.js:8:1068522)\n    at i (/Users/utsavsharma/Documents/GitHub/QAMVP/ui-qa/node_modules/@cursor/sdk/dist/esm/index.js:8:1066606)",
+      "createdAt": "2026-05-01T17:35:50.640Z"
+    }
+  ],
+  "blockerCount": 0,
+  "findingCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  }
+}

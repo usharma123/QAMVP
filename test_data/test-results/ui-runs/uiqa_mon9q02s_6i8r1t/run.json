@@ -1,0 +1,68 @@
+{
+  "id": "uiqa_mon9q02s_6i8r1t",
+  "scope": "smoke",
+  "dryRun": true,
+  "autoApprove": true,
+  "status": "created",
+  "currentPhase": "upload_sources",
+  "createdAt": "2026-05-01T18:50:37.924Z",
+  "updatedAt": "2026-05-01T18:50:37.978Z",
+  "uploads": [
+    {
+      "id": "src_mon9q04a_86wpe3",
+      "runId": "uiqa_mon9q02s_6i8r1t",
+      "originalName": "01-business-requirements-document.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_mon9q02s_6i8r1t/75ba74032f55_01-business-requirements-document.docx",
+      "documentType": "BRD",
+      "sha256": "75ba74032f5583526c3ce4035eb7f21f024045dda836b8ecafd3bad94c8ee7e9",
+      "size": 35621,
+      "status": "accepted",
+      "createdAt": "2026-05-01T18:50:37.978Z"
+    }
+  ],
+  "events": [
+    {
+      "id": "event_mon9q04a_bwqm8z",
+      "runId": "uiqa_mon9q02s_6i8r1t",
+      "phase": "upload_sources",
+      "title": "Uploaded 01-business-requirements-document.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:50:37.978Z",
+      "finishedAt": "2026-05-01T18:50:37.978Z",
+      "summary": "Classified as BRD.",
+      "technical": {
+        "rawLabel": "upload:01-business-requirements-document.docx",
+        "payload": {
+          "id": "src_mon9q04a_86wpe3",
+          "runId": "uiqa_mon9q02s_6i8r1t",
+          "originalName": "01-business-requirements-document.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_mon9q02s_6i8r1t/75ba74032f55_01-business-requirements-document.docx",
+          "documentType": "BRD",
+          "sha256": "75ba74032f5583526c3ce4035eb7f21f024045dda836b8ecafd3bad94c8ee7e9",
+          "size": 35621,
+          "status": "accepted",
+          "createdAt": "2026-05-01T18:50:37.978Z"
+        }
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev_mon9q04a_ap1gja",
+      "createdAt": "2026-05-01T18:50:37.978Z",
+      "kind": "source",
+      "label": "01-business-requirements-document.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_mon9q02s_6i8r1t/75ba74032f55_01-business-requirements-document.docx",
+      "phase": "upload_sources"
+    }
+  ],
+  "checkpoints": [],
+  "messages": [],
+  "blockerCount": 0,
+  "findingCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  }
+}

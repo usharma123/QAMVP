@@ -1,0 +1,338 @@
+{
+  "id": "uiqa_mon6lfe2_sjdb6l",
+  "scope": "all",
+  "dryRun": true,
+  "autoApprove": true,
+  "status": "blocked",
+  "currentPhase": "audit_ingestion",
+  "createdAt": "2026-05-01T17:23:05.642Z",
+  "updatedAt": "2026-05-01T17:23:05.663Z",
+  "uploads": [],
+  "events": [
+    {
+      "id": "event_mon6lfe7_dlm2pe",
+      "runId": "uiqa_mon6lfe2_sjdb6l",
+      "phase": "upload_sources",
+      "title": "Prepare active source pack",
+      "status": "running",
+      "createdAt": "2026-05-01T17:23:05.647Z"
+    },
+    {
+      "id": "event_mon6lfe9_1wvc1w",
+      "runId": "uiqa_mon6lfe2_sjdb6l",
+      "phase": "upload_sources",
+      "title": "Active source pack ready",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T17:23:05.649Z",
+      "finishedAt": "2026-05-01T17:23:05.649Z",
+      "summary": "0 uploaded source document(s)."
+    },
+    {
+      "id": "event_mon6lfe9_5lmdko",
+      "runId": "uiqa_mon6lfe2_sjdb6l",
+      "phase": "ingest_sources",
+      "title": "Ensure ingestion virtualenv",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T17:23:05.649Z",
+      "finishedAt": "2026-05-01T17:23:05.649Z",
+      "summary": "Dry run skipped command execution.",
+      "technical": {
+        "rawLabel": "Ensure ingestion virtualenv",
+        "command": "/bin/test -d ingestion/.venv || /usr/bin/python3 -m venv ingestion/.venv",
+        "stdout": "[dry-run] command skipped\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon6lfe9_4np3yw",
+      "runId": "uiqa_mon6lfe2_sjdb6l",
+      "phase": "ingest_sources",
+      "title": "Install ingestion dependencies",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T17:23:05.649Z",
+      "finishedAt": "2026-05-01T17:23:05.650Z",
+      "summary": "Dry run skipped command execution.",
+      "technical": {
+        "rawLabel": "Install ingestion dependencies",
+        "command": "source ingestion/.venv/bin/activate && ingestion/.venv/bin/pip install -r ingestion/requirements.txt -q",
+        "stdout": "[dry-run] command skipped\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon6lfea_fajjj9",
+      "runId": "uiqa_mon6lfe2_sjdb6l",
+      "phase": "ingest_sources",
+      "title": "Check local pgvector DB",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T17:23:05.650Z",
+      "finishedAt": "2026-05-01T17:23:05.650Z",
+      "summary": "Dry run skipped command execution.",
+      "technical": {
+        "rawLabel": "Check local pgvector DB",
+        "command": "/opt/homebrew/bin/pg_isready -h localhost -p 5433 -U ingestion -d ingestion",
+        "stdout": "[dry-run] command skipped\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon6lfea_zz0jtr",
+      "runId": "uiqa_mon6lfe2_sjdb6l",
+      "phase": "ingest_sources",
+      "title": "Apply ingestion migrations",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T17:23:05.650Z",
+      "finishedAt": "2026-05-01T17:23:05.650Z",
+      "summary": "Dry run skipped command execution.",
+      "technical": {
+        "rawLabel": "Apply ingestion migrations",
+        "command": "PGPASSWORD=ingestion ingestion/scripts/apply_migrations.sh",
+        "stdout": "[dry-run] command skipped\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon6lfea_mtvfgr",
+      "runId": "uiqa_mon6lfe2_sjdb6l",
+      "phase": "ingest_sources",
+      "title": "Ingest source documents into pgvector",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T17:23:05.650Z",
+      "finishedAt": "2026-05-01T17:23:05.651Z",
+      "summary": "Dry run skipped command execution.",
+      "technical": {
+        "rawLabel": "Ingest source documents into pgvector",
+        "command": "source ingestion/.venv/bin/activate && DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python ingestion/scripts/ingest.py --format both --test-doc '/Users/utsavsharma/Documents/GitHub/QAMVP/test-doc'",
+        "stdout": "[dry-run] command skipped\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon6lfed_2406jq",
+      "runId": "uiqa_mon6lfe2_sjdb6l",
+      "phase": "ingest_sources",
+      "title": "Summarize entity map",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T17:23:05.653Z",
+      "finishedAt": "2026-05-01T17:23:05.653Z",
+      "summary": "Dry run skipped command execution.",
+      "technical": {
+        "rawLabel": "Summarize entity map",
+        "command": "source ingestion/.venv/bin/activate && DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport os, psycopg\nwith psycopg.connect(os.environ['DATABASE_URL']) as conn, conn.cursor() as cur:\n    cur.execute(\"select entity_type, count(*) from entities group by entity_type order by entity_type\")\n    rows = cur.fetchall()\nprint('# Entity Map Summary')\nprint()\nprint('| Entity Type | Count |')\nprint('|---|---:|')\nfor t, c in rows:\n    print(f'| {t} | {c} |')\nPY",
+        "stdout": "[dry-run] command skipped\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon6lfee_lop7mh",
+      "runId": "uiqa_mon6lfe2_sjdb6l",
+      "phase": "generate_tests",
+      "title": "Cursor SDK agent",
+      "status": "warning",
+      "createdAt": "2026-05-01T17:23:05.654Z",
+      "finishedAt": "2026-05-01T17:23:05.654Z",
+      "summary": "Dry run: Cursor SDK call skipped.",
+      "technical": {
+        "rawLabel": "cursor:generate_tests",
+        "sdkPrompt": "Generate source-aligned QA test cases from the active pgvector corpus. Use citations and return repository JSON if confident.",
+        "stdout": "Dry run: Cursor SDK call skipped."
+      }
+    },
+    {
+      "id": "event_mon6lfeh_sbcgic",
+      "runId": "uiqa_mon6lfe2_sjdb6l",
+      "phase": "generate_tests",
+      "title": "Generated test cases",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T17:23:05.657Z",
+      "finishedAt": "2026-05-01T17:23:05.657Z",
+      "summary": "16 test case(s), 102 step(s).",
+      "technical": {
+        "rawLabel": "generate_tests:repository",
+        "payload": {
+          "cases": 16
+        }
+      }
+    },
+    {
+      "id": "event_mon6lfei_tzzqes",
+      "runId": "uiqa_mon6lfe2_sjdb6l",
+      "phase": "audit_generated_tests",
+      "title": "Generated test confidence audit passed",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T17:23:05.658Z",
+      "finishedAt": "2026-05-01T17:23:05.658Z",
+      "summary": "Finding counts: {\"critical\":0,\"high\":0,\"medium\":0,\"low\":0}."
+    },
+    {
+      "id": "event_mon6lfei_c65hw6",
+      "runId": "uiqa_mon6lfe2_sjdb6l",
+      "phase": "reseed_structured_db",
+      "title": "Build repository Markdown and workbook",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T17:23:05.658Z",
+      "finishedAt": "2026-05-01T17:23:05.658Z",
+      "summary": "Dry run skipped command execution.",
+      "technical": {
+        "rawLabel": "Build repository Markdown and workbook",
+        "command": "source ingestion/.venv/bin/activate && ingestion/.venv/bin/python test-doc/scripts/build_test_case_repository.py --spec test-doc/test-case-repository.json --workbook-out test_data/TestCases.xlsx --markdown-out test-doc/09-test-case-repository.md",
+        "stdout": "[dry-run] command skipped\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon6lfej_untgzz",
+      "runId": "uiqa_mon6lfe2_sjdb6l",
+      "phase": "reseed_structured_db",
+      "title": "Reload structured test cases into DB",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T17:23:05.659Z",
+      "finishedAt": "2026-05-01T17:23:05.659Z",
+      "summary": "Dry run skipped command execution.",
+      "technical": {
+        "rawLabel": "Reload structured test cases into DB",
+        "command": "source ingestion/.venv/bin/activate && DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python ingestion/scripts/ingest.py --format both",
+        "stdout": "[dry-run] command skipped\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon6lfej_kmt8mz",
+      "runId": "uiqa_mon6lfe2_sjdb6l",
+      "phase": "audit_ingestion",
+      "title": "Run ingestion audit gate",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T17:23:05.659Z",
+      "finishedAt": "2026-05-01T17:23:05.659Z",
+      "summary": "Dry run skipped command execution.",
+      "technical": {
+        "rawLabel": "Run ingestion audit gate",
+        "command": "source ingestion/.venv/bin/activate && DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python ingestion/scripts/audit_test_case_ingestion.py --report '/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/ingestion_audit_20260501172305.md' --json '/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/ingestion_audit_20260501172305.json'",
+        "stdout": "[dry-run] command skipped\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon6lfem_dyxu1y",
+      "runId": "uiqa_mon6lfe2_sjdb6l",
+      "phase": "audit_ingestion",
+      "title": "Ingestion audit gate blocked",
+      "status": "blocked",
+      "createdAt": "2026-05-01T17:23:05.662Z",
+      "finishedAt": "2026-05-01T17:23:05.662Z",
+      "summary": "Finding counts: {\"critical\":1,\"high\":0,\"medium\":0,\"low\":0}."
+    },
+    {
+      "id": "event_mon6lfen_ay7e9y",
+      "runId": "uiqa_mon6lfe2_sjdb6l",
+      "phase": "audit_ingestion",
+      "title": "Workflow stopped",
+      "status": "blocked",
+      "createdAt": "2026-05-01T17:23:05.663Z",
+      "finishedAt": "2026-05-01T17:23:05.663Z",
+      "summary": "Ingestion audit gate blocked execution."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev_mon6lfe8_brwoq6",
+      "createdAt": "2026-05-01T17:23:05.648Z",
+      "kind": "folder",
+      "label": "Active source pack",
+      "path": "test_data/ui-qa/generated/uiqa_mon6lfe2_sjdb6l/source-pack",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_mon6lfed_wloxp2",
+      "createdAt": "2026-05-01T17:23:05.653Z",
+      "kind": "report",
+      "label": "Entity map summary",
+      "path": "test_data/test-results/uiqa_entity_summary_20260501172305.md",
+      "phase": "ingest_sources"
+    },
+    {
+      "id": "ev_mon6lfeg_7u4ndt",
+      "createdAt": "2026-05-01T17:23:05.656Z",
+      "kind": "json",
+      "label": "Generated test case repository",
+      "path": "test_data/ui-qa/generated/uiqa_mon6lfe2_sjdb6l/test-case-repository.generated.json",
+      "phase": "generate_tests"
+    },
+    {
+      "id": "ev_mon6lfeh_iay1vg",
+      "createdAt": "2026-05-01T17:23:05.657Z",
+      "kind": "report",
+      "label": "Generated test confidence audit",
+      "path": "test_data/test-results/generated_test_case_audit_20260501172305.md",
+      "phase": "audit_generated_tests"
+    },
+    {
+      "id": "ev_mon6lfei_7bew6w",
+      "createdAt": "2026-05-01T17:23:05.658Z",
+      "kind": "json",
+      "label": "Generated test confidence audit JSON",
+      "path": "test_data/test-results/generated_test_case_audit_20260501172305.json",
+      "phase": "audit_generated_tests"
+    },
+    {
+      "id": "ev_mon6lfei_we5t54",
+      "createdAt": "2026-05-01T17:23:05.658Z",
+      "kind": "json",
+      "label": "Active test case repository JSON",
+      "path": "test-doc/test-case-repository.json",
+      "phase": "reseed_structured_db"
+    },
+    {
+      "id": "ev_mon6lfej_fh0ly9",
+      "createdAt": "2026-05-01T17:23:05.659Z",
+      "kind": "workbook",
+      "label": "Executable TestCases workbook",
+      "path": "test_data/TestCases.xlsx",
+      "phase": "reseed_structured_db"
+    },
+    {
+      "id": "ev_mon6lfej_7xkphu",
+      "createdAt": "2026-05-01T17:23:05.659Z",
+      "kind": "report",
+      "label": "Rendered test case repository",
+      "path": "test-doc/09-test-case-repository.md",
+      "phase": "reseed_structured_db"
+    },
+    {
+      "id": "ev_mon6lfek_5pnfu6",
+      "createdAt": "2026-05-01T17:23:05.660Z",
+      "kind": "report",
+      "label": "Ingestion audit report",
+      "path": "test_data/test-results/ingestion_audit_20260501172305.md",
+      "phase": "audit_ingestion"
+    },
+    {
+      "id": "ev_mon6lfek_bzyp5x",
+      "createdAt": "2026-05-01T17:23:05.660Z",
+      "kind": "json",
+      "label": "Ingestion audit JSON",
+      "path": "test_data/test-results/ingestion_audit_20260501172305.json",
+      "phase": "audit_ingestion"
+    }
+  ],
+  "checkpoints": [],
+  "messages": [],
+  "blockerCount": 1,
+  "findingCounts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "generatedSpecPath": "test_data/ui-qa/generated/uiqa_mon6lfe2_sjdb6l/test-case-repository.generated.json",
+  "gateStatus": "blocked"
+}

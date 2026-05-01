@@ -1,0 +1,53 @@
+{
+  "id": "uiqa_mon6x9bp_n8s0pg",
+  "scope": "chat",
+  "dryRun": false,
+  "autoApprove": false,
+  "status": "created",
+  "currentPhase": "upload_sources",
+  "createdAt": "2026-05-01T17:32:17.653Z",
+  "updatedAt": "2026-05-01T17:32:18.374Z",
+  "uploads": [],
+  "events": [
+    {
+      "id": "event_mon6x9bt_zqevqf",
+      "runId": "uiqa_mon6x9bp_n8s0pg",
+      "phase": "upload_sources",
+      "title": "Cursor SDK agent",
+      "status": "warning",
+      "createdAt": "2026-05-01T17:32:17.657Z",
+      "finishedAt": "2026-05-01T17:32:18.374Z",
+      "summary": "Cursor SDK unavailable: Error",
+      "technical": {
+        "rawLabel": "cursor:upload_sources",
+        "sdkPrompt": "inspect the sources, generate the test cases, and then execute them",
+        "stderr": "Error"
+      }
+    }
+  ],
+  "evidence": [],
+  "checkpoints": [],
+  "messages": [
+    {
+      "id": "msg_mon6x9bs_a01mnz",
+      "runId": "uiqa_mon6x9bp_n8s0pg",
+      "role": "user",
+      "content": "inspect the sources, generate the test cases, and then execute them",
+      "createdAt": "2026-05-01T17:32:17.656Z"
+    },
+    {
+      "id": "msg_mon6x9vq_yd47p8",
+      "runId": "uiqa_mon6x9bp_n8s0pg",
+      "role": "assistant",
+      "content": "Cursor SDK unavailable: Error",
+      "createdAt": "2026-05-01T17:32:18.374Z"
+    }
+  ],
+  "blockerCount": 0,
+  "findingCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  }
+}

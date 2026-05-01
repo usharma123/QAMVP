@@ -1,0 +1,1124 @@
+{
+  "id": "uiqa_monbkl2e_cnro7v",
+  "scope": "all",
+  "dryRun": false,
+  "autoApprove": true,
+  "status": "ready",
+  "currentPhase": "rag_ready",
+  "createdAt": "2026-05-01T19:42:24.423Z",
+  "updatedAt": "2026-05-01T19:43:20.114Z",
+  "uploads": [
+    {
+      "id": "src_monbkl2r_ti07s0",
+      "runId": "uiqa_monbkl2e_cnro7v",
+      "originalName": "01-business-requirements-document.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_monbkl2e_cnro7v/75ba74032f55_01-business-requirements-document.docx",
+      "documentType": "BRD",
+      "sha256": "75ba74032f5583526c3ce4035eb7f21f024045dda836b8ecafd3bad94c8ee7e9",
+      "size": 35621,
+      "status": "accepted",
+      "createdAt": "2026-05-01T19:42:24.435Z"
+    },
+    {
+      "id": "src_monbkl2s_tgor4m",
+      "runId": "uiqa_monbkl2e_cnro7v",
+      "originalName": "02-functional-requirements-specification.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_monbkl2e_cnro7v/1bf29955d09f_02-functional-requirements-specification.docx",
+      "documentType": "FRS",
+      "sha256": "1bf29955d09ffb4597c4f2391daef5cdd474d9a2b7153ef5efa1715b8336733d",
+      "size": 36715,
+      "status": "accepted",
+      "createdAt": "2026-05-01T19:42:24.436Z"
+    },
+    {
+      "id": "src_monbkl2t_qua4b1",
+      "runId": "uiqa_monbkl2e_cnro7v",
+      "originalName": "03-test-design-specification.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_monbkl2e_cnro7v/bc4a297e88b9_03-test-design-specification.docx",
+      "documentType": "SOURCE_DOC",
+      "sha256": "bc4a297e88b98dc0645d0a1bc1bc8fdd63760485d97f63446e34bc078f79de42",
+      "size": 16590,
+      "status": "accepted",
+      "createdAt": "2026-05-01T19:42:24.437Z"
+    },
+    {
+      "id": "src_monbkl2v_cm87vp",
+      "runId": "uiqa_monbkl2e_cnro7v",
+      "originalName": "04-test-strategy.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_monbkl2e_cnro7v/bc452080a746_04-test-strategy.docx",
+      "documentType": "TEST_STRATEGY",
+      "sha256": "bc452080a74613289d89e8a9866cb9ec99671f2e9f270c301793c0de976e8d2d",
+      "size": 14190,
+      "status": "accepted",
+      "createdAt": "2026-05-01T19:42:24.439Z"
+    },
+    {
+      "id": "src_monbkl2w_hi1kwc",
+      "runId": "uiqa_monbkl2e_cnro7v",
+      "originalName": "05-test-plan.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_monbkl2e_cnro7v/64cc7c5d20b4_05-test-plan.docx",
+      "documentType": "TEST_PLAN",
+      "sha256": "64cc7c5d20b4556484544b1bc46bd60c2cb6e94879c28b05db0677af83ade68a",
+      "size": 13567,
+      "status": "accepted",
+      "createdAt": "2026-05-01T19:42:24.440Z"
+    },
+    {
+      "id": "src_monbkl2x_hzxu11",
+      "runId": "uiqa_monbkl2e_cnro7v",
+      "originalName": "06-requirements-traceability-matrix.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_monbkl2e_cnro7v/bae75844e4bc_06-requirements-traceability-matrix.docx",
+      "documentType": "RTM",
+      "sha256": "bae75844e4bce6f5f4e083a5907b7978915ea77336a42177ea982b304a1b994c",
+      "size": 16106,
+      "status": "accepted",
+      "createdAt": "2026-05-01T19:42:24.441Z"
+    },
+    {
+      "id": "src_monbkl32_p2x4b4",
+      "runId": "uiqa_monbkl2e_cnro7v",
+      "originalName": "07-test-data-environment-specification.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_monbkl2e_cnro7v/dee1179870fd_07-test-data-environment-specification.docx",
+      "documentType": "TEST_DATA",
+      "sha256": "dee1179870fd6bf2b315e1e240bf6f90ef4442aa6483f397380f2e3cb814a989",
+      "size": 13536,
+      "status": "accepted",
+      "createdAt": "2026-05-01T19:42:24.446Z"
+    },
+    {
+      "id": "src_monbkl33_y2d0ho",
+      "runId": "uiqa_monbkl2e_cnro7v",
+      "originalName": "08-quality-risk-defect-governance.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_monbkl2e_cnro7v/c4d411862cc6_08-quality-risk-defect-governance.docx",
+      "documentType": "SOURCE_DOC",
+      "sha256": "c4d411862cc6615ebda78530cacdebd2378ccf25df873fd04545a7c49b15adc4",
+      "size": 13091,
+      "status": "accepted",
+      "createdAt": "2026-05-01T19:42:24.447Z"
+    },
+    {
+      "id": "src_monbkl34_g2916n",
+      "runId": "uiqa_monbkl2e_cnro7v",
+      "originalName": "09-test-case-repository.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_monbkl2e_cnro7v/2b17d95d7da3_09-test-case-repository.docx",
+      "documentType": "TEST_REPOSITORY",
+      "sha256": "2b17d95d7da3e424e205e904671f8b3b5485d4a1fae97a1bbb5f9114bf0d6431",
+      "size": 19269,
+      "status": "accepted",
+      "createdAt": "2026-05-01T19:42:24.448Z"
+    }
+  ],
+  "events": [
+    {
+      "id": "event_monbkl2r_khl2dc",
+      "runId": "uiqa_monbkl2e_cnro7v",
+      "phase": "upload_sources",
+      "title": "Uploaded 01-business-requirements-document.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:42:24.435Z",
+      "finishedAt": "2026-05-01T19:42:24.435Z",
+      "summary": "Classified as BRD.",
+      "technical": {
+        "rawLabel": "upload:01-business-requirements-document.docx",
+        "payload": {
+          "id": "src_monbkl2r_ti07s0",
+          "runId": "uiqa_monbkl2e_cnro7v",
+          "originalName": "01-business-requirements-document.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_monbkl2e_cnro7v/75ba74032f55_01-business-requirements-document.docx",
+          "documentType": "BRD",
+          "sha256": "75ba74032f5583526c3ce4035eb7f21f024045dda836b8ecafd3bad94c8ee7e9",
+          "size": 35621,
+          "status": "accepted",
+          "createdAt": "2026-05-01T19:42:24.435Z"
+        }
+      }
+    },
+    {
+      "id": "event_monbkl2s_c1dthr",
+      "runId": "uiqa_monbkl2e_cnro7v",
+      "phase": "upload_sources",
+      "title": "Uploaded 02-functional-requirements-specification.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:42:24.436Z",
+      "finishedAt": "2026-05-01T19:42:24.436Z",
+      "summary": "Classified as FRS.",
+      "technical": {
+        "rawLabel": "upload:02-functional-requirements-specification.docx",
+        "payload": {
+          "id": "src_monbkl2s_tgor4m",
+          "runId": "uiqa_monbkl2e_cnro7v",
+          "originalName": "02-functional-requirements-specification.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_monbkl2e_cnro7v/1bf29955d09f_02-functional-requirements-specification.docx",
+          "documentType": "FRS",
+          "sha256": "1bf29955d09ffb4597c4f2391daef5cdd474d9a2b7153ef5efa1715b8336733d",
+          "size": 36715,
+          "status": "accepted",
+          "createdAt": "2026-05-01T19:42:24.436Z"
+        }
+      }
+    },
+    {
+      "id": "event_monbkl2u_j20981",
+      "runId": "uiqa_monbkl2e_cnro7v",
+      "phase": "upload_sources",
+      "title": "Uploaded 03-test-design-specification.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:42:24.438Z",
+      "finishedAt": "2026-05-01T19:42:24.438Z",
+      "summary": "Classified as SOURCE_DOC.",
+      "technical": {
+        "rawLabel": "upload:03-test-design-specification.docx",
+        "payload": {
+          "id": "src_monbkl2t_qua4b1",
+          "runId": "uiqa_monbkl2e_cnro7v",
+          "originalName": "03-test-design-specification.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_monbkl2e_cnro7v/bc4a297e88b9_03-test-design-specification.docx",
+          "documentType": "SOURCE_DOC",
+          "sha256": "bc4a297e88b98dc0645d0a1bc1bc8fdd63760485d97f63446e34bc078f79de42",
+          "size": 16590,
+          "status": "accepted",
+          "createdAt": "2026-05-01T19:42:24.437Z"
+        }
+      }
+    },
+    {
+      "id": "event_monbkl2v_qo57u6",
+      "runId": "uiqa_monbkl2e_cnro7v",
+      "phase": "upload_sources",
+      "title": "Uploaded 04-test-strategy.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:42:24.439Z",
+      "finishedAt": "2026-05-01T19:42:24.439Z",
+      "summary": "Classified as TEST_STRATEGY.",
+      "technical": {
+        "rawLabel": "upload:04-test-strategy.docx",
+        "payload": {
+          "id": "src_monbkl2v_cm87vp",
+          "runId": "uiqa_monbkl2e_cnro7v",
+          "originalName": "04-test-strategy.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_monbkl2e_cnro7v/bc452080a746_04-test-strategy.docx",
+          "documentType": "TEST_STRATEGY",
+          "sha256": "bc452080a74613289d89e8a9866cb9ec99671f2e9f270c301793c0de976e8d2d",
+          "size": 14190,
+          "status": "accepted",
+          "createdAt": "2026-05-01T19:42:24.439Z"
+        }
+      }
+    },
+    {
+      "id": "event_monbkl2w_obziiz",
+      "runId": "uiqa_monbkl2e_cnro7v",
+      "phase": "upload_sources",
+      "title": "Uploaded 05-test-plan.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:42:24.440Z",
+      "finishedAt": "2026-05-01T19:42:24.440Z",
+      "summary": "Classified as TEST_PLAN.",
+      "technical": {
+        "rawLabel": "upload:05-test-plan.docx",
+        "payload": {
+          "id": "src_monbkl2w_hi1kwc",
+          "runId": "uiqa_monbkl2e_cnro7v",
+          "originalName": "05-test-plan.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_monbkl2e_cnro7v/64cc7c5d20b4_05-test-plan.docx",
+          "documentType": "TEST_PLAN",
+          "sha256": "64cc7c5d20b4556484544b1bc46bd60c2cb6e94879c28b05db0677af83ade68a",
+          "size": 13567,
+          "status": "accepted",
+          "createdAt": "2026-05-01T19:42:24.440Z"
+        }
+      }
+    },
+    {
+      "id": "event_monbkl2x_c3de41",
+      "runId": "uiqa_monbkl2e_cnro7v",
+      "phase": "upload_sources",
+      "title": "Uploaded 06-requirements-traceability-matrix.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:42:24.441Z",
+      "finishedAt": "2026-05-01T19:42:24.441Z",
+      "summary": "Classified as RTM.",
+      "technical": {
+        "rawLabel": "upload:06-requirements-traceability-matrix.docx",
+        "payload": {
+          "id": "src_monbkl2x_hzxu11",
+          "runId": "uiqa_monbkl2e_cnro7v",
+          "originalName": "06-requirements-traceability-matrix.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_monbkl2e_cnro7v/bae75844e4bc_06-requirements-traceability-matrix.docx",
+          "documentType": "RTM",
+          "sha256": "bae75844e4bce6f5f4e083a5907b7978915ea77336a42177ea982b304a1b994c",
+          "size": 16106,
+          "status": "accepted",
+          "createdAt": "2026-05-01T19:42:24.441Z"
+        }
+      }
+    },
+    {
+      "id": "event_monbkl32_5re1mk",
+      "runId": "uiqa_monbkl2e_cnro7v",
+      "phase": "upload_sources",
+      "title": "Uploaded 07-test-data-environment-specification.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:42:24.446Z",
+      "finishedAt": "2026-05-01T19:42:24.446Z",
+      "summary": "Classified as TEST_DATA.",
+      "technical": {
+        "rawLabel": "upload:07-test-data-environment-specification.docx",
+        "payload": {
+          "id": "src_monbkl32_p2x4b4",
+          "runId": "uiqa_monbkl2e_cnro7v",
+          "originalName": "07-test-data-environment-specification.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_monbkl2e_cnro7v/dee1179870fd_07-test-data-environment-specification.docx",
+          "documentType": "TEST_DATA",
+          "sha256": "dee1179870fd6bf2b315e1e240bf6f90ef4442aa6483f397380f2e3cb814a989",
+          "size": 13536,
+          "status": "accepted",
+          "createdAt": "2026-05-01T19:42:24.446Z"
+        }
+      }
+    },
+    {
+      "id": "event_monbkl33_4hnnp8",
+      "runId": "uiqa_monbkl2e_cnro7v",
+      "phase": "upload_sources",
+      "title": "Uploaded 08-quality-risk-defect-governance.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:42:24.447Z",
+      "finishedAt": "2026-05-01T19:42:24.447Z",
+      "summary": "Classified as SOURCE_DOC.",
+      "technical": {
+        "rawLabel": "upload:08-quality-risk-defect-governance.docx",
+        "payload": {
+          "id": "src_monbkl33_y2d0ho",
+          "runId": "uiqa_monbkl2e_cnro7v",
+          "originalName": "08-quality-risk-defect-governance.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_monbkl2e_cnro7v/c4d411862cc6_08-quality-risk-defect-governance.docx",
+          "documentType": "SOURCE_DOC",
+          "sha256": "c4d411862cc6615ebda78530cacdebd2378ccf25df873fd04545a7c49b15adc4",
+          "size": 13091,
+          "status": "accepted",
+          "createdAt": "2026-05-01T19:42:24.447Z"
+        }
+      }
+    },
+    {
+      "id": "event_monbkl34_jfp4qm",
+      "runId": "uiqa_monbkl2e_cnro7v",
+      "phase": "upload_sources",
+      "title": "Uploaded 09-test-case-repository.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:42:24.448Z",
+      "finishedAt": "2026-05-01T19:42:24.448Z",
+      "summary": "Classified as TEST_REPOSITORY.",
+      "technical": {
+        "rawLabel": "upload:09-test-case-repository.docx",
+        "payload": {
+          "id": "src_monbkl34_g2916n",
+          "runId": "uiqa_monbkl2e_cnro7v",
+          "originalName": "09-test-case-repository.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_monbkl2e_cnro7v/2b17d95d7da3_09-test-case-repository.docx",
+          "documentType": "TEST_REPOSITORY",
+          "sha256": "2b17d95d7da3e424e205e904671f8b3b5485d4a1fae97a1bbb5f9114bf0d6431",
+          "size": 19269,
+          "status": "accepted",
+          "createdAt": "2026-05-01T19:42:24.448Z"
+        }
+      }
+    },
+    {
+      "id": "event_monbkl3m_qmixte",
+      "runId": "uiqa_monbkl2e_cnro7v",
+      "phase": "upload_sources",
+      "title": "Active source pack ready",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:42:24.466Z",
+      "finishedAt": "2026-05-01T19:42:24.470Z",
+      "summary": "9 ingestible source document(s) ready."
+    },
+    {
+      "id": "event_monbkl3r_j6j9dn",
+      "runId": "uiqa_monbkl2e_cnro7v",
+      "phase": "ingest_sources",
+      "title": "Ensure ingestion virtualenv",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:42:24.471Z",
+      "finishedAt": "2026-05-01T19:42:24.522Z",
+      "technical": {
+        "rawLabel": "Ensure ingestion virtualenv",
+        "command": "/bin/test -d ingestion/.venv || /usr/bin/python3 -m venv ingestion/.venv",
+        "stdout": "",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_monbkl57_upu38e",
+      "runId": "uiqa_monbkl2e_cnro7v",
+      "phase": "ingest_sources",
+      "title": "Install ingestion dependencies",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:42:24.523Z",
+      "finishedAt": "2026-05-01T19:42:25.934Z",
+      "technical": {
+        "rawLabel": "Install ingestion dependencies",
+        "command": "source ingestion/.venv/bin/activate && ingestion/.venv/bin/pip install -r ingestion/requirements.txt -q",
+        "stdout": "",
+        "stderr": "\n[notice] A new release of pip is available: 26.0.1 -> 26.1\n[notice] To update, run: pip install --upgrade pip\n",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_monbkm8f_aa7dg6",
+      "runId": "uiqa_monbkl2e_cnro7v",
+      "phase": "ingest_sources",
+      "title": "Inspect Docker pgvector service",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:42:25.935Z",
+      "finishedAt": "2026-05-01T19:42:26.570Z",
+      "technical": {
+        "rawLabel": "Inspect Docker pgvector service",
+        "command": "set -euo pipefail\nDOCKER_BIN=\"$(command -v docker || true)\"\nif [ -z \"$DOCKER_BIN\" ]; then\n  for candidate in /opt/homebrew/bin/docker /usr/local/bin/docker /Applications/Docker.app/Contents/Resources/bin/docker; do\n    if [ -x \"$candidate\" ]; then\n      DOCKER_BIN=\"$candidate\"\n      break\n    fi\n  done\nfi\nif [ -z \"$DOCKER_BIN\" ]; then\n  echo \"Docker CLI not found. Install Docker Desktop or add docker to PATH.\" >&2\n  exit 127\nfi\nif ! \"$DOCKER_BIN\" info >/dev/null 2>&1; then\n  echo \"Docker CLI was found at $DOCKER_BIN, but the Docker daemon is not reachable.\" >&2\n  echo \"Open Docker Desktop and wait for the engine to finish starting.\" >&2\n  exit 1\nfi\nCOMPOSE=(\"$DOCKER_BIN\" compose -f ingestion/docker-compose.yml)\n\"$DOCKER_BIN\" version\n\"${COMPOSE[@]}\" ps",
+        "stdout": "Client: Docker Engine - Community\n Version:           28.1.1\n API version:       1.49\n Go version:        go1.24.2\n Git commit:        4eba377327\n Built:             Fri Apr 18 09:44:47 2025\n OS/Arch:           darwin/arm64\n Context:           desktop-linux\n\nServer: Docker Desktop 4.55.0 (213807)\n Engine:\n  Version:          29.1.3\n  API version:      1.52 (minimum version 1.44)\n  Go version:       go1.25.5\n  Git commit:       fbf3ed2\n  Built:            Fri Dec 12 14:50:40 2025\n  OS/Arch:          linux/arm64\n  Experimental:     false\n containerd:\n  Version:          v2.2.0\n  GitCommit:        1c4457e00facac03ce1d75f7b6777a7a851e5c41\n runc:\n  Version:          1.3.4\n  GitCommit:        v1.3.4-0-gd6d73eb8\n docker-init:\n  Version:          0.19.0\n  GitCommit:        de40ad0\nNAME                 IMAGE                    COMMAND                  SERVICE    CREATED      STATUS                 PORTS\nqamvp-ingestion-pg   pgvector/pgvector:pg16   \"docker-entrypoint.s…\"   postgres   9 days ago   Up 6 hours (healthy)   0.0.0.0:5433->5432/tcp, [::]:5433->5432/tcp\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_monbkmq3_e4odvu",
+      "runId": "uiqa_monbkl2e_cnro7v",
+      "phase": "ingest_sources",
+      "title": "Start local pgvector DB",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:42:26.571Z",
+      "finishedAt": "2026-05-01T19:42:26.793Z",
+      "technical": {
+        "rawLabel": "Start local pgvector DB",
+        "command": "set -euo pipefail\nDOCKER_BIN=\"$(command -v docker || true)\"\nif [ -z \"$DOCKER_BIN\" ]; then\n  for candidate in /opt/homebrew/bin/docker /usr/local/bin/docker /Applications/Docker.app/Contents/Resources/bin/docker; do\n    if [ -x \"$candidate\" ]; then\n      DOCKER_BIN=\"$candidate\"\n      break\n    fi\n  done\nfi\nif [ -z \"$DOCKER_BIN\" ]; then\n  echo \"Docker CLI not found. Install Docker Desktop or add docker to PATH.\" >&2\n  exit 127\nfi\nif ! \"$DOCKER_BIN\" info >/dev/null 2>&1; then\n  echo \"Docker CLI was found at $DOCKER_BIN, but the Docker daemon is not reachable.\" >&2\n  echo \"Open Docker Desktop and wait for the engine to finish starting.\" >&2\n  exit 1\nfi\nCOMPOSE=(\"$DOCKER_BIN\" compose -f ingestion/docker-compose.yml)\n\"${COMPOSE[@]}\" up -d postgres",
+        "stdout": "",
+        "stderr": " Container qamvp-ingestion-pg  Running\n",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_monbkmw9_npbdm6",
+      "runId": "uiqa_monbkl2e_cnro7v",
+      "phase": "ingest_sources",
+      "title": "Wait for pgvector DB readiness",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:42:26.794Z",
+      "finishedAt": "2026-05-01T19:42:27.022Z",
+      "technical": {
+        "rawLabel": "Wait for pgvector DB readiness",
+        "command": "set -euo pipefail\nDOCKER_BIN=\"$(command -v docker || true)\"\nif [ -z \"$DOCKER_BIN\" ]; then\n  for candidate in /opt/homebrew/bin/docker /usr/local/bin/docker /Applications/Docker.app/Contents/Resources/bin/docker; do\n    if [ -x \"$candidate\" ]; then\n      DOCKER_BIN=\"$candidate\"\n      break\n    fi\n  done\nfi\nif [ -z \"$DOCKER_BIN\" ]; then\n  echo \"Docker CLI not found. Install Docker Desktop or add docker to PATH.\" >&2\n  exit 127\nfi\nif ! \"$DOCKER_BIN\" info >/dev/null 2>&1; then\n  echo \"Docker CLI was found at $DOCKER_BIN, but the Docker daemon is not reachable.\" >&2\n  echo \"Open Docker Desktop and wait for the engine to finish starting.\" >&2\n  exit 1\nfi\nCOMPOSE=(\"$DOCKER_BIN\" compose -f ingestion/docker-compose.yml)\nfor attempt in {1..45}; do\n  if \"${COMPOSE[@]}\" exec -T postgres pg_isready -U ingestion -d ingestion >/dev/null 2>&1; then\n    echo \"Postgres is ready after $attempt attempt(s).\"\n    exit 0\n  fi\n  echo \"Waiting for Postgres/pgvector readiness ($attempt/45)...\"\n  sleep 2\ndone\necho \"Postgres did not become ready within 90 seconds.\" >&2\n\"${COMPOSE[@]}\" ps >&2 || true\n\"${COMPOSE[@]}\" logs --tail=120 postgres >&2 || true\nexit 1",
+        "stdout": "Postgres is ready after 1 attempt(s).\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_monbkn2n_y9zsi4",
+      "runId": "uiqa_monbkl2e_cnro7v",
+      "phase": "ingest_sources",
+      "title": "Apply ingestion migrations",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:42:27.023Z",
+      "finishedAt": "2026-05-01T19:42:27.506Z",
+      "technical": {
+        "rawLabel": "Apply ingestion migrations",
+        "command": "set -euo pipefail\nDOCKER_BIN=\"$(command -v docker || true)\"\nif [ -z \"$DOCKER_BIN\" ]; then\n  for candidate in /opt/homebrew/bin/docker /usr/local/bin/docker /Applications/Docker.app/Contents/Resources/bin/docker; do\n    if [ -x \"$candidate\" ]; then\n      DOCKER_BIN=\"$candidate\"\n      break\n    fi\n  done\nfi\nif [ -z \"$DOCKER_BIN\" ]; then\n  echo \"Docker CLI not found. Install Docker Desktop or add docker to PATH.\" >&2\n  exit 127\nfi\nif ! \"$DOCKER_BIN\" info >/dev/null 2>&1; then\n  echo \"Docker CLI was found at $DOCKER_BIN, but the Docker daemon is not reachable.\" >&2\n  echo \"Open Docker Desktop and wait for the engine to finish starting.\" >&2\n  exit 1\nfi\nCOMPOSE=(\"$DOCKER_BIN\" compose -f ingestion/docker-compose.yml)\nfor migration in ingestion/sql/*.sql; do\n  echo \"Applying $migration\"\n  \"${COMPOSE[@]}\" exec -T postgres psql -v ON_ERROR_STOP=1 -U ingestion -d ingestion < \"$migration\"\ndone\necho \"Migrations applied.\"",
+        "stdout": "Applying ingestion/sql/001_extensions.sql\nCREATE EXTENSION\nApplying ingestion/sql/002_schema.sql\nCREATE TABLE\nCREATE TABLE\nCREATE INDEX\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nCREATE INDEX\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nCREATE INDEX\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nCREATE INDEX\nCREATE INDEX\nApplying ingestion/sql/003_test_case_inventory.sql\nDO\nALTER TABLE\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nCREATE TABLE\nCREATE INDEX\nCREATE INDEX\nMigrations applied.\n",
+        "stderr": "NOTICE:  extension \"vector\" already exists, skipping\nNOTICE:  relation \"documents\" already exists, skipping\nNOTICE:  relation \"chunks\" already exists, skipping\nNOTICE:  relation \"idx_chunks_document\" already exists, skipping\nNOTICE:  relation \"entities\" already exists, skipping\nNOTICE:  relation \"idx_entities_document\" already exists, skipping\nNOTICE:  relation \"idx_entities_type\" already exists, skipping\nNOTICE:  relation \"idx_entities_canonical\" already exists, skipping\nNOTICE:  relation \"relationships\" already exists, skipping\nNOTICE:  relation \"idx_rel_source_chunk\" already exists, skipping\nNOTICE:  relation \"idx_rel_source_doc\" already exists, skipping\nNOTICE:  relation \"idx_rel_type\" already exists, skipping\nNOTICE:  relation \"test_cases\" already exists, skipping\nNOTICE:  relation \"idx_test_cases_requirement_ids\" already exists, skipping\nNOTICE:  relation \"idx_test_cases_suite\" already exists, skipping\nNOTICE:  relation \"test_case_steps\" already exists, skipping\nNOTICE:  relation \"idx_test_case_steps_requirement\" already exists, skipping\nNOTICE:  relation \"idx_test_case_steps_case\" already exists, skipping\nNOTICE:  relation \"chunks_embedding_hnsw\" already exists, skipping\nNOTICE:  relation \"chunks_content_fts\" already exists, skipping\nNOTICE:  relation \"test_cases\" already exists, skipping\nNOTICE:  relation \"idx_test_cases_requirement_ids\" already exists, skipping\nNOTICE:  relation \"idx_test_cases_suite\" already exists, skipping\nNOTICE:  relation \"test_case_steps\" already exists, skipping\nNOTICE:  relation \"idx_test_case_steps_requirement\" already exists, skipping\nNOTICE:  relation \"idx_test_case_steps_case\" already exists, skipping\n",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_monbkng3_szu6vy",
+      "runId": "uiqa_monbkl2e_cnro7v",
+      "phase": "ingest_sources",
+      "title": "Verify pgvector DB schema",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:42:27.507Z",
+      "finishedAt": "2026-05-01T19:42:27.859Z",
+      "technical": {
+        "rawLabel": "Verify pgvector DB schema",
+        "command": "set -euo pipefail\nDOCKER_BIN=\"$(command -v docker || true)\"\nif [ -z \"$DOCKER_BIN\" ]; then\n  for candidate in /opt/homebrew/bin/docker /usr/local/bin/docker /Applications/Docker.app/Contents/Resources/bin/docker; do\n    if [ -x \"$candidate\" ]; then\n      DOCKER_BIN=\"$candidate\"\n      break\n    fi\n  done\nfi\nif [ -z \"$DOCKER_BIN\" ]; then\n  echo \"Docker CLI not found. Install Docker Desktop or add docker to PATH.\" >&2\n  exit 127\nfi\nif ! \"$DOCKER_BIN\" info >/dev/null 2>&1; then\n  echo \"Docker CLI was found at $DOCKER_BIN, but the Docker daemon is not reachable.\" >&2\n  echo \"Open Docker Desktop and wait for the engine to finish starting.\" >&2\n  exit 1\nfi\nCOMPOSE=(\"$DOCKER_BIN\" compose -f ingestion/docker-compose.yml)\n\"${COMPOSE[@]}\" exec -T postgres psql -U ingestion -d ingestion -c \"select extname from pg_extension where extname = 'vector';\"\n\"${COMPOSE[@]}\" exec -T postgres psql -U ingestion -d ingestion -c \"select table_name from information_schema.tables where table_schema = 'public' order by table_name;\"",
+        "stdout": " extname \n---------\n vector\n(1 row)\n\n   table_name    \n-----------------\n chunks\n documents\n entities\n relationships\n test_case_steps\n test_cases\n(6 rows)\n\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_monbknpw_ohkrgt",
+      "runId": "uiqa_monbkl2e_cnro7v",
+      "phase": "ingest_sources",
+      "title": "Embed source documents into pgvector",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:42:27.860Z",
+      "finishedAt": "2026-05-01T19:42:39.668Z",
+      "technical": {
+        "rawLabel": "Embed source documents into pgvector",
+        "command": "source ingestion/.venv/bin/activate && DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python ingestion/scripts/ingest.py --format both --test-doc '/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/ui-qa/generated/uiqa_monbkl2e_cnro7v/source-pack'",
+        "stdout": "  ingested source-pack/01-business-requirements-document.docx (docx): 61 chunks\n  ingested source-pack/02-functional-requirements-specification.docx (docx): 114 chunks\n  ingested source-pack/03-test-design-specification.docx (docx): 26 chunks\n  ingested source-pack/04-test-strategy.docx (docx): 12 chunks\n  ingested source-pack/05-test-plan.docx (docx): 10 chunks\n  ingested source-pack/06-requirements-traceability-matrix.docx (docx): 10 chunks\n  ingested source-pack/07-test-data-environment-specification.docx (docx): 14 chunks\n  ingested source-pack/08-quality-risk-defect-governance.docx (docx): 12 chunks\n  ingested source-pack/09-test-case-repository.docx (docx): 18 chunks\n  ingested test_data/TestCases.xlsx (xlsx): 8 test cases, 24 steps\nDone.\n",
+        "stderr": "Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n\rLoading weights:   0%|          | 0/103 [00:00<?, ?it/s]\rLoading weights: 100%|██████████| 103/103 [00:00<00:00, 8313.22it/s]\n\u001b[1mBertModel LOAD REPORT\u001b[0m from: sentence-transformers/all-MiniLM-L6-v2\nKey                     | Status     |  | \n------------------------+------------+--+-\nembeddings.position_ids | UNEXPECTED |  | \n\nNotes:\n- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n\rBatches:   0%|          | 0/2 [00:00<?, ?it/s]\rBatches:  50%|█████     | 1/2 [00:00<00:00,  4.47it/s]\rBatches: 100%|██████████| 2/2 [00:00<00:00,  7.41it/s]\n\rBatches:   0%|          | 0/4 [00:00<?, ?it/s]\rBatches:  50%|█████     | 2/4 [00:00<00:00, 17.46it/s]\rBatches: 100%|██████████| 4/4 [00:00<00:00, 22.35it/s]\n\rBatches:   0%|          | 0/1 [00:00<?, ?it/s]\rBatches: 100%|██████████| 1/1 [00:00<00:00, 20.87it/s]\n\rBatches:   0%|          | 0/1 [00:00<?, ?it/s]\rBatches: 100%|██████████| 1/1 [00:00<00:00, 22.25it/s]\n",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_monbkwtx_9y0m71",
+      "runId": "uiqa_monbkl2e_cnro7v",
+      "phase": "ingest_sources",
+      "title": "Query ingestion knowledge graph",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:42:39.669Z",
+      "finishedAt": "2026-05-01T19:42:39.871Z",
+      "technical": {
+        "rawLabel": "Query ingestion knowledge graph",
+        "command": "source ingestion/.venv/bin/activate && DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport os, json, psycopg\nout = {\"documents\": [], \"entities\": [], \"relationships\": [], \"rel_samples\": []}\nwith psycopg.connect(os.environ['DATABASE_URL']) as conn, conn.cursor() as cur:\n    cur.execute(\"\"\"\n      select d.id,\n             coalesce(d.title, d.path) as label,\n             coalesce(d.kind, d.source_format, 'doc') as kind,\n             (select count(*) from chunks c where c.document_id = d.id) as chunks,\n             (select count(*) from entities e where e.document_id = d.id) as entities,\n             (select count(*) from relationships r where r.source_document_id = d.id) as rels\n      from documents d\n      order by d.created_at desc nulls last, d.id desc\n      limit 30\n    \"\"\")\n    for row in cur.fetchall():\n        out[\"documents\"].append({\n            \"id\": int(row[0]),\n            \"label\": row[1] or \"\",\n            \"kind\": (row[2] or \"doc\").upper(),\n            \"chunks\": int(row[3] or 0),\n            \"entities\": int(row[4] or 0),\n            \"rels\": int(row[5] or 0),\n        })\n    cur.execute(\"select entity_type, count(*) from entities group by entity_type order by count(*) desc, entity_type\")\n    out[\"entities\"] = [{\"type\": t, \"count\": int(c)} for t, c in cur.fetchall()]\n    cur.execute(\"select rel_type, count(*) from relationships group by rel_type order by count(*) desc, rel_type limit 12\")\n    out[\"relationships\"] = [{\"type\": t, \"count\": int(c)} for t, c in cur.fetchall()]\n    cur.execute(\"\"\"\n      select r.rel_type,\n             coalesce(sd.title, sd.path, '') as source_label,\n             coalesce(nullif(r.target_path, ''), nullif(r.target_anchor, ''), '') as target_label\n      from relationships r\n      left join documents sd on sd.id = r.source_document_id\n      order by r.id desc\n      limit 8\n    \"\"\")\n    out[\"rel_samples\"] = [{\"type\": t, \"from\": s or \"\", \"to\": tg or \"\"} for t, s, tg in cur.fetchall()]\nprint(json.dumps(out))\nPY",
+        "stdout": "{\"documents\": [{\"id\": 20, \"label\": \"TestCases\", \"kind\": \"TEST_CASE_REPOSITORY\", \"chunks\": 8, \"entities\": 9, \"rels\": 0}, {\"id\": 19, \"label\": \"09-test-case-repository\", \"kind\": \"TEST_CASE_REPOSITORY\", \"chunks\": 18, \"entities\": 1, \"rels\": 0}, {\"id\": 18, \"label\": \"08-quality-risk-defect-governance\", \"kind\": \"GOVERNANCE\", \"chunks\": 12, \"entities\": 0, \"rels\": 4}, {\"id\": 17, \"label\": \"07-test-data-environment-specification\", \"kind\": \"TEST_DATA\", \"chunks\": 14, \"entities\": 1, \"rels\": 3}, {\"id\": 16, \"label\": \"06-requirements-traceability-matrix\", \"kind\": \"RTM\", \"chunks\": 10, \"entities\": 18, \"rels\": 5}, {\"id\": 15, \"label\": \"05-test-plan\", \"kind\": \"PLAN\", \"chunks\": 10, \"entities\": 0, \"rels\": 6}, {\"id\": 14, \"label\": \"04-test-strategy\", \"kind\": \"STRATEGY\", \"chunks\": 12, \"entities\": 1, \"rels\": 8}, {\"id\": 13, \"label\": \"03-test-design-specification\", \"kind\": \"TDS\", \"chunks\": 26, \"entities\": 19, \"rels\": 10}, {\"id\": 12, \"label\": \"02-functional-requirements-specification\", \"kind\": \"FRS\", \"chunks\": 114, \"entities\": 127, \"rels\": 6}, {\"id\": 11, \"label\": \"01-business-requirements-document\", \"kind\": \"BRD\", \"chunks\": 61, \"entities\": 69, \"rels\": 8}], \"entities\": [{\"type\": \"BR\", \"count\": 126}, {\"type\": \"REQ\", \"count\": 87}, {\"type\": \"TC\", \"count\": 18}, {\"type\": \"SECTION\", \"count\": 8}, {\"type\": \"TKT\", \"count\": 6}], \"relationships\": [{\"type\": \"docx_hyperlink\", \"count\": 50}], \"rel_samples\": [{\"type\": \"docx_hyperlink\", \"from\": \"08-quality-risk-defect-governance\", \"to\": \"source-pack/SDLC-Test-Tracker.xlsx\"}, {\"type\": \"docx_hyperlink\", \"from\": \"08-quality-risk-defect-governance\", \"to\": \"source-pack/06-requirements-traceability-matrix.md\"}, {\"type\": \"docx_hyperlink\", \"from\": \"08-quality-risk-defect-governance\", \"to\": \"source-pack/05-test-plan.md\"}, {\"type\": \"docx_hyperlink\", \"from\": \"08-quality-risk-defect-governance\", \"to\": \"source-pack/04-test-strategy.md\"}, {\"type\": \"docx_hyperlink\", \"from\": \"07-test-data-environment-specification\", \"to\": \"source-pack/README.md\"}, {\"type\": \"docx_hyperlink\", \"from\": \"07-test-data-environment-specification\", \"to\": \"source-pack/06-requirements-traceability-matrix.md\"}, {\"type\": \"docx_hyperlink\", \"from\": \"07-test-data-environment-specification\", \"to\": \"source-pack/02-functional-requirements-specification.md\"}, {\"type\": \"docx_hyperlink\", \"from\": \"06-requirements-traceability-matrix\", \"to\": \"source-pack/09-test-case-repository.md\"}]}\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_monbkwzk_fwzqe0",
+      "runId": "uiqa_monbkl2e_cnro7v",
+      "phase": "ingest_sources",
+      "title": "Map ingested documents",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:42:39.872Z",
+      "finishedAt": "2026-05-01T19:42:40.053Z",
+      "summary": "Indexed 10 documents.",
+      "technical": {
+        "rawLabel": "ingest:documents",
+        "payload": {
+          "kind": "ingestion-section",
+          "section": "documents",
+          "documents": [
+            {
+              "id": 20,
+              "label": "TestCases",
+              "kind": "TEST_CASE_REPOSITORY",
+              "chunks": 8,
+              "entities": 9,
+              "rels": 0
+            },
+            {
+              "id": 19,
+              "label": "09-test-case-repository",
+              "kind": "TEST_CASE_REPOSITORY",
+              "chunks": 18,
+              "entities": 1,
+              "rels": 0
+            },
+            {
+              "id": 18,
+              "label": "08-quality-risk-defect-governance",
+              "kind": "GOVERNANCE",
+              "chunks": 12,
+              "entities": 0,
+              "rels": 4
+            },
+            {
+              "id": 17,
+              "label": "07-test-data-environment-specification",
+              "kind": "TEST_DATA",
+              "chunks": 14,
+              "entities": 1,
+              "rels": 3
+            },
+            {
+              "id": 16,
+              "label": "06-requirements-traceability-matrix",
+              "kind": "RTM",
+              "chunks": 10,
+              "entities": 18,
+              "rels": 5
+            },
+            {
+              "id": 15,
+              "label": "05-test-plan",
+              "kind": "PLAN",
+              "chunks": 10,
+              "entities": 0,
+              "rels": 6
+            },
+            {
+              "id": 14,
+              "label": "04-test-strategy",
+              "kind": "STRATEGY",
+              "chunks": 12,
+              "entities": 1,
+              "rels": 8
+            },
+            {
+              "id": 13,
+              "label": "03-test-design-specification",
+              "kind": "TDS",
+              "chunks": 26,
+              "entities": 19,
+              "rels": 10
+            },
+            {
+              "id": 12,
+              "label": "02-functional-requirements-specification",
+              "kind": "FRS",
+              "chunks": 114,
+              "entities": 127,
+              "rels": 6
+            },
+            {
+              "id": 11,
+              "label": "01-business-requirements-document",
+              "kind": "BRD",
+              "chunks": 61,
+              "entities": 69,
+              "rels": 8
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "event_monbkx4m_0uu3rg",
+      "runId": "uiqa_monbkl2e_cnro7v",
+      "phase": "ingest_sources",
+      "title": "Build entity map",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:42:40.054Z",
+      "finishedAt": "2026-05-01T19:42:40.235Z",
+      "summary": "245 entities across 5 types.",
+      "technical": {
+        "rawLabel": "ingest:entities",
+        "payload": {
+          "kind": "ingestion-section",
+          "section": "entities",
+          "entities": [
+            {
+              "type": "BR",
+              "count": 126
+            },
+            {
+              "type": "REQ",
+              "count": 87
+            },
+            {
+              "type": "TC",
+              "count": 18
+            },
+            {
+              "type": "SECTION",
+              "count": 8
+            },
+            {
+              "type": "TKT",
+              "count": 6
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "event_monbkx9p_fcuqdd",
+      "runId": "uiqa_monbkl2e_cnro7v",
+      "phase": "ingest_sources",
+      "title": "Trace relationships",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:42:40.237Z",
+      "finishedAt": "2026-05-01T19:42:40.419Z",
+      "summary": "50 relationships across 1 type.",
+      "technical": {
+        "rawLabel": "ingest:relationships",
+        "payload": {
+          "kind": "ingestion-section",
+          "section": "relationships",
+          "relationships": [
+            {
+              "type": "docx_hyperlink",
+              "count": 50
+            }
+          ],
+          "samples": [
+            {
+              "type": "docx_hyperlink",
+              "from": "08-quality-risk-defect-governance",
+              "to": "source-pack/SDLC-Test-Tracker.xlsx"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "08-quality-risk-defect-governance",
+              "to": "source-pack/06-requirements-traceability-matrix.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "08-quality-risk-defect-governance",
+              "to": "source-pack/05-test-plan.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "08-quality-risk-defect-governance",
+              "to": "source-pack/04-test-strategy.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "07-test-data-environment-specification",
+              "to": "source-pack/README.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "07-test-data-environment-specification",
+              "to": "source-pack/06-requirements-traceability-matrix.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "07-test-data-environment-specification",
+              "to": "source-pack/02-functional-requirements-specification.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "06-requirements-traceability-matrix",
+              "to": "source-pack/09-test-case-repository.md"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "event_monbkxi5_u4t812",
+      "runId": "uiqa_monbkl2e_cnro7v",
+      "phase": "ingest_sources",
+      "title": "Ingestion knowledge map",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:42:40.541Z",
+      "finishedAt": "2026-05-01T19:42:40.541Z",
+      "summary": "10 documents · 245 entities · 50 relationships.",
+      "technical": {
+        "rawLabel": "ingest:map",
+        "payload": {
+          "kind": "ingestion-map",
+          "documents": [
+            {
+              "id": 20,
+              "label": "TestCases",
+              "kind": "TEST_CASE_REPOSITORY",
+              "chunks": 8,
+              "entities": 9,
+              "rels": 0
+            },
+            {
+              "id": 19,
+              "label": "09-test-case-repository",
+              "kind": "TEST_CASE_REPOSITORY",
+              "chunks": 18,
+              "entities": 1,
+              "rels": 0
+            },
+            {
+              "id": 18,
+              "label": "08-quality-risk-defect-governance",
+              "kind": "GOVERNANCE",
+              "chunks": 12,
+              "entities": 0,
+              "rels": 4
+            },
+            {
+              "id": 17,
+              "label": "07-test-data-environment-specification",
+              "kind": "TEST_DATA",
+              "chunks": 14,
+              "entities": 1,
+              "rels": 3
+            },
+            {
+              "id": 16,
+              "label": "06-requirements-traceability-matrix",
+              "kind": "RTM",
+              "chunks": 10,
+              "entities": 18,
+              "rels": 5
+            },
+            {
+              "id": 15,
+              "label": "05-test-plan",
+              "kind": "PLAN",
+              "chunks": 10,
+              "entities": 0,
+              "rels": 6
+            },
+            {
+              "id": 14,
+              "label": "04-test-strategy",
+              "kind": "STRATEGY",
+              "chunks": 12,
+              "entities": 1,
+              "rels": 8
+            },
+            {
+              "id": 13,
+              "label": "03-test-design-specification",
+              "kind": "TDS",
+              "chunks": 26,
+              "entities": 19,
+              "rels": 10
+            },
+            {
+              "id": 12,
+              "label": "02-functional-requirements-specification",
+              "kind": "FRS",
+              "chunks": 114,
+              "entities": 127,
+              "rels": 6
+            },
+            {
+              "id": 11,
+              "label": "01-business-requirements-document",
+              "kind": "BRD",
+              "chunks": 61,
+              "entities": 69,
+              "rels": 8
+            }
+          ],
+          "entities": [
+            {
+              "type": "BR",
+              "count": 126
+            },
+            {
+              "type": "REQ",
+              "count": 87
+            },
+            {
+              "type": "TC",
+              "count": 18
+            },
+            {
+              "type": "SECTION",
+              "count": 8
+            },
+            {
+              "type": "TKT",
+              "count": 6
+            }
+          ],
+          "relationships": [
+            {
+              "type": "docx_hyperlink",
+              "count": 50
+            }
+          ],
+          "rel_samples": [
+            {
+              "type": "docx_hyperlink",
+              "from": "08-quality-risk-defect-governance",
+              "to": "source-pack/SDLC-Test-Tracker.xlsx"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "08-quality-risk-defect-governance",
+              "to": "source-pack/06-requirements-traceability-matrix.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "08-quality-risk-defect-governance",
+              "to": "source-pack/05-test-plan.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "08-quality-risk-defect-governance",
+              "to": "source-pack/04-test-strategy.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "07-test-data-environment-specification",
+              "to": "source-pack/README.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "07-test-data-environment-specification",
+              "to": "source-pack/06-requirements-traceability-matrix.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "07-test-data-environment-specification",
+              "to": "source-pack/02-functional-requirements-specification.md"
+            },
+            {
+              "type": "docx_hyperlink",
+              "from": "06-requirements-traceability-matrix",
+              "to": "source-pack/09-test-case-repository.md"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "event_monbkxi8_nzrbv9",
+      "runId": "uiqa_monbkl2e_cnro7v",
+      "phase": "ingest_sources",
+      "title": "Summarize entity map",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:42:40.544Z",
+      "finishedAt": "2026-05-01T19:42:40.718Z",
+      "technical": {
+        "rawLabel": "Summarize entity map",
+        "command": "source ingestion/.venv/bin/activate && DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport os, psycopg\nwith psycopg.connect(os.environ['DATABASE_URL']) as conn, conn.cursor() as cur:\n    cur.execute(\"select entity_type, count(*) from entities group by entity_type order by entity_type\")\n    rows = cur.fetchall()\nprint('# Entity Map Summary')\nprint()\nprint('| Entity Type | Count |')\nprint('|---|---:|')\nfor t, c in rows:\n    print(f'| {t} | {c} |')\nPY",
+        "stdout": "# Entity Map Summary\n\n| Entity Type | Count |\n|---|---:|\n| BR | 126 |\n| REQ | 87 |\n| SECTION | 8 |\n| TC | 18 |\n| TKT | 6 |\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_monbkxn3_mdoc71",
+      "runId": "uiqa_monbkl2e_cnro7v",
+      "phase": "rag_ready",
+      "title": "Document QA knowledge base ready",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:42:40.719Z",
+      "finishedAt": "2026-05-01T19:42:40.719Z",
+      "summary": "Documents are ingested and ready for grounded Q&A. Ask questions about the source pack or request TestCases.xlsx generation."
+    },
+    {
+      "id": "event_monblbs2_vnhfg9",
+      "runId": "uiqa_monbkl2e_cnro7v",
+      "phase": "rag_ready",
+      "title": "Retrieve KB context",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:42:59.042Z",
+      "finishedAt": "2026-05-01T19:42:59.230Z",
+      "technical": {
+        "rawLabel": "Retrieve KB context",
+        "command": "source ingestion/.venv/bin/activate && UI_QA_QUESTION='what is test case 1 ' DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport json, os, psycopg\nquestion = os.environ.get(\"UI_QA_QUESTION\", \"\").strip()\nout = []\nwith psycopg.connect(os.environ[\"DATABASE_URL\"]) as conn, conn.cursor() as cur:\n    cur.execute(\"\"\"\n      with query as (\n        select websearch_to_tsquery('english', %s) as q\n      )\n      select c.id,\n             coalesce(d.title, d.path, '') as document,\n             d.path,\n             c.heading_path,\n             c.ordinal,\n             left(regexp_replace(c.content, '\\s+', ' ', 'g'), 1200) as content,\n             ts_rank_cd(to_tsvector('english', coalesce(c.content, '')), query.q) as rank\n      from chunks c\n      join documents d on d.id = c.document_id\n      cross join query\n      where query.q @@ to_tsvector('english', coalesce(c.content, ''))\n      order by rank desc, d.created_at desc nulls last, c.ordinal asc\n      limit 8\n    \"\"\", (question,))\n    rows = cur.fetchall()\n    if not rows:\n        cur.execute(\"\"\"\n          select c.id,\n                 coalesce(d.title, d.path, '') as document,\n                 d.path,\n                 c.heading_path,\n                 c.ordinal,\n                 left(regexp_replace(c.content, '\\s+', ' ', 'g'), 1200) as content,\n                 0.0 as rank\n          from chunks c\n          join documents d on d.id = c.document_id\n          order by d.created_at desc nulls last, c.ordinal asc\n          limit 8\n        \"\"\")\n        rows = cur.fetchall()\n    for row in rows:\n        out.append({\n          \"id\": f\"chunk-{row[0]}\",\n          \"document\": row[1] or \"\",\n          \"path\": row[2] or \"\",\n          \"heading\": row[3] or \"\",\n          \"ordinal\": int(row[4] or 0),\n          \"content\": row[5] or \"\",\n        })\nprint(json.dumps(out))\nPY",
+        "stdout": "[{\"id\": \"chunk-574\", \"document\": \"TestCases\", \"path\": \"test_data/TestCases.xlsx\", \"heading\": \"Test Case Repository > TC-004\", \"ordinal\": 3, \"content\": \"TestCaseID: TC-004 Title: TestCaseID: TC-001 Title: Maker submits BUY, checker approves, dashboard reflects one approve... Objective: Validate the behavior and controls described in TestCases (Test Case Repository > TC-001). RequirementIDs: REQ-KB-004 Priority: P2 Suite: Generated From KB Tags: kb-generated, testcases | Step | RequirementID | StepDescription | ExpectedOutput | TestData | |------|---------------|-----------------|----------------|----------| | 1 | REQ-KB-004 | Review source requirement REQ-KB-004 and prepare data for: TestCaseID: TC-001 Title: Maker submits BUY, checker approves, dashboard reflects one approve.... | Relevant source context is available and traceable to test_data/TestCases.xlsx#chunk-0. | TestCases | | 2 | REQ-KB-004 | Execute the user-visible workflow or control described by TestCases. | TestCaseID: TC-001 Title: Maker submits BUY, checker approves, dashboard reflects one approved trade Objective: Validate the core maker-checker happy path from login through app... | Use source-approved banking QA test data. | | 3 | REQ-KB-004 | Capture evidence and reconcile the observed result to the cited source document. | Evidence supports REQ-KB-004 and no uns\"}]\n",
+        "stderr": "<stdin>:14: SyntaxWarning: \"\\s\" is an invalid escape sequence. Such sequences will not work in the future. Did you mean \"\\\\s\"? A raw string is also an option.\n<stdin>:31: SyntaxWarning: \"\\s\" is an invalid escape sequence. Such sequences will not work in the future. Did you mean \"\\\\s\"? A raw string is also an option.\n",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_monblbxc_m3ncn0",
+      "runId": "uiqa_monbkl2e_cnro7v",
+      "phase": "rag_ready",
+      "title": "Cursor SDK agent",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:42:59.232Z",
+      "finishedAt": "2026-05-01T19:43:03.314Z",
+      "summary": "Cursor SDK call completed.",
+      "technical": {
+        "rawLabel": "cursor:rag_ready",
+        "sdkPrompt": "You are a bank QA document assistant. Answer only from the provided ingested source context.\n\nQuestion:\nwhat is test case 1 \n\nContext:\n[1] TestCases (test_data/TestCases.xlsx#chunk-3, Test Case Repository > TC-004)\nTestCaseID: TC-004 Title: TestCaseID: TC-001 Title: Maker submits BUY, checker approves, dashboard reflects one approve... Objective: Validate the behavior and controls described in TestCases (Test Case Repository > TC-001). RequirementIDs: REQ-KB-004 Priority: P2 Suite: Generated From KB Tags: kb-generated, testcases | Step | RequirementID | StepDescription | ExpectedOutput | TestData | |------|---------------|-----------------|----------------|----------| | 1 | REQ-KB-004 | Review source requirement REQ-KB-004 and prepare data for: TestCaseID: TC-001 Title: Maker submits BUY, checker approves, dashboard reflects one approve.... | Relevant source context is available and traceable to test_data/TestCases.xlsx#chunk-0. | TestCases | | 2 | REQ-KB-004 | Execute the user-visible workflow or control described by TestCases. | TestCaseID: TC-001 Title: Maker submits BUY, checker approves, dashboard reflects one approved trade Objective: Validate the core maker-checker happy path from login through app... | Use source-approved banking QA test data. | | 3 | REQ-KB-004 | Capture evidence and reconcile the observed result to the cited source document. | Evidence supports REQ-KB-004 and no uns\n\nInstructions:\n- Be concise and practical.\n- Cite sources inline as [1], [2], etc.\n- If the context is insufficient, say so clearly.\n- Do not infer behavior from app source code.",
+        "stdout": "**Test case 1 (TC-001)** in your context is the repository case titled **“Maker submits BUY, checker approves, dashboard reflects one approved trade”** (wording is slightly truncated in the extract). Its **objective** is to **validate the behavior and controls** called out for TC-001 in the Test Case Repository, and specifically to **validate the core maker–checker happy path from login through the app** [1].\n\n**Traceability:** it is tied to **REQ-KB-004**, **priority P2**, suite **“Generated From KB”**, and tags **kb-generated**, **testcases** [1].\n\n**High-level steps (from the table):** (1) Review **REQ-KB-004** and prepare data for this TC-001 scenario — expected: relevant source context is available and traceable to `test_data/TestCases.xlsx#chunk-0`; (2) **Execute** the user-visible workflow/control described by the test case — use **source-approved banking QA test data**; (3) **Capture evidence** and reconcile results to the cited source — expected to support **REQ-KB-004** (the snippet cuts off mid-sentence) [1].\n\n**Note:** The chunk you were given is labeled **TC-004** at the start but the body mostly describes **TC-001**; for a full step table and exact expected outputs, more of **[1]** (or the TC-001 row in the repository) would be needed. I have **not** inferred anything beyond this excerpt [1].",
+        "payload": {
+          "eventCount": 154
+        }
+      }
+    },
+    {
+      "id": "event_monbld80_8kolz9",
+      "runId": "uiqa_monbkl2e_cnro7v",
+      "phase": "rag_ready",
+      "title": "Retrieve KB context",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:43:00.912Z",
+      "finishedAt": "2026-05-01T19:43:01.099Z",
+      "technical": {
+        "rawLabel": "Retrieve KB context",
+        "command": "source ingestion/.venv/bin/activate && UI_QA_QUESTION='what is test case 1 ' DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport json, os, psycopg\nquestion = os.environ.get(\"UI_QA_QUESTION\", \"\").strip()\nout = []\nwith psycopg.connect(os.environ[\"DATABASE_URL\"]) as conn, conn.cursor() as cur:\n    cur.execute(\"\"\"\n      with query as (\n        select websearch_to_tsquery('english', %s) as q\n      )\n      select c.id,\n             coalesce(d.title, d.path, '') as document,\n             d.path,\n             c.heading_path,\n             c.ordinal,\n             left(regexp_replace(c.content, '\\s+', ' ', 'g'), 1200) as content,\n             ts_rank_cd(to_tsvector('english', coalesce(c.content, '')), query.q) as rank\n      from chunks c\n      join documents d on d.id = c.document_id\n      cross join query\n      where query.q @@ to_tsvector('english', coalesce(c.content, ''))\n      order by rank desc, d.created_at desc nulls last, c.ordinal asc\n      limit 8\n    \"\"\", (question,))\n    rows = cur.fetchall()\n    if not rows:\n        cur.execute(\"\"\"\n          select c.id,\n                 coalesce(d.title, d.path, '') as document,\n                 d.path,\n                 c.heading_path,\n                 c.ordinal,\n                 left(regexp_replace(c.content, '\\s+', ' ', 'g'), 1200) as content,\n                 0.0 as rank\n          from chunks c\n          join documents d on d.id = c.document_id\n          order by d.created_at desc nulls last, c.ordinal asc\n          limit 8\n        \"\"\")\n        rows = cur.fetchall()\n    for row in rows:\n        out.append({\n          \"id\": f\"chunk-{row[0]}\",\n          \"document\": row[1] or \"\",\n          \"path\": row[2] or \"\",\n          \"heading\": row[3] or \"\",\n          \"ordinal\": int(row[4] or 0),\n          \"content\": row[5] or \"\",\n        })\nprint(json.dumps(out))\nPY",
+        "stdout": "[{\"id\": \"chunk-574\", \"document\": \"TestCases\", \"path\": \"test_data/TestCases.xlsx\", \"heading\": \"Test Case Repository > TC-004\", \"ordinal\": 3, \"content\": \"TestCaseID: TC-004 Title: TestCaseID: TC-001 Title: Maker submits BUY, checker approves, dashboard reflects one approve... Objective: Validate the behavior and controls described in TestCases (Test Case Repository > TC-001). RequirementIDs: REQ-KB-004 Priority: P2 Suite: Generated From KB Tags: kb-generated, testcases | Step | RequirementID | StepDescription | ExpectedOutput | TestData | |------|---------------|-----------------|----------------|----------| | 1 | REQ-KB-004 | Review source requirement REQ-KB-004 and prepare data for: TestCaseID: TC-001 Title: Maker submits BUY, checker approves, dashboard reflects one approve.... | Relevant source context is available and traceable to test_data/TestCases.xlsx#chunk-0. | TestCases | | 2 | REQ-KB-004 | Execute the user-visible workflow or control described by TestCases. | TestCaseID: TC-001 Title: Maker submits BUY, checker approves, dashboard reflects one approved trade Objective: Validate the core maker-checker happy path from login through app... | Use source-approved banking QA test data. | | 3 | REQ-KB-004 | Capture evidence and reconcile the observed result to the cited source document. | Evidence supports REQ-KB-004 and no uns\"}]\n",
+        "stderr": "<stdin>:14: SyntaxWarning: \"\\s\" is an invalid escape sequence. Such sequences will not work in the future. Did you mean \"\\\\s\"? A raw string is also an option.\n<stdin>:31: SyntaxWarning: \"\\s\" is an invalid escape sequence. Such sequences will not work in the future. Did you mean \"\\\\s\"? A raw string is also an option.\n",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_monbldd7_q02ewh",
+      "runId": "uiqa_monbkl2e_cnro7v",
+      "phase": "rag_ready",
+      "title": "Cursor SDK agent",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:43:01.099Z",
+      "finishedAt": "2026-05-01T19:43:04.254Z",
+      "summary": "Cursor SDK call completed.",
+      "technical": {
+        "rawLabel": "cursor:rag_ready",
+        "sdkPrompt": "You are a bank QA document assistant. Answer only from the provided ingested source context.\n\nQuestion:\nwhat is test case 1 \n\nContext:\n[1] TestCases (test_data/TestCases.xlsx#chunk-3, Test Case Repository > TC-004)\nTestCaseID: TC-004 Title: TestCaseID: TC-001 Title: Maker submits BUY, checker approves, dashboard reflects one approve... Objective: Validate the behavior and controls described in TestCases (Test Case Repository > TC-001). RequirementIDs: REQ-KB-004 Priority: P2 Suite: Generated From KB Tags: kb-generated, testcases | Step | RequirementID | StepDescription | ExpectedOutput | TestData | |------|---------------|-----------------|----------------|----------| | 1 | REQ-KB-004 | Review source requirement REQ-KB-004 and prepare data for: TestCaseID: TC-001 Title: Maker submits BUY, checker approves, dashboard reflects one approve.... | Relevant source context is available and traceable to test_data/TestCases.xlsx#chunk-0. | TestCases | | 2 | REQ-KB-004 | Execute the user-visible workflow or control described by TestCases. | TestCaseID: TC-001 Title: Maker submits BUY, checker approves, dashboard reflects one approved trade Objective: Validate the core maker-checker happy path from login through app... | Use source-approved banking QA test data. | | 3 | REQ-KB-004 | Capture evidence and reconcile the observed result to the cited source document. | Evidence supports REQ-KB-004 and no uns\n\nInstructions:\n- Be concise and practical.\n- Cite sources inline as [1], [2], etc.\n- If the context is insufficient, say so clearly.\n- Do not infer behavior from app source code.",
+        "stdout": "**Test case 1 (TC-001)** in your ingest is the **maker–checker happy path**: a **maker submits a BUY**, a **checker approves**, and the **dashboard shows one approved trade**. The stated **objective** is to validate that flow and related **controls**, aligned with **Test Case Repository > TC-001** [1].  \n\nIt is **traced to REQ-KB-004**, **priority P2**, suite **Generated From KB**, tags **`kb-generated`, `testcases`** [1].  \n\nAt a high level the steps are: (1) **review REQ-KB-004** and prepare data for TC-001, with traceability to **`test_data/TestCases.xlsx#chunk-0`**; (2) **run the user-visible workflow** from the source test case; (3) **capture evidence** and reconcile to the cited source (text cuts off mid-sentence) [1].\n\n**Limitation:** The chunk you pasted **[1]** mixes **`Test Case Repository > TC-004`** with **TC-001** title/body, so **TC-001’s full step table and exact expected outputs are not fully reliable from this fragment alone**—especially step 3, which is incomplete [1].",
+        "payload": {
+          "eventCount": 118
+        }
+      }
+    },
+    {
+      "id": "event_monblour_2yivd6",
+      "runId": "uiqa_monbkl2e_cnro7v",
+      "phase": "rag_ready",
+      "title": "Retrieve KB context",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:43:15.987Z",
+      "finishedAt": "2026-05-01T19:43:16.203Z",
+      "technical": {
+        "rawLabel": "Retrieve KB context",
+        "command": "source ingestion/.venv/bin/activate && UI_QA_QUESTION='which test cases are the most linked' DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport json, os, psycopg\nquestion = os.environ.get(\"UI_QA_QUESTION\", \"\").strip()\nout = []\nwith psycopg.connect(os.environ[\"DATABASE_URL\"]) as conn, conn.cursor() as cur:\n    cur.execute(\"\"\"\n      with query as (\n        select websearch_to_tsquery('english', %s) as q\n      )\n      select c.id,\n             coalesce(d.title, d.path, '') as document,\n             d.path,\n             c.heading_path,\n             c.ordinal,\n             left(regexp_replace(c.content, '\\s+', ' ', 'g'), 1200) as content,\n             ts_rank_cd(to_tsvector('english', coalesce(c.content, '')), query.q) as rank\n      from chunks c\n      join documents d on d.id = c.document_id\n      cross join query\n      where query.q @@ to_tsvector('english', coalesce(c.content, ''))\n      order by rank desc, d.created_at desc nulls last, c.ordinal asc\n      limit 8\n    \"\"\", (question,))\n    rows = cur.fetchall()\n    if not rows:\n        cur.execute(\"\"\"\n          select c.id,\n                 coalesce(d.title, d.path, '') as document,\n                 d.path,\n                 c.heading_path,\n                 c.ordinal,\n                 left(regexp_replace(c.content, '\\s+', ' ', 'g'), 1200) as content,\n                 0.0 as rank\n          from chunks c\n          join documents d on d.id = c.document_id\n          order by d.created_at desc nulls last, c.ordinal asc\n          limit 8\n        \"\"\")\n        rows = cur.fetchall()\n    for row in rows:\n        out.append({\n          \"id\": f\"chunk-{row[0]}\",\n          \"document\": row[1] or \"\",\n          \"path\": row[2] or \"\",\n          \"heading\": row[3] or \"\",\n          \"ordinal\": int(row[4] or 0),\n          \"content\": row[5] or \"\",\n        })\nprint(json.dumps(out))\nPY",
+        "stdout": "[{\"id\": \"chunk-518\", \"document\": \"06-requirements-traceability-matrix\", \"path\": \"source-pack/06-requirements-traceability-matrix.docx\", \"heading\": \"Requirements Traceability Matrix (RTM) > 1. Purpose\", \"ordinal\": 1, \"content\": \"This RTM links business requirements (BR-) \\u2192 functional requirements (REQ-) \\u2192 test design (TD-REQ- / TDS \\u00a7) \\u2192 tickets (TKT-) \\u2192 test cases (TC-). It is the authoritative matrix for coverage arguments; the Excel tracker mirrors these rows for SDLC progression.\"}]\n",
+        "stderr": "<stdin>:14: SyntaxWarning: \"\\s\" is an invalid escape sequence. Such sequences will not work in the future. Did you mean \"\\\\s\"? A raw string is also an option.\n<stdin>:31: SyntaxWarning: \"\\s\" is an invalid escape sequence. Such sequences will not work in the future. Did you mean \"\\\\s\"? A raw string is also an option.\n",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_monblp0s_1wxg6u",
+      "runId": "uiqa_monbkl2e_cnro7v",
+      "phase": "rag_ready",
+      "title": "Cursor SDK agent",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T19:43:16.204Z",
+      "finishedAt": "2026-05-01T19:43:20.113Z",
+      "summary": "Cursor SDK call completed.",
+      "technical": {
+        "rawLabel": "cursor:rag_ready",
+        "sdkPrompt": "You are a bank QA document assistant. Answer only from the provided ingested source context.\n\nQuestion:\nwhich test cases are the most linked\n\nContext:\n[1] 06-requirements-traceability-matrix (source-pack/06-requirements-traceability-matrix.docx#chunk-1, Requirements Traceability Matrix (RTM) > 1. Purpose)\nThis RTM links business requirements (BR-) → functional requirements (REQ-) → test design (TD-REQ- / TDS §) → tickets (TKT-) → test cases (TC-). It is the authoritative matrix for coverage arguments; the Excel tracker mirrors these rows for SDLC progression.\n\nInstructions:\n- Be concise and practical.\n- Cite sources inline as [1], [2], etc.\n- If the context is insufficient, say so clearly.\n- Do not infer behavior from app source code.",
+        "stdout": "The context you gave does **not** say which specific test cases (`TC-…`) are “most linked” or how often each appears in the RTM.\n\nWhat it does say is that the RTM is the chain **BR- → REQ- → TD-REQ-/TDS § → TKT- → TC-**, and that the Excel tracker mirrors those rows for SDLC progression [1]. That describes **how** traceability is wired, not **which** `TC-` rows have the densest connections.\n\nSo: **insufficient context** to name or rank the most-linked test cases; you’d need excerpts or tables from the RTM/Excel that list `TC-` IDs and their linked BR/REQ/TD/TKT rows.\n\n**Source:** [1]",
+        "payload": {
+          "eventCount": 69
+        }
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev_monbkl2r_k2mqj2",
+      "createdAt": "2026-05-01T19:42:24.435Z",
+      "kind": "source",
+      "label": "01-business-requirements-document.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_monbkl2e_cnro7v/75ba74032f55_01-business-requirements-document.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_monbkl2s_n5vfas",
+      "createdAt": "2026-05-01T19:42:24.436Z",
+      "kind": "source",
+      "label": "02-functional-requirements-specification.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_monbkl2e_cnro7v/1bf29955d09f_02-functional-requirements-specification.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_monbkl2t_eawoed",
+      "createdAt": "2026-05-01T19:42:24.437Z",
+      "kind": "source",
+      "label": "03-test-design-specification.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_monbkl2e_cnro7v/bc4a297e88b9_03-test-design-specification.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_monbkl2v_87ki8r",
+      "createdAt": "2026-05-01T19:42:24.439Z",
+      "kind": "source",
+      "label": "04-test-strategy.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_monbkl2e_cnro7v/bc452080a746_04-test-strategy.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_monbkl2w_wa5kp9",
+      "createdAt": "2026-05-01T19:42:24.440Z",
+      "kind": "source",
+      "label": "05-test-plan.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_monbkl2e_cnro7v/64cc7c5d20b4_05-test-plan.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_monbkl2x_goe7gw",
+      "createdAt": "2026-05-01T19:42:24.441Z",
+      "kind": "source",
+      "label": "06-requirements-traceability-matrix.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_monbkl2e_cnro7v/bae75844e4bc_06-requirements-traceability-matrix.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_monbkl32_s0qq1m",
+      "createdAt": "2026-05-01T19:42:24.446Z",
+      "kind": "source",
+      "label": "07-test-data-environment-specification.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_monbkl2e_cnro7v/dee1179870fd_07-test-data-environment-specification.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_monbkl33_hu4hzz",
+      "createdAt": "2026-05-01T19:42:24.447Z",
+      "kind": "source",
+      "label": "08-quality-risk-defect-governance.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_monbkl2e_cnro7v/c4d411862cc6_08-quality-risk-defect-governance.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_monbkl34_apzt4e",
+      "createdAt": "2026-05-01T19:42:24.448Z",
+      "kind": "source",
+      "label": "09-test-case-repository.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_monbkl2e_cnro7v/2b17d95d7da3_09-test-case-repository.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_monbkl3q_uozp18",
+      "createdAt": "2026-05-01T19:42:24.470Z",
+      "kind": "folder",
+      "label": "Active source pack",
+      "path": "test_data/ui-qa/generated/uiqa_monbkl2e_cnro7v/source-pack",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_monbkxn3_pu37y0",
+      "createdAt": "2026-05-01T19:42:40.719Z",
+      "kind": "report",
+      "label": "Entity map summary",
+      "path": "test_data/test-results/uiqa_entity_summary_20260501194240.md",
+      "phase": "ingest_sources"
+    }
+  ],
+  "checkpoints": [],
+  "messages": [
+    {
+      "id": "msg_monblbs0_v06a9h",
+      "runId": "uiqa_monbkl2e_cnro7v",
+      "role": "user",
+      "content": "what is test case 1 ",
+      "createdAt": "2026-05-01T19:42:59.040Z"
+    },
+    {
+      "id": "msg_monbld7z_t8qagb",
+      "runId": "uiqa_monbkl2e_cnro7v",
+      "role": "user",
+      "content": "what is test case 1 ",
+      "createdAt": "2026-05-01T19:43:00.911Z"
+    },
+    {
+      "id": "msg_monblf2r_bqvars",
+      "runId": "uiqa_monbkl2e_cnro7v",
+      "role": "assistant",
+      "content": "**Test case 1 (TC-001)** in your context is the repository case titled **“Maker submits BUY, checker approves, dashboard reflects one approved trade”** (wording is slightly truncated in the extract). Its **objective** is to **validate the behavior and controls** called out for TC-001 in the Test Case Repository, and specifically to **validate the core maker–checker happy path from login through the app** [1].\n\n**Traceability:** it is tied to **REQ-KB-004**, **priority P2**, suite **“Generated From KB”**, and tags **kb-generated**, **testcases** [1].\n\n**High-level steps (from the table):** (1) Review **REQ-KB-004** and prepare data for this TC-001 scenario — expected: relevant source context is available and traceable to `test_data/TestCases.xlsx#chunk-0`; (2) **Execute** the user-visible workflow/control described by the test case — use **source-approved banking QA test data**; (3) **Capture evidence** and reconcile results to the cited source — expected to support **REQ-KB-004** (the snippet cuts off mid-sentence) [1].\n\n**Note:** The chunk you were given is labeled **TC-004** at the start but the body mostly describes **TC-001**; for a full step table and exact expected outputs, more of **[1]** (or the TC-001 row in the repository) would be needed. I have **not** inferred anything beyond this excerpt [1].",
+      "createdAt": "2026-05-01T19:43:03.316Z"
+    },
+    {
+      "id": "msg_monblfsv_k2ova0",
+      "runId": "uiqa_monbkl2e_cnro7v",
+      "role": "assistant",
+      "content": "**Test case 1 (TC-001)** in your ingest is the **maker–checker happy path**: a **maker submits a BUY**, a **checker approves**, and the **dashboard shows one approved trade**. The stated **objective** is to validate that flow and related **controls**, aligned with **Test Case Repository > TC-001** [1].  \n\nIt is **traced to REQ-KB-004**, **priority P2**, suite **Generated From KB**, tags **`kb-generated`, `testcases`** [1].  \n\nAt a high level the steps are: (1) **review REQ-KB-004** and prepare data for TC-001, with traceability to **`test_data/TestCases.xlsx#chunk-0`**; (2) **run the user-visible workflow** from the source test case; (3) **capture evidence** and reconcile to the cited source (text cuts off mid-sentence) [1].\n\n**Limitation:** The chunk you pasted **[1]** mixes **`Test Case Repository > TC-004`** with **TC-001** title/body, so **TC-001’s full step table and exact expected outputs are not fully reliable from this fragment alone**—especially step 3, which is incomplete [1].",
+      "createdAt": "2026-05-01T19:43:04.255Z"
+    },
+    {
+      "id": "msg_monbloup_3d7ll5",
+      "runId": "uiqa_monbkl2e_cnro7v",
+      "role": "user",
+      "content": "which test cases are the most linked",
+      "createdAt": "2026-05-01T19:43:15.985Z"
+    },
+    {
+      "id": "msg_monbls1e_rd0t8g",
+      "runId": "uiqa_monbkl2e_cnro7v",
+      "role": "assistant",
+      "content": "The context you gave does **not** say which specific test cases (`TC-…`) are “most linked” or how often each appears in the RTM.\n\nWhat it does say is that the RTM is the chain **BR- → REQ- → TD-REQ-/TDS § → TKT- → TC-**, and that the Excel tracker mirrors those rows for SDLC progression [1]. That describes **how** traceability is wired, not **which** `TC-` rows have the densest connections.\n\nSo: **insufficient context** to name or rank the most-linked test cases; you’d need excerpts or tables from the RTM/Excel that list `TC-` IDs and their linked BR/REQ/TD/TKT rows.\n\n**Source:** [1]",
+      "createdAt": "2026-05-01T19:43:20.114Z"
+    }
+  ],
+  "blockerCount": 0,
+  "findingCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  }
+}

@@ -1,0 +1,800 @@
+{
+  "id": "uiqa_mon8tnzt_fomugv",
+  "scope": "all",
+  "dryRun": true,
+  "autoApprove": true,
+  "status": "stopped",
+  "currentPhase": "complete",
+  "createdAt": "2026-05-01T18:25:29.274Z",
+  "updatedAt": "2026-05-01T18:25:46.730Z",
+  "uploads": [
+    {
+      "id": "src_mon8to0c_51qa8r",
+      "runId": "uiqa_mon8tnzt_fomugv",
+      "originalName": "01-business-requirements-document.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_mon8tnzt_fomugv/75ba74032f55_01-business-requirements-document.docx",
+      "documentType": "BRD",
+      "sha256": "75ba74032f5583526c3ce4035eb7f21f024045dda836b8ecafd3bad94c8ee7e9",
+      "size": 35621,
+      "status": "accepted",
+      "createdAt": "2026-05-01T18:25:29.292Z"
+    },
+    {
+      "id": "src_mon8to0d_d9quqt",
+      "runId": "uiqa_mon8tnzt_fomugv",
+      "originalName": "02-functional-requirements-specification.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_mon8tnzt_fomugv/1bf29955d09f_02-functional-requirements-specification.docx",
+      "documentType": "FRS",
+      "sha256": "1bf29955d09ffb4597c4f2391daef5cdd474d9a2b7153ef5efa1715b8336733d",
+      "size": 36715,
+      "status": "accepted",
+      "createdAt": "2026-05-01T18:25:29.293Z"
+    },
+    {
+      "id": "src_mon8to0d_ee0kke",
+      "runId": "uiqa_mon8tnzt_fomugv",
+      "originalName": "03-test-design-specification.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_mon8tnzt_fomugv/bc4a297e88b9_03-test-design-specification.docx",
+      "documentType": "SOURCE_DOC",
+      "sha256": "bc4a297e88b98dc0645d0a1bc1bc8fdd63760485d97f63446e34bc078f79de42",
+      "size": 16590,
+      "status": "accepted",
+      "createdAt": "2026-05-01T18:25:29.293Z"
+    },
+    {
+      "id": "src_mon8to0e_609w5k",
+      "runId": "uiqa_mon8tnzt_fomugv",
+      "originalName": "04-test-strategy.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_mon8tnzt_fomugv/bc452080a746_04-test-strategy.docx",
+      "documentType": "TEST_STRATEGY",
+      "sha256": "bc452080a74613289d89e8a9866cb9ec99671f2e9f270c301793c0de976e8d2d",
+      "size": 14190,
+      "status": "accepted",
+      "createdAt": "2026-05-01T18:25:29.294Z"
+    },
+    {
+      "id": "src_mon8to0f_78jq2y",
+      "runId": "uiqa_mon8tnzt_fomugv",
+      "originalName": "05-test-plan.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_mon8tnzt_fomugv/64cc7c5d20b4_05-test-plan.docx",
+      "documentType": "TEST_PLAN",
+      "sha256": "64cc7c5d20b4556484544b1bc46bd60c2cb6e94879c28b05db0677af83ade68a",
+      "size": 13567,
+      "status": "accepted",
+      "createdAt": "2026-05-01T18:25:29.295Z"
+    },
+    {
+      "id": "src_mon8to0m_pg63m8",
+      "runId": "uiqa_mon8tnzt_fomugv",
+      "originalName": "06-requirements-traceability-matrix.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_mon8tnzt_fomugv/bae75844e4bc_06-requirements-traceability-matrix.docx",
+      "documentType": "RTM",
+      "sha256": "bae75844e4bce6f5f4e083a5907b7978915ea77336a42177ea982b304a1b994c",
+      "size": 16106,
+      "status": "accepted",
+      "createdAt": "2026-05-01T18:25:29.302Z"
+    },
+    {
+      "id": "src_mon8to0o_70sdj7",
+      "runId": "uiqa_mon8tnzt_fomugv",
+      "originalName": "07-test-data-environment-specification.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_mon8tnzt_fomugv/dee1179870fd_07-test-data-environment-specification.docx",
+      "documentType": "TEST_DATA",
+      "sha256": "dee1179870fd6bf2b315e1e240bf6f90ef4442aa6483f397380f2e3cb814a989",
+      "size": 13536,
+      "status": "accepted",
+      "createdAt": "2026-05-01T18:25:29.304Z"
+    },
+    {
+      "id": "src_mon8to0p_kcc0mr",
+      "runId": "uiqa_mon8tnzt_fomugv",
+      "originalName": "08-quality-risk-defect-governance.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_mon8tnzt_fomugv/c4d411862cc6_08-quality-risk-defect-governance.docx",
+      "documentType": "SOURCE_DOC",
+      "sha256": "c4d411862cc6615ebda78530cacdebd2378ccf25df873fd04545a7c49b15adc4",
+      "size": 13091,
+      "status": "accepted",
+      "createdAt": "2026-05-01T18:25:29.305Z"
+    },
+    {
+      "id": "src_mon8to0q_pi7h99",
+      "runId": "uiqa_mon8tnzt_fomugv",
+      "originalName": "09-test-case-repository.docx",
+      "storedPath": "test_data/ui-qa/uploads/uiqa_mon8tnzt_fomugv/2b17d95d7da3_09-test-case-repository.docx",
+      "documentType": "TEST_REPOSITORY",
+      "sha256": "2b17d95d7da3e424e205e904671f8b3b5485d4a1fae97a1bbb5f9114bf0d6431",
+      "size": 19269,
+      "status": "accepted",
+      "createdAt": "2026-05-01T18:25:29.306Z"
+    }
+  ],
+  "events": [
+    {
+      "id": "event_mon8tnzz_a3pxj9",
+      "runId": "uiqa_mon8tnzt_fomugv",
+      "phase": "upload_sources",
+      "title": "Prepare active source pack",
+      "status": "running",
+      "createdAt": "2026-05-01T18:25:29.279Z"
+    },
+    {
+      "id": "event_mon8to01_t0w4tt",
+      "runId": "uiqa_mon8tnzt_fomugv",
+      "phase": "upload_sources",
+      "title": "Active source pack ready",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:25:29.281Z",
+      "finishedAt": "2026-05-01T18:25:29.281Z",
+      "summary": "0 uploaded source document(s)."
+    },
+    {
+      "id": "event_mon8to02_inic9k",
+      "runId": "uiqa_mon8tnzt_fomugv",
+      "phase": "ingest_sources",
+      "title": "Ensure ingestion virtualenv",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:25:29.282Z",
+      "finishedAt": "2026-05-01T18:25:29.282Z",
+      "summary": "Dry run skipped command execution.",
+      "technical": {
+        "rawLabel": "Ensure ingestion virtualenv",
+        "command": "/bin/test -d ingestion/.venv || /usr/bin/python3 -m venv ingestion/.venv",
+        "stdout": "[dry-run] command skipped\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon8to02_e4hjw0",
+      "runId": "uiqa_mon8tnzt_fomugv",
+      "phase": "ingest_sources",
+      "title": "Install ingestion dependencies",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:25:29.282Z",
+      "finishedAt": "2026-05-01T18:25:29.282Z",
+      "summary": "Dry run skipped command execution.",
+      "technical": {
+        "rawLabel": "Install ingestion dependencies",
+        "command": "source ingestion/.venv/bin/activate && ingestion/.venv/bin/pip install -r ingestion/requirements.txt -q",
+        "stdout": "[dry-run] command skipped\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon8to03_bmlo5s",
+      "runId": "uiqa_mon8tnzt_fomugv",
+      "phase": "ingest_sources",
+      "title": "Check local pgvector DB",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:25:29.283Z",
+      "finishedAt": "2026-05-01T18:25:29.283Z",
+      "summary": "Dry run skipped command execution.",
+      "technical": {
+        "rawLabel": "Check local pgvector DB",
+        "command": "/opt/homebrew/bin/pg_isready -h localhost -p 5433 -U ingestion -d ingestion",
+        "stdout": "[dry-run] command skipped\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon8to03_yivina",
+      "runId": "uiqa_mon8tnzt_fomugv",
+      "phase": "ingest_sources",
+      "title": "Apply ingestion migrations",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:25:29.283Z",
+      "finishedAt": "2026-05-01T18:25:29.284Z",
+      "summary": "Dry run skipped command execution.",
+      "technical": {
+        "rawLabel": "Apply ingestion migrations",
+        "command": "PGPASSWORD=ingestion ingestion/scripts/apply_migrations.sh",
+        "stdout": "[dry-run] command skipped\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon8to04_adxdt0",
+      "runId": "uiqa_mon8tnzt_fomugv",
+      "phase": "ingest_sources",
+      "title": "Ingest source documents into pgvector",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:25:29.284Z",
+      "finishedAt": "2026-05-01T18:25:29.285Z",
+      "summary": "Dry run skipped command execution.",
+      "technical": {
+        "rawLabel": "Ingest source documents into pgvector",
+        "command": "source ingestion/.venv/bin/activate && DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python ingestion/scripts/ingest.py --format both --test-doc '/Users/utsavsharma/Documents/GitHub/QAMVP/test-doc'",
+        "stdout": "[dry-run] command skipped\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon8to05_u28vie",
+      "runId": "uiqa_mon8tnzt_fomugv",
+      "phase": "ingest_sources",
+      "title": "Summarize entity map",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:25:29.285Z",
+      "finishedAt": "2026-05-01T18:25:29.285Z",
+      "summary": "Dry run skipped command execution.",
+      "technical": {
+        "rawLabel": "Summarize entity map",
+        "command": "source ingestion/.venv/bin/activate && DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python - <<'PY'\nimport os, psycopg\nwith psycopg.connect(os.environ['DATABASE_URL']) as conn, conn.cursor() as cur:\n    cur.execute(\"select entity_type, count(*) from entities group by entity_type order by entity_type\")\n    rows = cur.fetchall()\nprint('# Entity Map Summary')\nprint()\nprint('| Entity Type | Count |')\nprint('|---|---:|')\nfor t, c in rows:\n    print(f'| {t} | {c} |')\nPY",
+        "stdout": "[dry-run] command skipped\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon8to06_107ev2",
+      "runId": "uiqa_mon8tnzt_fomugv",
+      "phase": "generate_tests",
+      "title": "Cursor SDK agent",
+      "status": "warning",
+      "createdAt": "2026-05-01T18:25:29.286Z",
+      "finishedAt": "2026-05-01T18:25:29.286Z",
+      "summary": "Dry run: Cursor SDK call skipped.",
+      "technical": {
+        "rawLabel": "cursor:generate_tests",
+        "sdkPrompt": "Generate source-aligned QA test cases from the active pgvector corpus. Use citations and return repository JSON if confident.",
+        "stdout": "Dry run: Cursor SDK call skipped."
+      }
+    },
+    {
+      "id": "event_mon8to0c_68rzh2",
+      "runId": "uiqa_mon8tnzt_fomugv",
+      "phase": "generate_tests",
+      "title": "Generated test cases",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:25:29.292Z",
+      "finishedAt": "2026-05-01T18:25:29.292Z",
+      "summary": "16 test case(s), 102 step(s).",
+      "technical": {
+        "rawLabel": "generate_tests:repository",
+        "payload": {
+          "cases": 16
+        }
+      }
+    },
+    {
+      "id": "event_mon8to0c_k7rqty",
+      "runId": "uiqa_mon8tnzt_fomugv",
+      "phase": "upload_sources",
+      "title": "Uploaded 01-business-requirements-document.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:25:29.292Z",
+      "finishedAt": "2026-05-01T18:25:29.292Z",
+      "summary": "Classified as BRD.",
+      "technical": {
+        "rawLabel": "upload:01-business-requirements-document.docx",
+        "payload": {
+          "id": "src_mon8to0c_51qa8r",
+          "runId": "uiqa_mon8tnzt_fomugv",
+          "originalName": "01-business-requirements-document.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_mon8tnzt_fomugv/75ba74032f55_01-business-requirements-document.docx",
+          "documentType": "BRD",
+          "sha256": "75ba74032f5583526c3ce4035eb7f21f024045dda836b8ecafd3bad94c8ee7e9",
+          "size": 35621,
+          "status": "accepted",
+          "createdAt": "2026-05-01T18:25:29.292Z"
+        }
+      }
+    },
+    {
+      "id": "event_mon8to0d_pv3h16",
+      "runId": "uiqa_mon8tnzt_fomugv",
+      "phase": "audit_generated_tests",
+      "title": "Generated test confidence audit passed",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:25:29.293Z",
+      "finishedAt": "2026-05-01T18:25:29.293Z",
+      "summary": "Finding counts: {\"critical\":0,\"high\":0,\"medium\":0,\"low\":0}."
+    },
+    {
+      "id": "event_mon8to0d_fpuo65",
+      "runId": "uiqa_mon8tnzt_fomugv",
+      "phase": "upload_sources",
+      "title": "Uploaded 02-functional-requirements-specification.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:25:29.293Z",
+      "finishedAt": "2026-05-01T18:25:29.293Z",
+      "summary": "Classified as FRS.",
+      "technical": {
+        "rawLabel": "upload:02-functional-requirements-specification.docx",
+        "payload": {
+          "id": "src_mon8to0d_d9quqt",
+          "runId": "uiqa_mon8tnzt_fomugv",
+          "originalName": "02-functional-requirements-specification.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_mon8tnzt_fomugv/1bf29955d09f_02-functional-requirements-specification.docx",
+          "documentType": "FRS",
+          "sha256": "1bf29955d09ffb4597c4f2391daef5cdd474d9a2b7153ef5efa1715b8336733d",
+          "size": 36715,
+          "status": "accepted",
+          "createdAt": "2026-05-01T18:25:29.293Z"
+        }
+      }
+    },
+    {
+      "id": "event_mon8to0d_txqn4z",
+      "runId": "uiqa_mon8tnzt_fomugv",
+      "phase": "reseed_structured_db",
+      "title": "Dry-run structured DB reseed",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:25:29.293Z",
+      "finishedAt": "2026-05-01T18:25:29.293Z",
+      "summary": "Dry run preserved source artifacts and recorded the generated repository under test_data/ui-qa."
+    },
+    {
+      "id": "event_mon8to0d_4e2ks6",
+      "runId": "uiqa_mon8tnzt_fomugv",
+      "phase": "upload_sources",
+      "title": "Uploaded 03-test-design-specification.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:25:29.293Z",
+      "finishedAt": "2026-05-01T18:25:29.293Z",
+      "summary": "Classified as SOURCE_DOC.",
+      "technical": {
+        "rawLabel": "upload:03-test-design-specification.docx",
+        "payload": {
+          "id": "src_mon8to0d_ee0kke",
+          "runId": "uiqa_mon8tnzt_fomugv",
+          "originalName": "03-test-design-specification.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_mon8tnzt_fomugv/bc4a297e88b9_03-test-design-specification.docx",
+          "documentType": "SOURCE_DOC",
+          "sha256": "bc4a297e88b98dc0645d0a1bc1bc8fdd63760485d97f63446e34bc078f79de42",
+          "size": 16590,
+          "status": "accepted",
+          "createdAt": "2026-05-01T18:25:29.293Z"
+        }
+      }
+    },
+    {
+      "id": "event_mon8to0e_lss365",
+      "runId": "uiqa_mon8tnzt_fomugv",
+      "phase": "upload_sources",
+      "title": "Uploaded 04-test-strategy.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:25:29.294Z",
+      "finishedAt": "2026-05-01T18:25:29.294Z",
+      "summary": "Classified as TEST_STRATEGY.",
+      "technical": {
+        "rawLabel": "upload:04-test-strategy.docx",
+        "payload": {
+          "id": "src_mon8to0e_609w5k",
+          "runId": "uiqa_mon8tnzt_fomugv",
+          "originalName": "04-test-strategy.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_mon8tnzt_fomugv/bc452080a746_04-test-strategy.docx",
+          "documentType": "TEST_STRATEGY",
+          "sha256": "bc452080a74613289d89e8a9866cb9ec99671f2e9f270c301793c0de976e8d2d",
+          "size": 14190,
+          "status": "accepted",
+          "createdAt": "2026-05-01T18:25:29.294Z"
+        }
+      }
+    },
+    {
+      "id": "event_mon8to0e_wpuwj8",
+      "runId": "uiqa_mon8tnzt_fomugv",
+      "phase": "audit_ingestion",
+      "title": "Dry-run ingestion audit gate passed",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:25:29.294Z",
+      "finishedAt": "2026-05-01T18:25:29.294Z",
+      "summary": "Finding counts: {\"critical\":0,\"high\":0,\"medium\":0,\"low\":0}."
+    },
+    {
+      "id": "event_mon8to0f_8rsqd6",
+      "runId": "uiqa_mon8tnzt_fomugv",
+      "phase": "checkpoint",
+      "title": "Approve browser execution",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:25:29.295Z",
+      "finishedAt": "2026-05-01T18:25:29.295Z",
+      "summary": "Auto-approved for this run."
+    },
+    {
+      "id": "event_mon8to0f_lmi9uq",
+      "runId": "uiqa_mon8tnzt_fomugv",
+      "phase": "publish_artifacts",
+      "title": "Export repository JSON from DB",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:25:29.295Z",
+      "finishedAt": "2026-05-01T18:25:29.299Z",
+      "summary": "Dry run skipped command execution.",
+      "technical": {
+        "rawLabel": "Export repository JSON from DB",
+        "command": "source ingestion/.venv/bin/activate && DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion ingestion/.venv/bin/python ingestion/scripts/export_test_case_repository.py --output test-doc/test-case-repository.json",
+        "stdout": "[dry-run] command skipped\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon8to0f_u3ojnx",
+      "runId": "uiqa_mon8tnzt_fomugv",
+      "phase": "upload_sources",
+      "title": "Uploaded 05-test-plan.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:25:29.295Z",
+      "finishedAt": "2026-05-01T18:25:29.295Z",
+      "summary": "Classified as TEST_PLAN.",
+      "technical": {
+        "rawLabel": "upload:05-test-plan.docx",
+        "payload": {
+          "id": "src_mon8to0f_78jq2y",
+          "runId": "uiqa_mon8tnzt_fomugv",
+          "originalName": "05-test-plan.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_mon8tnzt_fomugv/64cc7c5d20b4_05-test-plan.docx",
+          "documentType": "TEST_PLAN",
+          "sha256": "64cc7c5d20b4556484544b1bc46bd60c2cb6e94879c28b05db0677af83ade68a",
+          "size": 13567,
+          "status": "accepted",
+          "createdAt": "2026-05-01T18:25:29.295Z"
+        }
+      }
+    },
+    {
+      "id": "event_mon8to0m_mbvqh5",
+      "runId": "uiqa_mon8tnzt_fomugv",
+      "phase": "publish_artifacts",
+      "title": "Render repository Markdown and workbook",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:25:29.302Z",
+      "finishedAt": "2026-05-01T18:25:29.302Z",
+      "summary": "Dry run skipped command execution.",
+      "technical": {
+        "rawLabel": "Render repository Markdown and workbook",
+        "command": "source ingestion/.venv/bin/activate && ingestion/.venv/bin/python test-doc/scripts/build_test_case_repository.py --spec test-doc/test-case-repository.json --workbook-out test_data/TestCases.xlsx --markdown-out test-doc/09-test-case-repository.md",
+        "stdout": "[dry-run] command skipped\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon8to0m_nurpu3",
+      "runId": "uiqa_mon8tnzt_fomugv",
+      "phase": "upload_sources",
+      "title": "Uploaded 06-requirements-traceability-matrix.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:25:29.302Z",
+      "finishedAt": "2026-05-01T18:25:29.302Z",
+      "summary": "Classified as RTM.",
+      "technical": {
+        "rawLabel": "upload:06-requirements-traceability-matrix.docx",
+        "payload": {
+          "id": "src_mon8to0m_pg63m8",
+          "runId": "uiqa_mon8tnzt_fomugv",
+          "originalName": "06-requirements-traceability-matrix.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_mon8tnzt_fomugv/bae75844e4bc_06-requirements-traceability-matrix.docx",
+          "documentType": "RTM",
+          "sha256": "bae75844e4bce6f5f4e083a5907b7978915ea77336a42177ea982b304a1b994c",
+          "size": 16106,
+          "status": "accepted",
+          "createdAt": "2026-05-01T18:25:29.302Z"
+        }
+      }
+    },
+    {
+      "id": "event_mon8to0n_1bbqeg",
+      "runId": "uiqa_mon8tnzt_fomugv",
+      "phase": "execute_browser",
+      "title": "Install Playwright dependencies",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:25:29.303Z",
+      "finishedAt": "2026-05-01T18:25:29.304Z",
+      "summary": "Dry run skipped command execution.",
+      "technical": {
+        "rawLabel": "Install Playwright dependencies",
+        "command": "npm install --prefix playwright-runner",
+        "stdout": "[dry-run] command skipped\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon8to0o_yqwhb5",
+      "runId": "uiqa_mon8tnzt_fomugv",
+      "phase": "upload_sources",
+      "title": "Uploaded 07-test-data-environment-specification.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:25:29.304Z",
+      "finishedAt": "2026-05-01T18:25:29.304Z",
+      "summary": "Classified as TEST_DATA.",
+      "technical": {
+        "rawLabel": "upload:07-test-data-environment-specification.docx",
+        "payload": {
+          "id": "src_mon8to0o_70sdj7",
+          "runId": "uiqa_mon8tnzt_fomugv",
+          "originalName": "07-test-data-environment-specification.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_mon8tnzt_fomugv/dee1179870fd_07-test-data-environment-specification.docx",
+          "documentType": "TEST_DATA",
+          "sha256": "dee1179870fd6bf2b315e1e240bf6f90ef4442aa6483f397380f2e3cb814a989",
+          "size": 13536,
+          "status": "accepted",
+          "createdAt": "2026-05-01T18:25:29.304Z"
+        }
+      }
+    },
+    {
+      "id": "event_mon8to0p_b5sawd",
+      "runId": "uiqa_mon8tnzt_fomugv",
+      "phase": "execute_browser",
+      "title": "Run Playwright",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:25:29.305Z",
+      "finishedAt": "2026-05-01T18:25:29.305Z",
+      "summary": "Dry run skipped command execution.",
+      "technical": {
+        "rawLabel": "Run Playwright",
+        "command": "TC_ID='all' PLAYWRIGHT_WORKERS=2 npx --prefix playwright-runner playwright test --config '/Users/utsavsharma/Documents/GitHub/QAMVP/playwright-runner/playwright.config.ts' --workers=2",
+        "stdout": "[dry-run] command skipped\n",
+        "stderr": "",
+        "exitCode": 0
+      }
+    },
+    {
+      "id": "event_mon8to0p_dkrj7s",
+      "runId": "uiqa_mon8tnzt_fomugv",
+      "phase": "upload_sources",
+      "title": "Uploaded 08-quality-risk-defect-governance.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:25:29.305Z",
+      "finishedAt": "2026-05-01T18:25:29.305Z",
+      "summary": "Classified as SOURCE_DOC.",
+      "technical": {
+        "rawLabel": "upload:08-quality-risk-defect-governance.docx",
+        "payload": {
+          "id": "src_mon8to0p_kcc0mr",
+          "runId": "uiqa_mon8tnzt_fomugv",
+          "originalName": "08-quality-risk-defect-governance.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_mon8tnzt_fomugv/c4d411862cc6_08-quality-risk-defect-governance.docx",
+          "documentType": "SOURCE_DOC",
+          "sha256": "c4d411862cc6615ebda78530cacdebd2378ccf25df873fd04545a7c49b15adc4",
+          "size": 13091,
+          "status": "accepted",
+          "createdAt": "2026-05-01T18:25:29.305Z"
+        }
+      }
+    },
+    {
+      "id": "event_mon8to0q_bx4vtt",
+      "runId": "uiqa_mon8tnzt_fomugv",
+      "phase": "verify_evidence",
+      "title": "Dry-run Playwright artifact verification",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:25:29.306Z",
+      "finishedAt": "2026-05-01T18:25:29.306Z",
+      "summary": "Dry run skipped Playwright evidence checks."
+    },
+    {
+      "id": "event_mon8to0q_ozrva2",
+      "runId": "uiqa_mon8tnzt_fomugv",
+      "phase": "upload_sources",
+      "title": "Uploaded 09-test-case-repository.docx",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:25:29.306Z",
+      "finishedAt": "2026-05-01T18:25:29.306Z",
+      "summary": "Classified as TEST_REPOSITORY.",
+      "technical": {
+        "rawLabel": "upload:09-test-case-repository.docx",
+        "payload": {
+          "id": "src_mon8to0q_pi7h99",
+          "runId": "uiqa_mon8tnzt_fomugv",
+          "originalName": "09-test-case-repository.docx",
+          "storedPath": "test_data/ui-qa/uploads/uiqa_mon8tnzt_fomugv/2b17d95d7da3_09-test-case-repository.docx",
+          "documentType": "TEST_REPOSITORY",
+          "sha256": "2b17d95d7da3e424e205e904671f8b3b5485d4a1fae97a1bbb5f9114bf0d6431",
+          "size": 19269,
+          "status": "accepted",
+          "createdAt": "2026-05-01T18:25:29.306Z"
+        }
+      }
+    },
+    {
+      "id": "event_mon8to0r_m7ntr6",
+      "runId": "uiqa_mon8tnzt_fomugv",
+      "phase": "audit_run",
+      "title": "Run independent final audit",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:25:29.307Z",
+      "finishedAt": "2026-05-01T18:25:29.307Z",
+      "summary": "Verdict: approved."
+    },
+    {
+      "id": "event_mon8to0s_ldzpl6",
+      "runId": "uiqa_mon8tnzt_fomugv",
+      "phase": "complete",
+      "title": "QA workflow complete",
+      "status": "succeeded",
+      "createdAt": "2026-05-01T18:25:29.308Z",
+      "finishedAt": "2026-05-01T18:25:29.308Z",
+      "summary": "Final verdict: approved."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev_mon8to01_q2hf8v",
+      "createdAt": "2026-05-01T18:25:29.281Z",
+      "kind": "folder",
+      "label": "Active source pack",
+      "path": "test_data/ui-qa/generated/uiqa_mon8tnzt_fomugv/source-pack",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_mon8to06_fejxg3",
+      "createdAt": "2026-05-01T18:25:29.286Z",
+      "kind": "report",
+      "label": "Entity map summary",
+      "path": "test_data/test-results/uiqa_entity_summary_20260501182529.md",
+      "phase": "ingest_sources"
+    },
+    {
+      "id": "ev_mon8to08_gwkl4k",
+      "createdAt": "2026-05-01T18:25:29.288Z",
+      "kind": "json",
+      "label": "Generated test case repository",
+      "path": "test_data/ui-qa/generated/uiqa_mon8tnzt_fomugv/test-case-repository.generated.json",
+      "phase": "generate_tests"
+    },
+    {
+      "id": "ev_mon8to0c_nmctyk",
+      "createdAt": "2026-05-01T18:25:29.292Z",
+      "kind": "source",
+      "label": "01-business-requirements-document.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_mon8tnzt_fomugv/75ba74032f55_01-business-requirements-document.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_mon8to0c_6qlxrq",
+      "createdAt": "2026-05-01T18:25:29.292Z",
+      "kind": "report",
+      "label": "Generated test confidence audit",
+      "path": "test_data/test-results/generated_test_case_audit_20260501182529.md",
+      "phase": "audit_generated_tests"
+    },
+    {
+      "id": "ev_mon8to0c_q521zn",
+      "createdAt": "2026-05-01T18:25:29.292Z",
+      "kind": "json",
+      "label": "Generated test confidence audit JSON",
+      "path": "test_data/test-results/generated_test_case_audit_20260501182529.json",
+      "phase": "audit_generated_tests"
+    },
+    {
+      "id": "ev_mon8to0d_siiody",
+      "createdAt": "2026-05-01T18:25:29.293Z",
+      "kind": "source",
+      "label": "02-functional-requirements-specification.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_mon8tnzt_fomugv/1bf29955d09f_02-functional-requirements-specification.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_mon8to0d_lt9ptk",
+      "createdAt": "2026-05-01T18:25:29.293Z",
+      "kind": "json",
+      "label": "Dry-run active test case repository JSON",
+      "path": "test_data/ui-qa/generated/uiqa_mon8tnzt_fomugv/dry-run-active-test-case-repository.json",
+      "phase": "reseed_structured_db"
+    },
+    {
+      "id": "ev_mon8to0d_0ewy9i",
+      "createdAt": "2026-05-01T18:25:29.293Z",
+      "kind": "source",
+      "label": "03-test-design-specification.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_mon8tnzt_fomugv/bc4a297e88b9_03-test-design-specification.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_mon8to0e_nxxv40",
+      "createdAt": "2026-05-01T18:25:29.294Z",
+      "kind": "report",
+      "label": "Dry-run ingestion audit report",
+      "path": "test_data/test-results/ingestion_audit_20260501182529.md",
+      "phase": "audit_ingestion"
+    },
+    {
+      "id": "ev_mon8to0e_xpohf6",
+      "createdAt": "2026-05-01T18:25:29.294Z",
+      "kind": "source",
+      "label": "04-test-strategy.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_mon8tnzt_fomugv/bc452080a746_04-test-strategy.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_mon8to0e_sv71ud",
+      "createdAt": "2026-05-01T18:25:29.294Z",
+      "kind": "json",
+      "label": "Dry-run ingestion audit JSON",
+      "path": "test_data/test-results/ingestion_audit_20260501182529.json",
+      "phase": "audit_ingestion"
+    },
+    {
+      "id": "ev_mon8to0f_ndk3ib",
+      "createdAt": "2026-05-01T18:25:29.295Z",
+      "kind": "source",
+      "label": "05-test-plan.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_mon8tnzt_fomugv/64cc7c5d20b4_05-test-plan.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_mon8to0m_2bq6u3",
+      "createdAt": "2026-05-01T18:25:29.302Z",
+      "kind": "source",
+      "label": "06-requirements-traceability-matrix.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_mon8tnzt_fomugv/bae75844e4bc_06-requirements-traceability-matrix.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_mon8to0m_z0yv52",
+      "createdAt": "2026-05-01T18:25:29.302Z",
+      "kind": "json",
+      "label": "Exported repository JSON",
+      "path": "test-doc/test-case-repository.json",
+      "phase": "publish_artifacts"
+    },
+    {
+      "id": "ev_mon8to0n_gcm33v",
+      "createdAt": "2026-05-01T18:25:29.303Z",
+      "kind": "workbook",
+      "label": "Exported TestCases workbook",
+      "path": "test_data/TestCases.xlsx",
+      "phase": "publish_artifacts"
+    },
+    {
+      "id": "ev_mon8to0o_sf2b0m",
+      "createdAt": "2026-05-01T18:25:29.304Z",
+      "kind": "source",
+      "label": "07-test-data-environment-specification.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_mon8tnzt_fomugv/dee1179870fd_07-test-data-environment-specification.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_mon8to0p_9do78l",
+      "createdAt": "2026-05-01T18:25:29.305Z",
+      "kind": "source",
+      "label": "08-quality-risk-defect-governance.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_mon8tnzt_fomugv/c4d411862cc6_08-quality-risk-defect-governance.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_mon8to0q_u3iurc",
+      "createdAt": "2026-05-01T18:25:29.306Z",
+      "kind": "json",
+      "label": "Dry-run evidence verification",
+      "path": "test_data/test-results/uiqa_evidence_verification_20260501182529.json",
+      "phase": "verify_evidence"
+    },
+    {
+      "id": "ev_mon8to0q_43ghn8",
+      "createdAt": "2026-05-01T18:25:29.306Z",
+      "kind": "source",
+      "label": "09-test-case-repository.docx",
+      "path": "test_data/ui-qa/uploads/uiqa_mon8tnzt_fomugv/2b17d95d7da3_09-test-case-repository.docx",
+      "phase": "upload_sources"
+    },
+    {
+      "id": "ev_mon8to0r_2tmisb",
+      "createdAt": "2026-05-01T18:25:29.307Z",
+      "kind": "report",
+      "label": "Final QA audit",
+      "path": "test_data/test-results/audit_uiqa_20260501182529.md",
+      "phase": "audit_run"
+    }
+  ],
+  "checkpoints": [],
+  "messages": [],
+  "blockerCount": 0,
+  "findingCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "generatedSpecPath": "test_data/ui-qa/generated/uiqa_mon8tnzt_fomugv/test-case-repository.generated.json",
+  "gateStatus": "passed",
+  "auditVerdict": "approved"
+}

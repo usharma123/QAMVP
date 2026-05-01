@@ -19,6 +19,8 @@ Supported input:
 - Use absolute paths for all commands.
 - Repo root is `/Users/utsavsharma/Documents/GitHub/QAMVP`.
 - The ingestion DB structured tables are the source of truth: `test_cases` and `test_case_steps`.
+- This command is separate from the independent pre-execution gate `/audit-test-case-ingestion`.
+- In the governed corporate flow, run `/audit-test-case-ingestion` after ingestion/reseed and before this command. If it was not run, explicitly warn that the independent DB/KB vs hard-doc gate was skipped.
 - Do not inspect, read, search, summarize, or rely on webapp source code when constructing, validating, executing, or auditing test cases.
 - Forbidden source-code evidence includes files under `/Users/utsavsharma/Documents/GitHub/QAMVP/mock-trading-app/src`, Angular component/service files, route definitions, templates, styles, compiled bundles, source maps, and implementation code used to infer expected behavior.
 - The allowed oracle is: source documents, ingestion KB/DB, exported repository artifacts, `test_data/TestCases.xlsx`, observable browser behavior, screenshots, logs, traces, and saved run artifacts.
@@ -39,6 +41,7 @@ Create and maintain this checklist before executing:
 Query Playwright Checklist
 - [ ] Preflight dependencies
 - [ ] Ensure DB is ready
+- [ ] Confirm independent ingestion audit gate status
 - [ ] Export KB test cases to JSON, Markdown, and workbook
 - [ ] Verify DB → JSON → Markdown → workbook alignment
 - [ ] Run Playwright execution
@@ -103,6 +106,39 @@ DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion /Users/ut
 ```
 
 If the count is still `0`, stop and report that the KB has no structured test cases.
+
+## 1A. Confirm Independent Ingestion Audit Gate Status
+
+This command must not run the ingestion audit internally. It must check whether a recent standalone ingestion audit artifact exists and warn if it does not.
+
+Check for the latest standalone ingestion audit:
+
+```bash
+/bin/ls -t /Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/ingestion_audit_*.json 2>/dev/null | /usr/bin/head -1
+```
+
+If no artifact exists, warn:
+
+```text
+Independent ingestion audit gate was not found. Governed flow requires /audit-test-case-ingestion before /query-playwright-test-case.
+```
+
+If an artifact exists, summarize its finding counts:
+
+```bash
+/usr/local/bin/node - <<'NODE'
+const fs = require('fs');
+const cp = require('child_process');
+const latest = cp.execFileSync('/bin/zsh', ['-lc', '/bin/ls -t /Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/ingestion_audit_*.json 2>/dev/null | /usr/bin/head -1'], { encoding: 'utf8' }).trim();
+if (!latest) {
+  console.log('ingestion_audit_gate=missing');
+  process.exit(0);
+}
+const data = JSON.parse(fs.readFileSync(latest, 'utf8'));
+console.log('ingestion_audit_gate=' + latest);
+console.log('finding_counts=' + JSON.stringify(data.summary?.finding_counts || {}));
+NODE
+```
 
 ## 2. Export KB Test Cases To Artifacts
 

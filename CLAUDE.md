@@ -9,6 +9,7 @@ The current required flow is:
 ```text
 hard source documents
   → ingestion KB/DB
+  → /audit-test-case-ingestion independent DB/KB vs hard-doc gate
   → test-doc/test-case-repository.json
   → test-doc/09-test-case-repository.md
   → test_data/TestCases.xlsx
@@ -26,14 +27,24 @@ Older JSON/Selenium and Python-orchestrator paths still exist in the repo, but t
 - The test oracle is: hard source documents, ingestion KB/DB records, exported repository artifacts, `test_data/TestCases.xlsx`, observable browser behavior, screenshots, logs, and saved run artifacts.
 - Treat generated tests, generated scripts, prior agent analyses, repair notes, and self-healing explanations as audit subjects, not authority.
 - The audit must independently reconcile hard docs, KB/DB records, exported JSON/Markdown, workbook rows, generated scripts, and run artifacts.
+- Test-case ingestion must pass `/audit-test-case-ingestion` before browser execution in the governed flow.
 - A browser `PASS` is not enough. The final corporate outcome comes from `/audit-test-run`.
-- When running `/query-playwright-test-case`, `/query-browse-test-case`, `/audit-test-run`, or `/heal-audit-findings`, create the command's visible checklist before executing the first step and update it throughout the run.
+- When running `/audit-test-case-ingestion`, `/query-playwright-test-case`, `/query-browse-test-case`, `/audit-test-run`, or `/heal-audit-findings`, create the command's visible checklist before executing the first step and update it throughout the run.
 
 ## Primary Command Flow
 
 ### Run All KB Test Cases
 
-Use this as the normal end-to-end path:
+Use this as the normal governed end-to-end path:
+
+```text
+/audit-test-case-ingestion
+/query-playwright-test-case all
+```
+
+The ingestion audit is a separate command and must complete before execution. It audits DB/KB test-case records against hard source documents only; it does not run Playwright and does not inspect the app.
+
+After that gate passes, execute:
 
 ```text
 /query-playwright-test-case all
@@ -44,12 +55,13 @@ Use `/query-browse-test-case all` only when intentionally comparing against the 
 The Playwright command should:
 1. Ensure the ingestion DB is available.
 2. Verify structured KB tables `test_cases` and `test_case_steps`.
-3. Export KB test cases to `test-doc/test-case-repository.json`.
-4. Render `test-doc/09-test-case-repository.md`.
-5. Build `test_data/TestCases.xlsx`.
-6. Execute browser tests with bounded Playwright parallelism.
-7. Save per-TC Playwright artifacts.
-8. Run `/audit-test-run` against the executed evidence.
+3. Confirm the governed ingestion audit has already passed, or explicitly warn that the independent pre-execution gate was skipped.
+4. Export KB test cases to `test-doc/test-case-repository.json`.
+5. Render `test-doc/09-test-case-repository.md`.
+6. Build `test_data/TestCases.xlsx`.
+7. Execute browser tests with bounded Playwright parallelism.
+8. Save per-TC Playwright artifacts.
+9. Run `/audit-test-run` against the executed evidence.
 
 Legacy agent-browser path:
 
@@ -60,12 +72,13 @@ Legacy agent-browser path:
 This command should:
 1. Ensure the ingestion DB is available.
 2. Verify structured KB tables `test_cases` and `test_case_steps`.
-3. Export KB test cases to `test-doc/test-case-repository.json`.
-4. Render `test-doc/09-test-case-repository.md`.
-5. Build `test_data/TestCases.xlsx`.
-6. Execute browser tests through `/browse-test-case all`.
-7. Save browser run artifacts.
-8. Run `/audit-test-run` against the executed evidence.
+3. Confirm the governed ingestion audit has already passed, or explicitly warn that the independent pre-execution gate was skipped.
+4. Export KB test cases to `test-doc/test-case-repository.json`.
+5. Render `test-doc/09-test-case-repository.md`.
+6. Build `test_data/TestCases.xlsx`.
+7. Execute browser tests through `/browse-test-case all`.
+8. Save browser run artifacts.
+9. Run `/audit-test-run` against the executed evidence.
 
 ### Run One KB Test Case
 
@@ -87,6 +100,17 @@ Use this only when `test_data/TestCases.xlsx` is already aligned with the KB/DB 
 ```
 
 Both Playwright and `/browse-test-case` must remain black-box. They may use visible UI behavior, screenshots, browser text, traces, and saved artifacts, but they must not use webapp source code or framework internals as the oracle.
+
+### Run Ingestion Audit Only
+
+Use this immediately after ingestion/reseed and before any browser execution:
+
+```text
+/audit-test-case-ingestion
+/audit-test-case-ingestion strict
+```
+
+This command is independent from `/query-playwright-test-case`. It verifies the structured DB/KB inventory against hard documents and blocks execution when critical or high findings exist. Use `strict` when medium findings should also block execution.
 
 ### Run Audit Only
 
@@ -114,6 +138,7 @@ QAMVP/
 ├── .claude/commands/                  ← Claude Code slash commands
 │   ├── query-browse-test-case.md      ← primary end-to-end KB → browser → audit flow
 │   ├── query-playwright-test-case.md  ← KB → Playwright parallel runner → audit flow
+│   ├── audit-test-case-ingestion.md   ← independent pre-execution DB/KB vs hard-doc gate
 │   ├── browse-test-case.md            ← black-box agent-browser execution from TestCases.xlsx
 │   ├── audit-test-run.md              ← independent corporate QA audit
 │   └── heal-audit-findings.md         ← remediate audit findings, regenerate, rerun audit
@@ -156,12 +181,14 @@ The accepted source chain is:
 ```text
 test-doc hard documents
   → ingestion DB structured records
+  → /audit-test-case-ingestion
   → test-doc/test-case-repository.json
   → test-doc/09-test-case-repository.md
   → test_data/TestCases.xlsx
 ```
 
 Before trusting a test run, verify that:
+- `/audit-test-case-ingestion` passed after the latest ingestion/reseed.
 - `test_cases` and `test_case_steps` exist in the ingestion DB.
 - DB records match `test-doc/test-case-repository.json`.
 - JSON records match `test-doc/09-test-case-repository.md`.

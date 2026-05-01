@@ -13,6 +13,7 @@ Supported input:
 ## Rules
 
 - This command is independent and separate from `/query-playwright-test-case`.
+- `/query-playwright-test-case` may invoke this command as a required stage, but this command's audit judgment must remain independent from the execution command and from any agent that generated or healed tests.
 - Do not run Playwright.
 - Do not run `/query-playwright-test-case`.
 - Do not run `/browse-test-case`.
@@ -21,6 +22,7 @@ Supported input:
 - The only allowed oracle for this gate is hard source documents plus the ingestion DB/KB structured records.
 - Run this after ingestion/reseed has populated the DB/KB and before browser execution.
 - If this gate fails, stop. Remediate the DB/KB, hard docs, exported repository, or runner mapping before executing tests.
+- Always write both Markdown and JSON artifacts for the gate run. Failed gate attempts are durable evidence and must not be overwritten.
 
 ## Command Checklist
 
@@ -122,8 +124,9 @@ If the audit exits nonzero:
 - Mark the gate `BLOCKED`.
 - Report the finding counts and artifact paths.
 - Do not proceed to `/query-playwright-test-case`.
-- Remediate the DB/KB, hard source documents, exported repository artifacts, or runner step mapping.
-- Re-run `/audit-test-case-ingestion` after remediation.
+- When invoked by `/query-playwright-test-case`, return control to that command's gate → heal → gate loop.
+- When run standalone, ask the user whether to remediate the DB/KB, hard source documents, exported repository artifacts, or runner step mapping.
+- Re-run `/audit-test-case-ingestion` after approved remediation.
 
 If the audit exits zero:
 - Mark the gate `PASS`.

@@ -9,13 +9,15 @@ The current required flow is:
 ```text
 hard source documents
   → ingestion KB/DB
-  → /audit-test-case-ingestion independent DB/KB vs hard-doc gate
+  → /query-playwright-test-case invokes /audit-test-case-ingestion
+  → heal DB/KB/source alignment findings and rerun gate until pass
   → test-doc/test-case-repository.json
   → test-doc/09-test-case-repository.md
   → test_data/TestCases.xlsx
-  → /query-playwright-test-case or /browse-test-case
+  → Playwright or agent-browser execution
   → saved run artifacts
   → /audit-test-run independent corporate audit
+  → heal final audit findings and rerun audit when needed
 ```
 
 Older JSON/Selenium and Python-orchestrator paths still exist in the repo, but they are not the default audit-critical flow unless the user explicitly asks for them.
@@ -27,7 +29,10 @@ Older JSON/Selenium and Python-orchestrator paths still exist in the repo, but t
 - The test oracle is: hard source documents, ingestion KB/DB records, exported repository artifacts, `test_data/TestCases.xlsx`, observable browser behavior, screenshots, logs, and saved run artifacts.
 - Treat generated tests, generated scripts, prior agent analyses, repair notes, and self-healing explanations as audit subjects, not authority.
 - The audit must independently reconcile hard docs, KB/DB records, exported JSON/Markdown, workbook rows, generated scripts, and run artifacts.
-- Test-case ingestion must pass `/audit-test-case-ingestion` before browser execution in the governed flow.
+- Test-case ingestion must pass `/audit-test-case-ingestion` before browser execution in the governed flow. `/query-playwright-test-case` must invoke that gate and must not start Playwright until it passes.
+- If the ingestion gate fails, perform source-layer remediation, write a healing artifact, rerun the gate, and repeat until pass or human direction stops the run.
+- Ask for human feedback before material hard-doc changes, ambiguous DB/KB fixes, repeated failed remediation, or execution with unresolved material findings.
+- If the final audit is `Not Approved` or `Inconclusive`, invoke `/heal-audit-findings`, preserve remediation artifacts, rerun required execution/audit, and ask for human direction when approval conditions or repeated blockers remain.
 - A browser `PASS` is not enough. The final corporate outcome comes from `/audit-test-run`.
 - When running `/audit-test-case-ingestion`, `/query-playwright-test-case`, `/query-browse-test-case`, `/audit-test-run`, or `/heal-audit-findings`, create the command's visible checklist before executing the first step and update it throughout the run.
 
@@ -38,30 +43,27 @@ Older JSON/Selenium and Python-orchestrator paths still exist in the repo, but t
 Use this as the normal governed end-to-end path:
 
 ```text
-/audit-test-case-ingestion
 /query-playwright-test-case all
 ```
 
-The ingestion audit is a separate command and must complete before execution. It audits DB/KB test-case records against hard source documents only; it does not run Playwright and does not inspect the app.
-
-After that gate passes, execute:
-
-```text
-/query-playwright-test-case all
-```
+The Playwright query command invokes `/audit-test-case-ingestion` as a required pre-execution gate. The gate remains an independent audit function, but the query command orchestrates it end to end: gate, heal, gate again until pass, human checkpoint, execution, artifact verification, final `/audit-test-run`, and final audit healing when needed.
 
 Use `/query-browse-test-case all` only when intentionally comparing against the older agent-browser path.
 
 The Playwright command should:
 1. Ensure the ingestion DB is available.
 2. Verify structured KB tables `test_cases` and `test_case_steps`.
-3. Confirm the governed ingestion audit has already passed, or explicitly warn that the independent pre-execution gate was skipped.
-4. Export KB test cases to `test-doc/test-case-repository.json`.
-5. Render `test-doc/09-test-case-repository.md`.
-6. Build `test_data/TestCases.xlsx`.
-7. Execute browser tests with bounded Playwright parallelism.
-8. Save per-TC Playwright artifacts.
-9. Run `/audit-test-run` against the executed evidence.
+3. Invoke `/audit-test-case-ingestion`.
+4. If the gate fails, heal authoritative source-layer issues, save `ingestion_heal_<timestamp>.md`, and rerun `/audit-test-case-ingestion`.
+5. Repeat gate → heal → gate until the gate passes or human direction stops the run.
+6. Ask for human feedback before material source changes, ambiguous fixes, third remediation attempts, or execution with unresolved material findings.
+7. Export KB test cases to `test-doc/test-case-repository.json`.
+8. Render `test-doc/09-test-case-repository.md`.
+9. Build `test_data/TestCases.xlsx`.
+10. Execute browser tests with bounded Playwright parallelism.
+11. Save per-TC Playwright artifacts.
+12. Run `/audit-test-run` against the executed evidence.
+13. If the final audit is `Not Approved` or `Inconclusive`, ask the user, invoke `/heal-audit-findings`, rerun required execution/audit, and repeat until approval or human stop.
 
 Legacy agent-browser path:
 
@@ -72,13 +74,16 @@ Legacy agent-browser path:
 This command should:
 1. Ensure the ingestion DB is available.
 2. Verify structured KB tables `test_cases` and `test_case_steps`.
-3. Confirm the governed ingestion audit has already passed, or explicitly warn that the independent pre-execution gate was skipped.
-4. Export KB test cases to `test-doc/test-case-repository.json`.
-5. Render `test-doc/09-test-case-repository.md`.
-6. Build `test_data/TestCases.xlsx`.
-7. Execute browser tests through `/browse-test-case all`.
-8. Save browser run artifacts.
-9. Run `/audit-test-run` against the executed evidence.
+3. Invoke `/audit-test-case-ingestion`.
+4. If the gate fails, heal authoritative source-layer issues, save a healing artifact, and rerun `/audit-test-case-ingestion`.
+5. Repeat gate → heal → gate until the gate passes or human direction stops the run.
+6. Ask for human feedback at the same material remediation checkpoints.
+7. Export KB test cases to `test-doc/test-case-repository.json`.
+8. Render `test-doc/09-test-case-repository.md`.
+9. Build `test_data/TestCases.xlsx`.
+10. Execute browser tests through `/browse-test-case all`.
+11. Save browser run artifacts.
+12. Run `/audit-test-run` against the executed evidence.
 
 ### Run One KB Test Case
 
@@ -91,7 +96,7 @@ Replace `TC-001` with the target test case ID.
 
 ### Run Browser Execution Only
 
-Use this only when `test_data/TestCases.xlsx` is already aligned with the KB/DB and hard docs:
+Use execution-only commands only when `test_data/TestCases.xlsx` is already aligned with the KB/DB and hard docs and `/audit-test-case-ingestion` has passed for the current ingestion state:
 
 ```text
 /query-playwright-test-case TC-001
@@ -103,14 +108,14 @@ Both Playwright and `/browse-test-case` must remain black-box. They may use visi
 
 ### Run Ingestion Audit Only
 
-Use this immediately after ingestion/reseed and before any browser execution:
+Use this directly when you only want to audit ingestion without executing browser tests:
 
 ```text
 /audit-test-case-ingestion
 /audit-test-case-ingestion strict
 ```
 
-This command is independent from `/query-playwright-test-case`. It verifies the structured DB/KB inventory against hard documents and blocks execution when critical or high findings exist. Use `strict` when medium findings should also block execution.
+This command is independent, but `/query-playwright-test-case` invokes it in the governed end-to-end flow. It verifies the structured DB/KB inventory against hard documents and blocks execution when critical or high findings exist. Use `strict` when medium findings should also block execution.
 
 ### Run Audit Only
 
@@ -181,7 +186,8 @@ The accepted source chain is:
 ```text
 test-doc hard documents
   → ingestion DB structured records
-  → /audit-test-case-ingestion
+  → /audit-test-case-ingestion, invoked by /query-playwright-test-case in governed runs
+  → gate/heal/gate loop with artifacts until pass
   → test-doc/test-case-repository.json
   → test-doc/09-test-case-repository.md
   → test_data/TestCases.xlsx
@@ -189,6 +195,8 @@ test-doc hard documents
 
 Before trusting a test run, verify that:
 - `/audit-test-case-ingestion` passed after the latest ingestion/reseed.
+- Every failed gate attempt and remediation attempt produced artifacts under `test_data/test-results/`.
+- Human feedback was requested and recorded for material source changes, ambiguous fixes, third remediation attempts, or unresolved material findings.
 - `test_cases` and `test_case_steps` exist in the ingestion DB.
 - DB records match `test-doc/test-case-repository.json`.
 - JSON records match `test-doc/09-test-case-repository.md`.

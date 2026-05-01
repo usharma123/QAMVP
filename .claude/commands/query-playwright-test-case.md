@@ -1,6 +1,6 @@
 # Query Playwright Test Case
 
-Execute structured KB test cases with the deterministic Playwright black-box runner, then run the independent corporate audit.
+Execute structured KB test cases with the deterministic Playwright black-box runner, with a mandatory ingestion audit and healing loop before execution, then run the independent corporate audit.
 
 ## Input
 
@@ -19,8 +19,11 @@ Supported input:
 - Use absolute paths for all commands.
 - Repo root is `/Users/utsavsharma/Documents/GitHub/QAMVP`.
 - The ingestion DB structured tables are the source of truth: `test_cases` and `test_case_steps`.
-- This command is separate from the independent pre-execution gate `/audit-test-case-ingestion`.
-- In the governed corporate flow, run `/audit-test-case-ingestion` after ingestion/reseed and before this command. If it was not run, explicitly warn that the independent DB/KB vs hard-doc gate was skipped.
+- This command must invoke the independent pre-execution gate `/audit-test-case-ingestion` after ingestion/reseed and before Playwright execution.
+- The ingestion gate remains a separate audit function, but this command orchestrates it as a required stage.
+- If `/audit-test-case-ingestion` fails, do not start Playwright. Heal the authoritative source layer, regenerate derived artifacts, save healing artifacts, and invoke `/audit-test-case-ingestion` again.
+- Continue the gate → heal → gate loop until the gate passes, the same blocking finding repeats after three remediation attempts, or a human explicitly stops/redirects the run.
+- Human-in-the-loop checkpoints are mandatory before any material source-document change, ambiguous DB/KB remediation, third remediation attempt, or execution after unresolved medium findings.
 - Do not inspect, read, search, summarize, or rely on webapp source code when constructing, validating, executing, or auditing test cases.
 - Forbidden source-code evidence includes files under `/Users/utsavsharma/Documents/GitHub/QAMVP/mock-trading-app/src`, Angular component/service files, route definitions, templates, styles, compiled bundles, source maps, and implementation code used to infer expected behavior.
 - The allowed oracle is: source documents, ingestion KB/DB, exported repository artifacts, `test_data/TestCases.xlsx`, observable browser behavior, screenshots, logs, traces, and saved run artifacts.
@@ -31,6 +34,7 @@ Supported input:
 - Reseed or ingest only when the DB is missing or has zero structured test cases.
 - Run Playwright with bounded parallelism. Default to `PLAYWRIGHT_WORKERS=2`; use `PLAYWRIGHT_WORKERS=1` when debugging.
 - After Playwright execution, run `/audit-test-run` against the generated result artifacts.
+- If the final audit is `Not Approved` or `Inconclusive`, invoke `/heal-audit-findings`, preserve artifacts, rerun required execution when the healing command requires it, and invoke `/audit-test-run` again until approved, approved with conditions accepted by the user, or human direction stops the run.
 - Do not treat a Playwright `PASS` as sufficient. Before audit, verify the fresh result artifacts contain non-stale timing fields and that the DB → JSON → Markdown → workbook source chain is aligned.
 
 ## Command Checklist
@@ -41,12 +45,15 @@ Create and maintain this checklist before executing:
 Query Playwright Checklist
 - [ ] Preflight dependencies
 - [ ] Ensure DB is ready
-- [ ] Confirm independent ingestion audit gate status
+- [ ] Run ingestion audit gate
+- [ ] Heal ingestion findings and rerun gate until pass
+- [ ] Human checkpoint before execution
 - [ ] Export KB test cases to JSON, Markdown, and workbook
 - [ ] Verify DB → JSON → Markdown → workbook alignment
 - [ ] Run Playwright execution
 - [ ] Verify fresh Playwright artifact timing and black-box policy
 - [ ] Run independent corporate audit
+- [ ] Heal final audit findings and rerun audit when needed
 - [ ] Print final summary
 ```
 
@@ -107,23 +114,23 @@ DATABASE_URL=postgresql://ingestion:ingestion@localhost:5433/ingestion /Users/ut
 
 If the count is still `0`, stop and report that the KB has no structured test cases.
 
-## 1A. Confirm Independent Ingestion Audit Gate Status
+## 1A. Run Ingestion Audit Gate
 
-This command must not run the ingestion audit internally. It must check whether a recent standalone ingestion audit artifact exists and warn if it does not.
+Invoke the standalone gate before execution:
 
-Check for the latest standalone ingestion audit:
+```text
+/audit-test-case-ingestion
+```
+
+Record the latest gate artifact paths:
 
 ```bash
 /bin/ls -t /Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/ingestion_audit_*.json 2>/dev/null | /usr/bin/head -1
 ```
 
-If no artifact exists, warn:
+If no artifact exists after invoking the gate, stop. The run cannot proceed without an ingestion-audit artifact.
 
-```text
-Independent ingestion audit gate was not found. Governed flow requires /audit-test-case-ingestion before /query-playwright-test-case.
-```
-
-If an artifact exists, summarize its finding counts:
+Summarize the gate finding counts:
 
 ```bash
 /usr/local/bin/node - <<'NODE'
@@ -131,14 +138,99 @@ const fs = require('fs');
 const cp = require('child_process');
 const latest = cp.execFileSync('/bin/zsh', ['-lc', '/bin/ls -t /Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/ingestion_audit_*.json 2>/dev/null | /usr/bin/head -1'], { encoding: 'utf8' }).trim();
 if (!latest) {
-  console.log('ingestion_audit_gate=missing');
-  process.exit(0);
+  console.error('ingestion_audit_gate=missing');
+  process.exit(1);
 }
 const data = JSON.parse(fs.readFileSync(latest, 'utf8'));
 console.log('ingestion_audit_gate=' + latest);
 console.log('finding_counts=' + JSON.stringify(data.summary?.finding_counts || {}));
+const counts = data.summary?.finding_counts || {};
+if ((counts.critical || 0) > 0 || (counts.high || 0) > 0) process.exit(2);
 NODE
 ```
+
+If the gate exits cleanly, continue to human checkpoint before execution.
+
+## 1B. Heal Ingestion Findings And Rerun Gate Until Pass
+
+If `/audit-test-case-ingestion` reports critical or high findings:
+
+1. Read the latest `ingestion_audit_<timestamp>.json` and `.md`.
+2. Create a remediation artifact before editing:
+
+```text
+test_data/test-results/ingestion_heal_<YYYYMMDD_HHMMSS>.md
+```
+
+3. Classify each blocking finding by authoritative owner:
+
+| Finding type | Primary remediation owner |
+|---|---|
+| Missing DB test cases or steps | ingestion/reseed pipeline |
+| Missing KB chunks | ingestion/reseed pipeline |
+| Missing requirement IDs | DB `test_case_steps`, sourced from hard docs |
+| Requirement not present in hard docs | test-case repository or approved hard docs, with human approval |
+| Missing expected output | DB/source test repository, with observable expected result |
+| Step numbering or case requirement mismatch | DB structured rows, then regenerate exports |
+| Missing hard document in DB | document ingestion pipeline |
+
+4. Ask the user for human feedback before any ambiguous or material change:
+
+```text
+The ingestion audit found <finding summary>. I can remediate by <specific source-layer change>. Approve this remediation, or provide the expected requirement/test-case wording?
+```
+
+5. Apply only source-layer fixes. Do not hand-edit generated Markdown/workbook artifacts as the primary fix.
+6. Regenerate derived artifacts after each remediation attempt.
+7. Append to the remediation artifact:
+   - input gate report path
+   - findings addressed
+   - user decision or approval text
+   - files or DB rows changed
+   - regeneration commands run
+   - next gate report path
+8. Invoke `/audit-test-case-ingestion` again.
+
+Repeat until the gate passes.
+
+Stop and ask the user for direction when:
+- the same critical/high finding remains after three remediation attempts
+- the remediation would change hard source document meaning
+- the remediation requires choosing between multiple valid business interpretations
+- the gate passes but medium findings remain and execution would be materially affected
+- DB is unavailable and a source-of-truth remediation cannot be verified
+
+Use this prompt shape:
+
+```text
+The ingestion gate is still blocked after <N> attempt(s).
+Blocking findings: <summary>
+Artifacts:
+- Gate report: <path>
+- Heal report: <path>
+Options:
+1. Approve another remediation attempt: <specific proposed change>
+2. Provide corrected source wording/test-case data
+3. Stop before execution
+How should I proceed?
+```
+
+## 1C. Human Checkpoint Before Execution
+
+Before Playwright starts, print:
+
+```text
+=== PRE-EXECUTION HUMAN CHECKPOINT ===
+Ingestion gate: PASS
+Latest gate artifacts: <md>, <json>
+Healing attempts: <N>
+Remaining medium/low findings: <summary or none>
+Execution scope: all / <TC-ID>
+Workers: <N>
+Proceeding to Playwright unless you want to pause or change scope now.
+```
+
+If the user responds with changes, apply them before execution and rerun `/audit-test-case-ingestion`.
 
 ## 2. Export KB Test Cases To Artifacts
 
@@ -331,6 +423,40 @@ The audit must confirm:
 
 If the audit is `Not Approved` or `Inconclusive`, report that result even if Playwright execution showed `PASS`.
 
+## 5A. Heal Final Audit Findings And Rerun Audit When Needed
+
+If `/audit-test-run` returns `Not Approved` or `Inconclusive`:
+
+1. Ask the user before remediation:
+
+```text
+The final corporate audit returned <verdict>.
+Blocking findings: <summary>
+I can invoke /heal-audit-findings against <audit report path>, then rerun execution/audit when required.
+Approve this remediation loop, provide different remediation instructions, or stop?
+```
+
+2. If approved, invoke:
+
+```text
+/heal-audit-findings <audit report path>
+```
+
+3. Ensure `/heal-audit-findings` writes remediation evidence and reruns `/audit-test-run`.
+4. Repeat until:
+   - `/audit-test-run` returns `Approved`
+   - `/audit-test-run` returns `Approved with Conditions` and the user explicitly accepts the conditions
+   - the same blocking finding remains after three remediation attempts
+   - the user stops or redirects the run
+
+If the audit is `Approved with Conditions`, ask:
+
+```text
+The corporate audit is Approved with Conditions.
+Conditions: <summary>
+Accept these conditions for this run, remediate them now, or stop?
+```
+
 ## 6. Final Summary
 
 Print:
@@ -352,4 +478,10 @@ Artifact timing:
   result.status populated, startedAt != finishedAt, durationMs > 0 confirmed / failed
 Audit:
   Approved / Approved with Conditions / Not Approved / Inconclusive
+Healing loops:
+  Ingestion gate attempts: <N>
+  Ingestion heal artifacts: <paths or none>
+  Final audit heal attempts: <N>
+Human checkpoints:
+  <decisions recorded>
 ```

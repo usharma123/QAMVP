@@ -1,0 +1,101 @@
+[
+  {
+    "id": "src_mona6gcz_f40x8u",
+    "runId": "uiqa_mona6gci_903jr0",
+    "originalName": "01-business-requirements-document.docx",
+    "storedPath": "test_data/ui-qa/uploads/uiqa_mona6gci_903jr0/75ba74032f55_01-business-requirements-document.docx",
+    "documentType": "BRD",
+    "sha256": "75ba74032f5583526c3ce4035eb7f21f024045dda836b8ecafd3bad94c8ee7e9",
+    "size": 35621,
+    "status": "accepted",
+    "createdAt": "2026-05-01T19:03:25.523Z"
+  },
+  {
+    "id": "src_mona6gd3_6i87bg",
+    "runId": "uiqa_mona6gci_903jr0",
+    "originalName": "02-functional-requirements-specification.docx",
+    "storedPath": "test_data/ui-qa/uploads/uiqa_mona6gci_903jr0/1bf29955d09f_02-functional-requirements-specification.docx",
+    "documentType": "FRS",
+    "sha256": "1bf29955d09ffb4597c4f2391daef5cdd474d9a2b7153ef5efa1715b8336733d",
+    "size": 36715,
+    "status": "accepted",
+    "createdAt": "2026-05-01T19:03:25.527Z"
+  },
+  {
+    "id": "src_mona6gd4_c2xi3r",
+    "runId": "uiqa_mona6gci_903jr0",
+    "originalName": "03-test-design-specification.docx",
+    "storedPath": "test_data/ui-qa/uploads/uiqa_mona6gci_903jr0/bc4a297e88b9_03-test-design-specification.docx",
+    "documentType": "SOURCE_DOC",
+    "sha256": "bc4a297e88b98dc0645d0a1bc1bc8fdd63760485d97f63446e34bc078f79de42",
+    "size": 16590,
+    "status": "accepted",
+    "createdAt": "2026-05-01T19:03:25.528Z"
+  },
+  {
+    "id": "src_mona6gd5_w6mv8g",
+    "runId": "uiqa_mona6gci_903jr0",
+    "originalName": "04-test-strategy.docx",
+    "storedPath": "test_data/ui-qa/uploads/uiqa_mona6gci_903jr0/bc452080a746_04-test-strategy.docx",
+    "documentType": "TEST_STRATEGY",
+    "sha256": "bc452080a74613289d89e8a9866cb9ec99671f2e9f270c301793c0de976e8d2d",
+    "size": 14190,
+    "status": "accepted",
+    "createdAt": "2026-05-01T19:03:25.529Z"
+  },
+  {
+    "id": "src_mona6gd6_zguanp",
+    "runId": "uiqa_mona6gci_903jr0",
+    "originalName": "05-test-plan.docx",
+    "storedPath": "test_data/ui-qa/uploads/uiqa_mona6gci_903jr0/64cc7c5d20b4_05-test-plan.docx",
+    "documentType": "TEST_PLAN",
+    "sha256": "64cc7c5d20b4556484544b1bc46bd60c2cb6e94879c28b05db0677af83ade68a",
+    "size": 13567,
+    "status": "accepted",
+    "createdAt": "2026-05-01T19:03:25.530Z"
+  },
+  {
+    "id": "src_mona6gd7_2zxg5c",
+    "runId": "uiqa_mona6gci_903jr0",
+    "originalName": "06-requirements-traceability-matrix.docx",
+    "storedPath": "test_data/ui-qa/uploads/uiqa_mona6gci_903jr0/bae75844e4bc_06-requirements-traceability-matrix.docx",
+    "documentType": "RTM",
+    "sha256": "bae75844e4bce6f5f4e083a5907b7978915ea77336a42177ea982b304a1b994c",
+    "size": 16106,
+    "status": "accepted",
+    "createdAt": "2026-05-01T19:03:25.531Z"
+  },
+  {
+    "id": "src_mona6gd8_vmsivn",
+    "runId": "uiqa_mona6gci_903jr0",
+    "originalName": "07-test-data-environment-specification.docx",
+    "storedPath": "test_data/ui-qa/uploads/uiqa_mona6gci_903jr0/dee1179870fd_07-test-data-environment-specification.docx",
+    "documentType": "TEST_DATA",
+    "sha256": "dee1179870fd6bf2b315e1e240bf6f90ef4442aa6483f397380f2e3cb814a989",
+    "size": 13536,
+    "status": "accepted",
+    "createdAt": "2026-05-01T19:03:25.532Z"
+  },
+  {
+    "id": "src_mona6gda_m286xm",
+    "runId": "uiqa_mona6gci_903jr0",
+    "originalName": "08-quality-risk-defect-governance.docx",
+    "storedPath": "test_data/ui-qa/uploads/uiqa_mona6gci_903jr0/c4d411862cc6_08-quality-risk-defect-governance.docx",
+    "documentType": "SOURCE_DOC",
+    "sha256": "c4d411862cc6615ebda78530cacdebd2378ccf25df873fd04545a7c49b15adc4",
+    "size": 13091,
+    "status": "accepted",
+    "createdAt": "2026-05-01T19:03:25.534Z"
+  },
+  {
+    "id": "src_mona6gdb_7h91qi",
+    "runId": "uiqa_mona6gci_903jr0",
+    "originalName": "09-test-case-repository.docx",
+    "storedPath": "test_data/ui-qa/uploads/uiqa_mona6gci_903jr0/2b17d95d7da3_09-test-case-repository.docx",
+    "documentType": "TEST_REPOSITORY",
+    "sha256": "2b17d95d7da3e424e205e904671f8b3b5485d4a1fae97a1bbb5f9114bf0d6431",
+    "size": 19269,
+    "status": "accepted",
+    "createdAt": "2026-05-01T19:03:25.535Z"
+  }
+]

@@ -1,0 +1,119 @@
+{
+  "runId": "20260501_110148",
+  "testCaseId": "TC-001",
+  "title": "Maker submits BUY, checker approves, dashboard reflects one approved trade",
+  "status": "FAIL",
+  "verdict": "FAIL",
+  "baseURL": "http://localhost:4200",
+  "workerIndex": 0,
+  "project": "chromium",
+  "startedAt": "2026-05-01T15:01:49.635Z",
+  "finishedAt": "2026-05-01T15:01:58.696Z",
+  "durationMs": 9061,
+  "artifactDir": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260501_110148",
+  "sourceRepository": "test-doc/test-case-repository.json",
+  "sourceWorkbook": "test_data/TestCases.xlsx",
+  "blackBoxPolicy": {
+    "webappSourceInspected": false,
+    "angularInternalsUsed": false,
+    "oracle": "hard docs + KB/DB artifacts + workbook + observable browser behavior"
+  },
+  "artifacts": {
+    "resultJson": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260501_110148/result.json",
+    "stepLog": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260501_110148/step-log.md",
+    "finalPageText": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260501_110148/final-page-text.txt",
+    "trace": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260501_110148/trace.zip"
+  },
+  "steps": [
+    {
+      "stepNumber": 1,
+      "requirementId": "REQ-FR-002",
+      "description": "Login as maker using documented credentials.",
+      "expectedOutput": "Dashboard page loads and navbar shows admin (maker).",
+      "testData": "username=admin,password=admin",
+      "status": "PASS",
+      "actual": "Logged in as admin.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260501_110148/step_01_pass.png"
+    },
+    {
+      "stepNumber": 2,
+      "requirementId": "REQ-FR-012",
+      "description": "Open Trading menu and navigate to New Trade.",
+      "expectedOutput": "New Trade form is visible.",
+      "testData": "target=nav-new-trade",
+      "status": "PASS",
+      "actual": "Navigated with nav-new-trade.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260501_110148/step_02_pass.png"
+    },
+    {
+      "stepNumber": 3,
+      "requirementId": "REQ-FR-030",
+      "description": "Select BUY, Technology, AAPL, Cash, quantity 100, Day Order.",
+      "expectedOutput": "All required trade form fields are populated.",
+      "testData": "side=BUY,sector=Technology,ticker=AAPL,accountType=Cash,quantity=100,timeInForce=Day Order",
+      "status": "PASS",
+      "actual": "Trade form fields populated from test data.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260501_110148/step_03_pass.png"
+    },
+    {
+      "stepNumber": 4,
+      "requirementId": "REQ-FR-031",
+      "description": "Wait for ticker price and total value to calculate.",
+      "expectedOutput": "Current Price is 178.50 and Total Value is 17850.00.",
+      "testData": "ticker=AAPL,expectedPrice=178.50,expectedTotal=17850.00",
+      "status": "PASS",
+      "actual": "Price/total verified: 178.50 / 17850.00.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260501_110148/step_04_pass.png"
+    },
+    {
+      "stepNumber": 5,
+      "requirementId": "REQ-FR-034",
+      "description": "Submit the order.",
+      "expectedOutput": "Success toast confirms Order TX-1001 and workflow moves toward approval queue.",
+      "testData": "expectedTxId=TX-1001",
+      "status": "PASS",
+      "actual": "Submit action completed and confirmation text was observed.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260501_110148/step_05_pass.png"
+    },
+    {
+      "stepNumber": 6,
+      "requirementId": "REQ-FR-040",
+      "description": "Open Approval Queue as maker before approval.",
+      "expectedOutput": "Queue shows Pending: 1 and includes BUY AAPL quantity 100.",
+      "testData": "expectedPending=1,ticker=AAPL,side=BUY,quantity=100",
+      "status": "PASS",
+      "actual": "Approval Queue state verified.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260501_110148/step_06_pass.png"
+    },
+    {
+      "stepNumber": 7,
+      "requirementId": "REQ-FR-014",
+      "description": "Logout maker.",
+      "expectedOutput": "Login page is visible and maker session is cleared.",
+      "testData": "",
+      "status": "PASS",
+      "actual": "Logged out and login page is visible.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260501_110148/step_07_pass.png"
+    },
+    {
+      "stepNumber": 8,
+      "requirementId": "REQ-FR-003",
+      "description": "Login as checker.",
+      "expectedOutput": "Dashboard page loads and navbar shows checker (checker).",
+      "testData": "username=checker,password=chscker@123",
+      "status": "PASS",
+      "actual": "Logged in as checker.",
+      "screenshot": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260501_110148/step_08_pass.png"
+    },
+    {
+      "stepNumber": 9,
+      "requirementId": "REQ-FR-043",
+      "description": "Open Approval Queue and approve the AAPL BUY row.",
+      "expectedOutput": "Approve action completes for TX-1001.",
+      "testData": "ticker=AAPL,side=BUY",
+      "status": "FAIL",
+      "actual": "Step execution failed.",
+      "error": "\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('queue-row').filter({ hasText: 'AAPL' }).filter({ hasText: 'BUY' }).first()\nExpected: visible\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('queue-row').filter({ hasText: 'AAPL' }).filter({ hasText: 'BUY' }).first()\u001b[22m\n"
+    }
+  ]
+}

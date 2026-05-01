@@ -1,0 +1,4045 @@
+{
+  "id": "ui_20260501_120806",
+  "scope": "TC-001",
+  "status": "waiting",
+  "currentPhase": "checkpoint",
+  "gateStatus": "passed",
+  "auditVerdict": "not_started",
+  "blockerCount": 0,
+  "decisionRequired": true,
+  "startedAt": "2026-05-01T16:08:06.874Z",
+  "events": [
+    {
+      "id": "52acf724-3c59-4f17-9ccb-2d239d50e003",
+      "runId": "ui_20260501_120806",
+      "phase": "prepare_kb",
+      "title": "Checking knowledge base availability",
+      "summary": "Confirming the local QA knowledge base is reachable.",
+      "status": "running",
+      "risk": "medium",
+      "decisionRequired": false,
+      "technical": {
+        "rawLabel": "pg_isready",
+        "command": "/opt/homebrew/bin/pg_isready -h localhost -p 5433 -U ingestion -d ingestion"
+      },
+      "createdAt": "2026-05-01T16:08:06.875Z"
+    },
+    {
+      "id": "b0ae3e68-6f87-4022-a59a-192bd9e1b35c",
+      "runId": "ui_20260501_120806",
+      "phase": "prepare_kb",
+      "title": "Checking knowledge base availability",
+      "summary": "The QA knowledge base is available.",
+      "status": "succeeded",
+      "risk": "low",
+      "decisionRequired": false,
+      "evidence": [
+        {
+          "id": "ev_84591c52",
+          "label": "Ingestion audit gate report",
+          "kind": "report",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/ingestion_audit_20260501_120748.md",
+          "createdAt": "2026-05-01T16:07:48.186Z"
+        },
+        {
+          "id": "ev_d28238e3",
+          "label": "Ingestion audit gate report",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/ingestion_audit_20260501_120748.json",
+          "createdAt": "2026-05-01T16:07:48.186Z"
+        },
+        {
+          "id": "ev_8284e618",
+          "label": "Ingestion audit gate report",
+          "kind": "report",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/ingestion_audit_20260501_120621.md",
+          "createdAt": "2026-05-01T16:06:27.803Z"
+        },
+        {
+          "id": "ev_f4e2a929",
+          "label": "Ingestion audit gate report",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/ingestion_audit_20260501_120621.json",
+          "createdAt": "2026-05-01T16:06:27.803Z"
+        },
+        {
+          "id": "ev_7f37d83b",
+          "label": "Ingestion audit gate report",
+          "kind": "report",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/ingestion_audit_20260501_120442.md",
+          "createdAt": "2026-05-01T16:04:42.853Z"
+        },
+        {
+          "id": "ev_90a19e8c",
+          "label": "Ingestion audit gate report",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/ingestion_audit_20260501_120442.json",
+          "createdAt": "2026-05-01T16:04:42.853Z"
+        },
+        {
+          "id": "ev_cc088f47",
+          "label": "Independent QA audit report",
+          "kind": "report",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/audit_TC001-TC005_20260501_114356.md",
+          "createdAt": "2026-05-01T15:43:56.644Z"
+        },
+        {
+          "id": "ev_52c6a807",
+          "label": "Business test repository Markdown",
+          "kind": "markdown",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test-doc/09-test-case-repository.md",
+          "createdAt": "2026-05-01T15:40:07.600Z"
+        },
+        {
+          "id": "ev_7518cc4e",
+          "label": "Executable test workbook",
+          "kind": "workbook",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/TestCases.xlsx",
+          "createdAt": "2026-05-01T15:40:07.600Z"
+        },
+        {
+          "id": "ev_c57f8cb8",
+          "label": "Governed JSON repository",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test-doc/test-case-repository.json",
+          "createdAt": "2026-05-01T15:39:49.703Z"
+        },
+        {
+          "id": "ev_3f541354",
+          "label": "Independent QA audit report",
+          "kind": "report",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/audit_all_postHeal_20260501_analysis_20260501_103509.md",
+          "createdAt": "2026-05-01T14:35:09.294Z"
+        },
+        {
+          "id": "ev_ebc61fbd",
+          "label": "Independent QA audit report",
+          "kind": "report",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/audit_all_20260501_103459.md",
+          "createdAt": "2026-05-01T14:34:59.764Z"
+        },
+        {
+          "id": "ev_7fcde6cb",
+          "label": "TC-015 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-015/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:17:15.968Z"
+        },
+        {
+          "id": "ev_ba06bda2",
+          "label": "TC-015 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-015/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:17:15.941Z"
+        },
+        {
+          "id": "ev_d2a09f2c",
+          "label": "TC-015 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-015/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:17:15.933Z"
+        },
+        {
+          "id": "ev_e120836a",
+          "label": "TC-016 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-016/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:17:15.929Z"
+        },
+        {
+          "id": "ev_aad7c501",
+          "label": "TC-016 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-016/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:17:15.912Z"
+        },
+        {
+          "id": "ev_29be900b",
+          "label": "TC-016 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-016/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:17:15.906Z"
+        },
+        {
+          "id": "ev_1e7b4a2c",
+          "label": "TC-014 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-014/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:17:15.636Z"
+        },
+        {
+          "id": "ev_c935b643",
+          "label": "TC-014 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-014/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:17:15.605Z"
+        },
+        {
+          "id": "ev_7b82ae4d",
+          "label": "TC-014 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-014/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:17:15.598Z"
+        },
+        {
+          "id": "ev_bd28ad8d",
+          "label": "TC-013 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-013/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:17:13.391Z"
+        },
+        {
+          "id": "ev_d864aee4",
+          "label": "TC-013 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-013/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:17:13.364Z"
+        },
+        {
+          "id": "ev_2464bd6e",
+          "label": "TC-013 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-013/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:17:13.356Z"
+        },
+        {
+          "id": "ev_fa83744f",
+          "label": "TC-011 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-011/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:17:09.150Z"
+        },
+        {
+          "id": "ev_5bd610ee",
+          "label": "TC-012 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-012/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:17:09.142Z"
+        },
+        {
+          "id": "ev_f6c2a026",
+          "label": "TC-011 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-011/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:17:09.119Z"
+        },
+        {
+          "id": "ev_e793a785",
+          "label": "TC-012 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-012/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:17:09.113Z"
+        },
+        {
+          "id": "ev_7628dbb0",
+          "label": "TC-011 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-011/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:17:09.112Z"
+        },
+        {
+          "id": "ev_cd46cc8f",
+          "label": "TC-012 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-012/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:17:09.106Z"
+        },
+        {
+          "id": "ev_9930d7b0",
+          "label": "TC-010 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-010/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:17:04.359Z"
+        },
+        {
+          "id": "ev_5f198c7",
+          "label": "TC-010 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-010/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:17:04.332Z"
+        },
+        {
+          "id": "ev_3c176206",
+          "label": "TC-009 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-009/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:17:04.327Z"
+        },
+        {
+          "id": "ev_1f0aead1",
+          "label": "TC-010 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-010/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:17:04.324Z"
+        },
+        {
+          "id": "ev_53faf69d",
+          "label": "TC-009 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-009/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:17:04.300Z"
+        },
+        {
+          "id": "ev_a27837a7",
+          "label": "TC-009 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-009/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:17:04.294Z"
+        },
+        {
+          "id": "ev_dac4c567",
+          "label": "TC-008 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-008/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:17:00.605Z"
+        },
+        {
+          "id": "ev_6329ef3e",
+          "label": "TC-008 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-008/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:17:00.572Z"
+        },
+        {
+          "id": "ev_4b5a46c8",
+          "label": "TC-008 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-008/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:17:00.563Z"
+        },
+        {
+          "id": "ev_b6ccef8a",
+          "label": "TC-005 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-005/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:16:59.621Z"
+        },
+        {
+          "id": "ev_90b6d921",
+          "label": "TC-005 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-005/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:16:59.590Z"
+        },
+        {
+          "id": "ev_4600742b",
+          "label": "TC-005 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-005/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:16:59.582Z"
+        },
+        {
+          "id": "ev_f427b64c",
+          "label": "TC-003 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:16:52.600Z"
+        },
+        {
+          "id": "ev_af14ca63",
+          "label": "TC-003 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:16:52.540Z"
+        },
+        {
+          "id": "ev_97c4926d",
+          "label": "TC-003 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:16:52.520Z"
+        },
+        {
+          "id": "ev_557a52eb",
+          "label": "TC-004 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-004/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:16:50.856Z"
+        },
+        {
+          "id": "ev_9fe5d1c2",
+          "label": "TC-004 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-004/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:16:50.822Z"
+        },
+        {
+          "id": "ev_eee2834c",
+          "label": "TC-004 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-004/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:16:50.811Z"
+        },
+        {
+          "id": "ev_92d519ad",
+          "label": "TC-002 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-002/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:16:37.212Z"
+        },
+        {
+          "id": "ev_be43c304",
+          "label": "TC-002 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-002/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:16:37.168Z"
+        },
+        {
+          "id": "ev_40a6a18e",
+          "label": "TC-002 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-002/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:16:37.140Z"
+        },
+        {
+          "id": "ev_a31d5558",
+          "label": "Ingestion remediation report",
+          "kind": "report",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/ingestion_heal_20260501_101245.md",
+          "createdAt": "2026-05-01T14:15:01.278Z"
+        },
+        {
+          "id": "ev_aeff4e3e",
+          "label": "TC-016 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-016/playwright_20260429_144333/trace.zip",
+          "createdAt": "2026-04-29T18:44:21.559Z"
+        },
+        {
+          "id": "ev_1e5a48d5",
+          "label": "TC-016 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-016/playwright_20260429_144333",
+          "createdAt": "2026-04-29T18:44:21.544Z"
+        },
+        {
+          "id": "ev_fb15f5df",
+          "label": "TC-016 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-016/playwright_20260429_144333/result.json",
+          "createdAt": "2026-04-29T18:44:21.535Z"
+        },
+        {
+          "id": "ev_1be204e8",
+          "label": "TC-015 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-015/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:03:06.828Z"
+        },
+        {
+          "id": "ev_2d876bff",
+          "label": "TC-015 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-015/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:03:06.810Z"
+        },
+        {
+          "id": "ev_ba25aa09",
+          "label": "TC-015 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-015/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:03:06.804Z"
+        },
+        {
+          "id": "ev_ba8f6849",
+          "label": "TC-014 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-014/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:03:06.579Z"
+        },
+        {
+          "id": "ev_3cb664a0",
+          "label": "TC-014 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-014/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:03:06.552Z"
+        },
+        {
+          "id": "ev_6307b92a",
+          "label": "TC-014 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-014/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:03:06.547Z"
+        },
+        {
+          "id": "ev_593ccbaa",
+          "label": "TC-013 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-013/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:03:04.208Z"
+        },
+        {
+          "id": "ev_4be55d41",
+          "label": "TC-013 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-013/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:03:04.187Z"
+        },
+        {
+          "id": "ev_be9c84b",
+          "label": "TC-013 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-013/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:03:04.176Z"
+        },
+        {
+          "id": "ev_f7ea2f0b",
+          "label": "TC-012 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-012/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:03:00.041Z"
+        },
+        {
+          "id": "ev_5b1455e2",
+          "label": "TC-012 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-012/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:03:00.017Z"
+        },
+        {
+          "id": "ev_b4cbd76c",
+          "label": "TC-012 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-012/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:03:00.009Z"
+        },
+        {
+          "id": "ev_9697926c",
+          "label": "TC-011 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-011/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:02:59.929Z"
+        },
+        {
+          "id": "ev_6a434e83",
+          "label": "TC-011 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-011/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:02:59.901Z"
+        },
+        {
+          "id": "ev_5dade68d",
+          "label": "TC-011 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-011/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:02:59.894Z"
+        },
+        {
+          "id": "ev_3544f5cd",
+          "label": "TC-010 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-010/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:02:55.257Z"
+        },
+        {
+          "id": "ev_79724724",
+          "label": "TC-010 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-010/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:02:55.238Z"
+        },
+        {
+          "id": "ev_68ff5ae",
+          "label": "TC-010 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-010/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:02:55.233Z"
+        },
+        {
+          "id": "ev_d82b8023",
+          "label": "TC-009 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-009/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:02:55.099Z"
+        },
+        {
+          "id": "ev_c77ba4fa",
+          "label": "TC-009 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-009/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:02:55.077Z"
+        },
+        {
+          "id": "ev_89fd4284",
+          "label": "TC-009 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-009/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:02:55.070Z"
+        },
+        {
+          "id": "ev_76d8e384",
+          "label": "TC-008 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-008/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:02:51.489Z"
+        },
+        {
+          "id": "ev_d6aa9d9b",
+          "label": "TC-008 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-008/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:02:51.463Z"
+        },
+        {
+          "id": "ev_32df51a5",
+          "label": "TC-008 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-008/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:02:51.453Z"
+        },
+        {
+          "id": "ev_52e10da7",
+          "label": "TC-005 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-005/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:02:50.397Z"
+        },
+        {
+          "id": "ev_437877e",
+          "label": "TC-005 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-005/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:02:50.365Z"
+        },
+        {
+          "id": "ev_2d857f08",
+          "label": "TC-005 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-005/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:02:50.351Z"
+        },
+        {
+          "id": "ev_158646e5",
+          "label": "TC-007 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-007/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:02:48.050Z"
+        },
+        {
+          "id": "ev_e5d9963c",
+          "label": "TC-007 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-007/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:02:48.026Z"
+        },
+        {
+          "id": "ev_dbc160c6",
+          "label": "TC-007 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-007/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:02:48.016Z"
+        },
+        {
+          "id": "ev_b433aa46",
+          "label": "TC-006 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-006/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:02:45.628Z"
+        },
+        {
+          "id": "ev_f5088edd",
+          "label": "TC-006 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-006/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:02:45.606Z"
+        },
+        {
+          "id": "ev_84a36fe7",
+          "label": "TC-006 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-006/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:02:45.598Z"
+        },
+        {
+          "id": "ev_903bd469",
+          "label": "TC-003 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:02:43.291Z"
+        },
+        {
+          "id": "ev_229578c0",
+          "label": "TC-003 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:02:43.232Z"
+        },
+        {
+          "id": "ev_7f499d4a",
+          "label": "TC-003 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:02:43.212Z"
+        },
+        {
+          "id": "ev_f18e7108",
+          "label": "TC-004 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-004/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:02:41.461Z"
+        },
+        {
+          "id": "ev_1366801f",
+          "label": "TC-004 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-004/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:02:41.429Z"
+        },
+        {
+          "id": "ev_d6678e29",
+          "label": "TC-004 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-004/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:02:41.418Z"
+        },
+        {
+          "id": "ev_2ee937ca",
+          "label": "TC-002 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-002/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:02:27.617Z"
+        },
+        {
+          "id": "ev_31c47161",
+          "label": "TC-002 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-002/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:02:27.573Z"
+        },
+        {
+          "id": "ev_282bac6b",
+          "label": "TC-002 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-002/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:02:27.555Z"
+        },
+        {
+          "id": "ev_e5b13814",
+          "label": "TC-007 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-007/playwright_20260429_114843",
+          "createdAt": "2026-04-29T16:06:34.586Z"
+        },
+        {
+          "id": "ev_e9ff7abd",
+          "label": "TC-007 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-007/playwright_20260429_114843/trace.zip",
+          "createdAt": "2026-04-29T16:06:34.586Z"
+        },
+        {
+          "id": "ev_76bcfe9e",
+          "label": "TC-007 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-007/playwright_20260429_114843/result.json",
+          "createdAt": "2026-04-29T16:06:34.585Z"
+        },
+        {
+          "id": "ev_88acde1e",
+          "label": "TC-006 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-006/playwright_20260429_114843/trace.zip",
+          "createdAt": "2026-04-29T16:06:34.577Z"
+        },
+        {
+          "id": "ev_f4e030b5",
+          "label": "TC-006 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-006/playwright_20260429_114843",
+          "createdAt": "2026-04-29T16:06:34.576Z"
+        },
+        {
+          "id": "ev_1f9f0dbf",
+          "label": "TC-006 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-006/playwright_20260429_114843/result.json",
+          "createdAt": "2026-04-29T16:06:34.575Z"
+        },
+        {
+          "id": "ev_7d3db0cb",
+          "label": "TC-001 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260429_114708/trace.zip",
+          "createdAt": "2026-04-29T16:06:34.435Z"
+        },
+        {
+          "id": "ev_40cb07a2",
+          "label": "TC-001 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260429_114708",
+          "createdAt": "2026-04-29T16:06:34.433Z"
+        },
+        {
+          "id": "ev_3345e92c",
+          "label": "TC-001 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260429_114708/result.json",
+          "createdAt": "2026-04-29T16:06:34.428Z"
+        },
+        {
+          "id": "ev_6ca2ea27",
+          "label": "TC-001 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260429_114616/trace.zip",
+          "createdAt": "2026-04-29T16:06:34.427Z"
+        },
+        {
+          "id": "ev_40cb03fe",
+          "label": "TC-001 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260429_114616",
+          "createdAt": "2026-04-29T16:06:34.426Z"
+        },
+        {
+          "id": "ev_de423b88",
+          "label": "TC-001 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260429_114616/result.json",
+          "createdAt": "2026-04-29T16:06:34.424Z"
+        }
+      ],
+      "technical": {
+        "rawLabel": "pg_isready",
+        "command": "/opt/homebrew/bin/pg_isready -h localhost -p 5433 -U ingestion -d ingestion",
+        "stdout": "Dry run: /opt/homebrew/bin/pg_isready -h localhost -p 5433 -U ingestion -d ingestion",
+        "exitCode": 0
+      },
+      "createdAt": "2026-05-01T16:08:06.878Z"
+    },
+    {
+      "id": "c560fef5-d9e5-47de-ba99-1f4d91df0b99",
+      "runId": "ui_20260501_120806",
+      "phase": "prepare_kb",
+      "title": "Preparing knowledge base schema",
+      "summary": "Applying the governed database structure for QA evidence.",
+      "status": "running",
+      "risk": "high",
+      "decisionRequired": false,
+      "technical": {
+        "rawLabel": "apply_migrations",
+        "command": "PGPASSWORD=ingestion ./ingestion/scripts/apply_migrations.sh"
+      },
+      "createdAt": "2026-05-01T16:08:06.878Z"
+    },
+    {
+      "id": "ea668add-5995-4a04-9919-1fc3e2ae0320",
+      "runId": "ui_20260501_120806",
+      "phase": "prepare_kb",
+      "title": "Preparing knowledge base schema",
+      "summary": "The knowledge base schema is ready.",
+      "status": "succeeded",
+      "risk": "low",
+      "decisionRequired": false,
+      "evidence": [
+        {
+          "id": "ev_84591c52",
+          "label": "Ingestion audit gate report",
+          "kind": "report",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/ingestion_audit_20260501_120748.md",
+          "createdAt": "2026-05-01T16:07:48.186Z"
+        },
+        {
+          "id": "ev_d28238e3",
+          "label": "Ingestion audit gate report",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/ingestion_audit_20260501_120748.json",
+          "createdAt": "2026-05-01T16:07:48.186Z"
+        },
+        {
+          "id": "ev_8284e618",
+          "label": "Ingestion audit gate report",
+          "kind": "report",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/ingestion_audit_20260501_120621.md",
+          "createdAt": "2026-05-01T16:06:27.803Z"
+        },
+        {
+          "id": "ev_f4e2a929",
+          "label": "Ingestion audit gate report",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/ingestion_audit_20260501_120621.json",
+          "createdAt": "2026-05-01T16:06:27.803Z"
+        },
+        {
+          "id": "ev_7f37d83b",
+          "label": "Ingestion audit gate report",
+          "kind": "report",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/ingestion_audit_20260501_120442.md",
+          "createdAt": "2026-05-01T16:04:42.853Z"
+        },
+        {
+          "id": "ev_90a19e8c",
+          "label": "Ingestion audit gate report",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/ingestion_audit_20260501_120442.json",
+          "createdAt": "2026-05-01T16:04:42.853Z"
+        },
+        {
+          "id": "ev_cc088f47",
+          "label": "Independent QA audit report",
+          "kind": "report",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/audit_TC001-TC005_20260501_114356.md",
+          "createdAt": "2026-05-01T15:43:56.644Z"
+        },
+        {
+          "id": "ev_52c6a807",
+          "label": "Business test repository Markdown",
+          "kind": "markdown",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test-doc/09-test-case-repository.md",
+          "createdAt": "2026-05-01T15:40:07.600Z"
+        },
+        {
+          "id": "ev_7518cc4e",
+          "label": "Executable test workbook",
+          "kind": "workbook",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/TestCases.xlsx",
+          "createdAt": "2026-05-01T15:40:07.600Z"
+        },
+        {
+          "id": "ev_c57f8cb8",
+          "label": "Governed JSON repository",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test-doc/test-case-repository.json",
+          "createdAt": "2026-05-01T15:39:49.703Z"
+        },
+        {
+          "id": "ev_3f541354",
+          "label": "Independent QA audit report",
+          "kind": "report",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/audit_all_postHeal_20260501_analysis_20260501_103509.md",
+          "createdAt": "2026-05-01T14:35:09.294Z"
+        },
+        {
+          "id": "ev_ebc61fbd",
+          "label": "Independent QA audit report",
+          "kind": "report",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/audit_all_20260501_103459.md",
+          "createdAt": "2026-05-01T14:34:59.764Z"
+        },
+        {
+          "id": "ev_7fcde6cb",
+          "label": "TC-015 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-015/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:17:15.968Z"
+        },
+        {
+          "id": "ev_ba06bda2",
+          "label": "TC-015 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-015/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:17:15.941Z"
+        },
+        {
+          "id": "ev_d2a09f2c",
+          "label": "TC-015 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-015/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:17:15.933Z"
+        },
+        {
+          "id": "ev_e120836a",
+          "label": "TC-016 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-016/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:17:15.929Z"
+        },
+        {
+          "id": "ev_aad7c501",
+          "label": "TC-016 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-016/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:17:15.912Z"
+        },
+        {
+          "id": "ev_29be900b",
+          "label": "TC-016 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-016/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:17:15.906Z"
+        },
+        {
+          "id": "ev_1e7b4a2c",
+          "label": "TC-014 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-014/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:17:15.636Z"
+        },
+        {
+          "id": "ev_c935b643",
+          "label": "TC-014 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-014/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:17:15.605Z"
+        },
+        {
+          "id": "ev_7b82ae4d",
+          "label": "TC-014 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-014/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:17:15.598Z"
+        },
+        {
+          "id": "ev_bd28ad8d",
+          "label": "TC-013 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-013/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:17:13.391Z"
+        },
+        {
+          "id": "ev_d864aee4",
+          "label": "TC-013 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-013/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:17:13.364Z"
+        },
+        {
+          "id": "ev_2464bd6e",
+          "label": "TC-013 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-013/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:17:13.356Z"
+        },
+        {
+          "id": "ev_fa83744f",
+          "label": "TC-011 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-011/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:17:09.150Z"
+        },
+        {
+          "id": "ev_5bd610ee",
+          "label": "TC-012 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-012/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:17:09.142Z"
+        },
+        {
+          "id": "ev_f6c2a026",
+          "label": "TC-011 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-011/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:17:09.119Z"
+        },
+        {
+          "id": "ev_e793a785",
+          "label": "TC-012 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-012/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:17:09.113Z"
+        },
+        {
+          "id": "ev_7628dbb0",
+          "label": "TC-011 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-011/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:17:09.112Z"
+        },
+        {
+          "id": "ev_cd46cc8f",
+          "label": "TC-012 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-012/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:17:09.106Z"
+        },
+        {
+          "id": "ev_9930d7b0",
+          "label": "TC-010 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-010/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:17:04.359Z"
+        },
+        {
+          "id": "ev_5f198c7",
+          "label": "TC-010 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-010/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:17:04.332Z"
+        },
+        {
+          "id": "ev_3c176206",
+          "label": "TC-009 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-009/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:17:04.327Z"
+        },
+        {
+          "id": "ev_1f0aead1",
+          "label": "TC-010 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-010/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:17:04.324Z"
+        },
+        {
+          "id": "ev_53faf69d",
+          "label": "TC-009 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-009/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:17:04.300Z"
+        },
+        {
+          "id": "ev_a27837a7",
+          "label": "TC-009 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-009/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:17:04.294Z"
+        },
+        {
+          "id": "ev_dac4c567",
+          "label": "TC-008 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-008/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:17:00.605Z"
+        },
+        {
+          "id": "ev_6329ef3e",
+          "label": "TC-008 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-008/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:17:00.572Z"
+        },
+        {
+          "id": "ev_4b5a46c8",
+          "label": "TC-008 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-008/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:17:00.563Z"
+        },
+        {
+          "id": "ev_b6ccef8a",
+          "label": "TC-005 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-005/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:16:59.621Z"
+        },
+        {
+          "id": "ev_90b6d921",
+          "label": "TC-005 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-005/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:16:59.590Z"
+        },
+        {
+          "id": "ev_4600742b",
+          "label": "TC-005 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-005/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:16:59.582Z"
+        },
+        {
+          "id": "ev_f427b64c",
+          "label": "TC-003 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:16:52.600Z"
+        },
+        {
+          "id": "ev_af14ca63",
+          "label": "TC-003 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:16:52.540Z"
+        },
+        {
+          "id": "ev_97c4926d",
+          "label": "TC-003 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:16:52.520Z"
+        },
+        {
+          "id": "ev_557a52eb",
+          "label": "TC-004 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-004/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:16:50.856Z"
+        },
+        {
+          "id": "ev_9fe5d1c2",
+          "label": "TC-004 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-004/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:16:50.822Z"
+        },
+        {
+          "id": "ev_eee2834c",
+          "label": "TC-004 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-004/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:16:50.811Z"
+        },
+        {
+          "id": "ev_92d519ad",
+          "label": "TC-002 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-002/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:16:37.212Z"
+        },
+        {
+          "id": "ev_be43c304",
+          "label": "TC-002 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-002/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:16:37.168Z"
+        },
+        {
+          "id": "ev_40a6a18e",
+          "label": "TC-002 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-002/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:16:37.140Z"
+        },
+        {
+          "id": "ev_a31d5558",
+          "label": "Ingestion remediation report",
+          "kind": "report",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/ingestion_heal_20260501_101245.md",
+          "createdAt": "2026-05-01T14:15:01.278Z"
+        },
+        {
+          "id": "ev_aeff4e3e",
+          "label": "TC-016 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-016/playwright_20260429_144333/trace.zip",
+          "createdAt": "2026-04-29T18:44:21.559Z"
+        },
+        {
+          "id": "ev_1e5a48d5",
+          "label": "TC-016 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-016/playwright_20260429_144333",
+          "createdAt": "2026-04-29T18:44:21.544Z"
+        },
+        {
+          "id": "ev_fb15f5df",
+          "label": "TC-016 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-016/playwright_20260429_144333/result.json",
+          "createdAt": "2026-04-29T18:44:21.535Z"
+        },
+        {
+          "id": "ev_1be204e8",
+          "label": "TC-015 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-015/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:03:06.828Z"
+        },
+        {
+          "id": "ev_2d876bff",
+          "label": "TC-015 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-015/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:03:06.810Z"
+        },
+        {
+          "id": "ev_ba25aa09",
+          "label": "TC-015 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-015/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:03:06.804Z"
+        },
+        {
+          "id": "ev_ba8f6849",
+          "label": "TC-014 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-014/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:03:06.579Z"
+        },
+        {
+          "id": "ev_3cb664a0",
+          "label": "TC-014 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-014/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:03:06.552Z"
+        },
+        {
+          "id": "ev_6307b92a",
+          "label": "TC-014 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-014/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:03:06.547Z"
+        },
+        {
+          "id": "ev_593ccbaa",
+          "label": "TC-013 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-013/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:03:04.208Z"
+        },
+        {
+          "id": "ev_4be55d41",
+          "label": "TC-013 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-013/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:03:04.187Z"
+        },
+        {
+          "id": "ev_be9c84b",
+          "label": "TC-013 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-013/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:03:04.176Z"
+        },
+        {
+          "id": "ev_f7ea2f0b",
+          "label": "TC-012 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-012/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:03:00.041Z"
+        },
+        {
+          "id": "ev_5b1455e2",
+          "label": "TC-012 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-012/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:03:00.017Z"
+        },
+        {
+          "id": "ev_b4cbd76c",
+          "label": "TC-012 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-012/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:03:00.009Z"
+        },
+        {
+          "id": "ev_9697926c",
+          "label": "TC-011 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-011/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:02:59.929Z"
+        },
+        {
+          "id": "ev_6a434e83",
+          "label": "TC-011 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-011/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:02:59.901Z"
+        },
+        {
+          "id": "ev_5dade68d",
+          "label": "TC-011 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-011/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:02:59.894Z"
+        },
+        {
+          "id": "ev_3544f5cd",
+          "label": "TC-010 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-010/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:02:55.257Z"
+        },
+        {
+          "id": "ev_79724724",
+          "label": "TC-010 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-010/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:02:55.238Z"
+        },
+        {
+          "id": "ev_68ff5ae",
+          "label": "TC-010 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-010/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:02:55.233Z"
+        },
+        {
+          "id": "ev_d82b8023",
+          "label": "TC-009 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-009/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:02:55.099Z"
+        },
+        {
+          "id": "ev_c77ba4fa",
+          "label": "TC-009 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-009/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:02:55.077Z"
+        },
+        {
+          "id": "ev_89fd4284",
+          "label": "TC-009 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-009/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:02:55.070Z"
+        },
+        {
+          "id": "ev_76d8e384",
+          "label": "TC-008 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-008/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:02:51.489Z"
+        },
+        {
+          "id": "ev_d6aa9d9b",
+          "label": "TC-008 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-008/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:02:51.463Z"
+        },
+        {
+          "id": "ev_32df51a5",
+          "label": "TC-008 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-008/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:02:51.453Z"
+        },
+        {
+          "id": "ev_52e10da7",
+          "label": "TC-005 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-005/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:02:50.397Z"
+        },
+        {
+          "id": "ev_437877e",
+          "label": "TC-005 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-005/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:02:50.365Z"
+        },
+        {
+          "id": "ev_2d857f08",
+          "label": "TC-005 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-005/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:02:50.351Z"
+        },
+        {
+          "id": "ev_158646e5",
+          "label": "TC-007 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-007/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:02:48.050Z"
+        },
+        {
+          "id": "ev_e5d9963c",
+          "label": "TC-007 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-007/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:02:48.026Z"
+        },
+        {
+          "id": "ev_dbc160c6",
+          "label": "TC-007 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-007/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:02:48.016Z"
+        },
+        {
+          "id": "ev_b433aa46",
+          "label": "TC-006 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-006/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:02:45.628Z"
+        },
+        {
+          "id": "ev_f5088edd",
+          "label": "TC-006 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-006/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:02:45.606Z"
+        },
+        {
+          "id": "ev_84a36fe7",
+          "label": "TC-006 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-006/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:02:45.598Z"
+        },
+        {
+          "id": "ev_903bd469",
+          "label": "TC-003 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:02:43.291Z"
+        },
+        {
+          "id": "ev_229578c0",
+          "label": "TC-003 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:02:43.232Z"
+        },
+        {
+          "id": "ev_7f499d4a",
+          "label": "TC-003 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:02:43.212Z"
+        },
+        {
+          "id": "ev_f18e7108",
+          "label": "TC-004 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-004/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:02:41.461Z"
+        },
+        {
+          "id": "ev_1366801f",
+          "label": "TC-004 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-004/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:02:41.429Z"
+        },
+        {
+          "id": "ev_d6678e29",
+          "label": "TC-004 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-004/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:02:41.418Z"
+        },
+        {
+          "id": "ev_2ee937ca",
+          "label": "TC-002 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-002/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:02:27.617Z"
+        },
+        {
+          "id": "ev_31c47161",
+          "label": "TC-002 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-002/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:02:27.573Z"
+        },
+        {
+          "id": "ev_282bac6b",
+          "label": "TC-002 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-002/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:02:27.555Z"
+        },
+        {
+          "id": "ev_e5b13814",
+          "label": "TC-007 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-007/playwright_20260429_114843",
+          "createdAt": "2026-04-29T16:06:34.586Z"
+        },
+        {
+          "id": "ev_e9ff7abd",
+          "label": "TC-007 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-007/playwright_20260429_114843/trace.zip",
+          "createdAt": "2026-04-29T16:06:34.586Z"
+        },
+        {
+          "id": "ev_76bcfe9e",
+          "label": "TC-007 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-007/playwright_20260429_114843/result.json",
+          "createdAt": "2026-04-29T16:06:34.585Z"
+        },
+        {
+          "id": "ev_88acde1e",
+          "label": "TC-006 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-006/playwright_20260429_114843/trace.zip",
+          "createdAt": "2026-04-29T16:06:34.577Z"
+        },
+        {
+          "id": "ev_f4e030b5",
+          "label": "TC-006 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-006/playwright_20260429_114843",
+          "createdAt": "2026-04-29T16:06:34.576Z"
+        },
+        {
+          "id": "ev_1f9f0dbf",
+          "label": "TC-006 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-006/playwright_20260429_114843/result.json",
+          "createdAt": "2026-04-29T16:06:34.575Z"
+        },
+        {
+          "id": "ev_7d3db0cb",
+          "label": "TC-001 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260429_114708/trace.zip",
+          "createdAt": "2026-04-29T16:06:34.435Z"
+        },
+        {
+          "id": "ev_40cb07a2",
+          "label": "TC-001 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260429_114708",
+          "createdAt": "2026-04-29T16:06:34.433Z"
+        },
+        {
+          "id": "ev_3345e92c",
+          "label": "TC-001 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260429_114708/result.json",
+          "createdAt": "2026-04-29T16:06:34.428Z"
+        },
+        {
+          "id": "ev_6ca2ea27",
+          "label": "TC-001 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260429_114616/trace.zip",
+          "createdAt": "2026-04-29T16:06:34.427Z"
+        },
+        {
+          "id": "ev_40cb03fe",
+          "label": "TC-001 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260429_114616",
+          "createdAt": "2026-04-29T16:06:34.426Z"
+        },
+        {
+          "id": "ev_de423b88",
+          "label": "TC-001 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260429_114616/result.json",
+          "createdAt": "2026-04-29T16:06:34.424Z"
+        }
+      ],
+      "technical": {
+        "rawLabel": "apply_migrations",
+        "command": "PGPASSWORD=ingestion ./ingestion/scripts/apply_migrations.sh",
+        "stdout": "Dry run: PGPASSWORD=ingestion ./ingestion/scripts/apply_migrations.sh",
+        "exitCode": 0
+      },
+      "createdAt": "2026-05-01T16:08:06.881Z"
+    },
+    {
+      "id": "2645cdb8-74fa-45bf-aecf-8cfc1a7a283e",
+      "runId": "ui_20260501_120806",
+      "phase": "prepare_kb",
+      "title": "Confirming test inventory",
+      "summary": "Checking that structured test cases and steps exist in the knowledge base.",
+      "status": "running",
+      "risk": "critical",
+      "decisionRequired": false,
+      "technical": {
+        "rawLabel": "test_cases and test_case_steps inventory",
+        "command": "PGPASSWORD=ingestion /opt/homebrew/bin/psql -h localhost -p 5433 -U ingestion -d ingestion -tAc \"select 'cases=' || count(*) from test_cases; select 'steps=' || count(*) from test_case_steps;\""
+      },
+      "createdAt": "2026-05-01T16:08:06.882Z"
+    },
+    {
+      "id": "9dcc43a9-353a-4fd4-a6fc-e4795cb61761",
+      "runId": "ui_20260501_120806",
+      "phase": "prepare_kb",
+      "title": "Confirming test inventory",
+      "summary": "Structured test cases are available for validation.",
+      "status": "succeeded",
+      "risk": "low",
+      "decisionRequired": false,
+      "evidence": [
+        {
+          "id": "ev_84591c52",
+          "label": "Ingestion audit gate report",
+          "kind": "report",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/ingestion_audit_20260501_120748.md",
+          "createdAt": "2026-05-01T16:07:48.186Z"
+        },
+        {
+          "id": "ev_d28238e3",
+          "label": "Ingestion audit gate report",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/ingestion_audit_20260501_120748.json",
+          "createdAt": "2026-05-01T16:07:48.186Z"
+        },
+        {
+          "id": "ev_8284e618",
+          "label": "Ingestion audit gate report",
+          "kind": "report",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/ingestion_audit_20260501_120621.md",
+          "createdAt": "2026-05-01T16:06:27.803Z"
+        },
+        {
+          "id": "ev_f4e2a929",
+          "label": "Ingestion audit gate report",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/ingestion_audit_20260501_120621.json",
+          "createdAt": "2026-05-01T16:06:27.803Z"
+        },
+        {
+          "id": "ev_7f37d83b",
+          "label": "Ingestion audit gate report",
+          "kind": "report",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/ingestion_audit_20260501_120442.md",
+          "createdAt": "2026-05-01T16:04:42.853Z"
+        },
+        {
+          "id": "ev_90a19e8c",
+          "label": "Ingestion audit gate report",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/ingestion_audit_20260501_120442.json",
+          "createdAt": "2026-05-01T16:04:42.853Z"
+        },
+        {
+          "id": "ev_cc088f47",
+          "label": "Independent QA audit report",
+          "kind": "report",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/audit_TC001-TC005_20260501_114356.md",
+          "createdAt": "2026-05-01T15:43:56.644Z"
+        },
+        {
+          "id": "ev_52c6a807",
+          "label": "Business test repository Markdown",
+          "kind": "markdown",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test-doc/09-test-case-repository.md",
+          "createdAt": "2026-05-01T15:40:07.600Z"
+        },
+        {
+          "id": "ev_7518cc4e",
+          "label": "Executable test workbook",
+          "kind": "workbook",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/TestCases.xlsx",
+          "createdAt": "2026-05-01T15:40:07.600Z"
+        },
+        {
+          "id": "ev_c57f8cb8",
+          "label": "Governed JSON repository",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test-doc/test-case-repository.json",
+          "createdAt": "2026-05-01T15:39:49.703Z"
+        },
+        {
+          "id": "ev_3f541354",
+          "label": "Independent QA audit report",
+          "kind": "report",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/audit_all_postHeal_20260501_analysis_20260501_103509.md",
+          "createdAt": "2026-05-01T14:35:09.294Z"
+        },
+        {
+          "id": "ev_ebc61fbd",
+          "label": "Independent QA audit report",
+          "kind": "report",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/audit_all_20260501_103459.md",
+          "createdAt": "2026-05-01T14:34:59.764Z"
+        },
+        {
+          "id": "ev_7fcde6cb",
+          "label": "TC-015 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-015/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:17:15.968Z"
+        },
+        {
+          "id": "ev_ba06bda2",
+          "label": "TC-015 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-015/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:17:15.941Z"
+        },
+        {
+          "id": "ev_d2a09f2c",
+          "label": "TC-015 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-015/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:17:15.933Z"
+        },
+        {
+          "id": "ev_e120836a",
+          "label": "TC-016 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-016/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:17:15.929Z"
+        },
+        {
+          "id": "ev_aad7c501",
+          "label": "TC-016 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-016/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:17:15.912Z"
+        },
+        {
+          "id": "ev_29be900b",
+          "label": "TC-016 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-016/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:17:15.906Z"
+        },
+        {
+          "id": "ev_1e7b4a2c",
+          "label": "TC-014 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-014/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:17:15.636Z"
+        },
+        {
+          "id": "ev_c935b643",
+          "label": "TC-014 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-014/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:17:15.605Z"
+        },
+        {
+          "id": "ev_7b82ae4d",
+          "label": "TC-014 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-014/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:17:15.598Z"
+        },
+        {
+          "id": "ev_bd28ad8d",
+          "label": "TC-013 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-013/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:17:13.391Z"
+        },
+        {
+          "id": "ev_d864aee4",
+          "label": "TC-013 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-013/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:17:13.364Z"
+        },
+        {
+          "id": "ev_2464bd6e",
+          "label": "TC-013 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-013/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:17:13.356Z"
+        },
+        {
+          "id": "ev_fa83744f",
+          "label": "TC-011 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-011/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:17:09.150Z"
+        },
+        {
+          "id": "ev_5bd610ee",
+          "label": "TC-012 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-012/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:17:09.142Z"
+        },
+        {
+          "id": "ev_f6c2a026",
+          "label": "TC-011 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-011/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:17:09.119Z"
+        },
+        {
+          "id": "ev_e793a785",
+          "label": "TC-012 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-012/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:17:09.113Z"
+        },
+        {
+          "id": "ev_7628dbb0",
+          "label": "TC-011 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-011/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:17:09.112Z"
+        },
+        {
+          "id": "ev_cd46cc8f",
+          "label": "TC-012 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-012/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:17:09.106Z"
+        },
+        {
+          "id": "ev_9930d7b0",
+          "label": "TC-010 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-010/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:17:04.359Z"
+        },
+        {
+          "id": "ev_5f198c7",
+          "label": "TC-010 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-010/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:17:04.332Z"
+        },
+        {
+          "id": "ev_3c176206",
+          "label": "TC-009 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-009/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:17:04.327Z"
+        },
+        {
+          "id": "ev_1f0aead1",
+          "label": "TC-010 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-010/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:17:04.324Z"
+        },
+        {
+          "id": "ev_53faf69d",
+          "label": "TC-009 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-009/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:17:04.300Z"
+        },
+        {
+          "id": "ev_a27837a7",
+          "label": "TC-009 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-009/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:17:04.294Z"
+        },
+        {
+          "id": "ev_dac4c567",
+          "label": "TC-008 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-008/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:17:00.605Z"
+        },
+        {
+          "id": "ev_6329ef3e",
+          "label": "TC-008 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-008/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:17:00.572Z"
+        },
+        {
+          "id": "ev_4b5a46c8",
+          "label": "TC-008 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-008/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:17:00.563Z"
+        },
+        {
+          "id": "ev_b6ccef8a",
+          "label": "TC-005 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-005/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:16:59.621Z"
+        },
+        {
+          "id": "ev_90b6d921",
+          "label": "TC-005 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-005/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:16:59.590Z"
+        },
+        {
+          "id": "ev_4600742b",
+          "label": "TC-005 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-005/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:16:59.582Z"
+        },
+        {
+          "id": "ev_f427b64c",
+          "label": "TC-003 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:16:52.600Z"
+        },
+        {
+          "id": "ev_af14ca63",
+          "label": "TC-003 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:16:52.540Z"
+        },
+        {
+          "id": "ev_97c4926d",
+          "label": "TC-003 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:16:52.520Z"
+        },
+        {
+          "id": "ev_557a52eb",
+          "label": "TC-004 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-004/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:16:50.856Z"
+        },
+        {
+          "id": "ev_9fe5d1c2",
+          "label": "TC-004 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-004/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:16:50.822Z"
+        },
+        {
+          "id": "ev_eee2834c",
+          "label": "TC-004 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-004/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:16:50.811Z"
+        },
+        {
+          "id": "ev_92d519ad",
+          "label": "TC-002 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-002/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:16:37.212Z"
+        },
+        {
+          "id": "ev_be43c304",
+          "label": "TC-002 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-002/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:16:37.168Z"
+        },
+        {
+          "id": "ev_40a6a18e",
+          "label": "TC-002 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-002/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:16:37.140Z"
+        },
+        {
+          "id": "ev_a31d5558",
+          "label": "Ingestion remediation report",
+          "kind": "report",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/ingestion_heal_20260501_101245.md",
+          "createdAt": "2026-05-01T14:15:01.278Z"
+        },
+        {
+          "id": "ev_aeff4e3e",
+          "label": "TC-016 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-016/playwright_20260429_144333/trace.zip",
+          "createdAt": "2026-04-29T18:44:21.559Z"
+        },
+        {
+          "id": "ev_1e5a48d5",
+          "label": "TC-016 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-016/playwright_20260429_144333",
+          "createdAt": "2026-04-29T18:44:21.544Z"
+        },
+        {
+          "id": "ev_fb15f5df",
+          "label": "TC-016 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-016/playwright_20260429_144333/result.json",
+          "createdAt": "2026-04-29T18:44:21.535Z"
+        },
+        {
+          "id": "ev_1be204e8",
+          "label": "TC-015 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-015/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:03:06.828Z"
+        },
+        {
+          "id": "ev_2d876bff",
+          "label": "TC-015 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-015/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:03:06.810Z"
+        },
+        {
+          "id": "ev_ba25aa09",
+          "label": "TC-015 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-015/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:03:06.804Z"
+        },
+        {
+          "id": "ev_ba8f6849",
+          "label": "TC-014 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-014/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:03:06.579Z"
+        },
+        {
+          "id": "ev_3cb664a0",
+          "label": "TC-014 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-014/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:03:06.552Z"
+        },
+        {
+          "id": "ev_6307b92a",
+          "label": "TC-014 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-014/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:03:06.547Z"
+        },
+        {
+          "id": "ev_593ccbaa",
+          "label": "TC-013 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-013/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:03:04.208Z"
+        },
+        {
+          "id": "ev_4be55d41",
+          "label": "TC-013 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-013/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:03:04.187Z"
+        },
+        {
+          "id": "ev_be9c84b",
+          "label": "TC-013 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-013/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:03:04.176Z"
+        },
+        {
+          "id": "ev_f7ea2f0b",
+          "label": "TC-012 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-012/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:03:00.041Z"
+        },
+        {
+          "id": "ev_5b1455e2",
+          "label": "TC-012 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-012/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:03:00.017Z"
+        },
+        {
+          "id": "ev_b4cbd76c",
+          "label": "TC-012 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-012/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:03:00.009Z"
+        },
+        {
+          "id": "ev_9697926c",
+          "label": "TC-011 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-011/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:02:59.929Z"
+        },
+        {
+          "id": "ev_6a434e83",
+          "label": "TC-011 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-011/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:02:59.901Z"
+        },
+        {
+          "id": "ev_5dade68d",
+          "label": "TC-011 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-011/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:02:59.894Z"
+        },
+        {
+          "id": "ev_3544f5cd",
+          "label": "TC-010 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-010/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:02:55.257Z"
+        },
+        {
+          "id": "ev_79724724",
+          "label": "TC-010 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-010/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:02:55.238Z"
+        },
+        {
+          "id": "ev_68ff5ae",
+          "label": "TC-010 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-010/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:02:55.233Z"
+        },
+        {
+          "id": "ev_d82b8023",
+          "label": "TC-009 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-009/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:02:55.099Z"
+        },
+        {
+          "id": "ev_c77ba4fa",
+          "label": "TC-009 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-009/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:02:55.077Z"
+        },
+        {
+          "id": "ev_89fd4284",
+          "label": "TC-009 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-009/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:02:55.070Z"
+        },
+        {
+          "id": "ev_76d8e384",
+          "label": "TC-008 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-008/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:02:51.489Z"
+        },
+        {
+          "id": "ev_d6aa9d9b",
+          "label": "TC-008 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-008/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:02:51.463Z"
+        },
+        {
+          "id": "ev_32df51a5",
+          "label": "TC-008 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-008/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:02:51.453Z"
+        },
+        {
+          "id": "ev_52e10da7",
+          "label": "TC-005 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-005/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:02:50.397Z"
+        },
+        {
+          "id": "ev_437877e",
+          "label": "TC-005 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-005/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:02:50.365Z"
+        },
+        {
+          "id": "ev_2d857f08",
+          "label": "TC-005 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-005/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:02:50.351Z"
+        },
+        {
+          "id": "ev_158646e5",
+          "label": "TC-007 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-007/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:02:48.050Z"
+        },
+        {
+          "id": "ev_e5d9963c",
+          "label": "TC-007 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-007/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:02:48.026Z"
+        },
+        {
+          "id": "ev_dbc160c6",
+          "label": "TC-007 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-007/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:02:48.016Z"
+        },
+        {
+          "id": "ev_b433aa46",
+          "label": "TC-006 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-006/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:02:45.628Z"
+        },
+        {
+          "id": "ev_f5088edd",
+          "label": "TC-006 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-006/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:02:45.606Z"
+        },
+        {
+          "id": "ev_84a36fe7",
+          "label": "TC-006 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-006/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:02:45.598Z"
+        },
+        {
+          "id": "ev_903bd469",
+          "label": "TC-003 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:02:43.291Z"
+        },
+        {
+          "id": "ev_229578c0",
+          "label": "TC-003 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:02:43.232Z"
+        },
+        {
+          "id": "ev_7f499d4a",
+          "label": "TC-003 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:02:43.212Z"
+        },
+        {
+          "id": "ev_f18e7108",
+          "label": "TC-004 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-004/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:02:41.461Z"
+        },
+        {
+          "id": "ev_1366801f",
+          "label": "TC-004 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-004/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:02:41.429Z"
+        },
+        {
+          "id": "ev_d6678e29",
+          "label": "TC-004 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-004/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:02:41.418Z"
+        },
+        {
+          "id": "ev_2ee937ca",
+          "label": "TC-002 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-002/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:02:27.617Z"
+        },
+        {
+          "id": "ev_31c47161",
+          "label": "TC-002 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-002/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:02:27.573Z"
+        },
+        {
+          "id": "ev_282bac6b",
+          "label": "TC-002 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-002/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:02:27.555Z"
+        },
+        {
+          "id": "ev_e5b13814",
+          "label": "TC-007 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-007/playwright_20260429_114843",
+          "createdAt": "2026-04-29T16:06:34.586Z"
+        },
+        {
+          "id": "ev_e9ff7abd",
+          "label": "TC-007 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-007/playwright_20260429_114843/trace.zip",
+          "createdAt": "2026-04-29T16:06:34.586Z"
+        },
+        {
+          "id": "ev_76bcfe9e",
+          "label": "TC-007 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-007/playwright_20260429_114843/result.json",
+          "createdAt": "2026-04-29T16:06:34.585Z"
+        },
+        {
+          "id": "ev_88acde1e",
+          "label": "TC-006 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-006/playwright_20260429_114843/trace.zip",
+          "createdAt": "2026-04-29T16:06:34.577Z"
+        },
+        {
+          "id": "ev_f4e030b5",
+          "label": "TC-006 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-006/playwright_20260429_114843",
+          "createdAt": "2026-04-29T16:06:34.576Z"
+        },
+        {
+          "id": "ev_1f9f0dbf",
+          "label": "TC-006 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-006/playwright_20260429_114843/result.json",
+          "createdAt": "2026-04-29T16:06:34.575Z"
+        },
+        {
+          "id": "ev_7d3db0cb",
+          "label": "TC-001 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260429_114708/trace.zip",
+          "createdAt": "2026-04-29T16:06:34.435Z"
+        },
+        {
+          "id": "ev_40cb07a2",
+          "label": "TC-001 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260429_114708",
+          "createdAt": "2026-04-29T16:06:34.433Z"
+        },
+        {
+          "id": "ev_3345e92c",
+          "label": "TC-001 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260429_114708/result.json",
+          "createdAt": "2026-04-29T16:06:34.428Z"
+        },
+        {
+          "id": "ev_6ca2ea27",
+          "label": "TC-001 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260429_114616/trace.zip",
+          "createdAt": "2026-04-29T16:06:34.427Z"
+        },
+        {
+          "id": "ev_40cb03fe",
+          "label": "TC-001 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260429_114616",
+          "createdAt": "2026-04-29T16:06:34.426Z"
+        },
+        {
+          "id": "ev_de423b88",
+          "label": "TC-001 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260429_114616/result.json",
+          "createdAt": "2026-04-29T16:06:34.424Z"
+        }
+      ],
+      "technical": {
+        "rawLabel": "test_cases and test_case_steps inventory",
+        "command": "PGPASSWORD=ingestion /opt/homebrew/bin/psql -h localhost -p 5433 -U ingestion -d ingestion -tAc \"select 'cases=' || count(*) from test_cases; select 'steps=' || count(*) from test_case_steps;\"",
+        "stdout": "Dry run: PGPASSWORD=ingestion /opt/homebrew/bin/psql -h localhost -p 5433 -U ingestion -d ingestion -tAc \"select 'cases=' || count(*) from test_cases; select 'steps=' || count(*) from test_case_steps;\"",
+        "exitCode": 0
+      },
+      "createdAt": "2026-05-01T16:08:06.885Z"
+    },
+    {
+      "id": "2ebce09f-f8ec-4833-b957-fd9afb819402",
+      "runId": "ui_20260501_120806",
+      "phase": "audit_ingestion",
+      "title": "Validating test cases against approved documentation",
+      "summary": "Running the independent pre-execution quality gate.",
+      "status": "running",
+      "risk": "critical",
+      "decisionRequired": false,
+      "technical": {
+        "rawLabel": "/audit-test-case-ingestion",
+        "sdkPrompt": "/audit-test-case-ingestion"
+      },
+      "createdAt": "2026-05-01T16:08:06.885Z"
+    },
+    {
+      "id": "4eff0e95-bd92-4693-b250-92e2c697cefa",
+      "runId": "ui_20260501_120806",
+      "phase": "audit_ingestion",
+      "title": "Validating test cases against approved documentation",
+      "summary": "The test case ingestion gate passed.",
+      "status": "succeeded",
+      "risk": "low",
+      "decisionRequired": false,
+      "evidence": [
+        {
+          "id": "ev_84591c52",
+          "label": "Ingestion audit gate report",
+          "kind": "report",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/ingestion_audit_20260501_120748.md",
+          "createdAt": "2026-05-01T16:07:48.186Z"
+        },
+        {
+          "id": "ev_d28238e3",
+          "label": "Ingestion audit gate report",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/ingestion_audit_20260501_120748.json",
+          "createdAt": "2026-05-01T16:07:48.186Z"
+        },
+        {
+          "id": "ev_8284e618",
+          "label": "Ingestion audit gate report",
+          "kind": "report",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/ingestion_audit_20260501_120621.md",
+          "createdAt": "2026-05-01T16:06:27.803Z"
+        },
+        {
+          "id": "ev_f4e2a929",
+          "label": "Ingestion audit gate report",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/ingestion_audit_20260501_120621.json",
+          "createdAt": "2026-05-01T16:06:27.803Z"
+        },
+        {
+          "id": "ev_7f37d83b",
+          "label": "Ingestion audit gate report",
+          "kind": "report",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/ingestion_audit_20260501_120442.md",
+          "createdAt": "2026-05-01T16:04:42.853Z"
+        },
+        {
+          "id": "ev_90a19e8c",
+          "label": "Ingestion audit gate report",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/ingestion_audit_20260501_120442.json",
+          "createdAt": "2026-05-01T16:04:42.853Z"
+        },
+        {
+          "id": "ev_cc088f47",
+          "label": "Independent QA audit report",
+          "kind": "report",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/audit_TC001-TC005_20260501_114356.md",
+          "createdAt": "2026-05-01T15:43:56.644Z"
+        },
+        {
+          "id": "ev_52c6a807",
+          "label": "Business test repository Markdown",
+          "kind": "markdown",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test-doc/09-test-case-repository.md",
+          "createdAt": "2026-05-01T15:40:07.600Z"
+        },
+        {
+          "id": "ev_7518cc4e",
+          "label": "Executable test workbook",
+          "kind": "workbook",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/TestCases.xlsx",
+          "createdAt": "2026-05-01T15:40:07.600Z"
+        },
+        {
+          "id": "ev_c57f8cb8",
+          "label": "Governed JSON repository",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test-doc/test-case-repository.json",
+          "createdAt": "2026-05-01T15:39:49.703Z"
+        },
+        {
+          "id": "ev_3f541354",
+          "label": "Independent QA audit report",
+          "kind": "report",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/audit_all_postHeal_20260501_analysis_20260501_103509.md",
+          "createdAt": "2026-05-01T14:35:09.294Z"
+        },
+        {
+          "id": "ev_ebc61fbd",
+          "label": "Independent QA audit report",
+          "kind": "report",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/audit_all_20260501_103459.md",
+          "createdAt": "2026-05-01T14:34:59.764Z"
+        },
+        {
+          "id": "ev_7fcde6cb",
+          "label": "TC-015 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-015/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:17:15.968Z"
+        },
+        {
+          "id": "ev_ba06bda2",
+          "label": "TC-015 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-015/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:17:15.941Z"
+        },
+        {
+          "id": "ev_d2a09f2c",
+          "label": "TC-015 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-015/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:17:15.933Z"
+        },
+        {
+          "id": "ev_e120836a",
+          "label": "TC-016 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-016/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:17:15.929Z"
+        },
+        {
+          "id": "ev_aad7c501",
+          "label": "TC-016 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-016/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:17:15.912Z"
+        },
+        {
+          "id": "ev_29be900b",
+          "label": "TC-016 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-016/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:17:15.906Z"
+        },
+        {
+          "id": "ev_1e7b4a2c",
+          "label": "TC-014 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-014/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:17:15.636Z"
+        },
+        {
+          "id": "ev_c935b643",
+          "label": "TC-014 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-014/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:17:15.605Z"
+        },
+        {
+          "id": "ev_7b82ae4d",
+          "label": "TC-014 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-014/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:17:15.598Z"
+        },
+        {
+          "id": "ev_bd28ad8d",
+          "label": "TC-013 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-013/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:17:13.391Z"
+        },
+        {
+          "id": "ev_d864aee4",
+          "label": "TC-013 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-013/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:17:13.364Z"
+        },
+        {
+          "id": "ev_2464bd6e",
+          "label": "TC-013 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-013/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:17:13.356Z"
+        },
+        {
+          "id": "ev_fa83744f",
+          "label": "TC-011 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-011/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:17:09.150Z"
+        },
+        {
+          "id": "ev_5bd610ee",
+          "label": "TC-012 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-012/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:17:09.142Z"
+        },
+        {
+          "id": "ev_f6c2a026",
+          "label": "TC-011 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-011/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:17:09.119Z"
+        },
+        {
+          "id": "ev_e793a785",
+          "label": "TC-012 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-012/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:17:09.113Z"
+        },
+        {
+          "id": "ev_7628dbb0",
+          "label": "TC-011 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-011/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:17:09.112Z"
+        },
+        {
+          "id": "ev_cd46cc8f",
+          "label": "TC-012 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-012/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:17:09.106Z"
+        },
+        {
+          "id": "ev_9930d7b0",
+          "label": "TC-010 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-010/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:17:04.359Z"
+        },
+        {
+          "id": "ev_5f198c7",
+          "label": "TC-010 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-010/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:17:04.332Z"
+        },
+        {
+          "id": "ev_3c176206",
+          "label": "TC-009 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-009/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:17:04.327Z"
+        },
+        {
+          "id": "ev_1f0aead1",
+          "label": "TC-010 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-010/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:17:04.324Z"
+        },
+        {
+          "id": "ev_53faf69d",
+          "label": "TC-009 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-009/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:17:04.300Z"
+        },
+        {
+          "id": "ev_a27837a7",
+          "label": "TC-009 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-009/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:17:04.294Z"
+        },
+        {
+          "id": "ev_dac4c567",
+          "label": "TC-008 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-008/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:17:00.605Z"
+        },
+        {
+          "id": "ev_6329ef3e",
+          "label": "TC-008 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-008/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:17:00.572Z"
+        },
+        {
+          "id": "ev_4b5a46c8",
+          "label": "TC-008 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-008/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:17:00.563Z"
+        },
+        {
+          "id": "ev_b6ccef8a",
+          "label": "TC-005 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-005/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:16:59.621Z"
+        },
+        {
+          "id": "ev_90b6d921",
+          "label": "TC-005 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-005/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:16:59.590Z"
+        },
+        {
+          "id": "ev_4600742b",
+          "label": "TC-005 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-005/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:16:59.582Z"
+        },
+        {
+          "id": "ev_f427b64c",
+          "label": "TC-003 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:16:52.600Z"
+        },
+        {
+          "id": "ev_af14ca63",
+          "label": "TC-003 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:16:52.540Z"
+        },
+        {
+          "id": "ev_97c4926d",
+          "label": "TC-003 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:16:52.520Z"
+        },
+        {
+          "id": "ev_557a52eb",
+          "label": "TC-004 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-004/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:16:50.856Z"
+        },
+        {
+          "id": "ev_9fe5d1c2",
+          "label": "TC-004 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-004/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:16:50.822Z"
+        },
+        {
+          "id": "ev_eee2834c",
+          "label": "TC-004 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-004/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:16:50.811Z"
+        },
+        {
+          "id": "ev_92d519ad",
+          "label": "TC-002 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-002/playwright_20260501_101627/trace.zip",
+          "createdAt": "2026-05-01T14:16:37.212Z"
+        },
+        {
+          "id": "ev_be43c304",
+          "label": "TC-002 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-002/playwright_20260501_101627",
+          "createdAt": "2026-05-01T14:16:37.168Z"
+        },
+        {
+          "id": "ev_40a6a18e",
+          "label": "TC-002 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-002/playwright_20260501_101627/result.json",
+          "createdAt": "2026-05-01T14:16:37.140Z"
+        },
+        {
+          "id": "ev_a31d5558",
+          "label": "Ingestion remediation report",
+          "kind": "report",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/ingestion_heal_20260501_101245.md",
+          "createdAt": "2026-05-01T14:15:01.278Z"
+        },
+        {
+          "id": "ev_aeff4e3e",
+          "label": "TC-016 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-016/playwright_20260429_144333/trace.zip",
+          "createdAt": "2026-04-29T18:44:21.559Z"
+        },
+        {
+          "id": "ev_1e5a48d5",
+          "label": "TC-016 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-016/playwright_20260429_144333",
+          "createdAt": "2026-04-29T18:44:21.544Z"
+        },
+        {
+          "id": "ev_fb15f5df",
+          "label": "TC-016 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-016/playwright_20260429_144333/result.json",
+          "createdAt": "2026-04-29T18:44:21.535Z"
+        },
+        {
+          "id": "ev_1be204e8",
+          "label": "TC-015 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-015/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:03:06.828Z"
+        },
+        {
+          "id": "ev_2d876bff",
+          "label": "TC-015 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-015/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:03:06.810Z"
+        },
+        {
+          "id": "ev_ba25aa09",
+          "label": "TC-015 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-015/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:03:06.804Z"
+        },
+        {
+          "id": "ev_ba8f6849",
+          "label": "TC-014 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-014/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:03:06.579Z"
+        },
+        {
+          "id": "ev_3cb664a0",
+          "label": "TC-014 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-014/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:03:06.552Z"
+        },
+        {
+          "id": "ev_6307b92a",
+          "label": "TC-014 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-014/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:03:06.547Z"
+        },
+        {
+          "id": "ev_593ccbaa",
+          "label": "TC-013 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-013/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:03:04.208Z"
+        },
+        {
+          "id": "ev_4be55d41",
+          "label": "TC-013 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-013/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:03:04.187Z"
+        },
+        {
+          "id": "ev_be9c84b",
+          "label": "TC-013 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-013/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:03:04.176Z"
+        },
+        {
+          "id": "ev_f7ea2f0b",
+          "label": "TC-012 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-012/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:03:00.041Z"
+        },
+        {
+          "id": "ev_5b1455e2",
+          "label": "TC-012 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-012/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:03:00.017Z"
+        },
+        {
+          "id": "ev_b4cbd76c",
+          "label": "TC-012 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-012/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:03:00.009Z"
+        },
+        {
+          "id": "ev_9697926c",
+          "label": "TC-011 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-011/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:02:59.929Z"
+        },
+        {
+          "id": "ev_6a434e83",
+          "label": "TC-011 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-011/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:02:59.901Z"
+        },
+        {
+          "id": "ev_5dade68d",
+          "label": "TC-011 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-011/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:02:59.894Z"
+        },
+        {
+          "id": "ev_3544f5cd",
+          "label": "TC-010 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-010/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:02:55.257Z"
+        },
+        {
+          "id": "ev_79724724",
+          "label": "TC-010 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-010/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:02:55.238Z"
+        },
+        {
+          "id": "ev_68ff5ae",
+          "label": "TC-010 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-010/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:02:55.233Z"
+        },
+        {
+          "id": "ev_d82b8023",
+          "label": "TC-009 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-009/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:02:55.099Z"
+        },
+        {
+          "id": "ev_c77ba4fa",
+          "label": "TC-009 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-009/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:02:55.077Z"
+        },
+        {
+          "id": "ev_89fd4284",
+          "label": "TC-009 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-009/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:02:55.070Z"
+        },
+        {
+          "id": "ev_76d8e384",
+          "label": "TC-008 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-008/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:02:51.489Z"
+        },
+        {
+          "id": "ev_d6aa9d9b",
+          "label": "TC-008 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-008/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:02:51.463Z"
+        },
+        {
+          "id": "ev_32df51a5",
+          "label": "TC-008 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-008/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:02:51.453Z"
+        },
+        {
+          "id": "ev_52e10da7",
+          "label": "TC-005 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-005/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:02:50.397Z"
+        },
+        {
+          "id": "ev_437877e",
+          "label": "TC-005 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-005/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:02:50.365Z"
+        },
+        {
+          "id": "ev_2d857f08",
+          "label": "TC-005 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-005/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:02:50.351Z"
+        },
+        {
+          "id": "ev_158646e5",
+          "label": "TC-007 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-007/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:02:48.050Z"
+        },
+        {
+          "id": "ev_e5d9963c",
+          "label": "TC-007 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-007/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:02:48.026Z"
+        },
+        {
+          "id": "ev_dbc160c6",
+          "label": "TC-007 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-007/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:02:48.016Z"
+        },
+        {
+          "id": "ev_b433aa46",
+          "label": "TC-006 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-006/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:02:45.628Z"
+        },
+        {
+          "id": "ev_f5088edd",
+          "label": "TC-006 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-006/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:02:45.606Z"
+        },
+        {
+          "id": "ev_84a36fe7",
+          "label": "TC-006 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-006/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:02:45.598Z"
+        },
+        {
+          "id": "ev_903bd469",
+          "label": "TC-003 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:02:43.291Z"
+        },
+        {
+          "id": "ev_229578c0",
+          "label": "TC-003 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:02:43.232Z"
+        },
+        {
+          "id": "ev_7f499d4a",
+          "label": "TC-003 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:02:43.212Z"
+        },
+        {
+          "id": "ev_f18e7108",
+          "label": "TC-004 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-004/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:02:41.461Z"
+        },
+        {
+          "id": "ev_1366801f",
+          "label": "TC-004 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-004/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:02:41.429Z"
+        },
+        {
+          "id": "ev_d6678e29",
+          "label": "TC-004 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-004/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:02:41.418Z"
+        },
+        {
+          "id": "ev_2ee937ca",
+          "label": "TC-002 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-002/playwright_20260429_140217/trace.zip",
+          "createdAt": "2026-04-29T18:02:27.617Z"
+        },
+        {
+          "id": "ev_31c47161",
+          "label": "TC-002 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-002/playwright_20260429_140217",
+          "createdAt": "2026-04-29T18:02:27.573Z"
+        },
+        {
+          "id": "ev_282bac6b",
+          "label": "TC-002 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-002/playwright_20260429_140217/result.json",
+          "createdAt": "2026-04-29T18:02:27.555Z"
+        },
+        {
+          "id": "ev_e5b13814",
+          "label": "TC-007 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-007/playwright_20260429_114843",
+          "createdAt": "2026-04-29T16:06:34.586Z"
+        },
+        {
+          "id": "ev_e9ff7abd",
+          "label": "TC-007 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-007/playwright_20260429_114843/trace.zip",
+          "createdAt": "2026-04-29T16:06:34.586Z"
+        },
+        {
+          "id": "ev_76bcfe9e",
+          "label": "TC-007 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-007/playwright_20260429_114843/result.json",
+          "createdAt": "2026-04-29T16:06:34.585Z"
+        },
+        {
+          "id": "ev_88acde1e",
+          "label": "TC-006 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-006/playwright_20260429_114843/trace.zip",
+          "createdAt": "2026-04-29T16:06:34.577Z"
+        },
+        {
+          "id": "ev_f4e030b5",
+          "label": "TC-006 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-006/playwright_20260429_114843",
+          "createdAt": "2026-04-29T16:06:34.576Z"
+        },
+        {
+          "id": "ev_1f9f0dbf",
+          "label": "TC-006 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-006/playwright_20260429_114843/result.json",
+          "createdAt": "2026-04-29T16:06:34.575Z"
+        },
+        {
+          "id": "ev_7d3db0cb",
+          "label": "TC-001 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260429_114708/trace.zip",
+          "createdAt": "2026-04-29T16:06:34.435Z"
+        },
+        {
+          "id": "ev_40cb07a2",
+          "label": "TC-001 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260429_114708",
+          "createdAt": "2026-04-29T16:06:34.433Z"
+        },
+        {
+          "id": "ev_3345e92c",
+          "label": "TC-001 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260429_114708/result.json",
+          "createdAt": "2026-04-29T16:06:34.428Z"
+        },
+        {
+          "id": "ev_6ca2ea27",
+          "label": "TC-001 trace",
+          "kind": "trace",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260429_114616/trace.zip",
+          "createdAt": "2026-04-29T16:06:34.427Z"
+        },
+        {
+          "id": "ev_40cb03fe",
+          "label": "TC-001 Playwright evidence",
+          "kind": "folder",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260429_114616",
+          "createdAt": "2026-04-29T16:06:34.426Z"
+        },
+        {
+          "id": "ev_de423b88",
+          "label": "TC-001 result JSON",
+          "kind": "json",
+          "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260429_114616/result.json",
+          "createdAt": "2026-04-29T16:06:34.424Z"
+        }
+      ],
+      "technical": {
+        "rawLabel": "/audit-test-case-ingestion",
+        "sdkPrompt": "/audit-test-case-ingestion",
+        "stdout": "Dry run: Claude Agent SDK would invoke /audit-test-case-ingestion",
+        "exitCode": 0
+      },
+      "createdAt": "2026-05-01T16:08:06.888Z"
+    },
+    {
+      "id": "3fcb578b-b321-4853-a8b4-9041c991d5a0",
+      "runId": "ui_20260501_120806",
+      "phase": "checkpoint",
+      "title": "Human checkpoint before execution",
+      "summary": "Execution is paused until a business decision is recorded.",
+      "status": "waiting",
+      "risk": "medium",
+      "decisionRequired": true,
+      "createdAt": "2026-05-01T16:08:06.889Z",
+      "technical": {
+        "rawLabel": "human_checkpoint"
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev_84591c52",
+      "label": "Ingestion audit gate report",
+      "kind": "report",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/ingestion_audit_20260501_120748.md",
+      "createdAt": "2026-05-01T16:07:48.186Z"
+    },
+    {
+      "id": "ev_d28238e3",
+      "label": "Ingestion audit gate report",
+      "kind": "json",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/ingestion_audit_20260501_120748.json",
+      "createdAt": "2026-05-01T16:07:48.186Z"
+    },
+    {
+      "id": "ev_8284e618",
+      "label": "Ingestion audit gate report",
+      "kind": "report",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/ingestion_audit_20260501_120621.md",
+      "createdAt": "2026-05-01T16:06:27.803Z"
+    },
+    {
+      "id": "ev_f4e2a929",
+      "label": "Ingestion audit gate report",
+      "kind": "json",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/ingestion_audit_20260501_120621.json",
+      "createdAt": "2026-05-01T16:06:27.803Z"
+    },
+    {
+      "id": "ev_7f37d83b",
+      "label": "Ingestion audit gate report",
+      "kind": "report",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/ingestion_audit_20260501_120442.md",
+      "createdAt": "2026-05-01T16:04:42.853Z"
+    },
+    {
+      "id": "ev_90a19e8c",
+      "label": "Ingestion audit gate report",
+      "kind": "json",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/ingestion_audit_20260501_120442.json",
+      "createdAt": "2026-05-01T16:04:42.853Z"
+    },
+    {
+      "id": "ev_cc088f47",
+      "label": "Independent QA audit report",
+      "kind": "report",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/audit_TC001-TC005_20260501_114356.md",
+      "createdAt": "2026-05-01T15:43:56.644Z"
+    },
+    {
+      "id": "ev_52c6a807",
+      "label": "Business test repository Markdown",
+      "kind": "markdown",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test-doc/09-test-case-repository.md",
+      "createdAt": "2026-05-01T15:40:07.600Z"
+    },
+    {
+      "id": "ev_7518cc4e",
+      "label": "Executable test workbook",
+      "kind": "workbook",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/TestCases.xlsx",
+      "createdAt": "2026-05-01T15:40:07.600Z"
+    },
+    {
+      "id": "ev_c57f8cb8",
+      "label": "Governed JSON repository",
+      "kind": "json",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test-doc/test-case-repository.json",
+      "createdAt": "2026-05-01T15:39:49.703Z"
+    },
+    {
+      "id": "ev_3f541354",
+      "label": "Independent QA audit report",
+      "kind": "report",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/audit_all_postHeal_20260501_analysis_20260501_103509.md",
+      "createdAt": "2026-05-01T14:35:09.294Z"
+    },
+    {
+      "id": "ev_ebc61fbd",
+      "label": "Independent QA audit report",
+      "kind": "report",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/audit_all_20260501_103459.md",
+      "createdAt": "2026-05-01T14:34:59.764Z"
+    },
+    {
+      "id": "ev_7fcde6cb",
+      "label": "TC-015 trace",
+      "kind": "trace",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-015/playwright_20260501_101627/trace.zip",
+      "createdAt": "2026-05-01T14:17:15.968Z"
+    },
+    {
+      "id": "ev_ba06bda2",
+      "label": "TC-015 Playwright evidence",
+      "kind": "folder",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-015/playwright_20260501_101627",
+      "createdAt": "2026-05-01T14:17:15.941Z"
+    },
+    {
+      "id": "ev_d2a09f2c",
+      "label": "TC-015 result JSON",
+      "kind": "json",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-015/playwright_20260501_101627/result.json",
+      "createdAt": "2026-05-01T14:17:15.933Z"
+    },
+    {
+      "id": "ev_e120836a",
+      "label": "TC-016 trace",
+      "kind": "trace",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-016/playwright_20260501_101627/trace.zip",
+      "createdAt": "2026-05-01T14:17:15.929Z"
+    },
+    {
+      "id": "ev_aad7c501",
+      "label": "TC-016 Playwright evidence",
+      "kind": "folder",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-016/playwright_20260501_101627",
+      "createdAt": "2026-05-01T14:17:15.912Z"
+    },
+    {
+      "id": "ev_29be900b",
+      "label": "TC-016 result JSON",
+      "kind": "json",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-016/playwright_20260501_101627/result.json",
+      "createdAt": "2026-05-01T14:17:15.906Z"
+    },
+    {
+      "id": "ev_1e7b4a2c",
+      "label": "TC-014 trace",
+      "kind": "trace",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-014/playwright_20260501_101627/trace.zip",
+      "createdAt": "2026-05-01T14:17:15.636Z"
+    },
+    {
+      "id": "ev_c935b643",
+      "label": "TC-014 Playwright evidence",
+      "kind": "folder",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-014/playwright_20260501_101627",
+      "createdAt": "2026-05-01T14:17:15.605Z"
+    },
+    {
+      "id": "ev_7b82ae4d",
+      "label": "TC-014 result JSON",
+      "kind": "json",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-014/playwright_20260501_101627/result.json",
+      "createdAt": "2026-05-01T14:17:15.598Z"
+    },
+    {
+      "id": "ev_bd28ad8d",
+      "label": "TC-013 trace",
+      "kind": "trace",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-013/playwright_20260501_101627/trace.zip",
+      "createdAt": "2026-05-01T14:17:13.391Z"
+    },
+    {
+      "id": "ev_d864aee4",
+      "label": "TC-013 Playwright evidence",
+      "kind": "folder",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-013/playwright_20260501_101627",
+      "createdAt": "2026-05-01T14:17:13.364Z"
+    },
+    {
+      "id": "ev_2464bd6e",
+      "label": "TC-013 result JSON",
+      "kind": "json",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-013/playwright_20260501_101627/result.json",
+      "createdAt": "2026-05-01T14:17:13.356Z"
+    },
+    {
+      "id": "ev_fa83744f",
+      "label": "TC-011 trace",
+      "kind": "trace",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-011/playwright_20260501_101627/trace.zip",
+      "createdAt": "2026-05-01T14:17:09.150Z"
+    },
+    {
+      "id": "ev_5bd610ee",
+      "label": "TC-012 trace",
+      "kind": "trace",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-012/playwright_20260501_101627/trace.zip",
+      "createdAt": "2026-05-01T14:17:09.142Z"
+    },
+    {
+      "id": "ev_f6c2a026",
+      "label": "TC-011 Playwright evidence",
+      "kind": "folder",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-011/playwright_20260501_101627",
+      "createdAt": "2026-05-01T14:17:09.119Z"
+    },
+    {
+      "id": "ev_e793a785",
+      "label": "TC-012 Playwright evidence",
+      "kind": "folder",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-012/playwright_20260501_101627",
+      "createdAt": "2026-05-01T14:17:09.113Z"
+    },
+    {
+      "id": "ev_7628dbb0",
+      "label": "TC-011 result JSON",
+      "kind": "json",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-011/playwright_20260501_101627/result.json",
+      "createdAt": "2026-05-01T14:17:09.112Z"
+    },
+    {
+      "id": "ev_cd46cc8f",
+      "label": "TC-012 result JSON",
+      "kind": "json",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-012/playwright_20260501_101627/result.json",
+      "createdAt": "2026-05-01T14:17:09.106Z"
+    },
+    {
+      "id": "ev_9930d7b0",
+      "label": "TC-010 trace",
+      "kind": "trace",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-010/playwright_20260501_101627/trace.zip",
+      "createdAt": "2026-05-01T14:17:04.359Z"
+    },
+    {
+      "id": "ev_5f198c7",
+      "label": "TC-010 Playwright evidence",
+      "kind": "folder",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-010/playwright_20260501_101627",
+      "createdAt": "2026-05-01T14:17:04.332Z"
+    },
+    {
+      "id": "ev_3c176206",
+      "label": "TC-009 trace",
+      "kind": "trace",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-009/playwright_20260501_101627/trace.zip",
+      "createdAt": "2026-05-01T14:17:04.327Z"
+    },
+    {
+      "id": "ev_1f0aead1",
+      "label": "TC-010 result JSON",
+      "kind": "json",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-010/playwright_20260501_101627/result.json",
+      "createdAt": "2026-05-01T14:17:04.324Z"
+    },
+    {
+      "id": "ev_53faf69d",
+      "label": "TC-009 Playwright evidence",
+      "kind": "folder",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-009/playwright_20260501_101627",
+      "createdAt": "2026-05-01T14:17:04.300Z"
+    },
+    {
+      "id": "ev_a27837a7",
+      "label": "TC-009 result JSON",
+      "kind": "json",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-009/playwright_20260501_101627/result.json",
+      "createdAt": "2026-05-01T14:17:04.294Z"
+    },
+    {
+      "id": "ev_dac4c567",
+      "label": "TC-008 trace",
+      "kind": "trace",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-008/playwright_20260501_101627/trace.zip",
+      "createdAt": "2026-05-01T14:17:00.605Z"
+    },
+    {
+      "id": "ev_6329ef3e",
+      "label": "TC-008 Playwright evidence",
+      "kind": "folder",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-008/playwright_20260501_101627",
+      "createdAt": "2026-05-01T14:17:00.572Z"
+    },
+    {
+      "id": "ev_4b5a46c8",
+      "label": "TC-008 result JSON",
+      "kind": "json",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-008/playwright_20260501_101627/result.json",
+      "createdAt": "2026-05-01T14:17:00.563Z"
+    },
+    {
+      "id": "ev_b6ccef8a",
+      "label": "TC-005 trace",
+      "kind": "trace",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-005/playwright_20260501_101627/trace.zip",
+      "createdAt": "2026-05-01T14:16:59.621Z"
+    },
+    {
+      "id": "ev_90b6d921",
+      "label": "TC-005 Playwright evidence",
+      "kind": "folder",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-005/playwright_20260501_101627",
+      "createdAt": "2026-05-01T14:16:59.590Z"
+    },
+    {
+      "id": "ev_4600742b",
+      "label": "TC-005 result JSON",
+      "kind": "json",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-005/playwright_20260501_101627/result.json",
+      "createdAt": "2026-05-01T14:16:59.582Z"
+    },
+    {
+      "id": "ev_f427b64c",
+      "label": "TC-003 trace",
+      "kind": "trace",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260501_101627/trace.zip",
+      "createdAt": "2026-05-01T14:16:52.600Z"
+    },
+    {
+      "id": "ev_af14ca63",
+      "label": "TC-003 Playwright evidence",
+      "kind": "folder",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260501_101627",
+      "createdAt": "2026-05-01T14:16:52.540Z"
+    },
+    {
+      "id": "ev_97c4926d",
+      "label": "TC-003 result JSON",
+      "kind": "json",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260501_101627/result.json",
+      "createdAt": "2026-05-01T14:16:52.520Z"
+    },
+    {
+      "id": "ev_557a52eb",
+      "label": "TC-004 trace",
+      "kind": "trace",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-004/playwright_20260501_101627/trace.zip",
+      "createdAt": "2026-05-01T14:16:50.856Z"
+    },
+    {
+      "id": "ev_9fe5d1c2",
+      "label": "TC-004 Playwright evidence",
+      "kind": "folder",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-004/playwright_20260501_101627",
+      "createdAt": "2026-05-01T14:16:50.822Z"
+    },
+    {
+      "id": "ev_eee2834c",
+      "label": "TC-004 result JSON",
+      "kind": "json",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-004/playwright_20260501_101627/result.json",
+      "createdAt": "2026-05-01T14:16:50.811Z"
+    },
+    {
+      "id": "ev_92d519ad",
+      "label": "TC-002 trace",
+      "kind": "trace",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-002/playwright_20260501_101627/trace.zip",
+      "createdAt": "2026-05-01T14:16:37.212Z"
+    },
+    {
+      "id": "ev_be43c304",
+      "label": "TC-002 Playwright evidence",
+      "kind": "folder",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-002/playwright_20260501_101627",
+      "createdAt": "2026-05-01T14:16:37.168Z"
+    },
+    {
+      "id": "ev_40a6a18e",
+      "label": "TC-002 result JSON",
+      "kind": "json",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-002/playwright_20260501_101627/result.json",
+      "createdAt": "2026-05-01T14:16:37.140Z"
+    },
+    {
+      "id": "ev_a31d5558",
+      "label": "Ingestion remediation report",
+      "kind": "report",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/ingestion_heal_20260501_101245.md",
+      "createdAt": "2026-05-01T14:15:01.278Z"
+    },
+    {
+      "id": "ev_aeff4e3e",
+      "label": "TC-016 trace",
+      "kind": "trace",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-016/playwright_20260429_144333/trace.zip",
+      "createdAt": "2026-04-29T18:44:21.559Z"
+    },
+    {
+      "id": "ev_1e5a48d5",
+      "label": "TC-016 Playwright evidence",
+      "kind": "folder",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-016/playwright_20260429_144333",
+      "createdAt": "2026-04-29T18:44:21.544Z"
+    },
+    {
+      "id": "ev_fb15f5df",
+      "label": "TC-016 result JSON",
+      "kind": "json",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-016/playwright_20260429_144333/result.json",
+      "createdAt": "2026-04-29T18:44:21.535Z"
+    },
+    {
+      "id": "ev_1be204e8",
+      "label": "TC-015 trace",
+      "kind": "trace",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-015/playwright_20260429_140217/trace.zip",
+      "createdAt": "2026-04-29T18:03:06.828Z"
+    },
+    {
+      "id": "ev_2d876bff",
+      "label": "TC-015 Playwright evidence",
+      "kind": "folder",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-015/playwright_20260429_140217",
+      "createdAt": "2026-04-29T18:03:06.810Z"
+    },
+    {
+      "id": "ev_ba25aa09",
+      "label": "TC-015 result JSON",
+      "kind": "json",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-015/playwright_20260429_140217/result.json",
+      "createdAt": "2026-04-29T18:03:06.804Z"
+    },
+    {
+      "id": "ev_ba8f6849",
+      "label": "TC-014 trace",
+      "kind": "trace",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-014/playwright_20260429_140217/trace.zip",
+      "createdAt": "2026-04-29T18:03:06.579Z"
+    },
+    {
+      "id": "ev_3cb664a0",
+      "label": "TC-014 Playwright evidence",
+      "kind": "folder",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-014/playwright_20260429_140217",
+      "createdAt": "2026-04-29T18:03:06.552Z"
+    },
+    {
+      "id": "ev_6307b92a",
+      "label": "TC-014 result JSON",
+      "kind": "json",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-014/playwright_20260429_140217/result.json",
+      "createdAt": "2026-04-29T18:03:06.547Z"
+    },
+    {
+      "id": "ev_593ccbaa",
+      "label": "TC-013 trace",
+      "kind": "trace",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-013/playwright_20260429_140217/trace.zip",
+      "createdAt": "2026-04-29T18:03:04.208Z"
+    },
+    {
+      "id": "ev_4be55d41",
+      "label": "TC-013 Playwright evidence",
+      "kind": "folder",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-013/playwright_20260429_140217",
+      "createdAt": "2026-04-29T18:03:04.187Z"
+    },
+    {
+      "id": "ev_be9c84b",
+      "label": "TC-013 result JSON",
+      "kind": "json",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-013/playwright_20260429_140217/result.json",
+      "createdAt": "2026-04-29T18:03:04.176Z"
+    },
+    {
+      "id": "ev_f7ea2f0b",
+      "label": "TC-012 trace",
+      "kind": "trace",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-012/playwright_20260429_140217/trace.zip",
+      "createdAt": "2026-04-29T18:03:00.041Z"
+    },
+    {
+      "id": "ev_5b1455e2",
+      "label": "TC-012 Playwright evidence",
+      "kind": "folder",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-012/playwright_20260429_140217",
+      "createdAt": "2026-04-29T18:03:00.017Z"
+    },
+    {
+      "id": "ev_b4cbd76c",
+      "label": "TC-012 result JSON",
+      "kind": "json",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-012/playwright_20260429_140217/result.json",
+      "createdAt": "2026-04-29T18:03:00.009Z"
+    },
+    {
+      "id": "ev_9697926c",
+      "label": "TC-011 trace",
+      "kind": "trace",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-011/playwright_20260429_140217/trace.zip",
+      "createdAt": "2026-04-29T18:02:59.929Z"
+    },
+    {
+      "id": "ev_6a434e83",
+      "label": "TC-011 Playwright evidence",
+      "kind": "folder",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-011/playwright_20260429_140217",
+      "createdAt": "2026-04-29T18:02:59.901Z"
+    },
+    {
+      "id": "ev_5dade68d",
+      "label": "TC-011 result JSON",
+      "kind": "json",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-011/playwright_20260429_140217/result.json",
+      "createdAt": "2026-04-29T18:02:59.894Z"
+    },
+    {
+      "id": "ev_3544f5cd",
+      "label": "TC-010 trace",
+      "kind": "trace",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-010/playwright_20260429_140217/trace.zip",
+      "createdAt": "2026-04-29T18:02:55.257Z"
+    },
+    {
+      "id": "ev_79724724",
+      "label": "TC-010 Playwright evidence",
+      "kind": "folder",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-010/playwright_20260429_140217",
+      "createdAt": "2026-04-29T18:02:55.238Z"
+    },
+    {
+      "id": "ev_68ff5ae",
+      "label": "TC-010 result JSON",
+      "kind": "json",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-010/playwright_20260429_140217/result.json",
+      "createdAt": "2026-04-29T18:02:55.233Z"
+    },
+    {
+      "id": "ev_d82b8023",
+      "label": "TC-009 trace",
+      "kind": "trace",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-009/playwright_20260429_140217/trace.zip",
+      "createdAt": "2026-04-29T18:02:55.099Z"
+    },
+    {
+      "id": "ev_c77ba4fa",
+      "label": "TC-009 Playwright evidence",
+      "kind": "folder",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-009/playwright_20260429_140217",
+      "createdAt": "2026-04-29T18:02:55.077Z"
+    },
+    {
+      "id": "ev_89fd4284",
+      "label": "TC-009 result JSON",
+      "kind": "json",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-009/playwright_20260429_140217/result.json",
+      "createdAt": "2026-04-29T18:02:55.070Z"
+    },
+    {
+      "id": "ev_76d8e384",
+      "label": "TC-008 trace",
+      "kind": "trace",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-008/playwright_20260429_140217/trace.zip",
+      "createdAt": "2026-04-29T18:02:51.489Z"
+    },
+    {
+      "id": "ev_d6aa9d9b",
+      "label": "TC-008 Playwright evidence",
+      "kind": "folder",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-008/playwright_20260429_140217",
+      "createdAt": "2026-04-29T18:02:51.463Z"
+    },
+    {
+      "id": "ev_32df51a5",
+      "label": "TC-008 result JSON",
+      "kind": "json",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-008/playwright_20260429_140217/result.json",
+      "createdAt": "2026-04-29T18:02:51.453Z"
+    },
+    {
+      "id": "ev_52e10da7",
+      "label": "TC-005 trace",
+      "kind": "trace",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-005/playwright_20260429_140217/trace.zip",
+      "createdAt": "2026-04-29T18:02:50.397Z"
+    },
+    {
+      "id": "ev_437877e",
+      "label": "TC-005 Playwright evidence",
+      "kind": "folder",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-005/playwright_20260429_140217",
+      "createdAt": "2026-04-29T18:02:50.365Z"
+    },
+    {
+      "id": "ev_2d857f08",
+      "label": "TC-005 result JSON",
+      "kind": "json",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-005/playwright_20260429_140217/result.json",
+      "createdAt": "2026-04-29T18:02:50.351Z"
+    },
+    {
+      "id": "ev_158646e5",
+      "label": "TC-007 trace",
+      "kind": "trace",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-007/playwright_20260429_140217/trace.zip",
+      "createdAt": "2026-04-29T18:02:48.050Z"
+    },
+    {
+      "id": "ev_e5d9963c",
+      "label": "TC-007 Playwright evidence",
+      "kind": "folder",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-007/playwright_20260429_140217",
+      "createdAt": "2026-04-29T18:02:48.026Z"
+    },
+    {
+      "id": "ev_dbc160c6",
+      "label": "TC-007 result JSON",
+      "kind": "json",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-007/playwright_20260429_140217/result.json",
+      "createdAt": "2026-04-29T18:02:48.016Z"
+    },
+    {
+      "id": "ev_b433aa46",
+      "label": "TC-006 trace",
+      "kind": "trace",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-006/playwright_20260429_140217/trace.zip",
+      "createdAt": "2026-04-29T18:02:45.628Z"
+    },
+    {
+      "id": "ev_f5088edd",
+      "label": "TC-006 Playwright evidence",
+      "kind": "folder",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-006/playwright_20260429_140217",
+      "createdAt": "2026-04-29T18:02:45.606Z"
+    },
+    {
+      "id": "ev_84a36fe7",
+      "label": "TC-006 result JSON",
+      "kind": "json",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-006/playwright_20260429_140217/result.json",
+      "createdAt": "2026-04-29T18:02:45.598Z"
+    },
+    {
+      "id": "ev_903bd469",
+      "label": "TC-003 trace",
+      "kind": "trace",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260429_140217/trace.zip",
+      "createdAt": "2026-04-29T18:02:43.291Z"
+    },
+    {
+      "id": "ev_229578c0",
+      "label": "TC-003 Playwright evidence",
+      "kind": "folder",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260429_140217",
+      "createdAt": "2026-04-29T18:02:43.232Z"
+    },
+    {
+      "id": "ev_7f499d4a",
+      "label": "TC-003 result JSON",
+      "kind": "json",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-003/playwright_20260429_140217/result.json",
+      "createdAt": "2026-04-29T18:02:43.212Z"
+    },
+    {
+      "id": "ev_f18e7108",
+      "label": "TC-004 trace",
+      "kind": "trace",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-004/playwright_20260429_140217/trace.zip",
+      "createdAt": "2026-04-29T18:02:41.461Z"
+    },
+    {
+      "id": "ev_1366801f",
+      "label": "TC-004 Playwright evidence",
+      "kind": "folder",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-004/playwright_20260429_140217",
+      "createdAt": "2026-04-29T18:02:41.429Z"
+    },
+    {
+      "id": "ev_d6678e29",
+      "label": "TC-004 result JSON",
+      "kind": "json",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-004/playwright_20260429_140217/result.json",
+      "createdAt": "2026-04-29T18:02:41.418Z"
+    },
+    {
+      "id": "ev_2ee937ca",
+      "label": "TC-002 trace",
+      "kind": "trace",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-002/playwright_20260429_140217/trace.zip",
+      "createdAt": "2026-04-29T18:02:27.617Z"
+    },
+    {
+      "id": "ev_31c47161",
+      "label": "TC-002 Playwright evidence",
+      "kind": "folder",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-002/playwright_20260429_140217",
+      "createdAt": "2026-04-29T18:02:27.573Z"
+    },
+    {
+      "id": "ev_282bac6b",
+      "label": "TC-002 result JSON",
+      "kind": "json",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-002/playwright_20260429_140217/result.json",
+      "createdAt": "2026-04-29T18:02:27.555Z"
+    },
+    {
+      "id": "ev_e5b13814",
+      "label": "TC-007 Playwright evidence",
+      "kind": "folder",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-007/playwright_20260429_114843",
+      "createdAt": "2026-04-29T16:06:34.586Z"
+    },
+    {
+      "id": "ev_e9ff7abd",
+      "label": "TC-007 trace",
+      "kind": "trace",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-007/playwright_20260429_114843/trace.zip",
+      "createdAt": "2026-04-29T16:06:34.586Z"
+    },
+    {
+      "id": "ev_76bcfe9e",
+      "label": "TC-007 result JSON",
+      "kind": "json",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-007/playwright_20260429_114843/result.json",
+      "createdAt": "2026-04-29T16:06:34.585Z"
+    },
+    {
+      "id": "ev_88acde1e",
+      "label": "TC-006 trace",
+      "kind": "trace",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-006/playwright_20260429_114843/trace.zip",
+      "createdAt": "2026-04-29T16:06:34.577Z"
+    },
+    {
+      "id": "ev_f4e030b5",
+      "label": "TC-006 Playwright evidence",
+      "kind": "folder",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-006/playwright_20260429_114843",
+      "createdAt": "2026-04-29T16:06:34.576Z"
+    },
+    {
+      "id": "ev_1f9f0dbf",
+      "label": "TC-006 result JSON",
+      "kind": "json",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-006/playwright_20260429_114843/result.json",
+      "createdAt": "2026-04-29T16:06:34.575Z"
+    },
+    {
+      "id": "ev_7d3db0cb",
+      "label": "TC-001 trace",
+      "kind": "trace",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260429_114708/trace.zip",
+      "createdAt": "2026-04-29T16:06:34.435Z"
+    },
+    {
+      "id": "ev_40cb07a2",
+      "label": "TC-001 Playwright evidence",
+      "kind": "folder",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260429_114708",
+      "createdAt": "2026-04-29T16:06:34.433Z"
+    },
+    {
+      "id": "ev_3345e92c",
+      "label": "TC-001 result JSON",
+      "kind": "json",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260429_114708/result.json",
+      "createdAt": "2026-04-29T16:06:34.428Z"
+    },
+    {
+      "id": "ev_6ca2ea27",
+      "label": "TC-001 trace",
+      "kind": "trace",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260429_114616/trace.zip",
+      "createdAt": "2026-04-29T16:06:34.427Z"
+    },
+    {
+      "id": "ev_40cb03fe",
+      "label": "TC-001 Playwright evidence",
+      "kind": "folder",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260429_114616",
+      "createdAt": "2026-04-29T16:06:34.426Z"
+    },
+    {
+      "id": "ev_de423b88",
+      "label": "TC-001 result JSON",
+      "kind": "json",
+      "path": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260429_114616/result.json",
+      "createdAt": "2026-04-29T16:06:34.424Z"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "5b601251-a0e3-4790-bcf4-eaa023b4b429",
+      "createdAt": "2026-05-01T16:08:06.888Z",
+      "title": "Confirm execution readiness",
+      "message": "The test case ingestion gate passed. Approve browser execution, change the scope, or stop before execution.",
+      "options": [
+        "approve",
+        "change_scope",
+        "stop"
+      ]
+    }
+  ],
+  "timeline": [
+    {
+      "phase": "prepare_kb",
+      "label": "Prepare QA Knowledge Base",
+      "status": "succeeded"
+    },
+    {
+      "phase": "audit_ingestion",
+      "label": "Validate Test Case Ingestion",
+      "status": "succeeded"
+    },
+    {
+      "phase": "heal_ingestion",
+      "label": "Remediate Source Alignment Findings",
+      "status": "queued"
+    },
+    {
+      "phase": "checkpoint",
+      "label": "Human Checkpoint Before Execution",
+      "status": "waiting"
+    },
+    {
+      "phase": "publish_artifacts",
+      "label": "Publish Test Artifacts",
+      "status": "queued"
+    },
+    {
+      "phase": "execute_browser",
+      "label": "Execute Browser Tests",
+      "status": "queued"
+    },
+    {
+      "phase": "verify_evidence",
+      "label": "Verify Run Evidence",
+      "status": "queued"
+    },
+    {
+      "phase": "audit_run",
+      "label": "Independent QA Audit",
+      "status": "queued"
+    },
+    {
+      "phase": "heal_final_audit",
+      "label": "Remediate Final Audit Findings",
+      "status": "queued"
+    },
+    {
+      "phase": "complete",
+      "label": "Approved / Blocked / Stopped",
+      "status": "queued"
+    }
+  ]
+}

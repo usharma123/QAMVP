@@ -1,0 +1,21 @@
+{
+  "summary": {
+    "case_count": 16,
+    "step_count": 102,
+    "hard_doc_requirement_count": 38,
+    "covered_requirement_count": 34,
+    "uncovered_requirements": [
+      "REQ-FR-000",
+      "REQ-NFR-003",
+      "REQ-NFR-005",
+      "REQ-SEC-003"
+    ],
+    "finding_counts": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    }
+  },
+  "findings": []
+}

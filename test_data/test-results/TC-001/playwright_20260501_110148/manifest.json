@@ -1,0 +1,27 @@
+{
+  "runId": "20260501_110148",
+  "testCaseId": "TC-001",
+  "title": "Maker submits BUY, checker approves, dashboard reflects one approved trade",
+  "status": "FAIL",
+  "verdict": "FAIL",
+  "baseURL": "http://localhost:4200",
+  "workerIndex": 0,
+  "project": "chromium",
+  "startedAt": "2026-05-01T15:01:49.635Z",
+  "finishedAt": "2026-05-01T15:01:58.696Z",
+  "durationMs": 9061,
+  "artifactDir": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260501_110148",
+  "sourceRepository": "test-doc/test-case-repository.json",
+  "sourceWorkbook": "test_data/TestCases.xlsx",
+  "blackBoxPolicy": {
+    "webappSourceInspected": false,
+    "angularInternalsUsed": false,
+    "oracle": "hard docs + KB/DB artifacts + workbook + observable browser behavior"
+  },
+  "artifacts": {
+    "resultJson": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260501_110148/result.json",
+    "stepLog": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260501_110148/step-log.md",
+    "finalPageText": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260501_110148/final-page-text.txt",
+    "trace": "/Users/utsavsharma/Documents/GitHub/QAMVP/test_data/test-results/TC-001/playwright_20260501_110148/trace.zip"
+  }
+}

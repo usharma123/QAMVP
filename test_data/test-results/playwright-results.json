@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 1
+      "actualWorkers": 2
     },
     "preserveOutput": "always",
     "projects": [
@@ -20,7 +20,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 2
         },
         "id": "chromium",
         "name": "chromium",
@@ -61,7 +61,7 @@
     "updateSnapshots": "missing",
     "updateSourceMethod": "patch",
     "version": "1.59.1",
-    "workers": 1,
+    "workers": 2,
     "webServer": {
       "command": "npm install --silent --prefix ../mock-trading-app && npx --prefix ../mock-trading-app ng serve --host 127.0.0.1 --port 4200",
       "url": "http://127.0.0.1:4200",
@@ -77,7 +77,7 @@
       "line": 0,
       "specs": [
         {
-          "title": "TC-011: Trade List columns and summary bar reflect approved inventory",
+          "title": "TC-001: Maker submits BUY, checker approves, dashboard reflects one approved trade",
           "ok": true,
           "tags": [],
           "tests": [
@@ -92,12 +92,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 5110,
+                  "duration": 16025,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-05-01T14:31:04.762Z",
+                  "startTime": "2026-05-01T15:40:57.944Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -105,7 +105,143 @@
               "status": "expected"
             }
           ],
-          "id": "7f5d1a9265a1ffc97e31-1bd6470b13cd31491a11",
+          "id": "7f5d1a9265a1ffc97e31-0bc1591f0b6fa67eafd1",
+          "file": "kb-test-cases.spec.ts",
+          "line": 18,
+          "column": 7
+        },
+        {
+          "title": "TC-002: Two pending trades are counted in queue and absent from dashboard until approval",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 9151,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-01T15:40:57.944Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f5d1a9265a1ffc97e31-1108ef5dd862112b5751",
+          "file": "kb-test-cases.spec.ts",
+          "line": 18,
+          "column": 7
+        },
+        {
+          "title": "TC-003: Approved BUY and matching SELL become Matched in Trade List",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 15516,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-01T15:41:07.326Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f5d1a9265a1ffc97e31-f7abf4a98f50c7150a2f",
+          "file": "kb-test-cases.spec.ts",
+          "line": 18,
+          "column": 7
+        },
+        {
+          "title": "TC-004: GTC trade requires expiration date and calculates notional total",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6557,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-01T15:41:14.199Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f5d1a9265a1ffc97e31-66d143ade6d6d58ab168",
+          "file": "kb-test-cases.spec.ts",
+          "line": 18,
+          "column": 7
+        },
+        {
+          "title": "TC-005: Trade list shows unmatched approved trade until compatible opposite trade is approved",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8939,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-01T15:41:20.761Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f5d1a9265a1ffc97e31-805d877d9745728fddd5",
           "file": "kb-test-cases.spec.ts",
           "line": 18,
           "column": 7
@@ -115,9 +251,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-05-01T14:31:01.599Z",
-    "duration": 8520.169,
-    "expected": 1,
+    "startTime": "2026-05-01T15:40:47.653Z",
+    "duration": 42095.231,
+    "expected": 5,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
